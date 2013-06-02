@@ -111,4 +111,4 @@ Dateinamen mit `_`
 	Muss im Programm `make_index.pl` noch geändert werden.
 
 CNAME
-:	Der CNAME ist falsch gesetzt, raus nehmen.
+:	Der CNAME ist falsch gesetzt, Datei raus nehmen.
