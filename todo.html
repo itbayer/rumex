@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Was ist noch alles zu machen bzw. welche Fehler sind noch offen.">
+  <title>TODO</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!-- inc/header.html -->
+  <link rel="alternate" type="application/rss+xml" title="itbayer Meldungen" href="/rss.xml"/>
+  <link rel="stylesheet" type="text/css" href="inc/all.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="inc/screen.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="inc/print.css" media="print" />
+</head>
+<body>
+<!-- inc/kopf.html 
+<div id="kopf">
+	<a href="http://itbayer.github.io/rumex/"><img src="/img/1px.png"></a>
+</div>
+-->
+<header>
+<h1 class="title">TODO</h1>
+<h2 class="author">Was ist noch alles zu machen bzw. welche Fehler sind noch offen.</h2>
+<h3 class="date">2013,</h3>
+</header>
+<div id=seite>
+<!--
+
+# TODO
+
+-->
+
+<p>Mein Notiz Zettel über Ideen bzw. Änderungen dieser Seite. Aber auch Fehler die noch nicht behoben sind findet man hier.</p>
+<!-- schnipp -->
+
+<hr />
+<p><strong>Übersicht</strong></p>
+<ul>
+<li><a href="#liste">Liste</a></li>
+<li><a href="#bugs">Bugs</a></li>
+</ul>
+<hr />
+<section id="liste" class="level1">
+<h1>Liste</h1>
+<p>Kleine Zusammenstellung über die Ideen die ich noch so habe.</p>
+<dl>
+<dt>Home Link</dt>
+<dd><p>In den Seitenkopf muss noch ein HomeLink eingebaut werden.</p>
+</dd>
+<dt>Fusszeile überarbeiten</dt>
+<dd><p><del>Bei der Fusszeile muss das Layout noch überarbeitet werden.</del></p>
+</dd>
+<dt>RSS Feed einbauen</dt>
+<dd><p>Die Funktion des RSS Feeds muss noch eingebaut werden.</p>
+</dd>
+<dt>Inhaltsverzeichnis</dt>
+<dd><p>Inhaltsverzeichnis in die einzelnen Seiten einbauen. Dabei sollte das Inhaltsverzeichnis nicht über die <code>pandoc</code> Funktion, sonder über ein externes Programm in das jeweilige Dokument eingefügt werden. So dass man, je nach Bedarf, dieses in die jeweilige Seite einbauen kann. Stichwort <strong>make_toc</strong>.</p>
+</dd>
+<dt>CSS, CSS, CSS</dt>
+<dd><p>Hier muss noch einiges gemacht werden.</p>
+<ul>
+<li><del>Datum der Liste, <code>index.html</code> nach rechts legen.</del></li>
+<li><del>Fusszeile</del></li>
+<li>Fixed DIV mit Link nach oben, Homepage Link.</li>
+<li><del>CSS der Definitionsliste, wie sie hier verwendet wird, erstellen.</del></li>
+</ul>
+</dd>
+<dt>Beschreibung der Seite</dt>
+<dd><p>Die Beschreibung der Seite fehlt auch noch.</p>
+<ul>
+<li>Warum diese Seite? Geschichte Beweggründe.</li>
+<li>Installation, Einrichten auf github.com</li>
+<li>Installation auf dem Arbeitsplatz, Grundprogramme</li>
+<li>Installation dieses Systems, Grundseite</li>
+<li>Aufbau der Einzelseiten, Stichpunkt <em>“Vortext”</em>.</li>
+<li>Bedienung der Seite. Was muss man beachten.</li>
+<li>Seite an einen externen Domain Namen binden.<br /> <strong>Achtung:</strong> nach dem Einrichten kann es bis zu 10 Minuten dauern bis die Umleitung funktioniert.<br /> Bis dahin bekommt man eine 404 Seite zu sehen.<br /> Auch bei einer eine Änderung der Seite kann diese bis zu 10 Minuten brauchen bis sie sichtbar wird.</li>
+</ul>
+</dd>
+<dt>Bild Bearbeitung</dt>
+<dd><p>Die Bildbearbeitung mittels ImageMagick muss noch in das <code>Makefile</code> eingebaut werden.</p>
+</dd>
+<dt>Biographie</dt>
+<dd><p>Biographie Funktion einbauen.</p>
+</dd>
+<dt>VIM Helfer</dt>
+<dd><p>Scripte für den Editor VIM</p>
+</dd>
+<dt>Favicon</dt>
+<dd><p><code>favicon.ico</code> fehlt noch.</p>
+</dd>
+<dt>Seite über einen externen Domain Namen ansprechen</dt>
+<dd><p><del>Die Seite sollte über den externen Domain Namen <a href="http://www.it-bayer.de/rumex">www.it-bayer.de/rumex</a> erreichbar sein.</del></p>
+<p>Infolink: <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages">https://help.github.com/articles/setting-up-a-custom-domain-with-pages</a></p>
+</dd>
+</dl>
+</section>
+<section id="bugs" class="level1">
+<h1>Bugs</h1>
+<p>Liste der Fehler</p>
+<dl>
+<dt><del>Abstand Definitionsliste</del></dt>
+<dd><del>Werden innerhalb einer Definitionsliste Aufzählungen verwendet stimmt der Abstand zur nächsten Definitionsliste nicht mehr bzw. es ist keiner vorhanden. Bei einer normalen Zeile schaut es aber normal aus.</del>
+</dd>
+</dl>
+<section id="extern-vim" class="level2">
+<h2>Extern VIM</h2>
+<dl>
+<dt>pandoc.syntax</dt>
+<dd><ul>
+<li>Vim wird, bei größeren Dateien, sehr langsam.</li>
+<li>An verschiedenen Stellen wird die VIM Rechtschreibung nicht verwendet.</li>
+</ul>
+</dd>
+<dt>Dateinamen mit <code>_</code></dt>
+<dd>github.com liefert keine Seiten die mit einem Unterstrich beginnen aus. Muss im Programm <code>make_index.pl</code> noch geändert werden.
+</dd>
+</dl>
+</section>
+</section>
+</div>
+<div id="fuss">
+	<p>
+	Copyright(c) 2013,
+	Stefan Blechschmidt.
+	Texte und Bilder dieser Seite sind frei im Sinne der
+	<a href="http://creativecommons.org/licenses/by-sa/3.0/deed.de">CC BY-SA 3.0</a>
+	Lizenz.
+	Texte, Bilder und Zitate aus anderen Quellen sind von dieser Lizenz
+	ausgenommen. Kommentare und Anmerkungen senden Sie bitte an 
+	<tt style="font-size: 12px; color: #555;"> <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#x73;&#98;&#64;&#x69;&#116;&#x2d;&#98;&#x61;&#x79;&#x65;&#114;&#46;&#100;&#x65;">&#x73;&#98;&#32;&#x41;&#84;&#32;&#x69;&#116;&#x2d;&#98;&#x61;&#x79;&#x65;&#114;&#32;&#80;&#x55;&#78;&#x4b;&#84;&#32;&#100;&#x65;</a></tt>.
+	</p>
+	<p style="text-align: right; border-top: 1px solid #eee; margin-top:
+	24px;">
+	<a class="impressum" href="/impressum.html">Impressum</a>
+	</p>
+</div>
+</body>
+</html>

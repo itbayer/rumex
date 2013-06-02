@@ -1,0 +1,132 @@
+
+/* Seite Layout */
+body{
+	width: 900px;
+	margin: 0 auto;
+	overflow-y:scroll;
+
+}
+
+/* Pandoc Kopfzeilen */
+header {
+	border-bottom: 1px solid #AFAFAF;
+    margin-bottom: 4em;
+    text-align: center;
+	color: #555555;
+	text-shadow: 4px 4px 4px silver;
+	top:0px;
+}
+
+#seite {
+
+}
+
+/* Zitate */
+blockquote {
+	font-style: italic;
+	background-color: #fafafa;
+	border-radius: 5px;
+	border: 1px solid #e0e0e0;
+	color: #222;
+	box-shadow: 4px 4px 8px #d0d0d0;
+	margin-bottom: 2em;
+	background-image: url("quote.png");
+	background-repeat: no-repeat;
+	min-height: 60px;
+	padding-left: 60px;
+}
+
+/* Quellcode Zeilen*/
+
+pre {
+	font-style: monospace;
+	background-color: #f4f4f4;
+	border-radius: 5px;
+	border: 1px solid #e0e0e0;
+	padding: 1em;
+	color: #555;
+	box-shadow: 4px 4px 8px #d0d0d0;
+}
+
+/* Quellcode im Text */
+
+p > code {
+	font-style: monospace;
+	background-color: #F4F4F4;
+	border: 1px solid #F0F0F0;
+	padding: 2px 4px;
+}
+
+#fuss {
+	border-bottom: 1px solid #F4F4F4;
+	border-top: 1px solid #F4F4F4;
+	color: gray;
+	font-size: 0.7em;
+	margin-top: 4em;
+	padding: 0 2em;
+}
+
+#fuss .impressum {
+
+	text-align: right;
+
+}
+
+
+
+
+/* Home Link in den Seitenkopf einbauen */
+
+#kopf {
+	border: 1px solid red;
+}
+
+#kopf a img {
+ width: 100px;
+ height: 100px;
+ border: 1px solid green;
+}
+
+
+/* Definitionsliste */
+
+dl {
+	background-color: #FeFeFe;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 1em;
+	margin-left: 1em;
+	box-shadow: 4px 4px 7px #f4f4f4;
+}
+
+/* Überschrift der Liste */
+dt {
+	font-size: 1.2em;
+	font-weight: bold;
+	padding-bottom: 1em;
+	padding-top: 1em;
+	color: #222;
+}
+
+/* Farbe der Definitionslisten - Beschreibung */
+dd {
+	color: #444;
+}
+
+/* Absätze mit dem p Tag werden mit einem größeren
+ * Abstand dargestellt. Wird hier zurückgestellt.
+ */
+dd > p {
+	margin: 0px;
+	margin-bottom: 1em;
+}
+
+/* Datum der Übersichtsseite */
+
+.indexliste > p > em {
+	display: block;
+	text-align: right;
+	font-size: .8em;
+	margin-right: 4em;
+	color: gray;
+}

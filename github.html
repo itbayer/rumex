@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Der Notizzettel vom IT Bayern">
+  <title>Deine Internetseite auf Github</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+  <!-- inc/header.html -->
+  <link rel="alternate" type="application/rss+xml" title="itbayer Meldungen" href="/rss.xml"/>
+  <link rel="stylesheet" type="text/css" href="inc/all.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="inc/screen.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="inc/print.css" media="print" />
+</head>
+<body>
+<!-- inc/kopf.html 
+<div id="kopf">
+	<a href="http://itbayer.github.io/rumex/"><img src="/img/1px.png"></a>
+</div>
+-->
+<header>
+<h1 class="title">Deine Internetseite auf Github</h1>
+<h2 class="author">Der Notizzettel vom IT Bayern</h2>
+</header>
+<div id=seite>
+<!--
+
+# Github
+
+Kleine Beschreibung, oder besser gesagt mein Notizzettel
+wie man auf <http://github.com> eine Internetseite einrichtet.
+
+-->
+
+<!-- schnipp -->
+
+
+<p>Mit github ist es möglich eine Internetseite zu erstellen. Hier gibt es zwei Varianten.</p>
+<ol type="1">
+<li>Eine globale Seite / Benutzerseite</li>
+<li>Eine Seite pro Projekt</li>
+</ol>
+<section id="globale-seite" class="level1">
+<h1>Globale Seite</h1>
+<p>Repository erstellen in der Form</p>
+<pre><code>NAME.github.io</code></pre>
+<p>Auf dem lokalen Rechner das Arbeitsverzeichnis erstellen und diese Dateien hoch laden.</p>
+<p>Hier ein Beispiel in dem nur die <code>readme.md</code> Datei erstellt und dann in das Repository geladen wird.</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">touch</span> readme.md
+<span class="kw">git</span> init
+<span class="kw">git</span> add readme.md
+<span class="kw">git</span> commit -m <span class="st">&quot;start&quot;</span>
+<span class="kw">git</span> remote add origin git@github.com:NAME/NAME.github.io.git
+<span class="kw">git</span> push -u origin master</code></pre>
+</section>
+</div>
+<div id="fuss">
+	<p>
+	Copyright(c) 2013,
+	Stefan Blechschmidt.
+	Texte und Bilder dieser Seite sind frei im Sinne der
+	<a href="http://creativecommons.org/licenses/by-sa/3.0/deed.de">CC BY-SA 3.0</a>
+	Lizenz.
+	Texte, Bilder und Zitate aus anderen Quellen sind von dieser Lizenz
+	ausgenommen. Kommentare und Anmerkungen senden Sie bitte an 
+	<tt style="font-size: 12px; color: #555;"> <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#x73;&#98;&#64;&#x69;&#116;&#x2d;&#98;&#x61;&#x79;&#x65;&#114;&#46;&#100;&#x65;">&#x73;&#98;&#32;&#x41;&#84;&#32;&#x69;&#116;&#x2d;&#98;&#x61;&#x79;&#x65;&#114;&#32;&#80;&#x55;&#78;&#x4b;&#84;&#32;&#100;&#x65;</a></tt>.
+	</p>
+	<p style="text-align: right; border-top: 1px solid #eee; margin-top:
+	24px;">
+	<a class="impressum" href="/impressum.html">Impressum</a>
+	</p>
+</div>
+</body>
+</html>

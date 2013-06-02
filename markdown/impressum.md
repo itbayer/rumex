@@ -1,0 +1,12 @@
+% Impressum
+%
+%
+
+Verwendung: Entwicklung
+
+| Stefan Blechschmidt
+| Auggenbach 9
+| 94357 Konzell
+
+Kontakt: [sbATit-bayerPUNKTde](mailto:sb@it-bayer.de)
+

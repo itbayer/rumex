@@ -1,0 +1,13 @@
+# robots.txt itbayer.github.io
+#
+# Info Link: http://de.selfhtml.org/diverses/robots.htm
+#
+
+User-agent: *
+
+Disallow: /inc/
+Disallow: /bin/
+Disallow: /markdown/
+Disallow: /readme.md
+Disallow: /Makefile
+Disallow: /CNAME
