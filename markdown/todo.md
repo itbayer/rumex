@@ -88,9 +88,9 @@ Seite über einen externen Domain Namen ansprechen
 
 Makefile Variable index Seite einbinden
 :	Die Variablen, die bei der Indexseite die Überschrift
-erstellen sollten nach `inc` gelegt werden.
-Einbindung in das `Makefile` dann per 
-`include inc/ueberschrift.makefile`.
+	erstellen sollten nach `inc` gelegt werden.
+	Einbindung in das `Makefile` dann per 
+	`include inc/ueberschrift.makefile`.
 
 
 # Bugs
