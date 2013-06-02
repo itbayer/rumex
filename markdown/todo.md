@@ -86,7 +86,11 @@ Seite über einen externen Domain Namen ansprechen
 
 	Infolink: <https://help.github.com/articles/setting-up-a-custom-domain-with-pages>
 
-
+Makefile Variable index Seite einbinden
+:	Die Variablen, die bei der Indexseite die Überschrift
+erstellen sollten nach `inc` gelegt werden.
+Einbindung in das `Makefile` dann per 
+`include inc/ueberschrift.makefile`.
 
 
 # Bugs
@@ -111,4 +115,4 @@ Dateinamen mit `_`
 	Muss im Programm `make_index.pl` noch geändert werden.
 
 CNAME
-:	Der CNAME ist falsch gesetzt, Datei raus nehmen.
+:	Der CNAME ist falsch gesetzt, Datei am besten ganz raus nehmen.

@@ -96,7 +96,11 @@
 <dd><p><del>Die Seite sollte über den externen Domain Namen <a href="http://www.it-bayer.de/rumex">www.it-bayer.de/rumex</a> erreichbar sein.</del></p>
 <p>Infolink: <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages">https://help.github.com/articles/setting-up-a-custom-domain-with-pages</a></p>
 </dd>
+<dt>Makefile Variable index Seite einbinden</dt>
+<dd>Die Variablen, die bei der Indexseite die Überschrift
+</dd>
 </dl>
+<p>erstellen sollten nach <code>inc</code> gelegt werden. Einbindung in das <code>Makefile</code> dann per <code>include inc/ueberschrift.makefile</code>.</p>
 </section>
 <section id="bugs" class="level1">
 <h1>Bugs</h1>
@@ -119,7 +123,7 @@
 <dd><p>github.com liefert keine Seiten die mit einem Unterstrich beginnen aus. Muss im Programm <code>make_index.pl</code> noch geändert werden.</p>
 </dd>
 <dt>CNAME</dt>
-<dd><p>Der CNAME ist falsch gesetzt, Datei raus nehmen.</p>
+<dd><p>Der CNAME ist falsch gesetzt, Datei am besten ganz raus nehmen.</p>
 </dd>
 </dl>
 </section>
