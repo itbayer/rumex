@@ -109,3 +109,6 @@ pandoc.syntax
 Dateinamen mit `_`
 :	github.com liefert keine Seiten die mit einem Unterstrich beginnen aus.
 	Muss im Programm `make_index.pl` noch geändert werden.
+
+CNAME
+:	Der CNAME ist falsch gesetzt, raus nehmen.
