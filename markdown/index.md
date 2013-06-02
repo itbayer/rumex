@@ -1,4 +1,4 @@
-% Ein github HomePage Sandkasten
+% Ein github HomePage Sand(Bau)kasten
 % IT Bayer
 % 2013,
 
@@ -7,12 +7,27 @@ Dies ist ein Versuch mit ein paar Skripten und pandoc eine Internetseite zu erst
 Eingesetzt wird dabei die Sprache `markdown` die dann von `pandoc` in das HTML Format gebracht wird.
 
 Die Seite bzw. die Entwickung liegt auf [github.com](http://github.com) 
-und kann [hier als ZIP](https://github.com/itbayer/itbayer.github.io/archive/master.zip) runter geladen werden.
+und kann [hier als ZIP](https://github.com/itbayer/rumex/archive/gh-pages.zip) herrunter geladen werden.
 
 
 
 ------------------------------------------------------------
 
+
+
+</div>
+<div class="indexliste">*2013-06-02*
+
+
+# TODO
+
+
+Mein Notiz Zettel über Ideen bzw. Änderungen dieser Seite.
+Aber auch Fehler die noch nicht behoben sind findet man hier.
+
+[... weiter lesen](todo.html)
+
+-----------------------------
 
 
 </div>
@@ -26,21 +41,6 @@ und kann [hier als ZIP](https://github.com/itbayer/itbayer.github.io/archive/mas
 Beschreibung der Datei Zusammenstellung die mit `markdown`, `pandoc`, `bash`, `make` `imagamagick` und `perl` eine Home Page erstellt.
 
 [... weiter lesen](beschreibung.html)
-
------------------------------
-
-
-</div>
-<div class="indexliste">*2013-06-01*
-
-
-# TODO
-
-
-Mein Notiz Zettel über Ideen bzw. Änderungen dieser Seite.
-Aber auch Fehler die noch nicht behoben sind findet man hier.
-
-[... weiter lesen](todo.html)
 
 -----------------------------
 
