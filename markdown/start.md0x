@@ -17,7 +17,15 @@ Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.
 
 **Historie**
 
+0.2
+:	Steuerung der Inhaltsverzeichnis Einbindung durch
+	Dateinamen Endungen.
+
 0.1
 :	Version 0.1 ist fertig	
 
 ------------------------------------------------------------
+
+
+
+<!-- vim: set ft=pandoc: -->

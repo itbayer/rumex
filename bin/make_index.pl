@@ -28,11 +28,11 @@ C<$start_md> geändert werden.
 
 =cut
 
-my $start_md = "markdown/start.md";
+my $start_md = "markdown/start.md0x";
 
 
 # index.md zum schreiben öffne>
-open (INDEX, ">markdown/index.md");
+open (INDEX, ">markdown/index.md0x");
 
 
 # ----------------------------------------------------
@@ -81,7 +81,7 @@ system ("/usr/bin/touch $start_md") if (-e $start_md);
 
 # ----------------------------------------------------------
 # Dateinamen der md Dateien auslesen incl. Datum der letzten Änderung
-open (FH, "ls -lt1 --time-style=+\"%Y-%m-%d\" markdown/*.md |");
+open (FH, "ls -lt1 --time-style=+\"%Y-%m-%d\" markdown/*.md* |");
 
 # ----------------------------------------------------------
 # Schleife über die ausgelesenen Dateinamen
@@ -116,10 +116,10 @@ Folgende Dateien werden nicht in die index.md aufgenommen.
 
 =cut
 
-	next if ($name eq "markdown/index.md");
-	next if ($name eq "markdown/impressum.md");
-	next if ($name eq "markdown/kontakt.md");
-	next if ($name eq "markdown/rss.md");
+	next if ($name eq "markdown/index.md0x");
+	next if ($name eq "markdown/impressum.md0x");
+	next if ($name eq "markdown/kontakt.md0x");
+	next if ($name eq "markdown/rss.md0x");
 	next if ($name eq "markdown/readme.md");
 
 	next if ($name =~ m/markdown\/_.*/);

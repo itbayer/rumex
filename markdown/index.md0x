@@ -18,11 +18,33 @@ Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.
 
 **Historie**
 
+0.2
+:	Steuerung der Inhaltsverzeichnis Einbindung durch
+	Dateinamen Endungen.
+
 0.1
 :	Version 0.1 ist fertig	
 
 ------------------------------------------------------------
 
+
+
+
+
+
+</div>
+<div class="indexliste">*2013-06-03*
+
+
+# Sandkasten
+ 
+Diese Seite ist der Sandkasten oder auch Spielwiese um 
+die CSS Einstellungen machen zu können.
+
+
+[... weiter lesen](sandkasten.html)
+
+-----------------------------
 
 
 </div>
@@ -41,24 +63,7 @@ Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.
 
 
 </div>
-<div class="indexliste">*2013-06-02*
-
-
-# Beschreibung dieses Home Page Baukastens
-
-
-Beschreibung der Datei Zusammenstellung dieses Home Page
-Baukastens.
-Der mit `markdown`, `pandoc`, `bash`, `make` `imagamagick` und `perl` 
-eine Home Page erstellt.
-
-[... weiter lesen](beschreibung.html)
-
------------------------------
-
-
-</div>
-<div class="indexliste">*2013-06-02*
+<div class="indexliste">*2013-06-03*
 
 
 # Github
@@ -73,16 +78,18 @@ wie man auf <http://github.com> eine Internetseite einrichtet.
 
 
 </div>
-<div class="indexliste">*2013-05-30*
+<div class="indexliste">*2013-06-03*
 
 
-# Sandkasten
- 
-Diese Seite ist der Sandkasten oder auch Spielwiese um 
-die CSS Einstellungen machen zu können.
+# Beschreibung dieses Home Page Baukastens
 
 
-[... weiter lesen](sandkasten.html)
+Beschreibung der Datei Zusammenstellung dieses Home Page
+Baukastens.
+Der mit `markdown`, `pandoc`, `bash`, `make` `imagamagick` und `perl` 
+eine Home Page erstellt.
+
+[... weiter lesen](beschreibung.html)
 
 -----------------------------
 

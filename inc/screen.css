@@ -23,8 +23,31 @@ body{
 
 /* Seiten Ausrichtung und Breite, Textbereich */
 
-header, #seite {
+header, nav, #seite {
 	margin: 0 auto;
 	width: 700px;
 }
+
+
+/* Inhaltsverzeichnis */
+#TOC {
+	margin-bottom: 2em;
+	border-bottom: 1px dotted silver;
+}
+
+
+/* Beschriftung des Inhaltsverzeichnisses */
+
+#TOC::before {
+	content: "Seiten Übersicht";
+	font-size: 1.2em;
+	font-weight: bold;
+	display: block;
+	margin-top: 1em;
+}
+
+#seite {
+  min-height: 555px;
+}
+
 

@@ -17,21 +17,29 @@ p {
 }
 
 
-#seite * h1 {
+#seite * h1,
+#seite * h1 a {
 	margin-top: 2em;
 	padding-top: 0.4em;
 	border-top: 1px dotted #f0f0f0;
 	text-shadow: 4px 4px 4px silver;
 	color: #222;
+	text-decoration: none;
 }
 
 
-#seite * h2,
+#seite * h2, 
+#seite * h2 a,
 #seite * h3,
+#seite * h3 a,
 #seite * h4,
+#seite * h4 a,
 #seite * h5,
-#seite * h6 {
+#seite * h5 a,
+#seite * h6,
+#seite * h6 a {
 	color: #444;
+	text-decoration: none;
 }
 
 #seite .indexliste * h1 {

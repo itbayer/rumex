@@ -13,15 +13,6 @@ Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.
 
 <!-- schnipp -->
 
----------------------------------------------------------------
-
-**Übersicht**
-
-* [Liste][]
-* [Bugs][]
-
----------------------------------------------------------------
-
 
 # Liste
 
@@ -43,10 +34,13 @@ Sitemap einbauen
 	Derzeit aber noch kommentiert.
 
 Inhaltsverzeichnis
-:	Inhaltsverzeichnis in die einzelnen Seiten einbauen.
+:	~~Inhaltsverzeichnis in die einzelnen Seiten einbauen.
 	Dabei sollte das Inhaltsverzeichnis nicht über die `pandoc` Funktion,
 	sonder über ein externes Programm in das jeweilige Dokument eingefügt werden.
-	So dass man, je nach Bedarf, dieses in die jeweilige Seite einbauen kann. Stichwort **make_toc**.
+	So dass man, je nach Bedarf, dieses in die jeweilige Seite 
+	einbauen kann. Stichwort **make_toc**.~~ \
+	Versuch ein neues System umzusetzen, siehe [Steuerung durch Dateiendung][].
+
 
 CSS, CSS, CSS
 :	Hier muss noch einiges gemacht werden.
@@ -121,7 +115,62 @@ HTML Includer
 make newrumex
 :	Script zum erstellen eines leeren Baukastens.
 
+## Steuerung durch Dateiendung
 
+Das Aussehen der Dateien bezüglich des Inhaltsverzeichnisses könnte auch durch 
+die Dateiendung gesteuert werden.
+
+### Beispiel
+
+datei.md0s
+:	Würde eine HTML Datei ohne Inhaltsverzeichnis erstellen.
+
+datei.md1s
+:	Erstellt die HTML Datei mit dem Inhaltsverzeichnis aus den Einträgen
+	der H1 Überschriften.
+
+datei.md2s
+:	Erstellt eine HTML Datei mit dem Inhaltsverzeichnis aud den Einträgen
+	der H1 und H2 Überschriften.
+
+
+**Auszug aus <http://johnmacfarlane.net/pandoc/README.html>**
+
+~~~
+--toc, --table-of-contents
+
+Include an automatically generated table of contents (or, in the case of latex, context, and rst, an instruction to create one) in the output document. This option has no effect on man, docbook, slidy, slideous, or s5 output.
+
+--toc-depth=NUMBER
+
+Specify the number of section levels to include in the table of contents. The default is 3 (which means that level 1, 2, and 3 headers will be listed in the contents). Implies --toc.
+~~~
+
+Zusätzlich könnte die Dateiendung auch eine unterschiedliche Verwendung der Dateien ermöglichen.
+
+datei.md0s, datei.md1s ...
+:	Standard Datei.
+
+datei.md0x, datei.md0x ...
+:	Datei die nicht in die Liste auf `index.html` eingebunden wird.
+	**FIXME**: Für den Ausschluss der ...x Dateien muss 
+	die `make_index.pl` noch angepasst werden.
+
+~~datei.mdi~~
+:	~~Includer Datei bzw. die markdown Variante der Systemdateien 
+	die im	`inc` Verzeichnis liegen. Da diese Dateien nur aus 
+	HTML Code bestehen ist hier auch die Variante mit dem
+	Inhaltsverzeichnis nicht notwendig.~~ \
+	Kann nicht verwendet werden da die Umwandlung mittels `pandoc`
+	zu viele Fehler verursacht.
+	Die maskierte E-Mail Adresse muss als aus einer, von `pandoc`
+	umgewandelten Datei heraus kopiert werden.
+
+
+Durch diese Variante würde der `html` Namen immer gleich bleiben, sollte er ja auch.
+Nur die Verarbeitung würde sich ändern.
+
+Die Steuerung erfolgt über `make`.
 
 # Bugs
 
@@ -144,3 +193,5 @@ Dateinamen mit `_`
 
 CNAME
 :	~~Der CNAME ist falsch gesetzt, Datei am besten ganz raus nehmen.~~
+
+<!-- vim:set ft=pandoc: -->

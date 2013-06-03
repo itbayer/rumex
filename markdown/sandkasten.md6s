@@ -9,7 +9,7 @@
 Diese Seite ist der Sandkasten oder auch Spielwiese um 
 die CSS Einstellungen machen zu können.
 
- -->
+-->
 
 <!-- schnipp -->
 
@@ -81,3 +81,7 @@ zeile 3
 | eins
 | zwei
 | drei
+
+
+
+<!-- vim: set ft=pandoc: -->
