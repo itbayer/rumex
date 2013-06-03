@@ -116,13 +116,18 @@ Folgende Dateien werden nicht in die index.md aufgenommen.
 
 =cut
 
-	next if ($name eq "markdown/index.md0x");
-	next if ($name eq "markdown/impressum.md0x");
-	next if ($name eq "markdown/kontakt.md0x");
-	next if ($name eq "markdown/rss.md0x");
-	next if ($name eq "markdown/readme.md");
+	next if ($name =~ m/markdown\/.*?x$/);
 
-	next if ($name =~ m/markdown\/_.*/);
+	# Alte Einträge ... werden nicht mehr gebraucht.
+#   next if ($name eq "markdown/index.md0x");
+#	next if ($name eq "markdown/impressum.md0x");
+#	next if ($name eq "markdown/kontakt.md0x");
+#	next if ($name eq "markdown/rss.md0x");
+#	next if ($name eq "markdown/readme.md");
+#
+#	next if ($name =~ m/markdown\/_.*/);
+
+
 
 	# Dateiname für Link bauen 
 	#
