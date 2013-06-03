@@ -28,7 +28,7 @@ C<$start_md> geändert werden.
 
 =cut
 
-my $start_md = "markdown/start.md0x";
+my $start_md = "markdown/start.md0s";
 
 
 # index.md zum schreiben öffne>
