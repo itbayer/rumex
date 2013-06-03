@@ -28,11 +28,7 @@
 </header>
 <nav id="TOC">
 <ul>
-<li><a href="#liste">Liste</a><ul>
-<li><a href="#steuerung-durch-dateiendung">Steuerung durch Dateiendung</a><ul>
-<li><a href="#beispiel">Beispiel</a></li>
-</ul></li>
-</ul></li>
+<li><a href="#liste">Liste</a></li>
 <li><a href="#bugs">Bugs</a><ul>
 <li><a href="#extern-vim">Extern VIM</a></li>
 </ul></li>
@@ -66,7 +62,7 @@
 <dd><p>Das Programm für die <code>sitemap.xml</code> muss noch erstellt werden. Der Eintrag in der <code>robots.txt</code> ist schon vorhanden. Derzeit aber noch kommentiert.</p>
 </dd>
 <dt>Inhaltsverzeichnis</dt>
-<dd><p><del>Inhaltsverzeichnis in die einzelnen Seiten einbauen. Dabei sollte das Inhaltsverzeichnis nicht über die <code>pandoc</code> Funktion, sonder über ein externes Programm in das jeweilige Dokument eingefügt werden. So dass man, je nach Bedarf, dieses in die jeweilige Seite einbauen kann. Stichwort <strong>make_toc</strong>.</del><br />Versuch ein neues System umzusetzen, siehe <a href="#steuerung-durch-dateiendung">Steuerung durch Dateiendung</a>.</p>
+<dd><p><del>Inhaltsverzeichnis in die einzelnen Seiten einbauen. Dabei sollte das Inhaltsverzeichnis nicht über die <code>pandoc</code> Funktion, sonder über ein externes Programm in das jeweilige Dokument eingefügt werden. So dass man, je nach Bedarf, dieses in die jeweilige Seite einbauen kann. Stichwort <strong>make_toc</strong>.</del><br />Versuch ein neues System umzusetzen, siehe [Steuerung durch Dateiendung][].</p>
 </dd>
 <dt>CSS, CSS, CSS</dt>
 <dd><p>Hier muss noch einiges gemacht werden. Derzeit stehen folgende Arbeiten an.</p>
@@ -125,46 +121,6 @@
 <dd><p>Script zum erstellen eines leeren Baukastens.</p>
 </dd>
 </dl>
-<section id="steuerung-durch-dateiendung" class="level2">
-<h2><a href="#steuerung-durch-dateiendung">Steuerung durch Dateiendung</a></h2>
-<p>Das Aussehen der Dateien bezüglich des Inhaltsverzeichnisses könnte auch durch die Dateiendung gesteuert werden.</p>
-<section id="beispiel" class="level3">
-<h3><a href="#beispiel">Beispiel</a></h3>
-<dl>
-<dt>datei.md0s</dt>
-<dd><p>Würde eine HTML Datei ohne Inhaltsverzeichnis erstellen.</p>
-</dd>
-<dt>datei.md1s</dt>
-<dd><p>Erstellt die HTML Datei mit dem Inhaltsverzeichnis aus den Einträgen der H1 Überschriften.</p>
-</dd>
-<dt>datei.md2s</dt>
-<dd><p>Erstellt eine HTML Datei mit dem Inhaltsverzeichnis aud den Einträgen der H1 und H2 Überschriften.</p>
-</dd>
-</dl>
-<p><strong>Auszug aus <a href="http://johnmacfarlane.net/pandoc/README.html">http://johnmacfarlane.net/pandoc/README.html</a></strong></p>
-<pre><code>--toc, --table-of-contents
-
-Include an automatically generated table of contents (or, in the case of latex, context, and rst, an instruction to create one) in the output document. This option has no effect on man, docbook, slidy, slideous, or s5 output.
-
---toc-depth=NUMBER
-
-Specify the number of section levels to include in the table of contents. The default is 3 (which means that level 1, 2, and 3 headers will be listed in the contents). Implies --toc.</code></pre>
-<p>Zusätzlich könnte die Dateiendung auch eine unterschiedliche Verwendung der Dateien ermöglichen.</p>
-<dl>
-<dt>datei.md0s, datei.md1s …</dt>
-<dd><p>Standard Datei.</p>
-</dd>
-<dt>datei.md0x, datei.md0x …</dt>
-<dd><p>Datei die nicht in die Liste auf <code>index.html</code> eingebunden wird. <strong>FIXME</strong>: Für den Ausschluss der …x Dateien muss die <code>make_index.pl</code> noch angepasst werden.</p>
-</dd>
-<dt><del>datei.mdi</del></dt>
-<dd><p><del>Includer Datei bzw. die markdown Variante der Systemdateien die im <code>inc</code> Verzeichnis liegen. Da diese Dateien nur aus HTML Code bestehen ist hier auch die Variante mit dem Inhaltsverzeichnis nicht notwendig.</del><br />Kann nicht verwendet werden da die Umwandlung mittels <code>pandoc</code> zu viele Fehler verursacht. Die maskierte E-Mail Adresse muss als aus einer, von <code>pandoc</code> umgewandelten Datei heraus kopiert werden.</p>
-</dd>
-</dl>
-<p>Durch diese Variante würde der <code>html</code> Namen immer gleich bleiben, sollte er ja auch. Nur die Verarbeitung würde sich ändern.</p>
-<p>Die Steuerung erfolgt über <code>make</code>.</p>
-</section>
-</section>
 </section>
 <section id="bugs" class="level1">
 <h1><a href="#bugs">Bugs</a></h1>

@@ -3,10 +3,6 @@
 #
 
 
-
-
-
-
 # -------------------------------------------------------------------
 # HTML Datei ohne Inhaltsverzeichnis
 #
@@ -31,6 +27,22 @@ HTML0X =  $(shell for i in $(shell ls -1 markdown/*.md0x 2>/dev/null) ;do x=$${i
 html0x: $(HTML0X) 
 
 %.html: markdown/%.md0x $(DEV)
+	$(PANDOC) -f markdown -t html5 -s \
+		--email-obfuscation=references \
+		--smart \
+		-B $(KOPF_TEMPLATE) \
+		-H $(HEADER_TEMPLATE) \
+		-A $(FUSS_TEMPLATE) \
+		--template=$(HTML_TEMPLATE) \
+		--section-divs \
+		$< -o $@
+
+
+HTML0V =  $(shell for i in $(shell ls -1 markdown/*.md0v 2>/dev/null) ;do x=$${i\#*/}; echo $${x%.*}.html; done)
+
+html0v: $(HTML0V) 
+
+%.html: markdown/%.md0v $(DEV)
 	$(PANDOC) -f markdown -t html5 -s \
 		--email-obfuscation=references \
 		--smart \
@@ -81,6 +93,23 @@ html1x: $(HTML1X)
 		$< -o $@
 
 
+HTML1V =  $(shell for i in $(shell ls -1 markdown/*.md1v 2>/dev/null) ;do x=$${i\#*/}; echo $${x%.*}.html; done)
+
+html1v: $(HTML1V) 
+
+%.html: markdown/%.md1v $(DEV)
+	$(PANDOC) -f markdown -t html5 -s \
+		--email-obfuscation=references \
+		--smart \
+		--toc \
+		--toc-depth=1 \
+		-B $(KOPF_TEMPLATE) \
+		-H $(HEADER_TEMPLATE) \
+		-A $(FUSS_TEMPLATE) \
+		--template=$(HTML_TEMPLATE) \
+		--section-divs \
+		$< -o $@
+
 
 # -------------------------------------------------------------------
 # HTML Datei mit Inhaltsverzeichnis Stufe 2
@@ -120,6 +149,23 @@ html2x: $(HTML2X)
 		--section-divs \
 		$< -o $@
 
+
+HTML2V =  $(shell for i in $(shell ls -1 markdown/*.md2v 2>/dev/null) ;do x=$${i\#*/}; echo $${x%.*}.html; done)
+
+html2v: $(HTML2V) 
+
+%.html: markdown/%.md2v $(DEV)
+	$(PANDOC) -f markdown -t html5 -s \
+		--email-obfuscation=references \
+		--smart \
+		--toc \
+		--toc-depth=2 \
+		-B $(KOPF_TEMPLATE) \
+		-H $(HEADER_TEMPLATE) \
+		-A $(FUSS_TEMPLATE) \
+		--template=$(HTML_TEMPLATE) \
+		--section-divs \
+		$< -o $@
 
 
 
@@ -162,6 +208,23 @@ html3x: $(HTML3X)
 		$< -o $@
 
 
+HTML3V =  $(shell for i in $(shell ls -1 markdown/*.md3v 2>/dev/null) ;do x=$${i\#*/}; echo $${x%.*}.html; done)
+
+html3v: $(HTML3V) 
+
+%.html: markdown/%.md3v $(DEV)
+	$(PANDOC) -f markdown -t html5 -s \
+		--email-obfuscation=references \
+		--smart \
+		--toc \
+		--toc-depth=3 \
+		-B $(KOPF_TEMPLATE) \
+		-H $(HEADER_TEMPLATE) \
+		-A $(FUSS_TEMPLATE) \
+		--template=$(HTML_TEMPLATE) \
+		--section-divs \
+		$< -o $@
+
 
 # -------------------------------------------------------------------
 # HTML Datei mit Inhaltsverzeichnis Stufe 4
@@ -201,6 +264,23 @@ html4x: $(HTML4X)
 		--section-divs \
 		$< -o $@
 
+
+HTML4V =  $(shell for i in $(shell ls -1 markdown/*.md4v 2>/dev/null) ;do x=$${i\#*/}; echo $${x%.*}.html; done)
+
+html4v: $(HTML4V) 
+
+%.html: markdown/%.md4v $(DEV)
+	$(PANDOC) -f markdown -t html5 -s \
+		--email-obfuscation=references \
+		--smart \
+		--toc \
+		--toc-depth=4 \
+		-B $(KOPF_TEMPLATE) \
+		-H $(HEADER_TEMPLATE) \
+		-A $(FUSS_TEMPLATE) \
+		--template=$(HTML_TEMPLATE) \
+		--section-divs \
+		$< -o $@
 
 
 # -------------------------------------------------------------------
@@ -242,6 +322,23 @@ html5x: $(HTML5X)
 		$< -o $@
 
 
+HTML5V =  $(shell for i in $(shell ls -1 markdown/*.md5v 2>/dev/null) ;do x=$${i\#*/}; echo $${x%.*}.html; done)
+
+html5v: $(HTML5V) 
+
+%.html: markdown/%.md5v $(DEV)
+	$(PANDOC) -f markdown -t html5 -s \
+		--email-obfuscation=references \
+		--smart \
+		--toc \
+		--toc-depth=5 \
+		-B $(KOPF_TEMPLATE) \
+		-H $(HEADER_TEMPLATE) \
+		-A $(FUSS_TEMPLATE) \
+		--template=$(HTML_TEMPLATE) \
+		--section-divs \
+		$< -o $@
+
 
 # -------------------------------------------------------------------
 # HTML Datei mit Inhaltsverzeichnis Stufe 6
@@ -282,22 +379,21 @@ html6x: $(HTML6X)
 		$< -o $@
 
 
+HTML6V =  $(shell for i in $(shell ls -1 markdown/*.md6v 2>/dev/null) ;do x=$${i\#*/}; echo $${x%.*}.html; done)
 
+html6v: $(HTML6V) 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+%.html: markdown/%.md6v $(DEV)
+	$(PANDOC) -f markdown -t html5 -s \
+		--email-obfuscation=references \
+		--smart \
+		--toc \
+		--toc-depth=6 \
+		-B $(KOPF_TEMPLATE) \
+		-H $(HEADER_TEMPLATE) \
+		-A $(FUSS_TEMPLATE) \
+		--template=$(HTML_TEMPLATE) \
+		--section-divs \
+		$< -o $@
 
 

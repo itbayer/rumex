@@ -2,7 +2,7 @@
 # inc/main.makefile
 #
 
-html: html0s html0x html1s html1x html2s html2x html3s html3x html4s html4x html5s html5x html6s html6x
+html: html0s html0x html0v html1s html1x html1v html2s html2x html2v html3s html3x html3v html4s html4x html4v html5s html5x html5v html6s html6x html6v
 
 # ######################################################
 
@@ -12,7 +12,20 @@ index:
 
 # ######################################################
 
-all: index html 
+# Schritte werden hier einzeln aufgerufen
+# somit kann sicher gestellt werden dass
+# zuerst die index.md0x erstellt und dann
+# daraus die html Datei gemacht wird.
+#
+# Bei der Schreibweise
+#
+# 	all: index html
+#
+# war die Reihenfolge nicht eindeutig
+#
+all: 
+	make index 
+	make html 
 
 
 # ######################################################

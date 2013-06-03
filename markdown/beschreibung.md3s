@@ -4,28 +4,17 @@
 
 <!--
 
-# Beschreibung dieses Home Page Baukastens
+# Beschreibung
 
 -->
 
-Beschreibung der Datei Zusammenstellung dieses Home Page
-Baukastens.
-Der mit `markdown`, `pandoc`, `bash`, `make` `imagamagick` und `perl` 
-eine Home Page erstellt.
+Beschreibung des Home Page Baukastens 
+der mit `markdown`, `pandoc`, `bash`, `make` `imagamagick` und `perl` 
+eine Home Page erstellt die auch auf <http://github.com> verwendet
+werden kann.
 
 <!-- schnipp -->
 
-
-## Seite Übersicht
-
-* [Vorwort][]
-* [Grunddaten / Aufbau des rumex Baukastens][]
-* [Sonderseiten][]
-* [Aufbau der Einzelseiten][]
-* [Steuerung][]
-* [Einrichten einer neue Seite][]
-* [Installation][]
-* [Update][]
 
 
 # Vorwort
@@ -102,40 +91,106 @@ bilder/
 
 
 
+## Steuerung durch Dateiendung
+
+Das Aussehen der Dateien bezüglich des Inhaltsverzeichnisses könnte auch durch 
+die Dateiendung gesteuert werden.
+
+### Beispiel
+
+datei.md0s
+:	Würde eine HTML Datei ohne Inhaltsverzeichnis erstellen.
+
+datei.md1s
+:	Erstellt die HTML Datei mit dem Inhaltsverzeichnis aus den Einträgen
+	der H1 Überschriften.
+
+datei.md2s
+:	Erstellt eine HTML Datei mit dem Inhaltsverzeichnis aud den Einträgen
+	der H1 und H2 Überschriften.
+
+
+**Auszug aus <http://johnmacfarlane.net/pandoc/README.html>**
+
+~~~
+--toc, --table-of-contents
+
+Include an automatically generated table of contents 
+(or, in the case of latex, context, and rst, an instruction 
+to create one) in the output document. 
+This option has no effect on man, docbook, slidy, 
+slideous, or s5 output.
+
+--toc-depth=NUMBER
+
+Specify the number of section levels to include in the 
+table of contents. The default is 3 (which means that 
+level 1, 2, and 3 headers will be listed in the contents). 
+Implies --toc.
+~~~
+
+Zusätzlich könnte die Dateiendung auch eine unterschiedliche Verwendung der Dateien ermöglichen.
+
+datei.md0s, datei.md1s ...
+:	Standard Datei.
+
+datei.md0x, datei.md1x ...
+:	Datei die nicht in die Liste auf `index.html` eingebunden wird.
+
+datei.md0v, datie.md1v ...
+:	Versteckte Datei. Diese taucht weder in der `index.html` noch 
+	in der `sitemap.xml` auf.
+
+
+
+Durch diese Variante würde der `html` Namen immer gleich bleiben, sollte er ja auch.
+Nur die Verarbeitung würde sich ändern.
+
+Die Steuerung erfolgt über `make`.
+
+
+
 ## Sonderseiten
 
-Im Verzeichnis `markdown` befinden sich auch ein paar Sonderseiten.
+Im Verzeichnis `markdown` befinden sich Sonderseiten.
 
-index.md
-:	Diese Datei wird vom Programm `bin/make_index.pl` erstellt.	
+markdown/index.md0x
+:	Diese Datei wird vom Programm `bin/make_index.pl` erstellt,
+	muss somit nicht vorhanden sein.
 
-start.md
-:	Die `start.md` wird als Vortext in die `index.md` eingebunden.
+markdown/start.md0s
+:	Die `start.md0s` wird als Vortext in die `index.md0x` eingebunden.
 	Mit ihr kann man oberhalb der Seiten Liste einen 
-	extra Text in die `index.html` einbinden.
+	extra Text in die `index.html` eingebunden werden. \
+	**Diese Datei ist erforderlich und muss vorhanden sein.**
 
-rss.md
-:	Datei für den RSS Feed. \
-	**Der Inhalte taucht nicht in der Seiten Liste auf `index.html` auf.**
+markdown/rss.md0x
+:	Datei für die RSS Feed Funktion. 
 
-impressum.md
+markdown/impressum.md0x
 :	Datei für die Impressumsangaben. \
-	**Der Inhalte taucht nicht in der Seiten Liste auf `index.html` auf.**
+	**Ist nicht zwingend erforderlich. Jedoch muss die `inc/fuss.html`
+	entsprechende bearbeitet, der Link muss raus genommen, werden.**
 
-readme.md
-:	github.com Datei. \
-	**Der Inhalte taucht nicht in der Seiten Liste auf `index.html` auf.**
+## Aufbau der Startseite
 
-kontakt.md
-:	Datei für Kontaktdaten.	\
-	**Der Inhalte taucht nicht in der Seiten Liste auf `index.html` auf.**
+Die Startseite `markdown/start.md0s` muss nur vorhanden sein.
+Es reicht also ein `touch markdown/start.md0s.
 
-_*.md
-:	Dateien die mit einem Unterstrich beginnen werden von 
-	github.com nicht ausgeliefert.
-	Solche Dateien können für Entwürfe genommen werden. \
-	**Der Inhalte taucht nicht in der Seiten Liste auf `index.html` auf.**
+Der normale Aufbau könnte so ausschauen.
 
+FIXME: Hier muss ein Bild eingebaut werden. Da sonst der Inhalt,
+ab dieser Stelle, in die `index.html` eingebaut wird. Stichpunkt 
+das dritte `%`;
+
+
+~~~
+% start.md0s
+%
+
+
+Hier kommt auch schon der Vortext für die index.html
+~~~
 
 ## Aufbau der Einzelseiten
 
@@ -145,8 +200,8 @@ der Sprache `markdown` bzw. der Erweiterung von `pandoc`.
 Diese Einzelseiten werden in chronologischer Reihenfolge in die Startseite
 `index.html` eingebunden und bilden sozusagen das Inhaltsverzeichnis
 der Seite.
-In jeder Einzelseite wird dazu ein sogenannter "Vortext" hinterlegt.
-Die Seite bzw. der Kopf hat dabei folgenden Aufbau.
+In jeder Einzelseite wird dazu ein sogenannter *"Vortext"* hinterlegt.
+Die Seite bzw. der Kopf der Seite hat dabei folgenden Aufbau.
 
 ![](bilder/seiten_aufbau.png)
 

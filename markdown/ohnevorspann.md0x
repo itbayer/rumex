@@ -1,0 +1,16 @@
+# Ohne Vorspann `reines markdown`
+
+Diese Datei besitzt keinen typischen Vorspann
+wie er in diesem Baukasten verwendet wird.
+Das Aussehen entspricht mehr einer Standard
+`markdown` Datei.
+
+Diese Datei wird zwar vom System verarbeitet
+taucht aber, wenn die Datei die Endung
+`.md?`**`s`** besitzt, in der index.html auf.
+
+Hie ist dann nur das Datum und ein `... weiter lesen` 
+zu finden.
+
+Will man eine Datei "ohne Vorspann" verwenden sollte man
+die Endungen `md?x` bzw. `md?v` verwenden.

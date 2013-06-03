@@ -31,7 +31,7 @@ C<$start_md> geändert werden.
 my $start_md = "markdown/start.md0s";
 
 
-# index.md zum schreiben öffne>
+# index.md0x zum schreiben öffne>
 open (INDEX, ">markdown/index.md0x");
 
 
@@ -65,7 +65,7 @@ print INDEX "\n";
 
 
 # ===================================================
-=head2 Datum der start.md 
+=head2 Datum der start.md0s
 
 Der Inhalt der start.md sollte immer ganz oben stehen
 darum wird das Datum dieser Datei mit touch bei jedem 
@@ -94,40 +94,19 @@ while (<FH>) {
 		$datum, my $name) = split(/\s+/, $_);
 
 	# =========================================================
-=head2 Dateien die nicht in die index.md aufgenommen werden
 
-Folgende Dateien werden nicht in die index.md aufgenommen.
+=head2 Dateien die nicht in die index.md0x aufgenommen werden
 
-=over 4
-
-=item * index.md
-
-=item * impressum.md
-
-=item * kontakt.md
-
-=item * rss.md
-
-=item * readme.md
-
-=item * Alle Dateien die mit einem I<Unterstrich> C<_> beginnen
-
-=back
+Alle Dateien die mit einem x bzw. v enden werden nicht in die
+index.md0x aufgenommen.
+Ausserdem wird die C<readme.md>, die in github.com
+vorkommen kann, auch ausgeschlossen.
 
 =cut
 
 	next if ($name =~ m/markdown\/.*?x$/);
-
-	# Alte Einträge ... werden nicht mehr gebraucht.
-#   next if ($name eq "markdown/index.md0x");
-#	next if ($name eq "markdown/impressum.md0x");
-#	next if ($name eq "markdown/kontakt.md0x");
-#	next if ($name eq "markdown/rss.md0x");
-#	next if ($name eq "markdown/readme.md");
-#
-#	next if ($name =~ m/markdown\/_.*/);
-
-
+	next if ($name =~ m/markdown\/.*?v$/);
+	next if ($name eq "markdown/readme.md");
 
 	# Dateiname für Link bauen 
 	#
