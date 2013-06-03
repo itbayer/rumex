@@ -1,70 +1,45 @@
+/* inc/all.css */
 
-/* Seite Layout */
-
-head {
-margin: 0px;
-padding: 0px;
-}
-
-body{
-	width: 920px;
-	margin: 0 auto;
-	padding: 0px;
-	overflow-y:scroll;
-
-}
-
-/* Home Link in den Seitenkopf einbauen */
-
-#kopf {
-	position: absolute;
-	width: 100px;
-	height: 90%;
-	background-image: url("kopf.png");
-	background-repeat: no-repeat;
-	
-}
-
-/* Quelle: http://stackoverflow.com/questions/1080792/how-to-draw-vertical-text-with-css-cross-browser
- *
- * ! Wird nicht verwendet
- *
- * */
-.rotate {
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-
-  /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
-  -webkit-transform-origin: 50% 50%;
-  -moz-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  -o-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-
-  /* Should be unset in IE9+ I think. */
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-}
 
 /* Pandoc Kopfzeilen */
 header {
-	width: 700px;
-	margin: 0 auto;
 	border-bottom: 1px solid #AFAFAF;
-    margin-bottom: 4em;
-    text-align: center;
+	margin-bottom: 4em;
+	text-align: center;
 	color: #555555;
 	text-shadow: 4px 4px 4px silver;
 	top:0px;
 }
 
-#seite {
-	width: 700px;
-	margin: 0 auto;
 
+p {
+	line-height: 1.4em;
 }
+
+
+#seite * h1 {
+	margin-top: 2em;
+	padding-top: 0.4em;
+	border-top: 1px dotted #f0f0f0;
+	text-shadow: 4px 4px 4px silver;
+	color: #222;
+}
+
+
+#seite * h2,
+#seite * h3,
+#seite * h4,
+#seite * h5,
+#seite * h6 {
+	color: #444;
+}
+
+#seite .indexliste * h1 {
+	margin-top: 0em;
+	padding-top: 0em;
+	border: none;
+}
+
 
 /* Zitate */
 blockquote {
@@ -86,19 +61,27 @@ blockquote {
 pre {
 	font-style: monospace;
 	background-color: #f4f4f4;
-	border-radius: 5px;
+	border-radius: 5px 5px 5px 5px;
 	border: 1px solid #e0e0e0;
 	padding: 1em;
 	color: #555;
+	font-size: 1.2em;
 	box-shadow: 4px 4px 8px #d0d0d0;
 }
 
 /* Quellcode im Text */
 
-p > code {
+p > code,
+p * code,
+dt > code,
+dt * code,
+dd > code,
+dd * code {
 	font-style: monospace;
 	background-color: #F4F4F4;
-	border: 1px solid #F0F0F0;
+	border: 1px solid #e0e0e0;
+	border-radius: 5px 5px 5px 5px;
+    font-size: 1.2em;
 	padding: 2px 4px;
 }
 
@@ -131,7 +114,6 @@ dl {
 	padding-right: 1em;
 	padding-bottom: 1em;
 	margin-left: 1em;
-	box-shadow: 4px 4px 7px #f4f4f4;
 }
 
 /* Überschrift der Liste */
@@ -165,3 +147,13 @@ dd > p {
 	margin-right: 4em;
 	color: gray;
 }
+
+
+
+
+
+
+
+
+
+

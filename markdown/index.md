@@ -1,29 +1,39 @@
-% Ein github HomePage Sand(Bau)kasten
-% IT Bayer
+% Der(Ein) HomePage Sand(Bau)kasten
+% rumex - IT Bayer
 % 2013,
 
 <div class="indexliste">
-Dies ist ein Versuch mit ein paar Skripten und pandoc eine Internetseite zu erstellen.
+Dies ist ein Versuch mit ein paar Skripten eine Internetseite zu erstellen 
+und zu verwalten.
 Eingesetzt wird dabei die Sprache `markdown` die dann von `pandoc` in das HTML Format gebracht wird.
 
-Die Seite bzw. die Entwickung liegt auf [github.com](http://github.com) 
-und kann [hier als ZIP](https://github.com/itbayer/rumex/archive/gh-pages.zip) herrunter geladen werden.
+Die Seite bzw. die Entwicklung liegt auf [github.com](http://github.com),
+der aktuelle Stand kann als [ZIP Datei herunter geladen](https://github.com/itbayer/rumex/archive/gh-pages.zip) werden.
 
+Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.de> verwendet.
 
+[^aktuell]: Es kann aber sein das hier nicht die aktuelle [rumex Version](http://www.it-bayer.de/rumex/) verwendet wird.
+
+-------------------------------------------------------------
+
+**Historie**
+
+0.1
+:	Version 0.1 ist fertig	
 
 ------------------------------------------------------------
 
 
 
 </div>
-<div class="indexliste">*2013-06-02*
+<div class="indexliste">*2013-06-03*
 
 
-# TODO
+# ToDo
 
 
-Mein Notiz Zettel über Ideen bzw. Änderungen dieser Seite.
-Aber auch Fehler die noch nicht behoben sind findet man hier.
+Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens.
+Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.
 
 [... weiter lesen](todo.html)
 
@@ -31,14 +41,16 @@ Aber auch Fehler die noch nicht behoben sind findet man hier.
 
 
 </div>
-<div class="indexliste">*2013-06-01*
+<div class="indexliste">*2013-06-02*
 
 
-# Beschreibung
+# Beschreibung dieses Home Page Baukastens
 
 
-
-Beschreibung der Datei Zusammenstellung die mit `markdown`, `pandoc`, `bash`, `make` `imagamagick` und `perl` eine Home Page erstellt.
+Beschreibung der Datei Zusammenstellung dieses Home Page
+Baukastens.
+Der mit `markdown`, `pandoc`, `bash`, `make` `imagamagick` und `perl` 
+eine Home Page erstellt.
 
 [... weiter lesen](beschreibung.html)
 
@@ -46,7 +58,7 @@ Beschreibung der Datei Zusammenstellung die mit `markdown`, `pandoc`, `bash`, `m
 
 
 </div>
-<div class="indexliste">*2013-05-30*
+<div class="indexliste">*2013-06-02*
 
 
 # Github

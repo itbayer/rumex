@@ -2,6 +2,8 @@
 #
 # Info Link: http://de.selfhtml.org/diverses/robots.htm
 #
+# Sitemap: http://itbayer.github.io/sitemap.xml
+#
 
 User-agent: *
 
@@ -11,3 +13,4 @@ Disallow: /markdown/
 Disallow: /readme.md
 Disallow: /Makefile
 Disallow: /CNAME
+Disallow: /_*.html

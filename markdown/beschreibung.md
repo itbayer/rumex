@@ -1,40 +1,200 @@
-% Beschreibung
-% ...dieser Seite
+% Beschreibung 
+% dieses Home Page Baukastens
 % 2013,
 
 <!--
 
-# Beschreibung
-
+# Beschreibung dieses Home Page Baukastens
 
 -->
 
-Beschreibung der Datei Zusammenstellung die mit `markdown`, `pandoc`, `bash`, `make` `imagamagick` und `perl` eine Home Page erstellt.
+Beschreibung der Datei Zusammenstellung dieses Home Page
+Baukastens.
+Der mit `markdown`, `pandoc`, `bash`, `make` `imagamagick` und `perl` 
+eine Home Page erstellt.
 
 <!-- schnipp -->
 
-------------------------------------------------------
 
-**Übersicht**
+## Seite Übersicht
 
-* [Beweggründe][]
-* [Funktionsübersicht][]
-* [Beschreibung][]
+* [Vorwort][]
+* [Grunddaten / Aufbau des rumex Baukastens][]
+* [Sonderseiten][]
+* [Aufbau der Einzelseiten][]
+* [Steuerung][]
+* [Einrichten einer neue Seite][]
+* [Installation][]
+* [Update][]
 
--------------------------------------------------------
 
-# Beweggründe
+# Vorwort
 
-Die Beweggründe mit dieser Art eine Internet Seite zu erstellen sind
+Die Beweggründe mit einem eigenen System eine Internet Seite zu Erstellen sind
 mit der Zeit in mir gewachsen.
-Es gibt immer mehr Systeme zum erstellen und verwalten von Internetseiten.
+
+Es gibt immer mehr Systeme die zum Erstellen und Verwalten von Internetseiten
+eingesetzt werden.
+Probiert habe ich schon viele und mit den meisten war ich auch sehr zufrieden,
+wenn da nicht immer der Hacken mit dem Updates wäre. 
 Irgendwie, zumindest kommt es mir so vor, ist der Aufwand das 
-System der Seite auf dem aktuellen Stand zu halten mittlerweile schon größer geworden als den Inhalt der eigentlichen Seite.
+System der Seite auf dem aktuellen Stand zu halten größer geworden als den Inhalt der eigentlichen Seite zu pflegen.
+
+Ich wünschte mir wieder eine Internetseite wie in früheren Zeiten.
+Eine Seite die aus einfachen HTML Seiten besteht.
+
+Irgendwann bin ich dann auf `markdown` und `pandoc` gestoßen und die Idee dieses
+Home Page Baukastens ist entstanden.
+
+
+# Grunddaten / Aufbau des rumex Baukastens
+
+## root Verzeichnis
+
+Im `root` Verzeichnis findet man alle `HTML` Dateien
+der Seite. Diese werde vom Baukasten erstellt und
+müssen nicht von Hand verändert werden.
+Zusätzlich findet man noch ein paar Systemdateien:
+
+- rss.xml \
+News Feed Datei, wird vom System erstelle
+
+- readme.md \
+Beschreibungsdatei die von github.com gebraucht wird.
+
+- Makefile \
+Steuerdatei für das Programm `make`.
+
+- robots.txt \
+Datei für die Suchmaschinen.
+
+- favicon.ico \
+Icon für den Browser.
+
+- .htaccess \
+Konfiguration für den Apache Server.
+	
+
+## Unterverzeichnisse
+
+~~~{.text}
+├── inc/
+├── bin/
+├── markdown/
+└── bilder/
+~~~
+
+
+inc/
+:	Im `inc` Verzeichnis liegen alle Dateien die von den
+	verschiedenen Tools eingebunden werden.
+	Auch Konfigurationsdateien sind hier zu finden.
+
+bin/
+:	Hier liegen die Skripte die zur Erstellung der
+	Seiten dienen.
+
+markdown/
+:	Hier befinden sich alle Texte der Seite.
+
+bilder/
+:	In diesem Verzeichnis werden alle Bilder der Seite abgelegt.
 
 
 
-# Funktionsübersicht
+## Sonderseiten
 
-# Beschreibung
+Im Verzeichnis `markdown` befinden sich auch ein paar Sonderseiten.
+
+index.md
+:	Diese Datei wird vom Programm `bin/make_index.pl` erstellt.	
+
+start.md
+:	Die `start.md` wird als Vortext in die `index.md` eingebunden.
+	Mit ihr kann man oberhalb der Seiten Liste einen 
+	extra Text in die `index.html` einbinden.
+
+rss.md
+:	Datei für den RSS Feed. \
+	**Der Inhalte taucht nicht in der Seiten Liste auf `index.html` auf.**
+
+impressum.md
+:	Datei für die Impressumsangaben. \
+	**Der Inhalte taucht nicht in der Seiten Liste auf `index.html` auf.**
+
+readme.md
+:	github.com Datei. \
+	**Der Inhalte taucht nicht in der Seiten Liste auf `index.html` auf.**
+
+kontakt.md
+:	Datei für Kontaktdaten.	\
+	**Der Inhalte taucht nicht in der Seiten Liste auf `index.html` auf.**
+
+_*.md
+:	Dateien die mit einem Unterstrich beginnen werden von 
+	github.com nicht ausgeliefert.
+	Solche Dateien können für Entwürfe genommen werden. \
+	**Der Inhalte taucht nicht in der Seiten Liste auf `index.html` auf.**
 
 
+## Aufbau der Einzelseiten
+
+Die Einzelseiten liegen alle im Verzeichnis `markdown` und zwar in 
+der Sprache `markdown` bzw. der Erweiterung von `pandoc`.
+
+Diese Einzelseiten werden in chronologischer Reihenfolge in die Startseite
+`index.html` eingebunden und bilden sozusagen das Inhaltsverzeichnis
+der Seite.
+In jeder Einzelseite wird dazu ein sogenannter "Vortext" hinterlegt.
+Die Seite bzw. der Kopf hat dabei folgenden Aufbau.
+
+![](bilder/seiten_aufbau.png)
+
+# Steuerung
+
+Gesteuert wird der Baukasten mittels `make`.
+Folgende make Befehle stehen dabei zur Verfügung.
+
+`make html`
+:	Erstellt die einzelnen html Dateien. 
+	Hier kann auch nur `make` verwendet werden.
+
+`make index`
+:	Erstellt die `index.md` Datei aus der dann
+	die `index.html` Datei erstellt wird.
+
+`make all`
+:	Eine Zusammenstellung aus `make index` und `make html`.
+
+`make online`
+:	Daten auf github hoch laden.
+
+`make newrumex`
+:	FIXME: Erstellt eine leere Seite.
+	Löscht alles bis auf die Grunddaten des Baukastens.
+	
+
+# Einrichten einer neue Seite
+
+FIXME
+
+# Installation
+
+Der Baukasten verwendet folgende Programme:
+
+- bash
+- make
+- perl
+- git
+- pandoc
+- imagemagick
+- texlive
+
+Wobei `bash`, `make` und `perl` bei jeder `*nix` Installation bereits vorhanden sein dürft.
+Die restlichen Programme müssen nach installiert werden.
+`texlive` wird nur gebraucht wenn man auch PDF Dateien erstellen möchte.
+
+
+# Update
+
+FIXME

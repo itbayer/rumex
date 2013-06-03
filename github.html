@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
+  <meta name="generator" content="rumex">
   <meta name="author" content="Der Notizzettel vom IT Bayern">
   <title>Deine Internetseite auf Github</title>
   <style type="text/css">code{white-space: pre;}</style>
@@ -37,7 +37,8 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <body>
 <!-- inc/kopf.html -->
 <div id="kopf">
-	<img src="kopf.png">
+	<a href="index.html"><img src="inc/blind.png" width="80px"
+		height="700px" alt="zur Startseite"></a>
 </div>
 <header>
 <h1 class="title">Deine Internetseite auf Github</h1>
@@ -56,10 +57,10 @@ wie man auf <http://github.com> eine Internetseite einrichtet.
 <!-- schnipp -->
 
 
-<p>Mit github ist es möglich eine Internetseite zu erstellen. Hier gibt es zwei Varianten.</p>
+<p>Mit github ist es möglich Internetseiten zu erstellen. Hier gibt es zwei Varianten.</p>
 <ol type="1">
-<li>Eine globale Seite / Benutzerseite</li>
-<li>Eine Seite pro Projekt</li>
+<li><a href="#globale-seite">Eine globale Seite / Benutzerseite</a></li>
+<li><a href="#projekt-seite">Eine Seite pro Projekt</a></li>
 </ol>
 <section id="globale-seite" class="level1">
 <h1>Globale Seite</h1>
@@ -73,6 +74,30 @@ wie man auf <http://github.com> eine Internetseite einrichtet.
 <span class="kw">git</span> commit -m <span class="st">&quot;start&quot;</span>
 <span class="kw">git</span> remote add origin git@github.com:NAME/NAME.github.io.git
 <span class="kw">git</span> push -u origin master</code></pre>
+</section>
+<section id="projekt-seite" class="level1">
+<h1>Projekt Seite</h1>
+<p>Bei der Projekt Seite liegen die Seiten die ausgeliefert werden im <code>branch gh-pages</code>. Hier ist die Vorgehensweise also ein wenig anders.</p>
+<p>Für dieses Projekt habe ich das Repository folgendermaßen eingerichtet.</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">touch</span> readme.md
+<span class="kw">git</span> init
+<span class="kw">git</span> add readme.md
+<span class="kw">git</span> commit -m <span class="st">&quot;start&quot;</span>
+<span class="kw">git</span> remote add origin git@github.com:itbayer/rumex.git
+<span class="kw">git</span> push -u origin master
+<span class="kw">git</span> checkout -b gh-pages
+<span class="co"># ...............................</span>
+<span class="co"># Erstellen der Home Page Dateien</span>
+<span class="co"># ...............................</span>
+<span class="kw">git</span> add .
+<span class="kw">git</span> push -u origin gh-pages</code></pre>
+<p>Im eigentlichen <code>master</code> Zweit ist nur die <code>readme.md</code> Datei vorhanden. Die restlichen Daten befinden sich im <code>gh-pages</code> Zweig.</p>
+<p>Der Link über dem die Seite erreichbar ist, ist der Grundseitenname plus dem Projektseitenname als Unterverzeichnis.</p>
+<dl>
+<dt>Beispiel</dt>
+<dd>Grundseitenname <a href="http://itbayer.github.io">http://itbayer.github.io</a>, Projektseitennamen “rumex” <a href="http://itbayer.github.io/rumex">http://itbayer.github.io/rumex</a><br />Wurde bei der Seite ein CNAME eingerichtet, verhält sich das genau so. Grundseitenname <a href="http://www.it-bayer.de">http://www.it-bayer.de</a> Projektseitenname “rumex” <a href="http://www.it-bayer.de/rumex">http://www.it-bayer.de/rumex</a>.
+</dd>
+</dl>
 </section>
 </div>
 <div id="fuss">

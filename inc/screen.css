@@ -1,0 +1,30 @@
+/* inc/screen.css */
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	width: 920px;
+	margin: 0 auto;
+	overflow-y:scroll;
+}
+
+/* Home Link Seitenkopf */
+
+#kopf {
+	position: absolute;
+	width: 100px;
+	background-image: url("kopf.png");
+	background-repeat: no-repeat;
+}
+
+
+/* Seiten Ausrichtung und Breite, Textbereich */
+
+header, #seite {
+	margin: 0 auto;
+	width: 700px;
+}
+

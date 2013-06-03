@@ -14,11 +14,11 @@ wie man auf <http://github.com> eine Internetseite einrichtet.
 <!-- schnipp -->
 
 
-Mit github ist es möglich eine Internetseite zu erstellen.
+Mit github ist es möglich Internetseiten zu erstellen.
 Hier gibt es zwei Varianten. 
 
-1. Eine globale Seite / Benutzerseite 
-1. Eine Seite pro Projekt
+1. [Eine globale Seite / Benutzerseite][Globale Seite]
+1. [Eine Seite pro Projekt][Projekt Seite]
 
 
 # Globale Seite
@@ -41,4 +41,40 @@ git commit -m "start"
 git remote add origin git@github.com:NAME/NAME.github.io.git
 git push -u origin master
 ~~~
+
+# Projekt Seite
+
+Bei der Projekt Seite liegen die Seiten die ausgeliefert werden im `branch gh-pages`.
+Hier ist die Vorgehensweise also ein wenig anders.
+
+Für dieses Projekt habe ich das Repository folgendermaßen eingerichtet.
+
+~~~{.bash}
+touch readme.md
+git init
+git add readme.md
+git commit -m "start"
+git remote add origin git@github.com:itbayer/rumex.git
+git push -u origin master
+git checkout -b gh-pages
+# ...............................
+# Erstellen der Home Page Dateien
+# ...............................
+git add .
+git push -u origin gh-pages
+~~~
+
+Im eigentlichen `master` Zweit ist nur die `readme.md` Datei vorhanden.
+Die restlichen Daten befinden sich im `gh-pages` Zweig.
+
+Der Link über dem die Seite erreichbar ist, ist der Grundseitenname plus dem
+Projektseitenname als Unterverzeichnis.
+
+Beispiel
+:	Grundseitenname <http://itbayer.github.io>, 
+	Projektseitennamen "rumex" <http://itbayer.github.io/rumex> \
+	Wurde bei der Seite ein CNAME eingerichtet, verhält sich das genau so.
+	Grundseitenname <http://www.it-bayer.de>
+	Projektseitenname "rumex" <http://www.it-bayer.de/rumex>.
+
 

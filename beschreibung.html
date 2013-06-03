@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <meta name="author" content="…dieser Seite">
+  <meta name="generator" content="rumex">
+  <meta name="author" content="dieses Home Page Baukastens">
   <title>Beschreibung</title>
   <style type="text/css">code{white-space: pre;}</style>
   <!--[if lt IE 9]>
@@ -18,41 +18,158 @@
 <body>
 <!-- inc/kopf.html -->
 <div id="kopf">
-	<img src="kopf.png">
+	<a href="index.html"><img src="inc/blind.png" width="80px"
+		height="700px" alt="zur Startseite"></a>
 </div>
 <header>
 <h1 class="title">Beschreibung</h1>
-<h2 class="author">…dieser Seite</h2>
+<h2 class="author">dieses Home Page Baukastens</h2>
 <h3 class="date">2013,</h3>
 </header>
 <div id=seite>
 <!--
 
-# Beschreibung
-
+# Beschreibung dieses Home Page Baukastens
 
 -->
 
-<p>Beschreibung der Datei Zusammenstellung die mit <code>markdown</code>, <code>pandoc</code>, <code>bash</code>, <code>make</code> <code>imagamagick</code> und <code>perl</code> eine Home Page erstellt.</p>
+<p>Beschreibung der Datei Zusammenstellung dieses Home Page Baukastens. Der mit <code>markdown</code>, <code>pandoc</code>, <code>bash</code>, <code>make</code> <code>imagamagick</code> und <code>perl</code> eine Home Page erstellt.</p>
 <!-- schnipp -->
 
-<hr />
-<p><strong>Übersicht</strong></p>
+
+<section id="seite-übersicht" class="level2">
+<h2>Seite Übersicht</h2>
 <ul>
-<li><a href="#beweggründe">Beweggründe</a></li>
-<li><a href="#funktionsübersicht">Funktionsübersicht</a></li>
-<li><a href="#beschreibung">Beschreibung</a></li>
+<li><a href="#vorwort">Vorwort</a></li>
+<li><a href="#grunddaten-aufbau-des-rumex-baukastens">Grunddaten / Aufbau des rumex Baukastens</a></li>
+<li><a href="#sonderseiten">Sonderseiten</a></li>
+<li><a href="#aufbau-der-einzelseiten">Aufbau der Einzelseiten</a></li>
+<li><a href="#steuerung">Steuerung</a></li>
+<li><a href="#einrichten-einer-neue-seite">Einrichten einer neue Seite</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#update">Update</a></li>
 </ul>
-<hr />
-<section id="beweggründe" class="level1">
-<h1>Beweggründe</h1>
-<p>Die Beweggründe mit dieser Art eine Internet Seite zu erstellen sind mit der Zeit in mir gewachsen. Es gibt immer mehr Systeme zum erstellen und verwalten von Internetseiten. Irgendwie, zumindest kommt es mir so vor, ist der Aufwand das System der Seite auf dem aktuellen Stand zu halten mittlerweile schon größer geworden als den Inhalt der eigentlichen Seite.</p>
 </section>
-<section id="funktionsübersicht" class="level1">
-<h1>Funktionsübersicht</h1>
+<section id="vorwort" class="level1">
+<h1>Vorwort</h1>
+<p>Die Beweggründe mit einem eigenen System eine Internet Seite zu Erstellen sind mit der Zeit in mir gewachsen.</p>
+<p>Es gibt immer mehr Systeme die zum Erstellen und Verwalten von Internetseiten eingesetzt werden. Probiert habe ich schon viele und mit den meisten war ich auch sehr zufrieden, wenn da nicht immer der Hacken mit dem Updates wäre. Irgendwie, zumindest kommt es mir so vor, ist der Aufwand das System der Seite auf dem aktuellen Stand zu halten größer geworden als den Inhalt der eigentlichen Seite zu pflegen.</p>
+<p>Ich wünschte mir wieder eine Internetseite wie in früheren Zeiten. Eine Seite die aus einfachen HTML Seiten besteht.</p>
+<p>Irgendwann bin ich dann auf <code>markdown</code> und <code>pandoc</code> gestoßen und die Idee dieses Home Page Baukastens ist entstanden.</p>
 </section>
-<section id="beschreibung" class="level1">
-<h1>Beschreibung</h1>
+<section id="grunddaten-aufbau-des-rumex-baukastens" class="level1">
+<h1>Grunddaten / Aufbau des rumex Baukastens</h1>
+<section id="root-verzeichnis" class="level2">
+<h2>root Verzeichnis</h2>
+<p>Im <code>root</code> Verzeichnis findet man alle <code>HTML</code> Dateien der Seite. Diese werde vom Baukasten erstellt und müssen nicht von Hand verändert werden. Zusätzlich findet man noch ein paar Systemdateien:</p>
+<ul>
+<li><p>rss.xml<br />News Feed Datei, wird vom System erstelle</p></li>
+<li><p>readme.md<br />Beschreibungsdatei die von github.com gebraucht wird.</p></li>
+<li><p>Makefile<br />Steuerdatei für das Programm <code>make</code>.</p></li>
+<li><p>robots.txt<br />Datei für die Suchmaschinen.</p></li>
+<li><p>favicon.ico<br />Icon für den Browser.</p></li>
+<li><p>.htaccess<br />Konfiguration für den Apache Server.</p></li>
+</ul>
+</section>
+<section id="unterverzeichnisse" class="level2">
+<h2>Unterverzeichnisse</h2>
+<pre class="text"><code>├── inc/
+├── bin/
+├── markdown/
+└── bilder/</code></pre>
+<dl>
+<dt>inc/</dt>
+<dd><p>Im <code>inc</code> Verzeichnis liegen alle Dateien die von den verschiedenen Tools eingebunden werden. Auch Konfigurationsdateien sind hier zu finden.</p>
+</dd>
+<dt>bin/</dt>
+<dd><p>Hier liegen die Skripte die zur Erstellung der Seiten dienen.</p>
+</dd>
+<dt>markdown/</dt>
+<dd><p>Hier befinden sich alle Texte der Seite.</p>
+</dd>
+<dt>bilder/</dt>
+<dd><p>In diesem Verzeichnis werden alle Bilder der Seite abgelegt.</p>
+</dd>
+</dl>
+</section>
+<section id="sonderseiten" class="level2">
+<h2>Sonderseiten</h2>
+<p>Im Verzeichnis <code>markdown</code> befinden sich auch ein paar Sonderseiten.</p>
+<dl>
+<dt>index.md</dt>
+<dd><p>Diese Datei wird vom Programm <code>bin/make_index.pl</code> erstellt.</p>
+</dd>
+<dt>start.md</dt>
+<dd><p>Die <code>start.md</code> wird als Vortext in die <code>index.md</code> eingebunden. Mit ihr kann man oberhalb der Seiten Liste einen extra Text in die <code>index.html</code> einbinden.</p>
+</dd>
+<dt>rss.md</dt>
+<dd><p>Datei für den RSS Feed.<br /><strong>Der Inhalte taucht nicht in der Seiten Liste auf <code>index.html</code> auf.</strong></p>
+</dd>
+<dt>impressum.md</dt>
+<dd><p>Datei für die Impressumsangaben.<br /><strong>Der Inhalte taucht nicht in der Seiten Liste auf <code>index.html</code> auf.</strong></p>
+</dd>
+<dt>readme.md</dt>
+<dd><p>github.com Datei.<br /><strong>Der Inhalte taucht nicht in der Seiten Liste auf <code>index.html</code> auf.</strong></p>
+</dd>
+<dt>kontakt.md</dt>
+<dd><p>Datei für Kontaktdaten.<br /><strong>Der Inhalte taucht nicht in der Seiten Liste auf <code>index.html</code> auf.</strong></p>
+</dd>
+<dt>_*.md</dt>
+<dd><p>Dateien die mit einem Unterstrich beginnen werden von github.com nicht ausgeliefert. Solche Dateien können für Entwürfe genommen werden.<br /><strong>Der Inhalte taucht nicht in der Seiten Liste auf <code>index.html</code> auf.</strong></p>
+</dd>
+</dl>
+</section>
+<section id="aufbau-der-einzelseiten" class="level2">
+<h2>Aufbau der Einzelseiten</h2>
+<p>Die Einzelseiten liegen alle im Verzeichnis <code>markdown</code> und zwar in der Sprache <code>markdown</code> bzw. der Erweiterung von <code>pandoc</code>.</p>
+<p>Diese Einzelseiten werden in chronologischer Reihenfolge in die Startseite <code>index.html</code> eingebunden und bilden sozusagen das Inhaltsverzeichnis der Seite. In jeder Einzelseite wird dazu ein sogenannter “Vortext” hinterlegt. Die Seite bzw. der Kopf hat dabei folgenden Aufbau.</p>
+<figure>
+<img src="bilder/seiten_aufbau.png" />
+</figure>
+</section>
+</section>
+<section id="steuerung" class="level1">
+<h1>Steuerung</h1>
+<p>Gesteuert wird der Baukasten mittels <code>make</code>. Folgende make Befehle stehen dabei zur Verfügung.</p>
+<dl>
+<dt><code>make html</code></dt>
+<dd><p>Erstellt die einzelnen html Dateien. Hier kann auch nur <code>make</code> verwendet werden.</p>
+</dd>
+<dt><code>make index</code></dt>
+<dd><p>Erstellt die <code>index.md</code> Datei aus der dann die <code>index.html</code> Datei erstellt wird.</p>
+</dd>
+<dt><code>make all</code></dt>
+<dd><p>Eine Zusammenstellung aus <code>make index</code> und <code>make html</code>.</p>
+</dd>
+<dt><code>make online</code></dt>
+<dd><p>Daten auf github hoch laden.</p>
+</dd>
+<dt><code>make newrumex</code></dt>
+<dd><p>FIXME: Erstellt eine leere Seite. Löscht alles bis auf die Grunddaten des Baukastens.</p>
+</dd>
+</dl>
+</section>
+<section id="einrichten-einer-neue-seite" class="level1">
+<h1>Einrichten einer neue Seite</h1>
+<p>FIXME</p>
+</section>
+<section id="installation" class="level1">
+<h1>Installation</h1>
+<p>Der Baukasten verwendet folgende Programme:</p>
+<ul>
+<li>bash</li>
+<li>make</li>
+<li>perl</li>
+<li>git</li>
+<li>pandoc</li>
+<li>imagemagick</li>
+<li>texlive</li>
+</ul>
+<p>Wobei <code>bash</code>, <code>make</code> und <code>perl</code> bei jeder <code>*nix</code> Installation bereits vorhanden sein dürft. Die restlichen Programme müssen nach installiert werden. <code>texlive</code> wird nur gebraucht wenn man auch PDF Dateien erstellen möchte.</p>
+</section>
+<section id="update" class="level1">
+<h1>Update</h1>
+<p>FIXME</p>
 </section>
 </div>
 <div id="fuss">
