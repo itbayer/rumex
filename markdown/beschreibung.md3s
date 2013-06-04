@@ -177,17 +177,13 @@ markdown/impressum.md0x
 Die Startseite `markdown/start.md0s` muss nur vorhanden sein.
 Es reicht also ein `touch markdown/start.md0s.
 
-Der normale Aufbau könnte so ausschauen.
-
-FIXME: Hier muss ein Bild eingebaut werden. Da sonst der Inhalt,
-ab dieser Stelle, in die `index.html` eingebaut wird. Stichpunkt 
-das dritte `%`;
-
+Der normale Aufbau könnte so ausschauen. Die `pandoc` 
+Kopfzeile sind nicht zwingend erforderlich.
 
 ~~~
 % start.md0s
 %
-
+%
 
 Hier kommt auch schon der Vortext für die index.html
 ~~~
@@ -203,7 +199,36 @@ der Seite.
 In jeder Einzelseite wird dazu ein sogenannter *"Vortext"* hinterlegt.
 Die Seite bzw. der Kopf der Seite hat dabei folgenden Aufbau.
 
-![](bilder/seiten_aufbau.png)
+~~~
+% Seiten Überschrift 1
+% Seiten Überschrift 2
+% Seiten Überschrift 3
+
+<!--
+
+# Listen-Überschrift
+
+Überschrift und Text der in der Listenübersicht
+auf index.html angezeigt wird.
+
+Alles was innerhalb der HTML Kommentar Marken
+steht wird nur auf der index.html Seite angezeigt.
+
+-->
+
+Alles was sich außerhalb der HTML Marken
+befindet wird auch auf der eigentlichen Seite angezeigt.
+
+Durch das Schlüsselwort "schnipp", das auch in HTML
+Kommentar Marken stehen muss, wird der Vortext beendet.
+Auf der index.html erscheint an dieser Stelle der Link
+"... weiter lesen".
+
+<!-- schnipp -->
+
+Ab hier geht dann der Inhlat der eigentlichen Seite los.
+~~~
+
 
 # Steuerung
 

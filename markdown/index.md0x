@@ -3,6 +3,7 @@
 % 2013,
 
 <div class="indexliste">
+
 Dies ist ein Versuch mit ein paar Skripten eine Internetseite zu erstellen 
 und zu verwalten.
 Eingesetzt wird dabei die Sprache `markdown` die dann von `pandoc` in das HTML Format gebracht wird.
@@ -30,10 +31,13 @@ Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.
 
 
 
-
-
 </div>
-<div class="indexliste">*2013-06-03*
+
+
+
+<div class="indexliste">
+
+*2013-06-04*
 
 
 # Beschreibung
@@ -46,11 +50,15 @@ werden kann.
 
 [... weiter lesen](beschreibung.html)
 
------------------------------
-
+---
 
 </div>
-<div class="indexliste">*2013-06-03*
+
+
+
+<div class="indexliste">
+
+*2013-06-03*
 
 
 # ToDo
@@ -61,11 +69,15 @@ Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.
 
 [... weiter lesen](todo.html)
 
------------------------------
-
+---
 
 </div>
-<div class="indexliste">*2013-06-03*
+
+
+
+<div class="indexliste">
+
+*2013-06-03*
 
 
 # Github
@@ -76,11 +88,15 @@ wie man auf <http://github.com> eine Internetseite einrichtet.
 
 [... weiter lesen](github.html)
 
------------------------------
-
+---
 
 </div>
-<div class="indexliste">*2013-06-03*
+
+
+
+<div class="indexliste">
+
+*2013-06-03*
 
 
 # Sandkasten
@@ -91,7 +107,9 @@ die CSS Einstellungen machen zu können.
 
 [... weiter lesen](sandkasten.html)
 
------------------------------
-
+---
 
 </div>
+
+
+

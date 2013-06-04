@@ -167,11 +167,10 @@ Implies --toc.</code></pre>
 <section id="aufbau-der-startseite" class="level2">
 <h2><a href="#aufbau-der-startseite">Aufbau der Startseite</a></h2>
 <p>Die Startseite <code>markdown/start.md0s</code> muss nur vorhanden sein. Es reicht also ein `touch markdown/start.md0s.</p>
-<p>Der normale Aufbau könnte so ausschauen.</p>
-<p>FIXME: Hier muss ein Bild eingebaut werden. Da sonst der Inhalt, ab dieser Stelle, in die <code>index.html</code> eingebaut wird. Stichpunkt das dritte <code>%</code>;</p>
+<p>Der normale Aufbau könnte so ausschauen. Die <code>pandoc</code> Kopfzeile sind nicht zwingend erforderlich.</p>
 <pre><code>% start.md0s
 %
-
+%
 
 Hier kommt auch schon der Vortext für die index.html</code></pre>
 </section>
@@ -179,9 +178,33 @@ Hier kommt auch schon der Vortext für die index.html</code></pre>
 <h2><a href="#aufbau-der-einzelseiten">Aufbau der Einzelseiten</a></h2>
 <p>Die Einzelseiten liegen alle im Verzeichnis <code>markdown</code> und zwar in der Sprache <code>markdown</code> bzw. der Erweiterung von <code>pandoc</code>.</p>
 <p>Diese Einzelseiten werden in chronologischer Reihenfolge in die Startseite <code>index.html</code> eingebunden und bilden sozusagen das Inhaltsverzeichnis der Seite. In jeder Einzelseite wird dazu ein sogenannter <em>“Vortext”</em> hinterlegt. Die Seite bzw. der Kopf der Seite hat dabei folgenden Aufbau.</p>
-<figure>
-<img src="bilder/seiten_aufbau.png" />
-</figure>
+<pre><code>% Seiten Überschrift 1
+% Seiten Überschrift 2
+% Seiten Überschrift 3
+
+&lt;!--
+
+# Listen-Überschrift
+
+Überschrift und Text der in der Listenübersicht
+auf index.html angezeigt wird.
+
+Alles was innerhalb der HTML Kommentar Marken
+steht wird nur auf der index.html Seite angezeigt.
+
+--&gt;
+
+Alles was sich außerhalb der HTML Marken
+befindet wird auch auf der eigentlichen Seite angezeigt.
+
+Durch das Schlüsselwort &quot;schnipp&quot;, das auch in HTML
+Kommentar Marken stehen muss, wird der Vortext beendet.
+Auf der index.html erscheint an dieser Stelle der Link
+&quot;... weiter lesen&quot;.
+
+&lt;!-- schnipp --&gt;
+
+Ab hier geht dann der Inhlat der eigentlichen Seite los.</code></pre>
 </section>
 </section>
 <section id="steuerung" class="level1">
