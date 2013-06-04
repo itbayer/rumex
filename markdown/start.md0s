@@ -17,12 +17,16 @@ Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.
 
 **Historie**
 
+0.3
+:	Der Baukasten wurde um die RSS Feed Funktion erweitert.
+
 0.2
 :	Steuerung der Inhaltsverzeichnis Einbindung durch
 	Dateinamen Endungen.
 
 0.1
-:	Version 0.1 ist fertig	
+:	Version 0.1 ist fertig. Hat zwar hoch nicht viel Funktionen
+	aber der Baukasten funktioniert schon.
 
 ------------------------------------------------------------
 
