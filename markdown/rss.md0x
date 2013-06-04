@@ -29,7 +29,7 @@ In den rumex Baukasten wurde eine RSS Feed Funktion eingebaut.
 Die Einträge werden dabei auch aus einem `pandoc` Dokument gelesen
 und nach `rss.xml` geschrieben.
 
-Zusätzlich ist diese Datei auch als `rss.html` unter <http://www.it-bayer.de/rss.html> verfügbar.
+Zusätzlich ist diese Datei auch als `rss.html` unter <http://www.it-bayer.de/rumex/rss.html> verfügbar.
 
 
 
