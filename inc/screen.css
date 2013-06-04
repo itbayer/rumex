@@ -6,8 +6,8 @@ html, body {
 }
 
 body{
-	width: 920px;
-	margin: 0 auto;
+	width: 1000px;
+	/* margin: 0 auto; */
 	overflow-y:scroll;
 }
 
@@ -24,8 +24,8 @@ body{
 /* Seiten Ausrichtung und Breite, Textbereich */
 
 header, nav, #seite {
-	margin: 0 auto;
-	width: 700px;
+	margin: 0 44px 0 auto;
+	width: 844px;
 }
 
 
