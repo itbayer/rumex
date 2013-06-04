@@ -26,11 +26,19 @@ index:
 all: 
 	make index 
 	make html 
+	make rss
 
 
 # ######################################################
 
-online: all
+online:
+	make all
 	git add .
 	git commit -a -m"...."
 	git push
+
+# #######################################################
+
+rss:
+	$(MD2RSS) > $(RSS_XML)
+

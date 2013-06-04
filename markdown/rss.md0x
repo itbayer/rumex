@@ -1,0 +1,40 @@
+% Abo Seite - Newsletter - RSS Feed
+% 
+%
+
+
+<!--
+| Titel: Rumex - Ein Home Page Baukasten
+| Beschreibung: Aktuelles und Neuigkeiten vom rumex Home Page Baukasten
+| KLink: http://www.it-bayer.de/rumex/
+| Lang: de-DE
+| BildTitel: IT-Bayer rumex Meldungen
+| BildURL: http://www.itbayer.de/rumex/bilder/404.png
+| BildLink: http://www.it-bayer.de/rumex/
+| BildBeschreibung: Aktuelles und Neuigkeiten von der rumex Seite.
+-->
+
+
+
+
+# rumex bekommt die RSS Feed Funktion{.rssfeed}
+
+<!-- 
+| Link: http://www.it-bayer/rumex/
+| Autor: IT-Bayer
+| Kategorie: Neues
+-->
+
+In den rumex Baukasten wurde eine RSS Feed Funktion eingebaut.
+Die Einträge werden dabei auch aus einem `pandoc` Dokument gelesen
+und nach `rss.xml` geschrieben.
+
+Zusätzlich ist diese Datei auch als `rss.html` verfügbar.
+
+
+
+
+<!-- ich bin ein Kommentar -->
+
+
+<!-- vim:set ft=pandoc: -->
