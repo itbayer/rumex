@@ -71,7 +71,6 @@ blockquote {
 /* Quellcode Zeilen*/
 
 pre {
-	font-style: monospace;
 	background-color: #f4f4f4;
 	border-radius: 5px 5px 5px 5px;
 	border: 1px solid #e0e0e0;
@@ -92,7 +91,6 @@ dt * code,
 dd > code,
 dd * code {
 
-	font-style: monospace;
 	background-color: #F4F4F4;
 	border: 1px solid #e0e0e0;
 	border-radius: 5px 5px 5px 5px;
