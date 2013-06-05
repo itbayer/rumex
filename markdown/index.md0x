@@ -19,6 +19,12 @@ Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.
 
 **Historie**
 
+0.3.1
+:	Einstellungen optimiert.
+
+	<p><a href="http://jigsaw.w3.org/css-validator/check/referer"> <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="CSS ist valide!" /></a></p>
+	<p><a href="http://feed1.w3.org/check.cgi?url=http%3A//www.it-bayer.de/rumex/rss.xml"><img src="http://validator.w3.org/feed/images/valid-rss-rogers.png" alt="[Valid RSS]" title="Validate my RSS feed" /></a></p>
+
 0.3
 :	Der Baukasten wurde um die RSS Feed Funktion erweitert.
 
@@ -62,7 +68,7 @@ werden kann.
 
 <div class="indexliste">
 
-*2013-06-03*
+*2013-06-05*
 
 
 # ToDo
@@ -84,13 +90,13 @@ Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.
 *2013-06-03*
 
 
-# Github
+# Sandkasten
+ 
+Diese Seite ist der Sandkasten oder auch Spielwiese um 
+die CSS Einstellungen machen zu können.
 
-Kleine Beschreibung, oder besser gesagt mein Notizzettel
-wie man auf <http://github.com> eine Internetseite einrichtet.
 
-
-[... weiter lesen](github.html)
+[... weiter lesen](sandkasten.html)
 
 ---
 
@@ -103,13 +109,13 @@ wie man auf <http://github.com> eine Internetseite einrichtet.
 *2013-06-03*
 
 
-# Sandkasten
- 
-Diese Seite ist der Sandkasten oder auch Spielwiese um 
-die CSS Einstellungen machen zu können.
+# Github
+
+Kleine Beschreibung, oder besser gesagt mein Notizzettel
+wie man auf <http://github.com> eine Internetseite einrichtet.
 
 
-[... weiter lesen](sandkasten.html)
+[... weiter lesen](github.html)
 
 ---
 
