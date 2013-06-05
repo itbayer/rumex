@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html$if(lang)$ lang="$lang$"$endif$>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="rumex">
+  <meta name="generator" content="pandoc">
 $for(author-meta)$
   <meta name="author" content="$author-meta$">
 $endfor$
@@ -11,9 +11,6 @@ $if(date-meta)$
 $endif$
   <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
   <style type="text/css">code{white-space: pre;}</style>
-  <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
 $if(quotes)$
   <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
 $endif$
@@ -52,8 +49,8 @@ $if(toc)$
 $toc$
 </nav>
 $endif$
-<div id=seite>
-$body$
+<div id="start">
+	$body$
 </div>
 $for(include-after)$
 $include-after$
