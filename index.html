@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="rumex">
+  <meta name="generator" content="pandoc">
   <meta name="author" content="IT Bayer’s rumex">
   <title>Der(Ein) HomePage Sand(Bau)kasten</title>
   <style type="text/css">code{white-space: pre;}</style>
-  <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
   <!-- inc/header.html -->
   <link rel="alternate" type="application/rss+xml" title="Neues vom rumex Baukasten" href="rss.xml"/>
   <link rel="stylesheet" type="text/css" href="inc/all.css" media="all" />
@@ -26,82 +23,92 @@
 <h2 class="author">IT Bayer’s rumex</h2>
 <h3 class="date">2013,</h3>
 </header>
-<div id=seite>
-<div class="indexliste">
-
-<p>Dies ist ein Versuch mit ein paar Skripten eine Internetseite zu erstellen und zu verwalten. Eingesetzt wird dabei die Sprache <code>markdown</code> die dann von <code>pandoc</code> in das HTML Format gebracht wird.</p>
-<p>Die Seite bzw. die Entwicklung liegt auf <a href="http://github.com">github.com</a>, der aktuelle Stand kann als <a href="https://github.com/itbayer/rumex/archive/gh-pages.zip">ZIP Datei herunter geladen</a> werden.</p>
-<p>Aktuell wird dieser Baukasten<sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> auch auf der Seite <a href="http://www.it-bayer.de">http://www.it-bayer.de</a> verwendet.</p>
-<hr />
-<p><strong>Historie</strong></p>
-<dl>
-<dt>0.3</dt>
-<dd><p>Der Baukasten wurde um die RSS Feed Funktion erweitert.</p>
-</dd>
-<dt>0.2</dt>
-<dd><p>Steuerung der Inhaltsverzeichnis Einbindung durch Dateinamen Endungen.</p>
-</dd>
-<dt>0.1</dt>
-<dd><p>Version 0.1 ist fertig. Hat zwar hoch nicht viel Funktionen aber der Baukasten funktioniert schon.</p>
-</dd>
-</dl>
-<hr />
-</div>
-
-
-
-<div class="indexliste">
-
-<p><em>2013-06-05</em></p>
-<h1 id="beschreibung">Beschreibung</h1>
-<p>Beschreibung des Home Page Baukastens der mit <code>markdown</code>, <code>pandoc</code>, <code>bash</code>, <code>make</code> <code>imagamagick</code> und <code>perl</code> eine Home Page erstellt die auch auf <a href="http://github.com">http://github.com</a> verwendet werden kann.</p>
-<p><a href="beschreibung.html">… weiter lesen</a></p>
-<hr />
-</div>
-
-
-
-<div class="indexliste">
-
-<p><em>2013-06-03</em></p>
-<h1 id="todo">ToDo</h1>
-<p>Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens. Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.</p>
-<p><a href="todo.html">… weiter lesen</a></p>
-<hr />
-</div>
-
-
-
-<div class="indexliste">
-
-<p><em>2013-06-03</em></p>
-<h1 id="github">Github</h1>
-<p>Kleine Beschreibung, oder besser gesagt mein Notizzettel wie man auf <a href="http://github.com">http://github.com</a> eine Internetseite einrichtet.</p>
-<p><a href="github.html">… weiter lesen</a></p>
-<hr />
-</div>
-
-
-
-<div class="indexliste">
-
-<p><em>2013-06-03</em></p>
-<h1 id="sandkasten">Sandkasten</h1>
-<p>Diese Seite ist der Sandkasten oder auch Spielwiese um die CSS Einstellungen machen zu können.</p>
-<p><a href="sandkasten.html">… weiter lesen</a></p>
-<hr />
-</div>
-
-
-
-
-
-<section class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p>Es kann aber sein das hier nicht die aktuelle <a href="http://www.it-bayer.de/rumex/">rumex Version</a> verwendet wird.<a href="#fnref1">↩</a></p></li>
-</ol>
-</section>
+<div id="start">
+	<div class="indexliste">
+ 
+ <p>Dies ist ein Versuch mit ein paar Skripten eine Internetseite zu erstellen und zu verwalten. Eingesetzt wird dabei die Sprache <code>markdown</code> die dann von <code>pandoc</code> in das HTML Format gebracht wird.</p>
+ <p>Die Seite bzw. die Entwicklung liegt auf <a href="http://github.com">github.com</a>, der aktuelle Stand kann als <a href="https://github.com/itbayer/rumex/archive/gh-pages.zip">ZIP Datei herunter geladen</a> werden.</p>
+ <p>Aktuell wird dieser Baukasten<sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> auch auf der Seite <a href="http://www.it-bayer.de">http://www.it-bayer.de</a> verwendet.</p>
+ <hr />
+ <p><strong>Historie</strong></p>
+ <dl>
+ <dt>0.3.1</dt>
+ <dd><p>Einstellungen optimiert.</p>
+ <p>
+ <a href="http://jigsaw.w3.org/css-validator/check/referer"> <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="CSS ist valide!" /></a>
+ </p>
+ <p>
+ <a href="http://feed1.w3.org/check.cgi?url=http%3A//www.it-bayer.de/rumex/rss.xml"><img src="http://validator.w3.org/feed/images/valid-rss-rogers.png" alt="[Valid RSS]" title="Validate my RSS feed" /></a>
+ </p>
+ 
+ </dd>
+ <dt>0.3</dt>
+ <dd><p>Der Baukasten wurde um die RSS Feed Funktion erweitert.</p>
+ </dd>
+ <dt>0.2</dt>
+ <dd><p>Steuerung der Inhaltsverzeichnis Einbindung durch Dateinamen Endungen.</p>
+ </dd>
+ <dt>0.1</dt>
+ <dd><p>Version 0.1 ist fertig. Hat zwar hoch nicht viel Funktionen aber der Baukasten funktioniert schon.</p>
+ </dd>
+ </dl>
+ <hr />
+ </div>
+ 
+ 
+ 
+ <div class="indexliste">
+ 
+ <p><em>2013-06-05</em></p>
+ <h1 id="beschreibung">Beschreibung</h1>
+ <p>Beschreibung des Home Page Baukastens der mit <code>markdown</code>, <code>pandoc</code>, <code>bash</code>, <code>make</code> <code>imagamagick</code> und <code>perl</code> eine Home Page erstellt die auch auf <a href="http://github.com">http://github.com</a> verwendet werden kann.</p>
+ <p><a href="beschreibung.html">… weiter lesen</a></p>
+ <hr />
+ </div>
+ 
+ 
+ 
+ <div class="indexliste">
+ 
+ <p><em>2013-06-03</em></p>
+ <h1 id="todo">ToDo</h1>
+ <p>Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens. Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.</p>
+ <p><a href="todo.html">… weiter lesen</a></p>
+ <hr />
+ </div>
+ 
+ 
+ 
+ <div class="indexliste">
+ 
+ <p><em>2013-06-03</em></p>
+ <h1 id="github">Github</h1>
+ <p>Kleine Beschreibung, oder besser gesagt mein Notizzettel wie man auf <a href="http://github.com">http://github.com</a> eine Internetseite einrichtet.</p>
+ <p><a href="github.html">… weiter lesen</a></p>
+ <hr />
+ </div>
+ 
+ 
+ 
+ <div class="indexliste">
+ 
+ <p><em>2013-06-03</em></p>
+ <h1 id="sandkasten">Sandkasten</h1>
+ <p>Diese Seite ist der Sandkasten oder auch Spielwiese um die CSS Einstellungen machen zu können.</p>
+ <p><a href="sandkasten.html">… weiter lesen</a></p>
+ <hr />
+ </div>
+ 
+ 
+ 
+ 
+ 
+ <section class="footnotes">
+ <hr />
+ <ol>
+ <li id="fn1"><p>Es kann aber sein das hier nicht die aktuelle <a href="http://www.it-bayer.de/rumex/">rumex Version</a> verwendet wird.<a href="#fnref1">↩</a></p></li>
+ </ol>
+ </section>
 </div>
 <div id="fuss">
 	<p>
