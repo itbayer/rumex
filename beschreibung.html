@@ -1,11 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
+  <meta name="generator" content="rumex">
   <meta name="author" content="dieses Home Page Baukastens">
   <title>Beschreibung</title>
   <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
   <!-- inc/header.html -->
   <link rel="alternate" type="application/rss+xml" title="Neues vom rumex Baukasten" href="rss.xml"/>
   <link rel="stylesheet" type="text/css" href="inc/all.css" media="all" />
@@ -45,240 +48,240 @@
 <li><a href="#update">Update</a></li>
 </ul>
 </nav>
-<div id="start">
-	<!--
- 
- # Beschreibung
- 
- -->
- 
- <p>Beschreibung des Home Page Baukastens der mit <code>markdown</code>, <code>pandoc</code>, <code>bash</code>, <code>make</code> <code>imagamagick</code> und <code>perl</code> eine Home Page erstellt die auch auf <a href="http://github.com">http://github.com</a> verwendet werden kann.</p>
- <!-- schnipp -->
- 
- 
- 
- <h1 id="vorwort"><a href="#vorwort">Vorwort</a></h1>
- <p>Die Beweggründe mit einem eigenen System eine Internet Seite zu Erstellen sind mit der Zeit in mir gewachsen.</p>
- <p>Es gibt immer mehr Systeme die zum Erstellen und Verwalten von Internetseiten eingesetzt werden. Probiert habe ich schon viele und mit den meisten war ich auch sehr zufrieden, wenn da nicht immer der Hacken mit dem Updates wäre. Irgendwie, zumindest kommt es mir so vor, ist der Aufwand das System der Seite auf dem aktuellen Stand zu halten größer geworden als den Inhalt der eigentlichen Seite zu pflegen.</p>
- <p>Ich wünschte mir wieder eine Internetseite wie in früheren Zeiten. Eine Seite die aus einfachen HTML Seiten besteht.</p>
- <p>Irgendwann bin ich dann auf <code>markdown</code> und <code>pandoc</code> gestoßen und die Idee dieses Home Page Baukastens ist entstanden.</p>
- <h1 id="grunddaten-aufbau-des-rumex-baukastens"><a href="#grunddaten-aufbau-des-rumex-baukastens">Grunddaten / Aufbau des rumex Baukastens</a></h1>
- <h2 id="root-verzeichnis"><a href="#root-verzeichnis">root Verzeichnis</a></h2>
- <p>Im <code>root</code> Verzeichnis findet man alle <code>HTML</code> Dateien der Seite. Diese werde vom Baukasten erstellt und müssen nicht von Hand verändert werden. Zusätzlich findet man noch ein paar Systemdateien:</p>
- <ul>
- <li><p>rss.xml<br />News Feed Datei, wird vom System erstelle</p></li>
- <li><p>readme.md<br />Beschreibungsdatei die von github.com gebraucht wird.</p></li>
- <li><p>Makefile<br />Steuerdatei für das Programm <code>make</code>.</p></li>
- <li><p>robots.txt<br />Datei für die Suchmaschinen.</p></li>
- <li><p>favicon.ico<br />Icon für den Browser.</p></li>
- <li><p>.htaccess<br />Konfiguration für den Apache Server.</p></li>
- </ul>
- <h2 id="unterverzeichnisse"><a href="#unterverzeichnisse">Unterverzeichnisse</a></h2>
- <pre class="text"><code>├── inc/
- ├── bin/
- ├── markdown/
- └── bilder/</code></pre>
- <dl>
- <dt>inc/</dt>
- <dd><p>Im <code>inc</code> Verzeichnis liegen alle Dateien die von den verschiedenen Tools eingebunden werden. Auch Konfigurationsdateien sind hier zu finden.</p>
- </dd>
- <dt>bin/</dt>
- <dd><p>Hier liegen die Skripte die zur Erstellung der Seiten dienen.</p>
- </dd>
- <dt>markdown/</dt>
- <dd><p>Hier befinden sich alle Texte der Seite.</p>
- </dd>
- <dt>bilder/</dt>
- <dd><p>In diesem Verzeichnis werden alle Bilder der Seite abgelegt.</p>
- </dd>
- </dl>
- <h2 id="steuerung-durch-dateiendung"><a href="#steuerung-durch-dateiendung">Steuerung durch Dateiendung</a></h2>
- <p>Das Aussehen der Dateien bezüglich des Inhaltsverzeichnisses könnte auch durch die Dateiendung gesteuert werden.</p>
- <h3 id="beispiel"><a href="#beispiel">Beispiel</a></h3>
- <dl>
- <dt>datei.md0s</dt>
- <dd><p>Würde eine HTML Datei ohne Inhaltsverzeichnis erstellen.</p>
- </dd>
- <dt>datei.md1s</dt>
- <dd><p>Erstellt die HTML Datei mit dem Inhaltsverzeichnis aus den Einträgen der H1 Überschriften.</p>
- </dd>
- <dt>datei.md2s</dt>
- <dd><p>Erstellt eine HTML Datei mit dem Inhaltsverzeichnis aud den Einträgen der H1 und H2 Überschriften.</p>
- </dd>
- </dl>
- <p><strong>Auszug aus <a href="http://johnmacfarlane.net/pandoc/README.html">http://johnmacfarlane.net/pandoc/README.html</a></strong></p>
- <pre><code>--toc, --table-of-contents
- 
- Include an automatically generated table of contents 
- (or, in the case of latex, context, and rst, an instruction 
- to create one) in the output document. 
- This option has no effect on man, docbook, slidy, 
- slideous, or s5 output.
- 
- --toc-depth=NUMBER
- 
- Specify the number of section levels to include in the 
- table of contents. The default is 3 (which means that 
- level 1, 2, and 3 headers will be listed in the contents). 
- Implies --toc.</code></pre>
- <p>Zusätzlich könnte die Dateiendung auch eine unterschiedliche Verwendung der Dateien ermöglichen.</p>
- <dl>
- <dt>datei.md0s, datei.md1s …</dt>
- <dd><p>Standard Datei.</p>
- </dd>
- <dt>datei.md0x, datei.md1x …</dt>
- <dd><p>Datei die nicht in die Liste auf <code>index.html</code> eingebunden wird.</p>
- </dd>
- <dt>datei.md0v, datie.md1v …</dt>
- <dd><p>Versteckte Datei. Diese taucht weder in der <code>index.html</code> noch in der <code>sitemap.xml</code> auf.</p>
- </dd>
- </dl>
- <p>Durch diese Variante würde der <code>html</code> Namen immer gleich bleiben, sollte er ja auch. Nur die Verarbeitung würde sich ändern.</p>
- <p>Die Steuerung erfolgt über <code>make</code>.</p>
- <h2 id="sonderseiten"><a href="#sonderseiten">Sonderseiten</a></h2>
- <p>Im Verzeichnis <code>markdown</code> befinden sich Sonderseiten.</p>
- <dl>
- <dt>markdown/index.md0x</dt>
- <dd><p>Diese Datei wird vom Programm <code>bin/make_index.pl</code> erstellt, muss somit nicht vorhanden sein.</p>
- </dd>
- <dt>markdown/start.md0s</dt>
- <dd><p>Die <code>start.md0s</code> wird als Vortext in die <code>index.md0x</code> eingebunden. Mit ihr kann man oberhalb der Seiten Liste einen extra Text in die <code>index.html</code> eingebunden werden.<br /><strong>Diese Datei ist erforderlich und muss vorhanden sein.</strong></p>
- </dd>
- <dt>markdown/rss.md0x</dt>
- <dd><p>Datei für die RSS Feed Funktion.</p>
- </dd>
- <dt>markdown/impressum.md0x</dt>
- <dd><p>Datei für die Impressumsangaben.<br /><strong>Ist nicht zwingend erforderlich. Jedoch muss die <code>inc/fuss.html</code> entsprechende bearbeitet, der Link muss raus genommen, werden.</strong></p>
- </dd>
- </dl>
- <h2 id="aufbau-der-startseite"><a href="#aufbau-der-startseite">Aufbau der Startseite</a></h2>
- <p>Die Startseite <code>markdown/start.md0s</code> muss nur vorhanden sein. Es reicht also ein `touch markdown/start.md0s.</p>
- <p>Der normale Aufbau könnte so ausschauen. Die <code>pandoc</code> Kopfzeile sind nicht zwingend erforderlich.</p>
- <pre><code>% start.md0s
- %
- %
- 
- Hier kommt auch schon der Vortext für die index.html</code></pre>
- <h2 id="aufbau-der-einzelseiten"><a href="#aufbau-der-einzelseiten">Aufbau der Einzelseiten</a></h2>
- <p>Die Einzelseiten liegen alle im Verzeichnis <code>markdown</code> und zwar in der Sprache <code>markdown</code> bzw. der Erweiterung von <code>pandoc</code>.</p>
- <p>Diese Einzelseiten werden in chronologischer Reihenfolge in die Startseite <code>index.html</code> eingebunden und bilden sozusagen das Inhaltsverzeichnis der Seite. In jeder Einzelseite wird dazu ein sogenannter <em>“Vortext”</em> hinterlegt. Die Seite bzw. der Kopf der Seite hat dabei folgenden Aufbau.</p>
- <pre><code>% Seiten Überschrift 1
- % Seiten Überschrift 2
- % Seiten Überschrift 3
- 
- &lt;!--
- 
- # Listen-Überschrift
- 
- Überschrift und Text der in der Listenübersicht
- auf index.html angezeigt wird.
- 
- Alles was innerhalb der HTML Kommentar Marken
- steht wird nur auf der index.html Seite angezeigt.
- 
- --&gt;
- 
- Alles was sich außerhalb der HTML Marken
- befindet wird auch auf der eigentlichen Seite angezeigt.
- 
- Durch das Schlüsselwort &quot;schnipp&quot;, das auch in HTML
- Kommentar Marken stehen muss, wird der Vortext beendet.
- Auf der index.html erscheint an dieser Stelle der Link
- &quot;... weiter lesen&quot;.
- 
- &lt;!-- schnipp --&gt;
- 
- Ab hier geht dann der Inhlat der eigentlichen Seite los.</code></pre>
- <h1 id="rss-feed-funktion"><a href="#rss-feed-funktion">RSS Feed Funktion</a></h1>
- <p>FIXME</p>
- <p>Wird nicht aus den einzelnen Dateien erstellt sondern muss manuell editiert werden, Datei <code>markdown/rssmd0x</code>.</p>
- <p>Jede Überschrift eines Eintrags muss mit einem <code>{#anker}</code> enden.</p>
- <p>Danach kommen die Angaben zu:</p>
- <p><strong>Link:</strong> <em>Verweis zur Seite mit weiteren Informationen</em><br /><strong>Autor:</strong> <em>Autor der den Eintrag geschrieben hat</em><br /><strong>Kategorie:</strong> <em>Kategoie des Eintrags</em></p>
- <p>die in HTML Kommentar Marker eingeschlossen sind.</p>
- <p>Anschließend folgt die Meldung. Zur Zeit werden folgende <code>pandoc</code> Formatierungen unterstützt.</p>
- <ul>
- <li>Überschriften ab der Stufe 3 <code>###</code></li>
- <li>Aufzählungen <code>-</code></li>
- <li>Aufzählungen <code>*</code></li>
- <li>Zitate <code>&gt;</code></li>
- <li>Links <code>[Link](http://muster.tdl)</code>. Diese dürfen nicht am Anfang einer Zeile stehen.</li>
- <li>Bilder <code>![Bild](bilder/muster.png &quot;muster.png&quot;)</code>, Diese dürfen nicht am Anfang einer Zeile stehen.</li>
- <li>Code <code>`Code`</code>.</li>
- </ul>
- <h2 id="beispiel-einer-rss-feed-seite"><a href="#beispiel-einer-rss-feed-seite">Beispiel einer RSS Feed Seite</a></h2>
- <pre><code>% Abo Seite - Newsletter - RSS Feed
- % 
- %
- 
- 
- &lt;!--
- | Titel: Rumex - Ein Home Page Baukasten
- | Beschreibung: Aktuelles und Neuigkeiten vom rumex Home Page Baukasten
- | KLink: http://www.it-bayer.de/rumex/
- | Lang: de-DE
- | BildTitel: IT-Bayer rumex Meldungen
- | BildURL: http://www.itbayer.de/rumex/bilder/404.png
- | BildLink: http://www.it-bayer.de/rumex/
- | BildBeschreibung: Aktuelles und Neuigkeiten von der rumex Seite.
- --&gt;
- 
- 
- 
- 
- # rumex bekommt die RSS Feed Funktion{#rssfeed}
- 
- &lt;!-- 
- | Link: http://www.it-bayer.de/rumex/
- | Autor: IT-Bayer
- | Kategorie: Neues
- --&gt;
- 
- In den rumex Baukasten wurde eine RSS Feed Funktion eingebaut.
- Die Einträge werden dabei auch aus einem `pandoc` Dokument gelesen
- und nach `rss.xml` geschrieben.
- 
- Zusätzlich ist diese Datei auch als `rss.html` unter 
- &lt;http://www.it-bayer.de/rumex/rss.html&gt; verfügbar.
- 
- </code></pre>
- <h1 id="steuerung"><a href="#steuerung">Steuerung</a></h1>
- <p>Gesteuert wird der Baukasten mittels <code>make</code>. Folgende make Befehle stehen dabei zur Verfügung.</p>
- <dl>
- <dt><code>make html</code></dt>
- <dd><p>Erstellt die einzelnen html Dateien. Hier kann auch nur <code>make</code> verwendet werden.</p>
- </dd>
- <dt><code>make index</code></dt>
- <dd><p>Erstellt die <code>index.md</code> Datei aus der dann die <code>index.html</code> Datei erstellt wird.</p>
- </dd>
- <dt><code>make all</code></dt>
- <dd><p>Eine Zusammenstellung aus <code>make index</code> und <code>make html</code>.</p>
- </dd>
- <dt><code>make online</code></dt>
- <dd><p>Daten auf github hoch laden.</p>
- </dd>
- <dt><code>make newrumex</code></dt>
- <dd><p>FIXME: Erstellt eine leere Seite. Löscht alles bis auf die Grunddaten des Baukastens.</p>
- </dd>
- </dl>
- <h1 id="einrichten-einer-neue-seite"><a href="#einrichten-einer-neue-seite">Einrichten einer neue Seite</a></h1>
- <p>FIXME</p>
- <h1 id="installation"><a href="#installation">Installation</a></h1>
- <p>Der Baukasten verwendet folgende Programme:</p>
- <ul>
- <li>bash</li>
- <li>make</li>
- <li>perl</li>
- <li>git</li>
- <li>pandoc</li>
- <li>imagemagick</li>
- <li>texlive</li>
- </ul>
- <p>Wobei <code>bash</code>, <code>make</code> und <code>perl</code> bei jeder <code>*nix</code> Installation bereits vorhanden sein dürft. Die restlichen Programme müssen nach installiert werden. <code>texlive</code> wird nur gebraucht wenn man auch PDF Dateien erstellen möchte.</p>
- <h1 id="update"><a href="#update">Update</a></h1>
- <p>FIXME</p>
- <!-- vim: set ft=pandoc: -->
- 
+<div id=seite>
+<!--
+
+# Beschreibung
+
+-->
+
+<p>Beschreibung des Home Page Baukastens der mit <code>markdown</code>, <code>pandoc</code>, <code>bash</code>, <code>make</code> <code>imagamagick</code> und <code>perl</code> eine Home Page erstellt die auch auf <a href="http://github.com">http://github.com</a> verwendet werden kann.</p>
+<!-- schnipp -->
+
+
+
+<h1 id="vorwort"><a href="#vorwort">Vorwort</a></h1>
+<p>Die Beweggründe mit einem eigenen System eine Internet Seite zu Erstellen sind mit der Zeit in mir gewachsen.</p>
+<p>Es gibt immer mehr Systeme die zum Erstellen und Verwalten von Internetseiten eingesetzt werden. Probiert habe ich schon viele und mit den meisten war ich auch sehr zufrieden, wenn da nicht immer der Hacken mit dem Updates wäre. Irgendwie, zumindest kommt es mir so vor, ist der Aufwand das System der Seite auf dem aktuellen Stand zu halten größer geworden als den Inhalt der eigentlichen Seite zu pflegen.</p>
+<p>Ich wünschte mir wieder eine Internetseite wie in früheren Zeiten. Eine Seite die aus einfachen HTML Seiten besteht.</p>
+<p>Irgendwann bin ich dann auf <code>markdown</code> und <code>pandoc</code> gestoßen und die Idee dieses Home Page Baukastens ist entstanden.</p>
+<h1 id="grunddaten-aufbau-des-rumex-baukastens"><a href="#grunddaten-aufbau-des-rumex-baukastens">Grunddaten / Aufbau des rumex Baukastens</a></h1>
+<h2 id="root-verzeichnis"><a href="#root-verzeichnis">root Verzeichnis</a></h2>
+<p>Im <code>root</code> Verzeichnis findet man alle <code>HTML</code> Dateien der Seite. Diese werde vom Baukasten erstellt und müssen nicht von Hand verändert werden. Zusätzlich findet man noch ein paar Systemdateien:</p>
+<ul>
+<li><p>rss.xml<br />News Feed Datei, wird vom System erstelle</p></li>
+<li><p>readme.md<br />Beschreibungsdatei die von github.com gebraucht wird.</p></li>
+<li><p>Makefile<br />Steuerdatei für das Programm <code>make</code>.</p></li>
+<li><p>robots.txt<br />Datei für die Suchmaschinen.</p></li>
+<li><p>favicon.ico<br />Icon für den Browser.</p></li>
+<li><p>.htaccess<br />Konfiguration für den Apache Server.</p></li>
+</ul>
+<h2 id="unterverzeichnisse"><a href="#unterverzeichnisse">Unterverzeichnisse</a></h2>
+<pre class="text"><code>├── inc/
+├── bin/
+├── markdown/
+└── bilder/</code></pre>
+<dl>
+<dt>inc/</dt>
+<dd><p>Im <code>inc</code> Verzeichnis liegen alle Dateien die von den verschiedenen Tools eingebunden werden. Auch Konfigurationsdateien sind hier zu finden.</p>
+</dd>
+<dt>bin/</dt>
+<dd><p>Hier liegen die Skripte die zur Erstellung der Seiten dienen.</p>
+</dd>
+<dt>markdown/</dt>
+<dd><p>Hier befinden sich alle Texte der Seite.</p>
+</dd>
+<dt>bilder/</dt>
+<dd><p>In diesem Verzeichnis werden alle Bilder der Seite abgelegt.</p>
+</dd>
+</dl>
+<h2 id="steuerung-durch-dateiendung"><a href="#steuerung-durch-dateiendung">Steuerung durch Dateiendung</a></h2>
+<p>Das Aussehen der Dateien bezüglich des Inhaltsverzeichnisses könnte auch durch die Dateiendung gesteuert werden.</p>
+<h3 id="beispiel"><a href="#beispiel">Beispiel</a></h3>
+<dl>
+<dt>datei.md0s</dt>
+<dd><p>Würde eine HTML Datei ohne Inhaltsverzeichnis erstellen.</p>
+</dd>
+<dt>datei.md1s</dt>
+<dd><p>Erstellt die HTML Datei mit dem Inhaltsverzeichnis aus den Einträgen der H1 Überschriften.</p>
+</dd>
+<dt>datei.md2s</dt>
+<dd><p>Erstellt eine HTML Datei mit dem Inhaltsverzeichnis aud den Einträgen der H1 und H2 Überschriften.</p>
+</dd>
+</dl>
+<p><strong>Auszug aus <a href="http://johnmacfarlane.net/pandoc/README.html">http://johnmacfarlane.net/pandoc/README.html</a></strong></p>
+<pre><code>--toc, --table-of-contents
+
+Include an automatically generated table of contents 
+(or, in the case of latex, context, and rst, an instruction 
+to create one) in the output document. 
+This option has no effect on man, docbook, slidy, 
+slideous, or s5 output.
+
+--toc-depth=NUMBER
+
+Specify the number of section levels to include in the 
+table of contents. The default is 3 (which means that 
+level 1, 2, and 3 headers will be listed in the contents). 
+Implies --toc.</code></pre>
+<p>Zusätzlich könnte die Dateiendung auch eine unterschiedliche Verwendung der Dateien ermöglichen.</p>
+<dl>
+<dt>datei.md0s, datei.md1s …</dt>
+<dd><p>Standard Datei.</p>
+</dd>
+<dt>datei.md0x, datei.md1x …</dt>
+<dd><p>Datei die nicht in die Liste auf <code>index.html</code> eingebunden wird.</p>
+</dd>
+<dt>datei.md0v, datie.md1v …</dt>
+<dd><p>Versteckte Datei. Diese taucht weder in der <code>index.html</code> noch in der <code>sitemap.xml</code> auf.</p>
+</dd>
+</dl>
+<p>Durch diese Variante würde der <code>html</code> Namen immer gleich bleiben, sollte er ja auch. Nur die Verarbeitung würde sich ändern.</p>
+<p>Die Steuerung erfolgt über <code>make</code>.</p>
+<h2 id="sonderseiten"><a href="#sonderseiten">Sonderseiten</a></h2>
+<p>Im Verzeichnis <code>markdown</code> befinden sich Sonderseiten.</p>
+<dl>
+<dt>markdown/index.md0x</dt>
+<dd><p>Diese Datei wird vom Programm <code>bin/make_index.pl</code> erstellt, muss somit nicht vorhanden sein.</p>
+</dd>
+<dt>markdown/start.md0s</dt>
+<dd><p>Die <code>start.md0s</code> wird als Vortext in die <code>index.md0x</code> eingebunden. Mit ihr kann man oberhalb der Seiten Liste einen extra Text in die <code>index.html</code> eingebunden werden.<br /><strong>Diese Datei ist erforderlich und muss vorhanden sein.</strong></p>
+</dd>
+<dt>markdown/rss.md0x</dt>
+<dd><p>Datei für die RSS Feed Funktion.</p>
+</dd>
+<dt>markdown/impressum.md0x</dt>
+<dd><p>Datei für die Impressumsangaben.<br /><strong>Ist nicht zwingend erforderlich. Jedoch muss die <code>inc/fuss.html</code> entsprechende bearbeitet, der Link muss raus genommen, werden.</strong></p>
+</dd>
+</dl>
+<h2 id="aufbau-der-startseite"><a href="#aufbau-der-startseite">Aufbau der Startseite</a></h2>
+<p>Die Startseite <code>markdown/start.md0s</code> muss nur vorhanden sein. Es reicht also ein `touch markdown/start.md0s.</p>
+<p>Der normale Aufbau könnte so ausschauen. Die <code>pandoc</code> Kopfzeile sind nicht zwingend erforderlich.</p>
+<pre><code>% start.md0s
+%
+%
+
+Hier kommt auch schon der Vortext für die index.html</code></pre>
+<h2 id="aufbau-der-einzelseiten"><a href="#aufbau-der-einzelseiten">Aufbau der Einzelseiten</a></h2>
+<p>Die Einzelseiten liegen alle im Verzeichnis <code>markdown</code> und zwar in der Sprache <code>markdown</code> bzw. der Erweiterung von <code>pandoc</code>.</p>
+<p>Diese Einzelseiten werden in chronologischer Reihenfolge in die Startseite <code>index.html</code> eingebunden und bilden sozusagen das Inhaltsverzeichnis der Seite. In jeder Einzelseite wird dazu ein sogenannter <em>“Vortext”</em> hinterlegt. Die Seite bzw. der Kopf der Seite hat dabei folgenden Aufbau.</p>
+<pre><code>% Seiten Überschrift 1
+% Seiten Überschrift 2
+% Seiten Überschrift 3
+
+&lt;!--
+
+# Listen-Überschrift
+
+Überschrift und Text der in der Listenübersicht
+auf index.html angezeigt wird.
+
+Alles was innerhalb der HTML Kommentar Marken
+steht wird nur auf der index.html Seite angezeigt.
+
+--&gt;
+
+Alles was sich außerhalb der HTML Marken
+befindet wird auch auf der eigentlichen Seite angezeigt.
+
+Durch das Schlüsselwort &quot;schnipp&quot;, das auch in HTML
+Kommentar Marken stehen muss, wird der Vortext beendet.
+Auf der index.html erscheint an dieser Stelle der Link
+&quot;... weiter lesen&quot;.
+
+&lt;!-- schnipp --&gt;
+
+Ab hier geht dann der Inhlat der eigentlichen Seite los.</code></pre>
+<h1 id="rss-feed-funktion"><a href="#rss-feed-funktion">RSS Feed Funktion</a></h1>
+<p>FIXME</p>
+<p>Wird nicht aus den einzelnen Dateien erstellt sondern muss manuell editiert werden, Datei <code>markdown/rssmd0x</code>.</p>
+<p>Jede Überschrift eines Eintrags muss mit einem <code>{#anker}</code> enden.</p>
+<p>Danach kommen die Angaben zu:</p>
+<p><strong>Link:</strong> <em>Verweis zur Seite mit weiteren Informationen</em><br /><strong>Autor:</strong> <em>Autor der den Eintrag geschrieben hat</em><br /><strong>Kategorie:</strong> <em>Kategoie des Eintrags</em></p>
+<p>die in HTML Kommentar Marker eingeschlossen sind.</p>
+<p>Anschließend folgt die Meldung. Zur Zeit werden folgende <code>pandoc</code> Formatierungen unterstützt.</p>
+<ul>
+<li>Überschriften ab der Stufe 3 <code>###</code></li>
+<li>Aufzählungen <code>-</code></li>
+<li>Aufzählungen <code>*</code></li>
+<li>Zitate <code>&gt;</code></li>
+<li>Links <code>[Link](http://muster.tdl)</code>. Diese dürfen nicht am Anfang einer Zeile stehen.</li>
+<li>Bilder <code>![Bild](bilder/muster.png &quot;muster.png&quot;)</code>, Diese dürfen nicht am Anfang einer Zeile stehen.</li>
+<li>Code <code>`Code`</code>.</li>
+</ul>
+<h2 id="beispiel-einer-rss-feed-seite"><a href="#beispiel-einer-rss-feed-seite">Beispiel einer RSS Feed Seite</a></h2>
+<pre><code>% Abo Seite - Newsletter - RSS Feed
+% 
+%
+
+
+&lt;!--
+| Titel: Rumex - Ein Home Page Baukasten
+| Beschreibung: Aktuelles und Neuigkeiten vom rumex Home Page Baukasten
+| KLink: http://www.it-bayer.de/rumex/
+| Lang: de-DE
+| BildTitel: IT-Bayer rumex Meldungen
+| BildURL: http://www.itbayer.de/rumex/bilder/404.png
+| BildLink: http://www.it-bayer.de/rumex/
+| BildBeschreibung: Aktuelles und Neuigkeiten von der rumex Seite.
+--&gt;
+
+
+
+
+# rumex bekommt die RSS Feed Funktion{#rssfeed}
+
+&lt;!-- 
+| Link: http://www.it-bayer.de/rumex/
+| Autor: IT-Bayer
+| Kategorie: Neues
+--&gt;
+
+In den rumex Baukasten wurde eine RSS Feed Funktion eingebaut.
+Die Einträge werden dabei auch aus einem `pandoc` Dokument gelesen
+und nach `rss.xml` geschrieben.
+
+Zusätzlich ist diese Datei auch als `rss.html` unter 
+&lt;http://www.it-bayer.de/rumex/rss.html&gt; verfügbar.
+
+</code></pre>
+<h1 id="steuerung"><a href="#steuerung">Steuerung</a></h1>
+<p>Gesteuert wird der Baukasten mittels <code>make</code>. Folgende make Befehle stehen dabei zur Verfügung.</p>
+<dl>
+<dt><code>make html</code></dt>
+<dd><p>Erstellt die einzelnen html Dateien. Hier kann auch nur <code>make</code> verwendet werden.</p>
+</dd>
+<dt><code>make index</code></dt>
+<dd><p>Erstellt die <code>index.md</code> Datei aus der dann die <code>index.html</code> Datei erstellt wird.</p>
+</dd>
+<dt><code>make all</code></dt>
+<dd><p>Eine Zusammenstellung aus <code>make index</code> und <code>make html</code>.</p>
+</dd>
+<dt><code>make online</code></dt>
+<dd><p>Daten auf github hoch laden.</p>
+</dd>
+<dt><code>make newrumex</code></dt>
+<dd><p>FIXME: Erstellt eine leere Seite. Löscht alles bis auf die Grunddaten des Baukastens.</p>
+</dd>
+</dl>
+<h1 id="einrichten-einer-neue-seite"><a href="#einrichten-einer-neue-seite">Einrichten einer neue Seite</a></h1>
+<p>FIXME</p>
+<h1 id="installation"><a href="#installation">Installation</a></h1>
+<p>Der Baukasten verwendet folgende Programme:</p>
+<ul>
+<li>bash</li>
+<li>make</li>
+<li>perl</li>
+<li>git</li>
+<li>pandoc</li>
+<li>imagemagick</li>
+<li>texlive</li>
+</ul>
+<p>Wobei <code>bash</code>, <code>make</code> und <code>perl</code> bei jeder <code>*nix</code> Installation bereits vorhanden sein dürft. Die restlichen Programme müssen nach installiert werden. <code>texlive</code> wird nur gebraucht wenn man auch PDF Dateien erstellen möchte.</p>
+<h1 id="update"><a href="#update">Update</a></h1>
+<p>FIXME</p>
+<!-- vim: set ft=pandoc: -->
+
 </div>
 <div id="fuss">
 	<p>
