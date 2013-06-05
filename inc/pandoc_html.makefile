@@ -2,6 +2,14 @@
 # inc/pandoc_html.makefile
 #
 
+#
+#
+#
+# --section-divs \
+#  raus genommen. Liefert einen schlechten HTML Code bei der 
+#  index.html, section und div sind durch einander.
+#
+
 
 # -------------------------------------------------------------------
 # HTML Datei ohne Inhaltsverzeichnis
@@ -19,7 +27,6 @@ html0s: $(HTML0S)
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
 		--template=$(HTML_TEMPLATE) \
-		--section-divs \
 		$< -o $@
 
 HTML0X =  $(shell for i in $(shell ls -1 markdown/*.md0x 2>/dev/null) ;do x=$${i\#*/}; echo $${x%.*}.html; done)
@@ -34,7 +41,6 @@ html0x: $(HTML0X)
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
 		--template=$(HTML_TEMPLATE) \
-		--section-divs \
 		$< -o $@
 
 
@@ -50,7 +56,6 @@ html0v: $(HTML0V)
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
 		--template=$(HTML_TEMPLATE) \
-		--section-divs \
 		$< -o $@
 
 
@@ -71,7 +76,6 @@ html1s: $(HTML1S)
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
 		--template=$(HTML_TEMPLATE) \
-		--section-divs \
 		$< -o $@
 
 
@@ -89,7 +93,6 @@ html1x: $(HTML1X)
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
 		--template=$(HTML_TEMPLATE) \
-		--section-divs \
 		$< -o $@
 
 
@@ -107,7 +110,6 @@ html1v: $(HTML1V)
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
 		--template=$(HTML_TEMPLATE) \
-		--section-divs \
 		$< -o $@
 
 
@@ -128,7 +130,6 @@ html2s: $(HTML2S)
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
 		--template=$(HTML_TEMPLATE) \
-		--section-divs \
 		$< -o $@
 
 
@@ -146,7 +147,6 @@ html2x: $(HTML2X)
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
 		--template=$(HTML_TEMPLATE) \
-		--section-divs \
 		$< -o $@
 
 
@@ -164,7 +164,6 @@ html2v: $(HTML2V)
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
 		--template=$(HTML_TEMPLATE) \
-		--section-divs \
 		$< -o $@
 
 
@@ -186,7 +185,6 @@ html3s: $(HTML3S)
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
 		--template=$(HTML_TEMPLATE) \
-		--section-divs \
 		$< -o $@
 
 
@@ -204,7 +202,6 @@ html3x: $(HTML3X)
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
 		--template=$(HTML_TEMPLATE) \
-		--section-divs \
 		$< -o $@
 
 
@@ -222,7 +219,6 @@ html3v: $(HTML3V)
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
 		--template=$(HTML_TEMPLATE) \
-		--section-divs \
 		$< -o $@
 
 
@@ -243,7 +239,6 @@ html4s: $(HTML4S)
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
 		--template=$(HTML_TEMPLATE) \
-		--section-divs \
 		$< -o $@
 
 
@@ -261,7 +256,6 @@ html4x: $(HTML4X)
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
 		--template=$(HTML_TEMPLATE) \
-		--section-divs \
 		$< -o $@
 
 
@@ -279,7 +273,6 @@ html4v: $(HTML4V)
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
 		--template=$(HTML_TEMPLATE) \
-		--section-divs \
 		$< -o $@
 
 
@@ -300,7 +293,6 @@ html5s: $(HTML5S)
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
 		--template=$(HTML_TEMPLATE) \
-		--section-divs \
 		$< -o $@
 
 
@@ -318,7 +310,6 @@ html5x: $(HTML5X)
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
 		--template=$(HTML_TEMPLATE) \
-		--section-divs \
 		$< -o $@
 
 
@@ -336,7 +327,6 @@ html5v: $(HTML5V)
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
 		--template=$(HTML_TEMPLATE) \
-		--section-divs \
 		$< -o $@
 
 
@@ -357,7 +347,6 @@ html6s: $(HTML6S)
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
 		--template=$(HTML_TEMPLATE) \
-		--section-divs \
 		$< -o $@
 
 
@@ -375,7 +364,6 @@ html6x: $(HTML6X)
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
 		--template=$(HTML_TEMPLATE) \
-		--section-divs \
 		$< -o $@
 
 
@@ -393,7 +381,6 @@ html6v: $(HTML6V)
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
 		--template=$(HTML_TEMPLATE) \
-		--section-divs \
 		$< -o $@
 
 

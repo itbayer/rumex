@@ -18,8 +18,8 @@
 <body>
 <!-- inc/kopf.html -->
 <div id="kopf">
-	<a href="index.html"><img src="inc/blind.png" width="80px"
-		height="700px" alt="zur Startseite"></a>
+	<a href="index.html"><img src="inc/blind.png" width="80"
+		height="700" alt="zur Startseite"></a>
 </div>
 <header>
 <h1 class="title">Beschreibung</h1>
@@ -60,17 +60,13 @@
 
 
 
-<section id="vorwort" class="level1">
-<h1><a href="#vorwort">Vorwort</a></h1>
+<h1 id="vorwort"><a href="#vorwort">Vorwort</a></h1>
 <p>Die Beweggründe mit einem eigenen System eine Internet Seite zu Erstellen sind mit der Zeit in mir gewachsen.</p>
 <p>Es gibt immer mehr Systeme die zum Erstellen und Verwalten von Internetseiten eingesetzt werden. Probiert habe ich schon viele und mit den meisten war ich auch sehr zufrieden, wenn da nicht immer der Hacken mit dem Updates wäre. Irgendwie, zumindest kommt es mir so vor, ist der Aufwand das System der Seite auf dem aktuellen Stand zu halten größer geworden als den Inhalt der eigentlichen Seite zu pflegen.</p>
 <p>Ich wünschte mir wieder eine Internetseite wie in früheren Zeiten. Eine Seite die aus einfachen HTML Seiten besteht.</p>
 <p>Irgendwann bin ich dann auf <code>markdown</code> und <code>pandoc</code> gestoßen und die Idee dieses Home Page Baukastens ist entstanden.</p>
-</section>
-<section id="grunddaten-aufbau-des-rumex-baukastens" class="level1">
-<h1><a href="#grunddaten-aufbau-des-rumex-baukastens">Grunddaten / Aufbau des rumex Baukastens</a></h1>
-<section id="root-verzeichnis" class="level2">
-<h2><a href="#root-verzeichnis">root Verzeichnis</a></h2>
+<h1 id="grunddaten-aufbau-des-rumex-baukastens"><a href="#grunddaten-aufbau-des-rumex-baukastens">Grunddaten / Aufbau des rumex Baukastens</a></h1>
+<h2 id="root-verzeichnis"><a href="#root-verzeichnis">root Verzeichnis</a></h2>
 <p>Im <code>root</code> Verzeichnis findet man alle <code>HTML</code> Dateien der Seite. Diese werde vom Baukasten erstellt und müssen nicht von Hand verändert werden. Zusätzlich findet man noch ein paar Systemdateien:</p>
 <ul>
 <li><p>rss.xml<br />News Feed Datei, wird vom System erstelle</p></li>
@@ -80,9 +76,7 @@
 <li><p>favicon.ico<br />Icon für den Browser.</p></li>
 <li><p>.htaccess<br />Konfiguration für den Apache Server.</p></li>
 </ul>
-</section>
-<section id="unterverzeichnisse" class="level2">
-<h2><a href="#unterverzeichnisse">Unterverzeichnisse</a></h2>
+<h2 id="unterverzeichnisse"><a href="#unterverzeichnisse">Unterverzeichnisse</a></h2>
 <pre class="text"><code>├── inc/
 ├── bin/
 ├── markdown/
@@ -101,12 +95,9 @@
 <dd><p>In diesem Verzeichnis werden alle Bilder der Seite abgelegt.</p>
 </dd>
 </dl>
-</section>
-<section id="steuerung-durch-dateiendung" class="level2">
-<h2><a href="#steuerung-durch-dateiendung">Steuerung durch Dateiendung</a></h2>
+<h2 id="steuerung-durch-dateiendung"><a href="#steuerung-durch-dateiendung">Steuerung durch Dateiendung</a></h2>
 <p>Das Aussehen der Dateien bezüglich des Inhaltsverzeichnisses könnte auch durch die Dateiendung gesteuert werden.</p>
-<section id="beispiel" class="level3">
-<h3><a href="#beispiel">Beispiel</a></h3>
+<h3 id="beispiel"><a href="#beispiel">Beispiel</a></h3>
 <dl>
 <dt>datei.md0s</dt>
 <dd><p>Würde eine HTML Datei ohne Inhaltsverzeichnis erstellen.</p>
@@ -147,10 +138,7 @@ Implies --toc.</code></pre>
 </dl>
 <p>Durch diese Variante würde der <code>html</code> Namen immer gleich bleiben, sollte er ja auch. Nur die Verarbeitung würde sich ändern.</p>
 <p>Die Steuerung erfolgt über <code>make</code>.</p>
-</section>
-</section>
-<section id="sonderseiten" class="level2">
-<h2><a href="#sonderseiten">Sonderseiten</a></h2>
+<h2 id="sonderseiten"><a href="#sonderseiten">Sonderseiten</a></h2>
 <p>Im Verzeichnis <code>markdown</code> befinden sich Sonderseiten.</p>
 <dl>
 <dt>markdown/index.md0x</dt>
@@ -166,9 +154,7 @@ Implies --toc.</code></pre>
 <dd><p>Datei für die Impressumsangaben.<br /><strong>Ist nicht zwingend erforderlich. Jedoch muss die <code>inc/fuss.html</code> entsprechende bearbeitet, der Link muss raus genommen, werden.</strong></p>
 </dd>
 </dl>
-</section>
-<section id="aufbau-der-startseite" class="level2">
-<h2><a href="#aufbau-der-startseite">Aufbau der Startseite</a></h2>
+<h2 id="aufbau-der-startseite"><a href="#aufbau-der-startseite">Aufbau der Startseite</a></h2>
 <p>Die Startseite <code>markdown/start.md0s</code> muss nur vorhanden sein. Es reicht also ein `touch markdown/start.md0s.</p>
 <p>Der normale Aufbau könnte so ausschauen. Die <code>pandoc</code> Kopfzeile sind nicht zwingend erforderlich.</p>
 <pre><code>% start.md0s
@@ -176,9 +162,7 @@ Implies --toc.</code></pre>
 %
 
 Hier kommt auch schon der Vortext für die index.html</code></pre>
-</section>
-<section id="aufbau-der-einzelseiten" class="level2">
-<h2><a href="#aufbau-der-einzelseiten">Aufbau der Einzelseiten</a></h2>
+<h2 id="aufbau-der-einzelseiten"><a href="#aufbau-der-einzelseiten">Aufbau der Einzelseiten</a></h2>
 <p>Die Einzelseiten liegen alle im Verzeichnis <code>markdown</code> und zwar in der Sprache <code>markdown</code> bzw. der Erweiterung von <code>pandoc</code>.</p>
 <p>Diese Einzelseiten werden in chronologischer Reihenfolge in die Startseite <code>index.html</code> eingebunden und bilden sozusagen das Inhaltsverzeichnis der Seite. In jeder Einzelseite wird dazu ein sogenannter <em>“Vortext”</em> hinterlegt. Die Seite bzw. der Kopf der Seite hat dabei folgenden Aufbau.</p>
 <pre><code>% Seiten Überschrift 1
@@ -208,10 +192,7 @@ Auf der index.html erscheint an dieser Stelle der Link
 &lt;!-- schnipp --&gt;
 
 Ab hier geht dann der Inhlat der eigentlichen Seite los.</code></pre>
-</section>
-</section>
-<section id="rss-feed-funktion" class="level1">
-<h1><a href="#rss-feed-funktion">RSS Feed Funktion</a></h1>
+<h1 id="rss-feed-funktion"><a href="#rss-feed-funktion">RSS Feed Funktion</a></h1>
 <p>FIXME</p>
 <p>Wird nicht aus den einzelnen Dateien erstellt sondern muss manuell editiert werden, Datei <code>markdown/rssmd0x</code>.</p>
 <p>Jede Überschrift eines Eintrags muss mit einem <code>{#anker}</code> enden.</p>
@@ -228,8 +209,7 @@ Ab hier geht dann der Inhlat der eigentlichen Seite los.</code></pre>
 <li>Bilder <code>![Bild](bilder/muster.png &quot;muster.png&quot;)</code>, Diese dürfen nicht am Anfang einer Zeile stehen.</li>
 <li>Code <code>`Code`</code>.</li>
 </ul>
-<section id="beispiel-einer-rss-feed-seite" class="level2">
-<h2><a href="#beispiel-einer-rss-feed-seite">Beispiel einer RSS Feed Seite</a></h2>
+<h2 id="beispiel-einer-rss-feed-seite"><a href="#beispiel-einer-rss-feed-seite">Beispiel einer RSS Feed Seite</a></h2>
 <pre><code>% Abo Seite - Newsletter - RSS Feed
 % 
 %
@@ -265,10 +245,7 @@ Zusätzlich ist diese Datei auch als `rss.html` unter
 &lt;http://www.it-bayer.de/rumex/rss.html&gt; verfügbar.
 
 </code></pre>
-</section>
-</section>
-<section id="steuerung" class="level1">
-<h1><a href="#steuerung">Steuerung</a></h1>
+<h1 id="steuerung"><a href="#steuerung">Steuerung</a></h1>
 <p>Gesteuert wird der Baukasten mittels <code>make</code>. Folgende make Befehle stehen dabei zur Verfügung.</p>
 <dl>
 <dt><code>make html</code></dt>
@@ -287,13 +264,9 @@ Zusätzlich ist diese Datei auch als `rss.html` unter
 <dd><p>FIXME: Erstellt eine leere Seite. Löscht alles bis auf die Grunddaten des Baukastens.</p>
 </dd>
 </dl>
-</section>
-<section id="einrichten-einer-neue-seite" class="level1">
-<h1><a href="#einrichten-einer-neue-seite">Einrichten einer neue Seite</a></h1>
+<h1 id="einrichten-einer-neue-seite"><a href="#einrichten-einer-neue-seite">Einrichten einer neue Seite</a></h1>
 <p>FIXME</p>
-</section>
-<section id="installation" class="level1">
-<h1><a href="#installation">Installation</a></h1>
+<h1 id="installation"><a href="#installation">Installation</a></h1>
 <p>Der Baukasten verwendet folgende Programme:</p>
 <ul>
 <li>bash</li>
@@ -305,14 +278,10 @@ Zusätzlich ist diese Datei auch als `rss.html` unter
 <li>texlive</li>
 </ul>
 <p>Wobei <code>bash</code>, <code>make</code> und <code>perl</code> bei jeder <code>*nix</code> Installation bereits vorhanden sein dürft. Die restlichen Programme müssen nach installiert werden. <code>texlive</code> wird nur gebraucht wenn man auch PDF Dateien erstellen möchte.</p>
-</section>
-<section id="update" class="level1">
-<h1><a href="#update">Update</a></h1>
+<h1 id="update"><a href="#update">Update</a></h1>
 <p>FIXME</p>
 <!-- vim: set ft=pandoc: -->
 
-
-</section>
 </div>
 <div id="fuss">
 	<p>
@@ -323,7 +292,7 @@ Zusätzlich ist diese Datei auch als `rss.html` unter
 	Lizenz.
 	Texte, Bilder und Zitate aus anderen Quellen sind von dieser Lizenz
 	ausgenommen. Kommentare und Anmerkungen senden Sie bitte an 
-	<tt style="font-size: 12px; color: #555;"> <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#x73;&#98;&#64;&#x69;&#116;&#x2d;&#98;&#x61;&#x79;&#x65;&#114;&#46;&#100;&#x65;">&#x73;&#98;&#32;&#x41;&#84;&#32;&#x69;&#116;&#x2d;&#98;&#x61;&#x79;&#x65;&#114;&#32;&#80;&#x55;&#78;&#x4b;&#84;&#32;&#100;&#x65;</a></tt>.
+	<a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#x73;&#98;&#64;&#x69;&#116;&#x2d;&#98;&#x61;&#x79;&#x65;&#114;&#46;&#100;&#x65;">&#x73;&#98;&#32;&#x41;&#84;&#32;&#x69;&#116;&#x2d;&#98;&#x61;&#x79;&#x65;&#114;&#32;&#80;&#x55;&#78;&#x4b;&#84;&#32;&#100;&#x65;</a>.
 	</p>
 	<p style="text-align: right; border-top: 1px solid #eee; margin-top:
 	24px;">
