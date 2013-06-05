@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="rumex">
+  <meta name="generator" content="pandoc">
   <meta name="author" content="Was ist noch alles zu machen">
   <title>ToDo</title>
   <style type="text/css">code{white-space: pre;}</style>
@@ -34,115 +34,115 @@
 </ul></li>
 </ul>
 </nav>
-<div id=seite>
-<!--
-
-# ToDo
-
--->
-
-<p>Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens. Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.</p>
-<!-- schnipp -->
-
-
-<h1 id="liste"><a href="#liste">Liste</a></h1>
-<p>Kleine Zusammenstellung über die Ideen die ich noch so habe.</p>
-<dl>
-<dt><del>Home Link</del></dt>
-<dd><p><del>In den Seitenkopf muss noch ein HomeLink eingebaut werden.</del> Wurde als Seitenbanner realisiert.</p>
-</dd>
-<dt><del>Fusszeile überarbeiten</del></dt>
-<dd><p><del>Bei der Fusszeile muss das Layout noch überarbeitet werden.</del></p>
-</dd>
-<dt>RSS Feed einbauen</dt>
-<dd><p>Die Funktion des RSS Feeds muss noch eingebaut werden.</p>
-</dd>
-<dt>Sitemap einbauen</dt>
-<dd><p>Das Programm für die <code>sitemap.xml</code> muss noch erstellt werden. Der Eintrag in der <code>robots.txt</code> ist schon vorhanden. Derzeit aber noch kommentiert.</p>
-</dd>
-<dt>Inhaltsverzeichnis</dt>
-<dd><p><del>Inhaltsverzeichnis in die einzelnen Seiten einbauen. Dabei sollte das Inhaltsverzeichnis nicht über die <code>pandoc</code> Funktion, sonder über ein externes Programm in das jeweilige Dokument eingefügt werden. So dass man, je nach Bedarf, dieses in die jeweilige Seite einbauen kann. Stichwort <strong>make_toc</strong>.</del><br />Versuch ein neues System umzusetzen, siehe [Steuerung durch Dateiendung][].</p>
-</dd>
-<dt>CSS, CSS, CSS</dt>
-<dd><p>Hier muss noch einiges gemacht werden. Derzeit stehen folgende Arbeiten an.</p>
-<ul>
-<li><del>Datum der Liste, <code>index.html</code> nach rechts legen.</del></li>
-<li><del>Fusszeile Layout</del></li>
-<li><del>Fixed DIV mit Link nach oben, Homepage Link.</del></li>
-<li><del>CSS der Definitionsliste, wie sie hier verwendet wird, erstellen.</del></li>
-<li>Fussnoten</li>
-</ul>
-</dd>
-<dt>Beschreibung der Seite</dt>
-<dd><p>Die Beschreibung der Seite fehlt auch noch.</p>
-<ul>
-<li>Warum diese Seite? Geschichte Beweggründe.</li>
-<li>Installation, Einrichten auf github.com</li>
-<li>Installation auf dem Arbeitsplatz, Grundprogramme</li>
-<li>Installation dieses Systems, Grundseite</li>
-<li>Aufbau der Einzelseiten, Stichpunkt <em>“Vortext”</em>.</li>
-<li>Bedienung der Seite. Was muss man beachten.</li>
-<li>Seite an einen externen Domain Namen binden.<br /> <strong>Achtung:</strong> nach dem Einrichten kann es bis zu 10 Minuten dauern bis die Umleitung funktioniert.<br /> Bis dahin bekommt man eine 404 Seite zu sehen.<br /> Auch bei einer eine Änderung der Seite kann diese bis zu 10 Minuten brauchen bis sie sichtbar wird.</li>
-</ul>
-</dd>
-<dt>Bild Bearbeitung</dt>
-<dd><p>Die Bildbearbeitung mittels ImageMagick muss noch in das <code>Makefile</code> eingebaut werden.</p>
-</dd>
-<dt>Biographie</dt>
-<dd><p>Biographie Funktion einbauen.</p>
-</dd>
-<dt>VIM Helfer</dt>
-<dd><p>Scripte für den Editor VIM</p>
-</dd>
-<dt>Favicon</dt>
-<dd><p><code>favicon.ico</code> fehlt noch.</p>
-</dd>
-<dt><del>Seite über einen externen Domain Namen ansprechen</del></dt>
-<dd><p><del>Die Seite sollte über den externen Domain Namen <a href="http://www.it-bayer.de/rumex">www.it-bayer.de/rumex</a> erreichbar sein.</del></p>
-<p>Infolink: <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages">https://help.github.com/articles/setting-up-a-custom-domain-with-pages</a></p>
-</dd>
-<dt><del>Makefile Variable index Seite einbinden</del></dt>
-<dd><p><del>Die Variablen, die bei der Indexseite die Überschrift erstellen sollten nach <code>inc</code> gelegt werden. Einbindung in das <code>Makefile</code> dann per <code>include inc/ueberschrift.makefile</code>.</del></p>
-</dd>
-<dt>Kurze Seiten</dt>
-<dd><p>Bei sehr kurzen Seiten kommt einen die Fusszeile in die Quere. Hier muss ein <code>min-weight</code> eingebaut werden.</p>
-</dd>
-<dt>Klasse .footnotes</dt>
-<dd><p>Die Klasse <code>.footnotes</code> könnte auch noch angepasst werden.</p>
-</dd>
-<dt><del>Makefile</del></dt>
-<dd><p><del>Die root <code>Makefile</code> Datei sollte die entsprechenden Befehle aus dem <code>inc</code> Verzeichnis einbinden. Somit müsste müsste bei einer Aktualisierung diese nicht mehr einbezogen werden.</del></p>
-</dd>
-<dt>HTML Includer</dt>
-<dd><p>Die HTML Dateien die <code>pandoc</code> includiert sollten auch von <code>pandoc</code> erstellt werden. Dazu muss auch eine entsprechende Regel im <code>Makefile</code> erstellt werden.</p>
-</dd>
-<dt>make newrumex</dt>
-<dd><p>Script zum erstellen eines leeren Baukastens.</p>
-</dd>
-</dl>
-<h1 id="bugs"><a href="#bugs">Bugs</a></h1>
-<dl>
-<dt><del>Abstand Definitionsliste</del></dt>
-<dd><del>Werden innerhalb einer Definitionsliste Aufzählungen verwendet stimmt der Abstand zur nächsten Definitionsliste nicht mehr bzw. es ist keiner vorhanden. Bei einer normalen Zeile schaut es aber normal aus.</del>
-</dd>
-</dl>
-<h2 id="extern-vim"><a href="#extern-vim">Extern VIM</a></h2>
-<dl>
-<dt>pandoc.syntax</dt>
-<dd><ul>
-<li>Vim wird, bei größeren Dateien, sehr langsam.</li>
-<li>An verschiedenen Stellen wird die VIM Rechtschreibung nicht verwendet.</li>
-</ul>
-</dd>
-<dt>Dateinamen mit <code>_</code></dt>
-<dd><p>github.com liefert keine Seiten die mit einem Unterstrich beginnen aus. Muss im Programm <code>make_index.pl</code> noch geändert werden. <strong>Dateien mit Unterstrichen werden zur Zeit für Entwurf Dateien verwendet.</strong></p>
-</dd>
-<dt>CNAME</dt>
-<dd><p><del>Der CNAME ist falsch gesetzt, Datei am besten ganz raus nehmen.</del></p>
-</dd>
-</dl>
-<!-- vim:set ft=pandoc: -->
-
+<div id="start">
+	<!--
+ 
+ # ToDo
+ 
+ -->
+ 
+ <p>Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens. Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.</p>
+ <!-- schnipp -->
+ 
+ 
+ <h1 id="liste"><a href="#liste">Liste</a></h1>
+ <p>Kleine Zusammenstellung über die Ideen die ich noch so habe.</p>
+ <dl>
+ <dt><del>Home Link</del></dt>
+ <dd><p><del>In den Seitenkopf muss noch ein HomeLink eingebaut werden.</del> Wurde als Seitenbanner realisiert.</p>
+ </dd>
+ <dt><del>Fusszeile überarbeiten</del></dt>
+ <dd><p><del>Bei der Fusszeile muss das Layout noch überarbeitet werden.</del></p>
+ </dd>
+ <dt>RSS Feed einbauen</dt>
+ <dd><p>Die Funktion des RSS Feeds muss noch eingebaut werden.</p>
+ </dd>
+ <dt>Sitemap einbauen</dt>
+ <dd><p>Das Programm für die <code>sitemap.xml</code> muss noch erstellt werden. Der Eintrag in der <code>robots.txt</code> ist schon vorhanden. Derzeit aber noch kommentiert.</p>
+ </dd>
+ <dt>Inhaltsverzeichnis</dt>
+ <dd><p><del>Inhaltsverzeichnis in die einzelnen Seiten einbauen. Dabei sollte das Inhaltsverzeichnis nicht über die <code>pandoc</code> Funktion, sonder über ein externes Programm in das jeweilige Dokument eingefügt werden. So dass man, je nach Bedarf, dieses in die jeweilige Seite einbauen kann. Stichwort <strong>make_toc</strong>.</del><br />Versuch ein neues System umzusetzen, siehe [Steuerung durch Dateiendung][].</p>
+ </dd>
+ <dt>CSS, CSS, CSS</dt>
+ <dd><p>Hier muss noch einiges gemacht werden. Derzeit stehen folgende Arbeiten an.</p>
+ <ul>
+ <li><del>Datum der Liste, <code>index.html</code> nach rechts legen.</del></li>
+ <li><del>Fusszeile Layout</del></li>
+ <li><del>Fixed DIV mit Link nach oben, Homepage Link.</del></li>
+ <li><del>CSS der Definitionsliste, wie sie hier verwendet wird, erstellen.</del></li>
+ <li>Fussnoten</li>
+ </ul>
+ </dd>
+ <dt>Beschreibung der Seite</dt>
+ <dd><p>Die Beschreibung der Seite fehlt auch noch.</p>
+ <ul>
+ <li>Warum diese Seite? Geschichte Beweggründe.</li>
+ <li>Installation, Einrichten auf github.com</li>
+ <li>Installation auf dem Arbeitsplatz, Grundprogramme</li>
+ <li>Installation dieses Systems, Grundseite</li>
+ <li>Aufbau der Einzelseiten, Stichpunkt <em>“Vortext”</em>.</li>
+ <li>Bedienung der Seite. Was muss man beachten.</li>
+ <li>Seite an einen externen Domain Namen binden.<br /> <strong>Achtung:</strong> nach dem Einrichten kann es bis zu 10 Minuten dauern bis die Umleitung funktioniert.<br /> Bis dahin bekommt man eine 404 Seite zu sehen.<br /> Auch bei einer eine Änderung der Seite kann diese bis zu 10 Minuten brauchen bis sie sichtbar wird.</li>
+ </ul>
+ </dd>
+ <dt>Bild Bearbeitung</dt>
+ <dd><p>Die Bildbearbeitung mittels ImageMagick muss noch in das <code>Makefile</code> eingebaut werden.</p>
+ </dd>
+ <dt>Biographie</dt>
+ <dd><p>Biographie Funktion einbauen.</p>
+ </dd>
+ <dt>VIM Helfer</dt>
+ <dd><p>Scripte für den Editor VIM</p>
+ </dd>
+ <dt>Favicon</dt>
+ <dd><p><code>favicon.ico</code> fehlt noch.</p>
+ </dd>
+ <dt><del>Seite über einen externen Domain Namen ansprechen</del></dt>
+ <dd><p><del>Die Seite sollte über den externen Domain Namen <a href="http://www.it-bayer.de/rumex">www.it-bayer.de/rumex</a> erreichbar sein.</del></p>
+ <p>Infolink: <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages">https://help.github.com/articles/setting-up-a-custom-domain-with-pages</a></p>
+ </dd>
+ <dt><del>Makefile Variable index Seite einbinden</del></dt>
+ <dd><p><del>Die Variablen, die bei der Indexseite die Überschrift erstellen sollten nach <code>inc</code> gelegt werden. Einbindung in das <code>Makefile</code> dann per <code>include inc/ueberschrift.makefile</code>.</del></p>
+ </dd>
+ <dt>Kurze Seiten</dt>
+ <dd><p>Bei sehr kurzen Seiten kommt einen die Fusszeile in die Quere. Hier muss ein <code>min-weight</code> eingebaut werden.</p>
+ </dd>
+ <dt>Klasse .footnotes</dt>
+ <dd><p>Die Klasse <code>.footnotes</code> könnte auch noch angepasst werden.</p>
+ </dd>
+ <dt><del>Makefile</del></dt>
+ <dd><p><del>Die root <code>Makefile</code> Datei sollte die entsprechenden Befehle aus dem <code>inc</code> Verzeichnis einbinden. Somit müsste müsste bei einer Aktualisierung diese nicht mehr einbezogen werden.</del></p>
+ </dd>
+ <dt>HTML Includer</dt>
+ <dd><p>Die HTML Dateien die <code>pandoc</code> includiert sollten auch von <code>pandoc</code> erstellt werden. Dazu muss auch eine entsprechende Regel im <code>Makefile</code> erstellt werden.</p>
+ </dd>
+ <dt>make newrumex</dt>
+ <dd><p>Script zum erstellen eines leeren Baukastens.</p>
+ </dd>
+ </dl>
+ <h1 id="bugs"><a href="#bugs">Bugs</a></h1>
+ <dl>
+ <dt><del>Abstand Definitionsliste</del></dt>
+ <dd><del>Werden innerhalb einer Definitionsliste Aufzählungen verwendet stimmt der Abstand zur nächsten Definitionsliste nicht mehr bzw. es ist keiner vorhanden. Bei einer normalen Zeile schaut es aber normal aus.</del>
+ </dd>
+ </dl>
+ <h2 id="extern-vim"><a href="#extern-vim">Extern VIM</a></h2>
+ <dl>
+ <dt>pandoc.syntax</dt>
+ <dd><ul>
+ <li>Vim wird, bei größeren Dateien, sehr langsam.</li>
+ <li>An verschiedenen Stellen wird die VIM Rechtschreibung nicht verwendet.</li>
+ </ul>
+ </dd>
+ <dt>Dateinamen mit <code>_</code></dt>
+ <dd><p>github.com liefert keine Seiten die mit einem Unterstrich beginnen aus. Muss im Programm <code>make_index.pl</code> noch geändert werden. <strong>Dateien mit Unterstrichen werden zur Zeit für Entwurf Dateien verwendet.</strong></p>
+ </dd>
+ <dt>CNAME</dt>
+ <dd><p><del>Der CNAME ist falsch gesetzt, Datei am besten ganz raus nehmen.</del></p>
+ </dd>
+ </dl>
+ <!-- vim:set ft=pandoc: -->
+ 
 </div>
 <div id="fuss">
 	<p>
