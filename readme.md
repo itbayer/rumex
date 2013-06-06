@@ -31,4 +31,6 @@ Pflege / Erstellung
 :	Die Pflege bzw. Erstellung der Seite ist auf die Programme eines
 	*nix Systems ausgerichtet.
 
+------------------------------------------------------------
 
+\(c) 2013- Stefan Blechschmidt (sb at it-bayer dot de). Released under the GPL, version 2 or greater. This software carries no warranty of any kind. 

@@ -229,6 +229,21 @@ Auf der index.html erscheint an dieser Stelle der Link
 Ab hier geht dann der Inhlat der eigentlichen Seite los.
 ~~~
 
+## Template
+
+Änderung gegenüber des Original `pandoc` Templates.
+
+~~~{.diff}
+5c5
+<   <meta name="generator" content="pandoc">
+---
+>   <meta name="generator" content="pandoc rumex">
+54a55
+> <div id=seite>
+55a57
+> </div>
+~~~
+
 # RSS Feed Funktion
 
 FIXME

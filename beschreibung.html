@@ -2,13 +2,32 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="rumex">
+  <meta name="generator" content="pandoc rumex">
   <meta name="author" content="dieses Home Page Baukastens">
   <title>Beschreibung</title>
   <style type="text/css">code{white-space: pre;}</style>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
   <!-- inc/header.html -->
   <link rel="alternate" type="application/rss+xml" title="Neues vom rumex Baukasten" href="rss.xml"/>
   <link rel="stylesheet" type="text/css" href="inc/all.css" media="all" />
@@ -38,6 +57,7 @@
 <li><a href="#sonderseiten">Sonderseiten</a></li>
 <li><a href="#aufbau-der-startseite">Aufbau der Startseite</a></li>
 <li><a href="#aufbau-der-einzelseiten">Aufbau der Einzelseiten</a></li>
+<li><a href="#template">Template</a></li>
 </ul></li>
 <li><a href="#rss-feed-funktion">RSS Feed Funktion</a><ul>
 <li><a href="#beispiel-einer-rss-feed-seite">Beispiel einer RSS Feed Seite</a></li>
@@ -192,6 +212,16 @@ Auf der index.html erscheint an dieser Stelle der Link
 &lt;!-- schnipp --&gt;
 
 Ab hier geht dann der Inhlat der eigentlichen Seite los.</code></pre>
+<h2 id="template"><a href="#template">Template</a></h2>
+<p>Änderung gegenüber des Original <code>pandoc</code> Templates.</p>
+<pre class="sourceCode diff"><code class="sourceCode diff"><span class="dt">5c5</span>
+<span class="st">&lt;   &lt;meta name=&quot;generator&quot; content=&quot;pandoc&quot;&gt;</span>
+<span class="kw">---</span>
+<span class="ot">&gt;   &lt;meta name=&quot;generator&quot; content=&quot;pandoc rumex&quot;&gt;</span>
+<span class="dt">54a55</span>
+<span class="ot">&gt; &lt;div id=seite&gt;</span>
+<span class="dt">55a57</span>
+<span class="ot">&gt; &lt;/div&gt;</span></code></pre>
 <h1 id="rss-feed-funktion"><a href="#rss-feed-funktion">RSS Feed Funktion</a></h1>
 <p>FIXME</p>
 <p>Wird nicht aus den einzelnen Dateien erstellt sondern muss manuell editiert werden, Datei <code>markdown/rssmd0x</code>.</p>

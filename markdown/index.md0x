@@ -4,7 +4,7 @@
 
 <div class="indexliste">
 
-Dies ist ein Versuch mit `pandocs markdown` und ein paar Skripten eine Internetseite zu erstellen und zu verwalten.
+Dies ist ein Versuch mit `pandoc's markdown` und ein paar Skripten eine Internetseite zu erstellen und zu verwalten.
 
 Die Seite bzw. die Entwicklung liegt auf [github.com](http://github.com),
 der aktuelle Stand kann als [ZIP Datei herunter geladen](https://github.com/itbayer/rumex/archive/gh-pages.zip) werden.
@@ -61,25 +61,6 @@ Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.
 *2013-06-06*
 
 
-# Sandkasten
- 
-Diese Seite ist der Sandkasten oder auch Spielwiese um 
-die CSS Einstellungen machen zu können.
-
-
-[... weiter lesen](sandkasten.html)
-
----
-
-</div>
-
-
-
-<div class="indexliste">
-
-*2013-06-05*
-
-
 # Beschreibung
 
 
@@ -98,7 +79,26 @@ werden kann.
 
 <div class="indexliste">
 
-*2013-06-03*
+*2013-06-06*
+
+
+# Sandkasten
+ 
+Diese Seite ist der Sandkasten oder auch Spielwiese um 
+die CSS Einstellungen machen zu können.
+
+
+[... weiter lesen](sandkasten.html)
+
+---
+
+</div>
+
+
+
+<div class="indexliste">
+
+*2013-06-05*
 
 
 # ToDo
