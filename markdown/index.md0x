@@ -61,15 +61,13 @@ Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.
 *2013-06-06*
 
 
-# Beschreibung
+# Github
+
+Kleine Beschreibung, oder besser gesagt mein Notizzettel
+wie man auf <http://github.com> eine Internetseite einrichtet.
 
 
-Beschreibung des Home Page Baukastens 
-der mit `markdown`, `pandoc`, `bash`, `make` `imagamagick` und `perl` 
-eine Home Page erstellt die auch auf <http://github.com> verwendet
-werden kann.
-
-[... weiter lesen](beschreibung.html)
+[... weiter lesen](github.html)
 
 ---
 
@@ -98,7 +96,7 @@ die CSS Einstellungen machen zu können.
 
 <div class="indexliste">
 
-*2013-06-03*
+*2013-06-06*
 
 
 # ToDo
@@ -117,16 +115,18 @@ Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.
 
 <div class="indexliste">
 
-*2013-06-03*
+*2013-06-06*
 
 
-# Github
-
-Kleine Beschreibung, oder besser gesagt mein Notizzettel
-wie man auf <http://github.com> eine Internetseite einrichtet.
+# Beschreibung
 
 
-[... weiter lesen](github.html)
+Beschreibung des Home Page Baukastens 
+der mit `markdown`, `pandoc`, `bash`, `make` `imagamagick` und `perl` 
+eine Home Page erstellt die auch auf <http://github.com> verwendet
+werden kann.
+
+[... weiter lesen](beschreibung.html)
 
 ---
 
