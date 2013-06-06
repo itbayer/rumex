@@ -2,9 +2,7 @@
 %
 %
 
-Dies ist ein Versuch mit ein paar Skripten eine Internetseite zu erstellen 
-und zu verwalten.
-Eingesetzt wird dabei die Sprache `markdown` die dann von `pandoc` in das HTML Format gebracht wird.
+Dies ist ein Versuch mit `pandocs markdown` und ein paar Skripten eine Internetseite zu erstellen und zu verwalten.
 
 Die Seite bzw. die Entwicklung liegt auf [github.com](http://github.com),
 der aktuelle Stand kann als [ZIP Datei herunter geladen](https://github.com/itbayer/rumex/archive/gh-pages.zip) werden.
