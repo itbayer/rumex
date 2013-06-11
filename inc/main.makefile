@@ -27,6 +27,7 @@ all:
 	make index 
 	make html 
 	make rss
+	make sitemap
 
 
 # ######################################################
@@ -41,4 +42,9 @@ online:
 
 rss:
 	$(MD2RSS) > $(RSS_XML)
+
+
+# #######################################################
+sitemap:
+	$(MDSITEMAP) > $(SITEMAP_XML)
 

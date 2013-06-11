@@ -25,6 +25,39 @@
 
 
 <item>
+	<title>rumex bekommt eine sitemap.xml</title>
+	<description>
+	<![CDATA[
+
+<p>Mit einer <code>sitemap.xml</code> erleichtert man den Suchmaschinen das finden einzelner Seite. Man kann auch sagen sie <code>sitemap.xml</code> ist eine Liste der Seiten die sich auf der Webseite befinden.</p>
+<p>Natürlich braucht <code>rumex</code> auch so einen Datei. Erstellt wird die sitemap mit Versteckt markierte Dateien <code>*.md?v</code> werden natürlich nicht aufgenommen.</p>
+
+]]>
+	</description>
+		<link>http://rumex.it-bayer.de/</link>
+		<guid>http://rumex.it-bayer.de/</guid>
+		<dc:creator>IT-Bayer</dc:creator>
+		<category><![CDATA[Neues]]></category>
+</item>
+
+
+<item>
+	<title>rumex wird auf einen nicht github.com Server installert</title>
+	<description>
+	<![CDATA[
+
+<p>rumex funktioniert auch auf einen <strong>nicht</strong> <code>github.com</code> Server. Eine Beschreibung wie man den Baukasten dort installiert findet man auf der Seite <a href="http://rumex.it-bayer.de">http://rumex.it-bayer.de</a>.</p>
+
+]]>
+	</description>
+		<link>http://rumex.it-bayer.de/</link>
+		<guid>http://rumex.it-bayer.de/</guid>
+		<dc:creator>IT-Bayer</dc:creator>
+		<category><![CDATA[Neues]]></category>
+</item>
+
+
+<item>
 	<title>rumex bekommt die RSS Feed Funktion</title>
 	<description>
 	<![CDATA[

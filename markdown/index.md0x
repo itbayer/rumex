@@ -22,6 +22,14 @@ eine Beschreibung wie man den rumex Baukasten auf einen **nicht**
 
 **Historie**
 
+
+
+0.3.2
+:	`sitemap.xml` wurde eingebaut.
+
+	<https://github.com/itbayer/rumex/archive/0.3.2.zip>
+	
+
 0.3.1
 :	Einstellungen optimiert.
 	
@@ -63,16 +71,18 @@ eine Beschreibung wie man den rumex Baukasten auf einen **nicht**
 
 <div class="indexliste">
 
-*2013-06-06*
+*2013-06-11*
 
 
-# Github
-
-Kleine Beschreibung, oder besser gesagt mein Notizzettel
-wie man auf <http://github.com> eine Internetseite einrichtet.
+# Beschreibung
 
 
-[... weiter lesen](github.html)
+Beschreibung des Home Page Baukastens 
+der mit `markdown`, `pandoc`, `bash`, `make` `imagamagick` und `perl` 
+eine Home Page erstellt die auch auf <http://github.com> verwendet
+werden kann.
+
+[... weiter lesen](beschreibung.html)
 
 ---
 
@@ -82,7 +92,7 @@ wie man auf <http://github.com> eine Internetseite einrichtet.
 
 <div class="indexliste">
 
-*2013-06-06*
+*2013-06-11*
 
 
 # Sandkasten
@@ -101,16 +111,16 @@ die CSS Einstellungen machen zu können.
 
 <div class="indexliste">
 
-*2013-06-06*
+*2013-06-04*
 
 
-# ToDo
+# Github
+
+Kleine Beschreibung, oder besser gesagt mein Notizzettel
+wie man auf <http://github.com> eine Internetseite einrichtet.
 
 
-Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens.
-Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.
-
-[... weiter lesen](todo.html)
+[... weiter lesen](github.html)
 
 ---
 
@@ -120,18 +130,16 @@ Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.
 
 <div class="indexliste">
 
-*2013-06-06*
+*2013-06-04*
 
 
-# Beschreibung
+# ToDo
 
 
-Beschreibung des Home Page Baukastens 
-der mit `markdown`, `pandoc`, `bash`, `make` `imagamagick` und `perl` 
-eine Home Page erstellt die auch auf <http://github.com> verwendet
-werden kann.
+Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens.
+Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.
 
-[... weiter lesen](beschreibung.html)
+[... weiter lesen](todo.html)
 
 ---
 

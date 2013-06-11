@@ -11,6 +11,12 @@ MD2RSS = "bin/md2rss.pl"
 # Zieldatei des RSS Feed
 RSS_XML = "rss.xml"
 
+# Programm zum erstellen der Sitemap Datei
+MDSITEMAP = "bin/make_sitemap.pl"
+
+# Zieldatei der Sitemap Datei
+SITEMAP_XML = "sitemap.xml"
+
 PANDOC = pandoc
 HTML_TEMPLATE = inc/html.template
 KOPF_TEMPLATE = inc/kopf.html

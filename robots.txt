@@ -2,8 +2,8 @@
 #
 # Info Link: http://de.selfhtml.org/diverses/robots.htm
 #
-# Sitemap: http://itbayer.github.io/sitemap.xml
-#
+
+Sitemap: http://itbayer.github.io/rumex/sitemap.xml
 
 User-agent: *
 

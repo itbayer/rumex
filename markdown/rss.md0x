@@ -16,7 +16,25 @@
 
 
 
-# rumex wird auf einen nicht github.com Server installert
+# rumex bekommt eine sitemap.xml{.xx2}
+
+<!-- 
+| Link: http://rumex.it-bayer.de/
+| Autor: IT-Bayer
+| Kategorie: Neues
+-->
+
+Mit einer `sitemap.xml` erleichtert man den Suchmaschinen das finden einzelner
+Seite. Man kann auch sagen sie `sitemap.xml` ist eine Liste der Seiten
+die sich auf der Webseite befinden.
+
+Natürlich braucht `rumex` auch so einen Datei. Erstellt wird die sitemap mit 
+`make sitemap` oder bei `make all` bzw. `make online`.
+Versteckt markierte Dateien `*.md?v` werden natürlich nicht aufgenommen.
+
+
+
+# rumex wird auf einen nicht github.com Server installert{.xx1}
 
 <!-- 
 | Link: http://rumex.it-bayer.de/
@@ -27,6 +45,8 @@
 rumex funktioniert auch auf einen **nicht** `github.com` Server.
 Eine Beschreibung wie man den Baukasten dort installiert
 findet man auf der Seite <http://rumex.it-bayer.de>.
+
+
 
 # rumex bekommt die RSS Feed Funktion{.rssfeed}
 
