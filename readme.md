@@ -1,9 +1,16 @@
 # github HomePage Sand(Bau)kasten
 
-Ziel des Projektes ist eine Homepage mittels `pandoc` 
-und ein paar Skripten zu erstellen.
+Ziel des Projektes ist es eine Homepage mittels `pandocs` 
+und ein paar Skripten zu erstellen und zu pflegen.
+
+Zum Erstellen der Seiten wird `pandocs markdown` verwendet.
 
 Der aktuelle Status kann auf [www.it-bayer.de/rumex](http://www.it-bayer.de/rumex) angesehen werden.
+
+## Neuigkeiten
+
+Rumex besitzt auch eine RSS Feed Funktion. 
+Neuigkeiten kann man [hier](http://www.it-bayer.de/rumex/rss.xml) abonnieren.
 
 ## Kurz Übersicht
 
@@ -26,6 +33,9 @@ Hosting
 :	Das Hosting der Seite übernimmt [github.com](http://github.com).
 	Die HTML Dateien sollten aber auf jedem andern Internet Server
 	funktionieren.
+	Wer einen Server mit installiertem `git` zur sein eigen nennt 
+	kann Rumex auch darauf installieren. 
+	Eine Beschreibung findet man auf [rumex.it-bayer.de](http://rumex.it-bayer.de).
 
 Pflege / Erstellung
 :	Die Pflege bzw. Erstellung der Seite ist auf die Programme eines
