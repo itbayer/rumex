@@ -30,7 +30,7 @@ die sich auf der Webseite befinden.
 
 Natürlich braucht `rumex` auch so einen Datei. Erstellt wird die sitemap mit 
 `make sitemap` oder bei `make all` bzw. `make online`.
-Versteckt markierte Dateien `*.md?v` werden natürlich nicht aufgenommen.
+.ersteckt markierte Dateien `*.md?v` werden natürlich nicht aufgenommen.
 
 
 

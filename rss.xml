@@ -30,7 +30,7 @@
 	<![CDATA[
 
 <p>Mit einer <code>sitemap.xml</code> erleichtert man den Suchmaschinen das finden einzelner Seite. Man kann auch sagen sie <code>sitemap.xml</code> ist eine Liste der Seiten die sich auf der Webseite befinden.</p>
-<p>Natürlich braucht <code>rumex</code> auch so einen Datei. Erstellt wird die sitemap mit Versteckt markierte Dateien <code>*.md?v</code> werden natürlich nicht aufgenommen.</p>
+<p>Natürlich braucht <code>rumex</code> auch so einen Datei. Erstellt wird die sitemap mit</p>
 
 ]]>
 	</description>

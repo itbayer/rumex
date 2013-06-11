@@ -23,6 +23,9 @@ eine Beschreibung wie man den rumex Baukasten auf einen **nicht**
 **Historie**
 
 
+0.3.3
+:	Versions Vermerk eingebaut. \
+	`<meta name="generator" content="pandoc rumex VERSION">`
 
 0.3.2
 :	`sitemap.xml` wurde eingebaut.
