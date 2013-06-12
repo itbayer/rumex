@@ -83,6 +83,27 @@ eine Beschreibung wie man den rumex Baukasten auf einen **nicht**
 *2013-06-06*
 
 
+# Beschreibung
+
+
+Beschreibung des Home Page Baukastens 
+der mit `markdown`, `pandoc`, `bash`, `make` `imagamagick` und `perl` 
+eine Home Page erstellt die auch auf <http://github.com> verwendet
+werden kann.
+
+[... weiter lesen](beschreibung.html)
+
+---
+
+</div>
+
+
+
+<div class="indexliste">
+
+*2013-06-06*
+
+
 # Github
 
 Kleine Beschreibung, oder besser gesagt mein Notizzettel
@@ -128,27 +149,6 @@ Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens.
 Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.
 
 [... weiter lesen](todo.html)
-
----
-
-</div>
-
-
-
-<div class="indexliste">
-
-*2013-06-06*
-
-
-# Beschreibung
-
-
-Beschreibung des Home Page Baukastens 
-der mit `markdown`, `pandoc`, `bash`, `make` `imagamagick` und `perl` 
-eine Home Page erstellt die auch auf <http://github.com> verwendet
-werden kann.
-
-[... weiter lesen](beschreibung.html)
 
 ---
 
