@@ -2,7 +2,7 @@
 <html$if(lang)$ lang="$lang$"$endif$>
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="pandoc rumex 0.3.3">
+  <meta name="generator" content=$if(rumex)$"$rumex$"$endif$>
 $for(author-meta)$
   <meta name="author" content="$author-meta$">
 $endfor$

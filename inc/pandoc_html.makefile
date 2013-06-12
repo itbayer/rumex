@@ -26,6 +26,7 @@ html0s: $(HTML0S)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
+		-V rumex=$(RUMEX) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -40,6 +41,7 @@ html0x: $(HTML0X)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
+		-V rumex=$(RUMEX) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -55,6 +57,7 @@ html0v: $(HTML0V)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
+		-V rumex=$(RUMEX) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -75,6 +78,7 @@ html1s: $(HTML1S)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
+		-V rumex=$(RUMEX) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -92,6 +96,7 @@ html1x: $(HTML1X)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
+		-V rumex=$(RUMEX) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -109,6 +114,7 @@ html1v: $(HTML1V)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
+		-V rumex=$(RUMEX) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -129,6 +135,7 @@ html2s: $(HTML2S)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
+		-V rumex=$(RUMEX) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -146,6 +153,7 @@ html2x: $(HTML2X)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
+		-V rumex=$(RUMEX) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -163,6 +171,7 @@ html2v: $(HTML2V)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
+		-V rumex=$(RUMEX) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -184,6 +193,7 @@ html3s: $(HTML3S)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
+		-V rumex=$(RUMEX) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -201,6 +211,7 @@ html3x: $(HTML3X)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
+		-V rumex=$(RUMEX) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -218,6 +229,7 @@ html3v: $(HTML3V)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
+		-V rumex=$(RUMEX) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -238,6 +250,7 @@ html4s: $(HTML4S)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
+		-V rumex=$(RUMEX) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -255,6 +268,7 @@ html4x: $(HTML4X)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
+		-V rumex=$(RUMEX) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -272,6 +286,7 @@ html4v: $(HTML4V)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
+		-V rumex=$(RUMEX) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -292,6 +307,7 @@ html5s: $(HTML5S)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
+		-V rumex=$(RUMEX) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -309,6 +325,7 @@ html5x: $(HTML5X)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
+		-V rumex=$(RUMEX) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -326,6 +343,7 @@ html5v: $(HTML5V)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
+		-V rumex=$(RUMEX) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -346,6 +364,7 @@ html6s: $(HTML6S)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
+		-V rumex=$(RUMEX) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -363,6 +382,7 @@ html6x: $(HTML6X)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
+		-V rumex=$(RUMEX) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -380,6 +400,7 @@ html6v: $(HTML6V)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
+		-V rumex=$(RUMEX) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 

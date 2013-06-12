@@ -2,7 +2,7 @@
 # Makefile
 #
 
-include inc/ueberschrift.makefile
+include template/index.makefile
 include inc/config.makefile
 include inc/main.makefile
 include inc/pandoc_html.makefile
