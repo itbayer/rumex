@@ -79,12 +79,24 @@ code > span.er { color: #ff0000; font-weight: bold; }
 
 
 <h1 id="vorwort"><a href="#vorwort">Vorwort</a></h1>
-<p>Die Beweggründe mit einem eigenen System eine Internet Seite zu Erstellen sind mit der Zeit in mir gewachsen.</p>
+<p>Die Beweggründe mit einem eigenen System eine Internet Seite zu Verwalten sind mit der Zeit in mir gewachsen.</p>
 <p>Es gibt immer mehr Systeme die zum Erstellen und Verwalten von Internetseiten eingesetzt werden. Probiert habe ich schon viele und mit den meisten war ich auch sehr zufrieden, wenn da nicht immer der Hacken mit dem Updates wäre. Irgendwie, zumindest kommt es mir so vor, ist der Aufwand das System der Seite auf dem aktuellen Stand zu halten größer geworden als den Inhalt der eigentlichen Seite zu pflegen.</p>
 <p>Ich wünschte mir wieder eine Internetseite wie in früheren Zeiten. Eine Seite die aus einfachen HTML Seiten besteht.</p>
 <p>Irgendwann bin ich dann auf <code>markdown</code> und <code>pandoc</code> gestoßen und die Idee dieses Home Page Baukastens ist entstanden.</p>
 <h1 id="installation"><a href="#installation">Installation</a></h1>
-<p>TODO</p>
+<p>@todo</p>
+<ul>
+<li>Einrichten eines github.com Zugangs</li>
+<li>Arbeits- Repository auf den AP<sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> holen</li>
+<li>Holen der Rumex ZIP Datei</li>
+<li>Die Dateien des ZIP Archives in das Arbeits- Repository kopieren</li>
+<li>Grund Dateien anpassen
+<ul>
+<li>@fixme Angabe welche Dateien fehlt noch</li>
+</ul></li>
+<li>Erste Änderungen vornehme</li>
+<li><code>make online</code> - Fertig.</li>
+</ul>
 <h1 id="grunddaten-aufbau-des-rumex-baukastens"><a href="#grunddaten-aufbau-des-rumex-baukastens">Grunddaten / Aufbau des rumex Baukastens</a></h1>
 <h2 id="root-verzeichnis"><a href="#root-verzeichnis">root Verzeichnis</a></h2>
 <p>Im <code>root</code> Verzeichnis findet man alle <code>HTML</code> Dateien der Seite. Diese werde vom Baukasten erstellt und müssen nicht von Hand verändert werden. Zusätzlich findet man noch ein paar Systemdateien:</p>
@@ -223,7 +235,7 @@ Ab hier geht dann der Inhlat der eigentlichen Seite los.</code></pre>
 <span class="dt">55a57</span>
 <span class="ot">&gt; &lt;/div&gt;</span></code></pre>
 <h1 id="rss-feed-funktion"><a href="#rss-feed-funktion">RSS Feed Funktion</a></h1>
-<p>FIXME</p>
+<p>@todo</p>
 <p>Wird nicht aus den einzelnen Dateien erstellt sondern muss manuell editiert werden, Datei <code>markdown/rssmd0x</code>.</p>
 <p>Jede Überschrift eines Eintrags muss mit einem <code>{#anker}</code> enden.</p>
 <p>Danach kommen die Angaben zu:</p>
@@ -291,11 +303,11 @@ Zusätzlich ist diese Datei auch als `rss.html` unter
 <dd><p>Daten auf github hoch laden.</p>
 </dd>
 <dt><code>make newrumex</code></dt>
-<dd><p>FIXME: Erstellt eine leere Seite. Löscht alles bis auf die Grunddaten des Baukastens.</p>
+<dd><p>@fixme: Erstellt eine leere Seite. Löscht alles bis auf die Grunddaten des Baukastens.</p>
 </dd>
 </dl>
 <h1 id="einrichten-einer-neue-seite"><a href="#einrichten-einer-neue-seite">Einrichten einer neue Seite</a></h1>
-<p>FIXME</p>
+<p>@todo</p>
 <h1 id="installation-1"><a href="#installation-1">Installation</a></h1>
 <p>Der Baukasten verwendet folgende Programme:</p>
 <ul>
@@ -309,9 +321,16 @@ Zusätzlich ist diese Datei auch als `rss.html` unter
 </ul>
 <p>Wobei <code>bash</code>, <code>make</code> und <code>perl</code> bei jeder <code>*nix</code> Installation bereits vorhanden sein dürft. Die restlichen Programme müssen nach installiert werden. <code>texlive</code> wird nur gebraucht wenn man auch PDF Dateien erstellen möchte.</p>
 <h1 id="update"><a href="#update">Update</a></h1>
-<p>FIXME</p>
+<p>@todo</p>
 <!-- vim: set ft=pandoc: -->
 
+
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Mit AP ist der <strong>A</strong>rbeits<strong>P</strong>latz Rechner gemeint.<a href="#fnref1">↩</a></p></li>
+</ol>
+</section>
 </div>
 <div id="fuss">
 	<p>

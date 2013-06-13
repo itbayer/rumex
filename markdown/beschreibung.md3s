@@ -19,7 +19,7 @@ werden kann.
 # Vorwort
 
 Die Beweggründe mit einem eigenen System eine Internet Seite 
-zu Erstellen sind mit der Zeit in mir gewachsen.
+zu Verwalten sind mit der Zeit in mir gewachsen.
 
 Es gibt immer mehr Systeme die zum Erstellen und Verwalten 
 von Internetseiten eingesetzt werden.
@@ -36,9 +36,26 @@ Eine Seite die aus einfachen HTML Seiten besteht.
 Irgendwann bin ich dann auf `markdown` und `pandoc` gestoßen 
 und die Idee dieses Home Page Baukastens ist entstanden.
 
+
+
+
 # Installation
 
-TODO
+@todo
+
+- Einrichten eines github.com Zugangs
+- Arbeits- Repository auf den AP[^ap] holen
+- Holen der Rumex ZIP Datei
+- Die Dateien des ZIP Archives in das Arbeits- Repository kopieren
+- Grund Dateien anpassen 
+	- @fixme Angabe welche Dateien fehlt noch
+- Erste Änderungen vornehme
+- `make online` - Fertig.
+
+[^ap]: Mit AP ist der **A**rbeits**P**latz Rechner gemeint.
+
+
+
 
 # Grunddaten / Aufbau des rumex Baukastens
 
@@ -250,7 +267,7 @@ Ab hier geht dann der Inhlat der eigentlichen Seite los.
 
 # RSS Feed Funktion
 
-FIXME
+@todo
 
 Wird nicht aus den einzelnen Dateien erstellt sondern 
 muss manuell editiert werden, Datei `markdown/rssmd0x`.
@@ -338,13 +355,13 @@ Folgende make Befehle stehen dabei zur Verfügung.
 :	Daten auf github hoch laden.
 
 `make newrumex`
-:	FIXME: Erstellt eine leere Seite.
+:	@fixme: Erstellt eine leere Seite.
 	Löscht alles bis auf die Grunddaten des Baukastens.
 	
 
 # Einrichten einer neue Seite
 
-FIXME
+@todo
 
 # Installation
 
@@ -365,6 +382,6 @@ Die restlichen Programme müssen nach installiert werden.
 
 # Update
 
-FIXME
+@todo
 
 <!-- vim: set ft=pandoc: -->
