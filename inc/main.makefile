@@ -24,10 +24,11 @@ index:
 # war die Reihenfolge nicht eindeutig
 #
 all: 
-	make index 
+	make -s index 
 	make html 
-	make rss
-	make sitemap
+	make -s rss
+	make -s sitemap
+	make -s bilder
 
 
 # ######################################################
