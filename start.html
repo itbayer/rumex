@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="pandoc rumex 0.3.4">
+  <meta name="generator" content="pandoc rumex 0.3.5">
   <title>Start</title>
   <style type="text/css">code{white-space: pre;}</style>
   <!--[if lt IE 9]>
@@ -31,6 +31,27 @@
 <hr />
 <p><strong>Historie</strong></p>
 <dl>
+<dt>0.3.5</dt>
+<dd><p>Rumex bekommt eine Bild Verarbeitung.</p>
+<p>Eigentlich ist es gar keine richtige Bildbearbeitung sondern nur eine <code>ImageMagick</code> Befehlsfolge die, die Bilder im Verzeichnis <code>bilder</code> in verschiedene Größen bereitstellt.</p>
+<p>Unterstützt werden zur Zeit die Größen</p>
+<ul>
+<li>100</li>
+<li>200</li>
+<li>400</li>
+<li>600</li>
+<li>800</li>
+</ul>
+<p>Wobei hier die Breite des Bildes das Zielmaß ist. Die Höhe wird entsprechend von <code>ImageMagick</code> berechnet.</p>
+<p><strong>Aufruf und Ausgabe</strong></p>
+<pre><code>make bilder
+
+convert bilder/404.png -resize 100x bilder/404_100_.png
+convert bilder/404.png -resize 200x bilder/404_200_.png
+convert bilder/404.png -resize 400x bilder/404_400_.png
+convert bilder/404.png -resize 600x bilder/404_600_.png
+convert bilder/404.png -resize 800x bilder/404_800_.png</code></pre>
+</dd>
 <dt>0.3.4</dt>
 <dd><p>Das Seiten Layout bekommt ein eigenes Verzeichnis.</p>
 <p><a href="https://github.com/itbayer/rumex/archive/0.3.4.zip">https://github.com/itbayer/rumex/archive/0.3.4.zip</a></p>

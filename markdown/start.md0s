@@ -20,6 +20,37 @@ eine Beschreibung wie man den rumex Baukasten auf einen **nicht**
 
 **Historie**
 
+0.3.5
+:	Rumex bekommt eine Bild Verarbeitung.
+	
+	Eigentlich ist es gar keine richtige Bildbearbeitung
+	sondern nur eine `ImageMagick` Befehlsfolge die, die
+	Bilder im Verzeichnis `bilder` in verschiedene Größen
+	bereitstellt. 
+	
+	Unterstützt werden zur Zeit die Größen
+	
+	- 100
+	- 200
+	- 400
+	- 600
+	- 800
+	
+	Wobei hier die Breite des Bildes das Zielmaß ist. 
+	Die Höhe wird entsprechend von `ImageMagick` berechnet.
+	
+	**Aufruf und Ausgabe**
+	
+		make bilder
+	
+		convert bilder/404.png -resize 100x bilder/404_100_.png
+		convert bilder/404.png -resize 200x bilder/404_200_.png
+		convert bilder/404.png -resize 400x bilder/404_400_.png
+		convert bilder/404.png -resize 600x bilder/404_600_.png
+		convert bilder/404.png -resize 800x bilder/404_800_.png
+		
+
+
 0.3.4
 :	Das Seiten Layout bekommt ein eigenes Verzeichnis.
 

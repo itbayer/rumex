@@ -17,8 +17,11 @@ MDSITEMAP = "bin/make_sitemap.pl"
 # Zieldatei der Sitemap Datei
 SITEMAP_XML = "sitemap.xml"
 
+# Verzeichnis in dem sich die Bilder befinden.
+BVZ="bilder"
+
 PANDOC = pandoc
-RUMEX = "pandoc rumex 0.3.4"
+RUMEX = "pandoc rumex 0.3.5"
 HTML_TEMPLATE = template/html.template
 KOPF_TEMPLATE = template/kopf.html
 HEADER_TEMPLATE = template/header.html
