@@ -43,18 +43,38 @@ und die Idee dieses Home Page Baukastens ist entstanden.
 
 @todo
 
+Rumex wurde erstellt um die Seite auf github.com zu
+betreiben.
+
+Es funktioniert aber auch auf einen normalen Server.
+Einfach die HTML Dateien und die Verzeichnisse `bilder` und
+`template`,per FTP, auf den Server kopieren.
+
+Sind ein paar Voraussetzungen erfüllt kann man rumex auch
+über git, wie bei github.com, auf dem einen normalen Server 
+betrieben werden.
+
+
+## Installation auf dem github.com Server
+
 - Einrichten eines github.com Zugangs
 - Arbeits- Repository auf den AP[^ap] holen
 - Holen der Rumex ZIP Datei
 - Die Dateien des ZIP Archives in das Arbeits- Repository kopieren
 - Grund Dateien anpassen 
-	- @fixme Angabe welche Dateien fehlt noch
+	- @fixme: Angabe welche Dateien fehlt noch
 - Erste Änderungen vornehme
 - `make online` - Fertig.
 
 [^ap]: Mit AP ist der **A**rbeits**P**latz Rechner gemeint.
 
 
+
+## Installation auf einen nicht github.com Server
+
+Auf der Seite [rumex.it-bayer.de](http://rumex.it-bayer.de) findet man
+eine Beschreibung wie man den rumex Baukasten auf einen **nicht** 
+`github.com` Server installiert.
 
 
 # Grunddaten / Aufbau des rumex Baukastens

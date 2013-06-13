@@ -45,7 +45,10 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <nav id="TOC">
 <ul>
 <li><a href="#vorwort">Vorwort</a></li>
-<li><a href="#installation">Installation</a></li>
+<li><a href="#installation">Installation</a><ul>
+<li><a href="#installation-auf-dem-github.com-server">Installation auf dem github.com Server</a></li>
+<li><a href="#installation-auf-einen-nicht-github.com-server">Installation auf einen nicht github.com Server</a></li>
+</ul></li>
 <li><a href="#grunddaten-aufbau-des-rumex-baukastens">Grunddaten / Aufbau des rumex Baukastens</a><ul>
 <li><a href="#root-verzeichnis">root Verzeichnis</a></li>
 <li><a href="#unterverzeichnisse">Unterverzeichnisse</a></li>
@@ -85,6 +88,10 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>Irgendwann bin ich dann auf <code>markdown</code> und <code>pandoc</code> gestoßen und die Idee dieses Home Page Baukastens ist entstanden.</p>
 <h1 id="installation"><a href="#installation">Installation</a></h1>
 <p>@todo</p>
+<p>Rumex wurde erstellt um die Seite auf github.com zu betreiben.</p>
+<p>Es funktioniert aber auch auf einen normalen Server. Einfach die HTML Dateien und die Verzeichnisse <code>bilder</code> und <code>template</code>,per FTP, auf den Server kopieren.</p>
+<p>Sind ein paar Voraussetzungen erfüllt kann man rumex auch über git, wie bei github.com, auf dem einen normalen Server betrieben werden.</p>
+<h2 id="installation-auf-dem-github.com-server"><a href="#installation-auf-dem-github.com-server">Installation auf dem github.com Server</a></h2>
 <ul>
 <li>Einrichten eines github.com Zugangs</li>
 <li>Arbeits- Repository auf den AP<sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> holen</li>
@@ -92,11 +99,13 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li>Die Dateien des ZIP Archives in das Arbeits- Repository kopieren</li>
 <li>Grund Dateien anpassen
 <ul>
-<li>@fixme Angabe welche Dateien fehlt noch</li>
+<li>@fixme: Angabe welche Dateien fehlt noch</li>
 </ul></li>
 <li>Erste Änderungen vornehme</li>
 <li><code>make online</code> - Fertig.</li>
 </ul>
+<h2 id="installation-auf-einen-nicht-github.com-server"><a href="#installation-auf-einen-nicht-github.com-server">Installation auf einen nicht github.com Server</a></h2>
+<p>Auf der Seite <a href="http://rumex.it-bayer.de">rumex.it-bayer.de</a> findet man eine Beschreibung wie man den rumex Baukasten auf einen <strong>nicht</strong> <code>github.com</code> Server installiert.</p>
 <h1 id="grunddaten-aufbau-des-rumex-baukastens"><a href="#grunddaten-aufbau-des-rumex-baukastens">Grunddaten / Aufbau des rumex Baukastens</a></h1>
 <h2 id="root-verzeichnis"><a href="#root-verzeichnis">root Verzeichnis</a></h2>
 <p>Im <code>root</code> Verzeichnis findet man alle <code>HTML</code> Dateien der Seite. Diese werde vom Baukasten erstellt und müssen nicht von Hand verändert werden. Zusätzlich findet man noch ein paar Systemdateien:</p>
