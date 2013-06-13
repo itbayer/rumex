@@ -2,15 +2,19 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="pandoc rumex 0.3.5">
+  <!-- rumex Version -->
+  <meta name="generator" content="pandoc rumex 0.3.6">
+  <!-- rumex Suchmaschine -->
+  <meta name="robots" content="all">
   <meta name="author" content="IT Bayer’s rumex">
   <title>Der(Ein) HomePage Sand(Bau)kasten</title>
   <style type="text/css">code{white-space: pre;}</style>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  <!-- rumex RSS -->
+  <link rel="alternate" type="application/rss+xml" title="" href="rss.xml" />
   <!-- template/header.html -->
-  <link rel="alternate" type="application/rss+xml" title="Neues vom rumex Baukasten" href="rss.xml"/>
   <link rel="stylesheet" type="text/css" href="template/all.css" media="all" />
   <link rel="stylesheet" type="text/css" href="template/screen.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="template/print.css" media="print" />
@@ -43,30 +47,25 @@
 <p><em>2013-06-13</em></p>
 <h1 id="historie">Historie</h1>
 <dl>
-<dt>0.3.5</dt>
-<dd><p>Rumex bekommt eine Bild Verarbeitung.</p>
-<p>Eigentlich ist es gar keine richtige Bildbearbeitung sondern nur eine <code>ImageMagick</code> Befehlsfolge die, die Bilder im Verzeichnis <code>bilder</code> in verschiedene Größen bereitstellt.</p>
-<p>Unterstützt werden zur Zeit die Größen</p>
-<ul>
-<li>100</li>
-<li>200</li>
-<li>400</li>
-<li>600</li>
-<li>800</li>
-</ul>
-<p>Wobei hier die Breite des Bildes das Zielmaß ist. Die Höhe wird entsprechend von <code>ImageMagick</code> berechnet.</p>
-<p><strong>Aufruf und Ausgabe</strong></p>
-<pre><code>make bilder
-
-convert bilder/404.png -resize 100x bilder/404_100_.png
-convert bilder/404.png -resize 200x bilder/404_200_.png
-convert bilder/404.png -resize 400x bilder/404_400_.png
-convert bilder/404.png -resize 600x bilder/404_600_.png
-convert bilder/404.png -resize 800x bilder/404_800_.png</code></pre>
-<p><a href="https://github.com/itbayer/rumex/archive/0.3.5.zip">https://github.com/itbayer/rumex/archive/0.3.5.zip</a></p>
+<dt>0.3.6</dt>
+<dd><p>Einbau einer Weiterleitungsfunktion per JavaScript da <code>.htaccess</code> von github.com nicht unterstützt wird.</p>
+<p>Verwendet wird dazu die Dateierweiterung <code>.md0w</code>. Die entsprechende Suchmaschinen Anweisung wird in den Header der html Datei geschrieben.</p>
+<p>Verzeichnis Struktur umgebaut. Dateien aus <code>inc</code> nach <code>bin</code> verlagert.</p>
+<p><a href="https://github.com/itbayer/rumex/archive/0.3.6.zip">https://github.com/itbayer/rumex/archive/0.3.6.zip</a></p>
 </dd>
 </dl>
 <p><a href="historie.html">… weiter lesen</a></p>
+<hr />
+</div>
+
+
+
+<div class="indexliste">
+
+<p><em>2013-06-13</em></p>
+<h1 id="todo">ToDo</h1>
+<p>Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens. Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.</p>
+<p><a href="todo.html">… weiter lesen</a></p>
 <hr />
 </div>
 
@@ -85,7 +84,7 @@ convert bilder/404.png -resize 800x bilder/404_800_.png</code></pre>
 
 <div class="indexliste">
 
-<p><em>2013-06-06</em></p>
+<p><em>2013-06-13</em></p>
 <h1 id="github">Github</h1>
 <p>Kleine Beschreibung, oder besser gesagt mein Notizzettel wie man auf <a href="http://github.com">http://github.com</a> eine Internetseite einrichtet.</p>
 <p><a href="github.html">… weiter lesen</a></p>
@@ -96,21 +95,10 @@ convert bilder/404.png -resize 800x bilder/404_800_.png</code></pre>
 
 <div class="indexliste">
 
-<p><em>2013-06-06</em></p>
+<p><em>2013-06-13</em></p>
 <h1 id="sandkasten">Sandkasten</h1>
 <p>Diese Seite ist der Sandkasten oder auch Spielwiese um die CSS Einstellungen machen zu können.</p>
 <p><a href="sandkasten.html">… weiter lesen</a></p>
-<hr />
-</div>
-
-
-
-<div class="indexliste">
-
-<p><em>2013-06-06</em></p>
-<h1 id="todo">ToDo</h1>
-<p>Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens. Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.</p>
-<p><a href="todo.html">… weiter lesen</a></p>
 <hr />
 </div>
 

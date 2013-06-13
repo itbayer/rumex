@@ -2,7 +2,10 @@
 <html$if(lang)$ lang="$lang$"$endif$>
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content=$if(rumex)$"$rumex$"$endif$>
+  <!-- rumex Version -->
+  <meta name="generator" content="$meta_generator$">
+  <!-- rumex Suchmaschine -->
+  <meta name="robots" content="$meta_robots$">
 $for(author-meta)$
   <meta name="author" content="$author-meta$">
 $endfor$
@@ -28,6 +31,8 @@ $endfor$
 $if(math)$
   $math$
 $endif$
+  <!-- rumex RSS -->
+  <link rel="alternate" type="application/rss+xml" title="$rsstitel$" href="$rssfile$" />
 $for(header-includes)$
   $header-includes$
 $endfor$

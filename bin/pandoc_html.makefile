@@ -1,5 +1,5 @@
 # 
-# inc/pandoc_html.makefile
+# bin/pandoc_html.makefile
 #
 
 #
@@ -26,7 +26,10 @@ html0s: $(HTML0S)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
-		-V rumex=$(RUMEX) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -41,7 +44,10 @@ html0x: $(HTML0X)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
-		-V rumex=$(RUMEX) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -57,9 +63,46 @@ html0v: $(HTML0V)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
-		-V rumex=$(RUMEX) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_VERSTECKT) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
+
+
+# 
+# Weiterleitung per JavaScript
+# Für diesen Type gibt es nur die Stufe 0
+# Inhaltsverzeichnis wäre hier sinnlos.
+#
+# Einbau der Weiterleitung
+#
+#    <script language="javascript">
+#    <!--
+#    window.location.href="ZIEL.html";
+#    // -->
+#    </script> 
+#
+HTML0W =  $(shell for i in $(shell ls -1 markdown/*.md0w 2>/dev/null) ;do x=$${i\#*/}; echo $${x%.*}.html; done)
+
+html0w: $(HTML0W) 
+
+%.html: markdown/%.md0w $(DEV)
+	$(PANDOC) -f markdown -t html5 -s \
+		--email-obfuscation=references \
+		--smart \
+		-B $(KOPF_TEMPLATE) \
+		-H $(HEADER_TEMPLATE) \
+		-A $(FUSS_TEMPLATE) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_WEITERLEITUNG) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
+		--template=$(HTML_TEMPLATE) \
+		$< -o $@
+
+
 
 
 # -------------------------------------------------------------------
@@ -78,7 +121,10 @@ html1s: $(HTML1S)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
-		-V rumex=$(RUMEX) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -96,7 +142,10 @@ html1x: $(HTML1X)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
-		-V rumex=$(RUMEX) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -114,7 +163,10 @@ html1v: $(HTML1V)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
-		-V rumex=$(RUMEX) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_VERSTECKT) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -135,7 +187,10 @@ html2s: $(HTML2S)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
-		-V rumex=$(RUMEX) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -153,7 +208,10 @@ html2x: $(HTML2X)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
-		-V rumex=$(RUMEX) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -171,7 +229,10 @@ html2v: $(HTML2V)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
-		-V rumex=$(RUMEX) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_VERSTECKT) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -193,7 +254,10 @@ html3s: $(HTML3S)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
-		-V rumex=$(RUMEX) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -211,7 +275,10 @@ html3x: $(HTML3X)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
-		-V rumex=$(RUMEX) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -229,7 +296,10 @@ html3v: $(HTML3V)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
-		-V rumex=$(RUMEX) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_VERSTECKT) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -250,7 +320,10 @@ html4s: $(HTML4S)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
-		-V rumex=$(RUMEX) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -268,7 +341,10 @@ html4x: $(HTML4X)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
-		-V rumex=$(RUMEX) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -286,7 +362,10 @@ html4v: $(HTML4V)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
-		-V rumex=$(RUMEX) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_VERSTECKT) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -307,7 +386,10 @@ html5s: $(HTML5S)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
-		-V rumex=$(RUMEX) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -325,7 +407,10 @@ html5x: $(HTML5X)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
-		-V rumex=$(RUMEX) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -343,7 +428,10 @@ html5v: $(HTML5V)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
-		-V rumex=$(RUMEX) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_VERSTECKT) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -364,7 +452,10 @@ html6s: $(HTML6S)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
-		-V rumex=$(RUMEX) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -382,7 +473,10 @@ html6x: $(HTML6X)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
-		-V rumex=$(RUMEX) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -400,7 +494,10 @@ html6v: $(HTML6V)
 		-B $(KOPF_TEMPLATE) \
 		-H $(HEADER_TEMPLATE) \
 		-A $(FUSS_TEMPLATE) \
-		-V rumex=$(RUMEX) \
+		-V meta_generator=$(META_GENERATOR) \
+		-V meta_robots=$(META_ROBOTS_VERSTECKT) \
+		-V rsstitel=$(RSS_TITEL) \
+		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 

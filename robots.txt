@@ -7,7 +7,6 @@ Sitemap: http://itbayer.github.io/rumex/sitemap.xml
 
 User-agent: *
 
-Disallow: /inc/
 Disallow: /bin/
 Disallow: /markdown/
 Disallow: /readme.md

@@ -6,6 +6,22 @@
 # Historie
 -->
 
+0.3.6
+:	Einbau einer Weiterleitungsfunktion per JavaScript
+	da `.htaccess` von github.com nicht unterstützt wird.
+	
+	Verwendet wird dazu die Dateierweiterung `.md0w`.
+	Die entsprechende Suchmaschinen Anweisung wird 
+	in den Header der html Datei geschrieben.
+
+	Verzeichnis Struktur umgebaut.
+	Dateien aus `inc` nach `bin` verlagert.
+	
+	<https://github.com/itbayer/rumex/archive/0.3.6.zip>
+
+
+<!-- schnipp -->
+
 0.3.5
 :	Rumex bekommt eine Bild Verarbeitung.
 	
@@ -37,8 +53,6 @@
 		
 	<https://github.com/itbayer/rumex/archive/0.3.5.zip>
 
-
-<!-- schnipp -->
 
 0.3.4
 :	Das Seiten Layout bekommt ein eigenes Verzeichnis.

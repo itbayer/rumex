@@ -30,39 +30,40 @@ Die Beschreibung des Baukastens findet man [hier](beschreibung.html).
 
 # Historie
 
-0.3.5
-:	Rumex bekommt eine Bild Verarbeitung.
+0.3.6
+:	Einbau einer Weiterleitungsfunktion per JavaScript
+	da `.htaccess` von github.com nicht unterstützt wird.
 	
-	Eigentlich ist es gar keine richtige Bildbearbeitung
-	sondern nur eine `ImageMagick` Befehlsfolge die, die
-	Bilder im Verzeichnis `bilder` in verschiedene Größen
-	bereitstellt. 
+	Verwendet wird dazu die Dateierweiterung `.md0w`.
+	Die entsprechende Suchmaschinen Anweisung wird 
+	in den Header der html Datei geschrieben.
+
+	Verzeichnis Struktur umgebaut.
+	Dateien aus `inc` nach `bin` verlagert.
 	
-	Unterstützt werden zur Zeit die Größen
-	
-	- 100
-	- 200
-	- 400
-	- 600
-	- 800
-	
-	Wobei hier die Breite des Bildes das Zielmaß ist. 
-	Die Höhe wird entsprechend von `ImageMagick` berechnet.
-	
-	**Aufruf und Ausgabe**
-	
-		make bilder
-	
-		convert bilder/404.png -resize 100x bilder/404_100_.png
-		convert bilder/404.png -resize 200x bilder/404_200_.png
-		convert bilder/404.png -resize 400x bilder/404_400_.png
-		convert bilder/404.png -resize 600x bilder/404_600_.png
-		convert bilder/404.png -resize 800x bilder/404_800_.png
-		
-	<https://github.com/itbayer/rumex/archive/0.3.5.zip>
+	<https://github.com/itbayer/rumex/archive/0.3.6.zip>
 
 
 [... weiter lesen](historie.html)
+
+---
+
+</div>
+
+
+
+<div class="indexliste">
+
+*2013-06-13*
+
+
+# ToDo
+
+
+Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens.
+Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.
+
+[... weiter lesen](todo.html)
 
 ---
 
@@ -92,7 +93,7 @@ werden kann.
 
 <div class="indexliste">
 
-*2013-06-06*
+*2013-06-13*
 
 
 # Github
@@ -111,7 +112,7 @@ wie man auf <http://github.com> eine Internetseite einrichtet.
 
 <div class="indexliste">
 
-*2013-06-06*
+*2013-06-13*
 
 
 # Sandkasten
@@ -121,25 +122,6 @@ die CSS Einstellungen machen zu können.
 
 
 [... weiter lesen](sandkasten.html)
-
----
-
-</div>
-
-
-
-<div class="indexliste">
-
-*2013-06-06*
-
-
-# ToDo
-
-
-Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens.
-Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.
-
-[... weiter lesen](todo.html)
 
 ---
 
