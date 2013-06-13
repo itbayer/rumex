@@ -6,7 +6,7 @@
 # Überschriften für die Index Seite
 U1="Der(Ein) HomePage Sand(Bau)kasten" 
 U2="IT Bayer's rumex"
-U3="2013,"
+U3=""
 
 # Programm zum erstellen der index.md
 INDEX="bin/make_index.pl"
