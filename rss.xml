@@ -25,6 +25,46 @@
 
 
 <item>
+	<title>rumex bekommt eine Weiterleutungsseite</title>
+	<description>
+	<![CDATA[
+
+<p>Einbau einer Weiterleitungsfunktion per JavaScript da .htaccess von github.com nicht unterstützt wird.</p>
+
+]]>
+	</description>
+		<link>http://rumex.it-bayer.de/historie.html</link>
+		<guid>http://rumex.it-bayer.de/historie.html</guid>
+		<dc:creator>IT-Bayer</dc:creator>
+		<category><![CDATA[Neues]]></category>
+</item>
+
+
+<item>
+	<title>rumex bekommt eine Bildbearbeitung</title>
+	<description>
+	<![CDATA[
+
+<p>Eigentlich ist es gar keine richtige Bildbearbeitung sondern nur eine ImageMagick Befehlsfolge die, die Bilder im Verzeichnis bilder in verschiedene Größen bereitstellt.</p>
+<p>Unterstützt werden zur Zeit die Größen</p>
+<ul>
+<li>100</li>
+<li>200</li>
+<li>400</li>
+<li>600</li>
+<li>800</li>
+</ul>
+
+]]>
+	</description>
+		<link>http://rumex.it-bayer.de/historie.html</link>
+		<guid>http://rumex.it-bayer.de/historie.html</guid>
+		<dc:creator>IT-Bayer</dc:creator>
+		<category><![CDATA[Neues]]></category>
+</item>
+
+
+<item>
 	<title>rumex bekommt eine sitemap.xml</title>
 	<description>
 	<![CDATA[
