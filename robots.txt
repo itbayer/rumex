@@ -9,6 +9,7 @@ User-agent: *
 
 Disallow: /bin/
 Disallow: /markdown/
+Disallow: /template/
 Disallow: /readme.md
 Disallow: /Makefile
 Disallow: /CNAME
