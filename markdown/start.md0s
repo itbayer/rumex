@@ -49,22 +49,22 @@ eine Beschreibung wie man den rumex Baukasten auf einen **nicht**
 		convert bilder/404.png -resize 600x bilder/404_600_.png
 		convert bilder/404.png -resize 800x bilder/404_800_.png
 		
-
+	<https://github.com/itbayer/rumex/archive/0.3.5.zip>
 
 0.3.4
 :	Das Seiten Layout bekommt ein eigenes Verzeichnis.
-
+	
 	<https://github.com/itbayer/rumex/archive/0.3.4.zip>
 
 0.3.3
 :	Versions Vermerk eingebaut. \
 	`<meta name="generator" content="pandoc rumex VERSION">`
-
+	
 	<https://github.com/itbayer/rumex/archive/0.3.3.zip>
 
 0.3.2
 :	`sitemap.xml` wurde eingebaut.
-
+	
 	<https://github.com/itbayer/rumex/archive/0.3.2.zip>
 	
 
