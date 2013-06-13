@@ -1,15 +1,14 @@
-% Beschreibung 
-% dieses Home Page Baukastens
-% 2013,
+% Beschreibung des Rumex Baukastens
+% 
+% 
 
 <!--
 
-# Beschreibung
+# Beschreibung des Rumex Baukastens
 
 -->
 
-Beschreibung des Home Page Baukastens 
-der mit `markdown`, `pandoc`, `bash`, `make` `imagamagick` und `perl` 
+...der mit `pandocs markdown`, `bash`, `make` `imagamagick` und `perl` 
 eine Home Page erstellt die auch auf <http://github.com> verwendet
 werden kann.
 
@@ -19,22 +18,27 @@ werden kann.
 
 # Vorwort
 
-Die Beweggründe mit einem eigenen System eine Internet Seite zu Erstellen sind
-mit der Zeit in mir gewachsen.
+Die Beweggründe mit einem eigenen System eine Internet Seite 
+zu Erstellen sind mit der Zeit in mir gewachsen.
 
-Es gibt immer mehr Systeme die zum Erstellen und Verwalten von Internetseiten
-eingesetzt werden.
-Probiert habe ich schon viele und mit den meisten war ich auch sehr zufrieden,
-wenn da nicht immer der Hacken mit dem Updates wäre. 
+Es gibt immer mehr Systeme die zum Erstellen und Verwalten 
+von Internetseiten eingesetzt werden.
+Probiert habe ich schon viele und mit den meisten war ich 
+auch sehr zufrieden, wenn da nicht immer der Hacken mit 
+dem Updates wäre. 
 Irgendwie, zumindest kommt es mir so vor, ist der Aufwand das 
-System der Seite auf dem aktuellen Stand zu halten größer geworden als den Inhalt der eigentlichen Seite zu pflegen.
+System der Seite auf dem aktuellen Stand zu halten größer 
+geworden als den Inhalt der eigentlichen Seite zu pflegen.
 
 Ich wünschte mir wieder eine Internetseite wie in früheren Zeiten.
 Eine Seite die aus einfachen HTML Seiten besteht.
 
-Irgendwann bin ich dann auf `markdown` und `pandoc` gestoßen und die Idee dieses
-Home Page Baukastens ist entstanden.
+Irgendwann bin ich dann auf `markdown` und `pandoc` gestoßen 
+und die Idee dieses Home Page Baukastens ist entstanden.
 
+# Installation
+
+TODO
 
 # Grunddaten / Aufbau des rumex Baukastens
 
