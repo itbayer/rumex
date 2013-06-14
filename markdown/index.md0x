@@ -26,27 +26,7 @@ Die Beschreibung des Baukastens findet man [hier](beschreibung.html).
 
 <div class="indexliste">
 
-*2013-06-13*
-
-
-# Beschreibung des Rumex Baukastens
-
-
-...der mit `pandocs markdown`, `bash`, `make` `imagamagick` und `perl` 
-eine Home Page erstellt die auch auf <http://github.com> verwendet
-werden kann.
-
-[... weiter lesen](beschreibung.html)
-
----
-
-</div>
-
-
-
-<div class="indexliste">
-
-*2013-06-13*
+*2013-06-14*
 
 # Historie
 
@@ -74,7 +54,7 @@ werden kann.
 
 <div class="indexliste">
 
-*2013-06-13*
+*2013-06-14*
 
 
 # ToDo
@@ -93,7 +73,27 @@ Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.
 
 <div class="indexliste">
 
-*2013-06-13*
+*2013-06-14*
+
+
+# Beschreibung des Rumex Baukastens
+
+
+...der mit `pandocs markdown`, `bash`, `make` `imagamagick` und `perl` 
+eine Home Page erstellt die auch auf <http://github.com> verwendet
+werden kann.
+
+[... weiter lesen](beschreibung.html)
+
+---
+
+</div>
+
+
+
+<div class="indexliste">
+
+*2013-06-06*
 
 
 # Github
@@ -112,7 +112,7 @@ wie man auf <http://github.com> eine Internetseite einrichtet.
 
 <div class="indexliste">
 
-*2013-06-13*
+*2013-06-06*
 
 
 # Sandkasten
