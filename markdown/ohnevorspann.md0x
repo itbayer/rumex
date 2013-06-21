@@ -7,7 +7,7 @@ Das Aussehen entspricht mehr einer Standard
 
 Diese Datei wird zwar vom System verarbeitet
 taucht aber, wenn die Datei die Endung
-`.md?`**`s`** besitzt, in der index.html auf.
+`.md?`s` besitzt, in der index.html auf.
 
 Hie ist dann nur das Datum und ein `... weiter lesen` 
 zu finden.
