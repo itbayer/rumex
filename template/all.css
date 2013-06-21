@@ -151,17 +151,24 @@ pre > code {
 #fuss {
 	border-bottom: 1px solid #F4F4F4;
 	border-top: 1px solid #F4F4F4;
-	color: gray;
-	font-size: 0.7em;
 	margin-top: 4em;
 	padding: 0 2em;
 }
 
-#fuss .impressum,
-#fuss .sitemap, {
+#fuss .copyleft {
+	color: gray;
+	font-size: 0.7em;
+	text-align: justify;
+	text-shadow: 1px 1px 1px #88ffff;
+}
 
+
+
+#fuss .links {
+	border-top: 1px solid #ddd; 
+	font-size: 0.7em;
+	margin-top: 24px;
 	text-align: right;
-
 }
 
 
