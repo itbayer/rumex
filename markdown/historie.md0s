@@ -1,0 +1,107 @@
+% Historie
+%
+%
+
+<!--
+# Historie
+-->
+
+0.3.6
+:	Einbau einer Weiterleitungsfunktion per JavaScript
+	da `.htaccess` von github.com nicht unterstützt wird.
+	
+	Verwendet wird dazu die Dateierweiterung `.md0w`.
+	Die entsprechende Suchmaschinen Anweisung wird 
+	in den Header der html Datei geschrieben.
+
+	Verzeichnis Struktur umgebaut.
+	Dateien aus `inc` nach `bin` verlagert.
+	
+	<https://github.com/itbayer/rumex/archive/0.3.6.zip>
+
+
+<!-- schnipp -->
+
+0.3.5
+:	Rumex bekommt eine Bild Verarbeitung.
+	
+	Eigentlich ist es gar keine richtige Bildbearbeitung
+	sondern nur eine `ImageMagick` Befehlsfolge die, die
+	Bilder im Verzeichnis `bilder` in verschiedene Größen
+	bereitstellt. 
+	
+	Unterstützt werden zur Zeit die Größen
+	
+	- 100
+	- 200
+	- 400
+	- 600
+	- 800
+	
+	Wobei hier die Breite des Bildes das Zielmaß ist. 
+	Die Höhe wird entsprechend von `ImageMagick` berechnet.
+	
+	**Aufruf und Ausgabe**
+	
+		make bilder
+	
+		convert bilder/404.png -resize 100x bilder/404_100_.png
+		convert bilder/404.png -resize 200x bilder/404_200_.png
+		convert bilder/404.png -resize 400x bilder/404_400_.png
+		convert bilder/404.png -resize 600x bilder/404_600_.png
+		convert bilder/404.png -resize 800x bilder/404_800_.png
+		
+	<https://github.com/itbayer/rumex/archive/0.3.5.zip>
+
+
+0.3.4
+:	Das Seiten Layout bekommt ein eigenes Verzeichnis.
+	
+	<https://github.com/itbayer/rumex/archive/0.3.4.zip>
+
+0.3.3
+:	Versions Vermerk eingebaut. \
+	`<meta name="generator" content="pandoc rumex VERSION">`
+	
+	<https://github.com/itbayer/rumex/archive/0.3.3.zip>
+
+0.3.2
+:	`sitemap.xml` wurde eingebaut.
+	
+	<https://github.com/itbayer/rumex/archive/0.3.2.zip>
+	
+
+0.3.1
+:	Einstellungen optimiert.
+	
+	<p><a href="http://jigsaw.w3.org/css-validator/check/referer"> <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="CSS ist valide!" /></a></p>
+	<p><a href="http://feed1.w3.org/check.cgi?url=http%3A//www.it-bayer.de/rumex/rss.xml"><img src="http://validator.w3.org/feed/images/valid-rss-rogers.png" alt="[Valid RSS]" title="Validate my RSS feed" /></a></p>
+	<p><a href="http://www.w3.org/html/logo/"> <img src="http://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="63" height="64" alt="HTML5 Powered" title="HTML5 Powered"></a></p> 
+	
+	<https://github.com/itbayer/rumex/archive/0.3.1.zip>
+
+
+0.3
+:	Der Baukasten wurde um die RSS Feed Funktion erweitert.
+	
+	<https://github.com/itbayer/rumex/archive/0.3.zip>
+
+
+0.2
+:	Steuerung der Inhaltsverzeichnis Einbindung durch
+	Dateinamen Endungen.
+	
+	<https://github.com/itbayer/rumex/archive/0.2.zip>
+
+
+0.1
+:	Version 0.1 ist fertig. Hat zwar hoch nicht viel Funktionen
+	aber der Baukasten funktioniert schon.
+	
+	<https://github.com/itbayer/rumex/archive/0.1.zip>
+
+
+-----------------------------------------------------------
+
+
+<!-- vim: set ft=pandoc: -->

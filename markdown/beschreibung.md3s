@@ -1,15 +1,14 @@
-% Beschreibung 
-% dieses Home Page Baukastens
-% 2013,
+% Beschreibung des Rumex Baukastens
+% 
+% 
 
 <!--
 
-# Beschreibung
+# Beschreibung des Rumex Baukastens
 
 -->
 
-Beschreibung des Home Page Baukastens 
-der mit `markdown`, `pandoc`, `bash`, `make` `imagamagick` und `perl` 
+...der mit `pandocs markdown`, `bash`, `make` `imagamagick` und `perl` 
 eine Home Page erstellt die auch auf <http://github.com> verwendet
 werden kann.
 
@@ -19,21 +18,73 @@ werden kann.
 
 # Vorwort
 
-Die Beweggründe mit einem eigenen System eine Internet Seite zu Erstellen sind
-mit der Zeit in mir gewachsen.
+Die Beweggründe mit einem eigenen System eine Internet Seite 
+zu Verwalten sind mit der Zeit in mir gewachsen.
 
-Es gibt immer mehr Systeme die zum Erstellen und Verwalten von Internetseiten
-eingesetzt werden.
-Probiert habe ich schon viele und mit den meisten war ich auch sehr zufrieden,
-wenn da nicht immer der Hacken mit dem Updates wäre. 
+Es gibt immer mehr Systeme die zum Erstellen und Verwalten 
+von Internetseiten eingesetzt werden.
+Probiert habe ich schon viele und mit den meisten war ich 
+auch sehr zufrieden, wenn da nicht immer der Hacken mit 
+dem Updates wäre. 
 Irgendwie, zumindest kommt es mir so vor, ist der Aufwand das 
-System der Seite auf dem aktuellen Stand zu halten größer geworden als den Inhalt der eigentlichen Seite zu pflegen.
+System der Seite auf dem aktuellen Stand zu halten größer 
+geworden als den Inhalt der eigentlichen Seite zu pflegen.
 
 Ich wünschte mir wieder eine Internetseite wie in früheren Zeiten.
 Eine Seite die aus einfachen HTML Seiten besteht.
 
-Irgendwann bin ich dann auf `markdown` und `pandoc` gestoßen und die Idee dieses
-Home Page Baukastens ist entstanden.
+Irgendwann bin ich dann auf `markdown` und `pandoc` gestoßen 
+und die Idee dieses Home Page Baukastens ist entstanden.
+
+
+## Rumex?
+
+Rumex ist die lateinische Bezeichnung für den [Ampfer](http://de.wikipedia.org/wiki/Ampfer) und 
+dieser taucht in der Natur dann auf, wenn der Boden Überdüngt, Verdichtung und Beschädigt ist.
+Rumex gehört zu den sogenannten Pionier Pflanzen. Er ist ein Lückenfüller.
+
+Genau das soll Rumex auch sein "ein Lückenfüller" für alle die ... Systeme satt haben.
+
+
+
+
+
+# Installation
+
+@todo
+
+Rumex wurde erstellt um die Seite auf github.com zu
+betreiben.
+
+Es funktioniert aber auch auf einen normalen Server.
+Einfach die HTML Dateien und die Verzeichnisse `bilder` und
+`template`,per FTP, auf den Server kopieren.
+
+Sind ein paar Voraussetzungen erfüllt kann man rumex auch
+über git, wie bei github.com, auf dem einen normalen Server 
+betreiben.
+
+
+## Installation auf dem github.com Server
+
+- Einrichten eines github.com Zugangs
+- Arbeits- Repository auf den AP[^ap] holen
+- Holen der Rumex ZIP Datei
+- Die Dateien des ZIP Archives in das Arbeits- Repository kopieren
+- Grund Dateien anpassen 
+	- @fixme: Angabe welche Dateien fehlt noch
+- Erste Änderungen vornehme
+- `make online` - Fertig.
+
+[^ap]: Mit AP ist der **A**rbeits**P**latz Rechner gemeint.
+
+
+
+## Installation auf einen nicht github.com Server
+
+Auf der Seite [rumex.it-bayer.de](http://rumex.it-bayer.de) findet man
+eine Beschreibung wie man den rumex Baukasten auf einen **nicht** 
+`github.com` Server installiert.
 
 
 # Grunddaten / Aufbau des rumex Baukastens
@@ -246,7 +297,7 @@ Ab hier geht dann der Inhlat der eigentlichen Seite los.
 
 # RSS Feed Funktion
 
-FIXME
+@todo
 
 Wird nicht aus den einzelnen Dateien erstellt sondern 
 muss manuell editiert werden, Datei `markdown/rssmd0x`.
@@ -334,13 +385,13 @@ Folgende make Befehle stehen dabei zur Verfügung.
 :	Daten auf github hoch laden.
 
 `make newrumex`
-:	FIXME: Erstellt eine leere Seite.
+:	@fixme: Erstellt eine leere Seite.
 	Löscht alles bis auf die Grunddaten des Baukastens.
 	
 
 # Einrichten einer neue Seite
 
-FIXME
+@todo
 
 # Installation
 
@@ -361,6 +412,6 @@ Die restlichen Programme müssen nach installiert werden.
 
 # Update
 
-FIXME
+@todo
 
 <!-- vim: set ft=pandoc: -->

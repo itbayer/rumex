@@ -47,7 +47,7 @@ wird aus dem C<Makefile> gelesen.
 B<Makefile Beispiel>
 
 # Programm zum erstellen der index.md
-PROG="inc/make_index.pl"
+PROG="bin/make_index.pl"
 # Überschriften für die Index Seite
 U1="Willkommen auf der Hochfelder Seite" 
 U2=""
@@ -108,6 +108,7 @@ vorkommen kann, auch ausgeschlossen.
 
 	next if ($name =~ m/markdown\/.*?x$/);
 	next if ($name =~ m/markdown\/.*?v$/);
+	next if ($name =~ m/markdown\/.*?w$/);
 	next if ($name eq "markdown/readme.md");
 
 	# Dateiname für Link bauen 

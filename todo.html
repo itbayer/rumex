@@ -2,15 +2,19 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="pandoc rumex 0.3.4">
+  <!-- rumex Version -->
+  <meta name="generator" content="pandoc rumex 0.3.6">
+  <!-- rumex Suchmaschine -->
+  <meta name="robots" content="all">
   <meta name="author" content="Was ist noch alles zu machen">
   <title>ToDo</title>
   <style type="text/css">code{white-space: pre;}</style>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  <!-- rumex RSS -->
+  <link rel="alternate" type="application/rss+xml" title="" href="rss.xml" />
   <!-- template/header.html -->
-  <link rel="alternate" type="application/rss+xml" title="Neues vom rumex Baukasten" href="rss.xml"/>
   <link rel="stylesheet" type="text/css" href="template/all.css" media="all" />
   <link rel="stylesheet" type="text/css" href="template/screen.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="template/print.css" media="print" />
@@ -28,6 +32,7 @@
 </header>
 <nav id="TOC">
 <ul>
+<li><a href="#weiterleitung">Weiterleitung</a></li>
 <li><a href="#liste">Liste</a></li>
 <li><a href="#bugs">Bugs</a><ul>
 <li><a href="#extern-vim">Extern VIM</a></li>
@@ -43,6 +48,19 @@
 
 <p>Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens. Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.</p>
 <!-- schnipp -->
+
+<h1 id="weiterleitung"><a href="#weiterleitung">Weiterleitung</a></h1>
+<p>Weiterleitung einrichten.</p>
+<p>Neue Dateiendung <code>md?w</code>.</p>
+<p>Neues Template weiterleitung.template</p>
+<pre><code>&lt;META NAME=&quot;ROBOTS&quot; CONTENT=&quot;noindex,follow,noarchive&quot;&gt;</code></pre>
+<ol type="1">
+<li>Eintrag, Seite darf indexiert werden <code>index</code>, <code>noindex</code></li>
+<li>Eintrag, Link darf verfolgt werden</li>
+<li>Eintrag, Seite darf gespeichert werden.</li>
+</ol>
+<p>Schlüsslewort <code>all</code> Inhalte durchsuchen und archivieren auch Links zu Unterseiten.</p>
+<!-- InfoLink: http://www.at-web.de/suchmaschinen/metatag.htm -->
 
 
 <h1 id="liste"><a href="#liste">Liste</a></h1>
@@ -157,6 +175,8 @@
 	</p>
 	<p style="text-align: right; border-top: 1px solid #eee; margin-top:
 	24px;">
+	<a class="sitemap" href="sitemap.html">Sitemap</a>
+	&nbsp;&nbsp;|&nbsp;&nbsp;
 	<a class="impressum" href="impressum.html">Impressum</a>
 	</p>
 

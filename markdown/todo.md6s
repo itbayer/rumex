@@ -13,6 +13,28 @@ Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.
 
 <!-- schnipp -->
 
+# Weiterleitung
+
+Weiterleitung einrichten.
+
+Neue Dateiendung `md?w`.
+
+
+
+Neues Template weiterleitung.template
+
+
+	<META NAME="ROBOTS" CONTENT="noindex,follow,noarchive">
+
+1. Eintrag, Seite darf indexiert werden `index`, `noindex`
+2. Eintrag, Link darf verfolgt werden
+3. Eintrag, Seite darf gespeichert werden.
+
+Schlüsslewort `all` Inhalte durchsuchen und archivieren auch Links zu Unterseiten.
+
+
+<!-- InfoLink: http://www.at-web.de/suchmaschinen/metatag.htm -->
+
 
 # Liste
 

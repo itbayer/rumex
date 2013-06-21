@@ -9,10 +9,43 @@
 | KLink: http://www.it-bayer.de/rumex/
 | Lang: de-DE
 | BildTitel: Rumex - Ein Home Page Baukasten
-| BildURL: http://www.it-bayer.de/rumex/bilder/404.png
+| BildURL: http://www.it-bayer.de/rumex/bilder/rss.png
 | BildLink: http://www.it-bayer.de/rumex/
 | BildBeschreibung: Aktuelles und Neuigkeiten von der rumex Seite.
 -->
+
+
+
+# rumex bekommt eine Weiterleitungsseite{.xx4}
+
+<!-- 
+| Link: http://rumex.it-bayer.de/historie.html
+| Autor: IT-Bayer
+| Kategorie: Neues
+-->
+
+Einbau einer Weiterleitungsfunktion per JavaScript da .htaccess von github.com nicht unterstützt wird.
+
+
+
+
+# rumex bekommt eine Bildbearbeitung{.xx3}
+
+<!-- 
+| Link: http://rumex.it-bayer.de/historie.html
+| Autor: IT-Bayer
+| Kategorie: Neues
+-->
+
+Eigentlich ist es gar keine richtige Bildbearbeitung sondern nur eine ImageMagick Befehlsfolge die, die Bilder im Verzeichnis bilder in verschiedene Größen bereitstellt.
+
+Unterstützt werden zur Zeit die Größen
+
+- 100
+- 200
+- 400
+- 600
+- 800
 
 
 

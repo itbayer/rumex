@@ -1,0 +1,9 @@
+% Weiterleitung nach beschreibung.html
+%
+%
+
+<script language="javascript">
+<!--
+window.location.href="beschreibung.html";
+// -->
+</script> 

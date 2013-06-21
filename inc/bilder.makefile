@@ -1,3 +1,0 @@
-#
-# inc/bilder.makefile
-#

@@ -2,15 +2,19 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="pandoc rumex 0.3.4">
+  <!-- rumex Version -->
+  <meta name="generator" content="pandoc rumex 0.3.6">
+  <!-- rumex Suchmaschine -->
+  <meta name="robots" content="all">
   <meta name="author" content="IT Bayer’s rumex">
   <title>Der(Ein) HomePage Sand(Bau)kasten</title>
   <style type="text/css">code{white-space: pre;}</style>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  <!-- rumex RSS -->
+  <link rel="alternate" type="application/rss+xml" title="" href="rss.xml" />
   <!-- template/header.html -->
-  <link rel="alternate" type="application/rss+xml" title="Neues vom rumex Baukasten" href="rss.xml"/>
   <link rel="stylesheet" type="text/css" href="template/all.css" media="all" />
   <link rel="stylesheet" type="text/css" href="template/screen.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="template/print.css" media="print" />
@@ -24,7 +28,6 @@
 <header>
 <h1 class="title">Der(Ein) HomePage Sand(Bau)kasten</h1>
 <h2 class="author">IT Bayer’s rumex</h2>
-<h3 class="date">2013,</h3>
 </header>
 <div id=seite>
 <div class="indexliste">
@@ -32,49 +35,7 @@
 <p>Dies ist ein Versuch mit <code>pandoc's markdown</code> und ein paar Skripten eine Internetseite zu erstellen und zu verwalten.</p>
 <p>Die Seite bzw. die Entwicklung liegt auf <a href="http://github.com">github.com</a>, der aktuelle Stand kann als <a href="https://github.com/itbayer/rumex/archive/gh-pages.zip">ZIP Datei herunter geladen</a> werden.</p>
 <p>Aktuell wird dieser Baukasten<sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> auch auf der Seite <a href="http://www.it-bayer.de">http://www.it-bayer.de</a> verwendet.</p>
-<p>Auf der Seite <a href="http://rumex.it-bayer.de">rumex.it-bayer.de</a> findet man eine Beschreibung wie man den rumex Baukasten auf einen <strong>nicht</strong> <code>github.com</code> Server installiert.</p>
-<hr />
-<p><strong>Historie</strong></p>
-<dl>
-<dt>0.3.4</dt>
-<dd><p>Das Seiten Layout bekommt ein eigenes Verzeichnis.</p>
-<p><a href="https://github.com/itbayer/rumex/archive/0.3.4.zip">https://github.com/itbayer/rumex/archive/0.3.4.zip</a></p>
-</dd>
-<dt>0.3.3</dt>
-<dd><p>Versions Vermerk eingebaut.<br /><code>&lt;meta name=&quot;generator&quot; content=&quot;pandoc rumex VERSION&quot;&gt;</code></p>
-<p><a href="https://github.com/itbayer/rumex/archive/0.3.3.zip">https://github.com/itbayer/rumex/archive/0.3.3.zip</a></p>
-</dd>
-<dt>0.3.2</dt>
-<dd><p><code>sitemap.xml</code> wurde eingebaut.</p>
-<p><a href="https://github.com/itbayer/rumex/archive/0.3.2.zip">https://github.com/itbayer/rumex/archive/0.3.2.zip</a></p>
-</dd>
-<dt>0.3.1</dt>
-<dd><p>Einstellungen optimiert.</p>
-<p>
-<a href="http://jigsaw.w3.org/css-validator/check/referer"> <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="CSS ist valide!" /></a>
-</p>
-<p>
-<a href="http://feed1.w3.org/check.cgi?url=http%3A//www.it-bayer.de/rumex/rss.xml"><img src="http://validator.w3.org/feed/images/valid-rss-rogers.png" alt="[Valid RSS]" title="Validate my RSS feed" /></a>
-</p>
-<p>
-<a href="http://www.w3.org/html/logo/"> <img src="http://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="63" height="64" alt="HTML5 Powered" title="HTML5 Powered"></a>
-</p> 
-
-<p><a href="https://github.com/itbayer/rumex/archive/0.3.1.zip">https://github.com/itbayer/rumex/archive/0.3.1.zip</a></p>
-</dd>
-<dt>0.3</dt>
-<dd><p>Der Baukasten wurde um die RSS Feed Funktion erweitert.</p>
-<p><a href="https://github.com/itbayer/rumex/archive/0.3.zip">https://github.com/itbayer/rumex/archive/0.3.zip</a></p>
-</dd>
-<dt>0.2</dt>
-<dd><p>Steuerung der Inhaltsverzeichnis Einbindung durch Dateinamen Endungen.</p>
-<p><a href="https://github.com/itbayer/rumex/archive/0.2.zip">https://github.com/itbayer/rumex/archive/0.2.zip</a></p>
-</dd>
-<dt>0.1</dt>
-<dd><p>Version 0.1 ist fertig. Hat zwar hoch nicht viel Funktionen aber der Baukasten funktioniert schon.</p>
-<p><a href="https://github.com/itbayer/rumex/archive/0.1.zip">https://github.com/itbayer/rumex/archive/0.1.zip</a></p>
-</dd>
-</dl>
+<p>Die Beschreibung des Baukastens findet man <a href="beschreibung.html">hier</a>.</p>
 <hr />
 </div>
 
@@ -82,10 +43,39 @@
 
 <div class="indexliste">
 
-<p><em>2013-06-06</em></p>
-<h1 id="beschreibung">Beschreibung</h1>
-<p>Beschreibung des Home Page Baukastens der mit <code>markdown</code>, <code>pandoc</code>, <code>bash</code>, <code>make</code> <code>imagamagick</code> und <code>perl</code> eine Home Page erstellt die auch auf <a href="http://github.com">http://github.com</a> verwendet werden kann.</p>
+<p><em>2013-06-21</em></p>
+<h1 id="beschreibung-des-rumex-baukastens">Beschreibung des Rumex Baukastens</h1>
+<p>…der mit <code>pandocs markdown</code>, <code>bash</code>, <code>make</code> <code>imagamagick</code> und <code>perl</code> eine Home Page erstellt die auch auf <a href="http://github.com">http://github.com</a> verwendet werden kann.</p>
 <p><a href="beschreibung.html">… weiter lesen</a></p>
+<hr />
+</div>
+
+
+
+<div class="indexliste">
+
+<p><em>2013-06-21</em></p>
+<h1 id="historie">Historie</h1>
+<dl>
+<dt>0.3.6</dt>
+<dd><p>Einbau einer Weiterleitungsfunktion per JavaScript da <code>.htaccess</code> von github.com nicht unterstützt wird.</p>
+<p>Verwendet wird dazu die Dateierweiterung <code>.md0w</code>. Die entsprechende Suchmaschinen Anweisung wird in den Header der html Datei geschrieben.</p>
+<p>Verzeichnis Struktur umgebaut. Dateien aus <code>inc</code> nach <code>bin</code> verlagert.</p>
+<p><a href="https://github.com/itbayer/rumex/archive/0.3.6.zip">https://github.com/itbayer/rumex/archive/0.3.6.zip</a></p>
+</dd>
+</dl>
+<p><a href="historie.html">… weiter lesen</a></p>
+<hr />
+</div>
+
+
+
+<div class="indexliste">
+
+<p><em>2013-06-21</em></p>
+<h1 id="todo">ToDo</h1>
+<p>Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens. Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.</p>
+<p><a href="todo.html">… weiter lesen</a></p>
 <hr />
 </div>
 
@@ -113,17 +103,6 @@
 
 
 
-<div class="indexliste">
-
-<p><em>2013-06-06</em></p>
-<h1 id="todo">ToDo</h1>
-<p>Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens. Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.</p>
-<p><a href="todo.html">… weiter lesen</a></p>
-<hr />
-</div>
-
-
-
 
 
 <section class="footnotes">
@@ -146,6 +125,8 @@
 	</p>
 	<p style="text-align: right; border-top: 1px solid #eee; margin-top:
 	24px;">
+	<a class="sitemap" href="sitemap.html">Sitemap</a>
+	&nbsp;&nbsp;|&nbsp;&nbsp;
 	<a class="impressum" href="impressum.html">Impressum</a>
 	</p>
 

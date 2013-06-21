@@ -1,9 +1,12 @@
-/* ------------------------------------ 
- * inc/all.css 
+/* ==============================================
+ * template/all.css 
+ * ==============================================
  */
 
 
-/* Pandoc Kopfzeilen */
+/* ----------------------------------------------
+ * Pandoc Kopfzeilen 
+ */
 header {
 	border-bottom: 1px solid #AFAFAF;
 	margin-bottom: 4em;
@@ -14,23 +17,34 @@ header {
 }
 
 
-/* Nummerierung für Bilder und Tabellen beim laden der Seite 
+/* ----------------------------------------------
+ * Nummerierung für Bilder und Tabellen beim laden der Seite 
  * setzen.
  */
-
 body {
   counter-reset: bild tabelle;
 }
 
-p, ul {
+/* ---------------------------------------------- 
+ * Abstand zwischen den Zeilen innerhalb eines Absatzes vergrößern.
+ * Muss gemacht werden da die Quelltextbox sonst in die darüber
+ * liegende Zeile ragt.
+ */
+p, ul, dd {
 	line-height: 1.4em;
 }
 
+/* ----------------------------------------------
+ * Zeilenabstand bei Aufzählungen vergrößern
+ */
 #seite ul {
 	line-height: 2em;
 }
 
 
+/* ----------------------------------------------
+ * Überschriften allgemein die Erste
+ */
 #seite h1,
 #seite h1 a {
 	margin-top: 2em;
@@ -41,7 +55,9 @@ p, ul {
 	text-decoration: none;
 }
 
-
+/* ----------------------------------------------
+ * Überschriften allgemein Rest
+ */
 #seite h2, 
 #seite h2 a,
 #seite h3,
@@ -56,6 +72,9 @@ p, ul {
 	text-decoration: none;
 }
 
+/* ----------------------------------------------
+ * Überschrift auf der Startseite
+ */
 #seite .indexliste h1 {
 	margin-top: 0em;
 	padding-top: 0em;
@@ -63,7 +82,9 @@ p, ul {
 }
 
 
-/* Zitate */
+/* ---------------------------------------------- 
+ * Zitate 
+ */
 blockquote {
 	font-style: italic;
 	background-color: #fafafa;
@@ -78,7 +99,9 @@ blockquote {
 	padding-left: 60px;
 }
 
-/* Quellcode Zeilen*/
+/* ---------------------------------------------- 
+ * Quellcode Block 
+ */
 
 pre {
 	background-color: #f4f4f4;
@@ -90,7 +113,9 @@ pre {
 	box-shadow: 4px 4px 8px #d0d0d0;
 }
 
-/* Quellcode im Text */
+/* ---------------------------------------------- 
+ * Quellcode im Text 
+ */
 
 p > code,
 p * code,
@@ -100,7 +125,6 @@ dt > code,
 dt * code,
 dd > code,
 dd * code {
-
 	background-color: #F4F4F4;
 	border: 1px solid #e0e0e0;
 	border-radius: 5px 5px 5px 5px;
@@ -108,6 +132,22 @@ dd * code {
 	padding: 2px 4px;
 }
 
+
+/* ----------------------------------------------
+ * Wenn in Definitionslisten Quellcode eingebaut wird,
+ * wird dieser durch pandoc mit <pre><code> geformt.
+ * Somit wird um den <code> Block, siehe oben, ein
+ * Rand gezeichnet. 
+ * Dieser Rand wird hier ausgeschaltet.
+ */
+pre > code {
+	border: none !important;
+}
+
+
+/* ----------------------------------------------
+ * Fusszeile
+ */
 #fuss {
 	border-bottom: 1px solid #F4F4F4;
 	border-top: 1px solid #F4F4F4;
@@ -117,7 +157,8 @@ dd * code {
 	padding: 0 2em;
 }
 
-#fuss .impressum {
+#fuss .impressum,
+#fuss .sitemap, {
 
 	text-align: right;
 
@@ -129,8 +170,9 @@ dd * code {
 
 
 
-/* Definitionsliste */
-
+/* ----------------------------------------------
+ * Definitionsliste 
+ */
 dl {
 	background-color: #FeFeFe;
 	padding-left: 1em;
@@ -139,7 +181,9 @@ dl {
 	margin-left: 1em;
 }
 
-/* Überschrift der Liste */
+/* ----------------------------------------------
+ * Überschrift der Definitionsliste
+ */
 dt {
 	font-size: 1.2em;
 	font-weight: bold;
@@ -148,12 +192,15 @@ dt {
 	color: #222;
 }
 
-/* Farbe der Definitionslisten - Beschreibung */
+/* ----------------------------------------------
+ * Farbe der Definitionslisten - Beschreibung 
+ */
 dd {
 	color: #222;
 }
 
-/* Absätze mit dem p Tag werden mit einem größeren
+/* ----------------------------------------------
+ * Absätze mit dem <p> Tag werden mit einem größeren
  * Abstand dargestellt. Wird hier zurückgestellt.
  */
 dd > p {
@@ -161,8 +208,9 @@ dd > p {
 	margin-bottom: 1em;
 }
 
-/* Datum der Übersichtsseite */
-
+/* ----------------------------------------------
+ * Datum der Übersichts- Startseite 
+ */
 .indexliste > p > em {
 	display: block;
 	text-align: right;
@@ -172,6 +220,9 @@ dd > p {
 }
 
 
+/* ----------------------------------------------
+ * Fussnoten
+ */
 .footnotes {
 	margin-top: 4em;
 
@@ -192,13 +243,16 @@ dd > p {
 }
 
 
-/* Tabellen */
+/* ----------------------------------------------
+ * Tabellen 
+ */
 
 table caption {
 	padding: 1em 0 0.5em 0;
 }
 
-/* Tabelle mit "Tabelle" und laufender Nummer
+/* ----------------------------------------------
+ * Tabelle mit "Tabelle" und laufender Nummer
  * beschriften
  */
 table caption::before {
