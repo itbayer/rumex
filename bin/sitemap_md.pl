@@ -4,18 +4,18 @@ use strict;
 
 my $url = "http://www.it-bayer.de/rumex";
 
-=head1 make_sitemap_html.pl 
+=head1 sitemap_md.pl 
 
 =encoding utf-8
 
 Aufruf:
-	bin/make_sitemap_html.pl > markdwon/sitemap.md
+	bin/sitemap_md.pl > markdwon/sitemap.md0v
 
 	oder
 
-	make sitemaphtml
+	make sitemapmd
 
-Erstellt eine einfache Form einer C<sitemap.md> Datei.
+Erstellt eine C<sitemap.md0v> Datei.
 
 =cut
 
@@ -31,15 +31,14 @@ push(@files, glob('markdown/*.md?s'));
 
 
 # xml Inhalt erstellen
-print <<EOF1;
+print <<EOF;
 % Seitenübersicht 
 %
 %
 
-
+<div id="sitemap">
 Übersicht aller Seiten dieser Homepage
-
-EOF1
+EOF
 
 # Ausgelesene Dateien verarbeiten.
 foreach(@files) {
@@ -49,8 +48,8 @@ foreach(@files) {
  
 
 	# Zeile für jede Datei erstellen
-	#print "* <$url/$1.html>\n";
 	print ":\t* [$1]($1.html)\n";
 
 }
 
+print "</div>\n";

@@ -13,7 +13,7 @@
 
 		<image>
 			<title>Rumex - Ein Home Page Baukasten</title>
-			<url>http://www.it-bayer.de/rumex/bilder/rss.png</url>
+			<url>http://www.it-bayer.de/rumex/bilder/rss_200_.png</url>
 			<link>http://www.it-bayer.de/rumex/</link>
 			<description>
 				<![CDATA[
@@ -25,6 +25,22 @@
 
 
 <item>
+	<title>rumex bekommt jetzt auch einen sitemap.html</title>
+	<description>
+	<![CDATA[
+
+<p>Nach der <code>sitemap.xml</code> kann rumex jetzt auch eine <code>sitemap.html</code> erstellen.</p>
+
+]]>
+	</description>
+		<link>http://www.it-bayer.de/rumex/historie.html</link>
+		<guid>http://www.it-bayer.de/rumex/historie.html</guid>
+		<dc:creator>IT-Bayer</dc:creator>
+		<category><![CDATA[Neues]]></category>
+</item>
+
+
+<item>
 	<title>rumex bekommt eine Weiterleitungsseite</title>
 	<description>
 	<![CDATA[
@@ -33,8 +49,8 @@
 
 ]]>
 	</description>
-		<link>http://rumex.it-bayer.de/historie.html</link>
-		<guid>http://rumex.it-bayer.de/historie.html</guid>
+		<link>http://www.it-bayer.de/rumex/historie.html</link>
+		<guid>http://www.it-bayer.de/rumex/historie.html</guid>
 		<dc:creator>IT-Bayer</dc:creator>
 		<category><![CDATA[Neues]]></category>
 </item>
@@ -57,8 +73,8 @@
 
 ]]>
 	</description>
-		<link>http://rumex.it-bayer.de/historie.html</link>
-		<guid>http://rumex.it-bayer.de/historie.html</guid>
+		<link>http://www.it-bayer.de/rumex/historie.html</link>
+		<guid>http://www.it-bayer.de/rumex/historie.html</guid>
 		<dc:creator>IT-Bayer</dc:creator>
 		<category><![CDATA[Neues]]></category>
 </item>
@@ -74,8 +90,8 @@
 
 ]]>
 	</description>
-		<link>http://rumex.it-bayer.de/</link>
-		<guid>http://rumex.it-bayer.de/</guid>
+		<link>http://www.it-bayer.de/rumex/historie.html</link>
+		<guid>http://www.it-bayer.de/rumex/historie.html</guid>
 		<dc:creator>IT-Bayer</dc:creator>
 		<category><![CDATA[Neues]]></category>
 </item>
@@ -90,8 +106,8 @@
 
 ]]>
 	</description>
-		<link>http://rumex.it-bayer.de/</link>
-		<guid>http://rumex.it-bayer.de/</guid>
+		<link>http://www.it-bayer.de/rumex/historie.html</link>
+		<guid>http://www.it-bayer.de/rumex/historie.html</guid>
 		<dc:creator>IT-Bayer</dc:creator>
 		<category><![CDATA[Neues]]></category>
 </item>
@@ -107,8 +123,8 @@
 
 ]]>
 	</description>
-		<link>http://www.it-bayer.de/rumex/</link>
-		<guid>http://www.it-bayer.de/rumex/</guid>
+		<link>http://www.it-bayer.de/rumex/historie.html</link>
+		<guid>http://www.it-bayer.de/rumex/historie.html</guid>
 		<dc:creator>IT-Bayer</dc:creator>
 		<category><![CDATA[Neues]]></category>
 </item>

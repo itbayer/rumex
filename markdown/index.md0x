@@ -26,43 +26,17 @@ Die Beschreibung des Baukastens findet man [hier](beschreibung.html).
 
 <div class="indexliste">
 
-*2013-06-21*
-
-
-# Beschreibung des Rumex Baukastens
-
-
-...der mit `pandocs markdown`, `bash`, `make` `imagamagick` und `perl` 
-eine Home Page erstellt die auch auf <http://github.com> verwendet
-werden kann.
-
-[... weiter lesen](beschreibung.html)
-
----
-
-</div>
-
-
-
-<div class="indexliste">
-
-*2013-06-21*
+*2013-06-22*
 
 # Historie
 
-0.3.6
-:	Einbau einer Weiterleitungsfunktion per JavaScript
-	da `.htaccess` von github.com nicht unterstützt wird.
-	
-	Verwendet wird dazu die Dateierweiterung `.md0w`.
-	Die entsprechende Suchmaschinen Anweisung wird 
-	in den Header der html Datei geschrieben.
+0.3.7
+:	Einbau einer `sitemap.html`.
+	Erstellt wird dabei eine einfache Liste im 
+	Format markdown `md0v`, die schlussendliche dann
+	nach HTML gewandelt wird.
 
-	Verzeichnis Struktur umgebaut.
-	Dateien aus `inc` nach `bin` verlagert.
-	
-	<https://github.com/itbayer/rumex/archive/0.3.6.zip>
-
+	<https://github.com/itbayer/rumex/archive/0.3.7.zip>
 
 [... weiter lesen](historie.html)
 
@@ -74,7 +48,7 @@ werden kann.
 
 <div class="indexliste">
 
-*2013-06-21*
+*2013-06-14*
 
 
 # ToDo
@@ -84,6 +58,26 @@ Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens.
 Aber auch Fehler die noch nicht behoben sind notiere ich mir hier.
 
 [... weiter lesen](todo.html)
+
+---
+
+</div>
+
+
+
+<div class="indexliste">
+
+*2013-06-14*
+
+
+# Beschreibung des Rumex Baukastens
+
+
+...der mit `pandocs markdown`, `bash`, `make` `imagamagick` und `perl` 
+eine Home Page erstellt die auch auf <http://github.com> verwendet
+werden kann.
+
+[... weiter lesen](beschreibung.html)
 
 ---
 

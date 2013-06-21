@@ -2,9 +2,8 @@
 %
 %
 
-
+<div id="sitemap">
 Übersicht aller Seiten dieser Homepage
-
 :	* [impressum](impressum.html)
 :	* [index](index.html)
 :	* [ohnevorspann](ohnevorspann.html)
@@ -15,3 +14,4 @@
 :	* [sandkasten](sandkasten.html)
 :	* [start](start.html)
 :	* [todo](todo.html)
+</div>

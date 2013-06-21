@@ -6,6 +6,17 @@
 # Historie
 -->
 
+0.3.7
+:	Einbau einer `sitemap.html`.
+	Erstellt wird dabei eine einfache Liste im 
+	Format markdown `md0v`, die schlussendliche dann
+	nach HTML gewandelt wird.
+
+	<https://github.com/itbayer/rumex/archive/0.3.7.zip>
+
+<!-- schnipp -->
+
+
 0.3.6
 :	Einbau einer Weiterleitungsfunktion per JavaScript
 	da `.htaccess` von github.com nicht unterstützt wird.
@@ -20,7 +31,6 @@
 	<https://github.com/itbayer/rumex/archive/0.3.6.zip>
 
 
-<!-- schnipp -->
 
 0.3.5
 :	Rumex bekommt eine Bild Verarbeitung.
