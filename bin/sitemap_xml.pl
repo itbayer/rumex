@@ -2,6 +2,7 @@
 
 use strict;
 
+# @todo URL global legen
 my $url = "http://www.it-bayer.de/rumex";
 
 =head1 make_sitemap.pl 
@@ -31,9 +32,8 @@ bekannt gemacht werden.
 # sitemap für das Wurzelverzeichnis erstellen
 my @files;
 
-# .md?* Dateien  aus dem Verzeichnis markdown auslesen
-# Berücksichtigt werden nur eXclude und Standard 
-# Dateien Versteckte nicht.
+# .rx?[x|s] Dateien  auslesen
+# Berücksichtigt werden nur eXclude und Standard Dateien.
 push(@files, glob('*.rx?x'));
 push(@files, glob('*.rx?s'));
 
@@ -47,8 +47,8 @@ EOF1
 # Ausgelesene Dateien verarbeiten.
 foreach(@files) {
 
-	# .md wird nicht gebraucht, wird später eine .htm Datei
-	$_ =~ m/^ruemx\/(.*)\.rx\d.+$/;	
+	# .rx?? wird nicht gebraucht, wird später eine .htm Datei
+	$_ =~ m/(.*)\.rx\d.+$/;	
  
 
 	# Zeile für jede Datei erstellen

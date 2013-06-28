@@ -25,14 +25,15 @@ META_ROBOTS_WEITERLEITUNG = "noindex,follow,noarchive"
 
 
 # ##############################################################
-# Programm zum erstellen der index.md
+# Programm zum erstellen der index.rx0x
 INDEX="../bin/index.pl"
 
 
 # ##############################################################
 #
 # Programm zum erstellen des RSS Feed
-MD2RSS = "../bin/md2rss.pl"
+RX2RSS = "../bin/rx2rss.pl"
+
 
 
 # ##############################################################
@@ -51,12 +52,12 @@ SITEMAP_XML_FILE = "../sitemap.xml"
 
 
 # ##############################################################
-# MD0V Sitemap
-# Programm zum erstellen der md0v Sitemap Datei
-SITEMAP_MD = "../bin/sitemap_md.pl"
+# RX0V Sitemap
+# Programm zum erstellen der rx0v Sitemap Datei
+SITEMAP_RX = "../bin/sitemap_rx.pl"
 
 # Zieldatei der HTML Sitemap Datei
-SITEMAP_MD_FILE = "sitemap.rx0v"
+SITEMAP_RX_FILE = "sitemap.rx0v"
 
 
 # ##############################################################
@@ -66,9 +67,6 @@ BVZ="../bilder"
 
 # ##############################################################
 # Pandoc Programm
+#PANDOC = /usr/bin/pandoc
 PANDOC = pandoc
-
-
-
-
 

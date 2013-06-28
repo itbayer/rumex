@@ -22,7 +22,7 @@ index:
 # ######################################################
 # Schritte werden hier einzeln aufgerufen
 # somit kann sicher gestellt werden dass
-# zuerst die index.md0x erstellt und dann
+# zuerst die index.rx0x erstellt und dann
 # daraus die html Datei gemacht wird.
 #
 # Bei der Schreibweise
@@ -35,13 +35,13 @@ all:
 	make -s index 
 	make -s sitemap
 	make -s rss
-	make html 
+	make -s html 
 	make -s bilder
 
 
 # ######################################################
 online:
-	make all
+	make -s all
 	git add .
 	git commit -a -m"...."
 	git push
@@ -49,13 +49,13 @@ online:
 
 # #######################################################
 rss:
-	$(MD2RSS) > $(RSS_FILE)
+	$(RX2RSS) > $(RSS_FILE)
 
 
 
 # #######################################################
 sitemap:
-	make -s sitemapmd
+	make -s sitemaprx
 	make -s sitemapxml
 
 
@@ -65,6 +65,6 @@ sitemapxml:
 
 
 # #######################################################
-sitemapmd:
-	$(SITEMAP_MD) > $(SITEMAP_MD_FILE)
+sitemaprx:
+	$(SITEMAP_RX) > $(SITEMAP_RX_FILE)
 
