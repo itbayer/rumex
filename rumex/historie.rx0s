@@ -6,6 +6,16 @@
 # Historie
 -->
 
+0.4.0
+:	Umbau der Seiten Struktur 
+	* Quelldateien vom Unterverzeichnis `markdown` nach `rumex` verlagert
+	* make Steuerdatei in das Unterverzeichnis rumex verlagert
+	* Dateiendungen der Quelldateien von `md??` nach `rx??` geändert
+
+	<https://github.com/itbayer/rumex/archive/0.4.0.zip>
+
+<!-- schnipp -->
+
 0.3.7
 :	Einbau einer `sitemap.html`.
 	Erstellt wird dabei eine einfache Liste im 
@@ -13,8 +23,6 @@
 	nach HTML gewandelt wird.
 
 	<https://github.com/itbayer/rumex/archive/0.3.7.zip>
-
-<!-- schnipp -->
 
 
 0.3.6
