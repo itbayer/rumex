@@ -26,7 +26,27 @@ Die Beschreibung des Baukastens findet man [hier](beschreibung.html).
 
 <div class="indexliste">
 
-*2013-06-22*
+*2013-06-28*
+
+
+# Beschreibung des Rumex Baukastens
+
+
+...der mit `pandocs markdown`, `bash`, `make` `imagamagick` und `perl` 
+eine Home Page erstellt die auch auf <http://github.com> verwendet
+werden kann.
+
+[... weiter lesen](.html)
+
+---
+
+</div>
+
+
+
+<div class="indexliste">
+
+*2013-06-28*
 
 # Historie
 
@@ -38,27 +58,7 @@ Die Beschreibung des Baukastens findet man [hier](beschreibung.html).
 
 	<https://github.com/itbayer/rumex/archive/0.3.7.zip>
 
-[... weiter lesen](historie.html)
-
----
-
-</div>
-
-
-
-<div class="indexliste">
-
-*2013-06-14*
-
-
-# Beschreibung des Rumex Baukastens
-
-
-...der mit `pandocs markdown`, `bash`, `make` `imagamagick` und `perl` 
-eine Home Page erstellt die auch auf <http://github.com> verwendet
-werden kann.
-
-[... weiter lesen](beschreibung.html)
+[... weiter lesen](.html)
 
 ---
 

@@ -23,7 +23,7 @@ Datei aus der der Inhalt für die Datei rss.xml gelesen wird
 Als Eingabe ist die Datei C<rss.md0x> vorbelegt.
 
 =cut 
-my $file = "rumex/rss.md0x";
+my $file = "rss.rx0x";
 
 # pandoc inc. Parameter
 my $pandoc = "pandoc --email-obfuscation=none";
@@ -38,9 +38,9 @@ my %item;
 my $item_zaehler = 0;
 
 # Inhalt der Berichtsdaten ab arbeiten
-open ("md", "< $file");
+open ("rx", "< $file");
 
-while (<md>) {
+while (<rx>) {
 
 	# Pandocs Kopfzeile raus filtern und in einem String merken.
 	if ($_ =~ m/^\%\s+(.*)$/) {
@@ -246,7 +246,7 @@ print <<EOF4;
 EOF4
 
 
-close("md");
+close("rx");
 
 
 =head2 Vorlage der rss.md0x Datei

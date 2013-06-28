@@ -56,7 +56,7 @@ SITEMAP_XML_FILE = "../sitemap.xml"
 SITEMAP_MD = "../bin/sitemap_md.pl"
 
 # Zieldatei der HTML Sitemap Datei
-SITEMAP_MD_FILE = "sitemap.md0v"
+SITEMAP_MD_FILE = "sitemap.rx0v"
 
 
 # ##############################################################

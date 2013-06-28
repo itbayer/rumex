@@ -24,15 +24,15 @@ Somit ist es möglich Nachrichten und Meldung in die
 C<index.md> einzubauem.
 
 Der Name dieser Datei, Vorgabe C<start.md> kann in der Variable
-C<$start_md> geändert werden.
+C<$start_rx> geändert werden.
 
 =cut
 
-my $start_md = "rumex/start.md0s";
+my $start_rx = "start.rx0s";
 
 
 # index.md0x zum schreiben öffne
-open (INDEX, ">rumex/index.md0x");
+open (INDEX, ">index.rx0x");
 
 # Vortext Merker
 my $schnipp;
@@ -79,11 +79,11 @@ Gesetzt wird das Datum aber nur wenn die Datei start.md0s vorhanden ist.
 
 =cut
 
-system ("/usr/bin/touch $start_md") if (-e $start_md);
+system ("/usr/bin/touch $start_rx") if (-e $start_rx);
 
 # ----------------------------------------------------------
 # Dateinamen der md?? Dateien auslesen incl. Datum der letzten Änderung
-open (FH, "ls -lt1 --time-style=+\"%Y-%m-%d\" rumex/*.md* |");
+open (FH, "ls -lt1 --time-style=+\"%Y-%m-%d\" *.rx* |");
 
 # ----------------------------------------------------------
 # Schleife über die ausgelesenen Dateinamen
@@ -106,10 +106,10 @@ vorkommen kann, auch ausgeschlossen.
 
 =cut
 
-	next if ($name =~ m/rumex\/.*?x$/);
-	next if ($name =~ m/rumex\/.*?v$/);
-	next if ($name =~ m/rumex\/.*?w$/);
-	next if ($name eq "rumex/readme.md");
+	next if ($name =~ m/.*?x$/);
+	next if ($name =~ m/.*?v$/);
+	next if ($name =~ m/.*?w$/);
+	next if ($name eq "readme.md");
 
 	# Dateiname für Link bauen 
 	#
@@ -125,7 +125,7 @@ vorkommen kann, auch ausgeschlossen.
 
 	# Datum der letzten Änderung vor dem Vortext stellen
 	# ... nicht setzen wenn es sich um die start.md0s handelt.
-	print INDEX "\n*$datum*\n" if ($name ne $start_md);
+	print INDEX "\n*$datum*\n" if ($name ne $start_rx);
 
 	# Einzelnen Dateien auslesen um den Vortext zu 
 	# erstellen.
@@ -159,10 +159,10 @@ vorkommen kann, auch ausgeschlossen.
 
 	# Vortext Abschluss und Link zur eigentlichen Seite setzen ...
 	# .. nicht anzeigen bei start.md0s.
-	print INDEX "[... weiter lesen]($htmlname)\n\n" if ($name ne $start_md);
+	print INDEX "[... weiter lesen]($htmlname)\n\n" if ($name ne $start_rx);
 
 	# Schlussstrich setzen, nicht bei start.md0s.
-	print INDEX "---\n" if ($name ne $start_md);
+	print INDEX "---\n" if ($name ne $start_rx);
 	
 	print INDEX "\n";
 	print INDEX "</div>\n";
