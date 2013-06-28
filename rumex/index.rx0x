@@ -31,11 +31,11 @@ Die Beschreibung des Baukastens findet man [hier](beschreibung.html).
 # Historie
 
 0.4.0
-:	Umbau der Seiten Struktur 
-	* Quelldateien vom Unterverzeichnis `markdown` nach `rumex` verlagert
-	* make Steuerdatei in das Unterverzeichnis rumex verlagert
-	* Dateiendungen der Quelldateien von `md??` nach `rx??` geändert
-
+:	Umbau der Seiten Struktur \
+	- Quelldateien vom Unterverzeichnis `markdown` nach `rumex` verlagert \
+	- make Steuerdatei in das Unterverzeichnis rumex verlagert \
+	- Dateiendungen der Quelldateien von `md??` nach `rx??` geändert \
+	
 	<https://github.com/itbayer/rumex/archive/0.4.0.zip>
 
 [... weiter lesen](historie.html)
