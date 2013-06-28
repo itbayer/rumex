@@ -357,21 +357,21 @@ Zusätzlich ist diese Datei auch als `rss.html` unter
 Gesteuert wird der Baukasten mittels `make` im Unterverzeichnis `rumex`.
 Folgende `make` Befehle stehen dabei zur Verfügung.
 
-`make html`
+make html
 :	Erstellt die einzelnen html Dateien. 
 	Hier kann auch nur `make` verwendet werden.
 
-`make index`
+make index
 :	Erstellt die `index.md` Datei aus der dann
 	die `index.html` Datei erstellt wird.
 
-`make all`
+make all
 :	Eine Zusammenstellung aus `make index` und `make html`.
 
-`make online`
+make online
 :	Daten auf github hoch laden.
 
-`make bilder`
+make bilder
 :	Erstellt Bilder in verschiedenen Auflösungen.
 	
 
