@@ -35,7 +35,6 @@ Layout
 Hosting
 :	Das Hosting der Seite übernimmt [github.com](http://github.com).
 	Die HTML Dateien funktionieren aber auf jedem andern Internet Server.
-	
 	Wer einen Server mit installiertem `git` zur sein eigen nennt 
 	kann Rumex auch auf diesen installieren. 
 	Eine Beschreibung findet man auf [rumex.it-bayer.de](http://rumex.it-bayer.de).
