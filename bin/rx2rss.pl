@@ -90,10 +90,9 @@ while (<rss_rx>) {
 
 		# ----------------------------------------------
 		# Überschrift für den ersten Eintrag
-		# ..die Pandoc Erweiterung {#beispiel} wird nicht  berücksichtigt.
 		#
 		# BUG: RegEx Fehler
-		#      zur Zeit muss jede Überschrift mit einem {} abschließen.
+		#      Die erste Überschrift muss  mit einem {} abschließen.
 		if ($_ =~ m/^#\s+(.+)\s*\{.*\}.*$/) {
 			$item_zaehler++;
 			$item{$item_zaehler}{'titel'} = $1;
