@@ -16,19 +16,19 @@ Dateien ausgelesen
 =cut
 
 # -----------------------------------------------------
-=head2 start.rx0s
+=head2 start.rx0v
 
-In der Datei C<start.rx0s> können Texte, die später in 
+In der Datei C<start.rx0v> können Texte, die später in 
 die C<index.rx0x> eingearbeitet werden, geschrieben werden.
 Somit ist es möglich Nachrichten und Meldung in die 
 C<index.rx0x> einzubauem.
 
-Der Name dieser Datei, Vorgabe C<start.rx0s> kann in der Variable
+Der Name dieser Datei, Vorgabe C<start.rx0v> kann in der Variable
 C<$start_rx> geändert werden.
 
 =cut
 
-my $start_rx = "start.rx0s";
+my $start_rx = "start.rx0v";
 
 
 # index.rx0x zum schreiben öffne
@@ -148,10 +148,10 @@ index.rx0x aufgenommen.
 
 
 	# Vortext Abschluss und Link zur eigentlichen Seite setzen ...
-	# .. nicht anzeigen bei start.rx0s.
+	# .. nicht anzeigen bei start.rx0?.
 	print INDEX "[... weiter lesen]($htmlname)\n\n" if ($name ne $start_rx);
 
-	# Schlussstrich setzen, nicht bei start.rx0s.
+	# Schlussstrich setzen, nicht bei start.rx0?.
 	print INDEX "---\n" if ($name ne $start_rx);
 	
 	print INDEX "\n";
