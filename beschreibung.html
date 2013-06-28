@@ -55,7 +55,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><a href="#installation-auf-dem-github.com-server">Installation auf dem github.com Server</a></li>
 <li><a href="#installation-auf-einen-nicht-github.com-server">Installation auf einen nicht github.com Server</a></li>
 </ul></li>
-<li><a href="#grunddaten-aufbau-des-rumex-baukastens">Grunddaten / Aufbau des rumex Baukastens</a><ul>
+<li><a href="#aufbau-des-rumex-baukastens">Aufbau des rumex Baukastens</a><ul>
 <li><a href="#root-verzeichnis">root Verzeichnis</a></li>
 <li><a href="#unterverzeichnisse">Unterverzeichnisse</a></li>
 <li><a href="#steuerung-durch-dateiendung">Steuerung durch Dateiendung</a><ul>
@@ -97,14 +97,15 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>Genau das soll Rumex auch sein “ein Lückenfüller” für alle die … Systeme satt haben.</p>
 <h1 id="installation"><a href="#installation">Installation</a></h1>
 <p>@todo</p>
-<p>Rumex wurde erstellt um die Seite auf github.com zu betreiben.</p>
+<p>Rumex wurde erstellt um die Seite auf <a href="http://github.com">github.com</a> zu betreiben.</p>
 <p>Es funktioniert aber auch auf einen normalen Server. Einfach die HTML Dateien und die Verzeichnisse <code>bilder</code> und <code>template</code>,per FTP, auf den Server kopieren.</p>
 <p>Sind ein paar Voraussetzungen erfüllt kann man rumex auch über git, wie bei github.com, auf dem einen normalen Server betreiben.</p>
+<p>Ein Beispiel findet man auf <a href="http://rumex.it-bayer.de">rumex.it-bayer.de</a>.</p>
 <h2 id="installation-auf-dem-github.com-server"><a href="#installation-auf-dem-github.com-server">Installation auf dem github.com Server</a></h2>
 <ul>
 <li>Einrichten eines github.com Zugangs</li>
 <li>Arbeits- Repository auf den AP<sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> holen</li>
-<li>Holen der Rumex ZIP Datei</li>
+<li>Die Rumex ZIP Datei</li>
 <li>Die Dateien des ZIP Archives in das Arbeits- Repository kopieren</li>
 <li>Grund Dateien anpassen
 <ul>
@@ -115,30 +116,38 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </ul>
 <h2 id="installation-auf-einen-nicht-github.com-server"><a href="#installation-auf-einen-nicht-github.com-server">Installation auf einen nicht github.com Server</a></h2>
 <p>Auf der Seite <a href="http://rumex.it-bayer.de">rumex.it-bayer.de</a> findet man eine Beschreibung wie man den rumex Baukasten auf einen <strong>nicht</strong> <code>github.com</code> Server installiert.</p>
-<h1 id="grunddaten-aufbau-des-rumex-baukastens"><a href="#grunddaten-aufbau-des-rumex-baukastens">Grunddaten / Aufbau des rumex Baukastens</a></h1>
+<h1 id="aufbau-des-rumex-baukastens"><a href="#aufbau-des-rumex-baukastens">Aufbau des rumex Baukastens</a></h1>
 <h2 id="root-verzeichnis"><a href="#root-verzeichnis">root Verzeichnis</a></h2>
-<p>Im <code>root</code> Verzeichnis findet man alle <code>HTML</code> Dateien der Seite. Diese werde vom Baukasten erstellt und müssen nicht von Hand verändert werden. Zusätzlich findet man noch ein paar Systemdateien:</p>
-<ul>
-<li><p>rss.xml<br />News Feed Datei, wird vom System erstelle</p></li>
-<li><p>readme.md<br />Beschreibungsdatei die von github.com gebraucht wird.</p></li>
-<li><p>Makefile<br />Steuerdatei für das Programm <code>make</code>.</p></li>
-<li><p>robots.txt<br />Datei für die Suchmaschinen.</p></li>
-<li><p>favicon.ico<br />Icon für den Browser.</p></li>
-<li><p>.htaccess<br />Konfiguration für den Apache Server.</p></li>
-</ul>
-<h2 id="unterverzeichnisse"><a href="#unterverzeichnisse">Unterverzeichnisse</a></h2>
-<pre class="text"><code>├── inc/
-├── bin/
-├── markdown/
-└── bilder/</code></pre>
+<p>Im <code>root</code> Verzeichnis findet man alle <code>HTML</code> Dateien der Seite. Diese werde vom Baukasten erstellt und müssen nicht von Hand verändert werden. Zusätzlich findet man noch ein folgende Systemdateien:</p>
 <dl>
-<dt>inc/</dt>
-<dd><p>Im <code>inc</code> Verzeichnis liegen alle Dateien die von den verschiedenen Tools eingebunden werden. Auch Konfigurationsdateien sind hier zu finden.</p>
+<dt>rss.xml</dt>
+<dd><p>News Feed Datei, wird vom System erstelle</p>
+</dd>
+<dt>readme.md</dt>
+<dd><p>Beschreibungsdatei die von github.com gebraucht wird</p>
+</dd>
+<dt>robots.txt</dt>
+<dd><p>Datei für die Suchmaschinen</p>
+</dd>
+<dt>favicon.ico</dt>
+<dd><p>Icon für den Browser</p>
+</dd>
+<dt>.htaccess</dt>
+<dd><p>Konfiguration für den Apache Server</p>
+</dd>
+<dt>CNAME</dt>
+<dd><p>@fixme</p>
+</dd>
+</dl>
+<h2 id="unterverzeichnisse"><a href="#unterverzeichnisse">Unterverzeichnisse</a></h2>
+<dl>
+<dt>template/</dt>
+<dd><p>Im <code>template</code> Verzeichnis liegen alle Dateien die von den verschiedenen Tools eingebunden werden. Auch Konfigurationsdateien sind hier zu finden.</p>
 </dd>
 <dt>bin/</dt>
 <dd><p>Hier liegen die Skripte die zur Erstellung der Seiten dienen.</p>
 </dd>
-<dt>markdown/</dt>
+<dt>rumex/</dt>
 <dd><p>Hier befinden sich alle Texte der Seite.</p>
 </dd>
 <dt>bilder/</dt>
@@ -149,71 +158,70 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>Das Aussehen der Dateien bezüglich des Inhaltsverzeichnisses könnte auch durch die Dateiendung gesteuert werden.</p>
 <h3 id="beispiel"><a href="#beispiel">Beispiel</a></h3>
 <dl>
-<dt>datei.md0s</dt>
+<dt>datei.rx0s</dt>
 <dd><p>Würde eine HTML Datei ohne Inhaltsverzeichnis erstellen.</p>
 </dd>
-<dt>datei.md1s</dt>
+<dt>datei.rx1s</dt>
 <dd><p>Erstellt die HTML Datei mit dem Inhaltsverzeichnis aus den Einträgen der H1 Überschriften.</p>
 </dd>
-<dt>datei.md2s</dt>
+<dt>datei.rx2s</dt>
 <dd><p>Erstellt eine HTML Datei mit dem Inhaltsverzeichnis aud den Einträgen der H1 und H2 Überschriften.</p>
 </dd>
 </dl>
-<p><strong>Auszug aus <a href="http://johnmacfarlane.net/pandoc/README.html">http://johnmacfarlane.net/pandoc/README.html</a></strong></p>
-<pre><code>--toc, --table-of-contents
-
-Include an automatically generated table of contents 
-(or, in the case of latex, context, and rst, an instruction 
-to create one) in the output document. 
-This option has no effect on man, docbook, slidy, 
-slideous, or s5 output.
-
---toc-depth=NUMBER
-
-Specify the number of section levels to include in the 
-table of contents. The default is 3 (which means that 
-level 1, 2, and 3 headers will be listed in the contents). 
-Implies --toc.</code></pre>
 <p>Zusätzlich könnte die Dateiendung auch eine unterschiedliche Verwendung der Dateien ermöglichen.</p>
 <dl>
-<dt>datei.md0s, datei.md1s …</dt>
+<dt>datei.rx0s, datei.rx1s …</dt>
 <dd><p>Standard Datei.</p>
 </dd>
-<dt>datei.md0x, datei.md1x …</dt>
+<dt>datei.rx0x, datei.rx1x …</dt>
 <dd><p>Datei die nicht in die Liste auf <code>index.html</code> eingebunden wird.</p>
 </dd>
-<dt>datei.md0v, datie.md1v …</dt>
+<dt>datei.rx0v, datie.rx1v …</dt>
 <dd><p>Versteckte Datei. Diese taucht weder in der <code>index.html</code> noch in der <code>sitemap.xml</code> auf.</p>
 </dd>
+<dt>datei.rx0w</dt>
+<dd><p>Datei mit einer Weiterleitung. Die Weiterleitung wird dabei mittels <code>javascript</code> realisiert, da github keine <code>.htaccess</code> Weiterleitung unterstützt.</p>
+<pre><code>% Weiterleitung nach beschreibung.html
+%
+%
+
+&lt;script language=&quot;javascript&quot;&gt;
+&lt;!--
+window.location.href=&quot;beschreibung.html&quot;;
+// --&gt;
+&lt;/script&gt; </code></pre>
+</dd>
 </dl>
-<p>Durch diese Variante würde der <code>html</code> Namen immer gleich bleiben, sollte er ja auch. Nur die Verarbeitung würde sich ändern.</p>
-<p>Die Steuerung erfolgt über <code>make</code>.</p>
+<p>Bei der Änderung der Dateiendung bleibt der eigentliche <code>html</code> Name gleich. Nur die Funktion der Einbindung ändert sich.</p>
 <h2 id="sonderseiten"><a href="#sonderseiten">Sonderseiten</a></h2>
-<p>Im Verzeichnis <code>markdown</code> befinden sich Sonderseiten.</p>
+<p>Im Verzeichnis <code>pandoc</code> befinden sich Sonderseiten.</p>
 <dl>
-<dt>markdown/index.md0x</dt>
+<dt>rumex/index.rx0x</dt>
 <dd><p>Diese Datei wird vom Programm <code>bin/make_index.pl</code> erstellt, muss somit nicht vorhanden sein.</p>
 </dd>
-<dt>markdown/start.md0s</dt>
-<dd><p>Die <code>start.md0s</code> wird als Vortext in die <code>index.md0x</code> eingebunden. Mit ihr kann man oberhalb der Seiten Liste einen extra Text in die <code>index.html</code> eingebunden werden.<br /><strong>Diese Datei ist erforderlich und muss vorhanden sein.</strong></p>
+<dt>rumex/start.rx0s</dt>
+<dd><p>Die <code>start.rx0s</code> wird als Vortext in die <code>index.rx0x</code> eingebunden. Mit ihr kann man oberhalb der Seiten Liste einen extra Text in die <code>index.html</code> eingebunden werden.<br /><strong>Diese Datei ist erforderlich und muss vorhanden sein.</strong></p>
 </dd>
-<dt>markdown/rss.md0x</dt>
+<dt>rumex/rss.rx0x</dt>
 <dd><p>Datei für die RSS Feed Funktion.</p>
 </dd>
-<dt>markdown/impressum.md0x</dt>
+<dt>rumex/impressum.rx0x</dt>
 <dd><p>Datei für die Impressumsangaben.<br /><strong>Ist nicht zwingend erforderlich. Jedoch muss die <code>inc/fuss.html</code> entsprechende bearbeitet, der Link muss raus genommen, werden.</strong></p>
+</dd>
+<dt>rumex/Makefile</dt>
+<dd><p>Sie <code>make</code> Steuerdatei.</p>
 </dd>
 </dl>
 <h2 id="aufbau-der-startseite"><a href="#aufbau-der-startseite">Aufbau der Startseite</a></h2>
-<p>Die Startseite <code>markdown/start.md0s</code> muss nur vorhanden sein. Es reicht also ein `touch markdown/start.md0s.</p>
+<p>Die Startseite <code>markdown/start.rx0s</code> muss vorhanden sein. Es reicht auch ein `touch markdown/start.rx0s.</p>
 <p>Der normale Aufbau könnte so ausschauen. Die <code>pandoc</code> Kopfzeile sind nicht zwingend erforderlich.</p>
-<pre><code>% start.md0s
+<pre><code>% start.rx0s
 %
 %
 
 Hier kommt auch schon der Vortext für die index.html</code></pre>
 <h2 id="aufbau-der-einzelseiten"><a href="#aufbau-der-einzelseiten">Aufbau der Einzelseiten</a></h2>
-<p>Die Einzelseiten liegen alle im Verzeichnis <code>markdown</code> und zwar in der Sprache <code>markdown</code> bzw. der Erweiterung von <code>pandoc</code>.</p>
+<p>Die Einzelseiten liegen alle im Verzeichnis <code>rumex</code> und zwar in der Sprache <code>markdown</code> bzw. der Erweiterung von <code>pandoc</code>.</p>
 <p>Diese Einzelseiten werden in chronologischer Reihenfolge in die Startseite <code>index.html</code> eingebunden und bilden sozusagen das Inhaltsverzeichnis der Seite. In jeder Einzelseite wird dazu ein sogenannter <em>“Vortext”</em> hinterlegt. Die Seite bzw. der Kopf der Seite hat dabei folgenden Aufbau.</p>
 <pre><code>% Seiten Überschrift 1
 % Seiten Überschrift 2
@@ -254,7 +262,7 @@ Ab hier geht dann der Inhlat der eigentlichen Seite los.</code></pre>
 <span class="ot">&gt; &lt;/div&gt;</span></code></pre>
 <h1 id="rss-feed-funktion"><a href="#rss-feed-funktion">RSS Feed Funktion</a></h1>
 <p>@todo</p>
-<p>Wird nicht aus den einzelnen Dateien erstellt sondern muss manuell editiert werden, Datei <code>markdown/rssmd0x</code>.</p>
+<p>Wird nicht aus den einzelnen Dateien erstellt sondern muss manuell editiert werden, Datei <code>rumex/rssmd0x</code>.</p>
 <p>Jede Überschrift eines Eintrags muss mit einem <code>{#anker}</code> enden.</p>
 <p>Danach kommen die Angaben zu:</p>
 <p><strong>Link:</strong> <em>Verweis zur Seite mit weiteren Informationen</em><br /><strong>Autor:</strong> <em>Autor der den Eintrag geschrieben hat</em><br /><strong>Kategorie:</strong> <em>Kategoie des Eintrags</em></p>
@@ -306,7 +314,7 @@ Zusätzlich ist diese Datei auch als `rss.html` unter
 
 </code></pre>
 <h1 id="steuerung"><a href="#steuerung">Steuerung</a></h1>
-<p>Gesteuert wird der Baukasten mittels <code>make</code>. Folgende make Befehle stehen dabei zur Verfügung.</p>
+<p>Gesteuert wird der Baukasten mittels <code>make</code> im Unterverzeichnis <code>rumex</code>. Folgende <code>make</code> Befehle stehen dabei zur Verfügung.</p>
 <dl>
 <dt><code>make html</code></dt>
 <dd><p>Erstellt die einzelnen html Dateien. Hier kann auch nur <code>make</code> verwendet werden.</p>
@@ -320,8 +328,8 @@ Zusätzlich ist diese Datei auch als `rss.html` unter
 <dt><code>make online</code></dt>
 <dd><p>Daten auf github hoch laden.</p>
 </dd>
-<dt><code>make newrumex</code></dt>
-<dd><p>@fixme: Erstellt eine leere Seite. Löscht alles bis auf die Grunddaten des Baukastens.</p>
+<dt><code>make bilder</code></dt>
+<dd><p>Erstellt Bilder in verschiedenen Auflösungen.</p>
 </dd>
 </dl>
 <h1 id="einrichten-einer-neue-seite"><a href="#einrichten-einer-neue-seite">Einrichten einer neue Seite</a></h1>

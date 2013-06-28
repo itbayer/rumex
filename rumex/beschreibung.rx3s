@@ -53,8 +53,8 @@ Genau das soll Rumex auch sein "ein Lückenfüller" für alle die ... Systeme sa
 
 @todo
 
-Rumex wurde erstellt um die Seite auf github.com zu
-betreiben.
+Rumex wurde erstellt um die Seite auf [github.com](http://github.com) 
+zu betreiben.
 
 Es funktioniert aber auch auf einen normalen Server.
 Einfach die HTML Dateien und die Verzeichnisse `bilder` und
@@ -64,12 +64,13 @@ Sind ein paar Voraussetzungen erfüllt kann man rumex auch
 über git, wie bei github.com, auf dem einen normalen Server 
 betreiben.
 
+Ein Beispiel findet man auf [rumex.it-bayer.de](http://rumex.it-bayer.de).
 
 ## Installation auf dem github.com Server
 
 - Einrichten eines github.com Zugangs
 - Arbeits- Repository auf den AP[^ap] holen
-- Holen der Rumex ZIP Datei
+- Die Rumex ZIP Datei
 - Die Dateien des ZIP Archives in das Arbeits- Repository kopieren
 - Grund Dateien anpassen 
 	- @fixme: Angabe welche Dateien fehlt noch
@@ -87,46 +88,39 @@ eine Beschreibung wie man den rumex Baukasten auf einen **nicht**
 `github.com` Server installiert.
 
 
-# Grunddaten / Aufbau des rumex Baukastens
+# Aufbau des rumex Baukastens
 
 ## root Verzeichnis
 
 Im `root` Verzeichnis findet man alle `HTML` Dateien
 der Seite. Diese werde vom Baukasten erstellt und
 müssen nicht von Hand verändert werden.
-Zusätzlich findet man noch ein paar Systemdateien:
+Zusätzlich findet man noch ein folgende Systemdateien:
 
-- rss.xml \
-News Feed Datei, wird vom System erstelle
+rss.xml 
+:	News Feed Datei, wird vom System erstelle
 
-- readme.md \
-Beschreibungsdatei die von github.com gebraucht wird.
+readme.md 
+:	Beschreibungsdatei die von github.com gebraucht wird
 
-- Makefile \
-Steuerdatei für das Programm `make`.
+robots.txt 
+:	Datei für die Suchmaschinen
 
-- robots.txt \
-Datei für die Suchmaschinen.
+favicon.ico
+:	Icon für den Browser
 
-- favicon.ico \
-Icon für den Browser.
+.htaccess
+:	Konfiguration für den Apache Server
 
-- .htaccess \
-Konfiguration für den Apache Server.
+CNAME
+:	@fixme
 	
 
 ## Unterverzeichnisse
 
-~~~{.text}
-├── inc/
-├── bin/
-├── markdown/
-└── bilder/
-~~~
 
-
-inc/
-:	Im `inc` Verzeichnis liegen alle Dateien die von den
+template/
+:	Im `template` Verzeichnis liegen alle Dateien die von den
 	verschiedenen Tools eingebunden werden.
 	Auch Konfigurationsdateien sind hier zu finden.
 
@@ -134,7 +128,7 @@ bin/
 :	Hier liegen die Skripte die zur Erstellung der
 	Seiten dienen.
 
-markdown/
+rumex/
 :	Hier befinden sich alle Texte der Seite.
 
 bilder/
@@ -144,95 +138,88 @@ bilder/
 
 ## Steuerung durch Dateiendung
 
-Das Aussehen der Dateien bezüglich des Inhaltsverzeichnisses könnte auch durch 
-die Dateiendung gesteuert werden.
+Das Aussehen der Dateien bezüglich des Inhaltsverzeichnisses könnte auch durch die Dateiendung gesteuert werden.
 
 ### Beispiel
 
-datei.md0s
+datei.rx0s
 :	Würde eine HTML Datei ohne Inhaltsverzeichnis erstellen.
 
-datei.md1s
+datei.rx1s
 :	Erstellt die HTML Datei mit dem Inhaltsverzeichnis aus den Einträgen
 	der H1 Überschriften.
 
-datei.md2s
+datei.rx2s
 :	Erstellt eine HTML Datei mit dem Inhaltsverzeichnis aud den Einträgen
 	der H1 und H2 Überschriften.
 
-
-**Auszug aus <http://johnmacfarlane.net/pandoc/README.html>**
-
-~~~
---toc, --table-of-contents
-
-Include an automatically generated table of contents 
-(or, in the case of latex, context, and rst, an instruction 
-to create one) in the output document. 
-This option has no effect on man, docbook, slidy, 
-slideous, or s5 output.
-
---toc-depth=NUMBER
-
-Specify the number of section levels to include in the 
-table of contents. The default is 3 (which means that 
-level 1, 2, and 3 headers will be listed in the contents). 
-Implies --toc.
-~~~
-
 Zusätzlich könnte die Dateiendung auch eine unterschiedliche Verwendung der Dateien ermöglichen.
 
-datei.md0s, datei.md1s ...
+datei.rx0s, datei.rx1s ...
 :	Standard Datei.
 
-datei.md0x, datei.md1x ...
+datei.rx0x, datei.rx1x ...
 :	Datei die nicht in die Liste auf `index.html` eingebunden wird.
 
-datei.md0v, datie.md1v ...
+datei.rx0v, datie.rx1v ...
 :	Versteckte Datei. Diese taucht weder in der `index.html` noch 
 	in der `sitemap.xml` auf.
 
+datei.rx0w
+:	Datei mit einer Weiterleitung.
+	Die Weiterleitung wird dabei mittels `javascript`
+	realisiert, da github keine `.htaccess` Weiterleitung
+	unterstützt.
 
+		% Weiterleitung nach beschreibung.html
+		%
+		%
+		
+		<script language="javascript">
+		<!--
+		window.location.href="beschreibung.html";
+		// -->
+		</script> 
 
-Durch diese Variante würde der `html` Namen immer gleich bleiben, sollte er ja auch.
-Nur die Verarbeitung würde sich ändern.
-
-Die Steuerung erfolgt über `make`.
-
+Bei der Änderung der Dateiendung bleibt der eigentliche `html` Name
+gleich. Nur die Funktion der Einbindung ändert sich.
 
 
 ## Sonderseiten
 
-Im Verzeichnis `markdown` befinden sich Sonderseiten.
+Im Verzeichnis `pandoc` befinden sich Sonderseiten.
 
-markdown/index.md0x
+rumex/index.rx0x
 :	Diese Datei wird vom Programm `bin/make_index.pl` erstellt,
 	muss somit nicht vorhanden sein.
 
-markdown/start.md0s
-:	Die `start.md0s` wird als Vortext in die `index.md0x` eingebunden.
+rumex/start.rx0s
+:	Die `start.rx0s` wird als Vortext in die `index.rx0x` eingebunden.
 	Mit ihr kann man oberhalb der Seiten Liste einen 
 	extra Text in die `index.html` eingebunden werden. \
 	**Diese Datei ist erforderlich und muss vorhanden sein.**
 
-markdown/rss.md0x
+rumex/rss.rx0x
 :	Datei für die RSS Feed Funktion. 
 
-markdown/impressum.md0x
+rumex/impressum.rx0x
 :	Datei für die Impressumsangaben. \
 	**Ist nicht zwingend erforderlich. Jedoch muss die `inc/fuss.html`
 	entsprechende bearbeitet, der Link muss raus genommen, werden.**
 
+rumex/Makefile
+:	Sie `make` Steuerdatei.
+
 ## Aufbau der Startseite
 
-Die Startseite `markdown/start.md0s` muss nur vorhanden sein.
-Es reicht also ein `touch markdown/start.md0s.
+Die Startseite `markdown/start.rx0s` muss vorhanden sein.
+Es reicht auch ein `touch markdown/start.rx0s.
 
 Der normale Aufbau könnte so ausschauen. Die `pandoc` 
 Kopfzeile sind nicht zwingend erforderlich.
 
 ~~~
-% start.md0s
+% start.rx0s
 %
 %
 
@@ -241,7 +228,7 @@ Hier kommt auch schon der Vortext für die index.html
 
 ## Aufbau der Einzelseiten
 
-Die Einzelseiten liegen alle im Verzeichnis `markdown` und zwar in 
+Die Einzelseiten liegen alle im Verzeichnis `rumex` und zwar in 
 der Sprache `markdown` bzw. der Erweiterung von `pandoc`.
 
 Diese Einzelseiten werden in chronologischer Reihenfolge in die Startseite
@@ -300,7 +287,7 @@ Ab hier geht dann der Inhlat der eigentlichen Seite los.
 @todo
 
 Wird nicht aus den einzelnen Dateien erstellt sondern 
-muss manuell editiert werden, Datei `markdown/rssmd0x`.
+muss manuell editiert werden, Datei `rumex/rssmd0x`.
 
 Jede Überschrift eines Eintrags muss mit einem `{#anker}`
 enden.
@@ -367,8 +354,8 @@ Zusätzlich ist diese Datei auch als `rss.html` unter
 
 # Steuerung
 
-Gesteuert wird der Baukasten mittels `make`.
-Folgende make Befehle stehen dabei zur Verfügung.
+Gesteuert wird der Baukasten mittels `make` im Unterverzeichnis `rumex`.
+Folgende `make` Befehle stehen dabei zur Verfügung.
 
 `make html`
 :	Erstellt die einzelnen html Dateien. 
@@ -384,9 +371,8 @@ Folgende make Befehle stehen dabei zur Verfügung.
 `make online`
 :	Daten auf github hoch laden.
 
-`make newrumex`
-:	@fixme: Erstellt eine leere Seite.
-	Löscht alles bis auf die Grunddaten des Baukastens.
+`make bilder`
+:	Erstellt Bilder in verschiedenen Auflösungen.
 	
 
 # Einrichten einer neue Seite

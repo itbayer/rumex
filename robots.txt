@@ -12,5 +12,4 @@ Disallow: /rumex/
 Disallow: /template/
 Disallow: /readme.md
 Disallow: /CNAME
-Disallow: /_*.html
 Disallow: /.git

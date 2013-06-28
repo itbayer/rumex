@@ -28,17 +28,15 @@ Die Beschreibung des Baukastens findet man [hier](beschreibung.html).
 
 *2013-06-28*
 
-# Historie
 
-0.4.0
-:	Umbau der Seiten Struktur \
-	- Quelldateien vom Unterverzeichnis `markdown` nach `rumex` verlagert \
-	- make Steuerdatei in das Unterverzeichnis rumex verlagert \
-	- Dateiendungen der Quelldateien von `md??` nach `rx??` geändert \
-	
-	<https://github.com/itbayer/rumex/archive/0.4.0.zip>
+# Beschreibung des Rumex Baukastens
 
-[... weiter lesen](historie.html)
+
+...der mit `pandocs markdown`, `bash`, `make` `imagamagick` und `perl` 
+eine Home Page erstellt die auch auf <http://github.com> verwendet
+werden kann.
+
+[... weiter lesen](beschreibung.html)
 
 ---
 
@@ -50,15 +48,17 @@ Die Beschreibung des Baukastens findet man [hier](beschreibung.html).
 
 *2013-06-28*
 
+# Historie
 
-# Beschreibung des Rumex Baukastens
+0.4.0
+:	Umbau der Seiten Struktur \
+	- Quelldateien vom Unterverzeichnis `markdown` nach `rumex` verlagert \
+	- make Steuerdatei in das Unterverzeichnis rumex verlagert \
+	- Dateiendungen der Quelldateien von `md??` nach `rx??` geändert \
+	
+	<https://github.com/itbayer/rumex/archive/0.4.0.zip>
 
-
-...der mit `pandocs markdown`, `bash`, `make` `imagamagick` und `perl` 
-eine Home Page erstellt die auch auf <http://github.com> verwendet
-werden kann.
-
-[... weiter lesen](beschreibung.html)
+[... weiter lesen](historie.html)
 
 ---
 
