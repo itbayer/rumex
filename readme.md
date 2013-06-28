@@ -17,30 +17,36 @@ Diese kann man sich [über diesern Link](http://www.it-bayer.de/rumex/rss.xml) a
 
 ## Kurz Übersicht 
 
-Seitenmenü
-:	Es gibt kein Seitenmenü, dafür liefert die `index.html` 
-	eine Übersicht der einzelnen Seiten.
-	Ein Kurztext / Vortext kann in den einzelnen Seiten hinterlegt werden.
-	Die Übersicht der Seiten wird chronologisch sortiert.
+### Seitenmenü
 
-Struktur durch Unterordner
-:	Die einzelnen Seiten werden nicht durch Unterornder strukturiert.
-	Alle `html` Seiten liegen im root Verzeichnis.
-	**Also eher ein System für kleine Projekte.**
+Es gibt kein Seitenmenü, dafür liefert die `index.html` 
+eine Übersicht der einzelnen Seiten.
+Ein Kurztext / Vortext kann in den einzelnen Seiten hinterlegt werden.
+Die Übersicht der Seiten wird chronologisch sortiert.
 
-Layout
-:	Das Layout ist sehr einfach gehalten und besteht lediglich
-	aus ein paar `CSS` Anpassungen.
+### Struktur durch Unterordner
 
-Hosting
-:	Das Hosting der Seite übernimmt [github.com](http://github.com).
-	Die HTML Dateien funktionieren aber auf jedem andern Internet Server.
-	Wer einen Server mit installiertem `git` zur sein eigen nennt 
-	kann Rumex auch auf diesen installieren. 
-	Eine Beschreibung findet man auf [rumex.it-bayer.de](http://rumex.it-bayer.de).
+Die einzelnen Seiten werden nicht durch Unterornder strukturiert.
+Alle `html` Seiten liegen im root Verzeichnis.
+**Also eher ein System für kleine Projekte.**
 
-Pflege / Erstellung
-:	Die Pflege bzw. Erstellung der Seite ist auf *nix Systeme ausgerichtet.
+### Layout
+
+Das Layout ist sehr einfach gehalten und besteht lediglich
+aus ein paar `CSS` Anpassungen.
+
+### Hosting
+
+Das Hosting der Seite übernimmt [github.com](http://github.com).
+Die HTML Dateien funktionieren aber auf jedem andern Internet Server.
+
+Wer einen Server mit installiertem `git` zur sein eigen nennt 
+kann Rumex auch auf diesen installieren. 
+Eine Beschreibung findet man auf [rumex.it-bayer.de](http://rumex.it-bayer.de).
+
+### Pflege / Erstellung
+
+Die Pflege bzw. Erstellung der Seite ist auf *nix Systeme ausgerichtet.
 
 ------------------------------------------------------------
 
