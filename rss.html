@@ -6,8 +6,7 @@
   <meta name="generator" content="pandoc rumex 0.4.0">
   <!-- rumex Suchmaschine -->
   <meta name="robots" content="all">
-  <meta name="author" content="IT Bayer’s rumex">
-  <title>Der(Ein) HomePage Sand(Bau)kasten</title>
+  <title>Abo Seite - Newsletter - RSS Feed</title>
   <style type="text/css">code{white-space: pre;}</style>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -26,36 +25,90 @@
 		height="700" alt="zur Startseite"></a>
 </div>
 <header>
-<h1 class="title">Der(Ein) HomePage Sand(Bau)kasten</h1>
-<h2 class="author">IT Bayer’s rumex</h2>
+<h1 class="title">Abo Seite - Newsletter - RSS Feed</h1>
 </header>
 <div id=seite>
-<div class="indexliste">
+<!--
+| Titel: Rumex - Ein Home Page Baukasten
+| Beschreibung: Aktuelles und Neuigkeiten vom rumex Home Page Baukasten
+| KLink: http://www.it-bayer.de/rumex/
+| Lang: de-DE
+| BildTitel: Rumex - Ein Home Page Baukasten
+| BildURL: http://www.it-bayer.de/rumex/bilder/rss_200_.png
+| BildLink: http://www.it-bayer.de/rumex/
+| BildBeschreibung: Aktuelles und Neuigkeiten von der rumex Seite.
+-->
 
-<p><em>2013-06-28</em></p>
-<h1 id="beschreibung-des-rumex-baukastens">Beschreibung des Rumex Baukastens</h1>
-<p>…der mit <code>pandocs markdown</code>, <code>bash</code>, <code>make</code> <code>imagamagick</code> und <code>perl</code> eine Home Page erstellt die auch auf <a href="http://github.com">http://github.com</a> verwendet werden kann.</p>
-<p><a href="beschreibung.html">… weiter lesen</a></p>
-<hr />
-</div>
+<h1 id="rumex-bekommt-sein-eigenes-verzeichnis" class="xx6">rumex bekommt sein eigenes Verzeichnis</h1>
+<!-- 
+| Link: http://www.it-bayer.de/rumex/historie.html
+| Autor: IT-Bayer
+| Kategorie: Neues
+-->
+
+<p>rumex bekommt sein eigenes Verzeichnis und seine eigene Datei Erweiterung. <a href="http://www.it-bayer.de/rumex/historie.html">…weiter lesen</a></p>
+<h1 id="rumex-bekommt-jetzt-auch-einen-sitemap.html" class="xx5">rumex bekommt jetzt auch einen sitemap.html</h1>
+<!-- 
+| Link: http://www.it-bayer.de/rumex/historie.html
+| Autor: IT-Bayer
+| Kategorie: Neues
+-->
+
+<p>Nach der <code>sitemap.xml</code> kann rumex jetzt auch eine <code>sitemap.html</code> erstellen. <a href="http://www.it-bayer.de/rumex/historie.html">…weiter lesen</a></p>
+<h1 id="rumex-bekommt-eine-weiterleitungsseite" class="xx4">rumex bekommt eine Weiterleitungsseite</h1>
+<!-- 
+| Link: http://www.it-bayer.de/rumex/historie.html
+| Autor: IT-Bayer
+| Kategorie: Neues
+-->
+
+<p>Einbau einer Weiterleitungsfunktion per JavaScript da .htaccess von github.com nicht unterstützt wird.</p>
+<h1 id="rumex-bekommt-eine-bildbearbeitung" class="xx3">rumex bekommt eine Bildbearbeitung</h1>
+<!-- 
+| Link: http://www.it-bayer.de/rumex/historie.html
+| Autor: IT-Bayer
+| Kategorie: Neues
+-->
+
+<p>Eigentlich ist es gar keine richtige Bildbearbeitung sondern nur eine ImageMagick Befehlsfolge die, die Bilder im Verzeichnis bilder in verschiedene Größen bereitstellt.</p>
+<p>Unterstützt werden zur Zeit die Größen</p>
+<ul>
+<li>100</li>
+<li>200</li>
+<li>400</li>
+<li>600</li>
+<li>800</li>
+</ul>
+<h1 id="rumex-bekommt-eine-sitemap.xml" class="xx2">rumex bekommt eine sitemap.xml</h1>
+<!-- 
+| Link: http://www.it-bayer.de/rumex/historie.html
+| Autor: IT-Bayer
+| Kategorie: Neues
+-->
+
+<p>Mit einer <code>sitemap.xml</code> erleichtert man den Suchmaschinen das finden einzelner Seite. Man kann auch sagen sie <code>sitemap.xml</code> ist eine Liste der Seiten die sich auf der Webseite befinden.</p>
+<p>Natürlich braucht <code>rumex</code> auch so einen Datei. Erstellt wird die sitemap mit <code>make sitemap</code> oder bei <code>make all</code> bzw. <code>make online</code>. .ersteckt markierte Dateien <code>*.md?v</code> werden natürlich nicht aufgenommen.</p>
+<h1 id="rumex-wird-auf-einen-nicht-github.com-server-installiert" class="xx1">rumex wird auf einen nicht github.com Server installiert</h1>
+<!-- 
+| Link: http://www.it-bayer.de/rumex/historie.html
+| Autor: IT-Bayer
+| Kategorie: Neues
+-->
+
+<p>rumex funktioniert auch auf einen <strong>nicht</strong> <code>github.com</code> Server. Eine Beschreibung wie man den Baukasten dort installiert findet man auf der Seite <a href="http://rumex.it-bayer.de">http://rumex.it-bayer.de</a>.</p>
+<h1 id="rumex-bekommt-die-rss-feed-funktion" class="rssfeed">rumex bekommt die RSS Feed Funktion</h1>
+<!-- 
+| Link: http://www.it-bayer.de/rumex/historie.html
+| Autor: IT-Bayer
+| Kategorie: Neues
+-->
+
+<p>In den rumex Baukasten wurde eine RSS Feed Funktion eingebaut. Die Einträge werden dabei auch aus einem <code>pandoc</code> Dokument gelesen und nach <code>rss.xml</code> geschrieben.</p>
+<p>Zusätzlich ist diese Datei auch als <code>rss.html</code> unter <a href="http://www.it-bayer.de/rumex/rss.html">http://www.it-bayer.de/rumex/rss.html</a> verfügbar.</p>
+<!-- ich bin ein Kommentar -->
 
 
-
-<div class="indexliste">
-
-<p><em>2013-06-28</em></p>
-<h1 id="historie">Historie</h1>
-<dl>
-<dt>0.4.0</dt>
-<dd>Umbau der Seiten Struktur<br />- Quelldateien vom Unterverzeichnis <code>markdown</code> nach <code>rumex</code> verlagert<br />- make Steuerdatei in das Unterverzeichnis rumex verlagert<br />- Dateiendungen der Quelldateien von <code>md??</code> nach <code>rx??</code> geändert<br /> <a href="https://github.com/itbayer/rumex/archive/0.4.0.zip">https://github.com/itbayer/rumex/archive/0.4.0.zip</a>
-</dd>
-</dl>
-<p><a href="historie.html">… weiter lesen</a></p>
-<hr />
-</div>
-
-
-
+<!-- vim:set ft=pandoc: -->
 
 </div>
 <div id="fuss">
