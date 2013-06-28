@@ -10,6 +10,9 @@
     <loc>http://www.it-bayer.de/rumex/rss.html</loc>
 </url>
 <url>
+    <loc>http://www.it-bayer.de/rumex/start.html</loc>
+</url>
+<url>
     <loc>http://www.it-bayer.de/rumex/beschreibung.html</loc>
 </url>
 <url>
@@ -17,8 +20,5 @@
 </url>
 <url>
     <loc>http://www.it-bayer.de/rumex/rss.html</loc>
-</url>
-<url>
-    <loc>http://www.it-bayer.de/rumex/start.html</loc>
 </url>
 </urlset>
