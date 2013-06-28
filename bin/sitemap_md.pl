@@ -26,8 +26,8 @@ my @files;
 # .md?* Dateien  aus dem Verzeichnis markdown auslesen
 # Berücksichtigt werden nur eXclude und Standard 
 # Dateien Versteckte nicht.
-push(@files, glob('markdown/*.md?x'));
-push(@files, glob('markdown/*.md?s'));
+push(@files, glob('rumex/*.md?x'));
+push(@files, glob('rumex/*.md?s'));
 
 
 # xml Inhalt erstellen
@@ -44,7 +44,7 @@ EOF
 foreach(@files) {
 
 	# .md wird nicht gebraucht, wird später eine .html Datei
-	$_ =~ m/^markdown\/(.*)\.md\d.+$/;	
+	$_ =~ m/^rumex\/(.*)\.md\d.+$/;	
  
 
 	# Zeile für jede Datei erstellen

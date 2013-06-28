@@ -23,7 +23,7 @@ Datei aus der der Inhalt für die Datei rss.xml gelesen wird
 Als Eingabe ist die Datei C<rss.md0x> vorbelegt.
 
 =cut 
-my $file = "markdown/rss.md0x";
+my $file = "rumex/rss.md0x";
 
 # pandoc inc. Parameter
 my $pandoc = "pandoc --email-obfuscation=none";

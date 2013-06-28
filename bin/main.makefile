@@ -3,11 +3,11 @@
 #
 
 # ######################################################
-META_GENERATOR = "pandoc rumex 0.3.7"
+META_GENERATOR = "pandoc rumex 0.4.0"
 
 
 # ######################################################
-DEV = Makefile template/all.css template/screen.css template/print.css template/header.html template/kopf.html template/fuss.html template/html.template template/config.makefile bin/main.makefile bin/bilder.makefile bin/pandoc_html.makefile bin/pandoc_pdf.makefile
+DEV = Makefile ../template/all.css ../template/screen.css ../template/print.css ../template/header.html ../template/kopf.html ../template/fuss.html ../template/html.template ../template/config.makefile ../bin/main.makefile ../bin/bilder.makefile ../bin/pandoc_html.makefile ../bin/pandoc_pdf.makefile
 
 
 # ######################################################

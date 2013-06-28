@@ -28,11 +28,11 @@ C<$start_md> geändert werden.
 
 =cut
 
-my $start_md = "markdown/start.md0s";
+my $start_md = "rumex/start.md0s";
 
 
 # index.md0x zum schreiben öffne
-open (INDEX, ">markdown/index.md0x");
+open (INDEX, ">rumex/index.md0x");
 
 # Vortext Merker
 my $schnipp;
@@ -83,7 +83,7 @@ system ("/usr/bin/touch $start_md") if (-e $start_md);
 
 # ----------------------------------------------------------
 # Dateinamen der md?? Dateien auslesen incl. Datum der letzten Änderung
-open (FH, "ls -lt1 --time-style=+\"%Y-%m-%d\" markdown/*.md* |");
+open (FH, "ls -lt1 --time-style=+\"%Y-%m-%d\" rumex/*.md* |");
 
 # ----------------------------------------------------------
 # Schleife über die ausgelesenen Dateinamen
@@ -106,14 +106,14 @@ vorkommen kann, auch ausgeschlossen.
 
 =cut
 
-	next if ($name =~ m/markdown\/.*?x$/);
-	next if ($name =~ m/markdown\/.*?v$/);
-	next if ($name =~ m/markdown\/.*?w$/);
-	next if ($name eq "markdown/readme.md");
+	next if ($name =~ m/rumex\/.*?x$/);
+	next if ($name =~ m/rumex\/.*?v$/);
+	next if ($name =~ m/rumex\/.*?w$/);
+	next if ($name eq "rumex/readme.md");
 
 	# Dateiname für Link bauen 
 	#
-	# Verzeichnis markdown raus schneiden
+	# Verzeichnis rumex raus schneiden
 	($dummy1, my $dateiname) = split(/\//, $name);
 	#
 	# .md?? gegen .html austauschen
