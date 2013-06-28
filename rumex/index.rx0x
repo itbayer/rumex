@@ -31,6 +31,60 @@ Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.
 
 *2013-06-28*
 
+<div class="indexliste">
+
+*2013-06-28*
+
+
+# Beschreibung des Rumex Baukastens
+
+
+...der mit `pandocs markdown`, `bash`, `make` `imagamagick` und `perl` 
+eine Home Page erstellt die auch auf <http://github.com> verwendet
+werden kann.
+
+[... weiter lesen](beschreibung.html)
+
+---
+
+</div>
+
+
+
+<div class="indexliste">
+
+*2013-06-28*
+
+# Historie
+
+0.4.0
+:	Umbau der Seiten Struktur \
+	- Quelldateien vom Unterverzeichnis `markdown` nach `rumex` verlagert \
+	- make Steuerdatei in das Unterverzeichnis rumex verlagert \
+	- Dateiendungen der Quelldateien von `md??` nach `rx??` geändert \
+	
+	<https://github.com/itbayer/rumex/archive/0.4.0.zip>
+
+[... weiter lesen](historie.html)
+
+---
+
+</div>
+
+
+
+[... weiter lesen](rss.html)
+
+---
+
+</div>
+
+
+
+<div class="indexliste">
+
+*2013-06-28*
+
 
 # Beschreibung des Rumex Baukastens
 

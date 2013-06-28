@@ -22,7 +22,10 @@ VIM Helfer
 Favicon
 :	`favicon.ico` fehlt noch.
 
-
+Steuerdateien
+:	Die Steuerdateien sind zur Zeit noch in den einzelnen
+	Programmen hinterlegt. Wäre sinnvoll wenn diese über
+	`make` eingebunden werden.
 
 # VIM
 
