@@ -54,6 +54,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><a href="#installation">Installation</a><ul>
 <li><a href="#installation-auf-dem-github.com-server">Installation auf dem github.com Server</a></li>
 <li><a href="#installation-auf-einen-nicht-github.com-server">Installation auf einen nicht github.com Server</a></li>
+<li><a href="#einrichten-der-seite">Einrichten der Seite</a></li>
 </ul></li>
 <li><a href="#aufbau-des-rumex-baukastens">Aufbau des rumex Baukastens</a><ul>
 <li><a href="#root-verzeichnis">root Verzeichnis</a></li>
@@ -116,6 +117,95 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </ul>
 <h2 id="installation-auf-einen-nicht-github.com-server"><a href="#installation-auf-einen-nicht-github.com-server">Installation auf einen nicht github.com Server</a></h2>
 <p>Auf der Seite <a href="http://rumex.it-bayer.de">rumex.it-bayer.de</a> findet man eine Beschreibung wie man den rumex Baukasten auf einen <strong>nicht</strong> <code>github.com</code> Server installiert.</p>
+<h2 id="einrichten-der-seite"><a href="#einrichten-der-seite">Einrichten der Seite</a></h2>
+<p>ZIP Datei holen</p>
+<pre><code>wget https://github.com/itbayer/rumex/archive/gh-pages.zip</code></pre>
+<p>und entpacken</p>
+<pre><code>unzip gh-pages.zip</code></pre>
+<p>Verzeichnis umbenennen</p>
+<pre><code>mv rumex-gh-pages/ neue_seite</code></pre>
+<p>In das neue Verzeichnis wechseln</p>
+<pre><code>cd neue_seite</code></pre>
+<p>…und aufräumen @todo <code>make clean</code></p>
+<pre><code>rm *.html *.xml</code></pre>
+<p>in das <code>rumex</code> Verzeichnis wechseln</p>
+<pre><code>cd rumex</code></pre>
+<p>alle <code>rx??</code> Dateien löschen die nicht gebraucht werden</p>
+<pre><code>rm beschreibung.rx3s
+rm github.rx0   
+rm historie.rx0s
+rm index.rx0x
+rm ohnevorspann.rx0v
+rm sandkasten.rx6v
+rm sitemap.rx0v
+rm todo.rx1v
+rm versteckt.rx0v
+rm weiterleitung.rx0w</code></pre>
+<p><code>impressum.rx0x</code>, <code>rss.rx0x</code>, <code>start.rx0s</code> anpassen</p>
+<p><code>make all</code> ausführen und neue Seite ansehen <code>x-www-browser ../index.html&amp;</code></p>
+<p>@todo: Vorlage der Seiten impressum, rss, start erstellen Verzeichnis template. make install Befehl bauen.</p>
+<pre><code>rm rx*, cp template/rx_vorlagen/* ., </code></pre>
+<!-- Notizen
+
+- Holen der ZIP Datei und entpacken `/tmp`
+- Verzeichnis für die HP erstellen
+
+### Grund Gerüste bauen
+
+Kopieren der Dateien 
+
+- Die Datei `robots.txt`
+- Die Datei `readme.md` (github Installation)
+
+Kopieren der Verzeichnisse 
+- `rumex/`
+- `bin/`
+- `template/`
+
+Erstellen des Verzeichnisses `bilder`
+
+## Anpassung
+
+readme.md
+:   Nur bei github Installation erforderlich
+
+robots.txt
+:   Anpassen der `sitemap.xml`
+    
+        Sitemap: http://www.meine_seite.tdl/sitemap.xml
+
+
+template/config.makefile
+:   In dieser Datei befinden sich die Einstellungen für die make
+    Verarbeitung.
+    Die Wichtigsten Einstellungen sind:
+    
+    **Überschrift der Startseite**
+        
+        # ##############################################################
+        # Überschriften für die Index Seite
+        U1="Meine neue Seite" 
+        U2="Kanu Fahrt 2013"
+        U3="Hans Dampf"
+    
+    **Überschrift des RSS Feed**
+    
+        RSS_TITLE = "Kanu Fahrt 2013 - Hans Dampf"
+    
+    
+
+template/fuss.html
+:   In dieser Datei muss die Copyright Zeile anpassen.
+    Eine codierte E-Mail Angabe bekommt man wenn,
+    man sich später eine Seite mit E-Mail erstellt und
+    den Quellcode aus dieser Seite kopiert.
+    Für den Anfang einfach einen HTML Quelltext verwenden
+    oder weglassen.
+
+-->
+
+
+
 <h1 id="aufbau-des-rumex-baukastens"><a href="#aufbau-des-rumex-baukastens">Aufbau des rumex Baukastens</a></h1>
 <h2 id="root-verzeichnis"><a href="#root-verzeichnis">root Verzeichnis</a></h2>
 <p>Im <code>root</code> Verzeichnis findet man alle <code>HTML</code> Dateien der Seite. Diese werde vom Baukasten erstellt und müssen nicht von Hand verändert werden. Zusätzlich findet man noch ein folgende Systemdateien:</p>

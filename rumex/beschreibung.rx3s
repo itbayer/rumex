@@ -88,6 +88,117 @@ eine Beschreibung wie man den rumex Baukasten auf einen **nicht**
 `github.com` Server installiert.
 
 
+## Einrichten der Seite
+
+ZIP Datei holen
+	
+	wget https://github.com/itbayer/rumex/archive/gh-pages.zip
+
+und entpacken
+
+	unzip gh-pages.zip
+
+Verzeichnis umbenennen
+
+	mv rumex-gh-pages/ neue_seite
+
+In das neue Verzeichnis wechseln
+
+	cd neue_seite
+
+...und aufräumen @todo `make clean`
+
+	rm *.html *.xml
+
+in das `rumex` Verzeichnis wechseln
+
+	cd rumex
+
+alle `rx??` Dateien löschen die nicht gebraucht werden
+
+	rm beschreibung.rx3s
+	rm github.rx0	
+	rm historie.rx0s
+	rm index.rx0x
+	rm ohnevorspann.rx0v
+	rm sandkasten.rx6v
+	rm sitemap.rx0v
+	rm todo.rx1v
+	rm versteckt.rx0v
+	rm weiterleitung.rx0w
+	
+`impressum.rx0x`, `rss.rx0x`,  `start.rx0s` anpassen
+
+`make all` ausführen 
+und neue Seite ansehen `x-www-browser ../index.html&`
+
+@todo: Vorlage der Seiten impressum, rss, start erstellen
+Verzeichnis template. make install Befehl bauen.
+
+	rm rx*, cp template/rx_vorlagen/* ., 
+
+
+<!-- Notizen
+
+- Holen der ZIP Datei und entpacken `/tmp`
+- Verzeichnis für die HP erstellen
+
+### Grund Gerüste bauen
+
+Kopieren der Dateien 
+
+- Die Datei `robots.txt`
+- Die Datei `readme.md` (github Installation)
+
+Kopieren der Verzeichnisse 
+- `rumex/`
+- `bin/`
+- `template/`
+
+Erstellen des Verzeichnisses `bilder`
+
+## Anpassung
+
+readme.md
+:	Nur bei github Installation erforderlich
+
+robots.txt
+:	Anpassen der `sitemap.xml`
+	
+		Sitemap: http://www.meine_seite.tdl/sitemap.xml
+
+
+template/config.makefile
+:	In dieser Datei befinden sich die Einstellungen für die make
+	Verarbeitung.
+	Die Wichtigsten Einstellungen sind:
+	
+	**Überschrift der Startseite**
+		
+		# ##############################################################
+		# Überschriften für die Index Seite
+		U1="Meine neue Seite" 
+		U2="Kanu Fahrt 2013"
+		U3="Hans Dampf"
+	
+	**Überschrift des RSS Feed**
+	
+		RSS_TITLE = "Kanu Fahrt 2013 - Hans Dampf"
+	
+	
+
+template/fuss.html
+:	In dieser Datei muss die Copyright Zeile anpassen.
+	Eine codierte E-Mail Angabe bekommt man wenn,
+	man sich später eine Seite mit E-Mail erstellt und
+	den Quellcode aus dieser Seite kopiert.
+	Für den Anfang einfach einen HTML Quelltext verwenden
+	oder weglassen.
+
+-->
+
+
+
 # Aufbau des rumex Baukastens
 
 ## root Verzeichnis
