@@ -68,3 +68,19 @@ sitemapxml:
 sitemaprx:
 	$(SITEMAP_RX) > $(SITEMAP_RX_FILE)
 
+
+# #######################################################
+# HTML und XML aus dem root Verzeichnis löschen
+clean:
+	rm ../*.html
+	rm ../*.xml
+
+# #######################################################
+# rumex Verzeichnis löschen und Vorlage kopieren
+install:
+	../bin/install.sh
+
+# #######################################################
+# index.html im Standard Browser öffnen
+show:
+	x-www-browser ../index.html &

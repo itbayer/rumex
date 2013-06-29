@@ -1,0 +1,127 @@
+% Abo Seite - Newsletter - RSS Feed
+% 
+%
+
+
+<!--
+| Titel: Rumex - Ein Home Page Baukasten
+| Beschreibung: Aktuelles und Neuigkeiten vom rumex Home Page Baukasten
+| KLink: http://www.it-bayer.de/rumex/
+| Lang: de-DE
+| BildTitel: Rumex - Ein Home Page Baukasten
+| BildURL: http://www.it-bayer.de/rumex/bilder/rss_200_.png
+| BildLink: http://www.it-bayer.de/rumex/
+| BildBeschreibung: Aktuelles und Neuigkeiten von der rumex Seite.
+-->
+
+# rumex bekommt sein eigenes Verzeichnis{.xx6}
+
+<!-- 
+| Link: http://www.it-bayer.de/rumex/historie.html
+| Autor: IT-Bayer
+| Kategorie: Neues
+-->
+
+rumex bekommt sein eigenes Verzeichnis und seine eigene Datei
+Erweiterung.
+[...weiter lesen](http://www.it-bayer.de/rumex/historie.html)
+
+
+# rumex bekommt jetzt auch einen sitemap.html{.xx5}
+
+<!-- 
+| Link: http://www.it-bayer.de/rumex/historie.html
+| Autor: IT-Bayer
+| Kategorie: Neues
+-->
+
+Nach der `sitemap.xml` kann rumex jetzt auch eine `sitemap.html` erstellen. [...weiter lesen](http://www.it-bayer.de/rumex/historie.html)
+
+
+
+# rumex bekommt eine Weiterleitungsseite{.xx4}
+
+<!-- 
+| Link: http://www.it-bayer.de/rumex/historie.html
+| Autor: IT-Bayer
+| Kategorie: Neues
+-->
+
+Einbau einer Weiterleitungsfunktion per JavaScript da .htaccess von github.com nicht unterstützt wird.
+
+
+
+
+# rumex bekommt eine Bildbearbeitung{.xx3}
+
+<!-- 
+| Link: http://www.it-bayer.de/rumex/historie.html
+| Autor: IT-Bayer
+| Kategorie: Neues
+-->
+
+Eigentlich ist es gar keine richtige Bildbearbeitung sondern nur eine ImageMagick Befehlsfolge die, die Bilder im Verzeichnis bilder in verschiedene Größen bereitstellt.
+
+Unterstützt werden zur Zeit die Größen
+
+- 100
+- 200
+- 400
+- 600
+- 800
+
+
+
+# rumex bekommt eine sitemap.xml{.xx2}
+
+<!-- 
+| Link: http://www.it-bayer.de/rumex/historie.html
+| Autor: IT-Bayer
+| Kategorie: Neues
+-->
+
+Mit einer `sitemap.xml` erleichtert man den Suchmaschinen das finden einzelner
+Seite. Man kann auch sagen sie `sitemap.xml` ist eine Liste der Seiten
+die sich auf der Webseite befinden.
+
+Natürlich braucht `rumex` auch so einen Datei. Erstellt wird die sitemap mit 
+`make sitemap` oder bei `make all` bzw. `make online`.
+.ersteckt markierte Dateien `*.md?v` werden natürlich nicht aufgenommen.
+
+
+
+# rumex wird auf einen nicht github.com Server installiert{.xx1}
+
+<!-- 
+| Link: http://www.it-bayer.de/rumex/historie.html
+| Autor: IT-Bayer
+| Kategorie: Neues
+-->
+
+rumex funktioniert auch auf einen **nicht** `github.com` Server.
+Eine Beschreibung wie man den Baukasten dort installiert
+findet man auf der Seite <http://rumex.it-bayer.de>.
+
+
+
+# rumex bekommt die RSS Feed Funktion{.rssfeed}
+
+<!-- 
+| Link: http://www.it-bayer.de/rumex/historie.html
+| Autor: IT-Bayer
+| Kategorie: Neues
+-->
+
+In den rumex Baukasten wurde eine RSS Feed Funktion eingebaut.
+Die Einträge werden dabei auch aus einem `pandoc` Dokument gelesen
+und nach `rss.xml` geschrieben.
+
+Zusätzlich ist diese Datei auch als `rss.html` unter <http://www.it-bayer.de/rumex/rss.html> verfügbar.
+
+
+
+
+<!-- ich bin ein Kommentar -->
+
+
+<!-- vim:set ft=pandoc: -->

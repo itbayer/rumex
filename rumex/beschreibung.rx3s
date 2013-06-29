@@ -130,7 +130,7 @@ alle `rx??` Dateien löschen die nicht gebraucht werden
 `impressum.rx0x`, `rss.rx0x`,  `start.rx0s` anpassen
 
 `make all` ausführen 
-und neue Seite ansehen `x-www-browser ../index.html&`
+und neue Seite ansehen `x-www-browser ../index.html&` @todo: `make show` bauen.
 
 @todo: Vorlage der Seiten impressum, rss, start erstellen
 Verzeichnis template. make install Befehl bauen.
