@@ -37,7 +37,6 @@ if ((i)); then
 	echo "make clean"
 	echo "make all"
 	echo "make show"
-	echo "make online"
 	echo ""
 	echo ""
 	echo "Viel Spass mit rumex wuenscht dir der IT-Bayer."
