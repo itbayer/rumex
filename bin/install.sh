@@ -21,7 +21,7 @@ echo ""
 if ((i)); then
   echo "Lösche alle rx* Daten aus dem rumex Verzeichnis"
   echo ""
-  ls *.rx*
+  rm *.rx*
 
   echo ""
   echo "Kopiere die Vorlagen aus dem template Verzeichnis"
