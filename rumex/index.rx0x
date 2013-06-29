@@ -26,15 +26,23 @@ Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.
 
 *2013-06-29*
 
+# Historie
 
-# Beschreibung des Rumex Baukastens
+0.4.5
+:	Rumex wurde um ein Installationsskript erweitert. 
+	
+	Die Installation beschränkt sich nun auf folgende Schritte
+		
+	- Download und entpacken der ZIP Datei
+	- Wechseln in das Verzeichnis `rumex`
+	- `make install`
+	- `make clean`
+	- `make all`
+	- `make show`
+	
+	<https://github.com/itbayer/rumex/archive/0.4.1.zip>
 
-
-...der mit `pandocs markdown`, `bash`, `make` `imagamagick` und `perl` 
-eine Home Page erstellt die auch auf <http://github.com> verwendet
-werden kann.
-
-[... weiter lesen](beschreibung.html)
+[... weiter lesen](historie.html)
 
 ---
 
@@ -44,19 +52,17 @@ werden kann.
 
 <div class="indexliste">
 
-*2013-06-28*
+*2013-06-29*
 
-# Historie
 
-0.4.0
-:	Umbau der Seiten Struktur \
-	- Quelldateien vom Unterverzeichnis `markdown` nach `rumex` verlagert \
-	- make Steuerdatei in das Unterverzeichnis rumex verlagert \
-	- Dateiendungen der Quelldateien von `md??` nach `rx??` geändert \
-	
-	<https://github.com/itbayer/rumex/archive/0.4.0.zip>
+# Beschreibung des Rumex Baukastens
 
-[... weiter lesen](historie.html)
+
+...der mit `pandocs markdown`, `bash`, `make` `imagamagick` und `perl` 
+eine Home Page erstellt die auch auf <http://github.com> verwendet
+werden kann.
+
+[... weiter lesen](beschreibung.html)
 
 ---
 

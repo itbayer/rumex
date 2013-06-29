@@ -6,6 +6,23 @@
 # Historie
 -->
 
+0.4.5
+:	Rumex wurde um ein Installationsskript erweitert. 
+	
+	Die Installation beschränkt sich nun auf folgende Schritte
+		
+	- Download und entpacken der ZIP Datei
+	- Wechseln in das Verzeichnis `rumex`
+	- `make install`
+	- `make clean`
+	- `make all`
+	- `make show`
+	
+	<https://github.com/itbayer/rumex/archive/0.4.1.zip>
+
+<!-- schnipp -->
+
+
 0.4.0
 :	Umbau der Seiten Struktur \
 	- Quelldateien vom Unterverzeichnis `markdown` nach `rumex` verlagert \
@@ -14,7 +31,6 @@
 	
 	<https://github.com/itbayer/rumex/archive/0.4.0.zip>
 
-<!-- schnipp -->
 
 0.3.7
 :	Einbau einer `sitemap.html`.
