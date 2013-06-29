@@ -36,7 +36,6 @@ RX2RSS = "../bin/rx2rss.pl"
 
 # ##############################################################
 # RSS Feed
-RSS_TITLE = "Neues vom rumex Baukasten"
 RSS_FILE = "../rss.xml"
 
 
