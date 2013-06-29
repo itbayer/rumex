@@ -17,7 +17,7 @@
 # rumex bekommt ein Installationsskript{.xx7}
 
 <!-- 
-| Link: http://www.it-bayer.de/rumex/historie.html
+| Link: http://www.it-bayer.de/rumex/historie.html#0.4.5
 | Autor: IT-Bayer
 | Kategorie: Neues
 -->
@@ -28,7 +28,7 @@ In rumex wurde um ein kleines Installationsskript eingebaut.
 # rumex bekommt sein eigenes Verzeichnis{.xx6}
 
 <!-- 
-| Link: http://www.it-bayer.de/rumex/historie.html
+| Link: http://www.it-bayer.de/rumex/historie.html#v0.4.0
 | Autor: IT-Bayer
 | Kategorie: Neues
 -->
@@ -41,7 +41,7 @@ Erweiterung.
 # rumex bekommt jetzt auch einen sitemap.html{.xx5}
 
 <!-- 
-| Link: http://www.it-bayer.de/rumex/historie.html
+| Link: http://www.it-bayer.de/rumex/historie.html#v0.3.7
 | Autor: IT-Bayer
 | Kategorie: Neues
 -->
@@ -53,7 +53,7 @@ Nach der `sitemap.xml` kann rumex jetzt auch eine `sitemap.html` erstellen. [...
 # rumex bekommt eine Weiterleitungsseite{.xx4}
 
 <!-- 
-| Link: http://www.it-bayer.de/rumex/historie.html
+| Link: http://www.it-bayer.de/rumex/historie.html#v0.3.6
 | Autor: IT-Bayer
 | Kategorie: Neues
 -->
@@ -66,7 +66,7 @@ Einbau einer Weiterleitungsfunktion per JavaScript da .htaccess von github.com n
 # rumex bekommt eine Bildbearbeitung{.xx3}
 
 <!-- 
-| Link: http://www.it-bayer.de/rumex/historie.html
+| Link: http://www.it-bayer.de/rumex/historie.html#v0.3.5
 | Autor: IT-Bayer
 | Kategorie: Neues
 -->
@@ -86,7 +86,7 @@ Unterstützt werden zur Zeit die Größen
 # rumex bekommt eine sitemap.xml{.xx2}
 
 <!-- 
-| Link: http://www.it-bayer.de/rumex/historie.html
+| Link: http://www.it-bayer.de/rumex/historie.html#v0.3.2
 | Autor: IT-Bayer
 | Kategorie: Neues
 -->
@@ -104,7 +104,7 @@ Natürlich braucht `rumex` auch so einen Datei. Erstellt wird die sitemap mit
 # rumex wird auf einen nicht github.com Server installiert{.xx1}
 
 <!-- 
-| Link: http://www.it-bayer.de/rumex/historie.html
+| Link: http://rumex.it-bayer.de/
 | Autor: IT-Bayer
 | Kategorie: Neues
 -->
@@ -118,7 +118,7 @@ findet man auf der Seite <http://rumex.it-bayer.de>.
 # rumex bekommt die RSS Feed Funktion{.rssfeed}
 
 <!-- 
-| Link: http://www.it-bayer.de/rumex/historie.html
+| Link: http://www.it-bayer.de/rumex/historie.html#v0.3
 | Autor: IT-Bayer
 | Kategorie: Neues
 -->
