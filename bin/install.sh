@@ -17,6 +17,7 @@ done
 echo ""
 echo ""
 
+# Wenn ja
 if ((i)); then
   echo "Lösche alle rx* Daten aus dem rumex Verzeichnis"
   echo ""
@@ -24,15 +25,7 @@ if ((i)); then
 
   echo ""
   echo "Kopiere die Vorlagen aus dem template Verzeichnis"
-  cp ../template/*.vorlage .
-
-  echo ""
-  echo "...und benenne sie um:"
-  echo ""
-  for d in $(ls -1 *.vorlage 2>/dev/null) ;do 
-	  z=${d#*} 
-	  echo $z ${z%.*} 
-  done
+  cp ../template/rx/*.rx* .
 
   echo ""
   echo "Diese Dateien müssen jetzt noch angepasst werden"
@@ -43,7 +36,8 @@ if ((i)); then
   echo ""
   echo ""
   echo "Viel Spass mit rumex wuenscht dir der IT-Bayer."
-  
+
+# ...wenn nein
 else
   echo "Ok ...dann bleibt alles beim alten."
   echo ""
