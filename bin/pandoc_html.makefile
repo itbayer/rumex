@@ -1,19 +1,12 @@
-# 
-# bin/pandoc_html.makefile
-#
+# ##############################################
+# pandoc_html.makefile
+# ##############################################
 
-#
-#
-#
-# --section-divs \
-#  raus genommen. Liefert einen schlechten HTML Code bei der 
-#  index.html, section und div sind durch einander.
-#
+META_GENERATOR = "pandoc rumex 0.4.1"
 
-
-# -------------------------------------------------------------------
+# ##############################################
 # HTML Datei ohne Inhaltsverzeichnis
-#
+# ##############################################
 
 HTML0S =  $(shell for i in $(shell ls -1 *.rx0s 2>/dev/null) ;do x=$${i\#*/}; echo ../$${x%.*}.html; done)
 
@@ -71,19 +64,22 @@ html0v: $(HTML0V)
 		$< -o $@
 
 
-# 
+
+# ================================
 # Weiterleitung per JavaScript
+# ================================
+# 
 # Für diesen Type gibt es nur die Stufe 0
 # Inhaltsverzeichnis wäre hier sinnlos.
 #
 # Einbau der Weiterleitung
-#
+# ------------------------
 #    <script language="javascript">
 #    <!--
 #    window.location.href="ZIEL.html";
 #    // -->
 #    </script> 
-#
+
 HTML0W =  $(shell for i in $(shell ls -1 *.rx0w 2>/dev/null) ;do x=$${i\#*/}; echo ../$${x%.*}.html; done)
 
 html0w: $(HTML0W) 
@@ -105,9 +101,11 @@ html0w: $(HTML0W)
 
 
 
-# -------------------------------------------------------------------
+
+# ##############################################
 # HTML Datei mit Inhaltsverzeichnis Stufe 1
-#
+# ##############################################
+
 HTML1S =  $(shell for i in $(shell ls -1 *.rx1s 2>/dev/null) ;do x=$${i\#*/}; echo ../$${x%.*}.html; done)
 
 html1s: $(HTML1S) 
@@ -171,9 +169,11 @@ html1v: $(HTML1V)
 		$< -o $@
 
 
-# -------------------------------------------------------------------
+
+# ##############################################
 # HTML Datei mit Inhaltsverzeichnis Stufe 2
-#
+# ##############################################
+
 HTML2S =  $(shell for i in $(shell ls -1 *.rx2s 2>/dev/null) ;do x=$${i\#*/}; echo ../$${x%.*}.html; done)
 
 html2s: $(HTML2S) 
@@ -238,9 +238,11 @@ html2v: $(HTML2V)
 
 
 
-# -------------------------------------------------------------------
+
+# ##############################################
 # HTML Datei mit Inhaltsverzeichnis Stufe 3
-#
+# ##############################################
+
 HTML3S =  $(shell for i in $(shell ls -1 *.rx3s 2>/dev/null) ;do x=$${i\#*/}; echo ../$${x%.*}.html; done)
 
 html3s: $(HTML3S) 
@@ -304,9 +306,11 @@ html3v: $(HTML3V)
 		$< -o $@
 
 
-# -------------------------------------------------------------------
+
+# ##############################################
 # HTML Datei mit Inhaltsverzeichnis Stufe 4
-#
+# ##############################################
+
 HTML4S =  $(shell for i in $(shell ls -1 *.rx4s 2>/dev/null) ;do x=$${i\#*/}; echo ../$${x%.*}.html; done)
 
 html4s: $(HTML4S) 
@@ -370,9 +374,11 @@ html4v: $(HTML4V)
 		$< -o $@
 
 
-# -------------------------------------------------------------------
+
+# ##############################################
 # HTML Datei mit Inhaltsverzeichnis Stufe 5
-#
+# ##############################################
+
 HTML5S =  $(shell for i in $(shell ls -1 *.rx5s 2>/dev/null) ;do x=$${i\#*/}; echo ../$${x%.*}.html; done)
 
 html5s: $(HTML5S) 
@@ -436,9 +442,11 @@ html5v: $(HTML5V)
 		$< -o $@
 
 
-# -------------------------------------------------------------------
+
+# ##############################################
 # HTML Datei mit Inhaltsverzeichnis Stufe 6
-#
+# ##############################################
+
 HTML6S =  $(shell for i in $(shell ls -1 *.rx6s 2>/dev/null) ;do x=$${i\#*/}; echo ../$${x%.*}.html; done)
 
 html6s: $(HTML6S) 
@@ -500,5 +508,6 @@ html6v: $(HTML6V)
 		-V rssfile=$(RSS_FILE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
+
 
 

@@ -1,36 +1,22 @@
-# 
-# bin/main.makefile
-#
+# ##############################################
+# main.makefile
+# ##############################################
 
-# ######################################################
-META_GENERATOR = "pandoc rumex 0.4.1"
-
-
-# ######################################################
-DEV = Makefile ../template/all.css ../template/screen.css ../template/print.css ../template/header.html ../template/kopf.html ../template/fuss.html ../template/html.template ../template/config.makefile ../bin/main.makefile ../bin/bilder.makefile ../bin/pandoc_html.makefile ../bin/pandoc_pdf.makefile
 
 
 # ######################################################
-html: html0s html0x html0v html1s html1x html1v html2s html2x html2v html3s html3x html3v html4s html4x html4v html5s html5x html5v html6s html6x html6v html0w
+# alle HTML Dateien zusammen
+html: html0s html0x html0v html0w html1s html1x html1v html2s html2x html2v html3s html3x html3v html4s html4x html4v html5s html5x html5v html6s html6x html6v 
 
 
 # ######################################################
+# index.rx0x Seite erstellen
 index: 
 	$(INDEX) $(U1) $(U2) $(U3)
 
 
 # ######################################################
-# Schritte werden hier einzeln aufgerufen
-# somit kann sicher gestellt werden dass
-# zuerst die index.rx0x erstellt und dann
-# daraus die html Datei gemacht wird.
-#
-# Bei der Schreibweise
-#
-# 	all: index html
-#
-# war die Reihenfolge nicht eindeutig
-#
+# alle Schritte der Seiten Erstellung zusammen
 all: 
 	make -s index 
 	make -s sitemap
@@ -40,6 +26,7 @@ all:
 
 
 # ######################################################
+# Seite mit git hoch laden
 online:
 	make -s all
 	git add ../.
@@ -54,6 +41,7 @@ rss:
 
 
 # #######################################################
+# alle XML und rs sitemap zusammen
 sitemap:
 	make -s sitemaprx
 	make -s sitemapxml
@@ -73,15 +61,34 @@ sitemaprx:
 
 
 # #######################################################
-# HTML und XML aus dem root Verzeichnis löschen
+# alle clean's auf einmal
 clean:
+	make -s hclean
+	make -s xclean
+	make -s bclean
+
+
+# #######################################################
+# HTML Dateien aus dem root Verzeichnis löschen
+hclean:
 	rm ../*.html
+
+
+# #######################################################
+# XML aus dem root Verzeichnis löschen
+xclean:
 	rm ../*.xml
+
+
+# #######################################################
+# Bild Verzeichnis bereinigen
+bclean: 
+	rm ../bilder/*_???_.*
+
 
 # #######################################################
 # rumex Verzeichnis löschen und Vorlage kopieren
 install:
-	make -s clean
 	../bin/install.sh
 
 # #######################################################

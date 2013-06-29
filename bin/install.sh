@@ -19,26 +19,32 @@ echo ""
 
 # Wenn ja
 if ((i)); then
-  echo "Lösche alle rx* Daten aus dem rumex Verzeichnis"
-  echo ""
-  rm *.rx*
 
-  echo ""
-  echo "Kopiere die Vorlagen aus dem template Verzeichnis"
-  cp ../template/rx/*.rx* .
+	echo "Lösche die readme.md aus dem root Verzeichnis"
+	rm ../readme.md
+	echo ""
 
-  echo ""
-  echo "Diese Dateien müssen jetzt noch angepasst werden"
-  echo "...und schon kann es los gehen mit"
-  echo ""
-  echo "make all"
-  echo "make show"
-  echo ""
-  echo ""
-  echo "Viel Spass mit rumex wuenscht dir der IT-Bayer."
+	echo "Lösche alle .rx* Daten aus dem rumex Verzeichnis"
+	rm *.rx*
+	echo ""
+
+	echo "Kopiere die Vorlagen aus dem template Verzeichnis"
+	cp ../template/rx/*.rx* .
+	echo ""
+
+	echo "Dateien anpassen und dann ..."
+	echo ""
+	echo "make clean"
+	echo "make all"
+	echo "make show"
+	echo "make online"
+	echo ""
+	echo ""
+	echo "Viel Spass mit rumex wuenscht dir der IT-Bayer."
+	echo ""
 
 # ...wenn nein
 else
-  echo "Ok ...dann bleibt alles beim alten."
-  echo ""
+	echo "Ok ...dann bleibt alles beim alten."
+	echo ""
 fi

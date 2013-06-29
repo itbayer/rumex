@@ -1,7 +1,6 @@
-#
-# template/config.makefile
-#
-
+# #############################################
+# config.makefile
+# #############################################
 
 # ##############################################################
 # Überschriften für die Index Seite
@@ -11,6 +10,7 @@ U3=""
 
 
 # ##############################################################
+#
 HTML_TEMPLATE = ../template/html.template
 KOPF_TEMPLATE = ../template/kopf.html
 HEADER_TEMPLATE = ../template/header.html
@@ -18,7 +18,7 @@ FUSS_TEMPLATE = ../template/fuss.html
 
 
 # ##############################################################
-# META
+# META Angabe der unterschiedlichen Seitentypen
 META_ROBOTS_STANDARD = "all"
 META_ROBOTS_VERSTECKT = "noindex,nofollow,noarchive"
 META_ROBOTS_WEITERLEITUNG = "noindex,follow,noarchive"
@@ -30,10 +30,8 @@ INDEX="../bin/index.pl"
 
 
 # ##############################################################
-#
 # Programm zum erstellen des RSS Feed
 RX2RSS = "../bin/rx2rss.pl"
-
 
 
 # ##############################################################
@@ -44,15 +42,13 @@ RSS_FILE = "../rss.xml"
 
 # ##############################################################
 # XML Sitemap
+
 # Programm zum erstellen der XML Sitemap Datei
 SITEMAP_XML = "../bin/sitemap_xml.pl"
 
 # Zieldatei der Sitemap Datei
 SITEMAP_XML_FILE = "../sitemap.xml"
 
-
-# ##############################################################
-# RX0V Sitemap
 # Programm zum erstellen der rx0v Sitemap Datei
 SITEMAP_RX = "../bin/sitemap_rx.pl"
 
@@ -67,6 +63,6 @@ BVZ="../bilder"
 
 # ##############################################################
 # Pandoc Programm
-#PANDOC = /usr/bin/pandoc
 PANDOC = pandoc
+# PANDOC = /usr/bin/pandoc
 
