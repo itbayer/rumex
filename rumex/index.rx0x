@@ -24,9 +24,23 @@ Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.
 
 <div class="indexliste">
 
-*2013-06-29*
+*2013-06-30*
 
 # Historie
+
+## V0.4.7
+
+Verzeichnisschutz `.htaccess` eingebaut.
+Geschützt werden die Verzeichnisse:
+
+- bin
+- inc
+- rumex
+
+
+
+<https://github.com/itbayer/rumex/archive/0.4.7.zip>
+
 
 ## V0.4.5
 

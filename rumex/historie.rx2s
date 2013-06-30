@@ -6,6 +6,20 @@
 # Historie
 -->
 
+## V0.4.7
+
+Verzeichnisschutz `.htaccess` eingebaut.
+Geschützt werden die Verzeichnisse:
+
+- bin
+- inc
+- rumex
+
+
+
+<https://github.com/itbayer/rumex/archive/0.4.7.zip>
+
+
 ## V0.4.5
 
 Rumex wurde um ein Installationsskript erweitert. 
