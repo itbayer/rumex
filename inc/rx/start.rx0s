@@ -3,7 +3,7 @@
 %
 
 
-## Gratulation rumex ist fertig installiert
+### Gratulation rumex ist fertig installiert
 
 Du musst aber noch ein paar Dateien angepasst
 oder besser gesagt rumex auf deine Adresse einstellen.
@@ -34,6 +34,11 @@ oder besser gesagt rumex auf deine Adresse einstellen.
 		URL="http://www.it-bayer.de/rumex"
 		
 	zuständig.
+	
+	Für den RSS Titel in den HTML Dateien ist diese Zeile zuständig
+
+		RSS_TITEL = "Neuigkeiten von rumex Baukasten"
+
 
 ../inc/fuss.html
 :	In dieser Datei findest du einen HTML Quelltext

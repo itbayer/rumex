@@ -26,6 +26,28 @@ Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.
 
 *2013-06-30*
 
+
+# Beschreibung des Rumex Baukastens
+
+
+Hier findest du die Beschreibung des rumex Baukastens.
+Zur Zeit ist hier noch vieles durcheinander da ich
+mehr am System als an der Beschreibung bastle.
+Du kannst aber schon mal gerne rein schauen.
+
+
+[... weiter lesen](beschreibung.html)
+
+---
+
+</div>
+
+
+
+<div class="indexliste">
+
+*2013-06-30*
+
 # Historie
 
 ## V0.4.7
@@ -43,26 +65,6 @@ Geschützt werden die Verzeichnisse:
 
 
 [... weiter lesen](historie.html)
-
----
-
-</div>
-
-
-
-<div class="indexliste">
-
-*2013-06-29*
-
-
-# Beschreibung des Rumex Baukastens
-
-
-...der mit `pandocs markdown`, `bash`, `make` `imagamagick` und `perl` 
-eine Home Page erstellt die auch auf <http://github.com> verwendet
-werden kann.
-
-[... weiter lesen](beschreibung.html)
 
 ---
 

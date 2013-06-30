@@ -34,13 +34,13 @@ INDEX="../bin/index.pl"
 
 
 # ##############################################################
+# RSS Feed
+
+RSS_FILE = "rss.xml"
+RSS_TITEL = "Neuigkeiten von rumex Baukasten"
+
 # Programm zum erstellen des RSS Feed
 RX2RSS = "../bin/rx2rss.pl"
-
-
-# ##############################################################
-# RSS Feed
-RSS_FILE = "../rss.xml"
 
 
 # ##############################################################

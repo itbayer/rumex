@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <!-- rumex Version -->
-  <meta name="generator" content="pandoc rumex 0.4.6">
+  <meta name="generator" content="pandoc rumex 0.4.7">
   <!-- rumex Suchmaschine -->
   <meta name="robots" content="all">
   <title>Beschreibung des Rumex Baukastens</title>
@@ -31,7 +31,7 @@ code > span.fu { color: #06287e; }
 code > span.er { color: #ff0000; font-weight: bold; }
   </style>
   <!-- rumex RSS -->
-  <link rel="alternate" type="application/rss+xml" title="" href="../rss.xml" />
+  <link rel="alternate" type="application/rss+xml" title="Neuigkeiten von rumex Baukasten" href="rss.xml" />
   <!-- header.html -->
   <link rel="stylesheet" type="text/css" href="css/all.css" media="all" />
   <link rel="stylesheet" type="text/css" href="css/screen.css" media="screen" />
@@ -52,9 +52,16 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><a href="#rumex">Rumex?</a></li>
 </ul></li>
 <li><a href="#installation">Installation</a><ul>
+<li><a href="#rumex-auf-dich-einstellen">Rumex auf dich einstellen</a></li>
 <li><a href="#installation-auf-dem-github.com-server">Installation auf dem github.com Server</a></li>
-<li><a href="#installation-auf-einen-nicht-github.com-server">Installation auf einen nicht github.com Server</a></li>
-<li><a href="#einrichten-der-seite">Einrichten der Seite</a></li>
+<li><a href="#installation-auf-einen-nicht-github.com-server">Installation auf einen nicht github.com Server</a><ul>
+<li><a href="#datei-upload-per-git">Datei upload per git</a></li>
+<li><a href="#datei-upload-per-ftp">Datei upload per ftp</a></li>
+</ul></li>
+<li><a href="#kurzbeschreibung-die-nach-der-installation-angezeigt-wird">Kurzbeschreibung die nach der Installation angezeigt wird</a><ul>
+<li><a href="#gratulation-rumex-ist-fertig-installiert">Gratulation rumex ist fertig installiert</a></li>
+</ul></li>
+<li><a href="#rumex-nix-voraussetzungen">rumex *nix Voraussetzungen</a></li>
 </ul></li>
 <li><a href="#aufbau-des-rumex-baukastens">Aufbau des rumex Baukastens</a><ul>
 <li><a href="#root-verzeichnis">root Verzeichnis</a></li>
@@ -70,9 +77,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><a href="#rss-feed-funktion">RSS Feed Funktion</a><ul>
 <li><a href="#beispiel-einer-rss-feed-seite">Beispiel einer RSS Feed Seite</a></li>
 </ul></li>
-<li><a href="#steuerung">Steuerung</a></li>
-<li><a href="#einrichten-einer-neue-seite">Einrichten einer neue Seite</a></li>
-<li><a href="#installation-1">Installation</a></li>
+<li><a href="#make-steuerung">make Steuerung</a></li>
 <li><a href="#update">Update</a></li>
 </ul>
 </nav>
@@ -83,7 +88,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 
 -->
 
-<p>…der mit <code>pandocs markdown</code>, <code>bash</code>, <code>make</code> <code>imagamagick</code> und <code>perl</code> eine Home Page erstellt die auch auf <a href="http://github.com">http://github.com</a> verwendet werden kann.</p>
+<p>Hier findest du die Beschreibung des rumex Baukastens. Zur Zeit ist hier noch vieles durcheinander da ich mehr am System als an der Beschreibung bastle. Du kannst aber schon mal gerne rein schauen.</p>
 <!-- schnipp -->
 
 
@@ -97,12 +102,26 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>Rumex ist die lateinische Bezeichnung für den <a href="http://de.wikipedia.org/wiki/Ampfer">Ampfer</a> und dieser taucht in der Natur dann auf, wenn der Boden Überdüngt, Verdichtung und Beschädigt ist. Rumex gehört zu den sogenannten Pionier Pflanzen. Er ist ein Lückenfüller.</p>
 <p>Genau das soll Rumex auch sein “ein Lückenfüller” für alle die … Systeme satt haben.</p>
 <h1 id="installation"><a href="#installation">Installation</a></h1>
-<p>@todo</p>
-<p>Rumex wurde erstellt um die Seite auf <a href="http://github.com">github.com</a> zu betreiben.</p>
-<p>Es funktioniert aber auch auf einen normalen Server. Einfach die HTML Dateien und die Verzeichnisse <code>bilder</code> und <code>template</code>,per FTP, auf den Server kopieren.</p>
-<p>Sind ein paar Voraussetzungen erfüllt kann man rumex auch über git, wie bei github.com, auf dem einen normalen Server betreiben.</p>
-<p>Ein Beispiel findet man auf <a href="http://rumex.it-bayer.de">rumex.it-bayer.de</a>.</p>
+<p>Für die Installation auf deinem Rechner musst du dir zu erst das ZIP Archiv vom github Server holen und entpacken</p>
+<pre><code> wget https://github.com/itbayer/rumex/archive/gh-pages.zip
+ unzip gh-pages.zip</code></pre>
+<p>Jetzt wechsle in das Verzeichnis <code>rumex-gh-pages/rumex</code> und starte die Befehle <code>make install</code> und <code>make show</code>.</p>
+<pre><code>cd rumex-gh-pages/rumex/
+make install
+make show</code></pre>
+<p>Fertig :-)</p>
+<h2 id="rumex-auf-dich-einstellen"><a href="#rumex-auf-dich-einstellen">Rumex auf dich einstellen</a></h2>
+<p>Nach der Installation muss Rumex noch auf dich eingestellt werden.</p>
+<ul>
+<li>URL</li>
+<li>Impressum</li>
+<li>Kopf / Fusszeile</li>
+<li>Logo</li>
+<li>usw.</li>
+</ul>
+<p>Eine Kurzbeschreibung findest du nach der Installation, <code>make show</code> oder <a href="#kurzbeschreibung-die-nach-der-installation-angezeigt-wird">hier</a>.</p>
 <h2 id="installation-auf-dem-github.com-server"><a href="#installation-auf-dem-github.com-server">Installation auf dem github.com Server</a></h2>
+<p>@todo</p>
 <ul>
 <li>Einrichten eines github.com Zugangs</li>
 <li>Arbeits- Repository auf den AP<sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> holen</li>
@@ -116,96 +135,65 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><code>make online</code> - Fertig.</li>
 </ul>
 <h2 id="installation-auf-einen-nicht-github.com-server"><a href="#installation-auf-einen-nicht-github.com-server">Installation auf einen nicht github.com Server</a></h2>
+<h3 id="datei-upload-per-git"><a href="#datei-upload-per-git">Datei upload per git</a></h3>
+<p>@todo</p>
 <p>Auf der Seite <a href="http://rumex.it-bayer.de">rumex.it-bayer.de</a> findet man eine Beschreibung wie man den rumex Baukasten auf einen <strong>nicht</strong> <code>github.com</code> Server installiert.</p>
-<h2 id="einrichten-der-seite"><a href="#einrichten-der-seite">Einrichten der Seite</a></h2>
-<p>ZIP Datei holen</p>
-<pre><code>wget https://github.com/itbayer/rumex/archive/gh-pages.zip</code></pre>
-<p>und entpacken</p>
-<pre><code>unzip gh-pages.zip</code></pre>
-<p>Verzeichnis umbenennen</p>
-<pre><code>mv rumex-gh-pages/ neue_seite</code></pre>
-<p>In das neue Verzeichnis wechseln</p>
-<pre><code>cd neue_seite</code></pre>
-<p>…und aufräumen @todo <code>make clean</code></p>
-<pre><code>rm *.html *.xml</code></pre>
-<p>in das <code>rumex</code> Verzeichnis wechseln</p>
-<pre><code>cd rumex</code></pre>
-<p>alle <code>rx??</code> Dateien löschen die nicht gebraucht werden</p>
-<pre><code>rm beschreibung.rx3s
-rm github.rx0   
-rm historie.rx0s
-rm index.rx0x
-rm ohnevorspann.rx0v
-rm sandkasten.rx6v
-rm sitemap.rx0v
-rm todo.rx1v
-rm versteckt.rx0v
-rm weiterleitung.rx0w</code></pre>
-<p><code>impressum.rx0x</code>, <code>rss.rx0x</code>, <code>start.rx0s</code> anpassen</p>
-<p><code>make all</code> ausführen und neue Seite ansehen <code>x-www-browser ../index.html&amp;</code> @todo: <code>make show</code> bauen.</p>
-<p>@todo: Vorlage der Seiten impressum, rss, start erstellen Verzeichnis template. make install Befehl bauen.</p>
-<pre><code>rm rx*, cp template/rx_vorlagen/* ., </code></pre>
-<!-- Notizen
-
-- Holen der ZIP Datei und entpacken `/tmp`
-- Verzeichnis für die HP erstellen
-
-### Grund Gerüste bauen
-
-Kopieren der Dateien 
-
-- Die Datei `robots.txt`
-- Die Datei `readme.md` (github Installation)
-
-Kopieren der Verzeichnisse 
-- `rumex/`
-- `bin/`
-- `template/`
-
-Erstellen des Verzeichnisses `bilder`
-
-## Anpassung
-
-readme.md
-:   Nur bei github Installation erforderlich
-
-robots.txt
-:   Anpassen der `sitemap.xml`
-    
-        Sitemap: http://www.meine_seite.tdl/sitemap.xml
-
-
-template/config.makefile
-:   In dieser Datei befinden sich die Einstellungen für die make
-    Verarbeitung.
-    Die Wichtigsten Einstellungen sind:
-    
-    **Überschrift der Startseite**
-        
-        # ##############################################################
-        # Überschriften für die Index Seite
-        U1="Meine neue Seite" 
-        U2="Kanu Fahrt 2013"
-        U3="Hans Dampf"
-    
-    **Überschrift des RSS Feed**
-    
-        RSS_TITLE = "Kanu Fahrt 2013 - Hans Dampf"
-    
-    
-
-template/fuss.html
-:   In dieser Datei muss die Copyright Zeile anpassen.
-    Eine codierte E-Mail Angabe bekommt man wenn,
-    man sich später eine Seite mit E-Mail erstellt und
-    den Quellcode aus dieser Seite kopiert.
-    Für den Anfang einfach einen HTML Quelltext verwenden
-    oder weglassen.
-
--->
+<h3 id="datei-upload-per-ftp"><a href="#datei-upload-per-ftp">Datei upload per ftp</a></h3>
+<p>@todo</p>
+<h2 id="kurzbeschreibung-die-nach-der-installation-angezeigt-wird"><a href="#kurzbeschreibung-die-nach-der-installation-angezeigt-wird">Kurzbeschreibung die nach der Installation angezeigt wird</a></h2>
+<h3 id="gratulation-rumex-ist-fertig-installiert"><a href="#gratulation-rumex-ist-fertig-installiert">Gratulation rumex ist fertig installiert</a></h3>
+<p>Du musst aber noch ein paar Dateien angepasst oder besser gesagt rumex auf deine Adresse einstellen.</p>
+<dl>
+<dt>../robots.txt</dt>
+<dd><p>Um den Suchmaschinen den Link zu deiner <code>sitemap.xml</code> zu zeigen muss hinter der Zeile <code>Sitemap:</code> die URL deiner Seite eingetragen werden.</p>
+<p><strong>Beispiel:</strong></p>
+<pre><code>Sitemap: http://deine.seite.tdl/sitemap.xml</code></pre>
+</dd>
+<dt>../bin/config.makefile</dt>
+<dd><p>In dieser Datei sind alle Variablen die die vom <code>make</code> Programm verwendet werden hinterlegt. Für die Überschrift der index Seite sind die Zeilen U1 bis U3 zuständig.</p>
+<pre><code>U1=&quot;Der(Ein) HomePage Sand(Bau)kasten&quot; 
+U2=&quot;IT Bayer&#39;s rumex&quot;
+U3=&quot;</code></pre>
+<p>Für die Links der sitemap Erstellung ist dieser Parameter</p>
+<pre><code>URL=&quot;http://www.it-bayer.de/rumex&quot;</code></pre>
+<p>zuständig.</p>
+<p>Für den RSS Titel in den HTML Dateien ist diese Zeile zuständig</p>
+<pre><code>RSS_TITEL = &quot;Neuigkeiten von rumex Baukasten&quot;</code></pre>
+</dd>
+<dt>../inc/fuss.html</dt>
+<dd><p>In dieser Datei findest du einen HTML Quelltext der am Ende jeder Seite angezeigt wird. Überschreibe einfach die Vorgabe oder erstelle dir eine ganz eigene Fusszeile. Die codierte E-Mail Adresse bekommst du, wenn du in einer <code>rx??</code> Datei einen E-Mail Link einbaust</p>
+<pre><code>[deine@email.adresse](mailto:deine@email.adresse)</code></pre>
+<p>die Seite erstellst <code>make html</code> und dann im Quelltext die Zeile kopierst.</p>
+</dd>
+<dt>../css/rumex.png</dt>
+<dd><p>Hier findet man das Seitenbild, bzw. den Schriftzug “IT Bayer’s rumex”. Im Verzeichnis <code>../inc/gimp/</code> findest du auch die GIMP Version dieses Bildes. Beim Anpassen solltest du darauf achten dass dieses Bild nicht breiter als <code>100px</code> wird.</p>
+</dd>
+</dl>
+<p>Und dann gibt es im rumex Ordner noch die drei <code>rx??</code> Dateien die bei der Installation erstellt wurden.</p>
+<ul>
+<li>start.rx0s (diese Datei)</li>
+<li>impressum.rx0x</li>
+<li>rss.rx0x</li>
+</ul>
+<p>Mehr Informationen zu diesem Baukasten findest du in der <a href="http://www.it-bayer.de/rumex/beschreibung.html">rumex Beschreibung</a>.</p>
+<!-- vim: set ft=pandoc: -->
 
 
 
+
+<h2 id="rumex-nix-voraussetzungen"><a href="#rumex-nix-voraussetzungen">rumex *nix Voraussetzungen</a></h2>
+<p>Rumex ist auf ein *nix System ausgerichtet. Auf diesem sollten folgende Programme installiert sein:</p>
+<ul>
+<li>bash</li>
+<li>make</li>
+<li>perl</li>
+<li>git</li>
+<li>ftpclient</li>
+<li>pandoc</li>
+<li>imagemagick</li>
+<li>texlive</li>
+</ul>
+<p>Wobei <code>bash</code>, <code>make</code> und <code>perl</code> bei jeder <code>*nix</code> Installation bereits vorhanden sein dürft. Die restlichen Programme müssen nach installiert werden. <code>texlive</code> wird nur gebraucht wenn man auch PDF Dateien erstellen möchte. Ein <code>ftpclient</code> wird nur gebraucht wenn man die Daten per FTP hoch laden möchte.</p>
 <h1 id="aufbau-des-rumex-baukastens"><a href="#aufbau-des-rumex-baukastens">Aufbau des rumex Baukastens</a></h1>
 <h2 id="root-verzeichnis"><a href="#root-verzeichnis">root Verzeichnis</a></h2>
 <p>Im <code>root</code> Verzeichnis findet man alle <code>HTML</code> Dateien der Seite. Diese werde vom Baukasten erstellt und müssen nicht von Hand verändert werden. Zusätzlich findet man noch ein folgende Systemdateien:</p>
@@ -341,6 +329,7 @@ Auf der index.html erscheint an dieser Stelle der Link
 
 Ab hier geht dann der Inhlat der eigentlichen Seite los.</code></pre>
 <h2 id="template"><a href="#template">Template</a></h2>
+<p>@todo</p>
 <p>Änderung gegenüber des Original <code>pandoc</code> Templates.</p>
 <pre class="sourceCode diff"><code class="sourceCode diff"><span class="dt">5c5</span>
 <span class="st">&lt;   &lt;meta name=&quot;generator&quot; content=&quot;pandoc&quot;&gt;</span>
@@ -403,8 +392,8 @@ Zusätzlich ist diese Datei auch als `rss.html` unter
 &lt;http://www.it-bayer.de/rumex/rss.html&gt; verfügbar.
 
 </code></pre>
-<h1 id="steuerung"><a href="#steuerung">Steuerung</a></h1>
-<p>Gesteuert wird der Baukasten mittels <code>make</code> im Unterverzeichnis <code>rumex</code>. Folgende <code>make</code> Befehle stehen dabei zur Verfügung.</p>
+<h1 id="make-steuerung"><a href="#make-steuerung">make Steuerung</a></h1>
+<p>@todo Gesteuert wird der Baukasten mittels <code>make</code> im Unterverzeichnis <code>rumex</code>. Folgende <code>make</code> Befehle stehen dabei zur Verfügung.</p>
 <dl>
 <dt>make html</dt>
 <dd><p>Erstellt die einzelnen html Dateien. Hier kann auch nur <code>make</code> verwendet werden.</p>
@@ -422,20 +411,6 @@ Zusätzlich ist diese Datei auch als `rss.html` unter
 <dd><p>Erstellt Bilder in verschiedenen Auflösungen.</p>
 </dd>
 </dl>
-<h1 id="einrichten-einer-neue-seite"><a href="#einrichten-einer-neue-seite">Einrichten einer neue Seite</a></h1>
-<p>@todo</p>
-<h1 id="installation-1"><a href="#installation-1">Installation</a></h1>
-<p>Der Baukasten verwendet folgende Programme:</p>
-<ul>
-<li>bash</li>
-<li>make</li>
-<li>perl</li>
-<li>git</li>
-<li>pandoc</li>
-<li>imagemagick</li>
-<li>texlive</li>
-</ul>
-<p>Wobei <code>bash</code>, <code>make</code> und <code>perl</code> bei jeder <code>*nix</code> Installation bereits vorhanden sein dürft. Die restlichen Programme müssen nach installiert werden. <code>texlive</code> wird nur gebraucht wenn man auch PDF Dateien erstellen möchte.</p>
 <h1 id="update"><a href="#update">Update</a></h1>
 <p>@todo</p>
 <!-- vim: set ft=pandoc: -->
