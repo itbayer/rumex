@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <!-- rumex Version -->
-  <meta name="generator" content="pandoc rumex 0.4.5">
+  <meta name="generator" content="pandoc rumex 0.4.6">
   <!-- rumex Suchmaschine -->
   <meta name="robots" content="noindex,nofollow,noarchive">
   <title>Start</title>
@@ -14,14 +14,14 @@
   <!-- rumex RSS -->
   <link rel="alternate" type="application/rss+xml" title="" href="../rss.xml" />
   <!-- header.html -->
-  <link rel="stylesheet" type="text/css" href="template/all.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="template/screen.css" media="screen" />
-  <link rel="stylesheet" type="text/css" href="template/print.css" media="print" />
+  <link rel="stylesheet" type="text/css" href="css/all.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/screen.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
 </head>
 <body>
 <!-- kopf.html -->
 <div id="kopf">
-	<a href="index.html"><img src="template/blind.png" width="80"
+	<a href="index.html"><img src="css/blind.png" width="80"
 		height="700" alt="zur Startseite"></a>
 </div>
 <header>
@@ -36,19 +36,22 @@
 <p><strong>Beispiel:</strong></p>
 <pre><code>Sitemap: http://deine.seite.tdl/sitemap.xml</code></pre>
 </dd>
-<dt>../template/config.makefile</dt>
+<dt>../bin/config.makefile</dt>
 <dd><p>In dieser Datei sind alle Variablen die die vom <code>make</code> Programm verwendet werden hinterlegt. Für die Überschrift der index Seite sind die Zeilen U1 bis U3 zuständig.</p>
 <pre><code>U1=&quot;Der(Ein) HomePage Sand(Bau)kasten&quot; 
 U2=&quot;IT Bayer&#39;s rumex&quot;
 U3=&quot;</code></pre>
+<p>Für die Links der sitemap Erstellung ist dieser Parameter</p>
+<pre><code>URL=&quot;http://www.it-bayer.de/rumex&quot;</code></pre>
+<p>zuständig.</p>
 </dd>
-<dt>../template/fuss.html</dt>
+<dt>../inc/fuss.html</dt>
 <dd><p>In dieser Datei findest du einen HTML Quelltext der am Ende jeder Seite angezeigt wird. Überschreibe einfach die Vorgabe oder erstelle dir eine ganz eigene Fusszeile. Die codierte E-Mail Adresse bekommst du, wenn du in einer <code>rx??</code> Datei einen E-Mail Link einbaust</p>
 <pre><code>[deine@email.adresse](mailto:deine@email.adresse)</code></pre>
 <p>die Seite erstellst <code>make html</code> und dann im Quelltext die Zeile kopierst.</p>
 </dd>
-<dt>../template/rumex.png</dt>
-<dd><p>Hier findet man das Seitenbild, bzw. den Schriftzug “IT Bayer’s rumex”. Im Verzeichnis <code>../template/gimp/</code> findest du auch die GIMP Version dieses Bildes. Beim Anpassen solltest du darauf achten dass dieses Bild nicht breiter als <code>100px</code> wird.</p>
+<dt>../css/rumex.png</dt>
+<dd><p>Hier findet man das Seitenbild, bzw. den Schriftzug “IT Bayer’s rumex”. Im Verzeichnis <code>../inc/gimp/</code> findest du auch die GIMP Version dieses Bildes. Beim Anpassen solltest du darauf achten dass dieses Bild nicht breiter als <code>100px</code> wird.</p>
 </dd>
 </dl>
 <p>Und dann gibt es im rumex Ordner noch die drei <code>rx??</code> Dateien die bei der Installation erstellt wurden.</p>

@@ -50,14 +50,14 @@ sitemap:
 # #######################################################
 # Sitemap XML Datei erstellen
 sitemapxml:
-	$(SITEMAP_XML) > $(SITEMAP_XML_FILE)
+	$(SITEMAP_XML) $(URL) > $(SITEMAP_XML_FILE)
 
 
 # #######################################################
 # Sitemap rx?? Datei erstellen. Die eigentliche rss.html
 # wird dann durch make html erstellt.
 sitemaprx:
-	$(SITEMAP_RX) > $(SITEMAP_RX_FILE)
+	$(SITEMAP_RX) $(URL) > $(SITEMAP_RX_FILE)
 
 
 # #######################################################

@@ -2,8 +2,6 @@
 
 use strict;
 
-my $url = "http://www.it-bayer.de/rumex";
-
 =head1 sitemap_rx.pl 
 
 =encoding utf-8

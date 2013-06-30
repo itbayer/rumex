@@ -2,8 +2,8 @@
 
 use strict;
 
-# @todo URL global legen
-my $url = "http://www.it-bayer.de/rumex";
+# URL aus erstem Parameter lesen, wird vom make Aufruf übergeben
+my $url = "$ARGV[0]";
 
 =head1 make_sitemap.pl 
 

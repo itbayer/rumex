@@ -2,6 +2,10 @@
 # config.makefile
 # #############################################
 
+# #############################################
+# URL der Seite
+URL="http://www.it-bayer.de/rumex"
+
 # ##############################################################
 # Überschriften für die Index Seite
 U1="Der(Ein) HomePage Sand(Bau)kasten" 
@@ -11,10 +15,10 @@ U3=""
 
 # ##############################################################
 #
-HTML_TEMPLATE = ../template/html.template
-KOPF_TEMPLATE = ../template/kopf.html
-HEADER_TEMPLATE = ../template/header.html
-FUSS_TEMPLATE = ../template/fuss.html 
+HTML_TEMPLATE = ../inc/html.template
+KOPF_TEMPLATE = ../inc/kopf.html
+HEADER_TEMPLATE = ../inc/header.html
+FUSS_TEMPLATE = ../inc/fuss.html 
 
 
 # ##############################################################

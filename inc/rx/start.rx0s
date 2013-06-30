@@ -2,6 +2,7 @@
 %
 %
 
+
 ## Gratulation rumex ist fertig installiert
 
 Du musst aber noch ein paar Dateien angepasst
@@ -18,18 +19,23 @@ oder besser gesagt rumex auf deine Adresse einstellen.
 		Sitemap: http://deine.seite.tdl/sitemap.xml
 
 
-../template/config.makefile
+../bin/config.makefile
 :	In dieser Datei sind alle Variablen die die vom  `make` Programm
 	verwendet werden hinterlegt.
 	Für die Überschrift der index Seite sind die Zeilen
 	U1 bis U3 zuständig.
-
+	
 		U1="Der(Ein) HomePage Sand(Bau)kasten" 
 		U2="IT Bayer's rumex"
 		U3="
+		
+	Für die Links der sitemap Erstellung ist dieser Parameter
+	
+		URL="http://www.it-bayer.de/rumex"
+		
+	zuständig.
 
-
-../template/fuss.html
+../inc/fuss.html
 :	In dieser Datei findest du einen HTML Quelltext
 	der am Ende jeder Seite angezeigt wird.
 	Überschreibe einfach die Vorgabe oder erstelle dir
@@ -42,9 +48,9 @@ oder besser gesagt rumex auf deine Adresse einstellen.
 	die Seite erstellst `make html` und dann im Quelltext
 	die Zeile kopierst.
 	
-../template/rumex.png
+../css/rumex.png
 :	Hier findet man das Seitenbild, bzw. den Schriftzug "IT Bayer's rumex".
-	Im Verzeichnis `../template/gimp/` findest du auch die GIMP
+	Im Verzeichnis `../inc/gimp/` findest du auch die GIMP
 	Version dieses Bildes.
 	Beim Anpassen solltest du darauf achten dass dieses Bild nicht
 	breiter als `100px` wird.

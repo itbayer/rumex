@@ -28,8 +28,8 @@ if ((i)); then
 	rm *.rx*
 	echo ""
 
-	echo "Kopiere die Vorlagen aus dem template Verzeichnis"
-	cp ../template/rx/*.rx* .
+	echo "Kopiere die Vorlagen aus dem inc Verzeichnis"
+	cp ../inc/rx/*.rx* .
 	echo ""
 
 	echo "Dateien anpassen und dann ..."

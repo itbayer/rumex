@@ -9,7 +9,8 @@ User-agent: *
 
 Disallow: /bin/
 Disallow: /rumex/
-Disallow: /template/
+Disallow: /css/
+Disallow: /inc/
 Disallow: /readme.md
 Disallow: /CNAME
 Disallow: /.git
