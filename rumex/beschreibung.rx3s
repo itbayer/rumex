@@ -51,7 +51,13 @@ Genau das soll Rumex auch sein "ein Lückenfüller" für alle die ... Systeme sa
 
 
 
-# Installation
+# Installation und Einrichten des Rumex Baukastens
+
+@todo
+
+- warum 2 mal? lokal server
+
+## Installation auf dem lokalen Arbeitsplatz
 
 Für die Installation auf deinem Rechner musst du dir zu erst
 das ZIP Archiv vom github Server holen und entpacken
@@ -78,11 +84,11 @@ Nach der Installation muss Rumex noch auf dich eingestellt werden.
 - Logo
 - usw.
 
-Eine Kurzbeschreibung findest du nach der Installation, `make show`
-oder [hier][Kurzbeschreibung die nach der Installation angezeigt wird].
+Eine Kurzbeschreibung findest du nach der lokalen Installation, `make show`
+oder [hier][Kurzbeschreibung die nach der lokalen Installation angezeigt wird]
 
 
-## Installation auf dem github.com Server
+## Seite auf einem github.com Server einrichten
 
 @todo
 
@@ -99,7 +105,7 @@ oder [hier][Kurzbeschreibung die nach der Installation angezeigt wird].
 
 
 
-## Installation auf einen nicht github.com Server
+## Seite auf einem nicht github.com Server einrichten
 
 
 ### Datei upload per git
@@ -116,7 +122,7 @@ eine Beschreibung wie man den rumex Baukasten auf einen **nicht**
 
 
 
-## Kurzbeschreibung die nach der Installation angezeigt wird
+## Kurzbeschreibung die nach der lokalen Installation angezeigt wird
 
 ### Gratulation rumex ist fertig installiert
 
