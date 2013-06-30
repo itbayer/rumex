@@ -14,16 +14,29 @@
 | BildBeschreibung: Aktuelles und Neuigkeiten von der rumex Seite.
 -->
 
+
+# rumex bekommt einen Verzeichnisschutz auf System Verzeichnisse{.xx8}
+
+<!-- 
+| Link: http://www.it-bayer.de/rumex/historie.html#v0.4.7
+| Autor: IT-Bayer
+| Kategorie: Neues
+-->
+
+Um die Systemverzeichnisse nicht nur durch eine Weiterleitung zu schützen
+wurde eine `.htaccess` Datei eingebaut.
+[...weiter lesen](http://www.it-bayer.de/rumex/historie.html#v0.4.7)
+
 # rumex bekommt ein Installationsskript{.xx7}
 
 <!-- 
-| Link: http://www.it-bayer.de/rumex/historie.html#0.4.5
+| Link: http://www.it-bayer.de/rumex/historie.html#v0.4.5
 | Autor: IT-Bayer
 | Kategorie: Neues
 -->
 
 In rumex wurde um ein kleines Installationsskript eingebaut.
-[...weiter lesen](http://www.it-bayer.de/rumex/historie.html)
+[...weiter lesen](http://www.it-bayer.de/rumex/historie.html#v0.4.5)
 
 # rumex bekommt sein eigenes Verzeichnis{.xx6}
 
@@ -35,7 +48,7 @@ In rumex wurde um ein kleines Installationsskript eingebaut.
 
 rumex bekommt sein eigenes Verzeichnis und seine eigene Datei
 Erweiterung.
-[...weiter lesen](http://www.it-bayer.de/rumex/historie.html)
+[...weiter lesen](http://www.it-bayer.de/rumex/historie.html#v0.4.0)
 
 
 # rumex bekommt jetzt auch einen sitemap.html{.xx5}
@@ -46,7 +59,7 @@ Erweiterung.
 | Kategorie: Neues
 -->
 
-Nach der `sitemap.xml` kann rumex jetzt auch eine `sitemap.html` erstellen. [...weiter lesen](http://www.it-bayer.de/rumex/historie.html)
+Nach der `sitemap.xml` kann rumex jetzt auch eine `sitemap.html` erstellen. [...weiter lesen](http://www.it-bayer.de/rumex/historie.html#v0.3.7)
 
 
 
