@@ -16,6 +16,11 @@ use strict;
 use warnings;
 use utf8;
 
+
+# URL aus erstem Parameter lesen, wird vom make Aufruf übergeben
+my $url = "$ARGV[0]";
+
+
 =head3 rss.rx0x
 
 Datei aus der der Inhalt für die Datei rss.xml gelesen wird
@@ -144,7 +149,7 @@ print <<EOF1;
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-	<atom:link href="http://www.it-bayer.de/rumex/rss.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="$url" rel="self" type="application/rss+xml" />
 		<title>$kopf{'titel'}</title>
 		<description>
 			<![CDATA[
