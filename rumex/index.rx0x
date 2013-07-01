@@ -1,13 +1,21 @@
-% Der(Ein) HomePage Sand(Bau)kasten
 % IT Bayer's rumex
+% Der(Ein) HomePage Sand(Bau)kasten
 % github.com Version
 
 <div class="indexliste">
 
-Dies ist ein Versuch mit `pandoc's markdown` und ein paar Skripten eine Internetseite zu erstellen und zu verwalten.
+Dies ist ein Projekt das mit `pandoc's markdown` und ein paar 
+Skripten eine Internetseite erstellt und verwalten.
 
-Die Seite bzw. die Entwicklung liegt auf [github.com](http://github.com),
-der aktuelle Stand kann als [ZIP Datei herunter geladen](https://github.com/itbayer/rumex/archive/gh-pages.zip) werden.
+Gehostet werden kann das System auf [github.com](http://github.com)
+wo auch diese Seite zu finden ist aber auch auf Servern
+mit git Unterstützung oder mit einem einfachen FTP Zugang
+kann dieses System verwendet werden.
+
+* [Beispiel der Seite auf einem Server mit git Unterstützung](http://rumex.it-bayer.de)
+* [Beispiel der Seite auf einem Server mit FTP Zugang](http://rumex.html-5.me)
+
+Der aktuelle Stand dieses Baukastens kann als [ZIP Datei herunter geladen](https://github.com/itbayer/rumex/archive/gh-pages.zip) werden.
 
 Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.de> verwendet.
 
