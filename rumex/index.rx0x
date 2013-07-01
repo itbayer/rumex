@@ -26,17 +26,24 @@ Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.
 
 *2013-07-01*
 
+# Historie
 
-# Beschreibung des Rumex Baukastens
+## V0.4.8
+
+rumex kann jetzt auch mit FTP umgehen.
+Dazu muss das Programm `wput` installiert und
+in der `bin/config.mainfile` die Variable
+
+	FTP = "ftp://USER:PASS@SERVER:PORT/WWW_DIR/"
+
+gesetzt werden.
 
 
-Hier findest du die Beschreibung des rumex Baukastens.
-Zur Zeit ist hier noch vieles durcheinander da ich
-mehr am System als an der Beschreibung bastle.
-Du kannst aber schon mal gerne rein schauen.
 
 
-[... weiter lesen](beschreibung.html)
+
+
+[... weiter lesen](historie.html)
 
 ---
 
@@ -48,23 +55,17 @@ Du kannst aber schon mal gerne rein schauen.
 
 *2013-07-01*
 
-# Historie
 
-## V0.4.7
-
-Verzeichnisschutz `.htaccess` eingebaut.
-Geschützt werden die Verzeichnisse:
-
-- bin
-- inc
-- rumex
+# Beschreibung des Rumex Baukastens
 
 
+Hier findest du die Beschreibung des rumex Baukastens.
+Zur Zeit ist hier noch vieles durcheinander da ich
+mehr am System als an der Beschreibung bastle.
+Du kannst aber schon mal gerne rein schauen.
 
-<https://github.com/itbayer/rumex/archive/0.4.7.zip>
 
-
-[... weiter lesen](historie.html)
+[... weiter lesen](beschreibung.html)
 
 ---
 

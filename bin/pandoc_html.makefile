@@ -2,7 +2,7 @@
 # pandoc_html.makefile
 # ##############################################
 
-META_GENERATOR = "pandoc rumex 0.4.7"
+META_GENERATOR = "pandoc rumex 0.4.8"
 
 # ##############################################
 # HTML Datei ohne Inhaltsverzeichnis

@@ -25,6 +25,22 @@
 
 
 <item>
+	<title>rumex kann jetzt auch mit FTP umgehen</title>
+	<description>
+	<![CDATA[
+
+<p>Eine FTP Unterstützung wurde mit <code>wput</code> realisiert.</p>
+
+]]>
+	</description>
+		<link>http://www.it-bayer.de/rumex/historie.html#v0.4.8</link>
+		<guid>http://www.it-bayer.de/rumex/historie.html#v0.4.8</guid>
+		<dc:creator>IT-Bayer</dc:creator>
+		<category><![CDATA[Neues]]></category>
+</item>
+
+
+<item>
 	<title>rumex bekommt einen Verzeichnisschutz auf System Verzeichnisse</title>
 	<description>
 	<![CDATA[
