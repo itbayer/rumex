@@ -19,7 +19,7 @@ oder besser gesagt rumex auf deine Adresse einstellen.
 		Sitemap: http://deine.seite.tdl/sitemap.xml
 
 
-../bin/config.makefile
+../bin/user.config.makefile
 :	In dieser Datei sind alle Variablen die die vom  `make` Programm
 	verwendet werden hinterlegt.
 	Für die Überschrift der index Seite sind die Zeilen
