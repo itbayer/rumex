@@ -26,12 +26,17 @@ all:
 
 
 # ######################################################
-# Seite mit git hoch laden
+# Seite online stellen. Wenn die FTP Variable in config.makefile
+# gesetzt ist wput.sh verwenden, sonst mit git.
 online:
+ifdef FTP
 	make -s all
+	../bin/wput.sh $(FTP)
+else
 	git add ../.
 	git commit -a -m"...."
 	git push
+endif
 
 
 # #######################################################
@@ -95,3 +100,9 @@ install:
 # index.html im Standard Browser öffnen
 show:
 	x-www-browser ../index.html &
+
+# ######################################################
+# Online Seite öffnen
+wwwshow:
+	x-www-browser $(URL) &
+
