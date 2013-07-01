@@ -3,18 +3,46 @@
 # #############################################
 
 # #############################################
+# SEITEN EINSTELLUNG :: Bitte anpassen
+# #############################################
+
 # URL der Seite
 URL="http://www.it-bayer.de/rumex"
 
-# ##############################################################
 # Überschriften für die Index Seite
 U1="Der(Ein) HomePage Sand(Bau)kasten" 
 U2="IT Bayer's rumex"
 U3="github.com Version"
 
+# RSS Überschrift
+RSS_TITEL = "Neuigkeiten von rumex Baukasten"
 
 # ##############################################################
+# FTP URL / Zugangsdaten. Ist diese Variabel gesetzt wird das 
+# Programm wput bzw. bin/wput.sh verwendet um die Daten auf
+# den Server zu laden. Wenn die Variabel kommentiert ist (Standard)
+# wird git verwendet.
+# FTP = "ftp://USER:PASS@SERVER:PORT/WWW_DIR/"
+
+
+
+
+
+
+
+# ##############################################################
+# ##############################################################
 #
+# SYSTEM VARIABEL
+#
+# Diese müssen für den Standard Betrieb nicht geändert werden.
+#
+# ##############################################################
+# ##############################################################
+
+
+# ##############################################################
+# HTML Template 
 HTML_TEMPLATE = ../inc/html.template
 KOPF_TEMPLATE = ../inc/kopf.html
 HEADER_TEMPLATE = ../inc/header.html
@@ -34,10 +62,10 @@ INDEX="../bin/index.pl"
 
 
 # ##############################################################
-# RSS Feed
+# RSS Feed 
 
+# Name der RSS Feed Datei
 RSS_FILE = "rss.xml"
-RSS_TITEL = "Neuigkeiten von rumex Baukasten"
 
 # Programm zum erstellen des RSS Feed
 RX2RSS = "../bin/rx2rss.pl"
@@ -69,10 +97,4 @@ BVZ="../bilder"
 PANDOC = pandoc
 # PANDOC = /usr/bin/pandoc
 
-# ##############################################################
-# FTP URL / Zugangsdaten. Ist diese Variabel gesetzt wird das 
-# Programm wput bzw. bin/wput.sh verwendet um die Daten auf
-# den Server zu laden. Wenn die Variabel kommentiert ist
-# wird git verwendet.
-#FTP = "ftp://USER:PASS@SERVER:PORT/WWW_DIR/"
 
