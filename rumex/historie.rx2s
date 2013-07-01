@@ -6,6 +6,22 @@
 # Historie
 -->
 
+## V0.4.8
+
+rumex kann jetzt auch mit FTP umgehen.
+Dazu muss das Programm `wput` installiert und
+in der `bin/config.mainfile` die Variable
+
+	FTP = "ftp://USER:PASS@SERVER:PORT/WWW_DIR/"
+
+gesetzt werden.
+
+
+
+
+
+
+<!-- schnipp -->
 ## V0.4.7
 
 Verzeichnisschutz `.htaccess` eingebaut.
@@ -20,7 +36,6 @@ Geschützt werden die Verzeichnisse:
 <https://github.com/itbayer/rumex/archive/0.4.7.zip>
 
 
-<!-- schnipp -->
 
 
 
