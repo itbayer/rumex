@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 	<atom:link href="http://www.it-bayer.de/rumex/rss.xml" rel="self" type="application/rss+xml" />
-		<title>Rumex - Ein Home Page Baukasten</title>
+		<title>IT Bayers Rumex - Ein Home Page Baukasten</title>
 		<description>
 			<![CDATA[
 			Aktuelles und Neuigkeiten vom rumex Home Page Baukasten
@@ -12,7 +12,7 @@
 		<language>de-DE</language>
 
 		<image>
-			<title>Rumex - Ein Home Page Baukasten</title>
+			<title>IT Bayers Rumex - Ein Home Page Baukasten</title>
 			<url>http://www.it-bayer.de/rumex/bilder/rss_200_.png</url>
 			<link>http://www.it-bayer.de/rumex/</link>
 			<description>
