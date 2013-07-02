@@ -10,7 +10,7 @@ my $url = "$ARGV[0]";
 =encoding utf-8
 
 Aufruf:
-	bin/make_sitemap.pl > sitemap.xml
+	./.bin/make_sitemap.pl > sitemap.xml
 
 	oder
 

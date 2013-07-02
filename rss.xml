@@ -25,6 +25,22 @@
 
 
 <item>
+	<title>rumex Systemverzeichnisse werden dot Verzeichnisse </title>
+	<description>
+	<![CDATA[
+
+<p>Die rumex Systemverzeichnisse wurde auf dot Verzeichnisse, nicht sichtbare Verzeichnisse, umbenannt.</p>
+
+]]>
+	</description>
+		<link>http://www.it-bayer.de/rumex/historie.html#v0.5</link>
+		<guid>http://www.it-bayer.de/rumex/historie.html#v0.5</guid>
+		<dc:creator>IT-Bayer</dc:creator>
+		<category><![CDATA[Neues]]></category>
+</item>
+
+
+<item>
 	<title>rumex kann jetzt auch mit FTP umgehen</title>
 	<description>
 	<![CDATA[

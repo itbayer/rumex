@@ -31,7 +31,7 @@ all:
 online:
 ifdef FTP
 	make -s all
-	../bin/wput.sh $(FTP)
+	../.bin/wput.sh $(FTP)
 else
 	git add ../.
 	git commit -a -m"...."
@@ -98,7 +98,7 @@ bclean:
 # #######################################################
 # rumex Verzeichnis löschen und Vorlage kopieren
 install:
-	../bin/install.sh
+	../.bin/install.sh
 
 # #######################################################
 # index.html im Standard Browser öffnen

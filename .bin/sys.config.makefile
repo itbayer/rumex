@@ -9,10 +9,10 @@
 
 # ##############################################################
 # HTML Template 
-HTML_TEMPLATE = ../inc/html.template
-KOPF_TEMPLATE = ../inc/kopf.html
-HEADER_TEMPLATE = ../inc/header.html
-FUSS_TEMPLATE = ../inc/fuss.html 
+HTML_TEMPLATE = ../.inc/html.template
+KOPF_TEMPLATE = ../.inc/kopf.html
+HEADER_TEMPLATE = ../.inc/header.html
+FUSS_TEMPLATE = ../.inc/fuss.html 
 
 
 # ##############################################################
@@ -24,7 +24,7 @@ META_ROBOTS_WEITERLEITUNG = "noindex,follow,noarchive"
 
 # ##############################################################
 # Programm zum erstellen der index.rx0x
-INDEX="../bin/index.pl"
+INDEX="../.bin/index.pl"
 
 
 # ##############################################################
@@ -34,20 +34,20 @@ INDEX="../bin/index.pl"
 RSS_FILE = "rss.xml"
 
 # Programm zum erstellen des RSS Feed
-RX2RSS = "../bin/rx2rss.pl"
+RX2RSS = "../.bin/rx2rss.pl"
 
 
 # ##############################################################
 # XML Sitemap
 
 # Programm zum erstellen der XML Sitemap Datei
-SITEMAP_XML = "../bin/sitemap_xml.pl"
+SITEMAP_XML = "../.bin/sitemap_xml.pl"
 
 # Zieldatei der Sitemap Datei
 SITEMAP_XML_FILE = "../sitemap.xml"
 
 # Programm zum erstellen der rx0v Sitemap Datei
-SITEMAP_RX = "../bin/sitemap_rx.pl"
+SITEMAP_RX = "../.bin/sitemap_rx.pl"
 
 # Zieldatei der HTML Sitemap Datei
 SITEMAP_RX_FILE = "sitemap.rx0v"

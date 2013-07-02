@@ -7,7 +7,7 @@ use strict;
 =encoding utf-8
 
 Aufruf:
-	../bin/sitemap_rx.pl > sitemap.rx0v
+	../.bin/sitemap_rx.pl > sitemap.rx0v
 
 	oder
 

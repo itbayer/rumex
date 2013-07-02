@@ -29,7 +29,7 @@ if ((i)); then
 	echo ""
 
 	echo "Kopiere die Vorlagen aus dem inc Verzeichnis"
-	cp ../inc/rx/*.rx* .
+	cp ../.inc/rx/*.rx* .
 	echo ""
 
 	echo "Dateien anpassen und dann ..."
