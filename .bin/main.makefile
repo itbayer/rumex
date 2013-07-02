@@ -29,6 +29,7 @@ all:
 # Seite online stellen. Wenn die FTP Variable in config.makefile
 # gesetzt ist wput.sh verwenden, sonst mit git.
 online:
+	make -s all
 ifdef FTP
 	make -s all
 	../.bin/wput.sh $(FTP)

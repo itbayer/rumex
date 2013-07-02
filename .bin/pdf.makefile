@@ -1,5 +1,5 @@
 # 
-# bin/pandoc_pdf.makefile
+# .bin/pdf.makefile
 #
 
 
