@@ -19,7 +19,7 @@ oder besser gesagt rumex auf deine Adresse einstellen.
 		Sitemap: http://deine.seite.tdl/sitemap.xml
 
 
-../bin/user.config.makefile
+../.bin/user.config.makefile
 :	In dieser Datei sind alle Variablen die die vom  `make` Programm
 	verwendet werden hinterlegt.
 	Für die Überschrift der index Seite sind die Zeilen
@@ -40,7 +40,7 @@ oder besser gesagt rumex auf deine Adresse einstellen.
 		RSS_TITEL = "Neuigkeiten von rumex Baukasten"
 
 
-../inc/fuss.html
+../.inc/fuss.html
 :	In dieser Datei findest du einen HTML Quelltext
 	der am Ende jeder Seite angezeigt wird.
 	Überschreibe einfach die Vorgabe oder erstelle dir
@@ -55,7 +55,7 @@ oder besser gesagt rumex auf deine Adresse einstellen.
 	
 ../css/rumex.png
 :	Hier findet man das Seitenbild, bzw. den Schriftzug "IT Bayer's rumex".
-	Im Verzeichnis `../inc/gimp/` findest du auch die GIMP
+	Im Verzeichnis `../.inc/gimp/` findest du auch die GIMP
 	Version dieses Bildes.
 	Beim Anpassen solltest du darauf achten dass dieses Bild nicht
 	breiter als `100px` wird.

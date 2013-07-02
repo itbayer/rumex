@@ -34,29 +34,6 @@ Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.
 
 *2013-07-02*
 
-# Historie
-
-## V0.5.0
-
-Die Systemverzeichnisse wurden auf dot Verzeichnisse, nicht sichtbare Verzeichnisse, umbenannt.
-
-* `bin` -> `.bin`
-* `inc` -> `.inc`
-* `rumex` -> `.rumex`
-
-
-[... weiter lesen](historie.html)
-
----
-
-</div>
-
-
-
-<div class="indexliste">
-
-*2013-07-02*
-
 
 # Beschreibung des Rumex Baukastens
 
@@ -68,6 +45,29 @@ Du kannst aber schon mal gerne rein schauen.
 
 
 [... weiter lesen](beschreibung.html)
+
+---
+
+</div>
+
+
+
+<div class="indexliste">
+
+*2013-07-02*
+
+# Historie
+
+## V0.5
+
+Die Systemverzeichnisse wurden auf dot Verzeichnisse, nicht sichtbare Verzeichnisse, umbenannt.
+
+* `bin` -> `.bin`
+* `inc` -> `.inc`
+* `rumex` -> `.rumex`
+
+
+[... weiter lesen](historie.html)
 
 ---
 

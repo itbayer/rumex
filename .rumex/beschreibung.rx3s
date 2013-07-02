@@ -140,7 +140,7 @@ oder besser gesagt rumex auf deine Adresse einstellen.
 		Sitemap: http://deine.seite.tdl/sitemap.xml
 
 
-../bin/config.makefile
+../.bin/config.makefile
 :	In dieser Datei sind alle Variablen die die vom  `make` Programm
 	verwendet werden hinterlegt.
 	Für die Überschrift der index Seite sind die Zeilen
@@ -162,7 +162,7 @@ oder besser gesagt rumex auf deine Adresse einstellen.
 
 
 
-../inc/fuss.html
+../.inc/fuss.html
 :	In dieser Datei findest du einen HTML Quelltext
 	der am Ende jeder Seite angezeigt wird.
 	Überschreibe einfach die Vorgabe oder erstelle dir
@@ -177,7 +177,7 @@ oder besser gesagt rumex auf deine Adresse einstellen.
 	
 ../css/rumex.png
 :	Hier findet man das Seitenbild, bzw. den Schriftzug "IT Bayer's rumex".
-	Im Verzeichnis `../inc/gimp/` findest du auch die GIMP
+	Im Verzeichnis `../.inc/gimp/` findest du auch die GIMP
 	Version dieses Bildes.
 	Beim Anpassen solltest du darauf achten dass dieses Bild nicht
 	breiter als `100px` wird.
@@ -256,7 +256,7 @@ template/
 	verschiedenen Tools eingebunden werden.
 	Auch Konfigurationsdateien sind hier zu finden.
 
-bin/
+.bin/
 :	Hier liegen die Skripte die zur Erstellung der
 	Seiten dienen.
 
@@ -322,7 +322,7 @@ gleich. Nur die Funktion der Einbindung ändert sich.
 Im Verzeichnis `pandoc` befinden sich Sonderseiten.
 
 rumex/index.rx0x
-:	Diese Datei wird vom Programm `bin/make_index.pl` erstellt,
+:	Diese Datei wird vom Programm `.bin/make_index.pl` erstellt,
 	muss somit nicht vorhanden sein.
 
 rumex/start.rx0s
@@ -336,7 +336,7 @@ rumex/rss.rx0x
 
 rumex/impressum.rx0x
 :	Datei für die Impressumsangaben. \
-	**Ist nicht zwingend erforderlich. Jedoch muss die `inc/fuss.html`
+	**Ist nicht zwingend erforderlich. Jedoch muss die `.inc/fuss.html`
 	entsprechende bearbeitet, der Link muss raus genommen, werden.**
 
 rumex/Makefile
