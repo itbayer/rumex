@@ -1,16 +1,25 @@
 # Ohne Vorspann `reines markdown`
 
 Diese Datei besitzt keinen typischen Vorspann
-wie er in diesem Baukasten verwendet wird.
+wie er im Rumex Baukasten verwendet wird.
 Das Aussehen entspricht mehr einer Standard
 `markdown` Datei.
 
-Diese Datei wird zwar vom System verarbeitet
-taucht aber, wenn die Datei die Endung
-`.md?`s` besitzt, in der index.html auf.
+~~~
+# Ohne Vorspann `reines markdown`
 
-Hie ist dann nur das Datum und ein `... weiter lesen` 
-zu finden.
+Diese Datei besitzt keinen typischen Vorspann
+wie er im Rumex Baukasten verwendet wird.
+Das Aussehen entspricht mehr einer Standard
+`markdown` Datei.
+~~~
 
-Will man eine Datei "ohne Vorspann" verwenden sollte man
+Da alle Dateien im .rumex Verzeichnis die die 
+Endung `rx?s` besitzen verarbeitet werden,
+tauchen diese auch in der index.html auf.
+Da aber der Vorspann fehlt wird hier nur
+das Datum und ein `... weiter lesen` 
+angezeigt.
+
+Für Dateien "ohne Vorspann" sollte man darum
 die Endungen `md?x` bzw. `md?v` verwenden.
