@@ -41,8 +41,12 @@ endif
 
 # #######################################################
 # RSS Datei erstellen
-rss:
+
+../rss.xml: rss.rx0x
 	$(RX2RSS) $(URL)/$(RSS_FILE) > ../$(RSS_FILE)
+
+rss: 
+	make -s ../rss.xml
 
 
 # #######################################################
