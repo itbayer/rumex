@@ -43,12 +43,12 @@ $include-before$
 $endfor$
 $if(title)$
 <header>
-<h1 class="title">$title$</h1>
+<h1 class="title"><a title="zur Startseite" href="index.html">$title$</a></h1>
 $for(author)$
-<h2 class="author">$author$</h2>
+<h2 class="author"><a title="zur Startseite" href="index.html">$author$</a></h2>
 $endfor$
 $if(date)$
-<h3 class="date">$date$</h3>
+<h3 class="date"><a title="zur Startseite" href="index.html">$date$</a></h3>
 $endif$
 </header>
 $endif$
