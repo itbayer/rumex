@@ -31,7 +31,6 @@ all:
 online:
 	make -s all
 ifdef FTP
-	make -s all
 	../.bin/wput.sh $(FTP)
 else
 	git add ../.
@@ -108,6 +107,6 @@ show:
 
 # ######################################################
 # Online Seite öffnen
-wwwshow:
+showwww:
 	x-www-browser $(URL) &
 
