@@ -2,7 +2,7 @@
 
 
 Ziel des Projektes ist es eine Homepage die auf [github.com](http://github.com) 
-gehostet werden zu erstellen.
+gehostet werden kann zu erstellen.
 Als Seiten Sprache wird `pandocs markdown` verwendet.
 Die Steuerung des Systems übernimmt `make` und `perl`.
 
@@ -12,16 +12,18 @@ ansehen.
 
 ## Newsletter
 
-Rumex besitzt eine RSS Feed Funktion. 
-Diese kann man sich [über diesern Link](http://www.it-bayer.de/rumex/rss.xml) abonnieren.
+Rumex besitzt eine RSS Feed Funktion der  
+[über diesern Link](http://www.it-bayer.de/rumex/rss.xml) 
+abonnieren werden kann.
 
 ## Kurz Übersicht 
 
 ### Seitenmenü
 
-Es gibt kein Seitenmenü, dafür liefert die `index.html` 
-eine Übersicht der einzelnen Seiten.
-Ein Kurztext / Vortext kann in den einzelnen Seiten hinterlegt werden.
+Es gibt kein Seitenmenü. `index.html` 
+liefert eine Übersicht der einzelnen Seiten.
+In den einzelnen Seiten kann dazu ein Kurztext / Vortext 
+eingebaut werden.
 Die Übersicht der Seiten wird chronologisch sortiert.
 
 ### Struktur durch Unterordner
@@ -38,15 +40,16 @@ aus ein paar `CSS` Anpassungen.
 ### Hosting
 
 Das Hosting der Seite übernimmt [github.com](http://github.com).
-Die HTML Dateien funktionieren aber auf jedem andern Internet Server.
+Die HTML Dateien funktionieren aber auf jedem andern Server,
+siehe [rumex.html-5.me](http://rumex.html-5.me).
 
-Wer einen Server mit installiertem `git` zur sein eigen nennt 
+Wer einen Server mit installiertem `git` sein eigen nennt 
 kann Rumex auch auf diesen installieren. 
-Eine Beschreibung findet man auf [rumex.it-bayer.de](http://rumex.it-bayer.de).
+Eine Beschreibung dazu findet man auf [rumex.it-bayer.de](http://rumex.it-bayer.de).
 
-### Pflege / Erstellung
+### System Voraussetzung
 
-Die Pflege bzw. Erstellung der Seite ist auf *nix Systeme ausgerichtet.
+Der Rumex Baukasten ist auf *nix Systeme ausgerichtet.
 
 ------------------------------------------------------------
 
