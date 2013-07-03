@@ -52,3 +52,18 @@ header, nav, #seite {
 }
 
 
+/* Anpassung moot.it */
+
+/* Zentrieren aus schalten 
+ * Standard ist: margin 0 auto;
+ */
+.moot {
+	margin: 0px !important;
+}
+
+/* Breite der Blog Kommentare auf 90% vergrößern
+ * Standard ist max-width: 36em;
+ */
+.is-threaded, .is-commenting {
+	max-width: 90% !important;
+}

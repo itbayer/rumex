@@ -21,45 +21,33 @@ Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.
 
 [^aktuell]: Es kann aber sein das hier nicht die aktuelle [rumex Version](http://www.it-bayer.de/rumex/) verwendet wird.
 
-## Kommentare
+# Kommentar Funktion eingebaut
 
-Nun ist es auch möglich Kommentare in die einzelnen Seiten
-einzubinden. Diese Funktion wird über die Plattform 
-[moot.it](http://moot.it) eingebunden.
+Nun ist es möglich Kommentare in die einzelnen Seiten, von Rumex,
+einzubinden. Die Funktion wird von der Plattform [moot.it][] 
+zur Verfügung gestellt.
+[moot.it][] ist zwar noch in der BETA Phase aber die Einfachheit und der Syntax, der zum schreiben der Kommentar und der Foren Einträge verwendet wird, passt gut zu Rumex.
 
-<a class="moot" href="https://moot.it/i/rumex/blog/start"> </a>
+Ein Beispiel der neuen Kommentar Funktion findet man auf der [Beschreibungsseite](beschreibung.html#kommentar).
 
-Diese Plattform bietet auch ein [Forum](diskussion.html)
-das man in Rumex einbauen kann.
+Eine weitere Möglichkeit die [moot.it][] bietet ist ein Forum. 
+Dieses Einbindung findet man auf der [Diskussionsseite](diskussion.html).
 
-Infolink: <http://t3n.de/news/us-startup-moot-startet-456329/>
+### Nachteil!
+
+Einen kleinen Nachteil hat das Einbinden der Kommentar / Forum
+Funktion von [moot.it][]. 
+Rumex wird dadurch langsamer da der Aufbau der Seite unter Umständen
+erst erfolgt wenn der Code von [moot.it][] geladen wurde.
+
+Infolink über die neue Plattform [moot.it][]: <http://t3n.de/news/us-startup-moot-startet-456329/>
+
+[moot.it]: http://moot.it
 
 -----------------------------------------------------------
 
 
 
-
-</div>
-
-
-
-<div class="indexliste">
-
-*2013-07-03*
-
-
-# Beschreibung des Rumex Baukastens
-
-
-Hier findest du die Beschreibung des rumex Baukastens.
-Zur Zeit ist hier noch vieles durcheinander da ich
-mehr am System als an der Beschreibung bastle.
-Du kannst aber schon mal gerne rein schauen.
-
-
-[... weiter lesen](beschreibung.html)
-
----
 
 </div>
 
@@ -81,6 +69,28 @@ Die Systemverzeichnisse wurden auf dot Verzeichnisse, nicht sichtbare Verzeichni
 
 
 [... weiter lesen](historie.html)
+
+---
+
+</div>
+
+
+
+<div class="indexliste">
+
+*2013-07-03*
+
+
+# Beschreibung des Rumex Baukastens
+
+
+Hier findest du die Beschreibung des rumex Baukastens.
+Zur Zeit ist hier noch vieles durcheinander da ich
+mehr am System als an der Beschreibung bastle.
+Du kannst aber schon mal gerne rein schauen.
+
+
+[... weiter lesen](beschreibung.html)
 
 ---
 
