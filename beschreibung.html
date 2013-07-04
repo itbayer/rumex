@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <!-- rumex Version -->
-  <meta name="generator" content="pandoc rumex 0.5">
+  <meta name="generator" content="pandoc rumex 0.6">
   <!-- rumex Suchmaschine -->
   <meta name="robots" content="all">
   <title>Beschreibung des Rumex Baukastens</title>
@@ -345,13 +345,31 @@ Ab hier geht dann der Inhlat der eigentlichen Seite los.</code></pre>
 <h2 id="template"><a href="#template">Template</a></h2>
 <p>@todo</p>
 <p>Änderung gegenüber des Original <code>pandoc</code> Templates.</p>
-<pre class="sourceCode diff"><code class="sourceCode diff"><span class="dt">5c5</span>
+<pre class="sourceCode diff"><code class="sourceCode diff"><span class="dt">5c5,8</span>
 <span class="st">&lt;   &lt;meta name=&quot;generator&quot; content=&quot;pandoc&quot;&gt;</span>
 <span class="kw">---</span>
-<span class="ot">&gt;   &lt;meta name=&quot;generator&quot; content=&quot;pandoc rumex&quot;&gt;</span>
-<span class="dt">54a55</span>
+<span class="ot">&gt;   &lt;!-- rumex Version --&gt;</span>
+<span class="ot">&gt;   &lt;meta name=&quot;generator&quot; content=&quot;$meta_generator$&quot;&gt;</span>
+<span class="ot">&gt;   &lt;!-- rumex Suchmaschine --&gt;</span>
+<span class="ot">&gt;   &lt;meta name=&quot;robots&quot; content=&quot;$meta_robots$&quot;&gt;</span>
+<span class="dt">30a34,35</span>
+<span class="ot">&gt;   &lt;!-- rumex RSS --&gt;</span>
+<span class="ot">&gt;   &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;$rsstitel$&quot; href=&quot;$rssfile$&quot; /&gt;</span>
+<span class="dt">41c46</span>
+<span class="st">&lt; &lt;h1 class=&quot;title&quot;&gt;$title$&lt;/h1&gt;</span>
+<span class="kw">---</span>
+<span class="ot">&gt; &lt;h1 class=&quot;title&quot;&gt;&lt;a title=&quot;zur Startseite&quot; href=&quot;index.html&quot;&gt;$title$&lt;/a&gt;&lt;/h1&gt;</span>
+<span class="dt">43c48</span>
+<span class="st">&lt; &lt;h2 class=&quot;author&quot;&gt;$author$&lt;/h2&gt;</span>
+<span class="kw">---</span>
+<span class="ot">&gt; &lt;h2 class=&quot;author&quot;&gt;&lt;a title=&quot;zur Startseite&quot; href=&quot;index.html&quot;&gt;$author$&lt;/a&gt;&lt;/h2&gt;</span>
+<span class="dt">46c51</span>
+<span class="st">&lt; &lt;h3 class=&quot;date&quot;&gt;$date$&lt;/h3&gt;</span>
+<span class="kw">---</span>
+<span class="ot">&gt; &lt;h3 class=&quot;date&quot;&gt;&lt;a title=&quot;zur Startseite&quot; href=&quot;index.html&quot;&gt;$date$&lt;/a&gt;&lt;/h3&gt;</span>
+<span class="dt">54a60</span>
 <span class="ot">&gt; &lt;div id=seite&gt;</span>
-<span class="dt">55a57</span>
+<span class="dt">55a62</span>
 <span class="ot">&gt; &lt;/div&gt;</span></code></pre>
 <h1 id="rss-feed-funktion"><a href="#rss-feed-funktion">RSS Feed Funktion</a></h1>
 <p>@todo</p>

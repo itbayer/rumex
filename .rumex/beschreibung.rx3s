@@ -406,13 +406,31 @@ Ab hier geht dann der Inhlat der eigentlichen Seite los.
 Änderung gegenüber des Original `pandoc` Templates.
 
 ~~~{.diff}
-5c5
+5c5,8
 <   <meta name="generator" content="pandoc">
 ---
->   <meta name="generator" content="pandoc rumex">
-54a55
+>   <!-- rumex Version -->
+>   <meta name="generator" content="$meta_generator$">
+>   <!-- rumex Suchmaschine -->
+>   <meta name="robots" content="$meta_robots$">
+30a34,35
+>   <!-- rumex RSS -->
+>   <link rel="alternate" type="application/rss+xml" title="$rsstitel$" href="$rssfile$" />
+41c46
+< <h1 class="title">$title$</h1>
+---
+> <h1 class="title"><a title="zur Startseite" href="index.html">$title$</a></h1>
+43c48
+< <h2 class="author">$author$</h2>
+---
+> <h2 class="author"><a title="zur Startseite" href="index.html">$author$</a></h2>
+46c51
+< <h3 class="date">$date$</h3>
+---
+> <h3 class="date"><a title="zur Startseite" href="index.html">$date$</a></h3>
+54a60
 > <div id=seite>
-55a57
+55a62
 > </div>
 ~~~
 
