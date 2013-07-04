@@ -21,7 +21,7 @@ Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.
 
 [^aktuell]: Es kann aber sein das hier nicht die aktuelle [rumex Version](http://www.it-bayer.de/rumex/) verwendet wird.
 
-# Kommentar Funktion eingebaut
+# Kommentar und Forum Funktion eingebaut
 
 Nun ist es möglich Kommentare in die einzelnen Seiten, von Rumex,
 einzubinden. Die Funktion wird von der Plattform [moot.it][] 
@@ -31,7 +31,7 @@ zur Verfügung gestellt.
 Ein Beispiel der neuen Kommentar Funktion findet man auf der [Beschreibungsseite](beschreibung.html#kommentar).
 
 Eine weitere Möglichkeit die [moot.it][] bietet ist ein Forum. 
-Dieses Einbindung findet man auf der [Diskussionsseite](diskussion.html).
+Dieses Einbindung findet man auf der [Forumsseite](forum.html).
 
 ### Nachteil!
 
