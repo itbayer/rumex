@@ -25,6 +25,23 @@
 
 
 <item>
+	<title>Rumex's RSS Feed hat nun auch ein Datum bekommen</title>
+	<description>
+	<![CDATA[
+
+<p>Der Newsreader <a href="http://lzone.de/liferea/">Lifera</a> hatte, durch das fehlende XML TAG <code>&lt;pubDate&gt;&lt;/pubDate&gt;</code>, immer wieder Probleme mit der Anzeige der Rumex News. Rumex <code>rss.rx0x</code> wurde darum um das Feld <code>| Datum:</code> erweitert. Das passende Datum bekommt man über die Shell mit dem Befehl <code>date -R</code>, bzw. unter vim mit <code>:r!date -R&gt;CR&gt;kj</code>.</p>
+
+]]>
+	</description>
+		<link>http://www.it-bayer.de/rumex/rss.html#rx07</link>
+		<guid>http://www.it-bayer.de/rumex/rss.html#rx07</guid>
+		<dc:creator>IT-Bayer</dc:creator>
+		<pubDate>Thu, 04 Jul 2013 17:28:25 +0200</pubDate>
+		<category><![CDATA[Neues]]></category>
+</item>
+
+
+<item>
 	<title>Rumex bekommt eine Kommentar und Forum Funktion</title>
 	<description>
 	<![CDATA[

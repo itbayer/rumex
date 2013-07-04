@@ -15,6 +15,22 @@
 -->
 
 
+# Rumex's RSS Feed hat nun auch ein Datum bekommen{.rx07}
+
+<!-- 
+| Link: http://www.it-bayer.de/rumex/rss.html#rx07
+| Autor: IT-Bayer
+| Kategorie: Neues
+| Datum: Thu, 04 Jul 2013 17:28:25 +0200
+-->
+
+Der Newsreader [Lifera](http://lzone.de/liferea/) hatte, durch das fehlende XML
+TAG `<pubDate></pubDate>`, immer wieder Probleme mit der Anzeige der Rumex News.
+Rumex `rss.rx0x` wurde darum um das Feld `| Datum: ` erweitert.
+Das passende Datum bekommt man über die Shell mit dem Befehl `date -R`,
+bzw. unter vim mit `:r!date -R>CR>kj`.
+
+
 
 
 # Rumex bekommt eine Kommentar und Forum Funktion{.rx06}
