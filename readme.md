@@ -12,9 +12,7 @@ ansehen.
 
 ## Newsletter
 
-Rumex besitzt eine RSS Feed Funktion der  
-[über diesern Link](http://www.it-bayer.de/rumex/rss.xml) 
-abonnieren werden kann.
+Rumex besitzt eine RSS Feed Funktion der [über diesern Link](http://www.it-bayer.de/rumex/rss.xml) abonnieren werden kann.
 
 ## Kurz Übersicht 
 
