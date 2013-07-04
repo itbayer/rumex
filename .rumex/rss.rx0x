@@ -20,6 +20,7 @@
 | Link: http://www.it-bayer.de/rumex/historie.html#v0.5
 | Autor: IT-Bayer
 | Kategorie: Neues
+| Datum: Tue, 11 Jun 2013 12:03:19 +0000
 -->
 
 Die rumex Systemverzeichnisse wurde auf dot Verzeichnisse, 
@@ -47,6 +48,7 @@ Eine FTP Unterstützung wurde mit `wput` realisiert.
 | Link: http://www.it-bayer.de/rumex/historie.html#v0.4.7
 | Autor: IT-Bayer
 | Kategorie: Neues
+| Datum: Tue, 11 Jun 2013 12:03:19 +0000
 -->
 
 Um die Systemverzeichnisse nicht nur durch eine Weiterleitung zu schützen
@@ -59,6 +61,7 @@ wurde eine `.htaccess` Datei eingebaut.
 | Link: http://www.it-bayer.de/rumex/historie.html#v0.4.5
 | Autor: IT-Bayer
 | Kategorie: Neues
+| Datum: Tue, 11 Jun 2013 12:03:19 +0000
 -->
 
 In rumex wurde um ein kleines Installationsskript eingebaut.
@@ -70,6 +73,7 @@ In rumex wurde um ein kleines Installationsskript eingebaut.
 | Link: http://www.it-bayer.de/rumex/historie.html#v0.4.0
 | Autor: IT-Bayer
 | Kategorie: Neues
+| Datum: Tue, 11 Jun 2013 12:03:19 +0000
 -->
 
 rumex bekommt sein eigenes Verzeichnis und seine eigene Datei
@@ -83,6 +87,7 @@ Erweiterung.
 | Link: http://www.it-bayer.de/rumex/historie.html#v0.3.7
 | Autor: IT-Bayer
 | Kategorie: Neues
+| Datum: Tue, 11 Jun 2013 12:03:19 +0000
 -->
 
 Nach der `sitemap.xml` kann rumex jetzt auch eine `sitemap.html` erstellen. [...weiter lesen](http://www.it-bayer.de/rumex/historie.html#v0.3.7)
@@ -95,6 +100,7 @@ Nach der `sitemap.xml` kann rumex jetzt auch eine `sitemap.html` erstellen. [...
 | Link: http://www.it-bayer.de/rumex/historie.html#v0.3.6
 | Autor: IT-Bayer
 | Kategorie: Neues
+| Datum: Tue, 11 Jun 2013 12:03:19 +0000
 -->
 
 Einbau einer Weiterleitungsfunktion per JavaScript da .htaccess von github.com nicht unterstützt wird.
@@ -108,6 +114,7 @@ Einbau einer Weiterleitungsfunktion per JavaScript da .htaccess von github.com n
 | Link: http://www.it-bayer.de/rumex/historie.html#v0.3.5
 | Autor: IT-Bayer
 | Kategorie: Neues
+| Datum: Tue, 11 Jun 2013 12:03:19 +0000
 -->
 
 Eigentlich ist es gar keine richtige Bildbearbeitung sondern nur eine ImageMagick Befehlsfolge die, die Bilder im Verzeichnis bilder in verschiedene Größen bereitstellt.
@@ -128,6 +135,7 @@ Unterstützt werden zur Zeit die Größen
 | Link: http://www.it-bayer.de/rumex/historie.html#v0.3.2
 | Autor: IT-Bayer
 | Kategorie: Neues
+| Datum: Tue, 11 Jun 2013 12:03:19 +0000
 -->
 
 Mit einer `sitemap.xml` erleichtert man den Suchmaschinen das finden einzelner
@@ -146,6 +154,7 @@ Natürlich braucht `rumex` auch so einen Datei. Erstellt wird die sitemap mit
 | Link: http://rumex.it-bayer.de/
 | Autor: IT-Bayer
 | Kategorie: Neues
+| Datum: Tue, 11 Jun 2013 12:03:19 +0000
 -->
 
 rumex funktioniert auch auf einen **nicht** `github.com` Server.
@@ -160,6 +169,7 @@ findet man auf der Seite <http://rumex.it-bayer.de>.
 | Link: http://www.it-bayer.de/rumex/historie.html#v0.3
 | Autor: IT-Bayer
 | Kategorie: Neues
+| Datum: Tue, 11 Jun 2013 12:03:19 +0000
 -->
 
 In den rumex Baukasten wurde eine RSS Feed Funktion eingebaut.

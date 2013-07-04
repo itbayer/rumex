@@ -115,6 +115,10 @@ while (<rss_rx>) {
 		if ($_ =~ m/^\|\s+Kategorie:\s+(.*)$/) {
 			$item{$item_zaehler}{'kategorie'} = $1;
 		}
+		
+		if ($_ =~ m/^\|\s+Datum:\s+(.*)$/) {
+			$item{$item_zaehler}{'datum'} = $1;
+		}
 
 		# --------------------------------------------------------
 		# Text der einzelnen Einträge
@@ -234,6 +238,7 @@ print <<EOF3;
 		<link>$item{$i}{'link'}</link>
 		<guid>$item{$i}{'link'}</guid>
 		<dc:creator>$item{$i}{'autor'}</dc:creator>
+		<pubDate>$item{$i}{'datum'}</pubDate>
 		<category><![CDATA[$item{$i}{'kategorie'}]]></category>
 </item>
 
