@@ -358,7 +358,7 @@ Ab hier geht dann der Inhlat der eigentlichen Seite los.</code></pre>
 <p>Wird nicht aus den einzelnen Dateien erstellt sondern muss manuell editiert werden, Datei <code>rumex/rssmd0x</code>.</p>
 <p>Jede Überschrift eines Eintrags muss mit einem <code>{#anker}</code> enden.</p>
 <p>Danach kommen die Angaben zu:</p>
-<p><strong>Link:</strong> <em>Verweis zur Seite mit weiteren Informationen</em><br /><strong>Autor:</strong> <em>Autor der den Eintrag geschrieben hat</em><br /><strong>Kategorie:</strong> <em>Kategoie des Eintrags</em></p>
+<p><strong>Link:</strong> <em>Verweis zur Seite mit weiteren Informationen</em><br /><strong>Autor:</strong> <em>Autor der den Eintrag geschrieben hat</em><br /><strong>Kategorie:</strong> <em>Kategoie des Eintrags</em><br /><strong>Datum:</strong> <em>Datum des Eintrags.</em> Das richtige Format bekommt man mit dem Befehl <code>date -R</code>.</p>
 <p>die in HTML Kommentar Marker eingeschlossen sind.</p>
 <p>Anschließend folgt die Meldung. Zur Zeit werden folgende <code>pandoc</code> Formatierungen unterstützt.</p>
 <ul>
@@ -396,6 +396,7 @@ Ab hier geht dann der Inhlat der eigentlichen Seite los.</code></pre>
 | Link: http://www.it-bayer.de/rumex/
 | Autor: IT-Bayer
 | Kategorie: Neues
+| Datum: Thu, 04 Jul 2013 10:07:06 +0200
 --&gt;
 
 In den rumex Baukasten wurde eine RSS Feed Funktion eingebaut.
@@ -404,10 +405,10 @@ und nach `rss.xml` geschrieben.
 
 Zusätzlich ist diese Datei auch als `rss.html` unter 
 &lt;http://www.it-bayer.de/rumex/rss.html&gt; verfügbar.
-
 </code></pre>
 <h1 id="make-steuerung"><a href="#make-steuerung">make Steuerung</a></h1>
-<p>@todo Gesteuert wird der Baukasten mittels <code>make</code> im Unterverzeichnis <code>rumex</code>. Folgende <code>make</code> Befehle stehen dabei zur Verfügung.</p>
+<p>@todo</p>
+<p>Gesteuert wird der Baukasten mittels <code>make</code> im Unterverzeichnis <code>rumex</code>. Folgende <code>make</code> Befehle stehen dabei zur Verfügung.</p>
 <dl>
 <dt>make html</dt>
 <dd><p>Erstellt die einzelnen html Dateien. Hier kann auch nur <code>make</code> verwendet werden.</p>

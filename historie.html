@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <!-- rumex Version -->
-  <meta name="generator" content="pandoc rumex 0.5">
+  <meta name="generator" content="pandoc rumex 0.6">
   <!-- rumex Suchmaschine -->
   <meta name="robots" content="all">
   <title>Historie</title>
@@ -36,6 +36,7 @@
 </header>
 <nav id="TOC">
 <ul>
+<li><a href="#v0.6">V0.6</a></li>
 <li><a href="#v0.5">V0.5</a></li>
 <li><a href="#v0.4.8">V0.4.8</a></li>
 <li><a href="#v0.4.7">V0.4.7</a></li>
@@ -58,6 +59,17 @@
 # Historie
 -->
 
+<h2 id="v0.6"><a href="#v0.6">V0.6</a></h2>
+<h3 id="kommentar-und-forum-funktion-eingebaut"><a href="#kommentar-und-forum-funktion-eingebaut">Kommentar und Forum Funktion eingebaut</a></h3>
+<p>Nun ist es möglich Kommentare in die einzelnen Seiten, von Rumex, einzubinden. Die Funktion wird von der Plattform <a href="http://moot.it">moot.it</a> zur Verfügung gestellt. <a href="http://moot.it">moot.it</a> ist zwar noch in der BETA Phase aber die Einfachheit und der Syntax, der zum schreiben der Kommentar und der Foren Einträge verwendet wird, passt gut zu Rumex.</p>
+<p>Ein Beispiel der neuen Kommentar Funktion findet man auf der <a href="beschreibung.html#kommentar">Beschreibungsseite</a>.</p>
+<p>Eine weitere Möglichkeit die <a href="http://moot.it">moot.it</a> bietet ist ein Forum. Dieses Einbindung findet man auf der <a href="forum.html">Forumsseite</a>.</p>
+<h4 id="nachteil"><a href="#nachteil">Nachteil!</a></h4>
+<p>Einen kleinen Nachteil hat das Einbinden der Kommentar / Forum Funktion von <a href="http://moot.it">moot.it</a>. Rumex wird dadurch langsamer da der Aufbau der Seite unter Umständen erst erfolgt wenn der Code von <a href="http://moot.it">moot.it</a> geladen wurde.</p>
+<p>Infolink über die neue Plattform <a href="http://moot.it">moot.it</a>: <a href="http://t3n.de/news/us-startup-moot-startet-456329/">http://t3n.de/news/us-startup-moot-startet-456329/</a></p>
+<!-- schnipp -->
+
+
 <h2 id="v0.5"><a href="#v0.5">V0.5</a></h2>
 <p>Die Systemverzeichnisse wurden auf dot Verzeichnisse, nicht sichtbare Verzeichnisse, umbenannt.</p>
 <ul>
@@ -65,9 +77,6 @@
 <li><code>inc</code> -&gt; <code>.inc</code></li>
 <li><code>rumex</code> -&gt; <code>.rumex</code></li>
 </ul>
-<!-- schnipp -->
-
-
 <h2 id="v0.4.8"><a href="#v0.4.8">V0.4.8</a></h2>
 <p>rumex kann jetzt auch mit FTP umgehen. Dazu muss das Programm <code>wput</code> installiert und in der <code>bin/config.mainfile</code> die Variable</p>
 <pre><code>FTP = &quot;ftp://USER:PASS@SERVER:PORT/WWW_DIR/&quot;</code></pre>

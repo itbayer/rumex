@@ -14,6 +14,28 @@
 | BildBeschreibung: Aktuelles und Neuigkeiten von der rumex Seite.
 -->
 
+
+
+
+# Rumex bekommt eine Kommentar und Forum Funktion{.rx06}
+
+<!-- 
+| Link: http://www.it-bayer.de/rumex/historie.html#v0.6
+| Autor: IT-Bayer
+| Kategorie: Neues
+| Datum: Thu, 04 Jul 2013 10:15:11 +0200
+-->
+
+Rumex wurde um eine Kommentar und einer Forum
+Funktion erweitert. Verwendet wird dazu das Angebot von [moot.it](http://moot.it)
+
+Es ist nun möglich jede Seite mit einem Kommentarabschritt zu versehen.
+Für das Forum wurde eine neue Seite [forum.html](http://www.it-bayer.de/rumex/forum.html)
+erstellt die auch als Link in die Fusszeile eingebaut wurde.
+[...weiter lesen](http://www.it-bayer.de/rumex/historie.html#v0.6)
+
+
+
 # rumex Systemverzeichnisse werden dot Verzeichnisse {.xx9}
 
 <!-- 

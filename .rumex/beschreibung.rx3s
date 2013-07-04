@@ -431,6 +431,7 @@ Danach kommen die Angaben zu:
 | **Link:** _Verweis zur Seite mit weiteren Informationen_ 
 | **Autor:** _Autor der den Eintrag geschrieben hat_
 | **Kategorie:** _Kategoie des Eintrags_
+| **Datum:** _Datum des Eintrags._ Das richtige Format bekommt man mit dem Befehl `date -R`.
 
 die in HTML Kommentar Marker eingeschlossen sind.
 
@@ -474,6 +475,7 @@ Zur Zeit werden folgende `pandoc` Formatierungen unterstützt.
 | Link: http://www.it-bayer.de/rumex/
 | Autor: IT-Bayer
 | Kategorie: Neues
+| Datum: Thu, 04 Jul 2013 10:07:06 +0200
 -->
 
 In den rumex Baukasten wurde eine RSS Feed Funktion eingebaut.
@@ -483,12 +485,12 @@ und nach `rss.xml` geschrieben.
 Zusätzlich ist diese Datei auch als `rss.html` unter 
 <http://www.it-bayer.de/rumex/rss.html> verfügbar.
 
-
 ~~~
 
 # make Steuerung
 
 @todo 
+
 Gesteuert wird der Baukasten mittels `make` im Unterverzeichnis `rumex`.
 Folgende `make` Befehle stehen dabei zur Verfügung.
 

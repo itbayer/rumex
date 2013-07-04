@@ -25,6 +25,24 @@
 
 
 <item>
+	<title>Rumex bekommt eine Kommentar und Forum Funktion</title>
+	<description>
+	<![CDATA[
+
+<p>Rumex wurde um eine Kommentar und einer Forum Funktion erweitert. Verwendet wird dazu das Angebot von <a href="http://moot.it">moot.it</a></p>
+<p>Es ist nun möglich jede Seite mit einem Kommentarabschritt zu versehen. Für das Forum wurde eine neue Seite <a href="http://www.it-bayer.de/rumex/forum.html">forum.html</a> erstellt die auch als Link in die Fusszeile eingebaut wurde.</p>
+
+]]>
+	</description>
+		<link>http://www.it-bayer.de/rumex/historie.html#v0.6</link>
+		<guid>http://www.it-bayer.de/rumex/historie.html#v0.6</guid>
+		<dc:creator>IT-Bayer</dc:creator>
+		<pubDate>Thu, 04 Jul 2013 10:15:11 +0200</pubDate>
+		<category><![CDATA[Neues]]></category>
+</item>
+
+
+<item>
 	<title>rumex Systemverzeichnisse werden dot Verzeichnisse </title>
 	<description>
 	<![CDATA[

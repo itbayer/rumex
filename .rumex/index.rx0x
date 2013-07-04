@@ -21,29 +21,6 @@ Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.
 
 [^aktuell]: Es kann aber sein das hier nicht die aktuelle [rumex Version](http://www.it-bayer.de/rumex/) verwendet wird.
 
-# Kommentar und Forum Funktion eingebaut
-
-Nun ist es möglich Kommentare in die einzelnen Seiten, von Rumex,
-einzubinden. Die Funktion wird von der Plattform [moot.it][] 
-zur Verfügung gestellt.
-[moot.it][] ist zwar noch in der BETA Phase aber die Einfachheit und der Syntax, der zum schreiben der Kommentar und der Foren Einträge verwendet wird, passt gut zu Rumex.
-
-Ein Beispiel der neuen Kommentar Funktion findet man auf der [Beschreibungsseite](beschreibung.html#kommentar).
-
-Eine weitere Möglichkeit die [moot.it][] bietet ist ein Forum. 
-Dieses Einbindung findet man auf der [Forumsseite](forum.html).
-
-### Nachteil!
-
-Einen kleinen Nachteil hat das Einbinden der Kommentar / Forum
-Funktion von [moot.it][]. 
-Rumex wird dadurch langsamer da der Aufbau der Seite unter Umständen
-erst erfolgt wenn der Code von [moot.it][] geladen wurde.
-
-Infolink über die neue Plattform [moot.it][]: <http://t3n.de/news/us-startup-moot-startet-456329/>
-
-[moot.it]: http://moot.it
-
 -----------------------------------------------------------
 
 
@@ -55,17 +32,34 @@ Infolink über die neue Plattform [moot.it][]: <http://t3n.de/news/us-startup-mo
 
 <div class="indexliste">
 
-*2013-07-03*
+*2013-07-04*
 
 # Historie
 
-## V0.5
+## V0.6
 
-Die Systemverzeichnisse wurden auf dot Verzeichnisse, nicht sichtbare Verzeichnisse, umbenannt.
+### Kommentar und Forum Funktion eingebaut
 
-* `bin` -> `.bin`
-* `inc` -> `.inc`
-* `rumex` -> `.rumex`
+Nun ist es möglich Kommentare in die einzelnen Seiten, von Rumex,
+einzubinden. Die Funktion wird von der Plattform [moot.it][] 
+zur Verfügung gestellt.
+[moot.it][] ist zwar noch in der BETA Phase aber die Einfachheit und der Syntax, der zum schreiben der Kommentar und der Foren Einträge verwendet wird, passt gut zu Rumex.
+
+Ein Beispiel der neuen Kommentar Funktion findet man auf der [Beschreibungsseite](beschreibung.html#kommentar).
+
+Eine weitere Möglichkeit die [moot.it][] bietet ist ein Forum. 
+Dieses Einbindung findet man auf der [Forumsseite](forum.html).
+
+#### Nachteil!
+
+Einen kleinen Nachteil hat das Einbinden der Kommentar / Forum
+Funktion von [moot.it][]. 
+Rumex wird dadurch langsamer da der Aufbau der Seite unter Umständen
+erst erfolgt wenn der Code von [moot.it][] geladen wurde.
+
+Infolink über die neue Plattform [moot.it][]: <http://t3n.de/news/us-startup-moot-startet-456329/>
+
+[moot.it]: http://moot.it
 
 
 [... weiter lesen](historie.html)
@@ -78,7 +72,7 @@ Die Systemverzeichnisse wurden auf dot Verzeichnisse, nicht sichtbare Verzeichni
 
 <div class="indexliste">
 
-*2013-07-03*
+*2013-07-04*
 
 
 # Beschreibung des Rumex Baukastens
