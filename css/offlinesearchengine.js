@@ -42,7 +42,7 @@
 		firstSearch : true,
 		UseHTTP_GET : false,
 		init : function(start, end, uhg, s2s) {
-			if (!(this.pEl = document.getElementById("searchresult")) || !(this.searchForm = document.forms["derletztekicksearchengine"]))
+			if (!(this.pEl = document.getElementById("rumexsuche")) || !(this.searchForm = document.forms["rumexsuche"]))
 				return false;
 			
 			if (window.ActiveXObject) {
@@ -149,7 +149,11 @@
 			if (this.index < this.sites2search.length) {
 				var a  = document.createElement("a");
 				a.appendChild(document.createTextNode( this.sites2search[this.index][1] ));
-				a.href  = this.sites2search[this.index][1] + "?suchwort=" + this.replaceUmlauts(this.keyWords.join("&suchwort="), 1);
+
+				// Link Erweiterung raus genommen
+				// orig :: a.href  = this.sites2search[this.index][1] + "?suchwort=" + this.replaceUmlauts(this.keyWords.join("&suchwort="), 1);
+				a.href  = this.sites2search[this.index][1];
+
 				a.title = this.sites2search[this.index][0];
 				td.appendChild(document.createTextNode( this.sites2search[this.index][0] ));
 				tr.appendChild(td);
