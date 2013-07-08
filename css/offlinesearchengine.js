@@ -21,7 +21,7 @@
 	+                                                                      + 
 	++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 	
-    sites = new Array;
+    sites = new Array();
 	sites[0] = new Array('Start Seite', 'index.html');
 	sites[1] = new Array('Beschreibung', 'beschreibung.html');
 	sites[2] = new Array('Impressum', 'impressum.html');
@@ -190,7 +190,7 @@
 			if (this.index == 0) {
 				//window.alert("Beginne mit Suche");
 				var img = new Image(43,11);
-				img.src = "offlinesearchengine_loader.gif";
+				img.src = "css/offlinesearchengine_loader.gif";
 				img.id = "loader";
 				img.alt = "Statusbalken";
 				//this.pEl.appendChild(img);
@@ -326,4 +326,4 @@
 		};
 	}
 
-	addContentLoadListener( function() { JSSearchEngine.init("<body>", "</body>", false, sites ); } );	
+	addContentLoadListener( function() { JSSearchEngine.init("<body>", "</body>", true, sites ); } );	
