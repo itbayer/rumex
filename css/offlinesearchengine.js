@@ -326,4 +326,4 @@
 		};
 	}
 
-	addContentLoadListener( function() { JSSearchEngine.init("<body>", "</body>", true, sites ); } );	
+	addContentLoadListener( function() { JSSearchEngine.init("<body>", "</body>", false, sites ); } );	
