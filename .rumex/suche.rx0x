@@ -4,14 +4,17 @@
 
 <!-- schnipp -->
 
+<p>&nbsp;</p>
+
 <form action="" method="get" name="rumexsuche">
-   <input name="q" value="" type="text">
-   <input name="mode" value="0" type="radio">
-   <input name="mode" value="1" type="radio">
-   <input name="mode" value="2" type="radio">
+   <input name="q" value="" type="text"> <br>
+   <input name="mode" value="0" type="radio" checked> und<br>
+   <input name="mode" value="1" type="radio"> oder<br>
+   <input name="mode" value="2" type="radio"> verkettet<br>
    <input type="submit" value="Suchen">
 </form>
 
+<p>&nbsp;</p>
 <div id="rumexsuche">&nbsp;</div>
 
 

@@ -21,10 +21,6 @@
 	+                                                                      + 
 	++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 	
-    sites = new Array();
-	sites[0] = new Array('Start Seite', 'index.html');
-	sites[1] = new Array('Beschreibung', 'beschreibung.html');
-	sites[2] = new Array('Impressum', 'impressum.html');
 
 	var JSSearchEngine = {
 		httpRequest : false,
@@ -148,8 +144,12 @@
 			var td = document.createElement("td");
 			if (this.index < this.sites2search.length) {
 				var a  = document.createElement("a");
-				a.appendChild(document.createTextNode( this.sites2search[this.index][1] ));
+				// ----------------------------------------------
+				// Statt Dateiname den Titel als Link Text anzeigen.
+				// orig :: a.appendChild(document.createTextNode( this.sites2search[this.index][1] ));
+				a.appendChild(document.createTextNode( this.sites2search[this.index][0] ));
 
+				// ---------------------------------------------------
 				// Link Erweiterung raus genommen
 				// orig :: a.href  = this.sites2search[this.index][1] + "?suchwort=" + this.replaceUmlauts(this.keyWords.join("&suchwort="), 1);
 				a.href  = this.sites2search[this.index][1];
@@ -194,7 +194,7 @@
 			if (this.index == 0) {
 				//window.alert("Beginne mit Suche");
 				var img = new Image(43,11);
-				img.src = "css/offlinesearchengine_loader.gif";
+				img.src = "css/lade_suche.gif";
 				img.id = "loader";
 				img.alt = "Statusbalken";
 				//this.pEl.appendChild(img);
@@ -330,4 +330,4 @@
 		};
 	}
 
-	addContentLoadListener( function() { JSSearchEngine.init("<body>", "</body>", true, sites ); } );	
+	addContentLoadListener( function() { JSSearchEngine.init("<body>", "</body>", true, suchseite ); } );	
