@@ -64,3 +64,11 @@ PANDOC = pandoc
 # PANDOC = /usr/bin/pandoc
 
 
+# ##############################################################
+# Rumex Suche
+
+# Programm zum erstellen der rumexsuche_config.js
+SUCHE = "../.bin/suche.pl"
+
+# Ziel Datei für die JavaScript Suche
+SUCHE_JS_CONFIG="../css/rumexsuche_config.js"

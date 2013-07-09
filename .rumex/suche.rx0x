@@ -4,18 +4,29 @@
 
 <!-- schnipp -->
 
-<p>&nbsp;</p>
+Auf dieser Seite wird versucht die [JavaScript Suche](http://derletztekick.com/javascript/suche) von
+[Michael Lösler -- _derletzteklick.com_](http://derletztekick.com/) einzubauen.
 
-<form action="" method="get" name="rumexsuche">
-   <input name="q" value="" type="text"> <br>
-   <input name="mode" value="0" type="radio" checked> und<br>
-   <input name="mode" value="1" type="radio"> oder<br>
-   <input name="mode" value="2" type="radio"> verkettet<br>
-   <input type="submit" value="Suchen">
+<div style="margin: 50px 50px">
+
+-------------------------------
+
+
+<form style="margin: 12px;" action="" method="get" name="rumexsuche">
+   <p>
+   <input name="q" value="" type="text"> 
+   <input name="mode" value="0" type="radio" checked> und &nbsp;
+   <input name="mode" value="1" type="radio"> oder &nbsp;
+   <input name="mode" value="2" type="radio"> verkettet
+   </p>
+   <input type="submit" value="Suche Starten">
 </form>
 
-<p>&nbsp;</p>
-<div id="rumexsuche">&nbsp;</div>
+
+---------------------------------
 
 
+<div id="rumexsuche" style="margin-top: 40px;">&nbsp;</div>
+
+</div>
 

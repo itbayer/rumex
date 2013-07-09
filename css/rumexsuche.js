@@ -147,7 +147,9 @@
 				// ----------------------------------------------
 				// Statt Dateiname den Titel als Link Text anzeigen.
 				// orig :: a.appendChild(document.createTextNode( this.sites2search[this.index][1] ));
-				a.appendChild(document.createTextNode( this.sites2search[this.index][0] ));
+				// !! Wieder auf Dateiname zurück gestellt.
+				a.appendChild(document.createTextNode( this.sites2search[this.index][1] ));
+
 
 				// ---------------------------------------------------
 				// Link Erweiterung raus genommen

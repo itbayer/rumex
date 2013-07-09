@@ -19,6 +19,7 @@ index:
 # alle Schritte der Seiten Erstellung zusammen
 all: 
 	make -s index 
+	make -s suche
 	make -s sitemap
 	make -s rss
 	make -s html 
@@ -110,3 +111,8 @@ show:
 showwww:
 	x-www-browser $(URL) &
 
+
+# ######################################################
+# Konfigurationsdatei für die JavaScript Suche erstellen
+suche:
+	$(SUCHE) > $(SUCHE_JS_CONFIG)
