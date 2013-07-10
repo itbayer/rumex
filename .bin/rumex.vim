@@ -24,14 +24,14 @@ set hlsearch " Suche Farblich hervorheben
 
 " ---------------------------------------------------------
 " Rumex Menü
-menu Rumex.NeueDatei<Tab>,rnd ,rnd
+menu Rumex.Neues\ Dateigerüst<Tab>,rnd ,rnd
 menu Rumex.NeuerNews\ Eintrag<Tab>j,rnn j,rnn
 menu Rumex.-------------------show------------------------- :
-menu &Rumex.show<Tab>:make\ show :make show&<CR><CR>
+menu Rumex.show<Tab>:make\ show :make show&<CR><CR>
 menu Rumex.showwww<Tab>:make\ showwww :make showwww&<CR><CR>
 menu Rumex.-------------------make------------------------- :
-menu <silent> Rumex.make.html :make html<CR><CR>
-menu Rumex.make.bilder :make bilder<CR>
+menu Rumex.make.html<Tab>:make\ html :make html<CR><CR>
+menu Rumex.make.bilder<Tab>:make\ bilder :make bilder<CR>
 menu Rumex.make.rss :make rss<CR>
 menu Rumex.make.suche :make suche<CR>
 menu Rumex.make.index :make index<CR>
@@ -45,6 +45,9 @@ menu Rumex.make.clean.HTML :make hclean<CR>
 menu Rumex.make.clean.XML :make xclean<CR>
 menu Rumex.make.clean.alles :make clean<CR>
 menu Rumex.-----------------config--------------------------- :
+menu Rumex.User\ Konfiguration\ ändern :tabnew<CR>:e ../.bin/user.config.makefile<CR>
+menu Rumex.System\ Konfiguration\ ändern :tabnew<CR>:e ../.bin/sys.config.makefile<CR>
+menu Rumex.-----------------config-einelesen----------------- :
 menu Rumex.Vim\ Konfiguration\ Neu\ einlesen :unmenu Rumex<CR>:so %<CR>
 
 " Abkürzungen
