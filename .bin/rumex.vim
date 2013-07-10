@@ -22,11 +22,30 @@ set incsearch " inkrementelle Suche aktivieren. Bei der Suche werden die
 set ic " Groß-/Kleinschreibung bei der Suche ignorieren
 set hlsearch " Suche Farblich hervorheben
 
+" ---------------------------------------------------------
 " Rumex Menü
-menu Rumex.NeueDatei ,rnd
-menu Rumex.NeuerNews\ Eintrag j,rnn
-menu Rumex.Vim\ Konfiguration\ Neu\ einlesen :so %<CR>
-
+menu Rumex.NeueDatei<Tab>,rnd ,rnd
+menu Rumex.NeuerNews\ Eintrag<Tab>j,rnn j,rnn
+menu Rumex.-------------------show------------------------- :
+menu &Rumex.show<Tab>:make\ show :make show&<CR><CR>
+menu Rumex.showwww<Tab>:make\ showwww :make showwww&<CR><CR>
+menu Rumex.-------------------make------------------------- :
+menu <silent> Rumex.make.html :make html<CR><CR>
+menu Rumex.make.bilder :make bilder<CR>
+menu Rumex.make.rss :make rss<CR>
+menu Rumex.make.suche :make suche<CR>
+menu Rumex.make.index :make index<CR>
+menu Rumex.make.sitemap :make sitemap<CR>
+menu Rumex.make.--------all------- : 
+menu Rumex.make.all :make all<CR>
+menu Rumex.make.online :make online<CR>
+menu Rumex.make.------sauber------ :
+menu Rumex.make.clean.Bilder :make bclean<CR>
+menu Rumex.make.clean.HTML :make hclean<CR>
+menu Rumex.make.clean.XML :make xclean<CR>
+menu Rumex.make.clean.alles :make clean<CR>
+menu Rumex.-----------------config--------------------------- :
+menu Rumex.Vim\ Konfiguration\ Neu\ einlesen :unmenu Rumex<CR>:so %<CR>
 
 " Abkürzungen
 abb test Ich bin nur eine Testzeile
