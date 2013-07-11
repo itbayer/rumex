@@ -47,7 +47,7 @@ Der Newsreader [Lifera](http://lzone.de/liferea/) hatte, durch das fehlende XML
 TAG `<pubDate></pubDate>`, immer wieder Probleme mit der Anzeige der Rumex News.
 Rumex `rss.rx0x` wurde darum um das Feld `| Datum: ` erweitert.
 Das passende Datum bekommt man über die Shell mit dem Befehl `date -R`,
-bzw. unter vim mit `:r!date -R>CR>kj`.
+bzw. unter vim mit `:r!date -R<CR>kJ`.
 
 
 
