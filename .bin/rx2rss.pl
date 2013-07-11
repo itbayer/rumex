@@ -143,6 +143,7 @@ while (<rss_rx>) {
 			|| $_ =~ m/^#####.*$/ # Überschrift 5
 			|| $_ =~ m/^######.*$/ # Überschrift 6
 			|| $_ =~ m/^>.*$/ # Zitate
+			|| $_ =~ m/^\!\[.*$/ # Bilder
 				and  $_ !~ m/.*<!--.*-->.*/ # Kommentare nicht mit nehmen
 		);
 	}

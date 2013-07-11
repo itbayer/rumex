@@ -25,6 +25,26 @@
 
 
 <item>
+	<title>Rumex bekommt eine (g)VIM Unterstützung</title>
+	<description>
+	<![CDATA[
+
+<p>Da ich hauptsächlich mit (G)VIM an Rumex arbeite und hier schon ein paar <code>.vim</code> Schnippsel entstanden sind, wurden diese jetzt auch eingebaut. Die Erweiterung besteht zur Zeit nur aus ein paar Kurztasten und einem GVIM Menü.</p>
+<div class="figure">
+<img src="http://localhost/bilder/gvim-menue_400_.png" alt="Das Rumex GVIM Menü" /><p class="caption">Das Rumex GVIM Menü</p>
+</div>
+
+]]>
+	</description>
+		<link>http://it-bayer.de/rumex/</link>
+		<guid>http://it-bayer.de/rumex/</guid>
+		<dc:creator>IT-Bayer</dc:creator>
+		<pubDate>Thu, 11 Jul 2013 07:09:58 +0200</pubDate>
+		<category><![CDATA[Neues]]></category>
+</item>
+
+
+<item>
 	<title>Rumex's RSS Feed hat nun auch ein Datum bekommen</title>
 	<description>
 	<![CDATA[

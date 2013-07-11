@@ -24,6 +24,9 @@ set hlsearch " Suche Farblich hervorheben
 
 " ---------------------------------------------------------
 " Rumex Menü
+menu Rumex.Startseite :tabnew<CR>:e start.rx0s<CR><CR>
+menu Rumex.Newsseite\ (RSS) :tabnew<CR>:e rss.rx0x<CR><CR>
+menu Rumex.-------------------textbaustein----------------- :
 menu Rumex.Neues\ Dateigerüst<Tab>,rnd ,rnd
 menu Rumex.NeuerNews\ Eintrag<Tab>j,rnn j,rnn
 menu Rumex.-------------------show------------------------- :
@@ -44,6 +47,9 @@ menu Rumex.make.clean.Bilder :make bclean<CR>
 menu Rumex.make.clean.HTML :make hclean<CR>
 menu Rumex.make.clean.XML :make xclean<CR>
 menu Rumex.make.clean.alles :make clean<CR>
+menu Rumex.-----------------git--------------------------- :
+menu Rumex.Änderungen\ holen :!git pull<CR><CR>
+menu Rumex.Änderungen\ anzeigen :!git status<CR>
 menu Rumex.-----------------config--------------------------- :
 menu Rumex.User\ Konfiguration\ ändern :tabnew<CR>:e ../.bin/user.config.makefile<CR>
 menu Rumex.System\ Konfiguration\ ändern :tabnew<CR>:e ../.bin/sys.config.makefile<CR>
@@ -60,6 +66,5 @@ abb test Ich bin nur eine Testzeile
 map <Leader>rnd i% NAME<CR>%<CR>%<CR><CR><CR><!--<CR><CR># NAME<CR><CR>Vortext INDEX<CR><CR>--><CR><CR>Vortext INDEX und SEITE<CR><CR><!-- schnipp --><CR><CR>TEXT DER SEITE<CR><CR><!-- vim: set ft=pandoc: --><ESC>gg
 
 " Neuer NEWS Eintrag mit <Leader><rnn> (RumexNeuNews)
-map <Leader>rnn i# Neue Nachricht{.nn1}<CR><CR><!--<CR>\| Link: http://was.auch.immer/<CR>\| Autor: IT-Bayer<CR>\| Kategorie: Neues<CR>\| Datum: <ESC>:r!date -R<CR>kjA<CR>--><CR><CR>Ab hier geht die neue Nachricht los.<ESC>10k0
-
+map <Leader>rnn i# Neue Nachricht{.nn1}<CR><CR><!--<CR>\| Link: http://www.it-bayer.de/rumex/<CR>\| Autor: IT-Bayer<CR>\| Kategorie: Neues<CR>\| Datum: <ESC>:r!date -R<CR>kJA<CR>--><CR><CR>Ab hier geht die neue Nachricht los.<ESC>9k0
 

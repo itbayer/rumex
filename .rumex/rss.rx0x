@@ -15,6 +15,25 @@
 -->
 
 
+# Rumex bekommt eine (g)VIM Unterstützung{.nn1}
+
+<!--
+| Link: http://it-bayer.de/rumex/
+| Autor: IT-Bayer
+| Kategorie: Neues
+| Datum: Thu, 11 Jul 2013 07:09:58 +0200
+-->
+
+Da ich hauptsächlich mit (G)VIM an Rumex arbeite und hier schon ein paar `.vim`
+Schnippsel entstanden sind, wurden diese jetzt auch eingebaut.
+Die Erweiterung besteht zur Zeit nur aus ein paar Kurztasten und einem GVIM Menü.
+
+![Das Rumex GVIM Menü](http://localhost/bilder/gvim-menue_400_.png)
+
+
+
+
+
 # Rumex's RSS Feed hat nun auch ein Datum bekommen{.rx07}
 
 <!-- 
