@@ -6,6 +6,14 @@
 # Historie
 -->
 
+## V0.6.3
+
+Rumex hat eine GVIM Unterstützung bekommen.
+
+![Das Rumex GVIM Menü](bilder/gvim-menue_400_.png)
+
+<!-- schnipp -->
+
 ## V0.6
 
 ### Kommentar und Forum Funktion eingebaut
@@ -32,7 +40,6 @@ Infolink über die neue Plattform [moot.it][]: <http://t3n.de/news/us-startup-mo
 [moot.it]: http://moot.it
 
 
-<!-- schnipp -->
 
 
 ## V0.5
