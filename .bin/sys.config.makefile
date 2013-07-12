@@ -7,12 +7,6 @@
 # ##############################################################
 
 
-# ##############################################################
-# HTML Template 
-HTML_TEMPLATE = ../.inc/sys/html.template
-KOPF_TEMPLATE = ../.inc/sys/kopf.html
-HEADER_TEMPLATE = ../.inc/sys/header.html
-FUSS_TEMPLATE = ../.inc/sys/fuss.html 
 
 
 # ##############################################################

@@ -25,3 +25,10 @@ RSS_TITEL = "Neuigkeiten von rumex Baukasten"
 #
 # FTP = "ftp://USER:PASS@SERVER:PORT/WWW_DIR/"
 
+# ##############################################################
+# HTML Template 
+HTML_TEMPLATE = ../.inc/static/html.template
+KOPF_TEMPLATE = ../.inc/static/kopf.html
+HEADER_TEMPLATE = ../.inc/static/header.html
+FUSS_TEMPLATE = ../.inc/static/fuss.html 
+
