@@ -9,10 +9,10 @@
 
 # ##############################################################
 # HTML Template 
-HTML_TEMPLATE = ../.inc/html.template
-KOPF_TEMPLATE = ../.inc/kopf.html
-HEADER_TEMPLATE = ../.inc/header.html
-FUSS_TEMPLATE = ../.inc/fuss.html 
+HTML_TEMPLATE = ../.inc/sys/html.template
+KOPF_TEMPLATE = ../.inc/sys/kopf.html
+HEADER_TEMPLATE = ../.inc/sys/header.html
+FUSS_TEMPLATE = ../.inc/sys/fuss.html 
 
 
 # ##############################################################
