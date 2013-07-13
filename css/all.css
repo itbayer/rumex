@@ -21,13 +21,20 @@ header * a {
 
 
 
-/* ----------------------------------------------
- * Nummerierung für Bilder und Tabellen beim laden der Seite 
- * setzen.
+/* ---------------------------------------------------------------- 
+ * Zähler für die einzelnen Nummerierungen setzen 
+ *
+ * Achtung:
+ *		Pro CSS Element darf der Zähler nur einmal gesetzt werden.
+ *		Werden mehrere Zähler pro Element gebraucht müssen diese
+ *		hintereinander geschrieben werden, wie in diesem Beispiel.
  */
 body {
-  counter-reset: bild tabelle;
+	counter-reset: bild tabelle; /* Zähler für die Bild und Tabellen Beschriftung setzen */
 }
+
+
+
 
 /* ---------------------------------------------- 
  * Abstand zwischen den Zeilen innerhalb eines Absatzes vergrößern.
@@ -222,7 +229,7 @@ dd > p {
 /* ----------------------------------------------
  * Datum der Übersichts- Startseite 
  */
-.indexliste > p > em {
+.indexliste p.datum {
 	display: block;
 	text-align: right;
 	font-size: .8em;
@@ -254,12 +261,32 @@ dd > p {
 }
 
 
+/* -----------------------------------------------------------
+ * Bild Einstellung und Beschriftung
+ */
+
+ /* Schriftart für die Bild Beschriftung ein wenig kleiner. */
+figure figcaption {
+	font-size: 0.9em;
+}
+
+/* Die Beschreibung des Bildes bekommt ein "Abbildung:" 
+ * und eine laufende Nummer
+ */
+figure figcaption:before {
+	counter-increment: bild; /* Zähler für die Bild Beschriftung um eins hoch setzen */
+	content: "Abbildung " counter(bild) ": "; /*... und Beschriftung voranstellen. */
+}
+
+
+
 /* ----------------------------------------------
- * Tabellen 
+ * Tabellen Einstellung und Beschriftung
  */
 
 table caption {
 	padding: 1em 0 0.5em 0;
+	font-size: 0.9em;
 }
 
 /* ----------------------------------------------

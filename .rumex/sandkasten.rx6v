@@ -92,13 +92,7 @@ Term 2 with *inline markup*
     Third paragraph of definition 2.
 
 
-FIXME: Quelltext in Deflisten - Rahmen bei code muss verschwinden.
-	
-	dl > dd > pre > code
-
-Beispiel:
-
-Quelltext in DefListen
+Quelltext in Def-Listen
 :		for i in $(ls -1 *.md);
 		do
 		echo $i
@@ -206,7 +200,7 @@ zeile 3
 
 
 
-# Text durch strichen
+# Text Durchstreichen
 
 This ~~is deleted text.~~
 
@@ -318,7 +312,10 @@ orange|3.09
 | is  | nice  |
 
 
+# Bilder
 
+
+![Beschriftung die unter dem Bild erscheint. Diese Beschriftung wird per `css` mit einer laufenden Nummer versehen.](bilder/gvim-menue.png "Diese Text erscheint wenn man mit der Maus über das Bild fährt bzw. auf dem Bild stehen bleibt.")
 
 <!-- vim: set ft=pandoc: -->
 

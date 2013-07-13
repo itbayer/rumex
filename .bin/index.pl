@@ -115,7 +115,7 @@ index.rx0x aufgenommen.
 
 	# Datum der letzten Änderung vor dem Vortext stellen
 	# ... nicht setzen wenn es sich um die start.rx0s handelt.
-	print INDEX "\n*$datum*\n" if ($name ne $start_rx);
+	print INDEX "\n<p class=\"datum\">$datum</p>\n" if ($name ne $start_rx);
 
 	# Einzelnen Dateien auslesen um den Vortext zu 
 	# erstellen.

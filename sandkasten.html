@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <!-- rumex Version -->
-  <meta name="generator" content="rumex 0.6">
+  <meta name="generator" content="rumex 0.6.5">
   <!-- rumex Suchmaschine -->
   <meta name="robots" content="noindex,nofollow,noarchive">
   <meta name="author" content="IT Bayer">
@@ -48,8 +48,9 @@
 <li><a href="#zitat">Zitat</a></li>
 <li><a href="#quelltext">Quelltext</a></li>
 <li><a href="#linien-blocks">Linien Blocks</a></li>
-<li><a href="#text-durch-strichen">Text durch strichen</a></li>
+<li><a href="#text-durchstreichen">Text Durchstreichen</a></li>
 <li><a href="#tabellen">Tabellen</a></li>
+<li><a href="#bilder">Bilder</a></li>
 </ul>
 </nav>
 <div id=seite>
@@ -141,12 +142,7 @@ die CSS Einstellungen machen zu können.
 <pre><code>{ some code, part of Definition 2 }</code></pre>
 <p>Third paragraph of definition 2.</p>
 </dd>
-</dl>
-<p>FIXME: Quelltext in Deflisten - Rahmen bei code muss verschwinden.</p>
-<pre><code>dl &gt; dd &gt; pre &gt; code</code></pre>
-<p>Beispiel:</p>
-<dl>
-<dt>Quelltext in DefListen</dt>
+<dt>Quelltext in Def-Listen</dt>
 <dd><pre><code>for i in $(ls -1 *.md);
 do
 echo $i
@@ -158,7 +154,7 @@ done</code></pre>
 <dt>Term 2</dt>
 <dd>Definition 2a
 </dd>
-<dd>Definition 2b
+<dd><p>Definition 2b</p>
 </dd>
 </dl>
 <ol type="1">
@@ -225,7 +221,7 @@ zeile 3
 <p>200 Main St.<br />Berkeley, CA 94718</p>
 <hr />
 <p>The Right Honorable Most Venerable and Righteous Samuel L. Constable, Jr.<br />200 Main St.<br />Berkeley, CA 94718</p>
-<h1 id="text-durch-strichen"><a href="#text-durch-strichen">Text durch strichen</a></h1>
+<h1 id="text-durchstreichen"><a href="#text-durchstreichen">Text Durchstreichen</a></h1>
 <p>This <del>is deleted text.</del></p>
 <h1 id="tabellen"><a href="#tabellen">Tabellen</a></h1>
 <table>
@@ -429,6 +425,10 @@ zeile 3
 </tr>
 </tbody>
 </table>
+<h1 id="bilder"><a href="#bilder">Bilder</a></h1>
+<figure>
+<img src="bilder/gvim-menue.png" title="Diese Text erscheint wenn man mit der Maus über das Bild fährt bzw. auf dem Bild stehen bleibt." alt="Beschriftung die unter dem Bild erscheint. Diese Beschriftung wird per css mit einer laufenden Nummer versehen." /><figcaption>Beschriftung die unter dem Bild erscheint. Diese Beschriftung wird per <code>css</code> mit einer laufenden Nummer versehen.</figcaption>
+</figure>
 <!-- vim: set ft=pandoc: -->
 
 
