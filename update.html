@@ -5,8 +5,9 @@
   <!-- rumex Version -->
   <meta name="generator" content="rumex 0.6.5">
   <!-- rumex Suchmaschine -->
-  <meta name="robots" content="noindex,nofollow,noarchive">
-  <title>Seitenübersicht</title>
+  <meta name="robots" content="all">
+  <meta name="author" content="Notiz Zettel">
+  <title>Update</title>
   <style type="text/css">code{white-space: pre;}</style>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -35,50 +36,44 @@
 		height="700" alt="blind.png fuer Link zur Startseite"></a>
 </div>
 <header>
-<h1 class="title"><a title="zur Startseite" href="index.html">Seitenübersicht</a></h1>
+<h1 class="title"><a title="zur Startseite" href="index.html">Update</a></h1>
+<h2 class="author"><a title="zur Startseite" href="index.html">Notiz Zettel</a></h2>
 </header>
 <div id=seite>
-<div id="sitemap">
-<dl>
-<dt>Übersicht aller Seiten dieser Homepage</dt>
-<dd><ul>
-<li><a href="forum.html">forum</a></li>
+<!--
+
+# Update
+
+-->
+
+<p>Notizen über die Schritte die bei einem Update gemacht werden sollten.</p>
+<!-- schnipp -->
+
+<h1 id="befehl">Befehl</h1>
+<pre><code>make update VERSION</code></pre>
+<h1 id="schritte">Schritte</h1>
+<ul>
+<li>Version runter laden und nach <code>/tmp</code> speichern.</li>
+<li>Datei im TMP entpacken</li>
+<li>Dateien kopieren
+<ul>
+<li>.bin
+<ul>
+<li>alle Dateien</li>
+</ul></li>
+<li>css
+<ul>
+<li>alle Dateien außer <code>rumex.png</code> Logo</li>
+</ul></li>
+<li>.inc/default
+<ul>
+<li>allen neuen Vorgaben</li>
+</ul></li>
+</ul></li>
 </ul>
-</dd>
-<dd><ul>
-<li><a href="impressum.html">impressum</a></li>
-</ul>
-</dd>
-<dd><ul>
-<li><a href="index.html">index</a></li>
-</ul>
-</dd>
-<dd><ul>
-<li><a href="rss.html">rss</a></li>
-</ul>
-</dd>
-<dd><ul>
-<li><a href="suche.html">suche</a></li>
-</ul>
-</dd>
-<dd><ul>
-<li><a href="update.html">update</a></li>
-</ul>
-</dd>
-<dd><ul>
-<li><a href="beschreibung.html">beschreibung</a></li>
-</ul>
-</dd>
-<dd><ul>
-<li><a href="historie.html">historie</a></li>
-</ul>
-</dd>
-<dd><ul>
-<li><a href="start.html">start</a></li>
-</ul>
-</dd>
-</dl>
-</div>
+<h1 id="todo">todo</h1>
+<p>Programm für eine Update Benachrichtigung erstellen, RSS Benachrichtigung.</p>
+<!-- vim: set ft=pandoc: -->
 
 </div>
 <div id="fuss">
