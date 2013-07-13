@@ -13,39 +13,19 @@ Aber auch [Fehler][Bugs] die noch nicht behoben sind notiere ich mir hier.
 
 <!-- schnipp -->
 
+
+Fusszeilen Link 
+:	Fusszeilen Links sollten beim Ausdruck nicht erscheinen
+
+.htaccess
+:	Bei `make install` sollte auch die .htaccess Dateinen kopiert werden.
+
+/bilder
+:	Im Bild Verzeichnis sollten auch alle Rumex Bilder die nicht
+	gebraucht werden gelöscht werden.
+
 Biographie 
 :	Biographie Funktion einbauen.
-
-VIM Helfer
-:	Scripte für den Editor [VIM][].
-
-Favicon
-:	`favicon.ico` fehlt noch.
-
-Steuerdateien
-:	Die Steuerdateien sind zur Zeit noch in den einzelnen
-	Programmen hinterlegt. Wäre sinnvoll wenn diese über
-	`make` eingebunden werden.
-
-# VIM
-
-Für Vim könnten noch Vorlagen erstellt werden.
-
-- Neue Datei
-- RSS Datei / Eintrag
-
-
-
-# Bugs
-
-Dateinamen mit `_`
-:	github.com liefert keine Seiten die mit einem Unterstrich beginnen aus.
-	Diese Seiten können nicht verwendet werden.
-	Für Versteckte Seiten wird deshalb die Endung `.rx?v` eingebaut.
-
-pandoc.syntax
-:	- Vim wird, bei größeren Dateien mit dem `pandoc` Syntax sehr langsam.
-	- An verschiedenen Stellen wird die VIM Rechtschreibung nicht verwendet.
 
 
 <!-- vim:set ft=pandoc: -->

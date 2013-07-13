@@ -40,12 +40,6 @@
 <h2 class="author"><a title="zur Startseite" href="index.html">Was ist noch alles zu machen</a></h2>
 <h3 class="date"><a title="zur Startseite" href="index.html">bzw. welche Fehler sind noch offen</a></h3>
 </header>
-<nav id="TOC">
-<ul>
-<li><a href="#vim">VIM</a></li>
-<li><a href="#bugs">Bugs</a></li>
-</ul>
-</nav>
 <div id=seite>
 <!--
 
@@ -53,39 +47,22 @@
 
 -->
 
-<p>Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens. Aber auch <a href="#bugs">Fehler</a> die noch nicht behoben sind notiere ich mir hier.</p>
+<p>Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens. Aber auch [Fehler][Bugs] die noch nicht behoben sind notiere ich mir hier.</p>
 <!-- schnipp -->
 
+
 <dl>
+<dt>Fusszeilen Link</dt>
+<dd><p>Fusszeilen Links sollten beim Ausdruck nicht erscheinen</p>
+</dd>
+<dt>.htaccess</dt>
+<dd><p>Bei <code>make install</code> sollte auch die .htaccess Dateinen kopiert werden.</p>
+</dd>
+<dt>/bilder</dt>
+<dd><p>Im Bild Verzeichnis sollten auch alle Rumex Bilder die nicht gebraucht werden gelöscht werden.</p>
+</dd>
 <dt>Biographie</dt>
 <dd><p>Biographie Funktion einbauen.</p>
-</dd>
-<dt>VIM Helfer</dt>
-<dd><p>Scripte für den Editor <a href="#vim">VIM</a>.</p>
-</dd>
-<dt>Favicon</dt>
-<dd><p><code>favicon.ico</code> fehlt noch.</p>
-</dd>
-<dt>Steuerdateien</dt>
-<dd><p>Die Steuerdateien sind zur Zeit noch in den einzelnen Programmen hinterlegt. Wäre sinnvoll wenn diese über <code>make</code> eingebunden werden.</p>
-</dd>
-</dl>
-<h1 id="vim"><a href="#vim">VIM</a></h1>
-<p>Für Vim könnten noch Vorlagen erstellt werden.</p>
-<ul>
-<li>Neue Datei</li>
-<li>RSS Datei / Eintrag</li>
-</ul>
-<h1 id="bugs"><a href="#bugs">Bugs</a></h1>
-<dl>
-<dt>Dateinamen mit <code>_</code></dt>
-<dd><p>github.com liefert keine Seiten die mit einem Unterstrich beginnen aus. Diese Seiten können nicht verwendet werden. Für Versteckte Seiten wird deshalb die Endung <code>.rx?v</code> eingebaut.</p>
-</dd>
-<dt>pandoc.syntax</dt>
-<dd><ul>
-<li>Vim wird, bei größeren Dateien mit dem <code>pandoc</code> Syntax sehr langsam.</li>
-<li>An verschiedenen Stellen wird die VIM Rechtschreibung nicht verwendet.</li>
-</ul>
 </dd>
 </dl>
 <!-- vim:set ft=pandoc: -->
