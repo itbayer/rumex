@@ -3,7 +3,10 @@
 echo "Rumex neue Installation"
 echo "-----------------------"
 echo ""
-echo -n "Willst du wirklich den Inhalt des rumex Verzeichnisses löschen [jn]?"
+echo "Bei einer Installation werden die Dateien von rumex gelöscht"
+echo "und durch Standard Dateien ersetzt."
+echo ""
+echo -n "Willst du wirklich alle Datein von Rumex mit Standard Dateien ersetzen [jn]?"
 
 while ((!x)); do
   read -sn1 x
@@ -28,11 +31,13 @@ if ((i)); then
 	rm *.rx*
 	echo ""
 
-	echo "Kopiere die Vorlagen aus dem inc Verzeichnis"
+	echo "Kopiere die Vorlagen aus dem .inc Verzeichnis"
 	cp ../.inc/rx/*.rx* .
 	echo ""
 
-	echo "Dateien anpassen und dann ..."
+	echo "Jetzt muss du noch verschiedene Dateien anpassen,"
+	echo "mehr dazu findest du auf http://www.it-bayer.de/rumex/beschreibung.html"
+	echo "und dann ..."
 	echo ""
 	echo "make clean"
 	echo "make all"

@@ -1,0 +1,33 @@
+% Suche
+%
+%
+
+<!-- schnipp -->
+
+Auf dieser Seite ist die [JavaScript Suche](http://derletztekick.com/javascript/suche) von
+[Michael Lösler -- _derletzteklick.com_](http://derletztekick.com/) eingebunden.
+
+<div style="margin: 50px 50px">
+
+-------------------------------
+
+
+<form style="margin: 12px;" action="" method="get" name="rumexsuche">
+   <p>
+   <input name="q" value="" type="text"> 
+   <input name="mode" value="0" type="radio" checked> und &nbsp;
+   <input name="mode" value="1" type="radio"> oder &nbsp;
+   <input name="mode" value="2" type="radio"> verkettet
+   </p>
+   <input type="submit" value="Suche Starten">
+</form>
+
+
+---------------------------------
+
+
+<div id="rumexsuche" style="margin-top: 40px;">&nbsp;</div>
+
+</div>
+
+<!-- vim:set ft=pandoc: -->

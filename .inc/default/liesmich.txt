@@ -1,0 +1,24 @@
+% HTML Vorlagen
+% .inc/default/
+%
+
+In diesem Verzeichnis findest du die `HTML` Vorlagen für Rumex.
+
+Am besten kopierst du die Dateien, aus diesem Verzeichnis in das
+Verzeichnis `user`.
+
+	cp -a ./.inc/default ./inc/user
+
+Erstellst die Datei `config.makefile`
+
+	touch ./.inc/user/config.makefile
+
+und fügst die `make` Variablen aus `./.bin/config.makefile`
+ein, die du anpassen willst.
+
+# Warum?
+
+Das `./.inc/user` Verzeichnis wird bei einem Update nicht überschrieben.
+
+
+

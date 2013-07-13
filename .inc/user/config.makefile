@@ -27,7 +27,8 @@ RSS_TITEL = "Neuigkeiten von rumex Baukasten"
 
 # ##############################################################
 # HTML Template 
-HTML_TEMPLATE = ../.inc/default/html.template
-KOPF_TEMPLATE = ../.inc/default/kopf.html
-HEADER_TEMPLATE = ../.inc/default/header.html
-FUSS_TEMPLATE = ../.inc/default/fuss.html 
+HTML_TEMPLATE = ../.inc/user/html.template
+KOPF_TEMPLATE = ../.inc/user/kopf.html
+HEADER_TEMPLATE = ../.inc/user/header.html
+FUSS_TEMPLATE = ../.inc/user/fuss.html 
+
