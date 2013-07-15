@@ -27,6 +27,26 @@
   <!-- JavaScript Suche -->
   <script type="text/javascript" src="css/rumexsuche_config.js"></script>
   <script type="text/javascript" src="css/rumexsuche.js"></script>
+  
+  <!-- JavaScript Suchwort markieren -->
+  <!-- Quelle: http://www.jquery.info/spip.php?article50 -->
+  <script src='SearchHighlight.js'></script>
+  <script type='text/javascript'>
+  jQuery(function(){
+  
+  		var options = {
+  
+  			exact:"exact"
+  
+  		}
+  
+  		jQuery(document).SearchHighlight(options);
+  
+  	});
+  </script>
+  <style type='text/css'>
+   span.hilite {background:yellow}
+  </style>
 </head>
 <body>
 <!-- kopf.html -->
