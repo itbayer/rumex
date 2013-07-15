@@ -262,6 +262,17 @@ dd > p {
 
 
 /* -----------------------------------------------------------
+ * Suchwort Markierung
+ * Wird von rumexsuche.js verwendet
+ */
+.marker {
+	background:yellow;
+}
+
+
+
+
+/* -----------------------------------------------------------
  * Bild Einstellung und Beschriftung
  */
 
