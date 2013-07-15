@@ -25,6 +25,23 @@
 
 
 <item>
+	<title>Rumex bekommt eine interne Suche</title>
+	<description>
+	<![CDATA[
+
+<p>In Rumex wurden zwei JavaScripts eingebaut. Diese ermöglichen zum einen das die Seiten von Rumex durchsucht werden können. Zum anderen das die gefunden Wörter auf der jeweiligen Seite markiert werden.</p>
+
+]]>
+	</description>
+		<link>http://www.it-bayer.de/rumex/history#V0.6.7</link>
+		<guid>http://www.it-bayer.de/rumex/history#V0.6.7</guid>
+		<dc:creator>IT-Bayer</dc:creator>
+		<pubDate>Mon, 15 Jul 2013 19:57:55 +0200</pubDate>
+		<category><![CDATA[Neues]]></category>
+</item>
+
+
+<item>
 	<title>Rumex bekommt eine (g)VIM Unterstützung</title>
 	<description>
 	<![CDATA[

@@ -4,8 +4,17 @@
 
 <!-- schnipp -->
 
-Auf dieser Seite wird versucht die [JavaScript Suche](http://derletztekick.com/javascript/suche) von
-[Michael Lösler -- _derletzteklick.com_](http://derletztekick.com/) einzubauen.
+Auf dieser Seite wurde die [JavaScript Suche](http://derletztekick.com/javascript/suche) von
+[Michael Lösler -- _derletzteklick.com_](http://derletztekick.com/) eingebaut.
+
+Die Suche ermöglicht per AJAX die Seiten von Rumex nach Begriffen zu durchsuchen.
+
+Gefundene Seiten werden dann noch einmal durch eine JavaScript gejagt.
+Dieses sorgt dafür dass das gesuchte Wort hervorgehoben wird.
+Der Grundcode für die Markierung der Wörter stammt von der Seite
+<http://james.padolsey.com/javascript/highlighting-text-with-javascript/>.
+
+
 
 <div style="margin: 50px 50px">
 
@@ -30,3 +39,4 @@ Auf dieser Seite wird versucht die [JavaScript Suche](http://derletztekick.com/j
 
 </div>
 
+<!-- vim:set ft=pandoc: -->

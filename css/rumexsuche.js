@@ -325,4 +325,4 @@
 		};
 	}
 
-	addContentLoadListener( function() { JSSearchEngine.init("<body>", "</body>", true, suchseite ); } );	
+	addContentLoadListener( function() { JSSearchEngine.init("<div id=\"seite\">", "<div id=\"fuss\">", true, suchseite ); } );	

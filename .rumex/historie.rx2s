@@ -6,6 +6,15 @@
 # Historie
 -->
 
+## V0.6.7
+
+In Rumex wurden zwei JavaScripts eingebaut.
+Diese ermöglichen zum einen das die Seiten von Rumex durchsucht werden können. Zum anderen das die gefunden Wörter auf der jeweiligen Seite markiert werden.
+
+
+<!-- schnipp -->
+
+
 ## V0.6.5
 
 Vorbereitung zum Update Skript. 
@@ -17,7 +26,6 @@ Rumex hat eine GVIM Unterstützung bekommen.
 
 ![Das Rumex GVIM Menü](bilder/gvim-menue_400_.png)
 
-<!-- schnipp -->
 
 ## V0.6
 

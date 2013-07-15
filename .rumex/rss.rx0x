@@ -14,6 +14,18 @@
 | BildBeschreibung: Aktuelles und Neuigkeiten von der rumex Seite.
 -->
 
+# Rumex bekommt eine interne Suche{.nn2}
+
+<!--
+| Link: http://www.it-bayer.de/rumex/history#V0.6.7
+| Autor: IT-Bayer
+| Kategorie: Neues
+| Datum: Mon, 15 Jul 2013 19:57:55 +0200
+-->
+
+In Rumex wurden zwei JavaScripts eingebaut.
+Diese ermöglichen zum einen das die Seiten von Rumex durchsucht werden können. Zum anderen das die gefunden Wörter auf der jeweiligen Seite markiert werden.
+
 
 # Rumex bekommt eine (g)VIM Unterstützung{.nn1}
 

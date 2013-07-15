@@ -34,17 +34,15 @@ Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.
 
 <p class="datum">2013-07-15</p>
 
+# Historie
 
-# Beschreibung des Rumex Baukastens
+## V0.6.7
 
-
-Hier findest du die Beschreibung des rumex Baukastens.
-Zur Zeit ist hier noch vieles durcheinander da ich
-mehr am System als an der Beschreibung bastle.
-Du kannst aber schon mal gerne rein schauen.
+In Rumex wurden zwei JavaScripts eingebaut.
+Diese ermöglichen zum einen das die Seiten von Rumex durchsucht werden können. Zum anderen das die gefunden Wörter auf der jeweiligen Seite markiert werden.
 
 
-[... weiter lesen](beschreibung.html)
+[... weiter lesen](historie.html)
 
 ---
 
@@ -56,20 +54,17 @@ Du kannst aber schon mal gerne rein schauen.
 
 <p class="datum">2013-07-15</p>
 
-# Historie
 
-## V0.6.5
+# Beschreibung des Rumex Baukastens
 
-Vorbereitung zum Update Skript. 
-Die Verzeichnis Struktur von Rumex wurde umgebaut.
 
-## V0.6.3
+Hier findest du die Beschreibung des rumex Baukastens.
+Zur Zeit ist hier noch vieles durcheinander da ich
+mehr am System als an der Beschreibung bastle.
+Du kannst aber schon mal gerne rein schauen.
 
-Rumex hat eine GVIM Unterstützung bekommen.
 
-![Das Rumex GVIM Menü](bilder/gvim-menue_400_.png)
-
-[... weiter lesen](historie.html)
+[... weiter lesen](beschreibung.html)
 
 ---
 
