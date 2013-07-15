@@ -12,5 +12,6 @@ Disallow: /.rumex/
 Disallow: /css/
 Disallow: /.inc/
 Disallow: /readme.md
+Disallow: /rss.xml
 Disallow: /CNAME
 Disallow: /.git/
