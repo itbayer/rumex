@@ -265,12 +265,42 @@ dd > p {
  * Suchwort Markierung
  * Wird von rumexsuche.js verwendet
  */
-.marker {
-	background:yellow;
+.marker0 {
+	background: gold;
+}
+
+.marker1 {
+	background: burlywood;
+}
+
+.marker2 {
+	background: skyblue;
+}
+
+.marker3 {
+	background: lightgreenn;
+}
+
+.marker4 {
+	background: salmon;
+}
+
+.marker5 {
+	background: powderblue;
 }
 
 
+.marker6 {
+	background: orange;
+}
 
+.marker7 {
+	background: wheat;
+}
+
+.marker8 {
+	background: orangered;
+}
 
 /* -----------------------------------------------------------
  * Bild Einstellung und Beschriftung

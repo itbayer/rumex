@@ -3,6 +3,9 @@
  *    
  *    Suchwörter die von der internen Suche gefunden wurden 
  *    hervorheben.
+ *    Es werden unterschiedliche Farben unterstützt.
+ *    Eine Entsprechende CSS Definition muss vorhanden sein.
+ *
  */
 
 // wenn das Dokument geladen ist Inhalt durchsuchen 
@@ -30,17 +33,22 @@ $(document).ready(function(){
 
 	// Die einzelnen GET Parameter durchlaufen
 	for(var i=0; i<sx.length; i++) {
-		// Suchwort merken
-		if (sx[i][0] == sp) {
+	
+		// Suchwort merken und marker setzen.
+		// Um unterschiedliche Farben verwenden zu können wird dem marker
+		// die laufende Nummer angehängt.
+		// Wenn ein Wort nicht markiert wird evtl. im CSS einen neuen
+		// marker erstellen.
+		if (sx[i][0] === sp) {
 			suchwort = sx[i][1];
+			
+			// Quelle: http://james.padolsey.com/javascript/highlighting-text-with-javascript/
+			highlight(document.getElementById(suchid),suchwort,marker+i);
 		}
 	}
 
 
 
-	// Quelle: http://james.padolsey.com/javascript/highlighting-text-with-javascript/
-	//
-	highlight(document.getElementById(suchid),suchwort,marker);
 
 	function highlight(container,what,spanClass) {
 		var content = container.innerHTML,
@@ -48,7 +56,7 @@ $(document).ready(function(){
 			//pattern = new RegExp('(>[^<.]*)(' + what + ')([^<.]*)','g'),
 			// Groß - Klein Schreibung NICHT beachten
 			pattern = new RegExp('(>[^<.]*)(' + what + ')([^<.]*)','ig'),
-			replaceWith = '$1<span ' + ( spanClass ? 'class="' + spanClass + '"' : '' ) + '">$2</span>$3',
+			replaceWith = '$1<span ' + ( spanClass ? 'class="' + spanClass + '"' : '' ) + '>$2</span>$3',
 					highlighted = content.replace(pattern,replaceWith);
 
 					return (container.innerHTML = highlighted) !== content;
