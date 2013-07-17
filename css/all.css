@@ -322,17 +322,21 @@ figure figcaption:before {
 
 
 /* ----------------------------------------------
- * Tabellen Einstellung und Beschriftung
+ * Tabellen Einstellung 
  */
 
+/* Einstellung der Tabellen Beschriftung */
+
 table caption {
-	padding: 1em 0 0.5em 0;
-	font-size: 0.9em;
+    font-size: 0.9em;
+    min-width: 700px;
+    padding: 1em 0 0.5em;
+    text-align: left;
 }
 
 /* ----------------------------------------------
- * Tabelle mit "Tabelle" und laufender Nummer
- * beschriften
+ * Tabelle mit dem Vorwort "Tabelle" und einer 
+ * laufender Nummer beschriften
  */
 table caption::before {
 	/* Zahlendarstellung:
