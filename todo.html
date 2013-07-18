@@ -52,7 +52,7 @@
 
 -->
 
-<p>Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens. Aber auch [Fehler][Bugs] die noch nicht behoben sind notiere ich mir hier.</p>
+<p>Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens. Aber auch Fehler <strong>Bugs</strong> die noch nicht behoben sind notiere ich mir hier.</p>
 <!-- schnipp -->
 
 
@@ -63,11 +63,34 @@
 <dt>.htaccess</dt>
 <dd><p>Bei <code>make install</code> sollte auch die .htaccess Dateinen kopiert werden.</p>
 </dd>
+<dt>forum.rx0x</dt>
+<dd><p>Bei <code>make install</code> sollte auch die forum.rx0x kopiert werden.</p>
+</dd>
 <dt>/bilder</dt>
 <dd><p>Im Bild Verzeichnis sollten auch alle Rumex Bilder die nicht gebraucht werden gelöscht werden.</p>
 </dd>
 <dt>Biographie</dt>
 <dd><p>Biographie Funktion einbauen.</p>
+</dd>
+<dt>css/rumexmarker.js</dt>
+<dd><p><code>css/rumexmarker.js</code> markiert keine Umlaute.</p>
+</dd>
+<dt>.rumex.vim</dt>
+<dd><p>Bei dem Befehl <code>make html</code> könnte man evtl. zuvor die Datei speichern.</p>
+</dd>
+<dt>moot.it</dt>
+<dd><p>Das Nachladen des Dienstes moot.it dauert sehr lange. Sollte man beobachten.</p>
+</dd>
+<dt>.rumex.vim</dt>
+<dd><p>Einbau eines Kurzbefehls um den Link <em>Seitenkommentar</em> einzufügen.</p>
+<p>Vorlage:</p>
+<pre><code># Kommentar
+
+&lt;a class=&quot;moot&quot; href=&quot;https://moot.it/i/MOOTNAME/blog/SEITENNAME&quot;&gt;&lt;/a&gt;</code></pre>
+<p>Hier muss der Name <code>MOOTNAME</code> durch den Namen des moot.it Accounts ersetzt werden. Der <code>SEITENNAME</code> wird durch den Namen der Seite ersetzt.</p>
+</dd>
+<dt>css</dt>
+<dd><p>Markierungen sollte man evtl. von all.css nach screen.css verschieben.</p>
 </dd>
 </dl>
 <!-- vim:set ft=pandoc: -->

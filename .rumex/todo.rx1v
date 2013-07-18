@@ -9,7 +9,7 @@
 -->
 
 Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens.
-Aber auch [Fehler][Bugs] die noch nicht behoben sind notiere ich mir hier.
+Aber auch Fehler **Bugs** die noch nicht behoben sind notiere ich mir hier.
 
 <!-- schnipp -->
 
@@ -20,12 +20,41 @@ Fusszeilen Link
 .htaccess
 :	Bei `make install` sollte auch die .htaccess Dateinen kopiert werden.
 
+forum.rx0x
+:	Bei `make install` sollte auch die forum.rx0x kopiert werden. 
+
 /bilder
 :	Im Bild Verzeichnis sollten auch alle Rumex Bilder die nicht
 	gebraucht werden gelöscht werden.
 
 Biographie 
 :	Biographie Funktion einbauen.
+
+
+css/rumexmarker.js
+:	`css/rumexmarker.js` markiert keine Umlaute.
+
+.rumex.vim
+:	Bei dem Befehl `make html` könnte man evtl. zuvor die Datei speichern.
+
+moot.it
+:	Das Nachladen des Dienstes moot.it dauert sehr lange. 
+	Sollte man beobachten.
+
+.rumex.vim
+:	Einbau eines Kurzbefehls um den Link _Seitenkommentar_ einzufügen.
+	
+	Vorlage:
+		
+		# Kommentar
+
+		<a class="moot" href="https://moot.it/i/MOOTNAME/blog/SEITENNAME"></a>
+	
+	Hier muss der Name `MOOTNAME` durch den Namen des moot.it Accounts ersetzt 
+	werden. Der `SEITENNAME` wird durch den Namen der Seite ersetzt.
+
+css
+:	Markierungen sollte man evtl. von all.css nach screen.css verschieben.
 
 
 <!-- vim:set ft=pandoc: -->
