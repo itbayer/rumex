@@ -56,5 +56,7 @@ moot.it
 css
 :	Markierungen sollte man evtl. von all.css nach screen.css verschieben.
 
+index Seite
+:	Überschrift der Seite könnt man evtl. mit der eigentlichen Seite verlinken.
 
 <!-- vim:set ft=pandoc: -->
