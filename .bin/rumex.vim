@@ -62,6 +62,8 @@ menu Rumex.Öffne\ System\ Konfiguration<Tab>:e\ \.\./\.bin/sys\.config\.makefil
 menu Rumex.-----------------config-einelesen----------------- :
 menu Rumex.Vim\ Konfiguration\ Neu\ einlesen :unmenu Rumex<CR>:so ../.bin/rumex.vim<CR>
 
+
+
 " Abkürzungen
 abb rumexis Rumex mit is
 
