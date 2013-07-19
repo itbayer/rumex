@@ -25,6 +25,9 @@ U3="github.com Version"
 # RSS Überschrift
 RSS_TITEL = "Neuigkeiten von rumex Baukasten"
 
+# Bild für das Seitenbanner
+SEITENBANNER = "css/rumex.png"
+
 # #####################################################
 # FTP URL / Zugangsdaten. Ist diese Variabel gesetzt wird das 
 # Programm wput bzw. bin/wput.sh verwendet um die Daten auf
@@ -34,11 +37,10 @@ RSS_TITEL = "Neuigkeiten von rumex Baukasten"
 # FTP = "ftp://USER:PASS@SERVER:PORT/WWW_DIR/"
 
 
-
-
 # =====================================================
 #  Die Variabel ab hier brauchst du nicht unbedingt anpassen.
 # =====================================================
+
 
 # #####################################################
 # Auswahl der Pandoc Vorlagen / Setzen der Variable
@@ -117,3 +119,7 @@ SUCHE = "../.bin/suche.pl"
 
 # Ziel Datei für die JavaScript Suche
 SUCHE_JS_CONFIG="../css/rumexsuche_config.js"
+
+# #####################################################
+# Rumex Versionshinweis für die HTML Dateien
+META_GENERATOR = "rumex 0.7.0"

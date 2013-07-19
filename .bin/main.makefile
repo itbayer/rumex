@@ -24,6 +24,7 @@ all:
 	make -s rss
 	make -s html 
 	make -s bilder
+	make -s ../robots.txt
 
 
 # ######################################################
@@ -111,8 +112,21 @@ show:
 showwww:
 	x-www-browser $(URL) &
 
+# ######################################################
+# localhost öffnen
+showlocal:
+	x-www-browser localhost &
+
 
 # ######################################################
 # Konfigurationsdatei für die JavaScript Suche erstellen
 suche:
 	$(SUCHE) > $(SUCHE_JS_CONFIG)
+
+# ######################################################
+# robots.txt updaten
+../robots.txt: ../.inc/user/config.makefile
+	../.bin/update_robots.txt.pl
+
+robots.txt:
+	make  ../robots.txt

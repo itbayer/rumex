@@ -36,6 +36,11 @@ $endif$
 $for(header-includes)$
   $header-includes$
 $endfor$
+  <!-- Bild für das Seitenbanner -->
+  <style type="text/css" media="screen">
+	  #kopf { background-image: url("$seitenbanner$") !important; }
+  </style>
+
 </head>
 <body>
 $for(include-before)$

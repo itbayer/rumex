@@ -2,7 +2,6 @@
 # .bin/html.makefile
 # ##############################################
 
-META_GENERATOR = "rumex 0.6.9"
 
 # ##############################################
 # HTML Datei ohne Inhaltsverzeichnis
@@ -23,6 +22,7 @@ html0s: $(HTML0S)
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -41,6 +41,7 @@ html0x: $(HTML0X)
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -60,6 +61,7 @@ html0v: $(HTML0V)
 		-V meta_robots=$(META_ROBOTS_VERSTECKT) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -95,6 +97,7 @@ html0w: $(HTML0W)
 		-V meta_robots=$(META_ROBOTS_WEITERLEITUNG) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -123,6 +126,7 @@ html1s: $(HTML1S)
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -144,6 +148,7 @@ html1x: $(HTML1X)
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -165,6 +170,7 @@ html1v: $(HTML1V)
 		-V meta_robots=$(META_ROBOTS_VERSTECKT) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -191,6 +197,7 @@ html2s: $(HTML2S)
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -212,6 +219,7 @@ html2x: $(HTML2X)
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -233,6 +241,7 @@ html2v: $(HTML2V)
 		-V meta_robots=$(META_ROBOTS_VERSTECKT) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -260,6 +269,7 @@ html3s: $(HTML3S)
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -281,6 +291,7 @@ html3x: $(HTML3X)
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -302,6 +313,7 @@ html3v: $(HTML3V)
 		-V meta_robots=$(META_ROBOTS_VERSTECKT) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -328,6 +340,7 @@ html4s: $(HTML4S)
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -349,6 +362,7 @@ html4x: $(HTML4X)
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -370,6 +384,7 @@ html4v: $(HTML4V)
 		-V meta_robots=$(META_ROBOTS_VERSTECKT) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -396,6 +411,7 @@ html5s: $(HTML5S)
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -417,6 +433,7 @@ html5x: $(HTML5X)
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -438,6 +455,7 @@ html5v: $(HTML5V)
 		-V meta_robots=$(META_ROBOTS_VERSTECKT) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -464,6 +482,7 @@ html6s: $(HTML6S)
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -485,6 +504,7 @@ html6x: $(HTML6X)
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 
@@ -506,6 +526,7 @@ html6v: $(HTML6V)
 		-V meta_robots=$(META_ROBOTS_VERSTECKT) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
+		-V seitenbanner=$(SEITENBANNER) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
 

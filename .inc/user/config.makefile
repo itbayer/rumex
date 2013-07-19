@@ -16,10 +16,16 @@ U3="github.com Version"
 # RSS Überschrift
 RSS_TITEL = "Neuigkeiten von rumex Baukasten"
 
+# Bild für das Seitenbanner
+SEITENBANNER = "css/rumex.png"
+
 # ##############################################################
 # FTP URL / Zugangsdaten. Ist diese Variabel gesetzt wird das 
 # Programm wput bzw. bin/wput.sh verwendet um die Daten auf
-# den Server zu laden. Wenn die Variabel kommentiert ist (Standard)
+# den Server zu laden. 
+# Dazu muss sich auch das Programm wput auf dem Rechner befinden.
+# 
+# Wenn die Variabel kommentiert ist (Standard)
 # wird git verwendet.
 #
 # FTP = "ftp://USER:PASS@SERVER:PORT/WWW_DIR/"

@@ -45,7 +45,7 @@ menu Rumex.-------------------show------------------------- :
 menu &Rumex.&show.&file<Tab>:make\ show :make show&<CR><CR>
 menu &Rumex.&show.&www<Tab>:make\ showwww :make showwww&<CR><CR>
 " Muss noch ins Makefile eingebaut werden
-menu &Rumex.&show.&local<Tab>:make\ showwww :make showwww&<CR><CR>
+menu &Rumex.&show.&local<Tab>:make\ showllocal :make showlocal&<CR><CR>
 
 menu Rumex.-------------------make------------------------- :
 menu &Rumex.&make.html<Tab>:make\ html :make html<CR><CR>
