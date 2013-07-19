@@ -10,6 +10,7 @@
 
 Vorbereitung auf die `make update` Funktion.
 
+<!-- schnipp -->
 
 ## V0.6.9
 
@@ -29,8 +30,6 @@ Anpassung der Konfiguration
 In Rumex wurden zwei JavaScripts eingebaut.
 Diese ermöglichen zum einen das die Seiten von Rumex durchsucht werden können. Zum anderen das die gefunden Wörter auf der jeweiligen Seite markiert werden.
 
-
-<!-- schnipp -->
 
 
 ## V0.6.5

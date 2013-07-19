@@ -40,26 +40,6 @@ Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.
 
 Vorbereitung auf die `make update` Funktion.
 
-
-## V0.6.9
-
-Anpassungen im Rumexmenü
-:	Es wurden Formatierungsbefehle eingebaut
-
-Anpassung der Konfiguration
-:	Ist eine Konfig Dateien im .inc/user Verzeichnis
-	nicht vorhanden wird die entsprechende Datei
-	aus dem Verzeichnis .inc/default verwendet.
-	
-
-
-
-## V0.6.7
-
-In Rumex wurden zwei JavaScripts eingebaut.
-Diese ermöglichen zum einen das die Seiten von Rumex durchsucht werden können. Zum anderen das die gefunden Wörter auf der jeweiligen Seite markiert werden.
-
-
 [... weiter lesen](historie.html)
 
 ---
