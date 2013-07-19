@@ -16,6 +16,11 @@ U3="github.com Version"
 # RSS Überschrift
 RSS_TITEL = "Neuigkeiten von rumex Baukasten"
 
+# CSS
+CSSALL = "css/all.css"
+CSSSCREEN = "css/screen.css"
+CSSPRINT = "css/print.css"
+
 # Bild für das Seitenbanner
 SEITENBANNER = "css/rumex.png"
 

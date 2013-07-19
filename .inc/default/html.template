@@ -36,7 +36,13 @@ $endif$
 $for(header-includes)$
   $header-includes$
 $endfor$
-  <!-- Bild für das Seitenbanner -->
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="$cssall$" media="all" />
+	<link rel="stylesheet" type="text/css" href="$cssscreen$" media="screen" />
+	<link rel="stylesheet" type="text/css" href="$cssprint$" media="print" />
+	
+	<!-- Bild für das Seitenbanner -->
   <style type="text/css" media="screen">
 	  #kopf { background-image: url("$seitenbanner$") !important; }
   </style>
