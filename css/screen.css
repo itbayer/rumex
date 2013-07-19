@@ -16,7 +16,8 @@ body{
 #kopf {
 	position: absolute;
 	width: 100px;
-	background-image: url("rumex.png");
+	/* background-image: url("rumex.png"); 
+	 * ... ist in der ./inc/default/header.html definiert. */
 	background-repeat: no-repeat;
 	margin-left: 4px;
 }

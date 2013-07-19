@@ -1,0 +1,16 @@
+# robots.txt it-bayer.de/rumex oder itbayer.github.io
+#
+# Info Link: http://de.selfhtml.org/diverses/robots.htm
+#
+
+Sitemmap: http://www.it-bayer.de/rumex/sitemap.xml
+
+User-agent: *
+Disallow: /.bin/
+Disallow: /.rumex/
+Disallow: /css/
+Disallow: /.inc/
+Disallow: /readme.md
+Disallow: /rss.xml
+Disallow: /CNAME
+Disallow: /.git/
