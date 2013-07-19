@@ -1,6 +1,5 @@
 # #############################################
-# user.config.makefile
-#
+# .inc/user/config.makefile
 #
 # SEITEN EINSTELLUNG :: Bitte anpassen!
 #
@@ -25,10 +24,5 @@ RSS_TITEL = "Neuigkeiten von rumex Baukasten"
 #
 # FTP = "ftp://USER:PASS@SERVER:PORT/WWW_DIR/"
 
-# ##############################################################
-# HTML Template 
-HTML_TEMPLATE = ../.inc/user/html.template
-KOPF_TEMPLATE = ../.inc/user/kopf.html
-HEADER_TEMPLATE = ../.inc/user/header.html
-FUSS_TEMPLATE = ../.inc/user/fuss.html 
+
 

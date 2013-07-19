@@ -2,7 +2,7 @@
 # .bin/html.makefile
 # ##############################################
 
-META_GENERATOR = "rumex 0.6.8"
+META_GENERATOR = "rumex 0.6.9"
 
 # ##############################################
 # HTML Datei ohne Inhaltsverzeichnis

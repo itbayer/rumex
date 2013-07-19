@@ -6,6 +6,19 @@
 # Historie
 -->
 
+## V0.6.9
+
+Anpassungen im Rumexmenü
+:	Es wurden Formatierungsbefehle eingebaut
+
+Anpassung der Konfiguration
+:	Ist eine Konfig Dateien im .inc/user Verzeichnis
+	nicht vorhanden wird die entsprechende Datei
+	aus dem Verzeichnis .inc/default verwendet.
+	
+
+
+
 ## V0.6.7
 
 In Rumex wurden zwei JavaScripts eingebaut.

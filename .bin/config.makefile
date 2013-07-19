@@ -33,21 +33,32 @@ RSS_TITEL = "Neuigkeiten von rumex Baukasten"
 #
 # FTP = "ftp://USER:PASS@SERVER:PORT/WWW_DIR/"
 
-# #####################################################
-# HTML Template 
-HTML_TEMPLATE = ../.inc/default/html.template
-KOPF_TEMPLATE = ../.inc/default/kopf.html
-HEADER_TEMPLATE = ../.inc/default/header.html
-FUSS_TEMPLATE = ../.inc/default/fuss.html 
-#
-# =====================================================
-
 
 
 
 # =====================================================
 #  Die Variabel ab hier brauchst du nicht unbedingt anpassen.
 # =====================================================
+
+# #####################################################
+# Auswahl der Pandoc Vorlagen / Setzen der Variable
+#
+# Ist im .inc/user Verzeichnis eine entsprechende Datei vorhanden
+# wird diese verwendet.
+# Wenn nicht wird die Datei aus .inc/default verwendet.
+#
+HTML_TEMPLATE = $(shell if [ -f ../.inc/user/html.template ];then echo \"../.inc/user/html.template\";else echo \"../.inc/default/html.template\";fi)
+KOPF_TEMPLATE = $(shell if [ -f ../.inc/user/kopf.html ];then echo \"../.inc/user/kopf.html\";else echo \"../.inc/default/kopf.html\";fi)
+HEADER_TEMPLATE = $(shell if [ -f ../.inc/user/header.html ];then echo \"../.inc/user/header.html\";else echo \"../.inc/default/header.html\";fi)
+FUSS_TEMPLATE = $(shell if [ -f ../.inc/user/fuss.html ];then echo \"../.inc/user/fuss.html\";else echo \"../.inc/default/fuss.html\";fi)
+
+# DEV Eintrag
+#vorlagetest:
+#	echo $(HTML_TEMPLATE)
+#	echo $(KOPF_TEMPLATE)
+#	echo $(HEADER_TEMPLATE)
+#	echo $(FUSS_TEMPLATE)
+
 
 # #####################################################
 # META Angabe der unterschiedlichen Seitentypen

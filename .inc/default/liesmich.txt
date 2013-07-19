@@ -2,12 +2,12 @@
 % .inc/default/
 %
 
-In diesem Verzeichnis findest du die `HTML` Vorlagen für Rumex.
+In diesem Verzeichnis findest du die Vorlagen für Rumex bzw. Pandoc.
 
-Am besten kopierst du die Dateien, aus diesem Verzeichnis in das
-Verzeichnis `user`.
+Wird eine Datei aus diesem Verzeichnis in das `.inc/user`
+Verzeichnis kopiert wird, wird diese verwendet.
 
-	cp -a ./.inc/default ./inc/user
+# Benutzerkonfiguration
 
 Erstellst die Datei `config.makefile`
 

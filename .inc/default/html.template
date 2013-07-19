@@ -57,7 +57,7 @@ $if(toc)$
 $toc$
 </nav>
 $endif$
-<div id=seite>
+<div id="seite">
 $body$
 </div>
 $for(include-after)$

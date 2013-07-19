@@ -32,22 +32,22 @@ menu &Rumex.Vim\ Konfiguration\ Neu\ einlesen :unmenu Rumex<CR>:so ../.bin/rumex
 
 " ---------------------------------------------------------
 " Rumex Menü
-menu &Rumex.-----------------Dateien\ öffnen----------------- :
+menu Rumex.-----------------Dateien\ öffnen----------------- :
 menu &Rumex.&Öffnen.&Startseite<Tab>:e\ start\.rx0s :tabnew<CR>:e start.rx0s<CR><CR>
 menu &Rumex.&Öffnen.&Newsseite\ (&RSS)<Tab>:e\ rss\.rx0x :tabnew<CR>:e rss.rx0x<CR><CR>
 
-menu &Rumex.-------------------textbaustein----------------- :
-menu &Rumex.Text&Baustein.\ Neues\ &Dateigerüst<Tab>,rnd ,rnd
-menu &Rumex.Text&Baustein.\ Neuen\ &News\ Eintrag<Tab>,rnn ,rnn
-menu &Rumex.Text&Baustein.\ Neuen\ &Weiterleitungs\ Eintrag<Tab>,rwl ,rwl
+menu Rumex.-------------------textbaustein----------------- :
+menu &Rumex.Text&Bausteine.\ Neues\ &Dateigerüst<Tab>,rnd ,rnd
+menu &Rumex.Text&Bausteine.\ Neuen\ &News\ Eintrag<Tab>,rnn ,rnn
+menu &Rumex.Text&Bausteine.\ Neuen\ &Weiterleitung<Tab>,rwl ,rwl
 
-menu &Rumex.-------------------show------------------------- :
+menu Rumex.-------------------show------------------------- :
 menu &Rumex.&show.&file<Tab>:make\ show :make show&<CR><CR>
 menu &Rumex.&show.&www<Tab>:make\ showwww :make showwww&<CR><CR>
 " Muss noch ins Makefile eingebaut werden
 menu &Rumex.&show.&local<Tab>:make\ showwww :make showwww&<CR><CR>
 
-menu &Rumex.-------------------make------------------------- :
+menu Rumex.-------------------make------------------------- :
 menu &Rumex.&make.html<Tab>:make\ html :make html<CR><CR>
 menu &Rumex.&make.bilder<Tab>:make\ bilder :make bilder<CR>
 menu &Rumex.&make.rss<Tab>:make\ rss :make rss<CR>
@@ -63,15 +63,15 @@ menu &Rumex.&make.&clean.&HTML<Tab>:make\ hclean :make hclean<CR>
 menu &Rumex.&make.&clean.&XML<Tab>:make\ xclean :make xclean<CR>
 menu &Rumex.&make.&clean.&alles<Tab>:make\ clean :make clean<CR>
 
-menu &Rumex.-----------------git--------------------------- :
+menu Rumex.-----------------git--------------------------- :
 menu &Rumex.&Git.Änderungen\ &holen<Tab>:!git\ pull :!git pull<CR>
 menu &Rumex.&Git.Änderungen\ &anzeigen<Tab>:!git\ status :!git status<CR>
 
-menu &Rumex.-----------------config--------------------------- :
-menu &Rumex.Öffne\ User\ Konfiguration<Tab>:e\ \.\./\.bin/user\.config\.makefile :tabnew<CR>:e ../.bin/user.config.makefile<CR>
-menu &Rumex.Öffne\ System\ Konfiguration<Tab>:e\ \.\./\.bin/sys\.config\.makefile :tabnew<CR>:e ../.bin/sys.config.makefile<CR>
+menu Rumex.-----------------config--------------------------- :
+menu &Rumex.&Konfiguration.User\ Verzeichnis<Tab>:e\ \.\./\.inc/user/. :tabnew<CR>:e ../.inc/user/.<CR>
+"menu &Rumex.&Konfiguration.System\ Konfiguration<Tab>:e\ \.\./\.bin/sys\.config\.makefile :tabnew<CR>:e ../.bin/sys.config.makefile<CR>
 
-menu &Rumex.-----------------Formatierung----------------- :
+menu Rumex.-----------------Formatierung----------------- :
 vmenu &Rumex.&Formatierung.&Fett<Tab>,rff ,rff 
 vmenu &Rumex.&Formatierung.&Kursiv<Tab>,rfk ,rfk 
 vmenu &Rumex.&Formatierung.&Liste<Tab>,rfl ,rfl 
