@@ -1,24 +1,24 @@
 % HTML Vorlagen
-% .inc/default/
+% .rumex/default/
 %
 
 In diesem Verzeichnis findest du die Vorlagen für Rumex bzw. Pandoc.
 
-Wird eine Datei aus diesem Verzeichnis in das `.inc/user`
+Wird eine Datei aus diesem Verzeichnis in das `.rumex/user`
 Verzeichnis kopiert wird, wird diese verwendet.
 
 # Benutzerkonfiguration
 
 Erstellst die Datei `config.makefile`
 
-	touch ./.inc/user/config.makefile
+	touch ./.rumex/user/config.makefile
 
 und fügst die `make` Variablen aus `./.bin/config.makefile`
 ein, die du anpassen willst.
 
 # Warum?
 
-Das `./.inc/user` Verzeichnis wird bei einem Update nicht überschrieben.
+Das `./.rumex/user` Verzeichnis wird bei einem Update nicht überschrieben.
 
 
 

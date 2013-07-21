@@ -1,9 +1,9 @@
 "
-" .../.bin/rumex.vim
+" .../.rumex/bin/rumex.vim
 "
-" start (g)vim aus dem .rumex Verzeichnis mit 
-"    gvim -S ../.bin/rumex.vim 
-" oder mit der ../.bin/rumex.sh
+" start (g)vim aus dem .rx Verzeichnis mit 
+"    gvim -S ../.rumex/bin/rumex.vim 
+" oder mit der ../.rumex/bin/rumex.sh
 "
 
 " Nach dem Schreiben Konfiguration einlesen; wird hier nicht verwendet.
@@ -27,7 +27,7 @@ set ic " Groß-/Kleinschreibung bei der Suche ignorieren
 set hlsearch " Suche Farblich hervorheben
 
 " Menu Entwicklung -- Vim Konfiguration neu einlesen
-menu &Rumex.Vim\ Konfiguration\ Neu\ einlesen :unmenu Rumex<CR>:so ../.bin/rumex.vim<CR>
+menu &Rumex.Vim\ Konfiguration\ Neu\ einlesen :unmenu Rumex<CR>:so ../.rumex/bin/rumex.vim<CR>
 
 
 " ---------------------------------------------------------
@@ -68,8 +68,8 @@ menu &Rumex.&Git.Änderungen\ &holen<Tab>:!git\ pull :!git pull<CR>
 menu &Rumex.&Git.Änderungen\ &anzeigen<Tab>:!git\ status :!git status<CR>
 
 menu Rumex.-----------------config--------------------------- :
-menu &Rumex.&Konfiguration.User\ Verzeichnis<Tab>:e\ \.\./\.inc/user/. :tabnew<CR>:e ../.inc/user/.<CR>
-"menu &Rumex.&Konfiguration.System\ Konfiguration<Tab>:e\ \.\./\.bin/sys\.config\.makefile :tabnew<CR>:e ../.bin/sys.config.makefile<CR>
+menu &Rumex.&Konfiguration.User\ Verzeichnis<Tab>:e\ \.\./\.rumex/user/. :tabnew<CR>:e ../.rumex/user/.<CR>
+"menu &Rumex.&Konfiguration.System\ Konfiguration<Tab>:e\ \.\./\.rumex/bin/sys\.config\.makefile :tabnew<CR>:e ../.rumex/bin/sys.config.makefile<CR>
 
 menu Rumex.-----------------Formatierung----------------- :
 vmenu &Rumex.&Formatierung.&Fett<Tab>,rff ,rff 

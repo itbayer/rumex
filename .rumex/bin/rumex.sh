@@ -7,7 +7,7 @@ PFAD=~/sbgit/github/rumex
 GVIM=/usr/bin/gvim
 
 # Verzeichnis wechseln
-cd $PFAD/.rumex
+cd $PFAD/.rx
 
 # (G)VIM mit rumex Erweiterung laden
-$GVIM -S ../.bin/rumex.vim
+$GVIM -S ../.rumex/bin/rumex.vim

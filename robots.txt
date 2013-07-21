@@ -6,10 +6,8 @@
 Sitemap: http://www.it-bayer.de/rumex/sitemap.xml
 
 User-agent: *
-Disallow: /.bin/
 Disallow: /.rumex/
 Disallow: /css/
-Disallow: /.inc/
 Disallow: /readme.md
 Disallow: /rss.xml
 Disallow: /CNAME

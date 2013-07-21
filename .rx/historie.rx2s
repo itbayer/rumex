@@ -6,6 +6,11 @@
 # Historie
 -->
 
+## V0.7.1
+
+Vorbereitung auf die `make update` Funktion.
+Umbau der Verzeichnisstruktur.
+
 ## V0.7.0
 
 Vorbereitung auf die `make update` Funktion.

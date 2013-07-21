@@ -8,7 +8,7 @@
 # Hier findest du die Variable die man evtl. anpassen muss.
 #
 # Am besten kopierst du die Variablen, die du änderst
-# in die Datei ./inc/user/config.makefile.
+# in die Datei ./rumex/user/config.makefile.
 #
 # Diese Datei wird bei einem Update nicht überschrieben.
 #
@@ -50,14 +50,14 @@ SEITENBANNER = "css/rumex.png"
 # #####################################################
 # Auswahl der Pandoc Vorlagen / Setzen der Variable
 #
-# Ist im .inc/user Verzeichnis eine entsprechende Datei vorhanden
+# Ist im .rumex/user Verzeichnis eine entsprechende Datei vorhanden
 # wird diese verwendet.
-# Wenn nicht wird die Datei aus .inc/default verwendet.
+# Wenn nicht wird die Datei aus .rumex/default verwendet.
 #
-HTML_TEMPLATE = $(shell if [ -f ../.inc/user/html.template ];then echo \"../.inc/user/html.template\";else echo \"../.inc/default/html.template\";fi)
-KOPF_TEMPLATE = $(shell if [ -f ../.inc/user/kopf.html ];then echo \"../.inc/user/kopf.html\";else echo \"../.inc/default/kopf.html\";fi)
-HEADER_TEMPLATE = $(shell if [ -f ../.inc/user/header.html ];then echo \"../.inc/user/header.html\";else echo \"../.inc/default/header.html\";fi)
-FUSS_TEMPLATE = $(shell if [ -f ../.inc/user/fuss.html ];then echo \"../.inc/user/fuss.html\";else echo \"../.inc/default/fuss.html\";fi)
+HTML_TEMPLATE = $(shell if [ -f ../.rumex/user/html.template ];then echo \"../.rumex/user/html.template\";else echo \"../.rumex/default/html.template\";fi)
+KOPF_TEMPLATE = $(shell if [ -f ../.rumex/user/kopf.html ];then echo \"../.rumex/user/kopf.html\";else echo \"../.rumex/default/kopf.html\";fi)
+HEADER_TEMPLATE = $(shell if [ -f ../.rumex/user/header.html ];then echo \"../.rumex/user/header.html\";else echo \"../.rumex/default/header.html\";fi)
+FUSS_TEMPLATE = $(shell if [ -f ../.rumex/user/fuss.html ];then echo \"../.rumex/user/fuss.html\";else echo \"../.rumex/default/fuss.html\";fi)
 
 # DEV Eintrag
 #vorlagetest:
@@ -76,7 +76,7 @@ META_ROBOTS_WEITERLEITUNG = "noindex,follow,noarchive"
 
 # #####################################################
 # Programm zum erstellen der index.rx0x
-INDEX="../.bin/index.pl"
+INDEX="../.rumex/bin/index.pl"
 
 
 # #####################################################
@@ -86,20 +86,20 @@ INDEX="../.bin/index.pl"
 RSS_FILE = "rss.xml"
 
 # Programm zum erstellen des RSS Feed
-RX2RSS = "../.bin/rx2rss.pl"
+RX2RSS = "../.rumex/bin/rx2rss.pl"
 
 
 # #####################################################
 # XML Sitemap
 
 # Programm zum erstellen der XML Sitemap Datei
-SITEMAP_XML = "../.bin/sitemap_xml.pl"
+SITEMAP_XML = "../.rumex/bin/sitemap_xml.pl"
 
 # Zieldatei der Sitemap Datei
-SITEMAP_XML_FILE = "../sitemap.xml"
+SITEMAP_XML_FILE = "../../sitemap.xml"
 
 # Programm zum erstellen der rx0v Sitemap Datei
-SITEMAP_RX = "../.bin/sitemap_rx.pl"
+SITEMAP_RX = "../.rumex/bin/sitemap_rx.pl"
 
 # Zieldatei der HTML Sitemap Datei
 SITEMAP_RX_FILE = "sitemap.rx0v"
@@ -120,7 +120,7 @@ PANDOC = pandoc
 # Rumex Suche
 
 # Programm zum erstellen der rumexsuche_config.js
-SUCHE = "../.bin/suche.pl"
+SUCHE = "../.rumex/bin/suche.pl"
 
 # Ziel Datei für die JavaScript Suche
 SUCHE_JS_CONFIG="../css/rumexsuche_config.js"

@@ -33,7 +33,7 @@ all:
 online:
 	make -s all
 ifdef FTP
-	../.bin/wput.sh $(FTP)
+	../.rumex/bin/wput.sh $(FTP)
 else
 	git add ../.
 	git commit -a -m"...."
@@ -100,7 +100,7 @@ bclean:
 # #######################################################
 # rumex Verzeichnis löschen und Vorlage kopieren
 install:
-	../.bin/install.sh
+	../.rumex/bin/install.sh
 
 # #######################################################
 # index.html im Standard Browser öffnen
@@ -125,8 +125,8 @@ suche:
 
 # ######################################################
 # robots.txt updaten
-../robots.txt: ../.inc/user/config.makefile
-	../.bin/update_robots.txt.pl
+../../robots.txt: ../.rumex/user/config.makefile
+	../.rumex/bin/update_robots.txt.pl
 
 robots.txt:
-	make  ../robots.txt
+	make  ../../robots.txt

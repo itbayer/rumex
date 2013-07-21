@@ -31,8 +31,8 @@ if ((i)); then
 	rm *.rx*
 	echo ""
 
-	echo "Kopiere die Vorlagen aus dem .inc Verzeichnis"
-	cp ../.inc/rx/*.rx* .
+	echo "Kopiere die Vorlagen aus dem .rumex Verzeichnis"
+	cp ../.rumex/install/*.rx* .
 	echo ""
 
 	echo "Jetzt muss du noch verschiedene Dateien anpassen,"

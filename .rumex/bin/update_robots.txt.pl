@@ -3,13 +3,13 @@
 
 =head1 update_robots.txt
 
-Liest die Seite URL aus der ../.inc/user/config.makefile
+Liest die Seite URL aus der ../.rumex/user/config.makefile
 und wechselt diese in der robots.txt aus.
 
 =cut
 
 # Aus dieser Datei wird die URL geholt
-my $make_config = "../.inc/user/config.makefile";
+my $make_config = "../.rumex/user/config.makefile";
 
 # Diese Datei wird geändert
 my $robots = "../robots.txt";

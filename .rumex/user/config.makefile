@@ -1,5 +1,5 @@
 # #############################################
-# .inc/user/config.makefile
+# .rumex/user/config.makefile
 #
 # SEITEN EINSTELLUNG :: Bitte anpassen!
 #

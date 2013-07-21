@@ -1,5 +1,5 @@
 # 
-# .bin/pdf.makefile
+# .rumex/bin/pdf.makefile
 #
 
 

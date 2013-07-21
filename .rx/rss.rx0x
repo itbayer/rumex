@@ -14,6 +14,24 @@
 | BildBeschreibung: Aktuelles und Neuigkeiten von der rumex Seite.
 -->
 
+
+# Neue Nachricht{.nn3}
+
+<!--
+| Link: http://www.it-bayer.de/rumex/
+| Autor: IT-Bayer
+| Kategorie: Neues
+| Datum: Sun, 21 Jul 2013 17:41:15 +0200
+-->
+
+Rumex bekommt eine Update Funktion. 
+Dazu wird die Verzeichnisstruktur umgebaut.
+Die interne Versionsnummer für die Updatefunktion wurde auf
+V0.7.xxx festgelegt.
+
+**In diesem Versionsabschnitt geht es also Wild zu.**
+
+
 # Rumex bekommt eine interne Suche{.nn2}
 
 <!--

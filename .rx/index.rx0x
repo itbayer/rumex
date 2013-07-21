@@ -32,9 +32,14 @@ Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.
 
 <div class="indexliste">
 
-<p class="datum">2013-07-19</p>
+<p class="datum">2013-07-21</p>
 
 # Historie
+
+## V0.7.1
+
+Vorbereitung auf die `make update` Funktion.
+Umbau der Verzeichnisstruktur.
 
 ## V0.7.0
 

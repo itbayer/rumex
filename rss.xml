@@ -25,6 +25,23 @@
 
 
 <item>
+	<title>Neue Nachricht</title>
+	<description>
+	<![CDATA[
+
+<p>Rumex bekommt eine Update Funktion. Dazu wird die Verzeichnisstruktur umgebaut. Die interne Versionsnummer für die Updatefunktion wurde auf V0.7.xxx festgelegt.</p>
+
+]]>
+	</description>
+		<link>http://www.it-bayer.de/rumex/</link>
+		<guid>http://www.it-bayer.de/rumex/</guid>
+		<dc:creator>IT-Bayer</dc:creator>
+		<pubDate>Sun, 21 Jul 2013 17:41:15 +0200</pubDate>
+		<category><![CDATA[Neues]]></category>
+</item>
+
+
+<item>
 	<title>Rumex bekommt eine interne Suche</title>
 	<description>
 	<![CDATA[
