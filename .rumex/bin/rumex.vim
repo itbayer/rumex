@@ -68,7 +68,7 @@ menu &Rumex.&Git.Änderungen\ &holen<Tab>:!git\ pull :!git pull<CR>
 menu &Rumex.&Git.Änderungen\ &anzeigen<Tab>:!git\ status :!git status<CR>
 
 menu Rumex.-----------------config--------------------------- :
-menu &Rumex.&Konfiguration.User\ Verzeichnis<Tab>:e\ \.\./\.rumex/user/. :tabnew<CR>:e ../.rumex/user/.<CR>
+menu &Rumex.&Konfiguration.User\ Verzeichnis<Tab>:e\ \.\./\.rx/. :tabnew<CR>:e ../.rx/.<CR>
 "menu &Rumex.&Konfiguration.System\ Konfiguration<Tab>:e\ \.\./\.rumex/bin/sys\.config\.makefile :tabnew<CR>:e ../.rumex/bin/sys.config.makefile<CR>
 
 menu Rumex.-----------------Formatierung----------------- :

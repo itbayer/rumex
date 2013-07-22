@@ -1,1 +1,1 @@
-../.rumex/Makefile
+../.rumex/makefile/Makefile

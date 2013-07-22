@@ -42,7 +42,7 @@ my $schnipp;
 
 Die Überschrift der Seite, bestehend aus den drei
 ersten Zeilen die bei pandoc mit C<%> gekennzeichnet sind,
-wird aus dem C<template/config.makefile> gelesen.
+wird aus dem C<.rx/config.mk> gelesen.
 
 B<Makefile Beispiel>
 
