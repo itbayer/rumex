@@ -134,4 +134,4 @@ SUCHE_JS_CONFIG="../rxtpl/js/rumexsuche_config.js"
 
 # #####################################################
 # Rumex Versionshinweis für die HTML Dateien
-META_GENERATOR = "rumex "$(shell cat ../.rumex/rxversion.txt)
+META_GENERATOR = "rumex "$(shell cat ../.rumex/default/version.txt)
