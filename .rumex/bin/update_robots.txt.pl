@@ -9,7 +9,7 @@ und wechselt diese in der robots.txt aus.
 =cut
 
 # Aus dieser Datei wird die URL geholt
-my $make_config = "../.rumex/user/config.makefile";
+my $make_config = "../.rx/config.makefile";
 
 # Diese Datei wird geändert
 my $robots = "../robots.txt";

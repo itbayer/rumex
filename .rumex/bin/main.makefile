@@ -125,8 +125,8 @@ suche:
 
 # ######################################################
 # robots.txt updaten
-../../robots.txt: ../.rumex/user/config.makefile
+../robots.txt: 
 	../.rumex/bin/update_robots.txt.pl
 
 robots.txt:
-	make  ../../robots.txt
+	make  ../robots.txt

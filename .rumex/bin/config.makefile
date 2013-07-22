@@ -61,10 +61,10 @@ RUMEXSUCHE = "rxtpl/js"
 # wird diese verwendet.
 # Wenn nicht wird die Datei aus .rumex/default verwendet.
 #
-HTML_TEMPLATE = $(shell if [ -f ../.rumex/user/html.template ];then echo \"../.rumex/user/html.template\";else echo \"../.rumex/default/html.template\";fi)
-KOPF_TEMPLATE = $(shell if [ -f ../.rumex/user/kopf.html ];then echo \"../.rumex/user/kopf.html\";else echo \"../.rumex/default/kopf.html\";fi)
-HEADER_TEMPLATE = $(shell if [ -f ../.rumex/user/header.html ];then echo \"../.rumex/user/header.html\";else echo \"../.rumex/default/header.html\";fi)
-FUSS_TEMPLATE = $(shell if [ -f ../.rumex/user/fuss.html ];then echo \"../.rumex/user/fuss.html\";else echo \"../.rumex/default/fuss.html\";fi)
+HTML_TEMPLATE = $(shell if [ -f ../.rx/html.template ];then echo \"../.rx/html.template\";else echo \"../.rumex/default/html.template\";fi)
+KOPF_TEMPLATE = $(shell if [ -f ../.rx/kopf.html ];then echo \"../.rx/kopf.html\";else echo \"../.rumex/default/kopf.html\";fi)
+HEADER_TEMPLATE = $(shell if [ -f ../.rx/header.html ];then echo \"../.rx/header.html\";else echo \"../.rumex/default/header.html\";fi)
+FUSS_TEMPLATE = $(shell if [ -f ../.rx/fuss.html ];then echo \"../.rx/fuss.html\";else echo \"../.rumex/default/fuss.html\";fi)
 
 # DEV Eintrag
 #vorlagetest:
