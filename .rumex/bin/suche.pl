@@ -7,13 +7,13 @@ use strict;
 =encoding utf-8
 
 Aufruf:
-	../.bin/suche.pl > ../css/rumexsuche_config.js
+	../.bin/suche.pl > ../rxtpl/js/rumexsuche_config.js
 
 	oder
 
 	make suche
 
-Erstellt eine C<css/rumexsuche_config.js> Datei.
+Erstellt eine C<rxtpl/js/rumexsuche_config.js> Datei.
 
 =cut
 

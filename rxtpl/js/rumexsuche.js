@@ -189,7 +189,7 @@
 			if (this.index == 0) {
 				//window.alert("Beginne mit Suche");
 				var img = new Image(43,11);
-				img.src = "js/lade_suche.gif";
+				img.src = "rxtpl/img/lade_suche.gif";
 				img.id = "loader";
 				img.alt = "Statusbalken";
 				//this.pEl.appendChild(img);

@@ -26,12 +26,19 @@ U3="github.com Version"
 RSS_TITEL = "Neuigkeiten von rumex Baukasten"
 
 # CSS
-CSSALL = "css/all.css"
-CSSSCREEN = "css/screen.css"
-CSSPRINT = "css/print.css"
+CSSALL = "rxtpl/css/all.css"
+CSSSCREEN = "rxtpl/css/screen.css"
+CSSPRINT = "rxtpl/css/print.css"
 
 # Bild für das Seitenbanner
-SEITENBANNER = "css/rumex.png"
+SEITENBANNER = "rxtpl/img/rumex.png"
+
+# Schalter ob das externe Tool von moot.it eingebunden werden soll
+# ... wenn nicht den Parameter kommentieren. 
+MOOTIT = "ein"
+
+# Rumexsuche
+RUMEXSUCHE = "rxtpl/js"
 
 # #####################################################
 # FTP URL / Zugangsdaten. Ist diese Variabel gesetzt wird das 
@@ -96,7 +103,7 @@ RX2RSS = "../.rumex/bin/rx2rss.pl"
 SITEMAP_XML = "../.rumex/bin/sitemap_xml.pl"
 
 # Zieldatei der Sitemap Datei
-SITEMAP_XML_FILE = "../../sitemap.xml"
+SITEMAP_XML_FILE = "../sitemap.xml"
 
 # Programm zum erstellen der rx0v Sitemap Datei
 SITEMAP_RX = "../.rumex/bin/sitemap_rx.pl"
@@ -123,8 +130,8 @@ PANDOC = pandoc
 SUCHE = "../.rumex/bin/suche.pl"
 
 # Ziel Datei für die JavaScript Suche
-SUCHE_JS_CONFIG="../css/rumexsuche_config.js"
+SUCHE_JS_CONFIG="../rxtpl/js/rumexsuche_config.js"
 
 # #####################################################
 # Rumex Versionshinweis für die HTML Dateien
-META_GENERATOR = "rumex 0.7.0"
+META_GENERATOR = "rumex "$(shell cat ../.rumex/rxversion.txt)

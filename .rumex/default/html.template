@@ -2,10 +2,15 @@
 <html$if(lang)$ lang="$lang$"$endif$>
 <head>
   <meta charset="utf-8">
-  <!-- rumex Version -->
-  <meta name="generator" content="$meta_generator$">
-  <!-- rumex Suchmaschine -->
-  <meta name="robots" content="$meta_robots$">
+
+<!-- rumex Version -->
+<meta name="generator" content="$meta_generator$">
+
+<!-- rumex Suchmaschine -->
+<meta name="robots" content="$meta_robots$">
+
+<link rel="icon" type="image/gif" href="favicon.gif" />
+
 $for(author-meta)$
   <meta name="author" content="$author-meta$">
 $endfor$
@@ -31,22 +36,44 @@ $endfor$
 $if(math)$
   $math$
 $endif$
-  <!-- rumex RSS -->
-  <link rel="alternate" type="application/rss+xml" title="$rsstitel$" href="$rssfile$" />
+
+$if(mootit)$
+<!-- rumex moot.it -->
+<link rel="stylesheet" href="https://cdn.moot.it/1/moot.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+<script src="https://cdn.moot.it/1/moot.de.min.js"></script>
+$endif$
+
+$if(rumexsuche)$
+<!-- rumex JavaScript Suche -->
+<script type="text/javascript" src="$rumexsuche$/rumexsuche_config.js"></script>
+<script type="text/javascript" src="$rumexsuche$/rumexsuche.js"></script>
+
+<!-- rumex JavaScript Suchwort markieren -->
+<script type='text/javascript' src='$rumexsuche$/rumexmarker.js'></script>
+$endif$
+
+$if(rsstitel)$
+<!-- rumex RSS -->
+<link rel="alternate" type="application/rss+xml" title="$rsstitel$" href="$rssfile$" />
+$endif$
+
+<!-- rumex CSS -->
+<link rel="stylesheet" type="text/css" href="$cssall$" media="all" />
+<link rel="stylesheet" type="text/css" href="$cssscreen$" media="screen" />
+<link rel="stylesheet" type="text/css" href="$cssprint$" media="print" />
+
+$if(seitenbanner)$
+<!-- Bild für das Seitenbanner -->
+<style type="text/css" media="screen">
+	#kopf { background-image: url("$seitenbanner$") !important; }
+</style>
+$endif$
+
+
 $for(header-includes)$
   $header-includes$
 $endfor$
-
-	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="$cssall$" media="all" />
-	<link rel="stylesheet" type="text/css" href="$cssscreen$" media="screen" />
-	<link rel="stylesheet" type="text/css" href="$cssprint$" media="print" />
-	
-	<!-- Bild für das Seitenbanner -->
-  <style type="text/css" media="screen">
-	  #kopf { background-image: url("$seitenbanner$") !important; }
-  </style>
-
 </head>
 <body>
 $for(include-before)$

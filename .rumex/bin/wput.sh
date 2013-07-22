@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-DATEI_LISTE="*.html *.xml robots.txt css/ bilder/"
+DATEI_LISTE="*.html *.xml robots.txt rxtpl/ bilder/"
 
 cd ..
 
