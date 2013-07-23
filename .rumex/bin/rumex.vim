@@ -26,9 +26,15 @@ set incsearch " inkrementelle Suche aktivieren. Bei der Suche werden die
 set ic " Groß-/Kleinschreibung bei der Suche ignorieren
 set hlsearch " Suche Farblich hervorheben
 
-" Menu Entwicklung -- Vim Konfiguration neu einlesen
-menu &Rumex.Vim\ Konfiguration\ Neu\ einlesen :unmenu Rumex<CR>:so ../.rumex/bin/rumex.vim<CR>
 
+
+" ---------------------------------------------------------
+" Menu Entwicklung
+"
+" Vim Konfiguration neu einlesen
+menu &Rumex.Vim\ Konfiguration\ Neu\ einlesen :unmenu Rumex<CR>:so ../.rumex/bin/rumex.vim<CR>
+" Versionsdatei öffnen
+menu &Rumex.Versionsdatei\ öffnen :tabnew<CR>:e ../.rumex/default/version.txt<CR>
 
 " ---------------------------------------------------------
 " Rumex Menü
@@ -44,7 +50,6 @@ menu &Rumex.Text&Bausteine.\ Neuen\ &Weiterleitung<Tab>,rwl ,rwl
 menu Rumex.-------------------show------------------------- :
 menu &Rumex.&show.&file<Tab>:make\ show :make show&<CR><CR>
 menu &Rumex.&show.&www<Tab>:make\ showwww :make showwww&<CR><CR>
-" Muss noch ins Makefile eingebaut werden
 menu &Rumex.&show.&local<Tab>:make\ showllocal :make showlocal&<CR><CR>
 
 menu Rumex.-------------------make------------------------- :
@@ -69,7 +74,6 @@ menu &Rumex.&Git.Änderungen\ &anzeigen<Tab>:!git\ status :!git status<CR>
 
 menu Rumex.-----------------config--------------------------- :
 menu &Rumex.&Konfiguration.User\ Verzeichnis<Tab>:e\ \.\./\.rx/. :tabnew<CR>:e ../.rx/.<CR>
-"menu &Rumex.&Konfiguration.System\ Konfiguration<Tab>:e\ \.\./\.rumex/bin/sys\.config\.makefile :tabnew<CR>:e ../.rumex/bin/sys.config.makefile<CR>
 
 menu Rumex.-----------------Formatierung----------------- :
 vmenu &Rumex.&Formatierung.&Fett<Tab>,rff ,rff 
@@ -77,8 +81,9 @@ vmenu &Rumex.&Formatierung.&Kursiv<Tab>,rfk ,rfk
 vmenu &Rumex.&Formatierung.&Liste<Tab>,rfl ,rfl 
 vmenu &Rumex.&Formatierung.&Nummernliste<Tab>,rfn ,rfn 
 vmenu &Rumex.&Formatierung.&Block<Tab>,rfb ,rfb 
+vmenu &Rumex.&Formatierung.&Code<Tab>,rfc ,rfc
 
-
+" -----------------------------------------------------------
 " Abkürzungen
 abb rumexis Rumex mit is
 
@@ -112,5 +117,7 @@ vmap <Leader>rfn :s/^/#. /<CR>
 " Markierte Zeilen in eine Block wandeln <Leader>rfb (RumexFormatBlock)
 vmap <Leader>rfb :s/^/\| /<CR>
 
+" Markierte Zeile als Code darstellen <Leader>rfc (RumexFormatCode)
+vmap <Leader>rfc xi``<esc>hp<esc>
 
 " vim:ft=vim: 

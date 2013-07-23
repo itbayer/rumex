@@ -57,7 +57,7 @@ RUMEXSUCHE = "rxtpl/js"
 # #####################################################
 # Auswahl der Pandoc Vorlagen / Setzen der Variable
 #
-# Ist im .rumex/user Verzeichnis eine entsprechende Datei vorhanden
+# Ist im .rx/ Verzeichnis eine entsprechende Datei vorhanden
 # wird diese verwendet.
 # Wenn nicht wird die Datei aus .rumex/default verwendet.
 #
