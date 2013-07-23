@@ -7,7 +7,7 @@
 Dies ist ein Projekt das mit `pandoc's markdown` und ein paar 
 Skripten eine Internetseite erstellt und verwalten.
 
-Gehostet werden kann das System auf [github.com](http://github.com)
+Gehostet werden kann diese auf [github.com](http://github.com)
 wo auch diese Seite zu finden ist aber auch auf Servern
 mit git Unterstützung oder mit einem einfachen FTP Zugang
 kann dieses System verwendet werden.
@@ -32,29 +32,7 @@ Aktuell wird dieser Baukasten[^aktuell] auch auf der Seite <http://www.it-bayer.
 
 <div class="indexliste">
 
-<p class="datum">2013-07-22</p>
-
-
-# Beschreibung des Rumex Baukastens
-
-
-Hier findest du die Beschreibung des rumex Baukastens.
-Zur Zeit ist hier noch vieles durcheinander da ich
-mehr am System als an der Beschreibung bastle.
-Du kannst aber schon mal gerne rein schauen.
-
-
-[... weiter lesen](beschreibung.html)
-
----
-
-</div>
-
-
-
-<div class="indexliste">
-
-<p class="datum">2013-07-22</p>
+<p class="datum">2013-07-21</p>
 
 # Historie
 
@@ -68,6 +46,28 @@ Umbau der Verzeichnisstruktur.
 Vorbereitung auf die `make update` Funktion.
 
 [... weiter lesen](historie.html)
+
+---
+
+</div>
+
+
+
+<div class="indexliste">
+
+<p class="datum">2013-07-15</p>
+
+
+# Beschreibung des Rumex Baukastens
+
+
+Hier findest du die Beschreibung des rumex Baukastens.
+Zur Zeit ist hier noch vieles durcheinander da ich
+mehr am System als an der Beschreibung bastle.
+Du kannst aber schon mal gerne rein schauen.
+
+
+[... weiter lesen](beschreibung.html)
 
 ---
 

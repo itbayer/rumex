@@ -5,7 +5,7 @@
 Dies ist ein Projekt das mit `pandoc's markdown` und ein paar 
 Skripten eine Internetseite erstellt und verwalten.
 
-Gehostet werden kann das System auf [github.com](http://github.com)
+Gehostet werden kann diese auf [github.com](http://github.com)
 wo auch diese Seite zu finden ist aber auch auf Servern
 mit git Unterstützung oder mit einem einfachen FTP Zugang
 kann dieses System verwendet werden.

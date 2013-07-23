@@ -11,8 +11,11 @@ html: html0s html0x html0v html0w html1s html1x html1v html2s html2x html2v html
 
 # ######################################################
 # index.rx0x Seite erstellen
-index: 
+index.rx0x: start.rx0s
 	$(INDEX) $(U1) $(U2) $(U3)
+
+index:
+	make index.rx0x
 
 
 # ######################################################
