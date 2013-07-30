@@ -41,7 +41,12 @@ EOF
 # Ausgelesene Dateien verarbeiten.
 foreach(@files) {
 
-	# .rx?? wird nicht gebraucht, wird später eine .html Datei
+	# Ueberspringen einzelner Dateien
+	# ...wird in der HTML Version der sitemap nicht gebraucht.
+	next if($_ eq "index.rx0x");
+	next if($_ eq "start.rx0s");
+
+	# Die Endung .rx?? wird nicht gebraucht, wird später eine .html Datei
 	$_ =~ m/^(.*)\.rx\d.+$/;	
  
 
