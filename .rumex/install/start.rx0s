@@ -6,41 +6,34 @@
 ### Gratulation rumex ist fertig installiert
 
 Du musst aber noch ein paar Dateien angepasst
-oder besser gesagt rumex auf deine Adresse einstellen.
+um rumex auf dich einstellen.
 
-
-../robots.txt
-:	Um den Suchmaschinen den Link zu deiner `sitemap.xml`
-	zu zeigen muss hinter der Zeile `Sitemap:` die 
-	URL deiner Seite eingetragen werden.
+.rx/config.mk
+:	In dieser Datei, die du evtl. erst erstellen must
+	sind die Benutzer Variablen die `make` 
+	verwendet werden hinterlegt bzw. werden überschrieben
+	so dass du deine Seite anpassen kannst.
 	
-	**Beispiel:**
-
-		Sitemap: http://deine.seite.tdl/sitemap.xml
-
-
-../.bin/user.config.makefile
-:	In dieser Datei sind alle Variablen die die vom  `make` Programm
-	verwendet werden hinterlegt.
-	Für die Überschrift der index Seite sind die Zeilen
-	U1 bis U3 zuständig.
+	**Die Adresse unter der deine Seite erreichbar ist**
 	
-		U1="Der(Ein) HomePage Sand(Bau)kasten" 
-		U2="IT Bayer's rumex"
-		U3="
-		
-	Für die Links der sitemap Erstellung ist dieser Parameter
+		URL="http://www.it-bayer.de"
 	
-		URL="http://www.it-bayer.de/rumex"
-		
-	zuständig.
+	**Überschriften für die Index Seite**	
 	
-	Für den RSS Titel in den HTML Dateien ist diese Zeile zuständig
+		U1="IT Bayer's"
+		U2="Homepage"
+		U3=""
+	
+	**RSS Überschrift**	
+	
+		RSS_TITEL = "Neuigkeiten vom IT-Bayer"
+	
+	**Bild für das Seitenbanner**	
+	
+		SEITENBANNER = "rxtpl/img/rumex.png"
+	
 
-		RSS_TITEL = "Neuigkeiten von rumex Baukasten"
-
-
-../.inc/fuss.html
+.rx/fuss.html
 :	In dieser Datei findest du einen HTML Quelltext
 	der am Ende jeder Seite angezeigt wird.
 	Überschreibe einfach die Vorgabe oder erstelle dir
@@ -53,13 +46,16 @@ oder besser gesagt rumex auf deine Adresse einstellen.
 	die Seite erstellst `make html` und dann im Quelltext
 	die Zeile kopierst.
 	
-../css/rumex.png
-:	Hier findet man das Seitenbild, bzw. den Schriftzug "IT Bayer's rumex".
-	Im Verzeichnis `../.inc/gimp/` findest du auch die GIMP
-	Version dieses Bildes.
+
+rxtpl/img/rumex.png
+:	Hier findet man das Seitenbild, bzw. den Schriftzug "IT Bayer's rumex"
+	der auf der linken Seite zu finden ist.
+	Im Verzeichnis `../.rumex/gimp/` liegt die GIMP Version dieses Bildes.
 	Beim Anpassen solltest du darauf achten dass dieses Bild nicht
 	breiter als `100px` wird.
-	
+	Den Ort deines eigenen Banners definierst du mit der Makefile
+	Variable `SEITENBANNER`, siehe oben.
+
 Und dann gibt es im rumex Ordner noch die drei `rx??` Dateien
 die bei der Installation erstellt wurden.
 
@@ -67,8 +63,9 @@ die bei der Installation erstellt wurden.
 - impressum.rx0x
 - rss.rx0x
 
-Mehr Informationen zu diesem Baukasten findest du in der [rumex Beschreibung][].
 
+
+Mehr Informationen zu diesem Baukasten findest du in der [rumex Beschreibung][].
 
 [rumex Beschreibung]: http://www.it-bayer.de/rumex/beschreibung.html
 

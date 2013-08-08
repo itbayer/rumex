@@ -4,7 +4,7 @@
   <meta charset="utf-8">
 
 <!-- rumex Version -->
-<meta name="generator" content="rumex 0.7.2">
+<meta name="generator" content="rumex 0.7.4">
 
 <!-- rumex Suchmaschine -->
 <meta name="robots" content="noindex,nofollow,noarchive">
@@ -56,31 +56,28 @@
 </header>
 <div id="seite">
 <h3 id="gratulation-rumex-ist-fertig-installiert">Gratulation rumex ist fertig installiert</h3>
-<p>Du musst aber noch ein paar Dateien angepasst oder besser gesagt rumex auf deine Adresse einstellen.</p>
+<p>Du musst aber noch ein paar Dateien angepasst um rumex auf dich einstellen.</p>
 <dl>
-<dt>../robots.txt</dt>
-<dd><p>Um den Suchmaschinen den Link zu deiner <code>sitemap.xml</code> zu zeigen muss hinter der Zeile <code>Sitemap:</code> die URL deiner Seite eingetragen werden.</p>
-<p><strong>Beispiel:</strong></p>
-<pre><code>Sitemap: http://deine.seite.tdl/sitemap.xml</code></pre>
+<dt>.rx/config.mk</dt>
+<dd><p>In dieser Datei, die du evtl. erst erstellen must sind die Benutzer Variablen die <code>make</code> verwendet werden hinterlegt bzw. werden überschrieben so dass du deine Seite anpassen kannst.</p>
+<p><strong>Die Adresse unter der deine Seite erreichbar ist</strong></p>
+<pre><code>URL=&quot;http://www.it-bayer.de&quot;</code></pre>
+<p><strong>Überschriften für die Index Seite</strong></p>
+<pre><code>U1=&quot;IT Bayer&#39;s&quot;
+U2=&quot;Homepage&quot;
+U3=&quot;&quot;</code></pre>
+<p><strong>RSS Überschrift</strong></p>
+<pre><code>RSS_TITEL = &quot;Neuigkeiten vom IT-Bayer&quot;</code></pre>
+<p><strong>Bild für das Seitenbanner</strong></p>
+<pre><code>SEITENBANNER = &quot;rxtpl/img/rumex.png&quot;</code></pre>
 </dd>
-<dt>../.bin/user.config.makefile</dt>
-<dd><p>In dieser Datei sind alle Variablen die die vom <code>make</code> Programm verwendet werden hinterlegt. Für die Überschrift der index Seite sind die Zeilen U1 bis U3 zuständig.</p>
-<pre><code>U1=&quot;Der(Ein) HomePage Sand(Bau)kasten&quot; 
-U2=&quot;IT Bayer&#39;s rumex&quot;
-U3=&quot;</code></pre>
-<p>Für die Links der sitemap Erstellung ist dieser Parameter</p>
-<pre><code>URL=&quot;http://www.it-bayer.de/rumex&quot;</code></pre>
-<p>zuständig.</p>
-<p>Für den RSS Titel in den HTML Dateien ist diese Zeile zuständig</p>
-<pre><code>RSS_TITEL = &quot;Neuigkeiten von rumex Baukasten&quot;</code></pre>
-</dd>
-<dt>../.inc/fuss.html</dt>
+<dt>.rx/fuss.html</dt>
 <dd><p>In dieser Datei findest du einen HTML Quelltext der am Ende jeder Seite angezeigt wird. Überschreibe einfach die Vorgabe oder erstelle dir eine ganz eigene Fusszeile. Die codierte E-Mail Adresse bekommst du, wenn du in einer <code>rx??</code> Datei einen E-Mail Link einbaust</p>
 <pre><code>[deine@email.adresse](mailto:deine@email.adresse)</code></pre>
 <p>die Seite erstellst <code>make html</code> und dann im Quelltext die Zeile kopierst.</p>
 </dd>
-<dt>../css/rumex.png</dt>
-<dd><p>Hier findet man das Seitenbild, bzw. den Schriftzug “IT Bayer’s rumex”. Im Verzeichnis <code>../.inc/gimp/</code> findest du auch die GIMP Version dieses Bildes. Beim Anpassen solltest du darauf achten dass dieses Bild nicht breiter als <code>100px</code> wird.</p>
+<dt>rxtpl/img/rumex.png</dt>
+<dd><p>Hier findet man das Seitenbild, bzw. den Schriftzug “IT Bayer’s rumex” der auf der linken Seite zu finden ist. Im Verzeichnis <code>../.rumex/gimp/</code> liegt die GIMP Version dieses Bildes. Beim Anpassen solltest du darauf achten dass dieses Bild nicht breiter als <code>100px</code> wird. Den Ort deines eigenen Banners definierst du mit der Makefile Variable <code>SEITENBANNER</code>, siehe oben.</p>
 </dd>
 </dl>
 <p>Und dann gibt es im rumex Ordner noch die drei <code>rx??</code> Dateien die bei der Installation erstellt wurden.</p>
