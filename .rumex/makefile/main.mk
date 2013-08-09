@@ -105,9 +105,14 @@ bclean:
 
 
 # #######################################################
-# rumex Verzeichnis löschen und Vorlage kopieren
+# rumex Installieren
 install:
 	../.rumex/bin/install.sh
+
+# #######################################################
+# rumex Updaten
+update:
+	../.rumex/bin/update.sh
 
 # #######################################################
 # index.html im Standard Browser öffnen

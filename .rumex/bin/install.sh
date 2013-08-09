@@ -24,11 +24,21 @@ echo ""
 if ((i)); then
 
 	echo "Lösche die readme.md aus dem root Verzeichnis"
-	rm ../readme.md
+	rm -f ../readme.md
 	echo ""
 
 	echo "Lösche alle .rx* Daten aus dem rumex Verzeichnis"
-	rm *.rx*
+	rm -f *.rx*
+	echo ""
+
+	echo "Lösche die fuss.html aus dem .rx Verzeichnis"
+	rm -f fuss.html
+	echo ""
+
+	echo "Lösche alle Bilder aus dem Bilder Verzeichnis"
+	rm -f ../binder/*.jpg
+	rm -f ../binder/*.png
+	rm -f ../binder/*.gif
 	echo ""
 
 	echo "Kopiere die Vorlagen aus dem .rumex Verzeichnis"
