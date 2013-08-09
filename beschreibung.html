@@ -4,7 +4,7 @@
   <meta charset="utf-8">
 
 <!-- rumex Version -->
-<meta name="generator" content="rumex 0.7.2">
+<meta name="generator" content="rumex 0.7.4">
 
 <!-- rumex Suchmaschine -->
 <meta name="robots" content="all">
@@ -86,9 +86,6 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><a href="#datei-upload-per-git">Datei upload per git</a></li>
 <li><a href="#datei-upload-per-ftp">Datei upload per ftp</a></li>
 </ul></li>
-<li><a href="#kurzbeschreibung-die-nach-der-lokalen-installation-angezeigt-wird">Kurzbeschreibung die nach der lokalen Installation angezeigt wird</a><ul>
-<li><a href="#gratulation-rumex-ist-fertig-installiert">Gratulation rumex ist fertig installiert</a></li>
-</ul></li>
 <li><a href="#rumex-nix-voraussetzungen">rumex *nix Voraussetzungen</a></li>
 </ul></li>
 <li><a href="#aufbau-des-rumex-baukastens">Aufbau des rumex Baukastens</a><ul>
@@ -153,7 +150,7 @@ make show</code></pre>
 <li>Logo</li>
 <li>usw.</li>
 </ul>
-<p>Eine Kurzbeschreibung findest du nach der lokalen Installation, <code>make show</code> oder <a href="#kurzbeschreibung-die-nach-der-lokalen-installation-angezeigt-wird">hier</a></p>
+<p>Eine Kurzbeschreibung findest du nach der lokalen Installation, <code>make show</code> oder [hier][istart.html].</p>
 <h2 id="seite-auf-einem-github.com-server-einrichten"><a href="#seite-auf-einem-github.com-server-einrichten">Seite auf einem github.com Server einrichten</a></h2>
 <p>@todo</p>
 <ul>
@@ -174,42 +171,6 @@ make show</code></pre>
 <p>Auf der Seite <a href="http://rumex.it-bayer.de">rumex.it-bayer.de</a> findet man eine Beschreibung wie man den rumex Baukasten auf einen <strong>nicht</strong> <code>github.com</code> Server installiert.</p>
 <h3 id="datei-upload-per-ftp"><a href="#datei-upload-per-ftp">Datei upload per ftp</a></h3>
 <p>@todo</p>
-<h2 id="kurzbeschreibung-die-nach-der-lokalen-installation-angezeigt-wird"><a href="#kurzbeschreibung-die-nach-der-lokalen-installation-angezeigt-wird">Kurzbeschreibung die nach der lokalen Installation angezeigt wird</a></h2>
-<h3 id="gratulation-rumex-ist-fertig-installiert"><a href="#gratulation-rumex-ist-fertig-installiert">Gratulation rumex ist fertig installiert</a></h3>
-<p>Du musst aber noch ein paar Dateien angepasst oder besser gesagt rumex auf deine Adresse einstellen.</p>
-<dl>
-<dt>../robots.txt</dt>
-<dd><p>Um den Suchmaschinen den Link zu deiner <code>sitemap.xml</code> zu zeigen muss hinter der Zeile <code>Sitemap:</code> die URL deiner Seite eingetragen werden.</p>
-<p><strong>Beispiel:</strong></p>
-<pre><code>Sitemap: http://deine.seite.tdl/sitemap.xml</code></pre>
-</dd>
-<dt>../.bin/config.makefile</dt>
-<dd><p>In dieser Datei sind alle Variablen die die vom <code>make</code> Programm verwendet werden hinterlegt. Für die Überschrift der index Seite sind die Zeilen U1 bis U3 zuständig.</p>
-<pre><code>U1=&quot;Der(Ein) HomePage Sand(Bau)kasten&quot; 
-U2=&quot;IT Bayer&#39;s rumex&quot;
-U3=&quot;</code></pre>
-<p>Für die Links der sitemap Erstellung ist dieser Parameter</p>
-<pre><code>URL=&quot;http://www.it-bayer.de/rumex&quot;</code></pre>
-<p>zuständig.</p>
-<p>Für den RSS Titel in den HTML Dateien ist diese Zeile zuständig</p>
-<pre><code>RSS_TITEL = &quot;Neuigkeiten von rumex Baukasten&quot;</code></pre>
-</dd>
-<dt>../.inc/fuss.html</dt>
-<dd><p>In dieser Datei findest du einen HTML Quelltext der am Ende jeder Seite angezeigt wird. Überschreibe einfach die Vorgabe oder erstelle dir eine ganz eigene Fusszeile. Die codierte E-Mail Adresse bekommst du, wenn du in einer <code>rx??</code> Datei einen E-Mail Link einbaust</p>
-<pre><code>[deine@email.adresse](mailto:deine@email.adresse)</code></pre>
-<p>die Seite erstellst <code>make html</code> und dann im Quelltext die Zeile kopierst.</p>
-</dd>
-<dt>../css/rumex.png</dt>
-<dd><p>Hier findet man das Seitenbild, bzw. den Schriftzug “IT Bayer’s rumex”. Im Verzeichnis <code>../.inc/gimp/</code> findest du auch die GIMP Version dieses Bildes. Beim Anpassen solltest du darauf achten dass dieses Bild nicht breiter als <code>100px</code> wird.</p>
-</dd>
-</dl>
-<p>Und dann gibt es im rumex Ordner noch die drei <code>rx??</code> Dateien die bei der Installation erstellt wurden.</p>
-<ul>
-<li>start.rx0s (diese Datei)</li>
-<li>impressum.rx0x</li>
-<li>rss.rx0x</li>
-</ul>
-<p>Mehr Informationen zu diesem Baukasten findest du in der <a href="http://www.it-bayer.de/rumex/beschreibung.html">rumex Beschreibung</a>.</p>
 <h2 id="rumex-nix-voraussetzungen"><a href="#rumex-nix-voraussetzungen">rumex *nix Voraussetzungen</a></h2>
 <p>Rumex ist auf ein *nix System ausgerichtet. Auf diesem sollten folgende Programme installiert sein:</p>
 <ul>
@@ -224,6 +185,7 @@ U3=&quot;</code></pre>
 </ul>
 <p>Wobei <code>bash</code>, <code>make</code> und <code>perl</code> bei jeder <code>*nix</code> Installation bereits vorhanden sein dürft. Die restlichen Programme müssen nach installiert werden. <code>texlive</code> wird nur gebraucht wenn man auch PDF Dateien erstellen möchte. Ein <code>ftpclient</code> wird nur gebraucht wenn man die Daten per FTP hoch laden möchte.</p>
 <h1 id="aufbau-des-rumex-baukastens"><a href="#aufbau-des-rumex-baukastens">Aufbau des rumex Baukastens</a></h1>
+<p>@todo</p>
 <h2 id="root-verzeichnis"><a href="#root-verzeichnis">root Verzeichnis</a></h2>
 <p>Im <code>root</code> Verzeichnis findet man alle <code>HTML</code> Dateien der Seite. Diese werde vom Baukasten erstellt und müssen nicht von Hand verändert werden. Zusätzlich findet man noch ein folgende Systemdateien:</p>
 <dl>
@@ -248,14 +210,21 @@ U3=&quot;</code></pre>
 </dl>
 <h2 id="unterverzeichnisse"><a href="#unterverzeichnisse">Unterverzeichnisse</a></h2>
 <dl>
-<dt>template/</dt>
-<dd><p>Im <code>template</code> Verzeichnis liegen alle Dateien die von den verschiedenen Tools eingebunden werden. Auch Konfigurationsdateien sind hier zu finden.</p>
+<dt>.rumex/</dt>
+<dd><p>@fixme</p>
 </dd>
-<dt>.bin/</dt>
-<dd><p>Hier liegen die Skripte die zur Erstellung der Seiten dienen.</p>
+<dt>.rx/</dt>
+<dd><p>@fixme</p>
 </dd>
-<dt>rumex/</dt>
-<dd><p>Hier befinden sich alle Texte der Seite.</p>
+<dt>rxtpl/</dt>
+<dd><p>Standard Template Verzeichnis. In diesem Verzeichnis befinden sich die Dateien die für das Aussehen der Seite verantwortlich sind.</p>
+<p>Folgende Dateinen und Verzeichnisse sind hier zu finden</p>
+<ul>
+<li>index.html (Weiterleitung zum root Verzeichnis)</li>
+<li>css/<br /></li>
+<li>js/</li>
+<li>img/</li>
+</ul>
 </dd>
 <dt>bilder/</dt>
 <dd><p>In diesem Verzeichnis werden alle Bilder der Seite abgelegt.</p>

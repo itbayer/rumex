@@ -85,7 +85,7 @@ Nach der Installation muss Rumex noch auf dich eingestellt werden.
 - usw.
 
 Eine Kurzbeschreibung findest du nach der lokalen Installation, `make show`
-oder [hier][Kurzbeschreibung die nach der lokalen Installation angezeigt wird]
+oder [hier][istart.html].
 
 
 ## Seite auf einem github.com Server einrichten
@@ -122,84 +122,6 @@ eine Beschreibung wie man den rumex Baukasten auf einen **nicht**
 
 
 
-## Kurzbeschreibung die nach der lokalen Installation angezeigt wird
-
-### Gratulation rumex ist fertig installiert
-
-Du musst aber noch ein paar Dateien angepasst
-oder besser gesagt rumex auf deine Adresse einstellen.
-
-
-../robots.txt
-:	Um den Suchmaschinen den Link zu deiner `sitemap.xml`
-	zu zeigen muss hinter der Zeile `Sitemap:` die 
-	URL deiner Seite eingetragen werden.
-	
-	**Beispiel:**
-
-		Sitemap: http://deine.seite.tdl/sitemap.xml
-
-
-../.bin/config.makefile
-:	In dieser Datei sind alle Variablen die die vom  `make` Programm
-	verwendet werden hinterlegt.
-	Für die Überschrift der index Seite sind die Zeilen
-	U1 bis U3 zuständig.
-	
-		U1="Der(Ein) HomePage Sand(Bau)kasten" 
-		U2="IT Bayer's rumex"
-		U3="
-		
-	Für die Links der sitemap Erstellung ist dieser Parameter
-	
-		URL="http://www.it-bayer.de/rumex"
-		
-	zuständig.
-	
-	Für den RSS Titel in den HTML Dateien ist diese Zeile zuständig
-	
-		RSS_TITEL = "Neuigkeiten von rumex Baukasten"
-
-
-
-../.inc/fuss.html
-:	In dieser Datei findest du einen HTML Quelltext
-	der am Ende jeder Seite angezeigt wird.
-	Überschreibe einfach die Vorgabe oder erstelle dir
-	eine ganz eigene Fusszeile.
-	Die codierte E-Mail Adresse bekommst du, wenn du 
-	in einer `rx??` Datei einen E-Mail Link einbaust
-	
-		[deine@email.adresse](mailto:deine@email.adresse)
-	
-	die Seite erstellst `make html` und dann im Quelltext
-	die Zeile kopierst.
-	
-../css/rumex.png
-:	Hier findet man das Seitenbild, bzw. den Schriftzug "IT Bayer's rumex".
-	Im Verzeichnis `../.inc/gimp/` findest du auch die GIMP
-	Version dieses Bildes.
-	Beim Anpassen solltest du darauf achten dass dieses Bild nicht
-	breiter als `100px` wird.
-	
-Und dann gibt es im rumex Ordner noch die drei `rx??` Dateien
-die bei der Installation erstellt wurden.
-
-- start.rx0s (diese Datei)
-- impressum.rx0x
-- rss.rx0x
-
-Mehr Informationen zu diesem Baukasten findest du in der [rumex Beschreibung][].
-
-
-[rumex Beschreibung]: http://www.it-bayer.de/rumex/beschreibung.html
-
-
-
-
-
-
-
 ## rumex *nix Voraussetzungen 
 
 Rumex ist auf ein *nix System ausgerichtet. 
@@ -220,6 +142,8 @@ Die restlichen Programme müssen nach installiert werden.
 Ein `ftpclient` wird nur gebraucht wenn man die Daten per FTP hoch laden möchte.
 
 # Aufbau des rumex Baukastens
+
+@todo
 
 ## root Verzeichnis
 
@@ -250,17 +174,26 @@ CNAME
 ## Unterverzeichnisse
 
 
-template/
-:	Im `template` Verzeichnis liegen alle Dateien die von den
-	verschiedenen Tools eingebunden werden.
-	Auch Konfigurationsdateien sind hier zu finden.
+.rumex/
+:	@fixme
+	
 
-.bin/
-:	Hier liegen die Skripte die zur Erstellung der
-	Seiten dienen.
+.rx/
+:	@fixme
 
-rumex/
-:	Hier befinden sich alle Texte der Seite.
+
+rxtpl/
+:	Standard Template Verzeichnis. 
+	In diesem Verzeichnis befinden sich die Dateien die für
+	das Aussehen der Seite verantwortlich sind.
+	
+	Folgende Dateinen und Verzeichnisse sind hier zu finden
+		
+	- index.html (Weiterleitung zum root Verzeichnis)
+	- css/ \
+	- js/
+	- img/
+
 
 bilder/
 :	In diesem Verzeichnis werden alle Bilder der Seite abgelegt.
