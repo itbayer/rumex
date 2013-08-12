@@ -35,15 +35,15 @@ all:
 
 
 # ######################################################
-# Seite online stellen. Wenn die FTP Variable in config.makefile
-# gesetzt ist wput.sh verwenden, sonst mit git.
+# Seite online stellen. Wenn die FTP Variable in config.mk
+# gesetzt ist wird wput.sh verwenden, sonst git.
 online:
 	make -s all
+	git add ../.
+	git commit -a -m"...."
 ifdef FTP
 	../.rumex/bin/wput.sh $(FTP)
 else
-	git add ../.
-	git commit -a -m"...."
 	git push
 endif
 

@@ -11,6 +11,7 @@
 # für die alte Version.
 # Anschließend wird dass eigentliche update Programm update2.sh
 # geholt und gestartet.
+#
 
 echo "Rumex updaten"
 echo "-------------"
@@ -33,10 +34,14 @@ if [ $AVERSION == $GVERSION ]; then
 fi
 
 # Dateien die noch offen sind ins Repor legen
+git add ../.
+git commit -a -m"...."
+
 
 # TAG der alten Version setzen
+git tag -a rx$AVERSION -m "$AVERSION vor Update auf $GVERSION"
 
-
+exit
 
 # hole die neue update2.sh Datei von github und das
 # eigentliche Update ausführen zu können.
