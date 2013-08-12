@@ -39,7 +39,7 @@ git commit -a -m"...."
 
 
 # TAG der alten Version setzen
-git tag -a rx$AVERSION -m "$AVERSION vor Update auf $GVERSION"
+git tag -a rx$AVERSION -m "Rumex $AVERSION vor Update auf Rumex $GVERSION"
 
 exit
 
