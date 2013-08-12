@@ -16,6 +16,10 @@
 let mapleader=","
 
 
+" Name des moot.it Kontos
+" todo Kontoname muss noch aus der config.mk gelesen werden
+let mootit_konto="rumex"
+
 " Vim Konfiguration am Ende der Datei verwenden
 set modeline
 
@@ -46,6 +50,8 @@ menu Rumex.-------------------textbaustein----------------- :
 menu &Rumex.Text&Bausteine.\ Neues\ &Dateigerüst<Tab>,rnd ,rnd
 menu &Rumex.Text&Bausteine.\ Neuen\ &News\ Eintrag<Tab>,rnn ,rnn
 menu &Rumex.Text&Bausteine.\ Neuen\ &Weiterleitung<Tab>,rwl ,rwl
+menu &Rumex.Text&Bausteine.\ moot\.it\ &Kommentar<Tab>,rmk ,rmk
+
 
 menu Rumex.-------------------show------------------------- :
 menu &Rumex.&show.&file<Tab>:make\ show :make show&<CR><CR>
@@ -98,6 +104,11 @@ map <Leader>rnn i# Neue Nachricht{.nn1}<CR><CR><!--<CR>\| Link: http://www.it-ba
 
 " Neue Weiterleitungsseite mit <Leader>rwl (RumexWeiterLeitung)
 map <Leader>rwl i% Weiterleitung nach ....html<CR>%<CR>%<CR><CR><CR><script language="javascript"><CR><!--<CR>window.location.href="....html";<CR>// --><CR></script><ESC>9k13l
+
+" Kommentar Zeile einfügen mit <Leader>rmk (RumexMootKommentar)
+map <Leader>rmk i## Kommentare<cr><cr><a class="moot" href="https://moot.it/i/<C-R>=mootit_konto<cr>/blog/<C-R>=expand("%:r")<cr>">
+
+
 
 " -----------------------------------------------------------
 "  Kurztasten für die Text Formatierung

@@ -142,3 +142,9 @@ suche:
 
 robots.txt:
 	make  ../robots.txt
+
+# ######################################################
+# Ausgabe des moot.it Kontonamens
+# @todo muss noch in die vim Konfig eingebaut werden.
+mootit_konto:
+	@echo $(MOOTIT)

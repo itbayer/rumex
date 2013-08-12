@@ -34,8 +34,9 @@ CSSPRINT = "rxtpl/css/print.css"
 SEITENBANNER = "rxtpl/img/rumex.png"
 
 # Schalter ob das externe Tool von moot.it eingebunden werden soll
+# angegeben sollte hier der Kontoname
 # ... wenn nicht den Parameter kommentieren. 
-MOOTIT = "ein"
+MOOTIT = "rumex"
 
 # Rumexsuche
 RUMEXSUCHE = "rxtpl/js"
