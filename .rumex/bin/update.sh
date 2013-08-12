@@ -1,9 +1,22 @@
 #!/bin/bash
 
+
+
+#
+# update.sh
+#
+# update.sh ist die Vorstufe des Rumex updates.
+# Sie überprüft, anhand der Versionsnummer, ob ein Update Sinn macht,
+# übergibt noch offenen Dateien dem repro und setzt einen TAG
+# für die alte Version.
+# Anschließend wird dass eigentliche update Programm update2.sh
+# geholt und gestartet.
+
 echo "Rumex updaten"
 echo "-------------"
 echo ""
 
+# Testen ob sich ein update lohnt.
 AVERSION=`cat ../.rumex/default/version.txt`
 AVERSION="0.7.3"
 echo -n "Du hast die Version $AVERSION installiert, "
@@ -19,67 +32,19 @@ if [ $AVERSION == $GVERSION ]; then
 	exit
 fi
 
-echo ""
-echo "Letzte Chance -- Willst du Rumex wirklich aktualisieren [jn]?"
+# Dateien die noch offen sind ins Repor legen
 
-while ((!x)); do
-	read -sn1 x
-	case "$x" in
-		[JjYy])    i=1; x=1 ;;
-	[Nn])      i=0; x=1 ;;
-*)         x=0 ;;
-  esac
-done
+# TAG der alten Version setzen
 
-echo ""
-echo ""
 
-# Wenn ja
-if ((i)); then
 
-	echo ""
-	echo -n "....hole die neue Rumex Version vom GitHub Server "
-	 wget -o /dev/null -O ../.rumex/tmp/rumex.tar.gz https://github.com/itbayer/rumex/archive/gh-pages.tar.gz
-	
-	echo "und packe sie aus"
-	echo ""
-	tar -xzvf ../.rumex/tmp/rumex.tar.gz -C ../.rumex/tmp/
-	
-	echo ""
-	echo "....kopiere die neue Version von .rumex/bin"
-    cp -a ../.rumex/tmp/rumex-gh-pages/.rumex/bin /tmp/rumextest/.rumex/.
+# hole die neue update2.sh Datei von github und das
+# eigentliche Update ausführen zu können.
+wget -o /dev/null -O ../.rumex/bin/update2.sh https://raw.github.com/itbayer/rumex/gh-pages/.rumex/bin/update2.sh
 
-	echo ""
-	echo "....kopiere die neue Version von .rumex/makefile"
-    cp -a ../.rumex/tmp/rumex-gh-pages/.rumex/makefile /tmp/rumextest/.rumex/.
-	
-	echo ""
-	echo "....kopiere die neue Version von .rumex/default"
-    cp -a ../.rumex/tmp/rumex-gh-pages/.rumex/default /tmp/rumextest/.rumex/.
-	
-	echo ""
-	echo "....kopiere die neue Version von rxtpl"
-    cp -a ../.rumex/tmp/rumex-gh-pages/rxtpl /tmp/rumextest/.
-	
-	
-	
-	echo ""
-	echo "....jetzt nur aufräumen und"
-	rm -f ../.rumex/tmp/rumex.tar.gz
-	rm -fr ../.rumex/tmp/rumex-gh-pages
+# ...und starten
+bash ../.rumex/bin/update2.sh
 
-	echo ""
-	echo "....Fertig."
-	echo ""
-	echo ""
-	echo "Viel Spass mit der neuen Version Rumex Version $GVERSION."
+exit
 
-	echo ""
-	echo "Leider ist die Update Funktion noch nicht fertig."
-	echo ""
 
-	# ...wenn nein
-else
-	echo "Ok ...dann bleibt alles beim alten."
-	echo ""
-fi

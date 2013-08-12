@@ -3,6 +3,10 @@
 #
 # update2.sh
 #
+# Die zweite Stufe des Rumex updates.
+# Diese Datei wird vor jedem update frisch von github
+# geholt und dann über update.sh ausgeführt.
+#
 
 echo ""
 echo "Letzte Chance -- Willst du Rumex wirklich aktualisieren [jn]?"
@@ -49,19 +53,17 @@ if ((i)); then
 	
 	
 	echo ""
-	echo "....jetzt nur aufräumen und"
+	echo "....jetzt noch aufräumen und"
 	rm -f ../.rumex/tmp/rumex.tar.gz
 	rm -fr ../.rumex/tmp/rumex-gh-pages
 
 	echo ""
-	echo "....Fertig."
 	echo ""
-	echo ""
-	echo "Viel Spass mit der neuen Version Rumex Version $GVERSION."
+	echo "viel Spass mit der neuen Version Rumex Version $GVERSION."
 
 	echo ""
 	echo "Leider ist die Update Funktion noch nicht fertig."
-	echo ""
+	echo "Alle Dateien wurden in das /tmp/ Verzeichnis installiert."
 
 	# ...wenn nein
 else
