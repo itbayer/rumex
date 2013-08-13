@@ -16,10 +16,6 @@
 let mapleader=","
 
 
-" Name des moot.it Kontos
-" todo Kontoname muss noch aus der config.mk gelesen werden
-let mootit_konto="rumex"
-
 " Vim Konfiguration am Ende der Datei verwenden
 set modeline
 
