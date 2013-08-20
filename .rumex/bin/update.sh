@@ -47,7 +47,7 @@ wget -o /dev/null -O ../.rumex/bin/update2.sh https://raw.github.com/itbayer/rum
 # ...und starten
 sleep 5
 
-bash ../.rumex/bin/update2.sh
+/bin/bash ../.rumex/bin/update2.sh
 
 
 exit
