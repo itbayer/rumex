@@ -41,6 +41,9 @@ MOOTIT = "rumex"
 # Rumexsuche
 RUMEXSUCHE = "rxtpl/js"
 
+# Favicon
+FAVICON = "favicon.gif"
+
 # #####################################################
 # FTP URL / Zugangsdaten. Ist diese Variabel gesetzt wird das 
 # Programm wput bzw. bin/wput.sh verwendet um die Daten auf

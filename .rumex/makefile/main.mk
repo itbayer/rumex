@@ -12,14 +12,8 @@ html: html0s html0x html0v html0w html1s html1x html1v html2s html2x html2v html
 # ######################################################
 # index.rx0x Seite erstellen
 
-# Dateien die in die index.rx0x eingebunden werden.
-INDEXFILES =  $(shell for i in $(shell ls -1 *.rx?s 2>/dev/null) ;do echo $$i; done)
-
-index.rx0x: $(INDEXFILES)
-	$(INDEX) $(U1) $(U2) $(U3)
-
 index:
-	make index.rx0x
+	$(INDEX) $(U1) $(U2) $(U3)
 
 
 # ######################################################
