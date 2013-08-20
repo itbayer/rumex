@@ -92,6 +92,9 @@ p, ul, dd {
 	border: none;
 }
 
+#seite h1, #seite h1 a {
+	border: none;
+}
 
 /* ---------------------------------------------- 
  * Zitate 
