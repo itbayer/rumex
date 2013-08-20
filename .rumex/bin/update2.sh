@@ -50,8 +50,6 @@ if ((i)); then
 	echo "....kopiere die neuen Dateien: Verzeichnis rxtpl"
     cp -a ../.rumex/tmp/rumex-gh-pages/rxtpl ../.
 	
-	
-	
 	echo ""
 	echo "....jetzt noch aufräumen und"
 	rm -f ../.rumex/tmp/rumex.tar.gz
@@ -60,6 +58,8 @@ if ((i)); then
 	echo ""
 	echo ""
 	echo "viel Spass mit der neuen Version Rumex Version $GVERSION."
+	echo ""
+	echo ""
 
 
 	# ...wenn nein
