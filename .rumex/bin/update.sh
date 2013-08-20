@@ -19,7 +19,6 @@ echo ""
 
 # Testen ob sich ein update lohnt.
 AVERSION=`cat ../.rumex/default/version.txt`
-AVERSION="0.7.3"
 echo -n "Du hast die Version $AVERSION installiert, "
 
 GVERSION=`wget -O - -o /dev/null https://raw.github.com/itbayer/rumex/gh-pages/.rumex/default/version.txt`
@@ -41,14 +40,15 @@ git commit -a -m"...."
 # TAG der alten Version setzen
 git tag -a rx$AVERSION -m "Rumex $AVERSION vor Update auf Rumex $GVERSION"
 
-exit
-
 # hole die neue update2.sh Datei von github und das
 # eigentliche Update ausführen zu können.
 wget -o /dev/null -O ../.rumex/bin/update2.sh https://raw.github.com/itbayer/rumex/gh-pages/.rumex/bin/update2.sh
 
 # ...und starten
+sleep 5
+
 bash ../.rumex/bin/update2.sh
+
 
 exit
 
