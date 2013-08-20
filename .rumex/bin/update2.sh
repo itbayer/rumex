@@ -35,20 +35,20 @@ if ((i)); then
 	tar -xzvf ../.rumex/tmp/rumex.tar.gz -C ../.rumex/tmp/
 	
 	echo ""
-	echo "....kopiere die neue Version von .rumex/bin"
-    cp -a ../.rumex/tmp/rumex-gh-pages/.rumex/bin /tmp/rumextest/.rumex/.
+	echo "....kopiere die neuen Dateien: Verzeichnis .rumex/bin"
+    cp -a ../.rumex/tmp/rumex-gh-pages/.rumex/bin ../.rumex/.
 
 	echo ""
-	echo "....kopiere die neue Version von .rumex/makefile"
-    cp -a ../.rumex/tmp/rumex-gh-pages/.rumex/makefile /tmp/rumextest/.rumex/.
+	echo "....kopiere die neuen Dateien: Verzeichnis .rumex/makefile"
+    cp -a ../.rumex/tmp/rumex-gh-pages/.rumex/makefile ../.rumex/.
 	
 	echo ""
-	echo "....kopiere die neue Version von .rumex/default"
-    cp -a ../.rumex/tmp/rumex-gh-pages/.rumex/default /tmp/rumextest/.rumex/.
+	echo "....kopiere die neuen Dateien: Verzeichnis .rumex/default"
+    cp -a ../.rumex/tmp/rumex-gh-pages/.rumex/default ../.rumex/.
 	
 	echo ""
-	echo "....kopiere die neue Version von rxtpl"
-    cp -a ../.rumex/tmp/rumex-gh-pages/rxtpl /tmp/rumextest/.
+	echo "....kopiere die neuen Dateien: Verzeichnis rxtpl"
+    cp -a ../.rumex/tmp/rumex-gh-pages/rxtpl ../.
 	
 	
 	
@@ -61,9 +61,6 @@ if ((i)); then
 	echo ""
 	echo "viel Spass mit der neuen Version Rumex Version $GVERSION."
 
-	echo ""
-	echo "Leider ist die Update Funktion noch nicht fertig."
-	echo "Alle Dateien wurden in das /tmp/ Verzeichnis installiert."
 
 	# ...wenn nein
 else
