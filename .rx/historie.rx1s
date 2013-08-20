@@ -8,13 +8,13 @@
 -->
 
 
-## V0.7.0 - V0.7.4
+# V0.7.0 - V0.7.9
 
 Vorbereitung auf die `make update` Funktion.
 
 <!-- schnipp -->
 
-## V0.6.9
+# V0.6.9
 
 Anpassungen im Rumexmenü
 :	Es wurden Formatierungsbefehle eingebaut
@@ -27,28 +27,28 @@ Anpassung der Konfiguration
 
 
 
-## V0.6.7
+# V0.6.7
 
 In Rumex wurden zwei JavaScripts eingebaut.
 Diese ermöglichen zum einen das die Seiten von Rumex durchsucht werden können. Zum anderen das die gefunden Wörter auf der jeweiligen Seite markiert werden.
 
 
 
-## V0.6.5
+# V0.6.5
 
 Vorbereitung zum Update Skript. 
 Die Verzeichnis Struktur von Rumex wurde umgebaut.
 
-## V0.6.3
+# V0.6.3
 
 Rumex hat eine GVIM Unterstützung bekommen.
 
 ![Das Rumex GVIM Menü](bilder/gvim-menue_400_.png)
 
 
-## V0.6
+# V0.6
 
-### Kommentar und Forum Funktion eingebaut
+## Kommentar und Forum Funktion eingebaut
 
 Nun ist es möglich Kommentare in die einzelnen Seiten, von Rumex,
 einzubinden. Die Funktion wird von der Plattform [moot.it][] 
@@ -60,7 +60,7 @@ Ein Beispiel der neuen Kommentar Funktion findet man auf der [Beschreibungsseite
 Eine weitere Möglichkeit die [moot.it][] bietet ist ein Forum. 
 Dieses Einbindung findet man auf der [Forumsseite](forum.html).
 
-#### Nachteil!
+### Nachteil!
 
 Einen kleinen Nachteil hat das Einbinden der Kommentar / Forum
 Funktion von [moot.it][]. 
@@ -74,7 +74,7 @@ Infolink über die neue Plattform [moot.it][]: <http://t3n.de/news/us-startup-mo
 
 
 
-## V0.5
+# V0.5
 
 Die Systemverzeichnisse wurden auf dot Verzeichnisse, nicht sichtbare Verzeichnisse, umbenannt.
 
@@ -85,7 +85,7 @@ Die Systemverzeichnisse wurden auf dot Verzeichnisse, nicht sichtbare Verzeichni
 
 
 
-## V0.4.8
+# V0.4.8
 
 rumex kann jetzt auch mit FTP umgehen.
 Dazu muss das Programm `wput` installiert und
@@ -95,7 +95,7 @@ in der `bin/config.mainfile` die Variable
 
 gesetzt werden.
 
-## V0.4.7
+# V0.4.7
 
 Verzeichnisschutz `.htaccess` eingebaut.
 Geschützt werden die Verzeichnisse:
@@ -112,7 +112,7 @@ Geschützt werden die Verzeichnisse:
 
 
 
-## V0.4.5
+# V0.4.5
 
 Rumex wurde um ein Installationsskript erweitert. 
 
@@ -129,7 +129,7 @@ Die Installation beschränkt sich nun auf folgende Schritte
 
 
 
-## V0.4.0
+# V0.4.0
 
 Umbau der Seiten Struktur \
 - Quelldateien vom Unterverzeichnis `markdown` nach `rumex` verlagert \
@@ -139,7 +139,7 @@ Umbau der Seiten Struktur \
 <https://github.com/itbayer/rumex/archive/0.4.0.zip>
 
 
-## V0.3.7
+# V0.3.7
 
 Einbau einer `sitemap.html`.
 Erstellt wird dabei eine einfache Liste im 
@@ -149,7 +149,7 @@ nach HTML gewandelt wird.
 <https://github.com/itbayer/rumex/archive/0.3.7.zip>
 
 
-## V0.3.6
+# V0.3.6
 
 Einbau einer Weiterleitungsfunktion per JavaScript
 da `.htaccess` von github.com nicht unterstützt wird.
@@ -165,7 +165,7 @@ Dateien aus `inc` nach `bin` verlagert.
 
 
 
-## V0.3.5
+# V0.3.5
 
 Rumex bekommt eine Bild Verarbeitung.
 	
@@ -198,27 +198,27 @@ Die Höhe wird entsprechend von `ImageMagick` berechnet.
 <https://github.com/itbayer/rumex/archive/0.3.5.zip>
 
 
-## V0.3.4
+# V0.3.4
 
 Das Seiten Layout bekommt ein eigenes Verzeichnis.
 
 <https://github.com/itbayer/rumex/archive/0.3.4.zip>
 
-## V0.3.3
+# V0.3.3
 
 Versions Vermerk eingebaut. \
 `<meta name="generator" content="pandoc rumex VERSION">`
 	
 <https://github.com/itbayer/rumex/archive/0.3.3.zip>
 
-## V0.3.2
+# V0.3.2
 
 `sitemap.xml` wurde eingebaut.
 	
 <https://github.com/itbayer/rumex/archive/0.3.2.zip>
 	
 
-## V0.3.1
+# V0.3.1
 
 Einstellungen optimiert.
 	
@@ -229,14 +229,14 @@ Einstellungen optimiert.
 <https://github.com/itbayer/rumex/archive/0.3.1.zip>
 
 
-## V0.3
+# V0.3
 
 Der Baukasten wurde um die RSS Feed Funktion erweitert.
 	
 <https://github.com/itbayer/rumex/archive/0.3.zip>
 
 
-## V0.2
+# V0.2
 
 Steuerung der Inhaltsverzeichnis Einbindung durch
 Dateinamen Endungen.
@@ -244,7 +244,7 @@ Dateinamen Endungen.
 <https://github.com/itbayer/rumex/archive/0.2.zip>
 
 
-## V0.1
+# V0.1
 
 Version 0.1 ist fertig. Hat zwar hoch nicht viel Funktionen
 aber der Baukasten funktioniert schon.
