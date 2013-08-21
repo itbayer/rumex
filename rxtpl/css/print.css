@@ -6,3 +6,7 @@
 .impressum {
 	display: none;
 }
+
+#fuss .links {
+	display: none;
+}

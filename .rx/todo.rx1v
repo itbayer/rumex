@@ -4,7 +4,8 @@
 
 <!--
 
-# ToDo
+[ToDo](todo.html)
+============================================
 
 -->
 
@@ -14,49 +15,33 @@ Aber auch Fehler **Bugs** die noch nicht behoben sind notiere ich mir hier.
 <!-- schnipp -->
 
 
-Fusszeilen Link 
-:	Fusszeilen Links sollten beim Ausdruck nicht erscheinen
-
 .htaccess
 :	Bei `make install` sollte auch die .htaccess Dateinen kopiert werden.
+
+config.mk
+:	Eine Vorlage der Benutzer Konfiguration soll bei der Installation 
+	mit kopiert werden.
 
 forum.rx0x
 :	Bei `make install` sollte auch die forum.rx0x kopiert werden. 
 
-/bilder
-:	Im Bild Verzeichnis sollten auch alle Rumex Bilder die nicht
-	gebraucht werden gelöscht werden.
-
 Biographie 
-:	Biographie Funktion einbauen.
+:	Biographie Funktion einbauen. 
+
+css
+:	Markierungen sollte man evtl. von all.css nach screen.css verschieben.
 
 
-css/rumexmarker.js
-:	`css/rumexmarker.js` markiert keine Umlaute.
 
-.rumex.vim
-:	Bei dem Befehl `make html` könnte man evtl. zuvor die Datei speichern.
+# Bugs
+
+rxtpl/css/rumexmarker.js
+:	`rumexmarker.js` markiert keine Umlaute.
 
 moot.it
 :	Das Nachladen des Dienstes moot.it dauert sehr lange. 
 	Sollte man beobachten.
 
-.rumex.vim
-:	Einbau eines Kurzbefehls um den Link _Seitenkommentar_ einzufügen.
-	
-	Vorlage:
-		
-		# Kommentar
 
-		<a class="moot" href="https://moot.it/i/MOOTNAME/blog/SEITENNAME"></a>
-	
-	Hier muss der Name `MOOTNAME` durch den Namen des moot.it Accounts ersetzt 
-	werden. Der `SEITENNAME` wird durch den Namen der Seite ersetzt.
-
-css
-:	Markierungen sollte man evtl. von all.css nach screen.css verschieben.
-
-index Seite
-:	Überschrift der Seite könnt man evtl. mit der eigentlichen Seite verlinken.
 
 <!-- vim:set ft=pandoc: -->

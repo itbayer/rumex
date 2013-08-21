@@ -4,7 +4,7 @@
   <meta charset="utf-8">
 
 <!-- rumex Version -->
-<meta name="generator" content="rumex 0.7.9">
+<meta name="generator" content="rumex 0.7.9.1">
 
 <!-- rumex Suchmaschine -->
 <meta name="robots" content="noindex,nofollow,noarchive">
@@ -57,10 +57,16 @@
 <h2 class="author"><a title="zur Startseite" href="index.html">Was ist noch alles zu machen</a></h2>
 <h3 class="date"><a title="zur Startseite" href="index.html">bzw. welche Fehler sind noch offen</a></h3>
 </header>
+<nav id="TOC">
+<ul>
+<li><a href="#bugs">Bugs</a></li>
+</ul>
+</nav>
 <div id="seite">
 <!--
 
-# ToDo
+[ToDo](todo.html)
+============================================
 
 -->
 
@@ -69,43 +75,29 @@
 
 
 <dl>
-<dt>Fusszeilen Link</dt>
-<dd><p>Fusszeilen Links sollten beim Ausdruck nicht erscheinen</p>
-</dd>
 <dt>.htaccess</dt>
 <dd><p>Bei <code>make install</code> sollte auch die .htaccess Dateinen kopiert werden.</p>
+</dd>
+<dt>config.mk</dt>
+<dd><p>Eine Vorlage der Benutzer Konfiguration soll bei der Installation mit kopiert werden.</p>
 </dd>
 <dt>forum.rx0x</dt>
 <dd><p>Bei <code>make install</code> sollte auch die forum.rx0x kopiert werden.</p>
 </dd>
-<dt>/bilder</dt>
-<dd><p>Im Bild Verzeichnis sollten auch alle Rumex Bilder die nicht gebraucht werden gelöscht werden.</p>
-</dd>
 <dt>Biographie</dt>
 <dd><p>Biographie Funktion einbauen.</p>
-</dd>
-<dt>css/rumexmarker.js</dt>
-<dd><p><code>css/rumexmarker.js</code> markiert keine Umlaute.</p>
-</dd>
-<dt>.rumex.vim</dt>
-<dd><p>Bei dem Befehl <code>make html</code> könnte man evtl. zuvor die Datei speichern.</p>
-</dd>
-<dt>moot.it</dt>
-<dd><p>Das Nachladen des Dienstes moot.it dauert sehr lange. Sollte man beobachten.</p>
-</dd>
-<dt>.rumex.vim</dt>
-<dd><p>Einbau eines Kurzbefehls um den Link <em>Seitenkommentar</em> einzufügen.</p>
-<p>Vorlage:</p>
-<pre><code># Kommentar
-
-&lt;a class=&quot;moot&quot; href=&quot;https://moot.it/i/MOOTNAME/blog/SEITENNAME&quot;&gt;&lt;/a&gt;</code></pre>
-<p>Hier muss der Name <code>MOOTNAME</code> durch den Namen des moot.it Accounts ersetzt werden. Der <code>SEITENNAME</code> wird durch den Namen der Seite ersetzt.</p>
 </dd>
 <dt>css</dt>
 <dd><p>Markierungen sollte man evtl. von all.css nach screen.css verschieben.</p>
 </dd>
-<dt>index Seite</dt>
-<dd><p>Überschrift der Seite könnt man evtl. mit der eigentlichen Seite verlinken.</p>
+</dl>
+<h1 id="bugs"><a href="#bugs">Bugs</a></h1>
+<dl>
+<dt>rxtpl/css/rumexmarker.js</dt>
+<dd><p><code>rumexmarker.js</code> markiert keine Umlaute.</p>
+</dd>
+<dt>moot.it</dt>
+<dd><p>Das Nachladen des Dienstes moot.it dauert sehr lange. Sollte man beobachten.</p>
 </dd>
 </dl>
 <!-- vim:set ft=pandoc: -->
