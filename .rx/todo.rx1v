@@ -32,7 +32,7 @@ css
 :	Markierungen sollte man evtl. von all.css nach screen.css verschieben.
 
 curl
-:	Umstellung von wget / wput auf curl
+:	evtl. Umstellung von wget / wput auf curl
 	
 	**Download**
 	
