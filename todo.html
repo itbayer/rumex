@@ -90,6 +90,14 @@
 <dt>css</dt>
 <dd><p>Markierungen sollte man evtl. von all.css nach screen.css verschieben.</p>
 </dd>
+<dt>curl</dt>
+<dd><p>Umstellung von wget / wput auf curl</p>
+<p><strong>Download</strong></p>
+<pre><code>curl -o datei -# http://link.de/datei</code></pre>
+<p>Durch den <code>#</code> Parameter wird ein einfacher Download Balken angezeigt.</p>
+<p><strong>Upload</strong></p>
+<pre><code>curl -T &quot;{datei1,date2}&quot; -u user:password ftp://link.de</code></pre>
+</dd>
 </dl>
 <h1 id="bugs"><a href="#bugs">Bugs</a></h1>
 <dl>
