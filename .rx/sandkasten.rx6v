@@ -175,10 +175,18 @@ wechsel. \
 
 # Quelltext
 
+
+~~~{.c .numberLines startFrom="10"}
+ Hier ist der Quelltext
+ Noch eine Zeile
+
 ~~~
-zeile 1
-zeile 2
-zeile 3
+
+~~~
+ zeile 1
+ zeile 2
+ zeile 3
+ zeile 4
 
 ~~~
 

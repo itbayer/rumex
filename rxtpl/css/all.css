@@ -128,10 +128,33 @@ pre {
 	background-color: #f4f4f4;
 	border-radius: 5px 5px 5px 5px;
 	border: 1px solid #e0e0e0;
-	padding: 1em;
+	padding-top: 0.7em;
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+	padding-bottom: 0.7em;
 	color: #555;
 	font-size: 1.1em;
+	line-height: 1.7em;
 	box-shadow: 4px 4px 8px #d0d0d0;
+}
+
+/* Code Nummerierung */
+
+table.sourceCode {
+    margin-left: -7%;
+    width: 107%;
+}
+
+td.lineNumbers {
+	padding: 0px;
+}
+
+td.lineNumbers pre {
+	color: blue;
+	border-radius: 0px;
+	border: none;
+	box-shadow: none;
+	background-color: #fff;
 }
 
 /* ---------------------------------------------- 
