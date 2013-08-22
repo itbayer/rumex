@@ -54,22 +54,62 @@ Genau das soll Rumex auch sein "ein Lückenfüller" für alle die ... Systeme sa
 
 # Installation und Einrichten des Rumex Baukastens
 
-@todo
+## Vorbereitung des Rechners
 
-- warum 2 mal? lokal server
+Rumex ist auf ein *nix System ausgerichtet. 
+Auf diesem sollten folgende Programme installiert sein:
 
-## Installation auf dem lokalen Arbeitsplatz
+- bash
+- make
+- perl
+
+- git
+- pandoc
+- imagemagick
+- wget
+- wput
+
+- vim (g)vim
+
+- texlive
+
+Wobei `bash`, `make` und `perl` eigentlich bei jeder `*nix` Installation bereits vorhanden sein dürft.
+Die restlichen Programme müssen nach installiert werden.
+
+Wer mit dem Editor `vim` zurecht kommt sollte sich auch `(g)vim` installieren. Rumex besitzt eine `gvim` Erweiterung die, die Arbeit bzw. die Suche nach dem richtigen Befehl am Anfang um einiges erleichtert.
+
+`texlive`[^texlive] wird nur gebraucht wenn man auch PDF Dateien erstellen möchte.
+
+`wput` wird nur gebraucht wenn man die Daten per FTP hoch laden möchte.
+
+	sudo apt-get install make perl
+
+	sudo apt-get install git-core wget wput pandoc imagemagick
+
+	sudo apt-get install gvim
+
+	sudo apt-get install texlive
+
+
+[^texlive]: Die Funktion der PDF Erstellung ist zur Zeit noch nicht enthalten.
+
+## Installation von Rumex auf dem lokalen Arbeitsplatz
 
 Für die Installation auf deinem Rechner musst du dir zu erst
-das ZIP Archiv vom github Server holen und entpacken
+das ZIP bzw. das tar.gz Archiv vom github Server holen und entpacken
 
-	 wget https://github.com/itbayer/rumex/archive/gh-pages.zip
-	 unzip gh-pages.zip
+	wget https://github.com/itbayer/rumex/archive/gh-pages.zip
+	unzip gh-pages.zip
 
-Jetzt wechsle in das Verzeichnis `rumex-gh-pages/rumex` und starte
+oder
+
+	wget https://github.com/itbayer/rumex/archive/gh-pages.tar.gz
+	tar -xzvf gh-pages.tar.gz
+
+Jetzt wechsle in das Verzeichnis `rumex-gh-pages/.rx` und starte
 die Befehle `make install` und `make show`.
 
-	cd rumex-gh-pages/rumex/
+	cd rumex-gh-pages/.rx/
 	make install
 	make show
 
@@ -78,16 +118,29 @@ Fertig :-)
 ## Rumex auf dich einstellen
 
 Nach der Installation muss Rumex noch auf dich eingestellt werden.
+Genauer gesagt sollten folgende Angabe für deine neuen Seite angepasst werden.
 
-- URL
+- URL deiner Seite
 - Impressum
 - Kopf / Fusszeile
 - Logo
-- usw.
 
-Eine Kurzbeschreibung findest du nach der lokalen Installation, `make show`
+Eine Kurzbeschreibung findest du, nach der Installation, auf der Startseite von Rumex
 oder [hier][istart.html].
 
+## moot.it
+
+@todo: Hier fehlt noch die Beschreibung
+
+- ein/auschalten
+- Kontoname einstellen
+
+## gvim Unterstützung einrichten
+
+@todo: Hier fehlt noch die Beschreibung
+
+- Erstellen der Startdatei
+- Einrichten
 
 ## Seite auf einem github.com Server einrichten
 
@@ -122,25 +175,6 @@ eine Beschreibung wie man den rumex Baukasten auf einen **nicht**
 @todo
 
 
-
-## rumex *nix Voraussetzungen 
-
-Rumex ist auf ein *nix System ausgerichtet. 
-Auf diesem sollten folgende Programme installiert sein:
-
-- bash
-- make
-- perl
-- git
-- ftpclient
-- pandoc
-- imagemagick
-- texlive
-
-Wobei `bash`, `make` und `perl` bei jeder `*nix` Installation bereits vorhanden sein dürft.
-Die restlichen Programme müssen nach installiert werden.
-`texlive` wird nur gebraucht wenn man auch PDF Dateien erstellen möchte.
-Ein `ftpclient` wird nur gebraucht wenn man die Daten per FTP hoch laden möchte.
 
 # Aufbau des rumex Baukastens
 
@@ -372,7 +406,7 @@ Ab hier geht dann der Inhlat der eigentlichen Seite los.
 @todo
 
 Wird nicht aus den einzelnen Dateien erstellt sondern 
-muss manuell editiert werden, Datei `rumex/rssmd0x`.
+muss manuell editiert werden, Datei `.rx/rss.rx0x`.
 
 Jede Überschrift eines Eintrags muss mit einem `{#anker}`
 enden.
@@ -400,42 +434,37 @@ Zur Zeit werden folgende `pandoc` Formatierungen unterstützt.
 
 ## Beispiel einer RSS Feed Seite
 
-~~~
-% Abo Seite - Newsletter - RSS Feed
-% 
-%
-
-
-<!--
-| Titel: Rumex - Ein Home Page Baukasten
-| Beschreibung: Aktuelles und Neuigkeiten vom rumex Home Page Baukasten
-| KLink: http://www.it-bayer.de/rumex/
-| Lang: de-DE
-| BildTitel: IT-Bayer rumex Meldungen
-| BildURL: http://www.itbayer.de/rumex/bilder/404.png
-| BildLink: http://www.it-bayer.de/rumex/
-| BildBeschreibung: Aktuelles und Neuigkeiten von der rumex Seite.
--->
-
-
-
-
-# rumex bekommt die RSS Feed Funktion{#rssfeed}
-
-<!-- 
-| Link: http://www.it-bayer.de/rumex/
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Thu, 04 Jul 2013 10:07:06 +0200
--->
-
-In den rumex Baukasten wurde eine RSS Feed Funktion eingebaut.
-Die Einträge werden dabei auch aus einem `pandoc` Dokument gelesen
-und nach `rss.xml` geschrieben.
-
-Zusätzlich ist diese Datei auch als `rss.html` unter 
-<http://www.it-bayer.de/rumex/rss.html> verfügbar.
-
+~~~{.c .numberLines startFrom="100"}
+ % Abo Seite - Newsletter - RSS Feed
+ % 
+ %
+ 
+ <!--
+ | Titel: Rumex - Ein Home Page Baukasten
+ | Beschreibung: Aktuelles und Neuigkeiten vom rumex Home Page Baukasten
+ | KLink: http://www.it-bayer.de/rumex/
+ | Lang: de-DE
+ | BildTitel: IT-Bayer rumex Meldungen
+ | BildURL: http://www.itbayer.de/rumex/bilder/404.png
+ | BildLink: http://www.it-bayer.de/rumex/
+ | BildBeschreibung: Aktuelles und Neuigkeiten von der rumex Seite.
+ -->
+ 
+ # rumex bekommt die RSS Feed Funktion{#rssfeed}
+ 
+ <!-- 
+ | Link: http://www.it-bayer.de/rumex/
+ | Autor: IT-Bayer
+ | Kategorie: Neues
+ | Datum: Thu, 04 Jul 2013 10:07:06 +0200
+ -->
+ 
+ In den rumex Baukasten wurde eine RSS Feed Funktion eingebaut.
+ Die Einträge werden dabei auch aus einem `pandoc` Dokument gelesen
+ und nach `rss.xml` geschrieben.
+ 
+ Zusätzlich ist diese Datei auch als `rss.html` unter 
+ <http://www.it-bayer.de/rumex/rss.html> verfügbar.
 ~~~
 
 # make Steuerung

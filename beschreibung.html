@@ -79,14 +79,16 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><a href="#rumex">Rumex?</a></li>
 </ul></li>
 <li><a href="#installation-und-einrichten-des-rumex-baukastens">Installation und Einrichten des Rumex Baukastens</a><ul>
-<li><a href="#installation-auf-dem-lokalen-arbeitsplatz">Installation auf dem lokalen Arbeitsplatz</a></li>
+<li><a href="#vorbereitung-des-rechners">Vorbereitung des Rechners</a></li>
+<li><a href="#installation-von-rumex-auf-dem-lokalen-arbeitsplatz">Installation von Rumex auf dem lokalen Arbeitsplatz</a></li>
 <li><a href="#rumex-auf-dich-einstellen">Rumex auf dich einstellen</a></li>
+<li><a href="#moot.it">moot.it</a></li>
+<li><a href="#gvim-unterstützung-einrichten">gvim Unterstützung einrichten</a></li>
 <li><a href="#seite-auf-einem-github.com-server-einrichten">Seite auf einem github.com Server einrichten</a></li>
 <li><a href="#seite-auf-einem-nicht-github.com-server-einrichten">Seite auf einem nicht github.com Server einrichten</a><ul>
 <li><a href="#datei-upload-per-git">Datei upload per git</a></li>
 <li><a href="#datei-upload-per-ftp">Datei upload per ftp</a></li>
 </ul></li>
-<li><a href="#rumex-nix-voraussetzungen">rumex *nix Voraussetzungen</a></li>
 </ul></li>
 <li><a href="#aufbau-des-rumex-baukastens">Aufbau des rumex Baukastens</a><ul>
 <li><a href="#root-verzeichnis">root Verzeichnis</a></li>
@@ -129,34 +131,69 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>Rumex ist die lateinische Bezeichnung für den <a href="http://de.wikipedia.org/wiki/Ampfer">Ampfer</a> und dieser taucht in der Natur dann auf, wenn der Boden Überdüngt, Verdichtung und Beschädigt ist. Rumex gehört zu den sogenannten Pionier Pflanzen. Er ist ein Lückenfüller.</p>
 <p>Genau das soll Rumex auch sein “ein Lückenfüller” für alle die … Systeme satt haben.</p>
 <h1 id="installation-und-einrichten-des-rumex-baukastens"><a href="#installation-und-einrichten-des-rumex-baukastens">Installation und Einrichten des Rumex Baukastens</a></h1>
-<p>@todo</p>
+<h2 id="vorbereitung-des-rechners"><a href="#vorbereitung-des-rechners">Vorbereitung des Rechners</a></h2>
+<p>Rumex ist auf ein *nix System ausgerichtet. Auf diesem sollten folgende Programme installiert sein:</p>
 <ul>
-<li>warum 2 mal? lokal server</li>
+<li>bash</li>
+<li>make</li>
+<li><p>perl</p></li>
+<li>git</li>
+<li>pandoc</li>
+<li>imagemagick</li>
+<li>wget</li>
+<li><p>wput</p></li>
+<li><p>vim (g)vim</p></li>
+<li><p>texlive</p></li>
 </ul>
-<h2 id="installation-auf-dem-lokalen-arbeitsplatz"><a href="#installation-auf-dem-lokalen-arbeitsplatz">Installation auf dem lokalen Arbeitsplatz</a></h2>
-<p>Für die Installation auf deinem Rechner musst du dir zu erst das ZIP Archiv vom github Server holen und entpacken</p>
-<pre><code> wget https://github.com/itbayer/rumex/archive/gh-pages.zip
- unzip gh-pages.zip</code></pre>
-<p>Jetzt wechsle in das Verzeichnis <code>rumex-gh-pages/rumex</code> und starte die Befehle <code>make install</code> und <code>make show</code>.</p>
-<pre><code>cd rumex-gh-pages/rumex/
+<p>Wobei <code>bash</code>, <code>make</code> und <code>perl</code> eigentlich bei jeder <code>*nix</code> Installation bereits vorhanden sein dürft. Die restlichen Programme müssen nach installiert werden.</p>
+<p>Wer mit dem Editor <code>vim</code> zurecht kommt sollte sich auch <code>(g)vim</code> installieren. Rumex besitzt eine <code>gvim</code> Erweiterung die, die Arbeit bzw. die Suche nach dem richtigen Befehl am Anfang um einiges erleichtert.</p>
+<p><code>texlive</code><sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> wird nur gebraucht wenn man auch PDF Dateien erstellen möchte.</p>
+<p><code>wput</code> wird nur gebraucht wenn man die Daten per FTP hoch laden möchte.</p>
+<pre><code>sudo apt-get install make perl
+
+sudo apt-get install git-core wget wput pandoc imagemagick
+
+sudo apt-get install gvim
+
+sudo apt-get install texlive</code></pre>
+<h2 id="installation-von-rumex-auf-dem-lokalen-arbeitsplatz"><a href="#installation-von-rumex-auf-dem-lokalen-arbeitsplatz">Installation von Rumex auf dem lokalen Arbeitsplatz</a></h2>
+<p>Für die Installation auf deinem Rechner musst du dir zu erst das ZIP bzw. das tar.gz Archiv vom github Server holen und entpacken</p>
+<pre><code>wget https://github.com/itbayer/rumex/archive/gh-pages.zip
+unzip gh-pages.zip</code></pre>
+<p>oder</p>
+<pre><code>wget https://github.com/itbayer/rumex/archive/gh-pages.tar.gz
+tar -xzvf gh-pages.tar.gz</code></pre>
+<p>Jetzt wechsle in das Verzeichnis <code>rumex-gh-pages/.rx</code> und starte die Befehle <code>make install</code> und <code>make show</code>.</p>
+<pre><code>cd rumex-gh-pages/.rx/
 make install
 make show</code></pre>
 <p>Fertig :-)</p>
 <h2 id="rumex-auf-dich-einstellen"><a href="#rumex-auf-dich-einstellen">Rumex auf dich einstellen</a></h2>
-<p>Nach der Installation muss Rumex noch auf dich eingestellt werden.</p>
+<p>Nach der Installation muss Rumex noch auf dich eingestellt werden. Genauer gesagt sollten folgende Angabe für deine neuen Seite angepasst werden.</p>
 <ul>
-<li>URL</li>
+<li>URL deiner Seite</li>
 <li>Impressum</li>
 <li>Kopf / Fusszeile</li>
 <li>Logo</li>
-<li>usw.</li>
 </ul>
-<p>Eine Kurzbeschreibung findest du nach der lokalen Installation, <code>make show</code> oder [hier][istart.html].</p>
+<p>Eine Kurzbeschreibung findest du, nach der Installation, auf der Startseite von Rumex oder [hier][istart.html].</p>
+<h2 id="moot.it"><a href="#moot.it">moot.it</a></h2>
+<p>@todo: Hier fehlt noch die Beschreibung</p>
+<ul>
+<li>ein/auschalten</li>
+<li>Kontoname einstellen</li>
+</ul>
+<h2 id="gvim-unterstützung-einrichten"><a href="#gvim-unterstützung-einrichten">gvim Unterstützung einrichten</a></h2>
+<p>@todo: Hier fehlt noch die Beschreibung</p>
+<ul>
+<li>Erstellen der Startdatei</li>
+<li>Einrichten</li>
+</ul>
 <h2 id="seite-auf-einem-github.com-server-einrichten"><a href="#seite-auf-einem-github.com-server-einrichten">Seite auf einem github.com Server einrichten</a></h2>
 <p>@todo</p>
 <ul>
 <li>Einrichten eines github.com Zugangs</li>
-<li>Arbeits- Repository auf den AP<sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> holen</li>
+<li>Arbeits- Repository auf den AP<sup><a href="#fn2" class="footnoteRef" id="fnref2">2</a></sup> holen</li>
 <li>Die Rumex ZIP Datei</li>
 <li>Die Dateien des ZIP Archives in das Arbeits- Repository kopieren</li>
 <li>Grund Dateien anpassen
@@ -172,19 +209,6 @@ make show</code></pre>
 <p>Auf der Seite <a href="http://rumex.it-bayer.de">rumex.it-bayer.de</a> findet man eine Beschreibung wie man den rumex Baukasten auf einen <strong>nicht</strong> <code>github.com</code> Server installiert.</p>
 <h3 id="datei-upload-per-ftp"><a href="#datei-upload-per-ftp">Datei upload per ftp</a></h3>
 <p>@todo</p>
-<h2 id="rumex-nix-voraussetzungen"><a href="#rumex-nix-voraussetzungen">rumex *nix Voraussetzungen</a></h2>
-<p>Rumex ist auf ein *nix System ausgerichtet. Auf diesem sollten folgende Programme installiert sein:</p>
-<ul>
-<li>bash</li>
-<li>make</li>
-<li>perl</li>
-<li>git</li>
-<li>ftpclient</li>
-<li>pandoc</li>
-<li>imagemagick</li>
-<li>texlive</li>
-</ul>
-<p>Wobei <code>bash</code>, <code>make</code> und <code>perl</code> bei jeder <code>*nix</code> Installation bereits vorhanden sein dürft. Die restlichen Programme müssen nach installiert werden. <code>texlive</code> wird nur gebraucht wenn man auch PDF Dateien erstellen möchte. Ein <code>ftpclient</code> wird nur gebraucht wenn man die Daten per FTP hoch laden möchte.</p>
 <h1 id="aufbau-des-rumex-baukastens"><a href="#aufbau-des-rumex-baukastens">Aufbau des rumex Baukastens</a></h1>
 <p>@todo</p>
 <h2 id="root-verzeichnis"><a href="#root-verzeichnis">root Verzeichnis</a></h2>
@@ -358,7 +382,7 @@ Ab hier geht dann der Inhlat der eigentlichen Seite los.</code></pre>
 <span class="ot">&gt; &lt;/div&gt;</span></code></pre>
 <h1 id="rss-feed-funktion"><a href="#rss-feed-funktion">RSS Feed Funktion</a></h1>
 <p>@todo</p>
-<p>Wird nicht aus den einzelnen Dateien erstellt sondern muss manuell editiert werden, Datei <code>rumex/rssmd0x</code>.</p>
+<p>Wird nicht aus den einzelnen Dateien erstellt sondern muss manuell editiert werden, Datei <code>.rx/rss.rx0x</code>.</p>
 <p>Jede Überschrift eines Eintrags muss mit einem <code>{#anker}</code> enden.</p>
 <p>Danach kommen die Angaben zu:</p>
 <p><strong>Link:</strong> <em>Verweis zur Seite mit weiteren Informationen</em><br /><strong>Autor:</strong> <em>Autor der den Eintrag geschrieben hat</em><br /><strong>Kategorie:</strong> <em>Kategoie des Eintrags</em><br /><strong>Datum:</strong> <em>Datum des Eintrags.</em> Das richtige Format bekommt man mit dem Befehl <code>date -R</code>.</p>
@@ -374,41 +398,66 @@ Ab hier geht dann der Inhlat der eigentlichen Seite los.</code></pre>
 <li>Code <code>`Code`</code>.</li>
 </ul>
 <h2 id="beispiel-einer-rss-feed-seite"><a href="#beispiel-einer-rss-feed-seite">Beispiel einer RSS Feed Seite</a></h2>
-<pre><code>% Abo Seite - Newsletter - RSS Feed
-% 
-%
-
-
-&lt;!--
-| Titel: Rumex - Ein Home Page Baukasten
-| Beschreibung: Aktuelles und Neuigkeiten vom rumex Home Page Baukasten
-| KLink: http://www.it-bayer.de/rumex/
-| Lang: de-DE
-| BildTitel: IT-Bayer rumex Meldungen
-| BildURL: http://www.itbayer.de/rumex/bilder/404.png
-| BildLink: http://www.it-bayer.de/rumex/
-| BildBeschreibung: Aktuelles und Neuigkeiten von der rumex Seite.
---&gt;
-
-
-
-
-# rumex bekommt die RSS Feed Funktion{#rssfeed}
-
-&lt;!-- 
-| Link: http://www.it-bayer.de/rumex/
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Thu, 04 Jul 2013 10:07:06 +0200
---&gt;
-
-In den rumex Baukasten wurde eine RSS Feed Funktion eingebaut.
-Die Einträge werden dabei auch aus einem `pandoc` Dokument gelesen
-und nach `rss.xml` geschrieben.
-
-Zusätzlich ist diese Datei auch als `rss.html` unter 
-&lt;http://www.it-bayer.de/rumex/rss.html&gt; verfügbar.
-</code></pre>
+<table class="sourceCode c numberLines" startFrom="100"><tr class="sourceCode"><td class="lineNumbers"><pre>100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+</pre></td><td class="sourceCode"><pre><code class="sourceCode c"> % Abo Seite - Newsletter - RSS Feed
+ % 
+ %
+ 
+ &lt;!--
+ | Titel: Rumex - Ein Home Page Baukasten
+ | Beschreibung: Aktuelles und Neuigkeiten vom rumex Home Page Baukasten
+ | KLink: http:<span class="co">//www.it-bayer.de/rumex/</span>
+ | Lang: de-DE
+ | BildTitel: IT-Bayer rumex Meldungen
+ | BildURL: http:<span class="co">//www.itbayer.de/rumex/bilder/404.png</span>
+ | BildLink: http:<span class="co">//www.it-bayer.de/rumex/</span>
+ | BildBeschreibung: Aktuelles und Neuigkeiten von der rumex Seite.
+ --&gt;
+ 
+ <span class="er"># rumex bekommt die RSS Feed Funktion{#rssfeed}</span>
+ 
+ &lt;!-- 
+ | Link: http:<span class="co">//www.it-bayer.de/rumex/</span>
+ | Autor: IT-Bayer
+ | Kategorie: Neues
+ | Datum: Thu, <span class="dv">04</span> Jul <span class="dv">2013</span> <span class="dv">10</span>:<span class="dv">07</span>:<span class="dv">06</span> +<span class="dv">0200</span>
+ --&gt;
+ 
+ In den rumex Baukasten wurde eine RSS Feed Funktion eingebaut.
+ Die Einträge werden dabei auch aus einem `pandoc` Dokument gelesen
+ und nach `rss.xml` geschrieben.
+ 
+ Zusätzlich ist diese Datei auch als `rss.html` unter 
+ &lt;http:<span class="co">//www.it-bayer.de/rumex/rss.html&gt; verfügbar.</span></code></pre></td></tr></table>
 <h1 id="make-steuerung"><a href="#make-steuerung">make Steuerung</a></h1>
 <p>@todo</p>
 <p>Gesteuert wird der Baukasten mittels <code>make</code> im Unterverzeichnis <code>rumex</code>. Folgende <code>make</code> Befehle stehen dabei zur Verfügung.</p>
@@ -439,7 +488,8 @@ Zusätzlich ist diese Datei auch als `rss.html` unter
 <section class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Mit AP ist der <strong>A</strong>rbeits<strong>P</strong>latz Rechner gemeint.<a href="#fnref1">↩</a></p></li>
+<li id="fn1"><p>Die Funktion der PDF Erstellung ist zur Zeit noch nicht enthalten.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>Mit AP ist der <strong>A</strong>rbeits<strong>P</strong>latz Rechner gemeint.<a href="#fnref2">↩</a></p></li>
 </ol>
 </section>
 </div>
