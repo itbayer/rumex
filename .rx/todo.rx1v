@@ -31,7 +31,18 @@ Biographie
 css
 :	Markierungen sollte man evtl. von all.css nach screen.css verschieben.
 
-
+curl
+:	evtl. Umstellung von wget / wput auf curl
+	
+	**Download**
+	
+		curl -o datei -# http://link.de/datei
+	
+	Durch den `#` Parameter wird ein einfacher Download Balken angezeigt.
+	
+	**Upload**
+	
+		curl -T "{datei1,date2}" -u user:password ftp://link.de
 
 # Bugs
 

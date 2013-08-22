@@ -3,7 +3,7 @@
 # Info Link: http://de.selfhtml.org/diverses/robots.htm
 #
 
-Sitemap: http://www.it-bayer.de/rumex/sitemap.xml
+Sitemap: /sitemap.xml
 
 User-agent: *
 Disallow: /.rumex/

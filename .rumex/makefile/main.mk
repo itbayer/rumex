@@ -25,7 +25,7 @@ all:
 	make -s rss
 	make -s html 
 	make -s bilder
-	make -s ../robots.txt
+	make -s robots
 
 
 # ######################################################
@@ -131,10 +131,7 @@ suche:
 
 # ######################################################
 # robots.txt updaten
-../robots.txt: 
+robots: 
 	../.rumex/bin/update_robots.txt.pl
 
-# ... und erstellen
-robots.txt:
-	make  ../robots.txt
 
