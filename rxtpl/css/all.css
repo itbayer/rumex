@@ -141,8 +141,7 @@ pre {
 /* Code Nummerierung */
 
 table.sourceCode {
-    margin-left: -7%;
-    width: 107%;
+    margin-left: -44px;
 }
 
 td.lineNumbers {
