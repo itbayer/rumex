@@ -411,5 +411,9 @@ td {
 }
 
 
-
-
+/* Überschriften innerhalb der Seite farbig markieren wenn diese angesprungen
+ * (Link Erweiterung #) werden. 
+ *		-> dazu http://meiert.com/de/publications/articles/20060119/*/
+#seite h1:target a {
+	color: #cf0000;
+}
