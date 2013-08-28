@@ -411,9 +411,74 @@ td {
 }
 
 
-/* Überschriften innerhalb der Seite farbig markieren wenn diese angesprungen
+/* CSS3 
+ * Überschriften innerhalb der Seite farbig markieren wenn diese angesprungen
  * (Link Erweiterung #) werden. 
- *		-> dazu http://meiert.com/de/publications/articles/20060119/*/
-#seite h1:target a {
+ *		-> dazu http://meiert.com/de/publications/articles/20060119/
+ */
+#seite h1:target a,
+#seite h2:target a,
+#seite h3:target a,
+#seite h4:target a,
+#seite h5:target a,
+#seite h6:target a {
 	color: #cf0000;
+}
+
+/* CSS3
+ * Text in Spalten darstellen 
+ */
+
+/* zwei Spalten */
+.spn2 {
+	column-count: 2;
+	-moz-column-count: 2;
+	-webkit-column-count: 2;
+	column-gap: 40px;
+	-moz-column-gap: 40px;
+	-webkit-column-gap: 40px;
+	column-rule: 1px dotted #999;
+	-moz-column-rule: 1px dotted #999;
+	-webkit-column-rule: 1px dotted #999;
+	background-color: #F8F8F8;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 4px 4px 8px #D0D0D0;
+    padding: 1.2em;
+}
+
+/* drei Spalten */
+.spn3 {
+	column-count: 3;
+	-moz-column-count: 3;
+	-webkit-column-count: 3;
+	column-gap: 40px;
+	-moz-column-gap: 40px;
+	-webkit-column-gap: 40px;
+	column-rule: 1px dotted #999;
+	-moz-column-rule: 1px dotted #999;
+	-webkit-column-rule: 1px dotted #999;
+	background-color: #F8F8F8;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 4px 4px 8px #D0D0D0;
+    padding: 1.2em;
+}
+
+/* vier Spalten */
+.spn4 {
+	column-count: 4;
+	-moz-column-count: 4;
+	-webkit-column-count: 4;
+	column-gap: 40px;
+	-moz-column-gap: 40px;
+	-webkit-column-gap: 40px;
+	column-rule: 1px dotted #999;
+	-moz-column-rule: 1px dotted #999;
+	-webkit-column-rule: 1px dotted #999;
+	background-color: #F8F8F8;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 4px 4px 8px #D0D0D0;
+    padding: 1.2em;
 }

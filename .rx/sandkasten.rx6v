@@ -367,5 +367,57 @@ orange|3.09
 
 ![Beschriftung die unter dem Bild erscheint. Diese Beschriftung wird per `css` mit einer laufenden Nummer versehen.](bilder/gvim-menue.png "Diese Text erscheint wenn man mit der Maus über das Bild fährt bzw. auf dem Bild stehen bleibt.")
 
+
+# CSS3
+
+## Spalten Darstellung
+
+<div class="spn3">
+
+Mit CSS3 ist es nun auch möglich Texte[^spnfuss] in Spalten darzustellen.
+Rumex hat diese CSS Anweisung auch eingebaut.
+
+[^spnfuss]: Auch Fußzeilen kann innerhalb der Spalten Darstellung verwenden.
+
+Es stehen 3 Spalten Formate zur Verfügung:
+
+- zweier Spalten
+- dreier Spalten
+- vierer Spalten
+
+Will man einen Text in Spalte darstellen muss dieser mit einer 
+der folgenden DIV Tag Klasse
+umschlossen werden.
+
+- `.spn2` für eine zweier Spalte
+- `.spn3` für eine dreier Spalte
+- `.spn4` für eine vierer Spalte
+
+Natürlich gibt es auch eine gVim Unterstützung als 
+Menü Eintrag und Kurztasten.
+
+- `,rc2`
+- `,rc3`
+- `,rc4`
+
+
+### Verwendung
+
+Um einen entsprechenden Text in eine Spalte zu legen markiert man den 
+Text (Zeilenweise `V`) und beendet diese Markierung mit der Tasten
+Kombination `,rc2` für eine zweispaltige Darstellung.
+
+**Beispiel**
+
+~~~
+<ESC>
+V
+JJ....
+,rc2
+~~~
+</div><!-- ENDE .spn Darstellung -->
+
+
+
 <!-- vim: set ft=pandoc: -->
 

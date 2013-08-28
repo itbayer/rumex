@@ -32,9 +32,9 @@ set hlsearch " Suche Farblich hervorheben
 " Menu Entwicklung
 "
 " Vim Konfiguration neu einlesen
-menu &Rumex.Vim\ Konfiguration\ Neu\ einlesen :unmenu Rumex<CR>:so ../.rumex/bin/rumex.vim<CR>
+menu &Rumex.&DEV.Vim\ &Konfiguration\ Neu\ einlesen :unmenu Rumex<CR>:so ../.rumex/bin/rumex.vim<CR>
 " Versionsdatei öffnen
-menu &Rumex.Versionsdatei\ öffnen :tabnew<CR>:e ../.rumex/default/version.txt<CR>
+menu &Rumex.&DEV.&Versionsdatei\ öffnen :tabnew<CR>:e ../.rumex/default/version.txt<CR>
 
 " ---------------------------------------------------------
 " Rumex Menü
@@ -85,6 +85,12 @@ vmenu &Rumex.&Formatierung.&Nummernliste<Tab>,rfn ,rfn
 vmenu &Rumex.&Formatierung.&Block<Tab>,rfb ,rfb 
 vmenu &Rumex.&Formatierung.&Code<Tab>,rfc ,rfc
 
+menu &Rumex.-------CSS----------------------------- :
+vmenu &Rumex.&CSS.&Spalten.&2er<Tab>,spn2 ,spn2
+vmenu &Rumex.&CSS.&Spalten.&3er<Tab>,spn3 ,spn3
+vmenu &Rumex.&CSS.&Spalten.&4er<Tab>,spn4 ,spn4
+
+
 " -----------------------------------------------------------
 " Abkürzungen
 abb rumexis Rumex mit is
@@ -105,11 +111,16 @@ map <Leader>rwl i% Weiterleitung nach ....html<CR>%<CR>%<CR><CR><CR><script lang
 map <Leader>rmk i## Kommentare<cr><cr><a class="moot" href="https://moot.it/i/<C-R>=mootit_konto<cr>/blog/<C-R>=expand("%:r")<cr>"></a>
 
 
+" ----------------------------------------------------------
+"  Kurztasten allgemein
 
+" Speichern und html erstellen STRG+S
+map <C-S> :w\|make html<CR><CR>
+imap <C-S> <ESC>:w\|make html<CR><CR>
 
 
 " -----------------------------------------------------------
-"  Kurztasten für die Text Formatierung
+"  Kurztasten zur Text Formatierung
 
 " Markierung Fett darstellen <Leader>rff (RumexFormatFett)
 vmap <Leader>rff xi****<esc>2hp<esc>
@@ -128,5 +139,14 @@ vmap <Leader>rfb :s/^/\| /<CR>
 
 " Markierte Zeile als Code darstellen <Leader>rfc (RumexFormatCode)
 vmap <Leader>rfc xi``<esc>hp<esc>
+
+" CSS Text mit 2er Spalte umschliessen
+vmap <Leader>spn2 xi<div class="spn2"><cr></div><!-- ENDE .spn2 Darstellung --><esc>P
+
+" CSS Text mit 3er Spalte umschliessen
+vmap <Leader>spn3 xi<div class="spn3"><cr></div><!-- ENDE .spn3 Darstellung --><esc>P
+
+" CSS Text mit 4er Spalte umschliessen
+vmap <Leader>spn4 xi<div class="spn4"><cr></div><!-- ENDE .spn4 Darstellung --><esc>P
 
 " vim:ft=vim: 
