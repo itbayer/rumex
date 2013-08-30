@@ -142,6 +142,27 @@ oder [hier](istart.html).
 - Erstellen der Startdatei
 - Einrichten
 
+### Tipps zur Benutzung gvim
+
+Dateiname ergänzen
+:	Will man in die Datei einen Dateinamen einbauen,
+	weiß aber nicht mehr genau wie er heißt, 
+	kann man folgenden Trick verwenden.
+	In diesem Beispiel wird ein Bildname gesucht.
+	Im Text schreibe man `../bilder/tw` und drückt dann
+	die Tastenkombination `C-X + C-F`, gvim öffnet ein Dialogfeld
+	in dem alle Dateien die auf dieses Muster übereinstimmen
+	geöffnet.
+	Gibt es nur einen Treffer wird dieser gleich eingefügt.
+
+Wort innerhalb des Dokumentes suchen
+:	Sucht man ein Wort das man im Dokument schon einmal verwendet hat,
+	um zum Beispiel darauf zu verweisen.
+	Schreibt man den Wortanfang und drückt dann `C-P`.
+	Es öffnet sich ein Dialogfeld in dem alle Wörter die 
+	auf dieses Muster passen angezeigt werden.
+	Gibt es nur einen Treffer wird dieser gleich eingefügt.
+
 ## Seite auf einem github.com Server einrichten
 
 @todo
