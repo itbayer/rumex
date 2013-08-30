@@ -144,24 +144,78 @@ oder [hier](istart.html).
 
 ### Tipps zur Benutzung gvim
 
-Dateiname ergänzen
-:	Will man in die Datei einen Dateinamen einbauen,
-	weiß aber nicht mehr genau wie er heißt, 
-	kann man folgenden Trick verwenden.
-	In diesem Beispiel wird ein Bildname gesucht.
-	Im Text schreibe man `../bilder/tw` und drückt dann
-	die Tastenkombination `C-X + C-F`, gvim öffnet ein Dialogfeld
-	in dem alle Dateien die auf dieses Muster übereinstimmen
-	geöffnet.
-	Gibt es nur einen Treffer wird dieser gleich eingefügt.
+#### Dateiname ergänzen
+Will man in die Datei einen Dateinamen einbauen,
+weiß aber nicht mehr genau wie er heißt, 
+kann man folgenden Trick verwenden.
+In diesem Beispiel wird ein Bildname gesucht.
+Im Text schreibe man `../bilder/tw` und drückt dann
+die Tastenkombination `C-X + C-F`, gvim öffnet ein Dialogfeld
+in dem alle Dateien die auf dieses Muster übereinstimmen
+geöffnet.
+Gibt es nur einen Treffer wird dieser gleich eingefügt.
 
-Wort innerhalb des Dokumentes suchen
-:	Sucht man ein Wort das man im Dokument schon einmal verwendet hat,
-	um zum Beispiel darauf zu verweisen.
-	Schreibt man den Wortanfang und drückt dann `C-P`.
-	Es öffnet sich ein Dialogfeld in dem alle Wörter die 
-	auf dieses Muster passen angezeigt werden.
-	Gibt es nur einen Treffer wird dieser gleich eingefügt.
+#### Wort innerhalb des Dokumentes suchen
+Sucht man ein Wort das man im Dokument schon einmal verwendet hat,
+um zum Beispiel darauf zu verweisen.
+Schreibt man den Wortanfang und drückt dann `C-P`.
+Es öffnet sich ein Dialogfeld in dem alle Wörter die 
+auf dieses Muster passen angezeigt werden.
+Gibt es nur einen Treffer wird dieser gleich eingefügt.
+
+#### Nützliche Erweiterungen
+
+Vim bietet ein paar nützliche Erweiterungen in Form von plugins an.
+Hier eine Liste, der plugins, die ich gerne verwende.
+
+pathogen.vim
+:	Diese Erweiterung macht das Installieren weitere Erweiterungen
+	einfach. Dabei ist die Installation von `pathogen` schnell erledigt.
+
+	~~~{.bash}
+	mkdir -p ~/.vim/autoload ~/.vim/bundle 
+	wget -O ~/.vim/autoload/pathogen.vim //
+	http://www.vim.org/scripts/download_script.php?src_id=16224
+	~~~	
+
+	In die `.vimrc` muss dann noch nachfolgende Zeile eingebaut werden.
+	
+		call pathogen#infect()
+	
+	eingebaut werden.
+	
+	Jetzt braucht man die Erweiterungen nur mehr in das Verzeichnis
+	`.vim/bundle` zu kopieren und vim neu starten.
+	In Verbindung mit `git` wieder eine einfache Sache.
+	
+	~~~{.bash}
+	cd ~/.vim/bundle
+	git clone https://github.com/vim-pandoc/vim-pandoc.git
+	~~~
+
+vim-pandoc
+:	Erweiterung rund um pandoc.
+
+
+FuzzyFinder
+:	Dateien schnell zum editieren öffnen.
+	Installiert ist diese Erweiterung, vorausgesetzt man verwendet pathogen,
+	mit dem Befehl:
+
+	~~~
+	wget -O /tmp/vim-fuzzyfinder.zip http://www.vim.org/scripts/download_script.php?src_id=10588
+	mkdir ~/.vim/bundle/vim-fuzzyfinder
+	unzip /tmp/vim-fuzzyfinder.zip -d ~/.vim/bundle/vim-fuzzyfinder/
+	~~~
+
+	Für das öffnen dies Datei Dialogs sollte man sich dann noch eine Kurztaste
+	konfigurieren.
+	
+	~~~
+	" -------------------------------------------------------------
+	" FuzzyFinder File Suche auf <F12> binden
+	map <F12> :FuzzyFinderFile <CR>
+	~~~
 
 ## Seite auf einem github.com Server einrichten
 
