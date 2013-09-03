@@ -87,6 +87,11 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><a href="#text-durchstreichen">Text Durchstreichen</a></li>
 <li><a href="#tabellen">Tabellen</a></li>
 <li><a href="#bilder">Bilder</a></li>
+<li><a href="#css3">CSS3</a><ul>
+<li><a href="#spalten-darstellung">Spalten Darstellung</a><ul>
+<li><a href="#verwendung">Verwendung</a></li>
+</ul></li>
+</ul></li>
 </ul>
 </nav>
 <div id="seite">
@@ -250,10 +255,75 @@ done</code></pre>
 Zitat mit einem<br />Zeilen<br />wechsel.<br />
 </blockquote>
 <h1 id="quelltext"><a href="#quelltext">Quelltext</a></h1>
-<table class="sourceCode c numberLines" startFrom="10"><tr class="sourceCode"><td class="lineNumbers"><pre>10
-11
+<table class="sourceCode c numberLines" startFrom="100"><tr class="sourceCode"><td class="lineNumbers"><pre>100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+</pre></td><td class="sourceCode"><pre><code class="sourceCode c"> % Abo Seite - Newsletter - RSS Feed
+ % 
+ %
+ 
+ &lt;!--
+ | Titel: Rumex - Ein Home Page Baukasten
+ | Beschreibung: Aktuelles und Neuigkeiten vom rumex Home Page Baukasten
+ | KLink: http:<span class="co">//www.it-bayer.de/rumex/</span>
+ | Lang: de-DE
+ | BildTitel: IT-Bayer rumex Meldungen
+ | BildURL: http:<span class="co">//www.itbayer.de/rumex/bilder/404.png</span>
+ | BildLink: http:<span class="co">//www.it-bayer.de/rumex/</span>
+ | BildBeschreibung: Aktuelles und Neuigkeiten von der rumex Seite.
+ --&gt;
+ 
+ <span class="er"># rumex bekommt die RSS Feed Funktion{#rssfeed}</span>
+ 
+ &lt;!-- 
+ | Link: http:<span class="co">//www.it-bayer.de/rumex/</span>
+ | Autor: IT-Bayer
+ | Kategorie: Neues
+ | Datum: Thu, <span class="dv">04</span> Jul <span class="dv">2013</span> <span class="dv">10</span>:<span class="dv">07</span>:<span class="dv">06</span> +<span class="dv">0200</span>
+ --&gt;
+ 
+ In den rumex Baukasten wurde eine RSS Feed Funktion eingebaut.
+ Die Einträge werden dabei auch aus einem `pandoc` Dokument gelesen
+ und nach `rss.xml` geschrieben.
+ 
+ Zusätzlich ist diese Datei auch als `rss.html` unter 
+ &lt;http:<span class="co">//www.it-bayer.de/rumex/rss.html&gt; verfügbar.</span></code></pre></td></tr></table>
+<table class="sourceCode c numberLines" startFrom="100"><tr class="sourceCode"><td class="lineNumbers"><pre>100
+101
+102
+103
 </pre></td><td class="sourceCode"><pre><code class="sourceCode c"> Hier ist der Quelltext
- Noch eine Zeile</code></pre></td></tr></table>
+ Noch eine Zeile
+ Zusätzlich ist diese Datei auch als `rss.html` unter 
+ Die Einträge werden dabei auch aus einem `pandoc` Dokument gelesen dings bums labadf lsdjdd slfsal dfdlsa fldsfkla fsdlfsal fsldfjla fjlsdjflsa flsjflsa flsfjlsa fsldfjlsa fslfjls fjslkfjsla fslajflsa </code></pre></td></tr></table>
+<p>Text Text Text</p>
 <pre><code> zeile 1
  zeile 2
  zeile 3
@@ -472,9 +542,50 @@ Zitat mit einem<br />Zeilen<br />wechsel.<br />
 <figure>
 <img src="bilder/gvim-menue.png" title="Diese Text erscheint wenn man mit der Maus über das Bild fährt bzw. auf dem Bild stehen bleibt." alt="Beschriftung die unter dem Bild erscheint. Diese Beschriftung wird per css mit einer laufenden Nummer versehen." /><figcaption>Beschriftung die unter dem Bild erscheint. Diese Beschriftung wird per <code>css</code> mit einer laufenden Nummer versehen.</figcaption>
 </figure>
+<h1 id="css3"><a href="#css3">CSS3</a></h1>
+<h2 id="spalten-darstellung"><a href="#spalten-darstellung">Spalten Darstellung</a></h2>
+<div class="spn3">
+
+<p>Mit CSS3 ist es nun auch möglich Texte<sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> in Spalten darzustellen. Rumex hat diese CSS Anweisung auch eingebaut.</p>
+<p>Es stehen 3 Spalten Formate zur Verfügung:</p>
+<ul>
+<li>zweier Spalten</li>
+<li>dreier Spalten</li>
+<li>vierer Spalten</li>
+</ul>
+<p>Will man einen Text in Spalte darstellen muss dieser mit einer der folgenden DIV Tag Klasse umschlossen werden.</p>
+<ul>
+<li><code>.spn2</code> für eine zweier Spalte</li>
+<li><code>.spn3</code> für eine dreier Spalte</li>
+<li><code>.spn4</code> für eine vierer Spalte</li>
+</ul>
+<p>Natürlich gibt es auch eine gVim Unterstützung als Menü Eintrag und Kurztasten.</p>
+<ul>
+<li><code>,rc2</code></li>
+<li><code>,rc3</code></li>
+<li><code>,rc4</code></li>
+</ul>
+<h3 id="verwendung"><a href="#verwendung">Verwendung</a></h3>
+<p>Um einen entsprechenden Text in eine Spalte zu legen markiert man den Text (Zeilenweise <code>V</code>) und beendet diese Markierung mit der Tasten Kombination <code>,rc2</code> für eine zweispaltige Darstellung.</p>
+<p><strong>Beispiel</strong></p>
+<pre><code>&lt;ESC&gt;
+V
+JJ....
+,rc2</code></pre>
+</div><!-- ENDE .spn Darstellung -->
+
+
+
 <!-- vim: set ft=pandoc: -->
 
 
+
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Auch Fußzeilen kann innerhalb der Spalten Darstellung verwenden.<a href="#fnref1">↩</a></p></li>
+</ol>
+</section>
 </div>
 <div id="fuss">
 	<p class="copyleft">

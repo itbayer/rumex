@@ -82,7 +82,9 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><a href="#installation-von-rumex-auf-dem-lokalen-arbeitsplatz">Installation von Rumex auf dem lokalen Arbeitsplatz</a></li>
 <li><a href="#rumex-auf-dich-einstellen">Rumex auf dich einstellen</a></li>
 <li><a href="#moot.it">moot.it</a></li>
-<li><a href="#gvim-unterstützung-einrichten">gvim Unterstützung einrichten</a></li>
+<li><a href="#gvim-unterstützung-einrichten">gvim Unterstützung einrichten</a><ul>
+<li><a href="#tipps-zur-benutzung-gvim">Tipps zur Benutzung gvim</a></li>
+</ul></li>
 <li><a href="#seite-auf-einem-github.com-server-einrichten">Seite auf einem github.com Server einrichten</a></li>
 <li><a href="#seite-auf-einem-nicht-github.com-server-einrichten">Seite auf einem nicht github.com Server einrichten</a><ul>
 <li><a href="#datei-upload-per-git">Datei upload per git</a></li>
@@ -175,7 +177,7 @@ make show</code></pre>
 <li>Kopf / Fusszeile</li>
 <li>Logo</li>
 </ul>
-<p>Eine Kurzbeschreibung findest du, nach der Installation, auf der Startseite von Rumex oder [hier][istart.html].</p>
+<p>Eine Kurzbeschreibung findest du, nach der Installation, auf der Startseite von Rumex oder <a href="istart.html">hier</a>.</p>
 <h2 id="moot.it"><a href="#moot.it">moot.it</a></h2>
 <p>@todo: Hier fehlt noch die Beschreibung</p>
 <ul>
@@ -188,6 +190,40 @@ make show</code></pre>
 <li>Erstellen der Startdatei</li>
 <li>Einrichten</li>
 </ul>
+<h3 id="tipps-zur-benutzung-gvim"><a href="#tipps-zur-benutzung-gvim">Tipps zur Benutzung gvim</a></h3>
+<h4 id="dateiname-ergänzen"><a href="#dateiname-ergänzen">Dateiname ergänzen</a></h4>
+<p>Will man in die Datei einen Dateinamen einbauen, weiß aber nicht mehr genau wie er heißt, kann man folgenden Trick verwenden. In diesem Beispiel wird ein Bildname gesucht. Im Text schreibe man <code>../bilder/tw</code> und drückt dann die Tastenkombination <code>C-X + C-F</code>, gvim öffnet ein Dialogfeld in dem alle Dateien die auf dieses Muster übereinstimmen geöffnet. Gibt es nur einen Treffer wird dieser gleich eingefügt.</p>
+<h4 id="wort-innerhalb-des-dokumentes-suchen"><a href="#wort-innerhalb-des-dokumentes-suchen">Wort innerhalb des Dokumentes suchen</a></h4>
+<p>Sucht man ein Wort das man im Dokument schon einmal verwendet hat, um zum Beispiel darauf zu verweisen. Schreibt man den Wortanfang und drückt dann <code>C-P</code>. Es öffnet sich ein Dialogfeld in dem alle Wörter die auf dieses Muster passen angezeigt werden. Gibt es nur einen Treffer wird dieser gleich eingefügt.</p>
+<h4 id="nützliche-erweiterungen"><a href="#nützliche-erweiterungen">Nützliche Erweiterungen</a></h4>
+<p>Vim bietet ein paar nützliche Erweiterungen in Form von plugins an. Hier eine Liste, der plugins, die ich gerne verwende.</p>
+<dl>
+<dt>pathogen.vim</dt>
+<dd><p>Diese Erweiterung macht das Installieren weitere Erweiterungen einfach. Dabei ist die Installation von <code>pathogen</code> schnell erledigt.</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> -p ~/.vim/autoload ~/.vim/bundle 
+<span class="kw">wget</span> -O ~/.vim/autoload/pathogen.vim //
+<span class="kw">http</span>://www.vim.org/scripts/download_script.php?src_id=16224</code></pre>
+<p>In die <code>.vimrc</code> muss dann noch nachfolgende Zeile eingebaut werden.</p>
+<pre><code>call pathogen#infect()</code></pre>
+<p>eingebaut werden.</p>
+<p>Jetzt braucht man die Erweiterungen nur mehr in das Verzeichnis <code>.vim/bundle</code> zu kopieren und vim neu starten. In Verbindung mit <code>git</code> wieder eine einfache Sache.</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cd</span> ~/.vim/bundle
+<span class="kw">git</span> clone https://github.com/vim-pandoc/vim-pandoc.git</code></pre>
+</dd>
+<dt>vim-pandoc</dt>
+<dd><p>Erweiterung rund um pandoc.</p>
+</dd>
+<dt>FuzzyFinder</dt>
+<dd><p>Dateien schnell zum editieren öffnen. Installiert ist diese Erweiterung, vorausgesetzt man verwendet pathogen, mit dem Befehl:</p>
+<pre><code>wget -O /tmp/vim-fuzzyfinder.zip http://www.vim.org/scripts/download_script.php?src_id=10588
+mkdir ~/.vim/bundle/vim-fuzzyfinder
+unzip /tmp/vim-fuzzyfinder.zip -d ~/.vim/bundle/vim-fuzzyfinder/</code></pre>
+<p>Für das öffnen dies Datei Dialogs sollte man sich dann noch eine Kurztaste konfigurieren.</p>
+<pre><code>&quot; -------------------------------------------------------------
+&quot; FuzzyFinder File Suche auf &lt;F12&gt; binden
+map &lt;F12&gt; :FuzzyFinderFile &lt;CR&gt;</code></pre>
+</dd>
+</dl>
 <h2 id="seite-auf-einem-github.com-server-einrichten"><a href="#seite-auf-einem-github.com-server-einrichten">Seite auf einem github.com Server einrichten</a></h2>
 <p>@todo</p>
 <ul>
