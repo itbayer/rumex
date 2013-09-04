@@ -629,8 +629,12 @@ Somit kann auf mehreren Rumex Installationen parallel
 Man sollte nur jede `tilda` Sitzung ein wenig
 anders konfigurieren.
 
-
-
+**Nachteil:** Ein Nachteil von `tilda` darf man aber nicht verschweigen.
+Bei wechseln zwischen den Fenstern kann man die Tastenkombination 
+`<ALT>+<TAB>` nicht verwenden bzw. man kommt mit dieser Kombination
+nicht mehr zurück nach `tilda`.
+Schließt und öffnet man `tilda` mit der definierten Taste bekommt man
+aber den Fokus wieder in das Fenster.
 
 
 
