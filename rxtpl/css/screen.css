@@ -22,6 +22,15 @@ body{
 	margin-left: 4px;
 }
 
+/* Link für das Bild / Banner - link Seite */
+#kopf a {
+	width: 80px;
+	height: 700px;
+	display: block;
+	/* Link Text nicht anzeigen */
+	opacity: 0;
+	font-size: 0px;
+}
 
 /* Seiten Ausrichtung und Breite, Textbereich */
 

@@ -51,13 +51,17 @@ if ((i)); then
     cp -a ../.rumex/tmp/rumex-gh-pages/rxtpl ../.
 	
 	echo ""
-	echo "....jetzt noch aufräumen und"
+	echo "....jetzt noch aufräumen..."
+	# Update Daten
 	rm -f ../.rumex/tmp/rumex.tar.gz
 	rm -fr ../.rumex/tmp/rumex-gh-pages
 
+	# Datei blind.png loeschen -- Update bis 0.8.0
+	[ -e ../rxtpl/img/blind.png ] && rm -f ../rxtpl/img/blind.png
+
 	echo ""
 	echo ""
-	echo "viel Spass mit der neuen Version Rumex Version $GVERSION."
+	echo "Viel Spass mit der neuen Version Rumex Version $GVERSION."
 	echo ""
 	echo ""
 
