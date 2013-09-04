@@ -108,6 +108,14 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </ul></li>
 <li><a href="#make-steuerung">make Steuerung</a></li>
 <li><a href="#update">Update</a></li>
+<li><a href="#homepage-änderung-schnell-und-immer-aktuell">Homepage Änderung, schnell und immer aktuell</a><ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#shell-scripte">Shell Scripte</a><ul>
+<li><a href="#rxt-rumex">rxt-rumex</a></li>
+<li><a href="#rumex.tilda">rumex.tilda</a></li>
+</ul></li>
+<li><a href="#tilda">Tilda</a></li>
+</ul></li>
 <li><a href="#kommentar">Kommentar</a></li>
 </ul>
 </nav>
@@ -516,6 +524,29 @@ Ab hier geht dann der Inhlat der eigentlichen Seite los.</code></pre>
 </dl>
 <h1 id="update"><a href="#update">Update</a></h1>
 <p>@todo</p>
+<h1 id="homepage-änderung-schnell-und-immer-aktuell"><a href="#homepage-änderung-schnell-und-immer-aktuell">Homepage Änderung, schnell und immer aktuell</a></h1>
+<p>Wer wünscht es sich nicht einen schnellen Zugriff auf seine Homepage. Sei es um schnell was zu ändern oder genauso schnell was neues einzustellen.</p>
+<p>Rumex bietet in Verbindung mit <code>tilda</code> eine schöne, einfache und auch schnelle Lösung. Benötigt werden dazu die Programme</p>
+<ul>
+<li>tilda</li>
+<li>vim</li>
+<li>und zwei Shell Scripte</li>
+</ul>
+<h2 id="installation"><a href="#installation">Installation</a></h2>
+<pre><code>sudo apt-get install tilda vim</code></pre>
+<h2 id="shell-scripte"><a href="#shell-scripte">Shell Scripte</a></h2>
+<p>Die Skripte starten zum einen <code>tilda</code> und zum anderen übergeben sie <code>tilda</code> die Kommandos die dafür sorgen dass <code>vim</code> den richtigen Rumex Ordner öffnet. Installiert werden sollten diese Skripte im <code>~/bin</code> oder <code>/usr/local/bin/</code> Verzeichnis.</p>
+<h3 id="rxt-rumex"><a href="#rxt-rumex">rxt-rumex</a></h3>
+<pre><code>#!/bin/bash
+
+tilda -c  rumex.tilda</code></pre>
+<h3 id="rumex.tilda"><a href="#rumex.tilda">rumex.tilda</a></h3>
+<pre><code>#!/bin/bash
+cd /home/USER/github/rumex/.rx/
+vim</code></pre>
+<h2 id="tilda"><a href="#tilda">Tilda</a></h2>
+<p>Nach dem ersten Start wird Tilda in linken oberen Bildschirm Bereich eingeblendet. Man sollte Tilda nun noch an seine Bedürfnissen anpassen. Dazu in das Tilda Fenster mit der rechten Maustaste klicken und <code>Eigenschaften</code> aus wählen.</p>
+<p><strong>Übrigens:</strong> Man kann <code>tilda</code> mehrfach starten. Somit kann auf mehreren Rumex Installationen parallel über diese Weiße zugegriffen werden. Man sollte nur jede <code>tilda</code> Sitzung ein wenig anders konfigurieren.</p>
 <h1 id="kommentar"><a href="#kommentar">Kommentar</a></h1>
 <p><a class="moot" href="https://moot.it/i/rumex/blog/beschreibung"></a></p>
 <!-- vim: set ft=pandoc: -->

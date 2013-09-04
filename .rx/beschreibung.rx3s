@@ -572,6 +572,70 @@ make bilder
 
 @todo
 
+# Homepage Änderung, schnell und immer aktuell
+
+Wer wünscht es sich nicht einen schnellen Zugriff auf seine Homepage.
+Sei es um schnell was zu ändern oder genauso 
+schnell was neues einzustellen.
+
+Rumex bietet in Verbindung mit `tilda` eine schöne, 
+einfache und auch schnelle Lösung. 
+Benötigt werden dazu die Programme
+
+- tilda
+- vim
+- und zwei Shell Scripte
+
+## Installation
+
+	sudo apt-get install tilda vim
+
+## Shell Scripte
+
+Die Skripte starten zum einen `tilda` und zum anderen 
+übergeben sie `tilda` die Kommandos die dafür sorgen
+dass `vim` den richtigen Rumex Ordner öffnet.
+Installiert werden sollten diese Skripte im `~/bin` oder
+`/usr/local/bin/` Verzeichnis.
+
+
+### rxt-rumex
+
+~~~
+#!/bin/bash
+
+tilda -c  rumex.tilda
+~~~
+
+### rumex.tilda
+
+~~~
+#!/bin/bash
+cd /home/USER/github/rumex/.rx/
+vim
+~~~
+
+## Tilda
+
+Nach dem ersten Start wird Tilda in linken oberen Bildschirm
+Bereich eingeblendet.
+Man sollte Tilda nun noch an seine Bedürfnissen anpassen.
+Dazu in das Tilda Fenster mit der rechten Maustaste klicken
+und `Eigenschaften` aus wählen.
+
+**Übrigens:** Man kann `tilda` mehrfach starten.
+Somit kann auf mehreren Rumex Installationen parallel
+über diese Weiße zugegriffen werden.
+Man sollte nur jede `tilda` Sitzung ein wenig
+anders konfigurieren.
+
+
+
+
+
+
+
+
 # Kommentar
 
 
