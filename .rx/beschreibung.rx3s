@@ -592,7 +592,7 @@ Benötigt werden dazu die Programme
 
 ## Shell Scripte
 
-Die Skripte starten zum einen `tilda` und zum anderen 
+Die Skripte starten zum einem `tilda` und zum anderem 
 übergeben sie `tilda` die Kommandos die dafür sorgen
 dass `vim` den richtigen Rumex Ordner öffnet.
 Installiert werden sollten diese Skripte im `~/bin` oder
