@@ -14,6 +14,23 @@ Aber auch Fehler **Bugs** die noch nicht behoben sind notiere ich mir hier.
 
 <!-- schnipp -->
 
+tilda
+:	Durch die tilda Erweiterung müssen zwei unterschiedliche vim Konfigurationen
+	erstellt werden. 
+
+	1. Standard vim Konfiguration die für vim und gvim verwendet wird.
+	2. gvim Konfiguration die für die Menü Darstellung zuständig ist. \
+	die Standard Datei wird automatisch nachgeladen.
+
+	tilda Beschreibung überarbeiten, Startdateien anpassen und evtl.
+	als Kopiervorlage in .rumex/bin/ ablegen.
+
+
+
+Kurztasten / Menü
+:	In der Menü Erweiterung sollte eigentlich nur die Kurztasten abgebildet werden.
+	Leider sind nicht alle Menübefehle als Kurztaste umgesetztm
+
 
 .htaccess
 :	Bei `make install` sollte auch die .htaccess Dateinen kopiert werden.

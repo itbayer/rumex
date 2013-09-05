@@ -612,6 +612,7 @@ tilda -c  rumex.tilda
 ~~~
 #!/bin/bash
 cd /home/USER/github/rumex/.rx/
+git pull
 vim
 ~~~
 
