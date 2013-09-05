@@ -125,9 +125,9 @@ vmap <Leader>spn4 xi<div class="spn4"><cr></div><!-- ENDE .spn4 Darstellung --><
 
 
 " -----------------------------------------------------------
-" Kurztasten make
+" Kurztasten make 
 
-map <Leader>rma :make all<CR>
+map <Leader>rma :wall<CR>:make all<CR>
 map <Leader>rmb :make bilder<CR>
 map <Leader>rmca :make clean<CR>
 map <Leader>rmcb :make bclean<CR>
@@ -136,7 +136,7 @@ map <Leader>rmcx :make xclean<CR>
 map <Leader>rmh :make html<CR>
 map <Leader>rmi :make index<CR>
 map <Leader>rmm :make sitemap<CR>
-map <Leader>rmo :wall<CR> :make online<CR>
+map <Leader>rmo :wall<CR>:make online<CR>
 map <Leader>rmr :make rss<CR>
 map <Leader>rms :make suche<CR>
 
