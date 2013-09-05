@@ -538,12 +538,32 @@ Ab hier geht dann der Inhlat der eigentlichen Seite los.</code></pre>
 <h3 id="rxt-rumex"><a href="#rxt-rumex">rxt-rumex</a></h3>
 <pre><code>#!/bin/bash
 
-tilda -c  rumex.tilda</code></pre>
+/usr/bin/tilda -c  ~/bin/rumex.tilda</code></pre>
 <h3 id="rumex.tilda"><a href="#rumex.tilda">rumex.tilda</a></h3>
 <pre><code>#!/bin/bash
-cd /home/USER/github/rumex/.rx/
+
+
+# Pfad 
+PFAD=~/sbgit/github/rumex
+
+# moot.it Konto Name
+MOOTIT=&quot;rumex&quot;
+
+# VIM
+VIM=/usr/bin/vim
+
+# Verzeichnis wechseln
+cd $PFAD/.rx
+
+# Repository neu landen / aktualisieren
+# Diesen Schritt muss man eigentlich nicht machen
+# da ich aber an verschiedenen Rechnern Rumex bearbeite
+# und es mir schon oft passiert ist diese Befehl zu vergessen
+# wurde dieser hier eingebaut.
 git pull
-vim</code></pre>
+
+# VIM mit rumex Erweiterung laden
+$VIM -S ../.rumex/bin/rumex.vim -c &quot;:let mootit_konto=&#39;$MOOTIT&#39;&quot;</code></pre>
 <h2 id="tilda"><a href="#tilda">Tilda</a></h2>
 <p>Nach dem ersten Start wird Tilda in linken oberen Bildschirm Bereich eingeblendet. Man sollte Tilda nun noch an seine Bedürfnissen anpassen. Dazu in das Tilda Fenster mit der rechten Maustaste klicken und <code>Eigenschaften</code> aus wählen.</p>
 <p><strong>Übrigens:</strong> Man kann <code>tilda</code> mehrfach starten. Somit kann auf mehreren Rumex Installationen parallel über diese Weiße zugegriffen werden. Man sollte nur jede <code>tilda</code> Sitzung ein wenig anders konfigurieren.</p>

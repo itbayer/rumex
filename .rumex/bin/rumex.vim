@@ -10,6 +10,8 @@
 "autocmd! bufwritepost ~/Arbeitsfläche/test.vim source %
 
 
+
+
 " -------------------------------------------------------------
 "  Taste für eine Befehlserweiterung
 "  siehe Tabs 
@@ -19,6 +21,9 @@ let mapleader=","
 " Vim Konfiguration am Ende der Datei verwenden
 set modeline
 
+
+
+
 " -------------------------------------------------------------
 " Suche erweitern / umschreiben
 set incsearch " inkrementelle Suche aktivieren. Bei der Suche werden die
@@ -26,17 +31,25 @@ set incsearch " inkrementelle Suche aktivieren. Bei der Suche werden die
 set ic " Groß-/Kleinschreibung bei der Suche ignorieren
 set hlsearch " Suche Farblich hervorheben
 
+
+
+
 "---------------------------------------------------------
 " Rechtschreibung einschalten (Deutsch)
-set spell
 set spelllang=de
+set spell
 " Darstellung falscher Wörter für die Konsole (tilda) anpassen.
 hi SpellBad term=reverse cterm=underline ctermbg=7 ctermfg=1 gui=undercurl guisp=Red
+
+
 
 
 " -----------------------------------------------------------
 " Abkürzungen
 abb rumexis Rumex mit is
+
+
+
 
 " -----------------------------------------------------------
 " Kurztasten für die Seitenerstellung
@@ -54,12 +67,28 @@ map <Leader>rwl i% Weiterleitung nach ....html<CR>%<CR>%<CR><CR><CR><script lang
 map <Leader>rmk i## Kommentare<cr><cr><a class="moot" href="https://moot.it/i/<C-R>=mootit_konto<cr>/blog/<C-R>=expand("%:r")<cr>"></a>
 
 
+
+
 " ----------------------------------------------------------
 "  Kurztasten allgemein
 
 " Speichern und html erstellen STRG+S
 map <C-S> :w\|make html<CR><CR>
 imap <C-S> <ESC>:w\|make html<CR><CR>
+
+" Rumex Verzeichnis .rx anzeigen
+map <Leader>rku :tabnew<CR>:e ../.rx/.<CR>
+
+
+
+
+" -----------------------------------------------------------
+"  Kurztasten git
+
+map <Leader>rgp :!git pull<CR>
+map <Leader>rgs :!git status<CR>
+
+
 
 
 " -----------------------------------------------------------
@@ -91,5 +120,49 @@ vmap <Leader>spn3 xi<div class="spn3"><cr></div><!-- ENDE .spn3 Darstellung --><
 
 " CSS Text mit 4er Spalte umschliessen
 vmap <Leader>spn4 xi<div class="spn4"><cr></div><!-- ENDE .spn4 Darstellung --><esc>P
+
+
+
+
+" -----------------------------------------------------------
+" Kurztasten make
+
+map <Leader>rma :make all<CR>
+map <Leader>rmb :make bilder<CR>
+map <Leader>rmca :make clean<CR>
+map <Leader>rmcb :make bclean<CR>
+map <Leader>rmch :make hclean<CR>
+map <Leader>rmcx :make xclean<CR>
+map <Leader>rmh :make html<CR>
+map <Leader>rmi :make index<CR>
+map <Leader>rmm :make sitemap<CR>
+map <Leader>rmo :wall<CR> :make online<CR>
+map <Leader>rmr :make rss<CR>
+map <Leader>rms :make suche<CR>
+
+
+
+
+" -----------------------------------------------------------
+" Kurztasten show
+
+map <Leader>rsf :make show&<CR><CR>
+map <Leader>rsw :make showwww&<CR><CR>
+map <Leader>rsl :make showlocal&<CR><CR>
+
+
+
+
+" -----------------------------------------------------------
+" Kurztasten öffnen
+
+map <Leader>ros :tabnew<CR>:e start.rx0s<CR><CR>
+map <Leader>ror :tabnew<CR>:e rss.rx0x<CR><CR>
+
+
+
+
+
+
 
 " vim:ft=vim: 
