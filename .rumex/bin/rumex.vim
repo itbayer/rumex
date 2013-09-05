@@ -180,7 +180,7 @@ map <Leader>rmcx :make xclean<CR>
 map <Leader>rmh :make html<CR>
 map <Leader>rmi :make index<CR>
 map <Leader>rmm :make sitemap<CR>
-map <Leader>rmo :wall<CR>:make online<CR>
+map <Leader>rmo :wall<CR>:make online<CR><CR>
 map <Leader>rmr :make rss<CR>
 map <Leader>rms :make suche<CR>
 
