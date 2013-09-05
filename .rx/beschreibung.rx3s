@@ -607,7 +607,7 @@ Installiert werden sollten diese Skripte im `~/bin` oder
 ### rxt-rumex
 
 Die Datei `rxt-rumex` starte tilda und übergibt der tilda Shell
-die Befehle um den Rumex Baukasten zu starten, siehe [][#rumex.tilda].
+die Befehle um den Rumex Baukasten zu starten, siehe [rumex][#rumex.tilda].
 Dieser Befehl ist der eigentliche tilda Startbefehl.
 
 Noch ein Wort zum Dateinamen \

@@ -12,6 +12,43 @@
 
 
 
+" =============================================================
+" Einstellungen die eigentlich in der.vimrc stehen.
+" Darum sind diese auch hier kommentiert.
+" =============================================================
+
+" -------------------------------------------------------------
+" pathogen starten
+" pathogen ist ein Programm das Plugins automatisch einbindet.
+" Dazu werden die Plugins in einem extra Verzeichnis "bundle"
+" gespeichert.
+" Das Schöne daran, die Plugins können direkt vom githup per clone
+" in das Verzeichnis gelegt werden.
+"  call pathogen#infect()
+
+" -------------------------------------------------------------
+"  Syntax Farbig machen
+"  syntax on
+
+" -------------------------------------------------------------
+" Zeilennummern anzeigen
+" set nu
+
+" -------------------------------------------------------------
+" öffnende und schließende Klammern hervorheben
+" set showmatch
+
+" -------------------------------------------------------------
+" Vim Modus statt Vi Modus verwenden
+" set nocompatible
+
+" ==============================================================
+" ENDE .vimrc Vorlage
+" ==============================================================
+
+
+
+
 " -------------------------------------------------------------
 "  Taste für eine Befehlserweiterung
 "  siehe Tabs 
@@ -73,8 +110,15 @@ map <Leader>rmk i## Kommentare<cr><cr><a class="moot" href="https://moot.it/i/<C
 "  Kurztasten allgemein
 
 " Speichern und html erstellen STRG+S
-map <C-S> :w\|make html<CR><CR>
-imap <C-S> <ESC>:w\|make html<CR><CR>
+" gvim Zuordnung, funktioniert unter vim (Konsole) nicht, warum siehe unten.
+map <C-S> :w<CR>:make html<CR><CR><CR>
+imap <C-S> <ESC>:w<CR>:make html<CR><CR><CR>
+" F11 macht das selbe weil C-S unter vim nicht funktioniert da diese
+" Tastenkombination dem Terminal zugeordnet ist.
+" Infolink: http://vim.wikia.com/wiki/Map_Ctrl-S_to_save_current_or_new_files
+map <F11> :w<CR>:make html<CR><CR><CR>
+imap <F11> <ESC>:w<CR>:make html<CR><CR><CR>
+
 
 " Rumex Verzeichnis .rx anzeigen
 map <Leader>rku :tabnew<CR>:e ../.rx/.<CR>
