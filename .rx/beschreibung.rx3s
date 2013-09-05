@@ -148,6 +148,97 @@ oder [hier](istart.html).
 
 @fixme: Beschreibung fehlt noch:
 
+,rnd
+:	Neue Datei
+
+,rnn
+:	Neuer News Eintrag
+
+,rwl
+:	Neue Weiterleitungsseite
+
+,rmk
+:	Moot.it Kommentar Abschnitt
+
+,rku
+:	rumex Verzeichnis `.rx` anzeigen
+
+,rgp
+:	Git pull
+
+,rgs
+:	Git status
+
+,rff
+:	Markierte Textstelle fett darstellen
+
+,rfk
+:	Markierte Textstelle kursiv darstellen
+
+,rfl
+:	Markierte Zeilen in eine Liste wandeln
+
+,rfn
+:	Markierte Zeile in eine Nummernliste wandeln
+
+,rfb
+:	Markierte Zeile in einen Block wandeln
+
+,rfc
+:	Markierte Zeile als Code darstellen
+
+,spn2
+:	Text mit 2er Spalten Formatierung umschließen 
+
+,spn3
+:	Text mit 3er Spalten Formatierung umschließen 
+
+,spn4
+:	Text mit 4er Spalten Formatierung umschließen 
+
+
+<!--
+
+" -----------------------------------------------------------
+" Kurztasten make 
+
+map <Leader>rma :wall<CR>:make all<CR>
+map <Leader>rmb :make bilder<CR>
+map <Leader>rmca :make clean<CR>
+map <Leader>rmcb :make bclean<CR>
+map <Leader>rmch :make hclean<CR>
+map <Leader>rmcx :make xclean<CR>
+map <Leader>rmh :make html<CR>
+map <Leader>rmi :make index<CR>
+map <Leader>rmm :make sitemap<CR>
+map <Leader>rmo :wall<CR>:make online<CR>
+map <Leader>rmr :make rss<CR>
+map <Leader>rms :make suche<CR>
+ 
+
+
+
+" -----------------------------------------------------------
+" Kurztasten show
+
+map <Leader>rsf :make show&<CR><CR>
+map <Leader>rsw :make showwww&<CR><CR>
+map <Leader>rsl :make showlocal&<CR><CR>
+
+
+
+
+" -----------------------------------------------------------
+" Kurztasten öffnen
+
+map <Leader>ros :tabnew<CR>:e start.rx0s<CR><CR>
+map <Leader>ror :tabnew<CR>:e rss.rx0x<CR><CR>
+
+
+-->
+
+
+
 #### Dateiname ergänzen
 Will man in die Datei einen Dateinamen einbauen,
 weiß aber nicht mehr genau wie er heißt, 

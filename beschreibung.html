@@ -200,6 +200,98 @@ make show</code></pre>
 <h3 id="tipps-zur-benutzung-gvim"><a href="#tipps-zur-benutzung-gvim">Tipps zur Benutzung gvim</a></h3>
 <h3 id="vim-kurztasten"><a href="#vim-kurztasten">vim Kurztasten</a></h3>
 <p>@fixme: Beschreibung fehlt noch:</p>
+<dl>
+<dt>,rnd</dt>
+<dd><p>Neue Datei</p>
+</dd>
+<dt>,rnn</dt>
+<dd><p>Neuer News Eintrag</p>
+</dd>
+<dt>,rwl</dt>
+<dd><p>Neue Weiterleitungsseite</p>
+</dd>
+<dt>,rmk</dt>
+<dd><p>Moot.it Kommentar Abschnitt</p>
+</dd>
+<dt>,rku</dt>
+<dd><p>rumex Verzeichnis <code>.rx</code> anzeigen</p>
+</dd>
+<dt>,rgp</dt>
+<dd><p>Git pull</p>
+</dd>
+<dt>,rgs</dt>
+<dd><p>Git status</p>
+</dd>
+<dt>,rff</dt>
+<dd><p>Markierte Textstelle fett darstellen</p>
+</dd>
+<dt>,rfk</dt>
+<dd><p>Markierte Textstelle kursiv darstellen</p>
+</dd>
+<dt>,rfl</dt>
+<dd><p>Markierte Zeilen in eine Liste wandeln</p>
+</dd>
+<dt>,rfn</dt>
+<dd><p>Markierte Zeile in eine Nummernliste wandeln</p>
+</dd>
+<dt>,rfb</dt>
+<dd><p>Markierte Zeile in einen Block wandeln</p>
+</dd>
+<dt>,rfc</dt>
+<dd><p>Markierte Zeile als Code darstellen</p>
+</dd>
+<dt>,spn2</dt>
+<dd><p>Text mit 2er Spalten Formatierung umschließen</p>
+</dd>
+<dt>,spn3</dt>
+<dd><p>Text mit 3er Spalten Formatierung umschließen</p>
+</dd>
+<dt>,spn4</dt>
+<dd><p>Text mit 4er Spalten Formatierung umschließen</p>
+</dd>
+</dl>
+<!--
+
+" -----------------------------------------------------------
+" Kurztasten make 
+
+map <Leader>rma :wall<CR>:make all<CR>
+map <Leader>rmb :make bilder<CR>
+map <Leader>rmca :make clean<CR>
+map <Leader>rmcb :make bclean<CR>
+map <Leader>rmch :make hclean<CR>
+map <Leader>rmcx :make xclean<CR>
+map <Leader>rmh :make html<CR>
+map <Leader>rmi :make index<CR>
+map <Leader>rmm :make sitemap<CR>
+map <Leader>rmo :wall<CR>:make online<CR>
+map <Leader>rmr :make rss<CR>
+map <Leader>rms :make suche<CR>
+ 
+
+
+
+" -----------------------------------------------------------
+" Kurztasten show
+
+map <Leader>rsf :make show&<CR><CR>
+map <Leader>rsw :make showwww&<CR><CR>
+map <Leader>rsl :make showlocal&<CR><CR>
+
+
+
+
+" -----------------------------------------------------------
+" Kurztasten öffnen
+
+map <Leader>ros :tabnew<CR>:e start.rx0s<CR><CR>
+map <Leader>ror :tabnew<CR>:e rss.rx0x<CR><CR>
+
+
+-->
+
+
+
 <h4 id="dateiname-ergänzen"><a href="#dateiname-ergänzen">Dateiname ergänzen</a></h4>
 <p>Will man in die Datei einen Dateinamen einbauen, weiß aber nicht mehr genau wie er heißt, kann man folgenden Trick verwenden. In diesem Beispiel wird ein Bildname gesucht. Im Text schreibe man <code>../bilder/tw</code> und drückt dann die Tastenkombination <code>C-X + C-F</code>, gvim öffnet ein Dialogfeld in dem alle Dateien die auf dieses Muster übereinstimmen geöffnet. Gibt es nur einen Treffer wird dieser gleich eingefügt.</p>
 <h4 id="wort-innerhalb-des-dokumentes-suchen"><a href="#wort-innerhalb-des-dokumentes-suchen">Wort innerhalb des Dokumentes suchen</a></h4>
