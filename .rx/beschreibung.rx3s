@@ -137,12 +137,16 @@ oder [hier](istart.html).
 
 ## gvim Unterstützung einrichten
 
-@todo: Hier fehlt noch die Beschreibung
+@todo: Hier fehlt noch die Beschreibung@
 
 - Erstellen der Startdatei
 - Einrichten
 
 ### Tipps zur Benutzung gvim
+
+### vim Kurztasten
+
+@fixme: Beschreibung fehlt noch:
 
 #### Dateiname ergänzen
 Will man in die Datei einen Dateinamen einbauen,
@@ -217,6 +221,7 @@ FuzzyFinder
 	map <F12> :FuzzyFinderFile <CR>
 	~~~
 
+
 ## Seite auf einem github.com Server einrichten
 
 @todo
@@ -226,7 +231,7 @@ FuzzyFinder
 - Die Rumex ZIP Datei
 - Die Dateien des ZIP Archives in das Arbeits- Repository kopieren
 - Grund Dateien anpassen 
-	- @fixme: Angabe welche Dateien fehlt noch
+	- @fixme: Angabe welche Dateien fehlt noch@
 - Erste Änderungen vornehme
 - `make online` - Fertig.
 
@@ -278,18 +283,18 @@ favicon.ico
 :	Konfiguration für den Apache Server
 
 CNAME
-:	@fixme
+:	@fixme: Beschreibung@
 	
 
 ## Unterverzeichnisse
 
 
 .rumex/
-:	@fixme
+:	@fixme: Beschreibung@
 	
 
 .rx/
-:	@fixme
+:	@fixme: Beschreibung@
 
 
 rxtpl/
@@ -574,37 +579,35 @@ make bilder
 
 # Homepage Änderung, schnell und immer aktuell
 
-Wer wünscht es sich nicht einen schnellen Zugriff auf seine Homepage.
-Sei es um schnell was zu ändern oder genauso 
-schnell was neues einzustellen.
+Wer wünscht es sich nicht einen schnellen Zugriff auf seine Homepage. 
+Sei es um schnell was zu ändern oder genauso schnell was neues einzustellen.
+Rumex bietet in Verbindung mit `tilda` eine schöne, einfache und auch schnelle Lösung. 
 
-Rumex bietet in Verbindung mit `tilda` eine schöne, 
-einfache und auch schnelle Lösung. 
-Benötigt werden dazu die Programme
-
-- tilda
-- vim
-- und zwei Shell Scripte
+![Rumex im  tilda Fenster. Mit einem Tastendruck öffnet sch das tilda Fenster und man kann die Texte eintippen. Ein erneuter Tastendruck schließt das tilda Fenster wieder und der Bildschirm ist wieder frei. Hat man seine Änderung abgeschossen kann man mit den Rumex [vim Kurztasten](#vim-kurztasten) die Änderung schnell online stellen.](bilder/rumex-tilda_800_.png "Rumex im tilda Fenster")
 
 
 
-## Installation
+## Installation der tilda Unterstützung
+
+Die Installation ist nicht umfangreich.
+Man braucht vim und tilda und dann noch zwei bash Script.
+Eine Kopiervorlage der beiden Scripte findet man findet man im `.rumex/bin/` Verzeichnis.
 
 	sudo apt-get install tilda vim
+	cp .../rumex/.rumex/bin/rxt-rumex.sh ~/bin/.
+	cp .../rumex/.rumex/bin/rumex-tilda.sh ~/bin/.
+
+Diese beiden bash Scripte müssen anschließend noch angepasst werden.
+
+### Shell Scripte
+
+Die Scripte starten zum einem `tilda` und zum anderem übergeben sie `tilda` die Kommandos 
+die dafür sorgen dass `vim` den richtigen Rumex Ordner öffnet.
+Installiert werden können diese Scripte im `~/bin` oder `/usr/local/bin/` Verzeichnis.
 
 
 
-## Shell Scripte
-
-Die Skripte starten zum einem `tilda` und zum anderem 
-übergeben sie `tilda` die Kommandos die dafür sorgen
-dass `vim` den richtigen Rumex Ordner öffnet.
-Installiert werden sollten diese Skripte im `~/bin` oder
-`/usr/local/bin/` Verzeichnis.
-
-
-
-### rxt-rumex.sh
+#### rxt-rumex.sh
 
 Die Datei `rxt-rumex.sh` starte tilda und übergibt der tilda Shell
 die Befehle um den Rumex Baukasten zu starten, siehe [rumex.tilda.sh](#rumex.tilda.sh).
@@ -623,7 +626,7 @@ Beispiel: `rxt-meineSeite.sh` oder `rxt-andereSeite.sh`.
 
 
 
-### rumex.tilda.sh
+#### rumex.tilda.sh
 
 Die Datei `rumex.tida.sh` ist der eigentliche Aufruf des Rumex Baukastens
 und wird von tilda ausgeführt.
@@ -658,7 +661,7 @@ git pull
 $VIM -S ../.rumex/bin/rumex.vim -c ":let mootit_konto='$MOOTIT'"
 ~~~
 
-## Tilda
+## Tilda einrichten
 
 Nach dem ersten Start wird Tilda in linken oberen Bildschirm
 Bereich eingeblendet.
