@@ -536,33 +536,36 @@ Ab hier geht dann der Inhlat der eigentlichen Seite los.</code></pre>
 <h2 id="shell-scripte"><a href="#shell-scripte">Shell Scripte</a></h2>
 <p>Die Skripte starten zum einem <code>tilda</code> und zum anderem übergeben sie <code>tilda</code> die Kommandos die dafür sorgen dass <code>vim</code> den richtigen Rumex Ordner öffnet. Installiert werden sollten diese Skripte im <code>~/bin</code> oder <code>/usr/local/bin/</code> Verzeichnis.</p>
 <h3 id="rxt-rumex"><a href="#rxt-rumex">rxt-rumex</a></h3>
+<p>Die Datei <code>rxt-rumex</code> starte tilda und übergibt der tilda Shell die Befehle um den Rumex Baukasten zu starten, siehe [][#rumex.tilda]. Dieser Befehl ist der eigentliche tilda Startbefehl.</p>
+<p>Noch ein Wort zum Dateinamen<br /><code>rxt</code> steht für RumeXTilda und <code>-rumex</code> steht für für dem Baukasten. Somit ist es möglich mehrere tilda Sitzungen zu erstellen. <code>rxt-meineSeite</code> oder <code>rxt-andereSeite</code>.</p>
 <pre><code>#!/bin/bash
 
 /usr/bin/tilda -c  ~/bin/rumex.tilda</code></pre>
 <h3 id="rumex.tilda"><a href="#rumex.tilda">rumex.tilda</a></h3>
-<pre><code>#!/bin/bash
+<p>Die Datei <code>rumex.tida</code> ist der eigentliche Aufruf des Rumex Baukastens und wird von tilda ausgeführt. Der Name wurde wieder so gewählt dass man unterschiedliche Baukasten verwenden kann. <code>rumex</code> Baukastenname <code>.tilda</code> wird von tilda verwendet. Natürlich kann an dieses Programm auch ohne Tilda, in einer Shell, starten.</p>
+<pre><code> #!/bin/bash
 
 
-# Pfad 
+ # Pfad 
 PFAD=~/sbgit/github/rumex
 
-# moot.it Konto Name
+ # moot.it Konto Name
 MOOTIT=&quot;rumex&quot;
 
-# VIM
+ # VIM
 VIM=/usr/bin/vim
 
-# Verzeichnis wechseln
+ # Verzeichnis wechseln
 cd $PFAD/.rx
 
-# Repository neu landen / aktualisieren
-# Diesen Schritt muss man eigentlich nicht machen
-# da ich aber an verschiedenen Rechnern Rumex bearbeite
-# und es mir schon oft passiert ist diese Befehl zu vergessen
-# wurde dieser hier eingebaut.
+ # Repository neu landen / aktualisieren
+ # Diesen Schritt muss man eigentlich nicht machen
+ # da ich aber an verschiedenen Rechnern Rumex bearbeite
+ # und es mir schon oft passiert ist diese Befehl zu vergessen
+ # wurde dieser hier eingebaut.
 git pull
-
-# VIM mit rumex Erweiterung laden
+ 
+ # VIM mit rumex Erweiterung laden
 $VIM -S ../.rumex/bin/rumex.vim -c &quot;:let mootit_konto=&#39;$MOOTIT&#39;&quot;</code></pre>
 <h2 id="tilda"><a href="#tilda">Tilda</a></h2>
 <p>Nach dem ersten Start wird Tilda in linken oberen Bildschirm Bereich eingeblendet. Man sollte Tilda nun noch an seine Bedürfnissen anpassen. Dazu in das Tilda Fenster mit der rechten Maustaste klicken und <code>Eigenschaften</code> aus wählen.</p>
