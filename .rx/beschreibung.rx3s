@@ -679,6 +679,11 @@ nicht mehr zurück nach `tilda`.
 Schließt und öffnet man `tilda` mit der definierten Taste bekommt man
 aber den Fokus wieder in das Fenster.
 
+Will man die `<ALT>+<TAB>` Kombination doch verwenden muss man die Standardeinstellung 
+von tilda ändern. 
+Den erforderlichen Schalter findet man in der Konfiguration,  
+Reiter _Allgemein_ -> Schalter _Nicht in der Taskleiste anzeigen_.
+
 
 
 
