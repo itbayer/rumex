@@ -604,16 +604,16 @@ Installiert werden sollten diese Skripte im `~/bin` oder
 
 
 
-### rxt-rumex
+### rxt-rumex.sh
 
-Die Datei `rxt-rumex` starte tilda und übergibt der tilda Shell
-die Befehle um den Rumex Baukasten zu starten, siehe [rumex][#rumex.tilda].
+Die Datei `rxt-rumex.sh` starte tilda und übergibt der tilda Shell
+die Befehle um den Rumex Baukasten zu starten, siehe [rumex.tilda.sh](#rumex.tilda.sh).
 Dieser Befehl ist der eigentliche tilda Startbefehl.
 
 Noch ein Wort zum Dateinamen \
-`rxt` steht für RumeXTilda und `-rumex` steht für für dem Baukasten.
+`rxt` steht für **R**ume**XT**ilda und `-rumex` steht für für dem Baukasten.
 Somit ist es möglich mehrere tilda Sitzungen zu erstellen.
-`rxt-meineSeite` oder `rxt-andereSeite`.
+Beispiel: `rxt-meineSeite.sh` oder `rxt-andereSeite.sh`.
 
 ~~~
 #!/bin/bash
@@ -623,9 +623,9 @@ Somit ist es möglich mehrere tilda Sitzungen zu erstellen.
 
 
 
-### rumex.tilda
+### rumex.tilda.sh
 
-Die Datei `rumex.tida` ist der eigentliche Aufruf des Rumex Baukastens
+Die Datei `rumex.tida.sh` ist der eigentliche Aufruf des Rumex Baukastens
 und wird von tilda ausgeführt.
 Der Name wurde wieder so gewählt dass man unterschiedliche Baukasten
 verwenden kann. `rumex` Baukastenname `.tilda` wird von tilda verwendet.

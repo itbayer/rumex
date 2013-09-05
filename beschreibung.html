@@ -110,8 +110,8 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><a href="#homepage-änderung-schnell-und-immer-aktuell">Homepage Änderung, schnell und immer aktuell</a><ul>
 <li><a href="#installation">Installation</a></li>
 <li><a href="#shell-scripte">Shell Scripte</a><ul>
-<li><a href="#rxt-rumex">rxt-rumex</a></li>
-<li><a href="#rumex.tilda">rumex.tilda</a></li>
+<li><a href="#rxt-rumex.sh">rxt-rumex.sh</a></li>
+<li><a href="#rumex.tilda.sh">rumex.tilda.sh</a></li>
 </ul></li>
 <li><a href="#tilda">Tilda</a></li>
 </ul></li>
@@ -535,14 +535,14 @@ Ab hier geht dann der Inhlat der eigentlichen Seite los.</code></pre>
 <pre><code>sudo apt-get install tilda vim</code></pre>
 <h2 id="shell-scripte"><a href="#shell-scripte">Shell Scripte</a></h2>
 <p>Die Skripte starten zum einem <code>tilda</code> und zum anderem übergeben sie <code>tilda</code> die Kommandos die dafür sorgen dass <code>vim</code> den richtigen Rumex Ordner öffnet. Installiert werden sollten diese Skripte im <code>~/bin</code> oder <code>/usr/local/bin/</code> Verzeichnis.</p>
-<h3 id="rxt-rumex"><a href="#rxt-rumex">rxt-rumex</a></h3>
-<p>Die Datei <code>rxt-rumex</code> starte tilda und übergibt der tilda Shell die Befehle um den Rumex Baukasten zu starten, siehe [rumex][#rumex.tilda]. Dieser Befehl ist der eigentliche tilda Startbefehl.</p>
-<p>Noch ein Wort zum Dateinamen<br /><code>rxt</code> steht für RumeXTilda und <code>-rumex</code> steht für für dem Baukasten. Somit ist es möglich mehrere tilda Sitzungen zu erstellen. <code>rxt-meineSeite</code> oder <code>rxt-andereSeite</code>.</p>
+<h3 id="rxt-rumex.sh"><a href="#rxt-rumex.sh">rxt-rumex.sh</a></h3>
+<p>Die Datei <code>rxt-rumex.sh</code> starte tilda und übergibt der tilda Shell die Befehle um den Rumex Baukasten zu starten, siehe <a href="#rumex.tilda.sh">rumex.tilda.sh</a>. Dieser Befehl ist der eigentliche tilda Startbefehl.</p>
+<p>Noch ein Wort zum Dateinamen<br /><code>rxt</code> steht für <strong>R</strong>ume<strong>XT</strong>ilda und <code>-rumex</code> steht für für dem Baukasten. Somit ist es möglich mehrere tilda Sitzungen zu erstellen. Beispiel: <code>rxt-meineSeite.sh</code> oder <code>rxt-andereSeite.sh</code>.</p>
 <pre><code>#!/bin/bash
 
 /usr/bin/tilda -c  ~/bin/rumex.tilda</code></pre>
-<h3 id="rumex.tilda"><a href="#rumex.tilda">rumex.tilda</a></h3>
-<p>Die Datei <code>rumex.tida</code> ist der eigentliche Aufruf des Rumex Baukastens und wird von tilda ausgeführt. Der Name wurde wieder so gewählt dass man unterschiedliche Baukasten verwenden kann. <code>rumex</code> Baukastenname <code>.tilda</code> wird von tilda verwendet. Natürlich kann an dieses Programm auch ohne Tilda, in einer Shell, starten.</p>
+<h3 id="rumex.tilda.sh"><a href="#rumex.tilda.sh">rumex.tilda.sh</a></h3>
+<p>Die Datei <code>rumex.tida.sh</code> ist der eigentliche Aufruf des Rumex Baukastens und wird von tilda ausgeführt. Der Name wurde wieder so gewählt dass man unterschiedliche Baukasten verwenden kann. <code>rumex</code> Baukastenname <code>.tilda</code> wird von tilda verwendet. Natürlich kann an dieses Programm auch ohne Tilda, in einer Shell, starten.</p>
 <pre><code> #!/bin/bash
 
 
