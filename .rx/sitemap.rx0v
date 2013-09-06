@@ -5,10 +5,12 @@
 <div id="sitemap">
 Übersicht aller Seiten dieser Homepage
 :	* [forum](forum.html)
+:	* [gvim-menue](gvim-menue.html)
 :	* [impressum](impressum.html)
 :	* [rss](rss.html)
 :	* [suche](suche.html)
 :	* [update](update.html)
+:	* [vim-kurztasten](vim-kurztasten.html)
 :	* [beschreibung](beschreibung.html)
 :	* [historie](historie.html)
 </div>

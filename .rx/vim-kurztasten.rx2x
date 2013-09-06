@@ -1,0 +1,227 @@
+% VIM-Kurztasten
+%
+%
+
+
+<!--
+
+[VIM-Kurztasten](vim-kurztasten.html)
+=======================================================
+
+-->
+
+Alle Rumex Kurztasten, für den Editor VIM, beginnen mit einem `,r`[^ausnahmen].
+Für die Bedienung von Rumex braucht mein nur ein paar.
+Viele der Kurztasten beinhalten eine Kombination einzelner Kurztasten bzw.
+Befehle.
+
+Am Anfang ist es sicher einfacher GVIM zu verwenden,
+da hier ein Menü eingebaut ist dass unter anderem auch die Kurztasten anzeigt.
+
+Wer jedoch mit der 
+[tilda](beschreibung.html#homepage-änderung-schnell-und-immer-aktuell) 
+Unterstützung arbeitet sollte sich schon ein paar Kurztasten einprägen.
+
+
+
+[^ausnahmen]:Ausnahmen bestätigen die Regel. So wurde für die zwei spaltige Darstellung  
+`,spn2` verwendet.
+
+<!-- schnipp -->
+
+# Textbausteine
+
+Mittels dieser Kurztasten können Textbausteine eingebunden werden.
+
+## ,rnd
+
+Erstellt das eine neues Datei Gerüst.
+Dabei wird der Dateiname gleich mit eingebunden.
+
+**So schaut's aus**
+
+~~~
+% vim-kurztasten
+%
+%
+
+
+<!--
+
+[vim-kurztasten](vim-kurztasten.html)
+=======================================================
+
+Vortext INDEX
+
+-->
+
+Vortext INDEX und SEITE
+
+<!-- schnipp -->
+
+TEXT DER SEITE
+
+<!-- vim: set ft=pandoc: -->
+~~~
+
+## ,rnn
+
+Erstellt einen neuen News Eintrag.
+Diese Kurztaste macht eigentlich nur in der Datei `rss.rx0x` Sinn.
+Der Eintrag hinter Datum wird von Rumex gesetzt, ist also immer die
+aktuelle Systemzeit beim ausführen von `.rnn`.
+
+**So schaut's aus**
+
+~~~
+# Neue Nachricht{.nn1}
+
+<!--
+| Link: http://www.it-bayer.de/rumex/
+| Autor: IT-Bayer
+| Kategorie: Neues
+| Datum: Fri, 06 Sep 2013 08:08:10 +0200
+-->
+
+Ab hier geht die neue Nachricht los.
+~~~
+
+
+## ,rwl
+
+Erstellt einen neue Weiterleitungsseite.
+
+**So schaut's aus**
+~~~
+% Weiterleitung nach ....html
+%
+%
+
+
+<script language="javascript">
+<!--
+window.location.href="....html";
+// -->
+</script>
+~~~
+
+
+,rmk
+:	Moot.it Kommentar Abschnitt
+
+---------------------------------------------
+
+,rku
+:	rumex Verzeichnis `.rx` anzeigen
+
+--------------------------------------------
+
+,rgp
+:	Git pull
+
+,rgs
+:	Git status
+
+--------------------------------------------
+
+,rff
+:	Markierte Textstelle fett darstellen
+
+,rfk
+:	Markierte Textstelle kursiv darstellen
+
+,rfl
+:	Markierte Zeilen in eine Liste wandeln
+
+,rfn
+:	Markierte Zeile in eine Nummernliste wandeln
+
+,rfb
+:	Markierte Zeile in einen Block wandeln
+
+,rfc
+:	Markierte Zeile als Code darstellen
+
+,spn2
+:	Text mit 2er Spalten Formatierung umschließen 
+
+,spn3
+:	Text mit 3er Spalten Formatierung umschließen 
+
+,spn4
+:	Text mit 4er Spalten Formatierung umschließen 
+
+-----------------------------------------------------
+
+,rma
+:	Speichert alle offenen Dokumente und erstellt daraus die HTML Datei.
+
+,rmb
+:	Erstellt die unterschiedlichen Bildgrößen 
+
+-------------------------------------------------------
+
+
+,rmca
+:	Löscht alle html Dateien, alle Bildergrößen und alle xml Dateien.
+	beinhaltet die drei Befehle `make bclean`, `make hclean`, `make xclean`.
+
+,rmcb
+:	Löscht alle Bildgrößen aus dem `bilder/` Verzeichnis.
+	Es werden nur die Bilder gelöscht die von Rumex erstellt wurden
+	siehe `make bilder`.
+
+,rmch
+:	Löscht alle `.html` Dateien die von Rumex erstellt wurden.
+
+,rmcx
+:	Löscht alle `.xlm` Dateien die von Rumex erstellt wurden.
+
+---------------------------------------------------------
+
+,rmh
+:	Erstellt die `.html` Dateien.
+
+,rmi
+:	Erstellt die index Datei.
+
+,rmm
+:	Erstellt die sitemap Datei.
+
+--------------------------------------------------------
+
+,rmo
+:	Speichert alle Dateien und stellt diese online.
+
+-------------------------------------------------------
+
+,rmr
+:	Erstellt die rss Datei.
+
+,rms
+:	Erstellt die Rumex Suche, bzw. die Dateiliste die für
+	die Suche verwendet werden soll.
+
+,rsf
+:	Zeigt eine Vorschau der Seite der Datei `file:///` im Standardbrowser.
+
+,rsw
+:	Zeigt eine Vorschau der Seite **Online** im Standardbrowser.
+
+,rsl
+:	Zeigt eine Vorschau der Seite auf dem eigenen Rechner.
+	Diese Kurztaste kann aber nur verwendet werden wenn auf dem 
+	Rechner der Apache installiert und entsprechend eingerichtet ist.
+
+-----------------------------------------------------------
+
+,ros
+:	Öffnet die `start.rx0s` in einen neuen VIM Tab Fenster.
+
+.ror
+:	Öffnet die `rss.rx0x` in einen neuen VIM Tab Fenster.
+
+
+
+
+<!-- vim: set ft=pandoc: -->
