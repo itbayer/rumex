@@ -61,10 +61,15 @@ p, ul, dd {
 #seite h1 a {
 	margin-top: 2em;
 	padding-top: 0.4em;
-	border-top: 1px dotted #f0f0f0;
 	text-shadow: 4px 4px 4px silver;
 	color: #222;
 	text-decoration: none;
+}
+
+/* Linie nur zur Abgrenzung */
+
+#seite h1 {
+	border-top: 1px dotted #f0f0f0;
 }
 
 /* ----------------------------------------------
