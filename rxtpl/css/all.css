@@ -69,7 +69,7 @@ p, ul, dd {
 /* Linie nur zur Abgrenzung */
 
 #seite h1 {
-	border-top: 1px dotted #f0f0f0;
+	border-top: 1px dotted #f0f0f0 !important;
 }
 
 /* ----------------------------------------------
