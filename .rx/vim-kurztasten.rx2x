@@ -104,6 +104,9 @@ Erstellt einen neue Weiterleitungsseite.
 // -->
 </script>
 ~~~
+Anmerkung: Die Zeile `window.location.href="....html";` wurde hier 
+Kommentiert da sonst die javascript Weiterleitung greift.
+Normalerweise findet man kein `//` vor der Zeile `window.loca....`.
 
 
 ,rmk
