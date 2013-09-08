@@ -56,9 +56,11 @@
 <nav id="TOC">
 <ul>
 <li><a href="#textbausteine">Textbausteine</a><ul>
-<li><a href="#rnd">,rnd</a></li>
-<li><a href="#rnn">,rnn</a></li>
-<li><a href="#rwl">,rwl</a></li>
+<li><a href="#rnd-rumexneuedatei">,rnd (RumexNeueDatei)</a></li>
+<li><a href="#rnn-rumexneuenachricht">,rnn (RumexNeueNachricht)</a></li>
+<li><a href="#rwl-rumexweiterleitung">,rwl (RumexWeiterLeitung)</a></li>
+<li><a href="#rmk-rumexmootitkommentar">,rmk (RumexMootitKommentar)</a></li>
+<li><a href="#rku">,rku</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -77,7 +79,7 @@
 
 <h1 id="textbausteine"><a href="#textbausteine">Textbausteine</a></h1>
 <p>Mittels dieser Kurztasten können Textbausteine eingebunden werden.</p>
-<h2 id="rnd"><a href="#rnd">,rnd</a></h2>
+<h2 id="rnd-rumexneuedatei"><a href="#rnd-rumexneuedatei">,rnd (RumexNeueDatei)</a></h2>
 <p>Erstellt das eine neues Datei Gerüst. Dabei wird der Dateiname gleich mit eingebunden.</p>
 <p><strong>So schaut’s aus</strong></p>
 <pre><code>% vim-kurztasten
@@ -101,7 +103,7 @@ Vortext INDEX und SEITE
 TEXT DER SEITE
 
 &lt;!-- vim: set ft=pandoc: --&gt;</code></pre>
-<h2 id="rnn"><a href="#rnn">,rnn</a></h2>
+<h2 id="rnn-rumexneuenachricht"><a href="#rnn-rumexneuenachricht">,rnn (RumexNeueNachricht)</a></h2>
 <p>Erstellt einen neuen News Eintrag. Diese Kurztaste macht eigentlich nur in der Datei <code>rss.rx0x</code> Sinn. Der Eintrag hinter Datum wird von Rumex gesetzt, ist also immer die aktuelle Systemzeit beim ausführen von <code>.rnn</code>.</p>
 <p><strong>So schaut’s aus</strong></p>
 <pre><code># Neue Nachricht{.nn1}
@@ -114,32 +116,33 @@ TEXT DER SEITE
 --&gt;
 
 Ab hier geht die neue Nachricht los.</code></pre>
-<h2 id="rwl"><a href="#rwl">,rwl</a></h2>
+<h2 id="rwl-rumexweiterleitung"><a href="#rwl-rumexweiterleitung">,rwl (RumexWeiterLeitung)</a></h2>
 <p>Erstellt einen neue Weiterleitungsseite.</p>
-<p><strong>So schaut’s aus</strong> <sub>~</sub> % Weiterleitung nach ….html % %</p>
-<script language="javascript">
-<!--
-//window.location.href="....html";
-// -->
-</script>
-<p><sub>~</sub> Anmerkung: Die Zeile <code>window.location.href=&quot;....html&quot;;</code> wurde hier Kommentiert da sonst die javascript Weiterleitung greift. Normalerweise findet man kein <code>//</code> vor der Zeile <code>window.loca....</code>.</p>
-<dl>
-<dt>,rmk</dt>
-<dd>Moot.it Kommentar Abschnitt
-</dd>
-</dl>
+<p><strong>So schaut’s aus</strong></p>
+<pre><code>% Weiterleitung nach ....html
+%
+%
+
+
+&lt;script language=&quot;javascript&quot;&gt;
+&lt;!--
+//window.location.href=&quot;....html&quot;;
+// --&gt;
+&lt;/script&gt;</code></pre>
+<p>Anmerkung: Die Zeile <code>window.location.href=&quot;....html&quot;;</code> wurde hier Kommentiert da sonst die javascript Weiterleitung greift. Normalerweise findet man kein <code>//</code> vor der Zeile <code>window.location.href=....html</code>.</p>
+<h2 id="rmk-rumexmootitkommentar"><a href="#rmk-rumexmootitkommentar">,rmk (RumexMootitKommentar)</a></h2>
+<p>Erstellt einen Moot.it Kommentar Abschnitt. Als Kennzeichnung wird der Dateiname ohne <code>rx??</code> eingebaut / angehängt.</p>
+<pre><code># Kommentare
+
+&lt;a class=&quot;moot&quot; href=&quot;https://moot.it/i/rumex/blog/vim-kurztasten&quot;&gt;&lt;/a&gt;</code></pre>
+<h2 id="rku"><a href="#rku">,rku</a></h2>
+<p>Öffnet das Unterverzeichnis <code>.rx</code> in einem neuen VimTab Fenster. Keine Ahnung warum ich diese Kurztaste so benannt habe.</p>
 <hr />
 <dl>
-<dt>,rku</dt>
-<dd>rumex Verzeichnis <code>.rx</code> anzeigen
-</dd>
-</dl>
-<hr />
-<dl>
-<dt>,rgp</dt>
+<dt>,rgp (RumexGitPull)</dt>
 <dd><p>Git pull</p>
 </dd>
-<dt>,rgs</dt>
+<dt>,rgs (RumexGitStatus)</dt>
 <dd><p>Git status</p>
 </dd>
 </dl>

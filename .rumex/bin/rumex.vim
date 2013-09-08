@@ -101,7 +101,7 @@ map <Leader>rnn i# Neue Nachricht{.nn1}<CR><CR><!--<CR>\| Link: http://www.it-ba
 map <Leader>rwl i% Weiterleitung nach ....html<CR>%<CR>%<CR><CR><CR><script language="javascript"><CR><!--<CR>window.location.href="....html";<CR>// --><CR></script><ESC>9k13l
 
 " Kommentar Zeile einfügen mit <Leader>rmk (RumexMootKommentar)
-map <Leader>rmk i## Kommentare<cr><cr><a class="moot" href="https://moot.it/i/<C-R>=mootit_konto<cr>/blog/<C-R>=expand("%:r")<cr>"></a>
+map <Leader>rmk i# Kommentare<cr><cr><a class="moot" href="https://moot.it/i/<C-R>=mootit_konto<cr>/blog/<C-R>=expand("%:r")<cr>"></a>
 
 
 

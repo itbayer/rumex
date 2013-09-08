@@ -33,7 +33,7 @@ Unterstützung arbeitet sollte sich schon ein paar Kurztasten einprägen.
 
 Mittels dieser Kurztasten können Textbausteine eingebunden werden.
 
-## ,rnd
+## ,rnd (RumexNeueDatei)
 
 Erstellt das eine neues Datei Gerüst.
 Dabei wird der Dateiname gleich mit eingebunden.
@@ -64,7 +64,7 @@ TEXT DER SEITE
 <!-- vim: set ft=pandoc: -->
 ~~~
 
-## ,rnn
+## ,rnn (RumexNeueNachricht)
 
 Erstellt einen neuen News Eintrag.
 Diese Kurztaste macht eigentlich nur in der Datei `rss.rx0x` Sinn.
@@ -87,11 +87,12 @@ Ab hier geht die neue Nachricht los.
 ~~~
 
 
-## ,rwl
+## ,rwl (RumexWeiterLeitung)
 
 Erstellt einen neue Weiterleitungsseite.
 
 **So schaut's aus**
+
 ~~~
 % Weiterleitung nach ....html
 %
@@ -104,25 +105,36 @@ Erstellt einen neue Weiterleitungsseite.
 // -->
 </script>
 ~~~
+
 Anmerkung: Die Zeile `window.location.href="....html";` wurde hier 
 Kommentiert da sonst die javascript Weiterleitung greift.
-Normalerweise findet man kein `//` vor der Zeile `window.loca....`.
+Normalerweise findet man kein `//` vor der 
+Zeile `window.location.href=....html`.
 
 
-,rmk
-:	Moot.it Kommentar Abschnitt
+## ,rmk (RumexMootitKommentar)
+Erstellt einen Moot.it Kommentar Abschnitt.
+Als Kennzeichnung wird der Dateiname ohne `rx??` eingebaut / angehängt.
 
----------------------------------------------
+~~~
+# Kommentare
 
-,rku
-:	rumex Verzeichnis `.rx` anzeigen
+<a class="moot" href="https://moot.it/i/rumex/blog/vim-kurztasten"></a>
+~~~
+
+
+## ,rku 
+
+Öffnet das Unterverzeichnis `.rx` in einem neuen VimTab Fenster.
+Keine Ahnung warum ich diese Kurztaste so benannt habe.
+
 
 --------------------------------------------
 
-,rgp
+,rgp (RumexGitPull)
 :	Git pull
 
-,rgs
+,rgs (RumexGitStatus)
 :	Git status
 
 --------------------------------------------
