@@ -100,7 +100,7 @@ Erstellt einen neue Weiterleitungsseite.
 
 <script language="javascript">
 <!--
-window.location.href="....html";
+//window.location.href="....html";
 // -->
 </script>
 ~~~
