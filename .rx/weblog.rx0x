@@ -1,0 +1,40 @@
+% weblog
+%
+%
+
+<!--
+
+[weblog](weblog.html)
+=======================================================
+
+Vortext INDEX
+
+-->
+
+
+
+Vortext INDEX und SEITE
+
+<!-- schnipp -->
+
+TEXT DER SEITE
+
+
+# Start des Weblogs
+
+Test der immer zu lesen sein sollte.
+
+<weblog>
+Dieser Text sollte nur erscheinen wenn man auf die Überschrift klickt.
+</weblog>
+
+
+# Zweiter Eintrag
+
+Wieder der Text den man immer sehen sollte.
+
+<weblog>
+...und der Text der ausgeblendet wird.
+</weblog>
+
+<!-- vim: set ft=pandoc: -->

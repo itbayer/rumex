@@ -53,6 +53,9 @@ $if(rumexsuche)$
 <script type='text/javascript' src='$rumexsuche$/rumexmarker.js'></script>
 $endif$
 
+<!-- rumex weblog @todo: Dateiname über config.mk ansprechen -->
+<script type='text/javascript' src='rxtpl/js/weblog.js'></script>
+
 $if(rsstitel)$
 <!-- rumex RSS -->
 <link rel="alternate" type="application/rss+xml" title="$rsstitel$" href="$rssfile$" />
