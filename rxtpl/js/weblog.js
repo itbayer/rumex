@@ -1,15 +1,16 @@
 /* Rumex Weblog Funktion */
 
 
-jQuery(document).ready(function() {
+$(document).ready(function() {
 
 
 	// Texte im weblog Tag ausblenden
-//	$("#seite weblog").hide();
+	$("#seite div.weblog").hide();
+	$("h1").css("cursor","pointer");
 	
 	// Überschriften raus suchen
 	$("#seite h1").click(function() {
-		$(this).next("p > weblog").css("border", "1px solid red");
+        $(this).nextAll("div.weblog").first().toggle();
 		});
 
 	});

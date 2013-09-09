@@ -24,17 +24,17 @@ TEXT DER SEITE
 
 Test der immer zu lesen sein sollte.
 
-<weblog>
+<div class="weblog">
 Dieser Text sollte nur erscheinen wenn man auf die Überschrift klickt.
-</weblog>
+</div>
 
 
 # Zweiter Eintrag
 
 Wieder der Text den man immer sehen sollte.
 
-<weblog>
+<div class="weblog">
 ...und der Text der ausgeblendet wird.
-</weblog>
+</dvi>
 
 <!-- vim: set ft=pandoc: -->
