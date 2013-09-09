@@ -1,23 +1,33 @@
-% weblog
-%
+% Weblog
+% Bloggen mit Rumex
 %
 
 <!--
 
-[weblog](weblog.html)
+[Weblog](weblog.html)
 =======================================================
-
-Vortext INDEX
 
 -->
 
 
+Diese kleine Erweiterung soll eine Art Blog innerhalb Rumex ermöglichen.
+Besser gesagt ist diese Erweiterung eher ein Weblog Funktion.
 
-Vortext INDEX und SEITE
+Der Unterschied zu den eigentlichen Rumex Seiten ist nicht sehr groß.
+Folgt nach einer `h1` Überschrift ein `div` Tag mit der `weblog` Klasse
+wird der Text innerhalb dieses `div` Tags ausgeblendet und mit dem 
+Schriftzug `... weiter lesen` ersetzt. 
+Die Überschrift und der Text `... weiter lesen` bekommen eine Link
+Eigenschaft die den ausgeblendeten Text bei Anforderung einblendet.
+
+Diese Funktion kann auch in den normalen Seiten verwendet werden.
+
+
+
+
+
 
 <!-- schnipp -->
-
-TEXT DER SEITE
 
 
 # Start des Weblogs

@@ -48,8 +48,8 @@ Dabei wird der Dateiname gleich mit eingebunden.
 
 <!--
 
-[vim-kurztasten](vim-kurztasten.html)
-=======================================================
+ [vim-kurztasten](vim-kurztasten.html)
+ =======================================================
 
 Vortext INDEX
 
@@ -74,7 +74,7 @@ aktuelle Systemzeit beim ausführen von `.rnn`.
 **So schaut's aus**
 
 ~~~
-# Neue Nachricht{.nn1}
+ # Neue Nachricht{.nn1}
 
 <!--
 | Link: http://www.it-bayer.de/rumex/
@@ -117,7 +117,7 @@ Erstellt einen Moot.it Kommentar Abschnitt.
 Als Kennzeichnung wird der Dateiname ohne `rx??` eingebaut / angehängt.
 
 ~~~
-# Kommentare
+ # Kommentare
 
 <a class="moot" href="https://moot.it/i/rumex/blog/vim-kurztasten"></a>
 ~~~
@@ -128,6 +128,21 @@ Als Kennzeichnung wird der Dateiname ohne `rx??` eingebaut / angehängt.
 Öffnet das Unterverzeichnis `.rx` in einem neuen VimTab Fenster.
 Keine Ahnung warum ich diese Kurztaste so benannt habe.
 
+## .rnb (RumexNeuenweBlog)
+
+Erstelle einen neuen Weblog Eintrag.
+
+~~~
+ # Rumex WebLog
+
+_am 09.09.2013 um 15:21 schrieb IT-Bayer_
+
+Text für den Eintrag
+
+<div class="weblog">
+Text der vorerst ausgeblendet ist.
+</div>
+~~~
 
 --------------------------------------------
 

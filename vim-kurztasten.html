@@ -29,6 +29,9 @@
 <!-- rumex JavaScript Suchwort markieren -->
 <script type='text/javascript' src='rxtpl/js/rumexmarker.js'></script>
 
+<!-- rumex weblog @todo: Dateiname über config.mk ansprechen -->
+<script type='text/javascript' src='rxtpl/js/weblog.js'></script>
+
 <!-- rumex RSS -->
 <link rel="alternate" type="application/rss+xml" title="Neuigkeiten von rumex Baukasten" href="rss.xml" />
 
@@ -61,6 +64,7 @@
 <li><a href="#rwl-rumexweiterleitung">,rwl (RumexWeiterLeitung)</a></li>
 <li><a href="#rmk-rumexmootitkommentar">,rmk (RumexMootitKommentar)</a></li>
 <li><a href="#rku">,rku</a></li>
+<li><a href="#rnb-rumexneuenweblog">.rnb (RumexNeuenweBlog)</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -89,8 +93,8 @@
 
 &lt;!--
 
-[vim-kurztasten](vim-kurztasten.html)
-=======================================================
+ [vim-kurztasten](vim-kurztasten.html)
+ =======================================================
 
 Vortext INDEX
 
@@ -106,7 +110,7 @@ TEXT DER SEITE
 <h2 id="rnn-rumexneuenachricht"><a href="#rnn-rumexneuenachricht">,rnn (RumexNeueNachricht)</a></h2>
 <p>Erstellt einen neuen News Eintrag. Diese Kurztaste macht eigentlich nur in der Datei <code>rss.rx0x</code> Sinn. Der Eintrag hinter Datum wird von Rumex gesetzt, ist also immer die aktuelle Systemzeit beim ausführen von <code>.rnn</code>.</p>
 <p><strong>So schaut’s aus</strong></p>
-<pre><code># Neue Nachricht{.nn1}
+<pre><code> # Neue Nachricht{.nn1}
 
 &lt;!--
 | Link: http://www.it-bayer.de/rumex/
@@ -132,11 +136,22 @@ Ab hier geht die neue Nachricht los.</code></pre>
 <p>Anmerkung: Die Zeile <code>window.location.href=&quot;....html&quot;;</code> wurde hier Kommentiert da sonst die javascript Weiterleitung greift. Normalerweise findet man kein <code>//</code> vor der Zeile <code>window.location.href=....html</code>.</p>
 <h2 id="rmk-rumexmootitkommentar"><a href="#rmk-rumexmootitkommentar">,rmk (RumexMootitKommentar)</a></h2>
 <p>Erstellt einen Moot.it Kommentar Abschnitt. Als Kennzeichnung wird der Dateiname ohne <code>rx??</code> eingebaut / angehängt.</p>
-<pre><code># Kommentare
+<pre><code> # Kommentare
 
 &lt;a class=&quot;moot&quot; href=&quot;https://moot.it/i/rumex/blog/vim-kurztasten&quot;&gt;&lt;/a&gt;</code></pre>
 <h2 id="rku"><a href="#rku">,rku</a></h2>
 <p>Öffnet das Unterverzeichnis <code>.rx</code> in einem neuen VimTab Fenster. Keine Ahnung warum ich diese Kurztaste so benannt habe.</p>
+<h2 id="rnb-rumexneuenweblog"><a href="#rnb-rumexneuenweblog">.rnb (RumexNeuenweBlog)</a></h2>
+<p>Erstelle einen neuen Weblog Eintrag.</p>
+<pre><code> # Rumex WebLog
+
+_am 09.09.2013 um 15:21 schrieb IT-Bayer_
+
+Text für den Eintrag
+
+&lt;div class=&quot;weblog&quot;&gt;
+Text der vorerst ausgeblendet ist.
+&lt;/div&gt;</code></pre>
 <hr />
 <dl>
 <dt>,rgp (RumexGitPull)</dt>

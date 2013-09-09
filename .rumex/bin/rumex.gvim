@@ -32,6 +32,7 @@ menu Rumex.-------------------textbaustein----------------- :
 menu &Rumex.Text&Bausteine.\ Neues\ &Dateigerüst<Tab>,rnd ,rnd
 menu &Rumex.Text&Bausteine.\ Neuen\ &News\ Eintrag<Tab>,rnn ,rnn
 menu &Rumex.Text&Bausteine.\ Neuen\ &Weiterleitung<Tab>,rwl ,rwl
+menu &Rumex.Text&Bausteine.\ Neuen\ Web&Log\ Abschnitt<Tab>,rnb ,rnb
 menu &Rumex.Text&Bausteine.\ moot\.it\ &Kommentar<Tab>,rmk ,rmk
 
 

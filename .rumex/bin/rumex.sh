@@ -7,6 +7,9 @@ PFAD=~/sbgit/github/rumex
 # moot.it Konto Name
 MOOTIT="rumex"
 
+# Autor für einen Weblog Eintrag
+WEBLOGAUTOR="IT-Bayer"
+
 # (G)VIM
 GVIM=/usr/bin/gvim
 
@@ -21,4 +24,4 @@ cd $PFAD/.rx
 git pull
 
 # (G)VIM mit rumex Erweiterung laden
-$GVIM -S ../.rumex/bin/rumex.gvim -c ":let mootit_konto='$MOOTIT'"
+$GVIM -S ../.rumex/bin/rumex.gvim -c ":let mootit_konto='$MOOTIT'" -c ":let weblog_autor='$WEBLOGAUTOR'"
