@@ -85,6 +85,7 @@ open (FH, "ls -lt1 --time-style=+\"%Y-%m-%d\" *.rx* |");
 
 # ----------------------------------------------------------
 # Schleife über die ausgelesenen Dateinamen
+# Dateien verarbeiten
 while (<FH>) {
 	chop($_);
 
@@ -97,7 +98,7 @@ while (<FH>) {
 
 =head2 Dateien die nicht in die index.rx0x aufgenommen werden
 
-Alle Dateien die mit einem x bzw. v enden werden nicht in die
+Alle Dateien die mit einem x,w bzw. v enden werden nicht in die
 index.rx0x aufgenommen.
 
 =cut
@@ -115,7 +116,10 @@ index.rx0x aufgenommen.
 
 	# Datum der letzten Änderung vor dem Vortext stellen
 	# ... nicht setzen wenn es sich um die start.rx0s handelt.
-	print INDEX "\n<p class=\"datum\">$datum</p>\n" if ($name ne $start_rx);
+	#
+	# Ausgeschaltet - wird nun unter der Überschrift
+	# eingebaut siehe ca. Z:152
+	# print INDEX "\n<p class=\"datum\">$datum</p>\n" if ($name ne $start_rx);
 
 	# Einzelnen Dateien auslesen um den Vortext zu 
 	# erstellen.
@@ -124,6 +128,7 @@ index.rx0x aufgenommen.
 	# Vortextmerker setzen
 	$schnipp = 0; 
 
+	# Text verarbeiten
 	while (<DAT>) {
 		chomp($_);
 
@@ -144,7 +149,12 @@ index.rx0x aufgenommen.
 		# noch nicht gesetzt wurde und die
 		# Zeile keine pandoc Kopfzeile ist.
 		print INDEX $_ . "\n" if(!$schnipp && $_ !~ m/^\%.*/);
-	}
+
+		# Datum einbauen wenn die Überschrift erkannt wurde.
+		print INDEX "\n<p class=\"datum\">Letzte Bearbeitung: $datum</p>\n" if(!$schnipp && $_ =~ m/^=+/);
+
+
+	} # ENDE :: Text verarbeiten
 
 
 	# Vortext Abschluss und Link zur eigentlichen Seite setzen ...
@@ -152,13 +162,15 @@ index.rx0x aufgenommen.
 	print INDEX "[... weiter lesen]($htmlname)\n\n" if ($name ne $start_rx);
 
 	# Schlussstrich setzen, nicht bei start.rx0s.
-	print INDEX "---\n" if ($name ne $start_rx);
+	#
+	# raus genommen wegen Layout anpassung
+	# print INDEX "---\n" if ($name ne $start_rx);
 	
 	print INDEX "\n";
 	print INDEX "</div>\n";
 	print INDEX "\n\n\n";
 
-}
+} # ENDE :: Dateien verarbeiten
 
 close(INDEX);
 close(DAT);
