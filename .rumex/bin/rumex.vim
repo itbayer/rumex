@@ -115,11 +115,11 @@ map <Leader>rnb i# Rumex WebLog<CR><ESC>:r! date +"Am \%d.\%m.\%Y um \%H:\%M sch
 " gvim Zuordnung, funktioniert unter vim (Konsole) nicht, warum siehe unten.
 map <C-S> :w<CR>:make html<CR><CR><CR>
 imap <C-S> <ESC>:w<CR>:make html<CR><CR><CR>
-" F11 macht das selbe weil C-S unter vim nicht funktioniert da diese
+" F10 macht das selbe weil C-S unter vim nicht funktioniert da diese
 " Tastenkombination dem Terminal zugeordnet ist.
 " Infolink: http://vim.wikia.com/wiki/Map_Ctrl-S_to_save_current_or_new_files
-map <F11> :w<CR>:make html<CR><CR><CR>
-imap <F11> <ESC>:w<CR>:make html<CR><CR><CR>
+map <F10> :w<CR>:make html<CR><CR><CR>
+imap <F10> <ESC>:w<CR>:make html<CR><CR><CR>
 
 
 " Rumex Verzeichnis .rx anzeigen
