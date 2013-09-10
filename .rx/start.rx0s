@@ -18,6 +18,30 @@ Der aktuelle Stand dieses Baukastens kann als [ZIP Datei herunter geladen](https
 Aktuell wird dieser Baukasten auch auf der Seite <http://www.it-bayer.de> verwendet.
 
 
+# Datei Namen umbenennen
+
+_Am 10.09.2013 um 18:45 schrieb IT-Bayer_
+
+So wie es scheint werde ich ein paar Dateien umbenennen.
+
+<div class="weblog">
+Irgendwie passen mir die Name einiger Dateien nicht.
+Betroffen sind aber nur Namen im `.rumex/bin` Verzeichnis.
+Es wird wohl so werden das ich ein paar Dateien einen andern Namen verpasse.
+
+- `rumex.sh` wird `rumex-gvim.sh` 
+- `rxt-rumex.sh` wird `rumex-tilda.sh` 
+- `rumex.tilda.sh` wird `rumex.vim.sh` 
+
+Durch die tilda Erweiterung gefallen mir die alten Namen nicht mehr
+bzw. sind für mich nicht mehr schlüssig.
+
+Die Datei `update_robots.txt.pl` hat es auch erwischt und 
+heißt jetzt `robots.txt_update.pl`.
+Aber das hat einen anderen Grund.
+</div>
+
+
 # Aus Beta wird wieder Alpha
 
 _Am 10.09.2013 um 11:33 schrieb IT-Bayer_

@@ -132,6 +132,6 @@ suche:
 # ######################################################
 # robots.txt updaten
 robots: 
-	../.rumex/bin/update_robots.txt.pl
+	../.rumex/bin/robots.txt_update.pl
 
 
