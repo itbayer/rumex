@@ -23,6 +23,21 @@ Diese Funktion kann auch in den normalen Seiten verwendet werden.
 
 <!-- schnipp -->
 
+# Spalten in einem Weblog Abschnitt
+
+_am 10.09.2013 um 08:24 schrieb IT-Bayer_
+
+<div class="spn2">
+Eigentlich sollte es funktionieren, die Spaltendarstellung
+innerhalb eines Weblog Eintrags.
+</div><!-- ENDE .spn2 Darstellung -->
+
+<div class="weblog">
+<div class="spn2">
+Wenn man es aber nicht testet dann kann man es auch nur
+vermuten.
+</div><!-- ENDE .spn2 Darstellung -->
+</div>
 
 
 # Kommentare im Weblog
