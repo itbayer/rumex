@@ -20,7 +20,51 @@ Der aktuelle Stand dieses Baukastens kann als [ZIP Datei herunter geladen](https
 Aktuell wird dieser Baukasten auch auf der Seite <http://www.it-bayer.de> verwendet.
 
 
-## Kurznachrichten
+# Aus Beta wird Alpha
+
+_am 10.09.2013 um 11:33 schrieb IT-Bayer_
+
+Eigentlich hat ja der beta Test von Rumex begonnen.
+Durch die neuen Erweiterungen breche ich vorerst 
+den Beta Test ab.
+
+<div class="weblog">
+Die neuen Erweiterungen `tilda` und `weblog`
+erfordern noch ein paar Grundlegende Anpassungen
+darum habe ich mich entschlossen den Beta Test abzubrechen.
+</div>
+
+# WebLog Layout auf der Startseite
+
+_am 10.09.2013 um 11:27 schrieb IT-Bayer_
+
+Das Layout der Weblog Einträge auf der Startseite 
+schaut nicht so schön aus.
+Hier muss noch nachgebessert werden.
+
+<div class="weblog">
+Der Eintrag Datum Autor braucht noch einen grau Ton.
+
+Bei der Übersicht der Einzelseiten gefällt mir auf einmal
+die Datumsangabe nicht mehr.
+Die sollte jetzt unter der Überschrift stehen und evtl.
+mit dem Schlüsselwort `Stand:` gekennzeichnet werden.
+
+</div>
+
+
+
+
+# Kurznachrichten
+
+_am 10.09.2013 um 11:19 schrieb IT-Bayer_
+
+Die alten Kurznachrichten wurden in ein Weblog Block verlegt.
+
+<div class="weblog">
+
+Die Kurznachtichten, die auf der Startseite zu finden waren 
+findet man jetzt in diesem Weblog Block.
 
 Rumex Beta Tester
 :	Die Seite [hochfelder.de](http://www.hochfelder.de) hat auch auf Rumex umgestellt
@@ -33,11 +77,28 @@ Twitter
 Beta Phase
 :	[Rumex geht in die Beta Phase](rss.html#Rumex geht in die Beta Phase)
 
+</div>
 
 
 
+# WebLog auf der Startseite
 
------------------------------------------------------------
+_am 10.09.2013 um 11:12 schrieb IT-Bayer_
+
+Da jetzt die neue [Weblog](weblog.html) Funktion eingebaut wurde,
+wird diese auch auf der Startseite getestet.
+
+<div class="weblog">
+Mit der Weblog Funktion von Rumex können kleine Nachrichten
+auf der Seite erstellt werden. 
+Diese Nachrichten werden dabei mit Datum, Uhrzeit und Autor
+versehen.
+
+Wie sich diese neue Funktion auf der Startseite macht
+soll dieser Beitrag zeigen.
+</div>
+
+
 
 
 
@@ -48,7 +109,7 @@ Beta Phase
 
 <div class="indexliste">
 
-<p class="datum">2013-09-08</p>
+<p class="datum">2013-09-09</p>
 
 
 [Beschreibung des Rumex Baukastens](beschreibung.html)
@@ -71,7 +132,7 @@ Du kannst aber schon mal gerne rein schauen.
 
 <div class="indexliste">
 
-<p class="datum">2013-09-05</p>
+<p class="datum">2013-09-04</p>
 
 [Historie](historie.html)
 ======================================================
