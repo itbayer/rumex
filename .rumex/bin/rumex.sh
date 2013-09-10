@@ -1,7 +1,6 @@
 #!/bin/bash
 
-
-# Pfad 
+# Pfad zur Rumex Installation
 PFAD=~/sbgit/github/rumex
 
 # moot.it Konto Name

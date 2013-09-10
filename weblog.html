@@ -66,26 +66,97 @@
 
 -->
 
-
 <p>Diese kleine Erweiterung soll eine Art Blog innerhalb Rumex ermöglichen. Besser gesagt ist diese Erweiterung eher ein Weblog Funktion.</p>
 <p>Der Unterschied zu den eigentlichen Rumex Seiten ist nicht sehr groß. Folgt nach einer <code>h1</code> Überschrift ein <code>div</code> Tag mit der <code>weblog</code> Klasse wird der Text innerhalb dieses <code>div</code> Tags ausgeblendet und mit dem Schriftzug <code>... weiter lesen</code> ersetzt. Die Überschrift und der Text <code>... weiter lesen</code> bekommen eine Link Eigenschaft die den ausgeblendeten Text bei Anforderung einblendet.</p>
 <p>Diese Funktion kann auch in den normalen Seiten verwendet werden.</p>
 <!-- schnipp -->
 
 
-<h1 id="start-des-weblogs">Start des Weblogs</h1>
-<p>Test der immer zu lesen sein sollte.</p>
+
+<h1 id="kommentare-im-weblog">Kommentare im Weblog</h1>
+<p><em>am 10.09.2013 um 07:52 schrieb IT-Bayer</em></p>
+<p>Kommentare zu den einzelnen Weblog Einträgen geht, Dank moot.it, auch. Jedoch muss man hier ein wenig nacharbeiten. Mit der Kurztaste <code>.rmk</code> wird das Kommentar Makro aufgerufen. Eingefügt wird dieser Block. Der ein wenig nach bearbeitet werden muss.</p>
+<pre><code># Kommentare
+
+&lt;a class=&quot;moot&quot; href=&quot;https://moot.it/i/rumex/blog/weblog&quot;&gt;&lt;/a&gt;</code></pre>
 <div class="weblog">
-Dieser Text sollte nur erscheinen wenn man auf die Überschrift klickt.
+
+<p>Rumex verwendet den Dateinamen zur Kennzeichnung der einzelnen Kommentar Abschnitte. Diese Kennzeichnung muss für den Weblog Abschnitt erweitert werden. Einfach den letzten Eintrag um ein Schlagwort erweitern.</p>
+<pre><code>&lt;a class=&quot;moot&quot; href=&quot;https://moot.it/i/rumex/blog/weblog_kommentar-im-weblog&quot;&gt;&lt;/a&gt;</code></pre>
+<p>Sinnvoll wäre es auch die Ebenen der Überschrift zu verändern. Die Kommentar Funktion wird als <code>H1</code> eingebaut. Diese wird mit einer Linie abgegrenzt und hat einen größeren Abstand so dass es scheint als ob ein neuer Beitrag beginnt. Ebenen 2 oder 3 macht sich da schon besser.</p>
+<p>Hier noch der geänderte Kommentar Abschnitt und das Ergebnis.</p>
+<pre><code>## Kommentare
+
+&lt;a class=&quot;moot&quot; href=&quot;https://moot.it/i/rumex/blog/weblog_kommentar-im-weblog&quot;&gt;&lt;/a&gt;</code></pre>
+<hr />
+<h2 id="kommentare">Kommentare</h2>
+<p><a class="moot" href="https://moot.it/i/rumex/blog/weblog_kommentar-im-weblog"></a></p>
 </div>
 
 
-<h1 id="zweiter-eintrag">Zweiter Eintrag</h1>
-<p>Wieder der Text den man immer sehen sollte.</p>
+
+<h1 id="einen-eintrag-ohne-weiter-lesen.">Einen Eintrag ohne … weiter lesen.</h1>
+<p><em>am 10.09.2013 um 07:50 schrieb IT-Bayer</em></p>
+<p>Will man so einen Eintrag erstellen löscht man einfach die drei Zeilen:</p>
+<pre><code>&lt;div class=&quot;weblog&quot;&gt;
+Text der vorerst ausgeblendet ist.
+&lt;/div&gt;</code></pre>
+<h1 id="rumex-weblog-und-tilda">Rumex Weblog und Tilda</h1>
+<p><em>am 10.09.2013 um 07:28 schrieb IT-Bayer</em></p>
+<p>Mit der <a href="beschreibung.html#homepage-änderung-schnell-und-immer-aktuell">Rumex tilda Erweiterung</a> geht es super schnell Weblog Einträgen zu erstellen.</p>
 <div class="weblog">
-<p>…und der Text der ausgeblendet wird. </dvi></p>
+<p>Hier mal ein Beispiel<sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> wie man einen neuen Weblog Eintrag erstellt.</p>
+<pre><code>&lt;PAUSE&gt;
+,rnb
+DA
+...Überschrift schreiben
+&lt;ESC&gt;
+4j0DA
+...Text schreiben
+&lt;ESC&gt;
+3j0DA
+...Text fertig stellen
+&lt;ESC&gt;
+,rmo
+&lt;PAUSE&gt;</code></pre>
+</div>
+
+
+<h1 id="css-nur-über-javascript">CSS nur über javascript</h1>
+<p><em>am 10.09.2013 um 07:20 schrieb IT-Bayer</em></p>
+<p>Alle CSS Anweisungen die, die weblog Funktion benötigt werden per javascript eingebaut.</p>
+<div class="weblog">
+Somit soll sichergestellt werden dass die Texte innerhalb der weblog Funktion auch angezeigt werden wenn javascript ausgeschaltet ist.
+</div>
+
+
+<h1 id="steuerung-des-weblogs">Steuerung des Weblogs</h1>
+<p><em>am 10.09.2013 um 07:18 schrieb IT-Bayer</em></p>
+<p>Die Steuerung übernimmt ein javascript das auf das Framework jquery aufsetzt.</p>
+<div class="weblog">
+Da jquery für die moot.it Funktion benötigt wird, wurde auch die weblog Funktion mit jquery realisiert.
+</div>
+
+
+<h1 id="start-der-weblog-testseite">Start der Weblog Testseite</h1>
+<p><em>am 10.09.2013 um 07:14 schrieb IT-Bayer</em></p>
+<p>Diese Seite ist der Sandkasten der Rumex Weblog Funktion.</p>
+<div class="weblog">
+<p>Im Grunde ist die Weblogfunktion nur ein kleines vim Makro das einen vor definierte Textstruktur in das Dokumente einfügt.</p>
+Dieses Makro kann über die Kurztaste <code>,rnb</code> aufgerufen werden.
+</div>
+
+
+
 <!-- vim: set ft=pandoc: -->
 
+
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Besser gesagt sieht man hier die Tastenfolge. Die tilda Erweiterung liegt bei mir auf der Taste <code>&lt;PAUSE&gt;</code>.<a href="#fnref1">↩</a></p></li>
+</ol>
+</section>
 </div>
 <div id="fuss">
 	<p class="copyleft">
