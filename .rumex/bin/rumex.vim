@@ -76,8 +76,8 @@ set spelllang=de
 set spell
 " Darstellung falscher Wörter für die Konsole (tilda) anpassen.
 hi SpellBad term=reverse cterm=underline ctermbg=7 ctermfg=1 gui=undercurl guisp=Red
-
-
+" Darstellung für klein geschriebene Wörter die nach einem Satzende kommen.
+hi SpellCap term=reverse cterm=underline ctermbg=7 ctermfg=4 gui=undercurl guisp=Blue
 
 
 " -----------------------------------------------------------
@@ -207,8 +207,20 @@ map <Leader>ros :tabnew<CR>:e start.rx0s<CR><CR>
 map <Leader>ror :tabnew<CR>:e rss.rx0x<CR><CR>
 
 
-
-
+" -----------------------------------------------------------
+"  Rumex Twitter Unterstützung
+"
+"  Anmerkung: Bei dieser Kurztaste wurde auf das abschließende
+"  <CR> verzichtete. Somit kann man noch die Nachricht,
+"  vor dem Senden überprüfen und ggf. Editieren.
+"  Zum Beispiel müssen ! vor dem Senden maskiert \! werden.
+"
+" Variante 1 kopiert den Text und sendet diesen an Twitter
+"vmap <Leader>rtt y:!twiet -status="<C-R>""
+"
+" Variante 2 sendet den Text an Twitter und entfernt diesen
+"            anschließend.
+vmap <Leader>rtt !twiet -script<CR>
 
 
 

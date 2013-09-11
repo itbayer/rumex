@@ -20,6 +20,24 @@ Der aktuelle Stand dieses Baukastens kann als [ZIP Datei herunter geladen](https
 Aktuell wird dieser Baukasten auch auf der Seite <http://www.it-bayer.de> verwendet.
 
 
+# Rumex senden Nachrichten direkt an twitter
+
+_Am 11.09.2013 um 12:30 schrieb IT-Bayer_
+
+Dank dem Programm [TTYtter for Perl](http://www.floodgap.com/software/ttytter/) ist es nun möglich Texte aus Rumex direkt an [Twitter](http://www.twitter.com) zu senden.
+
+
+<div class="weblog">
+Eigentlich ist es nicht Rumex der die Funktion zur Verfügung stellt.
+In der Rumex Konfiguration wurde nur die vim Kurztaste `,rtt` (RumexToTwitter) definiert.
+Wird eine Zeile markiert kann diese mit der Kurztaste `,rtt` 
+an TTYtter weiterleitet werden.
+Nach der Weiterleitung wird die Zeile entfernt.
+Eine andere Variante die, die Zeile stehen lässt, findet man 
+kommentiert in der `.ruemx/bin/rumex.vim` Datei.
+</div>
+
+
 # Datei Namen umbenennen
 
 _Am 10.09.2013 um 18:45 schrieb IT-Bayer_
@@ -155,7 +173,7 @@ Beta Test Phase.
 [Beschreibung des Rumex Baukastens](beschreibung.html)
 ======================================================
 
-<p class="datum">Letzte Bearbeitung: 2013-09-08</p>
+<p class="datum">Letzte Bearbeitung: 2013-09-09</p>
 
 
 Hier findest du die Beschreibung des rumex Baukastens.
