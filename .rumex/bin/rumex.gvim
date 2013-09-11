@@ -57,6 +57,10 @@ menu &Rumex.&make.&clean.&HTML<Tab>,rmch ,rmcd
 menu &Rumex.&make.&clean.&XML<Tab>,rmcx ,rmcx
 menu &Rumex.&make.&clean.&alles<Tab>,rmca ,rmca
 
+menu Rumex.-----------------twitter--------------------------- :
+menu &Rumex.&Twitter.&Nachricht\ senden<Tab>,rtt ,rtt
+menu &Rumex.&Twitter.&Kürze\ Link<Tab>,rkl ,rkl
+
 menu Rumex.-----------------git--------------------------- :
 menu &Rumex.&Git.Änderungen\ &holen<Tab>,rgp ,rgp
 menu &Rumex.&Git.Änderungen\ &anzeigen<Tab>,rgs ,rgs

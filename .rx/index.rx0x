@@ -37,6 +37,10 @@ an TTYtter weiterleitet werden.
 Nach der Weiterleitung wird die Zeile entfernt.
 Eine andere Variante die, die Zeile stehen lässt, findet man 
 kommentiert in der `.ruemx/bin/rumex.vim` Datei.
+
+Auch eine Link Verkürzung mit <http://is.gd> kann Rumex jetzt anbieten,
+Kurztasten `,rkl`. Der Link für Rumex schaut dann so aus <http://is.gd/az0x2a>.
+Eigentlich ist es aber TTYtter der Rumex diese Erweiterung bietet.
 </div>
 
 
@@ -175,7 +179,7 @@ Beta Test Phase.
 [Beschreibung des Rumex Baukastens](beschreibung.html)
 ======================================================
 
-<p class="datum">Letzte Bearbeitung: 2013-09-09</p>
+<p class="datum">Letzte Bearbeitung: 2013-09-08</p>
 
 
 Hier findest du die Beschreibung des rumex Baukastens.

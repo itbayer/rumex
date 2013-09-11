@@ -210,6 +210,7 @@ map <Leader>ror :tabnew<CR>:e rss.rx0x<CR><CR>
 " -----------------------------------------------------------
 "  Rumex Twitter Unterstützung
 "
+" Nachricht an Twitter senden (RumexToTwitter)
 "  Anmerkung: 
 "    Bei dieser Kurztaste wurde auf das abschließende
 "    <CR> verzichtete. Somit kann man noch die Nachricht,
@@ -229,6 +230,9 @@ map <Leader>ror :tabnew<CR>:e rss.rx0x<CR><CR>
 "   Bei Meldungen aufgeteilt in zwei Zeilen wird nur die 
 "   zweite Zeile gesendet.
 vmap <Leader>rtt !twiet -script<CR>
+
+" KurzLink erzeugen mit is.gd (RumexKürzeLink)
+vmap <Leader>rkl x:r!echo "/sh <C-R>""\|twiet -script<CR>
 
 
 
