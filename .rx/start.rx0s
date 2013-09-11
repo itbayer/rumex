@@ -39,6 +39,7 @@ bzw. sind für mich nicht mehr schlüssig.
 Die Datei `update_robots.txt.pl` hat es auch erwischt und 
 heißt jetzt `robots.txt_update.pl`.
 Aber das hat einen anderen Grund.
+
 </div>
 
 
@@ -70,7 +71,7 @@ Der Eintrag Datum Autor braucht noch einen grau Ton.
 Bei der Übersicht der Einzelseiten gefällt mir auf einmal
 die Datumsangabe nicht mehr.
 Die sollte jetzt unter der Überschrift stehen und evtl.
-mit dem Schlüsselwort `Stand:` gekennzeichnet werden.
+mit dem Schlüsselwort ~~`Stand:`~~ `Letzte Bearbeitung:`  gekennzeichnet werden.
 
 </div>
 
@@ -81,12 +82,10 @@ mit dem Schlüsselwort `Stand:` gekennzeichnet werden.
 
 _Am 10.09.2013 um 11:19 schrieb IT-Bayer_
 
-Die alten Kurznachrichten wurden in ein Weblog Block verlegt.
+Die alten Kurznachrichten, die man auf der Startseite
+gefunden hat, wurden in einen Weblog Block verlegt.
 
 <div class="weblog">
-
-Die Kurznachtichten, die auf der Startseite zu finden waren 
-findet man jetzt in diesem Weblog Block.
 
 Rumex Beta Tester
 :	Die Seite [hochfelder.de](http://www.hochfelder.de) hat auch auf Rumex umgestellt

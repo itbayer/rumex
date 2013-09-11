@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/usr/bin/tilda -c  ~/bin/rumex.tilda
+/usr/bin/tilda -c  ~/bin/rumex-vim

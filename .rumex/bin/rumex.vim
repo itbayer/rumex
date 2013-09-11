@@ -111,15 +111,16 @@ map <Leader>rnb i# Rumex WebLog<CR><ESC>:r! date +"Am \%d.\%m.\%Y um \%H:\%M sch
 " ----------------------------------------------------------
 "  Kurztasten allgemein
 
-" Speichern und html erstellen STRG+S
-" gvim Zuordnung, funktioniert unter vim (Konsole) nicht, warum siehe unten.
+" Datei Speichern und html erstellen STRG+S
+" gvim Zuordnung, funktioniert unter vim (Konsole) nicht, siehe unten.
 map <C-S> :w<CR>:make html<CR><CR><CR>
 imap <C-S> <ESC>:w<CR>:make html<CR><CR><CR>
-" F10 macht das selbe weil C-S unter vim nicht funktioniert da diese
-" Tastenkombination dem Terminal zugeordnet ist.
+" <F5> für vim bereitstellen. Macht das selbe wie <C-S> 
+" weil <C-S> unter vim nicht funktioniert, 
+" diese Tastenkombination ist dem Terminal zugeordnet.
 " Infolink: http://vim.wikia.com/wiki/Map_Ctrl-S_to_save_current_or_new_files
-map <F10> :w<CR>:make html<CR><CR><CR>
-imap <F10> <ESC>:w<CR>:make html<CR><CR><CR>
+map <F5> :w<CR>:make html<CR><CR><CR>
+imap <F5> <ESC>:w<CR>:make html<CR><CR><CR>
 
 
 " Rumex Verzeichnis .rx anzeigen
