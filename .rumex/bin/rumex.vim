@@ -210,16 +210,24 @@ map <Leader>ror :tabnew<CR>:e rss.rx0x<CR><CR>
 " -----------------------------------------------------------
 "  Rumex Twitter Unterstützung
 "
-"  Anmerkung: Bei dieser Kurztaste wurde auf das abschließende
-"  <CR> verzichtete. Somit kann man noch die Nachricht,
-"  vor dem Senden überprüfen und ggf. Editieren.
-"  Zum Beispiel müssen ! vor dem Senden maskiert \! werden.
+"  Anmerkung: 
+"    Bei dieser Kurztaste wurde auf das abschließende
+"    <CR> verzichtete. Somit kann man noch die Nachricht,
+"    vor dem Senden überprüfen und ggf. Editieren.
+"    Zum Beispiel müssen ! vor dem Senden maskiert \! werden.
 "
-" Variante 1 kopiert den Text und sendet diesen an Twitter
+" Variante 1: 
+"   Kopiert den Text und sendet diesen an Twitter
+"   Unterstützt auch mehr als eine Zeile.
 "vmap <Leader>rtt y:!twiet -status="<C-R>""
 "
-" Variante 2 sendet den Text an Twitter und entfernt diesen
-"            anschließend.
+" Variante 2: 
+"   Sendet den Text an Twitter und entfernt diesen
+"   anschließend.
+"   Diese Kurztaste hat den Nachteil das die Meldung in einer Zeile 
+"   stehen muss.
+"   Bei Meldungen aufgeteilt in zwei Zeilen wird nur die 
+"   zweite Zeile gesendet.
 vmap <Leader>rtt !twiet -script<CR>
 
 
