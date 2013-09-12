@@ -159,7 +159,7 @@ index.rx0x aufgenommen.
 
 	# Vortext Abschluss und Link zur eigentlichen Seite setzen ...
 	# .. nicht anzeigen bei start.rx0s.
-	print INDEX "[... weiter lesen]($htmlname)\n\n" if ($name ne $start_rx);
+	print INDEX "[... Seite öffnen]($htmlname)\n\n" if ($name ne $start_rx);
 
 	# Schlussstrich setzen, nicht bei start.rx0s.
 	#
