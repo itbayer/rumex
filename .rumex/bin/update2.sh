@@ -58,6 +58,10 @@ if ((i)); then
 
 	# Datei blind.png loeschen -- Update bis 0.8.0
 	[ -e ../rxtpl/img/blind.png ] && rm -f ../rxtpl/img/blind.png
+	# Dateien im /bin Verzeichnis loeschen -- Update bis 0.8.1
+	[ -e ../.rumex/bin/rumex.sh ] && rm -f ../.rumex/bin/rumex.sh
+	[ -e ../.rumex/bin/update_robots.txt.pl ] && rm -f ../.rumex/bin/update_robots.txt.pl
+	
 
 	echo ""
 	echo ""
