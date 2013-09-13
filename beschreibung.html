@@ -4,7 +4,7 @@
   <meta charset="utf-8">
 
 <!-- rumex Version -->
-<meta name="generator" content="rumex 0.8.0">
+<meta name="generator" content="rumex 0.8.1">
 
 <!-- rumex Suchmaschine -->
 <meta name="robots" content="all">
@@ -86,6 +86,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><a href="#rumex-auf-dich-einstellen">Rumex auf dich einstellen</a></li>
 <li><a href="#moot.it">moot.it</a></li>
 <li><a href="#gvim-unterstützung-einrichten">gvim Unterstützung einrichten</a><ul>
+<li><a href="#autosave-funktion">AutoSave Funktion</a></li>
 <li><a href="#tipps-zur-benutzung-gvim">Tipps zur Benutzung gvim</a></li>
 <li><a href="#vim-kurztasten">vim Kurztasten</a></li>
 <li><a href="#gvim-menü">gvim Menü</a></li>
@@ -201,6 +202,48 @@ make show</code></pre>
 <li>Erstellen der Startdatei</li>
 <li>Einrichten</li>
 </ul>
+<h3 id="autosave-funktion"><a href="#autosave-funktion">AutoSave Funktion</a></h3>
+<p>Mit dem Plugin AutoSave kann man Rumex auch dazu bringen Dateien nicht nur automatisch zu speichern sondern auch gleich die HTML Datei zu erstellen.</p>
+<p>Jedoch ist eine kleine Änderung am Plugin notwendig.</p>
+<pre class="sourceCode diff"><code class="sourceCode diff"><span class="kw">diff --git a/plugin/AutoSave.vim b/plugin/AutoSave.vim</span>
+index f09a904..ec2f463 100644
+<span class="dt">--- a/plugin/AutoSave.vim</span>
+<span class="dt">+++ b/plugin/AutoSave.vim</span>
+<span class="dt">@@ -11,6 +11,12 @@ else</span>
+   let g:auto_save_loaded = 1
+ endif
+ 
+<span class="ot">+if exists(&quot;g:rumex&quot;)</span>
+<span class="ot">+  finish</span>
+<span class="ot">+else</span>
+<span class="ot">+  let g:rumex = 0</span>
+<span class="ot">+endif</span>
+<span class="ot">+</span>
+ let s:save_cpo = &amp;cpo
+ set cpo&amp;vim
+ 
+<span class="dt">@@ -33,10 +39,14 @@ function! AutoSave()</span>
+   if g:auto_save &gt;= 1
+     let was_modified = &amp;modified
+     silent! wa
+<span class="st">-    if was_modified &amp;&amp; !&amp;modified</span>
+<span class="st">-      echo &quot;(AutoSaved at &quot; . strftime(&quot;%T&quot;) . &quot;)&quot;</span>
+<span class="st">-    endif</span>
+<span class="st">-  endif</span>
+<span class="ot">+   if was_modified &amp;&amp; !&amp;modified</span>
+<span class="ot">+       if g:rumex == 1</span>
+<span class="ot">+           silent! make html</span>
+<span class="ot">+           echo &quot;html datei wurde erstellt&quot;</span>
+<span class="ot">+       endif</span>
+<span class="ot">+       echo &quot;(AutoSaved at &quot; . strftime(&quot;%T&quot;) . &quot;)&quot;</span>
+<span class="ot">+   endif</span>
+<span class="ot">+endif</span>
+ endfunction
+ 
+ function! AutoSaveToggle()</code></pre>
+<p>Mit dem Befehl <code>:let rumex=1</code> bzw. <code>let rumex=0</code> kann das Erstellen der HTML Datei ein bzw. ausgeschaltet werden.</p>
+<p>Installiert man sich dann noch im FireFox dann noch die Erweiterung. “Tab Auto Reload” werden die Änderungen im Browser immer gleich angezeigt.</p>
+<p>Über die Nutzbarkeit kann man sich streiten da nach einem HTML Lauf der Cursor immer an den Anfang der Zeile, in der man sich gerade befindet, springt. Mir ist die Variante mit <code>&lt;F5&gt;</code> lieber. Die “Tab Auto Reload” Funktion im Firefox verwende ich aber schon sehr gerne.</p>
 <h3 id="tipps-zur-benutzung-gvim"><a href="#tipps-zur-benutzung-gvim">Tipps zur Benutzung gvim</a></h3>
 <h3 id="vim-kurztasten"><a href="#vim-kurztasten">vim Kurztasten</a></h3>
 <p>Eine Übersicht der Rumex Kurztasten für den Editor vim findest du auf der Seite <a href="vim-kurztasten.html">VIM-Kurztasten</a>.</p>
@@ -379,6 +422,7 @@ Hier kommt auch schon der Vortext für die index.html</code></pre>
 % Seiten Überschrift 3
 
 &lt;!--
+
 
 # Listen-Überschrift
 

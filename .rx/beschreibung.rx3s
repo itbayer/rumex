@@ -142,7 +142,67 @@ oder [hier](istart.html).
 - Erstellen der Startdatei
 - Einrichten
 
+### AutoSave Funktion
+
+Mit dem Plugin AutoSave kann man Rumex auch dazu bringen
+Dateien nicht nur automatisch zu speichern sondern auch
+gleich die HTML Datei zu erstellen.
+
+Jedoch ist eine kleine Änderung am Plugin notwendig.
+
+~~~{.diff}
+diff --git a/plugin/AutoSave.vim b/plugin/AutoSave.vim
+index f09a904..ec2f463 100644
+--- a/plugin/AutoSave.vim
++++ b/plugin/AutoSave.vim
+@@ -11,6 +11,12 @@ else
+   let g:auto_save_loaded = 1
+ endif
+ 
++if exists("g:rumex")
++  finish
++else
++  let g:rumex = 0
++endif
++
+ let s:save_cpo = &cpo
+ set cpo&vim
+ 
+@@ -33,10 +39,14 @@ function! AutoSave()
+   if g:auto_save >= 1
+     let was_modified = &modified
+     silent! wa
+-    if was_modified && !&modified
+-      echo "(AutoSaved at " . strftime("%T") . ")"
+-    endif
+-  endif
++	if was_modified && !&modified
++		if g:rumex == 1
++			silent! make html
++			echo "html datei wurde erstellt"
++		endif
++		echo "(AutoSaved at " . strftime("%T") . ")"
++	endif
++endif
+ endfunction
+ 
+ function! AutoSaveToggle()
+~~~
+
+Mit dem Befehl `:let rumex=1` bzw. `let rumex=0` kann das
+Erstellen der HTML Datei ein bzw. ausgeschaltet werden.
+
+Installiert man sich dann noch im FireFox dann noch die Erweiterung.
+"Tab Auto Reload" werden die Änderungen im Browser immer gleich
+angezeigt.
+
+Über die Nutzbarkeit kann man sich streiten da nach einem HTML Lauf
+der Cursor immer an den Anfang der Zeile, in der man sich gerade befindet, springt.
+Mir ist die Variante mit `<F5>` lieber. Die "Tab Auto Reload" Funktion im Firefox
+verwende ich aber schon sehr gerne.
+
 ### Tipps zur Benutzung gvim
+
 
 ### vim Kurztasten
 
@@ -429,6 +489,7 @@ Die Seite bzw. der Kopf der Seite hat dabei folgenden Aufbau.
 % Seiten Überschrift 3
 
 <!--
+
 
 # Listen-Überschrift
 

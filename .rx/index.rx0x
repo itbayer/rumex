@@ -20,8 +20,6 @@ Der aktuelle Stand dieses Baukastens kann als [ZIP Datei herunter geladen](https
 Aktuell wird dieser Baukasten auch auf der Seite <http://www.it-bayer.de> verwendet.
 
 
-
-
 # Rumex senden Nachrichten direkt an twitter
 
 _Am 11.09.2013 um 12:30 schrieb IT-Bayer_
@@ -156,10 +154,32 @@ soll dieser Beitrag zeigen.
 
 <div class="indexliste">
 
+
+[Beschreibung des Rumex Baukastens](beschreibung.html)
+======================================================
+
+<p class="datum">Letzte Bearbeitung: 2013-09-13</p>
+
+
+Hier findest du die Beschreibung des rumex Baukastens.
+Zur Zeit ist hier noch vieles durcheinander da ich
+mehr am System als an der Beschreibung bastle.
+Du kannst aber schon mal gerne rein schauen.
+
+
+[... Seite öffnen](beschreibung.html)
+
+
+</div>
+
+
+
+<div class="indexliste">
+
 [Historie](historie.html)
 ======================================================
 
-<p class="datum">Letzte Bearbeitung: 2013-09-12</p>
+<p class="datum">Letzte Bearbeitung: 2013-09-11</p>
 
 
 ## V0.8.0
@@ -171,28 +191,6 @@ soll dieser Beitrag zeigen.
 
 
 [... Seite öffnen](historie.html)
-
-
-</div>
-
-
-
-<div class="indexliste">
-
-
-[Beschreibung des Rumex Baukastens](beschreibung.html)
-======================================================
-
-<p class="datum">Letzte Bearbeitung: 2013-09-09</p>
-
-
-Hier findest du die Beschreibung des rumex Baukastens.
-Zur Zeit ist hier noch vieles durcheinander da ich
-mehr am System als an der Beschreibung bastle.
-Du kannst aber schon mal gerne rein schauen.
-
-
-[... Seite öffnen](beschreibung.html)
 
 
 </div>
