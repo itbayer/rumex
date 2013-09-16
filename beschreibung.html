@@ -154,17 +154,18 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li>pandoc</li>
 <li>imagemagick</li>
 <li>wget</li>
-<li><p>wput</p></li>
+<li><del>wput</del></li>
+<li><p>sitecopy</p></li>
 <li><p>vim (g)vim</p></li>
 <li><p>texlive</p></li>
 </ul>
 <p>Wobei <code>bash</code>, <code>make</code> und <code>perl</code> eigentlich bei jeder <code>*nix</code> Installation bereits vorhanden sein dürft. Die restlichen Programme müssen nach installiert werden.</p>
 <p>Wer mit dem Editor <code>vim</code> zurecht kommt sollte sich auch <code>(g)vim</code> installieren. Rumex besitzt eine <code>gvim</code> Erweiterung die, die Arbeit bzw. die Suche nach dem richtigen Befehl am Anfang um einiges erleichtert.</p>
 <p><code>texlive</code><sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> wird nur gebraucht wenn man auch PDF Dateien erstellen möchte.</p>
-<p><code>wput</code> wird nur gebraucht wenn man die Daten per FTP hoch laden möchte.</p>
+<p><del><code>wput</code></del> <code>sitecopy</code> wird nur gebraucht wenn man die Daten per FTP hoch laden möchte.</p>
 <pre><code>sudo apt-get install make perl
 
-sudo apt-get install git-core wget wput pandoc imagemagick
+sudo apt-get install git-core wget sitecopy pandoc imagemagick
 
 sudo apt-get install gvim
 

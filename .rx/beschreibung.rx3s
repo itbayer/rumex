@@ -67,7 +67,8 @@ Auf diesem sollten folgende Programme installiert sein:
 - pandoc
 - imagemagick
 - wget
-- wput
+- ~~wput~~
+- sitecopy
 
 - vim (g)vim
 
@@ -80,11 +81,11 @@ Wer mit dem Editor `vim` zurecht kommt sollte sich auch `(g)vim` installieren. R
 
 `texlive`[^texlive] wird nur gebraucht wenn man auch PDF Dateien erstellen möchte.
 
-`wput` wird nur gebraucht wenn man die Daten per FTP hoch laden möchte.
+~~`wput`~~ `sitecopy` wird nur gebraucht wenn man die Daten per FTP hoch laden möchte.
 
 	sudo apt-get install make perl
 
-	sudo apt-get install git-core wget wput pandoc imagemagick
+	sudo apt-get install git-core wget sitecopy pandoc imagemagick
 
 	sudo apt-get install gvim
 
