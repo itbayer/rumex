@@ -7,6 +7,13 @@
 ======================================================
 -->
 
+## V0.8.1
+
+- Kleine Anpassungen am Layout
+- `wput` wurde durch `sitecopy` ersetzt
+
+
+<!-- schnipp -->
 
 ## V0.8.0
 
@@ -16,7 +23,6 @@
 - Twitter Unterstützung
 
 
-<!-- schnipp -->
 
 ## V0.7.0 - V0.7.9
 
@@ -113,13 +119,6 @@ Geschützt werden die Verzeichnisse:
 - rumex
 
 
-
-<https://github.com/itbayer/rumex/archive/0.4.7.zip>
-
-
-
-
-
 ## V0.4.5
 
 Rumex wurde um ein Installationsskript erweitert. 
@@ -133,7 +132,6 @@ Die Installation beschränkt sich nun auf folgende Schritte
 - `make all`
 - `make show`
 	
-<https://github.com/itbayer/rumex/archive/0.4.5.zip>
 
 
 
@@ -144,7 +142,6 @@ Umbau der Seiten Struktur \
 - make Steuerdatei in das Unterverzeichnis rumex verlagert \
 - Dateiendungen der Quelldateien von `md??` nach `rx??` geändert \
 	
-<https://github.com/itbayer/rumex/archive/0.4.0.zip>
 
 
 ## V0.3.7
@@ -154,7 +151,6 @@ Erstellt wird dabei eine einfache Liste im
 Format markdown `md0v`, die schlussendliche dann
 nach HTML gewandelt wird.
 
-<https://github.com/itbayer/rumex/archive/0.3.7.zip>
 
 
 ## V0.3.6
@@ -169,7 +165,6 @@ in den Header der html Datei geschrieben.
 Verzeichnis Struktur umgebaut.
 Dateien aus `inc` nach `bin` verlagert.
 	
-<https://github.com/itbayer/rumex/archive/0.3.6.zip>
 
 
 
@@ -203,27 +198,23 @@ Die Höhe wird entsprechend von `ImageMagick` berechnet.
 	convert bilder/404.png -resize 600x bilder/404_600_.png
 	convert bilder/404.png -resize 800x bilder/404_800_.png
 		
-<https://github.com/itbayer/rumex/archive/0.3.5.zip>
 
 
 ## V0.3.4
 
 Das Seiten Layout bekommt ein eigenes Verzeichnis.
 
-<https://github.com/itbayer/rumex/archive/0.3.4.zip>
 
 ## V0.3.3
 
 Versions Vermerk eingebaut. \
 `<meta name="generator" content="pandoc rumex VERSION">`
 	
-<https://github.com/itbayer/rumex/archive/0.3.3.zip>
 
 ## V0.3.2
 
 `sitemap.xml` wurde eingebaut.
 	
-<https://github.com/itbayer/rumex/archive/0.3.2.zip>
 	
 
 ## V0.3.1
@@ -234,14 +225,12 @@ Einstellungen optimiert.
 <p><a href="http://feed1.w3.org/check.cgi?url=http%3A//www.it-bayer.de/rumex/rss.xml"><img src="http://validator.w3.org/feed/images/valid-rss-rogers.png" alt="[Valid RSS]" title="Validate my RSS feed" /></a></p>
 <p><a href="http://www.w3.org/html/logo/"> <img src="http://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="63" height="64" alt="HTML5 Powered" title="HTML5 Powered"></a></p> 
 	
-<https://github.com/itbayer/rumex/archive/0.3.1.zip>
 
 
 ## V0.3
 
 Der Baukasten wurde um die RSS Feed Funktion erweitert.
 	
-<https://github.com/itbayer/rumex/archive/0.3.zip>
 
 
 ## V0.2
@@ -249,7 +238,6 @@ Der Baukasten wurde um die RSS Feed Funktion erweitert.
 Steuerung der Inhaltsverzeichnis Einbindung durch
 Dateinamen Endungen.
 	
-<https://github.com/itbayer/rumex/archive/0.2.zip>
 
 
 ## V0.1
@@ -257,7 +245,6 @@ Dateinamen Endungen.
 Version 0.1 ist fertig. Hat zwar hoch nicht viel Funktionen
 aber der Baukasten funktioniert schon.
 	
-<https://github.com/itbayer/rumex/archive/0.1.zip>
 
 
 -----------------------------------------------------------

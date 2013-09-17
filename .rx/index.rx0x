@@ -12,7 +12,7 @@ wo auch diese Seite zu finden ist aber auch auf Servern
 mit git Unterstützung oder mit einem einfachen FTP Zugang
 kann dieses System verwendet werden.
 
-* [Rumex auf github (diese Seite)](http://it-bayer.de/rumex/)
+* [Rumex auf github (diese Seite)](http://www.it-bayer.de/rumex/)
 * [Rumex auf einem Server mit git Unterstützung](http://rumex.it-bayer.de)
 * [Rumex auf einem Server mit FTP Zugang](http://rumex.html-5.me) 
 
@@ -176,6 +176,26 @@ soll dieser Beitrag zeigen.
 
 <div class="indexliste">
 
+[Historie](historie.html)
+======================================================
+
+<p class="datum">Letzte Bearbeitung: 2013-09-17</p>
+
+## V0.8.1
+
+- Kleine Anpassungen am Layout
+- `wput` wurde durch `sitecopy` ersetzt
+
+
+[... Seite öffnen](historie.html)
+
+
+</div>
+
+
+
+<div class="indexliste">
+
 
 [Beschreibung des Rumex Baukastens](beschreibung.html)
 ======================================================
@@ -190,29 +210,6 @@ Du kannst aber schon mal gerne rein schauen.
 
 
 [... Seite öffnen](beschreibung.html)
-
-
-</div>
-
-
-
-<div class="indexliste">
-
-[Historie](historie.html)
-======================================================
-
-<p class="datum">Letzte Bearbeitung: 2013-09-13</p>
-
-
-## V0.8.0
-
-~~Beta Test Phase.~~ Beta wurde gestrichen weil zwei neuen Erweiterungen eingebaut wurden.
-
-- tilda Unterstützung
-- Twitter Unterstützung
-
-
-[... Seite öffnen](historie.html)
 
 
 </div>
