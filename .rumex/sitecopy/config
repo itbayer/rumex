@@ -1,0 +1,16 @@
+site rumex
+  server dein.server.tdl
+  username Benutzername
+  password PASSWORT
+  local /home/USER/rumex-gh-pages/
+  remote /
+  port 21
+  exclude .rx
+  exclude .rumex
+  exclude .git
+  exclude .gitignore
+  exclude *~
+  exclude *.bak
+  exclude *.swp
+
+  

@@ -1,18 +1,22 @@
 # github HomePage Sand(Bau)kasten
 
 
-Ziel des Projektes ist es eine Homepage die auf [github.com](http://github.com) 
-gehostet werden kann zu erstellen.
+Ziel des Projektes ist es einen einfachen Homepage Baukasten zur Verfügung zu stellen.
 Als Seiten Sprache wird `pandocs markdown` verwendet.
-Die Steuerung des Systems übernimmt `make` und `perl`.
+Die Steuerung des Systems übernimmt `make`, `bash` und `perl`.
+Für Seiten die nicht auf github gehostet werden
+übernimmt `sitecopy` den Upload per FTP.
 
-Den aktuelle Stand kann sich auf 
+Den aktuelle Stand kann man sich auf 
 [www.it-bayer.de/rumex](http://www.it-bayer.de/rumex) 
 ansehen.
 
 ## Newsletter
 
-Rumex besitzt eine RSS Feed Funktion der [über diesern Link](http://www.it-bayer.de/rumex/rss.xml) abonnieren werden kann.
+Rumex besitzt auch eine RSS Feed Funktion.
+Den RSS Feed des Rumex Baukastens kann man 
+[über diesern Link](http://www.it-bayer.de/rumex/rss.xml) 
+abonnieren.
 
 ## Kurz Übersicht 
 
@@ -38,12 +42,19 @@ aus ein paar `CSS` Anpassungen.
 ### Hosting
 
 Das Hosting der Seite übernimmt [github.com](http://github.com).
-Die HTML Dateien funktionieren aber auf jedem andern Server,
-siehe [rumex.html-5.me](http://rumex.html-5.me).
+Das Hosting auf einem Server mit FTP Zugang funktionieren auch
+siehe [rumex.html-5.me](http://rumex.html-5.me) und [localstuff.zxq.net](http://localstuff.zxq.net/)
 
 Wer einen Server mit installiertem `git` sein eigen nennt 
 kann Rumex auch auf diesen installieren. 
 Eine Beschreibung dazu findet man auf [rumex.it-bayer.de](http://rumex.it-bayer.de).
+
+### Twitter
+
+Eine Twitter Funktion ist auch eingebaut. 
+Diese funktioniert mit (g)vim und dem Programm ttytter.pl.
+Mit dieser Funktion können Texte, die in (g)vim geschrieben wurden 
+über eine Kurztaste an twitter gesendet werden.
 
 ### System Voraussetzung
 

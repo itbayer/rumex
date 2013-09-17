@@ -29,14 +29,14 @@ all:
 
 
 # ######################################################
-# Seite online stellen. Wenn die FTP Variable in config.mk
-# gesetzt ist wird wput.sh verwenden, sonst git.
+# Seite online stellen. Wenn die SITECOPY Variable in config.mk
+# gesetzt ist wird sitecopy verwenden, sonst git.
 online:
 	make -s all
 	git add ../.
 	git commit -a -m"...."
-ifdef FTP
-	../.rumex/bin/wput.sh $(FTP)
+ifdef SITECOPY
+	$(SITECOPY) -r ../.rumex/sitecopy/config -p ../.rumex/sitecopy/cache/ --update rumex
 else
 	git push
 endif

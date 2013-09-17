@@ -68,12 +68,9 @@ FAVICON = "favicon.gif"
 
 
 # #####################################################
-# FTP URL / Zugangsdaten. Ist diese Variabel gesetzt wird das 
-# Programm wput bzw. bin/wput.sh verwendet um die Daten auf
-# den Server zu laden. Wenn die Variabel kommentiert ist (Standard)
-# wird git verwendet.
+# FTP Upload Funktion mit sitecopy
 #
-# FTP = "ftp://USER:PASS@SERVER:PORT/WWW_DIR/"
+#SITECOPY = /usr/bin/sitecopy
 
 
 

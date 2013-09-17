@@ -52,15 +52,23 @@ if ((i)); then
 	
 	echo ""
 	echo "....jetzt noch aufräumen..."
-	# Update Daten
+
+	# Update Daten loeschen
 	rm -f ../.rumex/tmp/rumex.tar.gz
 	rm -fr ../.rumex/tmp/rumex-gh-pages
 
+
+	# Alte Dateien aus vorherigen Versionen loeschen
+	# ----------------------------------------------------------------------
 	# Datei blind.png loeschen -- Update bis 0.8.0
 	[ -e ../rxtpl/img/blind.png ] && rm -f ../rxtpl/img/blind.png
 	# Dateien im /bin Verzeichnis loeschen -- Update bis 0.8.1
 	[ -e ../.rumex/bin/rumex.sh ] && rm -f ../.rumex/bin/rumex.sh
 	[ -e ../.rumex/bin/update_robots.txt.pl ] && rm -f ../.rumex/bin/update_robots.txt.pl
+	# wput.sh loeschen -- Update bis 0.8.1
+	[ -e ../.rumex/bin/wput.sh ] && rm -f ../.rumex/bin/wput.sh
+	# ttytter.pl loeschen -- Update bis 0.8.1 (wurde nach tmp verschoben
+	[ -e ../.rumex/bin/ttytter.pl ] && rm -f ../.rumex/bin/ttytter.pl
 	
 
 	echo ""
