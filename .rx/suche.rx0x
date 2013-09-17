@@ -10,7 +10,7 @@ Auf dieser Seite wurde die [JavaScript Suche](http://derletztekick.com/javascrip
 Die Suche ermöglicht per AJAX die Seiten von Rumex nach Begriffen zu durchsuchen.
 
 Gefundene Seiten werden dann noch einmal durch eine JavaScript gejagt.
-Dieses sorgt dafür dass das gesuchte Wort hervorgehoben wird.
+Welches die gesuchten Worte farblich kennzeichnet.
 Der Grundcode für die Markierung der Wörter stammt von der Seite
 <http://james.padolsey.com/javascript/highlighting-text-with-javascript/>.
 

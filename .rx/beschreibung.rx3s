@@ -670,64 +670,38 @@ Diese beiden bash Scripte müssen anschließend noch angepasst werden.
 ### Shell Scripte
 
 Die Scripte starten zum einem `tilda` und zum anderem übergeben sie `tilda` die Kommandos 
-die dafür sorgen dass `vim` den richtigen Rumex Ordner öffnet.
+die dafür sorgen `vim` im richtigen Rumex Ordner zu öffnet.
 Installiert werden können diese Scripte im `~/bin` oder `/usr/local/bin/` Verzeichnis.
 
 
 
-#### rxt-rumex.sh
+#### rumex-tilda.sh
 
-Die Datei `rxt-rumex.sh` starte tilda und übergibt der tilda Shell
-die Befehle um den Rumex Baukasten zu starten, siehe [rumex.tilda.sh](#rumex.tilda.sh).
-Dieser Befehl ist der eigentliche tilda Startbefehl.
-
-Noch ein Wort zum Dateinamen \
-`rxt` steht für **R**ume**XT**ilda und `-rumex` steht für für dem Baukasten.
-Somit ist es möglich mehrere tilda Sitzungen zu erstellen.
-Beispiel: `rxt-meineSeite.sh` oder `rxt-andereSeite.sh`.
+Die Datei `rumex-tilda.sh` starte tilda und übergibt der tilda Shell
+die Befehle um den Rumex Baukasten zu starten, siehe [rumex.vim.sh](#rumex.vim.sh).
 
 ~~~
 #!/bin/bash
 
-/usr/bin/tilda -c  ~/bin/rumex.tilda
+/usr/bin/tilda -c  ~/bin/rumex-vim.sh
 ~~~
 
 
 
-#### rumex.tilda.sh
+#### rumex-vim.sh
 
-Die Datei `rumex.tida.sh` ist der eigentliche Aufruf des Rumex Baukastens
-und wird von tilda ausgeführt.
-Der Name wurde wieder so gewählt dass man unterschiedliche Baukasten
-verwenden kann. `rumex` Baukastenname `.tilda` wird von tilda verwendet.
-Natürlich kann an dieses Programm auch ohne Tilda, in einer Shell, starten.
-
-~~~
- #!/bin/bash
+Mit dem Befehl `rumex-vim.sh` wird der  Rumex Baukastens aufgerufen.
+Dieser Befehl wird unter anderem auch von `rumex-tilda.sh` verwendet.
+`rumex-vim.sh` kann natürlich auch in einem Shellfenster 
+ausgeführt werden.
 
 
- # Pfad 
-PFAD=~/sbgit/github/rumex
+#### rumex-gvim.sh
 
- # moot.it Konto Name
-MOOTIT="rumex"
+Mit dem Befehl `rumex-gvim.sh` wird der Rumex Baukasten mit dem 
+Editor gvim gestartet.
 
- # VIM
-VIM=/usr/bin/vim
 
- # Verzeichnis wechseln
-cd $PFAD/.rx
-
- # Repository neu landen / aktualisieren
- # Diesen Schritt muss man eigentlich nicht machen
- # da ich aber an verschiedenen Rechnern Rumex bearbeite
- # und es mir schon oft passiert ist diese Befehl zu vergessen
- # wurde dieser hier eingebaut.
-git pull
- 
- # VIM mit rumex Erweiterung laden
-$VIM -S ../.rumex/bin/rumex.vim -c ":let mootit_konto='$MOOTIT'"
-~~~
 
 ## Tilda einrichten
 
