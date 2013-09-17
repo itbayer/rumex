@@ -42,7 +42,7 @@ body {
  * Muss gemacht werden da die Quelltextbox sonst in die darüber
  * liegende Zeile ragt.
  */
-p, ul, dd {
+p, ul, dd, div.weblog {
 	line-height: 1.4em;
 }
 

@@ -5,6 +5,7 @@ html, body {
 	padding: 0px;
 }
 
+
 body{
 	width: 1000px;
 	/* margin: 0 auto; */
@@ -76,4 +77,15 @@ header, nav, #seite {
  */
 .is-threaded, .is-commenting {
 	max-width: 90% !important;
+}
+
+/* Markierung mit der Maus verändern */
+::-moz-selection { 
+	background: #cf0000; 
+	color: #ffffff; 
+}
+
+::selection { 
+	background: #cf0000; 
+	color: #ffffff; 
 }
