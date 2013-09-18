@@ -176,6 +176,26 @@ soll dieser Beitrag zeigen.
 
 <div class="indexliste">
 
+[Historie](historie.html)
+======================================================
+
+<p class="datum">Letzte Bearbeitung: 2013-09-18</p>
+
+## V0.8.1
+
+- Kleine Anpassungen am Layout
+- `wput` wurde durch `sitecopy` ersetzt
+
+
+[... Seite öffnen](historie.html)
+
+
+</div>
+
+
+
+<div class="indexliste">
+
 
 
 
@@ -192,26 +212,6 @@ Du kannst aber schon mal gerne rein schauen.
 
 
 [... Seite öffnen](beschreibung.html)
-
-
-</div>
-
-
-
-<div class="indexliste">
-
-[Historie](historie.html)
-======================================================
-
-<p class="datum">Letzte Bearbeitung: 2013-09-18</p>
-
-## V0.8.1
-
-- Kleine Anpassungen am Layout
-- `wput` wurde durch `sitecopy` ersetzt
-
-
-[... Seite öffnen](historie.html)
 
 
 </div>

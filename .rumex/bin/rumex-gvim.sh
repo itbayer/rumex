@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Pfad zur Rumex Installation
-PFAD=~/sbgit/github/rumex
+#PFAD=~/sbgit/github/rumex
+# Pfad auslesen um symbolische Links verwenden zu können
+PFAD=`readlink -f $0| perl  -ne 'chop; $_ =~ m/(.*)\/\.rumex.*/; print $1;'`
 
 # moot.it Konto Name
 MOOTIT="rumex"
