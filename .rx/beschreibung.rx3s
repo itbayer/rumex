@@ -2,6 +2,8 @@
 % 
 % 
 
+
+
 <!--
 
 [Beschreibung des Rumex Baukastens](beschreibung.html)
@@ -615,6 +617,20 @@ Zur Zeit werden folgende `pandoc` Formatierungen unterstützt.
  Zusätzlich ist diese Datei auch als `rss.html` unter 
  <http://www.it-bayer.de/rumex/rss.html> verfügbar.
 ~~~
+
+# Rumex auf einem USB Stick
+
+Rumex kann auch auf einem USB Stich installiert werden.
+Der Stick muss aber ein Dateiformat besitzt   
+welches mit Dateirechte und Symbolische Links umgehen kann.
+
+USB Sticks im VFAT Format funktionieren nicht. 
+Man kann zwar die Daten darauf ablegen.
+Das Arbeiten über den Stick funktioniert nicht.
+Auch wenn man die Daten, von einem VFAT Stick, auf ein *nix System kopiert
+werden muss händisch nach gebessert werden.
+
+LinkTipp: [USB Stick unter Linux verschlüsseln](http://www.it-bayer.de/usb-stick.html?suchwort=versch#usb-stick-unter-linux-verschl%C3%BCsseln)
 
 # make Steuerung
 

@@ -123,12 +123,10 @@ Als Kennzeichnung wird der Dateiname ohne `rx??` eingebaut / angehängt.
 ~~~
 
 
-## ,rku 
 
-Öffnet das Unterverzeichnis `.rx` in einem neuen VimTab Fenster.
-Keine Ahnung warum ich diese Kurztaste so benannt habe.
 
-## .rnb (RumexNeuenweBlog)
+
+## ,rnb (RumexNeuenweBlog)
 
 Erstelle einen neuen Weblog Eintrag.
 
@@ -144,30 +142,43 @@ Text der vorerst ausgeblendet ist.
 </div>
 ~~~
 
---------------------------------------------
 
-,rgp (RumexGitPull)
-:	Git pull
 
-,rgs (RumexGitStatus)
-:	Git status
 
---------------------------------------------
+# Git Kommandos
 
-,rff
-:	Markierte Textstelle fett darstellen
+## ,rgp (RumexGitPull)
 
-,rfk
-:	Markierte Textstelle kursiv darstellen
+Git pull
 
-,rfl
-:	Markierte Zeilen in eine Liste wandeln
+## ,rgs (RumexGitStatus)
 
-,rfn
-:	Markierte Zeile in eine Nummernliste wandeln
+Git status
 
-,rfb
-:	Markierte Zeile in einen Block wandeln
+
+
+
+# Text Formatierung
+
+## ,rff (RumexFormatFett)
+
+Markierte Textstelle fett darstellen
+
+## ,rfk (RumexFormatKursiv)
+
+Markierte Textstelle kursiv darstellen
+
+## ,rfl (RumexFormatListe)
+
+Markierte Zeilen in eine Liste wandeln
+
+## ,rfn (RumexFormatNummernliste)
+
+Markierte Zeile in eine Nummernliste wandeln
+
+## ,rfb (RumexFormatBlock)
+
+Markierte Zeile in einen Block wandeln
 
 ,rfc
 :	Markierte Zeile als Code darstellen
@@ -181,76 +192,100 @@ Text der vorerst ausgeblendet ist.
 ,spn4
 :	Text mit 4er Spalten Formatierung umschließen 
 
------------------------------------------------------
-
-,rma
-:	Speichert alle offenen Dokumente und erstellt daraus die HTML Datei.
-
-,rmb
-:	Erstellt die unterschiedlichen Bildgrößen 
-
--------------------------------------------------------
 
 
-,rmca
-:	Löscht alle html Dateien, alle Bildergrößen und alle xml Dateien.
-	beinhaltet die drei Befehle `make bclean`, `make hclean`, `make xclean`.
 
-,rmcb
-:	Löscht alle Bildgrößen aus dem `bilder/` Verzeichnis.
-	Es werden nur die Bilder gelöscht die von Rumex erstellt wurden
-	siehe `make bilder`.
+# Make Befehle
 
-,rmch
-:	Löscht alle `.html` Dateien die von Rumex erstellt wurden.
 
-,rmcx
-:	Löscht alle `.xlm` Dateien die von Rumex erstellt wurden.
+## ,rma (RumexMakeAll)
 
----------------------------------------------------------
+Speichert alle offenen Dokumente und erstellt daraus die HTML Datei.
 
-,rmh
-:	Erstellt die `.html` Dateien.
+## ,rmb (RumexMakeBild)
 
-,rmi
-:	Erstellt die index Datei.
+Erstellt die unterschiedlichen Bildgrößen 
 
-,rmm
-:	Erstellt die sitemap Datei.
+## ,rmca (RumexMakeCleanAll)
 
---------------------------------------------------------
+Löscht alle html Dateien, alle Bildergrößen und alle xml Dateien.
+beinhaltet die drei Befehle `make bclean`, `make hclean`, `make xclean`.
 
-,rmo
-:	Speichert alle Dateien und stellt diese online.
+## ,rmcb (RumexMakeCleanBilder)
 
--------------------------------------------------------
+Löscht alle Bildgrößen aus dem `bilder/` Verzeichnis.
+Es werden nur die Bilder gelöscht die von Rumex erstellt wurden
+siehe `make bilder`.
 
-,rmr
-:	Erstellt die rss Datei.
+## ,rmch (RumexMakeCleanHtml)
 
-,rms
-:	Erstellt die Rumex Suche, bzw. die Dateiliste die für
-	die Suche verwendet werden soll.
+Löscht alle `.html` Dateien die von Rumex erstellt wurden.
 
-,rsf
-:	Zeigt eine Vorschau der Seite der Datei `file:///` im Standardbrowser.
+## ,rmcx (RumexMakeCleanXml)
 
-,rsw
-:	Zeigt eine Vorschau der Seite **Online** im Standardbrowser.
+Löscht alle `.xlm` Dateien die von Rumex erstellt wurden.
 
-,rsl
-:	Zeigt eine Vorschau der Seite auf dem eigenen Rechner.
-	Diese Kurztaste kann aber nur verwendet werden wenn auf dem 
-	Rechner der Apache installiert und entsprechend eingerichtet ist.
 
------------------------------------------------------------
+## ,rmh (RumexMakeHtml)
 
-,ros
-:	Öffnet die `start.rx0s` in einen neuen VIM Tab Fenster.
+Erstellt die `.html` Dateien.
 
-.ror
-:	Öffnet die `rss.rx0x` in einen neuen VIM Tab Fenster.
+## ,rmi (RumexMakeIndex)
 
+Erstellt die index Datei.
+
+## ,rmm (RumexMakesiteMap)
+
+Erstellt die sitemap Datei.
+
+
+## ,rmo (RumexMakeOnline)
+
+Speichert alle Dateien und stellt diese online.
+
+
+## ,rmr (RumexMakeRss)
+
+Erstellt die rss Datei.
+
+## ,rms (RumexMakeSuche)
+
+Erstellt die Rumex Suche, bzw. die Dateiliste die für
+die Suche verwendet werden soll.
+
+# Vorschau
+
+## ,rsf (RumexShowFile)
+
+Zeigt eine Vorschau der Seite der Datei `file:///` im Standardbrowser.
+
+## ,rsw (RumexShowWww)
+
+Zeigt eine Vorschau der Seite **Online** im Standardbrowser.
+
+## ,rsl (RumexShowLocal)
+
+Zeigt eine Vorschau der Seite auf dem eigenen Rechner.
+Diese Kurztaste kann aber nur verwendet werden wenn auf dem 
+Rechner der Apache installiert und entsprechend eingerichtet ist.
+
+
+
+
+# Sonstiges
+
+## ,rku 
+
+Öffnet das Unterverzeichnis `.rx` in einem neuen VimTab Fenster.
+Keine Ahnung warum ich diese Kurztaste so benannt habe.
+
+## ,ros (RumexOpenStart)
+
+Öffnet die `start.rx0s` in einen neuen VIM Tab Fenster.
+
+## ,ror (RumexOpenRss)
+
+Öffnet die `rss.rx0x` in einen neuen VIM Tab Fenster.
 
 
 
