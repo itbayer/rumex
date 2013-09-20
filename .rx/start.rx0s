@@ -24,6 +24,38 @@ der Seite <http://www.hochfelder.de>[^hochfelder_unterseiten] verwendet.
 
 
 
+# Rumex Startdateien einfach mit Symlinks 
+
+_Am 20.09.2013 um 07:47 schrieb IT-Bayer_
+
+Die Rumex (g)vim Unterstützung `rumex-gvim`, `rumex-vim` und
+auch `rumex-tilda` können jetzt als symbolischer Link erstellt 
+werden. Die erforderlichen Einstellungen werden aus der
+`.rx/config.mk` gelesen.
+
+<div class="weblog">
+Die `.rx/config.mk` hat dazu zwei neuen Parameter bekommen.
+
+~~~
+#  Autor für den Weblog Eintrag
+WEBLOGAUTOR = "IT-Bayer"
+
+
+# Bildname für das Seitenbanner
+SEITENBANNER = "rxtpl/img/rumex.png"
+~~~
+
+Diese Parameter werden von den Startdateien eingebunden so dass
+die einzelnen Bashskripte nicht mehr angepasst werden müssen.
+Es reicht ein
+
+	ln -s ~/rumex-gh-pages/.rumex/bin/rumex-gvim.sh ~/bin/rumex-gvim
+
+um die Startdatei für Rumex zu erstellen. Verzeichnisse und 
+Parameter werden beim Starten automatisch ermittelt und gesetzt.
+</div>
+
+
 
 # Rumex FTP Unterstüzung jetzt mit sitecopy 
 

@@ -1,36 +1,45 @@
 # #############################################
-# .rumex/user/config.makefile
+# .rx/config.mk
 #
 # SEITEN EINSTELLUNG :: Bitte anpassen!
 #
+# Weitere Einstellungen findet man in der 
+# ../.rumex/makefile/config.mk
+# 
 # #############################################
 
+
+# ----------------------------------------------------
 # URL der Seite : ohne abschließenden /
 URL="http://www.it-bayer.de/rumex"
 
+
+# ----------------------------------------------------
 # Überschriften für die Index Seite
 U1="IT Bayer's rumex"
 U2="Der(Ein) HomePage Sand(Bau)kasten" 
 U3="github.com Version"
 
+
+# ----------------------------------------------------
 # RSS Überschrift
 RSS_TITEL = "Neuigkeiten von rumex Baukasten"
 
-# CSS
-CSSALL = "rxtpl/css/all.css"
-CSSSCREEN = "rxtpl/css/screen.css"
-CSSPRINT = "rxtpl/css/print.css"
 
-# Bild für das Seitenbanner
-SEITENBANNER = "rxtpl/img/rumex.png"
-
-
+# ----------------------------------------------------
 # Schalter ob das externe Tool von moot.it eingebunden werden soll
-# ... wenn nicht einen leeren Parameter definieren.
+# Man sollte hier den Kontonamen angeben..
+# Wird moot.it nicht verwendet, den Parameter kommentieren. 
 MOOTIT = "rumex"
 
-# Rumexsuche
-RUMEXSUCHE = "rxtpl/js"
+
+# ----------------------------------------------------
+#  Autor für den Weblog Eintrag
+WEBLOGAUTOR = "IT-Bayer"
+
+
+# Bildname für das Seitenbanner
+SEITENBANNER = "rxtpl/img/rumex.png"
 
 
 # ##############################################################
