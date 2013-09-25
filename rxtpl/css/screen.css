@@ -89,3 +89,20 @@ header, nav, #seite {
 	background: #cf0000; 
 	color: #ffffff; 
 }
+
+/* Navigation Fuss */
+
+#fussnav {
+	position: fixed;
+	bottom:3px;
+	left:1px;
+	background-color: silver;
+	min-height: 100px;
+	min-width: 90px;
+	opacity: 0.5;
+	padding: 0 3px;
+	font-size: 0.7em;
+	box-shadow: 4px 4px 4px silver;
+	border: 1px solid #a0a0a0;
+}
+
