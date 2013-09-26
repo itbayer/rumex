@@ -93,16 +93,19 @@ header, nav, #seite {
 /* Navigation Fuss */
 
 #fussnav {
-	position: fixed;
-	bottom:3px;
-	left:1px;
 	background-color: silver;
-	min-height: 100px;
-	min-width: 90px;
-	opacity: 0.5;
-	padding: 0 3px;
+	border: 1px solid #A0A0A0;
+	border-radius: 24px 0 24px 0;
+	bottom: 4px;
+	box-shadow: 4px 4px 4px gray;
 	font-size: 0.7em;
-	box-shadow: 4px 4px 4px silver;
-	border: 1px solid #a0a0a0;
+	left: 4px;
+	min-height: 100px;
+	min-width: 56px;
+	opacity: 0.5;
+	padding: 8px 8px 0 4px;
+	position: fixed;
+	text-align: right;
+	z-index: 100;
 }
 
