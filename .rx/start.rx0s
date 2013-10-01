@@ -13,6 +13,7 @@ kann dieses System verwendet werden.
 * [Rumex auf github (diese Seite)](http://www.it-bayer.de/rumex/)
 * [Rumex auf einem Server mit git Unterstützung](http://rumex.it-bayer.de)
 * [Rumex auf einem Server mit FTP Zugang](http://rumex.html-5.me) 
+* [Rumex auf einem host1free.com Server mit git Unterstützung](http://5.231.70.214)
 
 Der aktuelle Stand dieses Baukastens kann als [ZIP Datei herunter geladen](https://github.com/itbayer/rumex/archive/gh-pages.zip) werden.
 
@@ -22,6 +23,32 @@ der Seite <http://www.hochfelder.de>[^hochfelder_unterseiten] verwendet.
 [^hochfelder_unterseiten]: Und deren Unterseiten <http://gedanken.hochfelder.de> und <http://zettel.hochfelder.de> 
 
 
+# Rumex auf einem host1free.com Server
+
+_Am 01.10.2013 um 19:14 schrieb IT-Bayer_
+
+Heute wurde Rumex auf einem [host1free.com](http://www.host1free.com)
+Server installiert.
+Eine weitere Testumgebung für Rumex.
+<div class="weblog">
+Den Server bei [host1free.com](http://www.host1free.com) habe ich mir schon vor einiger Zeit[^host1free_bestellung] bestellt. Leider wollte er am Anfang nicht so wie er sollte. 
+Dank des Supports von _Joseph_ ging es dann aber schnell und
+Rumex konnte eingerichtet werden.
+
+[^host1free_bestellung]: Der Server wurde schon Anfang August 2013 freigeschaltet.
+
+Erreichbar ist der Server zur Zeit nur unter seiner IP Adresse
+<http://5.231.70.214>.
+Es wird also noch ein Domainname gebraucht.
+Mal schauen wie ich das umsetzen.
+
+Die Geschwindigkeit des Server mit seinen `128MB RAM` ist bei
+Rumex völlig ausreichend.
+Muss ja nur `HTML` Dateien ausliefern.
+
+Interessant wir noch wie zuverlässig der Server ist.
+
+</div>
 
 
 # Rumex Startdateien einfach mit Symlinks 
