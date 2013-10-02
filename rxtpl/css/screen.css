@@ -93,7 +93,7 @@ header, nav, #seite {
 /* Navigation Fuss */
 
 #fussnav {
-	background-color: silver;
+	background-color: #F2F2F2;
 	border: 1px solid #A0A0A0;
 	border-radius: 24px 0 24px 0;
 	bottom: 4px;
@@ -102,7 +102,9 @@ header, nav, #seite {
 	left: 4px;
 	min-height: 100px;
 	min-width: 56px;
-	opacity: 0.5;
+/* ausgeschaltet, macht sich in der Fusszeile nicht so gut
+ * opacity: 0.5;
+ */
 	padding: 8px 8px 0 4px;
 	position: fixed;
 	text-align: right;
