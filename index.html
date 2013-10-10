@@ -61,6 +61,7 @@
 </header>
 <div id="seite">
 <div class="indexliste">
+
 <p>Dies ist ein Projekt das mit <code>pandoc's markdown</code> und ein paar Skripten eine Internetseite erstellt und verwalten.</p>
 <p>Gehostet werden kann diese auf <a href="http://github.com">github.com</a> wo auch diese Seite zu finden ist aber auch auf Servern mit git Unterstützung oder mit einem einfachen FTP Zugang kann dieses System verwendet werden.</p>
 <ul>
@@ -71,7 +72,7 @@
 </ul>
 <p>Der aktuelle Stand dieses Baukastens kann als <a href="https://github.com/itbayer/rumex/archive/gh-pages.zip">ZIP Datei herunter geladen</a> werden.</p>
 <p>Aktuell wird dieser Baukasten auch auf der Seite <a href="http://www.it-bayer.de">http://www.it-bayer.de</a> und auf der Seite <a href="http://www.hochfelder.de">http://www.hochfelder.de</a><sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> verwendet.</p>
-<h1>Rumex auf einem host1free.com Server</h1>
+<h1 id="rumex-auf-einem-host1free.com-server">Rumex auf einem host1free.com Server</h1>
 <p><em>Am 01.10.2013 um 19:14 schrieb IT-Bayer</em></p>
 Heute wurde Rumex auf einem <a href="http://www.host1free.com">host1free.com</a> Server installiert. Eine weitere Testumgebung für Rumex.
 <div class="weblog">
@@ -80,7 +81,10 @@ Heute wurde Rumex auf einem <a href="http://www.host1free.com">host1free.com</a>
 <p>Die Geschwindigkeit des Server mit seinen <code>128MB RAM</code> ist bei Rumex völlig ausreichend. Muss ja nur <code>HTML</code> Dateien ausliefern.</p>
 <p>Interessant wir noch wie zuverlässig der Server ist.</p>
 </div>
-<h1>Rumex Startdateien einfach mit Symlinks</h1>
+
+
+
+<h1 id="rumex-startdateien-einfach-mit-symlinks">Rumex Startdateien einfach mit Symlinks</h1>
 <p><em>Am 20.09.2013 um 07:47 schrieb IT-Bayer</em></p>
 <p>Die Rumex (g)vim Unterstützung <code>rumex-gvim</code>, <code>rumex-vim</code> und auch <code>rumex-tilda</code> können jetzt als symbolischer Link erstellt werden. Die erforderlichen Einstellungen werden aus der <code>.rx/config.mk</code> gelesen.</p>
 <div class="weblog">
@@ -95,20 +99,26 @@ SEITENBANNER = &quot;rxtpl/img/rumex.png&quot;</code></pre>
 <pre><code>ln -s ~/rumex-gh-pages/.rumex/bin/rumex-gvim.sh ~/bin/rumex-gvim</code></pre>
 um die Startdatei für Rumex zu erstellen. Verzeichnisse und Parameter werden beim Starten automatisch ermittelt und gesetzt.
 </div>
-<h1>Rumex FTP Unterstüzung jetzt mit sitecopy</h1>
+
+
+
+<h1 id="rumex-ftp-unterstüzung-jetzt-mit-sitecopy">Rumex FTP Unterstüzung jetzt mit sitecopy</h1>
 <p><em>Am 17.09.2013 um 17:24 schrieb IT-Bayer</em></p>
 <p>Das Programm <code>wput</code> wurde durch <code>sitecopy</code> ersetzt.</p>
 <div class="weblog">
 Die FTP Unterstützung mittels <code>wput</code> hat nie sauber funktioniert. Genauer gesagt ein Update der vorhandenen Seiten. Mit <code>sitecopy</code> scheint es jetzt besser zu funktionieren. Die beiden FTP Test Installationen kann man sich <a href="http://rumex.html-5.me/">hier</a> und <a href="http://localstuff.zxq.net/">hier</a> ansehen.
 </div>
-<h1>Rumex senden Nachrichten direkt an twitter</h1>
+
+<h1 id="rumex-senden-nachrichten-direkt-an-twitter">Rumex senden Nachrichten direkt an twitter</h1>
 <p><em>Am 11.09.2013 um 12:30 schrieb IT-Bayer</em></p>
 <p>Dank dem Programm <a href="http://www.floodgap.com/software/ttytter/">TTYtter for Perl</a> ist es nun möglich Texte aus Rumex direkt an <a href="http://www.twitter.com">Twitter</a> zu senden.</p>
 <div class="weblog">
 <p>Eigentlich ist es nicht Rumex der die Funktion zur Verfügung stellt. In der Rumex Konfiguration wurde nur die vim Kurztaste <code>,rtt</code> (RumexToTwitter) definiert. Wird eine Zeile markiert kann diese mit der Kurztaste <code>,rtt</code> an TTYtter weiterleitet werden. Nach der Weiterleitung wird die Zeile entfernt. Eine andere Variante die, die Zeile stehen lässt, findet man kommentiert in der <code>.rumex/bin/rumex.vim</code> Datei.</p>
 Auch eine Link Verkürzung mit <a href="http://is.gd">http://is.gd</a> kann Rumex jetzt anbieten, Kurztasten <code>,rkl</code>. Der Link für Rumex schaut dann so aus <a href="http://is.gd/az0x2a">http://is.gd/az0x2a</a>. Eigentlich ist es aber TTYtter der Rumex diese Erweiterung bietet.
 </div>
-<h1>Datei Namen umbenennen</h1>
+
+
+<h1 id="datei-namen-umbenennen">Datei Namen umbenennen</h1>
 <p><em>Am 10.09.2013 um 18:45 schrieb IT-Bayer</em></p>
 <p>So wie es scheint werde ich ein paar Dateien umbenennen.</p>
 <div class="weblog">
@@ -121,23 +131,31 @@ Auch eine Link Verkürzung mit <a href="http://is.gd">http://is.gd</a> kann Rume
 <p>Durch die tilda Erweiterung gefallen mir die alten Namen nicht mehr bzw. sind für mich nicht mehr schlüssig.</p>
 <p>Die Datei <code>update_robots.txt.pl</code> hat es auch erwischt und heißt jetzt <code>robots.txt_update.pl</code>. Aber das hat einen anderen Grund.</p>
 </div>
-<h1>Aus Beta wird wieder Alpha</h1>
+
+
+<h1 id="aus-beta-wird-wieder-alpha">Aus Beta wird wieder Alpha</h1>
 <p><em>Am 10.09.2013 um 11:33 schrieb IT-Bayer</em></p>
 <p>Eigentlich hat ja der beta Test von Rumex begonnen. Durch die neuen Erweiterungen breche ich vorerst den Beta Test ab.</p>
 <div class="weblog">
 Die neuen Erweiterungen <code>tilda</code> und <code>weblog</code> erfordern noch ein paar Grundlegende Anpassungen darum habe ich mich entschlossen den Beta Test abzubrechen.
 </div>
-<h1>WebLog Layout auf der Startseite</h1>
+
+<h1 id="weblog-layout-auf-der-startseite">WebLog Layout auf der Startseite</h1>
 <p><em>Am 10.09.2013 um 11:27 schrieb IT-Bayer</em></p>
 <p>Das Layout der Weblog Einträge auf der Startseite schaut nicht so schön aus. Hier muss noch nachgebessert werden.</p>
 <div class="weblog">
 <p>Der Eintrag Datum Autor braucht noch einen grau Ton.</p>
 <p>Bei der Übersicht der Einzelseiten gefällt mir auf einmal die Datumsangabe nicht mehr. Die sollte jetzt unter der Überschrift stehen und evtl. mit dem Schlüsselwort <del><code>Stand:</code></del> <code>Letzte Bearbeitung:</code> gekennzeichnet werden.</p>
 </div>
-<h1>Kurznachrichten</h1>
+
+
+
+
+<h1 id="kurznachrichten">Kurznachrichten</h1>
 <p><em>Am 10.09.2013 um 11:19 schrieb IT-Bayer</em></p>
 <p>Die alten Kurznachrichten, die man auf der Startseite gefunden hat, wurden in einen Weblog Block verlegt.</p>
 <div class="weblog">
+
 <dl>
 <dt>Rumex Beta Tester</dt>
 <dd><p>Die Seite <a href="http://www.hochfelder.de">hochfelder.de</a> hat auch auf Rumex umgestellt und beteiligt sich somit am Beta Test.</p>
@@ -150,29 +168,32 @@ Die neuen Erweiterungen <code>tilda</code> und <code>weblog</code> erfordern noc
 </dd>
 </dl>
 </div>
-<h1>WebLog auf der Startseite</h1>
+
+
+
+<h1 id="weblog-auf-der-startseite">WebLog auf der Startseite</h1>
 <p><em>Am 10.09.2013 um 11:12 schrieb IT-Bayer</em></p>
 <p>Da jetzt die neue <a href="weblog.html">Weblog</a> Funktion eingebaut wurde, wird diese auch auf der Startseite getestet.</p>
 <div class="weblog">
 <p>Mit der Weblog Funktion von Rumex können kleine Nachrichten auf der Seite erstellt werden. Diese Nachrichten werden dabei mit Datum, Uhrzeit und Autor versehen.</p>
 Wie sich diese neue Funktion auf der Startseite macht soll dieser Beitrag zeigen.
 </div>
-</div>
-<div class="indexliste">
-<h1><a href="historie.html">Historie</a></h1>
-<p class="datum">
-Letzte Bearbeitung: 2013-09-18
-</p>
 
-<h2>V0.8.1</h2>
-<ul>
-<li>Kleine Anpassungen am Layout</li>
-<li><code>wput</code> wurde durch <code>sitecopy</code> ersetzt</li>
-</ul>
-<p><a href="historie.html">… Seite öffnen</a></p>
+
+
+
+
+
 </div>
+
+
+
 <div class="indexliste">
-<h1><a href="beschreibung.html">Beschreibung des Rumex Baukastens</a></h1>
+
+
+
+
+<h1 id="beschreibung-des-rumex-baukastens"><a href="beschreibung.html">Beschreibung des Rumex Baukastens</a></h1>
 <p class="datum">
 Letzte Bearbeitung: 2013-09-18
 </p>
@@ -181,6 +202,28 @@ Letzte Bearbeitung: 2013-09-18
 <p>Hier findest du die Beschreibung des rumex Baukastens. Zur Zeit ist hier noch vieles durcheinander da ich mehr am System als an der Beschreibung bastle. Du kannst aber schon mal gerne rein schauen.</p>
 <p><a href="beschreibung.html">… Seite öffnen</a></p>
 </div>
+
+
+
+<div class="indexliste">
+
+<h1 id="historie"><a href="historie.html">Historie</a></h1>
+<p class="datum">
+Letzte Bearbeitung: 2013-09-18
+</p>
+
+<h2 id="v0.8.1">V0.8.1</h2>
+<ul>
+<li>Kleine Anpassungen am Layout</li>
+<li><code>wput</code> wurde durch <code>sitecopy</code> ersetzt</li>
+</ul>
+<p><a href="historie.html">… Seite öffnen</a></p>
+</div>
+
+
+
+
+
 <section class="footnotes">
 <hr />
 <ol>
@@ -221,10 +264,10 @@ Letzte Bearbeitung: 2013-09-18
 	</p>
 
 	<div id="fussnav">
-		<a title="zur Startseite" href="index.html">Home</a></br>
-		<a title="nach oben" href="#kopf">Oben</a></br>
-		<a title="nach unten"href="#fuss">Unten</a></br> 
-		<a title="Seite durchsuchen"href="suche.html">Suche</a></br> 
+		<a title="zur Startseite" href="index.html">Home</a><br />
+		<a title="nach oben" href="#kopf">Oben</a><br />
+		<a title="nach unten" href="#fuss">Unten</a><br /> 
+		<a title="Seite durchsuchen" href="suche.html">Suche</a><br/ > 
 	</div>
 </div>
 </body>
