@@ -39,8 +39,8 @@ Rumex konnte eingerichtet werden.
 
 [^host1free_bestellung]: Der Server wurde schon Anfang August 2013 freigeschaltet.
 
-Erreichbar ist der Server zur Zeit nur unter seiner IP Adresse
-<http://5.231.70.214>.
+Erreichbar ist der Server ~~zur Zeit nur unter seiner IP Adresse
+<http://5.231.70.214>~~ unter der URL [byvs.de](http://www.byvs.de).
 Es wird also noch ein Domainname gebraucht.
 Mal schauen wie ich das umsetzen.
 
@@ -236,6 +236,26 @@ soll dieser Beitrag zeigen.
 
 <div class="indexliste">
 
+[Historie](historie.html)
+======================================================
+
+<p class="datum">Letzte Bearbeitung: 2013-09-18</p>
+
+## V0.8.1
+
+- Kleine Anpassungen am Layout
+- `wput` wurde durch `sitecopy` ersetzt
+
+
+[... Seite öffnen](historie.html)
+
+
+</div>
+
+
+
+<div class="indexliste">
+
 
 
 
@@ -252,26 +272,6 @@ Du kannst aber schon mal gerne rein schauen.
 
 
 [... Seite öffnen](beschreibung.html)
-
-
-</div>
-
-
-
-<div class="indexliste">
-
-[Historie](historie.html)
-======================================================
-
-<p class="datum">Letzte Bearbeitung: 2013-09-18</p>
-
-## V0.8.1
-
-- Kleine Anpassungen am Layout
-- `wput` wurde durch `sitecopy` ersetzt
-
-
-[... Seite öffnen](historie.html)
 
 
 </div>
