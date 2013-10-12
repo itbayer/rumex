@@ -75,7 +75,7 @@ Rumex?
 
 In Rumex kann man diese Funktion natürlich auch verwenden.
 Am besten erstellt man sich dazu ein eigenes Unterverzeichnis und
-erstellt dort die die Datei `index.md` mit den Texten.
+erstellt dort die Datei `index.md` mit den Texten.
 
 
 
