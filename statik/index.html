@@ -30,13 +30,13 @@
 <h1 id="formate-erstellen"><a href="#formate-erstellen">Formate erstellen</a></h1>
 <p>Hat man einen Text erstellt reicht ein</p>
 <pre><code>pandoc -f markdown -t html5 --toc -s -o test.html test.md</code></pre>
-<p>um daraus ein <code>HTML</code> Datei zu erstellen. Für PDF verwendet man den Befehl</p>
+<p>um daraus ein <code>HTML</code> Datei zu erstellen. Für PDF<sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> verwendet man den Befehl</p>
 <pre><code>pandoc -f markdown -t latex --toc -V lang=ngermanb -o test.pdf test.md</code></pre>
 <p>Dabei ist der Parameter <code>--toc</code> für die Anzeige des Inhaltsverzeichnis zuständig.</p>
 <h1 id="gvim-kurztaste"><a href="#gvim-kurztaste">Gvim Kurztaste</a></h1>
 <p>Fehlt noch die gvim Kurztaste um diese beiden Formate zu erstellen. Da die Unterstützung nur für gvim taugen soll werden die benötigten Befehle in die Datei <code>~/.gvimrc</code> geschrieben. Somit stehen sie nicht nur unter Rumex sonder Systemweit zur Verfügung.</p>
-<p>Verwendet werden, in diesem Beispiel, die Tasten F8 und F9 Die die aktuelle Datei speichert und in das entsprechende Format umwandelt.</p>
-<p>F8 für HTML und F9 für das PDF Format. Ausserdem werden noch die zwei Tasten CTRL-F8 und CTRL-F9 für die Anzeige konfiguriert wobei zathura<sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> für die PDF Anzeige verwendet wird.</p>
+<p>Verwendet werden, in diesem Beispiel die Tasten F8 und F9, die die aktuelle Datei speichert und in das entsprechende Format umwandelt.</p>
+<p>F8 für HTML und F9 für das PDF Format. Ausserdem werden noch die zwei Tasten CTRL-F8 und CTRL-F9 für die Anzeige konfiguriert wobei zathura<sup><a href="#fn2" class="footnoteRef" id="fnref2">2</a></sup> für die PDF Anzeige verwendet wird.</p>
 <p>Nachfolgende Zeilen einfach in die <code>~/.gvimrc</code> Datei kopieren und fertig ist diese Anpassung.</p>
 <pre><code>&quot; HTML Datei erstellen
 map &lt;F8&gt; :w&lt;cr&gt;:!pandoc -f markdown -t html5 --toc -s -o &lt;C-R&gt;=expand(&quot;%:r&quot;)&lt;CR&gt;.html %&lt;CR&gt;&lt;CR&gt;
@@ -55,7 +55,8 @@ map &lt;C-F9&gt; :!zathura %.pdf&amp;&lt;CR&gt;&lt;CR&gt;</code></pre>
 <section class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Zathura wurde deshalb gewählt weil dieses Programm ähnlich wie vi über die Tastatur bedient werden kann.<a href="#fnref1">↩</a></p></li>
+<li id="fn1"><p>Für das erstellen des PDF Formats muss LaTeX auf dem System installiert sein.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>Zathura wurde deshalb gewählt weil dieses Programm ähnlich wie vi über die Tastatur bedient werden kann.<a href="#fnref2">↩</a></p></li>
 </ol>
 </section>
 </body>

@@ -21,13 +21,13 @@ Hat man einen Text erstellt reicht ein
 	pandoc -f markdown -t html5 --toc -s -o test.html test.md
 
 um daraus ein `HTML` Datei zu erstellen.
-Für PDF verwendet man den  Befehl
+Für PDF[^pdf] verwendet man den  Befehl
 
 	pandoc -f markdown -t latex --toc -V lang=ngermanb -o test.pdf test.md
 
 Dabei ist der Parameter `--toc` für die Anzeige des Inhaltsverzeichnis zuständig.
 
-
+[^pdf]: Für das erstellen des PDF Formats muss LaTeX auf dem System installiert sein.
 
 Gvim Kurztaste
 ==============
@@ -37,8 +37,8 @@ Da die Unterstützung nur für gvim taugen soll werden die benötigten
 Befehle in die Datei `~/.gvimrc` geschrieben.
 Somit stehen sie nicht nur unter Rumex sonder Systemweit zur Verfügung.
 
-Verwendet werden, in diesem Beispiel, die Tasten F8 und F9 
-Die die aktuelle Datei speichert und in das entsprechende Format umwandelt.
+Verwendet werden, in diesem Beispiel die Tasten F8 und F9,
+die die aktuelle Datei speichert und in das entsprechende Format umwandelt.
 
 F8 für HTML und F9 für das PDF Format.
 Ausserdem werden noch die zwei Tasten CTRL-F8 und CTRL-F9 für die Anzeige 
