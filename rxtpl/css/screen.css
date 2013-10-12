@@ -111,3 +111,10 @@ header, nav, #seite {
 	z-index: 100;
 }
 
+
+/* Copyleft nach rechts verschieben so dass 
+ * fussnav den Bereich nicht überdeckt */
+#fuss .copyleft {
+	margin-left: 80px;
+}
+
