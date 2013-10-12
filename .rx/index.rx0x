@@ -25,6 +25,14 @@ der Seite <http://www.hochfelder.de>[^hochfelder_unterseiten] verwendet.
 [^hochfelder_unterseiten]: Und deren Unterseiten <http://gedanken.hochfelder.de> und <http://zettel.hochfelder.de> 
 
 
+# Rumex Statische Dateien
+
+_Am 12.10.2013 um 23:18 schrieb IT-Bayer_
+
+Auf der Seite [statik/](statik/) findet man einen kleine Beschreibung
+wie man mit pandocs markdown und gvim kleine Beschreibungen in 
+verschiedene Formate wandeln kann.
+
 
 
 # Rumex und pandoc 1.9.4.2
