@@ -4,7 +4,7 @@
   <meta charset="utf-8">
 
 <!-- rumex Version -->
-<meta name="generator" content="rumex 0.8.1.1">
+<meta name="generator" content="rumex 0.8.1.2">
 
 <!-- rumex Suchmaschine -->
 <meta name="robots" content="all">
@@ -58,6 +58,7 @@
 </header>
 <nav id="TOC">
 <ul>
+<li><a href="#v0.8.1.2">V0.8.1.2</a></li>
 <li><a href="#v0.8.1">V0.8.1</a></li>
 <li><a href="#v0.8.0">V0.8.0</a></li>
 <li><a href="#v0.7.0---v0.7.9">V0.7.0 - V0.7.9</a></li>
@@ -89,13 +90,20 @@
 ======================================================
 -->
 
+<h2 id="v0.8.1.2"><a href="#v0.8.1.2">V0.8.1.2</a></h2>
+<p>Kleine Änderungen in der main.mk Datei. Die vim Startdateien rumex-gvim, rumex-vim, rumex-tilda können nun als Sym. Link realisiert werden. Eine Anpassung der Dateien ist nicht mehr nötig.</p>
+<p>Beispiel:</p>
+<pre><code>ln -s /home/user/rumex/.rumex/bin/rumex-gvim.sh meinehp-gvim</code></pre>
+<p>reicht. Alle Pfade und Parameter werden automatisch gesetzt.</p>
+<!-- schnipp -->
+
+
+
 <h2 id="v0.8.1"><a href="#v0.8.1">V0.8.1</a></h2>
 <ul>
 <li>Kleine Anpassungen am Layout</li>
 <li><code>wput</code> wurde durch <code>sitecopy</code> ersetzt</li>
 </ul>
-<!-- schnipp -->
-
 <h2 id="v0.8.0"><a href="#v0.8.0">V0.8.0</a></h2>
 <p><del>Beta Test Phase.</del> Beta wurde gestrichen weil zwei neuen Erweiterungen eingebaut wurden.</p>
 <ul>
@@ -216,7 +224,6 @@ convert bilder/404.png -resize 800x bilder/404_800_.png
 <p>Version 0.1 ist fertig. Hat zwar hoch nicht viel Funktionen aber der Baukasten funktioniert schon.</p>
 <hr />
 <!-- vim: set ft=pandoc: -->
-
 </div>
 <div id="fuss">
 	<p class="copyleft">

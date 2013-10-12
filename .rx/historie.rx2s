@@ -7,13 +7,29 @@
 ======================================================
 -->
 
+## V0.8.1.2
+
+Kleine Änderungen in der main.mk Datei.
+Die vim Startdateien rumex-gvim, rumex-vim, rumex-tilda
+können nun als Sym. Link realisiert werden.
+Eine Anpassung der Dateien ist nicht mehr nötig.
+
+Beispiel:
+
+	ln -s /home/user/rumex/.rumex/bin/rumex-gvim.sh meinehp-gvim
+
+reicht. Alle Pfade und Parameter werden automatisch gesetzt.
+
+<!-- schnipp -->
+
+
+
 ## V0.8.1
 
 - Kleine Anpassungen am Layout
 - `wput` wurde durch `sitecopy` ersetzt
 
 
-<!-- schnipp -->
 
 ## V0.8.0
 

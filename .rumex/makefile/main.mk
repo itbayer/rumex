@@ -111,17 +111,17 @@ update:
 # #######################################################
 # index.html im Standard Browser öffnen
 show:
-	x-www-browser ../index.html &
+	x-www-browser ../index.html 2>/dev/null
 
 # ######################################################
 # Online Seite öffnen
 showwww:
-	x-www-browser $(URL) &
+	x-www-browser $(URL) 2>/dev/null
 
 # ######################################################
 # localhost öffnen
 showlocal:
-	x-www-browser localhost &
+	x-www-browser localhost 2>/dev/null
 
 
 # ######################################################

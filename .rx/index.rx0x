@@ -25,6 +25,50 @@ der Seite <http://www.hochfelder.de>[^hochfelder_unterseiten] verwendet.
 [^hochfelder_unterseiten]: Und deren Unterseiten <http://gedanken.hochfelder.de> und <http://zettel.hochfelder.de> 
 
 
+
+
+# Rumex und pandoc 1.9.4.2
+
+_Am 12.10.2013 um 12:37 schrieb IT-Bayer_
+
+pandoc 1.9.4.2 kennt die Option `--toc-depth` noch nicht.
+Wer Rumex mit pandoc 1.9.4.2 verwenden will sollte
+diese Option in der `html.mk` kommentieren oder die
+neue Version von pandoc installieren.
+
+
+<div class="weblog">
+
+Bei meiner Distribution LMDE ist leider nur die Version pandoc 1.9.4.2
+enthalten. Die neue Version von pandoc muss also her.
+Die Installation von pandoc ist dabei nicht viel schwerer als ein Paket unter
+Debian zu installieren, es dauert nur ein wenig länger.
+Hier die einzelnen Schritte um pandoc 1.12.0.2 auf 
+meinem T41[^t41] mit LMDE UP7 zu installieren.
+
+	sudo apt-get remove pandoc
+	sudo apt-get install cabal-install
+	sudo apt-get install alex happy
+	cabal update
+	cabal install pandoc
+	ln -s ~/.cabal/bin/pandoc ~/bin/pandoc
+	sudo ln -s /home/sb/.cabal/bin/pandoc /usr/local/bin/pandoc
+
+
+Anmerkung: cabal installiert das Programm standardmäßig in Benutzerverzeichnis, Unterverzeichnis `.cabal` des Benutzers der die Installation gestartet hat.
+
+[^t41]: Der IBM ThinkPad T41 ist mittlerweile schon 10 Jahre alt.
+Er wurde von Oktober 2003 bis Dezember 2005 verkauft. 
+Der T41 ist also schon in die Jahr gekommen und ist auch nicht mehr
+so rasend schnell. 
+Er verrichtet aber seine Arbeiten noch einwandfrei und ist ein Rechner
+der noch so gebaut wurde wie Rechner sein sollten, robust und zuverlässig.
+
+</div>
+
+
+
+
 # Rumex auf einem host1free.com Server
 
 _Am 01.10.2013 um 19:14 schrieb IT-Bayer_
@@ -54,6 +98,7 @@ Interessant wir noch wie zuverlässig der Server ist.
 
 
 
+
 # Rumex Startdateien einfach mit Symlinks 
 
 _Am 20.09.2013 um 07:47 schrieb IT-Bayer_
@@ -67,11 +112,11 @@ werden. Die erforderlichen Einstellungen werden aus der
 Die `.rx/config.mk` hat dazu zwei neuen Parameter bekommen.
 
 ~~~
-#  Autor für den Weblog Eintrag
+ #  Autor für den Weblog Eintrag
 WEBLOGAUTOR = "IT-Bayer"
 
 
-# Bildname für das Seitenbanner
+ # Bildname für das Seitenbanner
 SEITENBANNER = "rxtpl/img/rumex.png"
 ~~~
 
@@ -84,6 +129,7 @@ Es reicht ein
 um die Startdatei für Rumex zu erstellen. Verzeichnisse und 
 Parameter werden beim Starten automatisch ermittelt und gesetzt.
 </div>
+
 
 
 
@@ -100,6 +146,9 @@ Mit `sitecopy` scheint es jetzt besser zu funktionieren.
 Die beiden FTP Test Installationen kann man sich [hier](http://rumex.html-5.me/) 
 und [hier](http://localstuff.zxq.net/) ansehen.
 </div>
+
+
+
 
 # Rumex senden Nachrichten direkt an twitter
 
@@ -122,6 +171,8 @@ Auch eine Link Verkürzung mit <http://is.gd> kann Rumex jetzt anbieten,
 Kurztasten `,rkl`. Der Link für Rumex schaut dann so aus <http://is.gd/az0x2a>.
 Eigentlich ist es aber TTYtter der Rumex diese Erweiterung bietet.
 </div>
+
+
 
 
 # Datei Namen umbenennen
@@ -149,6 +200,8 @@ Aber das hat einen anderen Grund.
 </div>
 
 
+
+
 # Aus Beta wird wieder Alpha
 
 _Am 10.09.2013 um 11:33 schrieb IT-Bayer_
@@ -162,6 +215,9 @@ Die neuen Erweiterungen `tilda` und `weblog`
 erfordern noch ein paar Grundlegende Anpassungen
 darum habe ich mich entschlossen den Beta Test abzubrechen.
 </div>
+
+
+
 
 # WebLog Layout auf der Startseite
 
@@ -208,6 +264,7 @@ Beta Phase
 
 
 
+
 # WebLog auf der Startseite
 
 _Am 10.09.2013 um 11:12 schrieb IT-Bayer_
@@ -230,6 +287,19 @@ soll dieser Beitrag zeigen.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 
@@ -239,13 +309,20 @@ soll dieser Beitrag zeigen.
 [Historie](historie.html)
 ======================================================
 
-<p class="datum">Letzte Bearbeitung: 2013-09-18</p>
+<p class="datum">Letzte Bearbeitung: 2013-10-12</p>
 
-## V0.8.1
+## V0.8.1.2
 
-- Kleine Anpassungen am Layout
-- `wput` wurde durch `sitecopy` ersetzt
+Kleine Änderungen in der main.mk Datei.
+Die vim Startdateien rumex-gvim, rumex-vim, rumex-tilda
+können nun als Sym. Link realisiert werden.
+Eine Anpassung der Dateien ist nicht mehr nötig.
 
+Beispiel:
+
+	ln -s /home/user/rumex/.rumex/bin/rumex-gvim.sh meinehp-gvim
+
+reicht. Alle Pfade und Parameter werden automatisch gesetzt.
 
 [... Seite öffnen](historie.html)
 
@@ -262,7 +339,7 @@ soll dieser Beitrag zeigen.
 [Beschreibung des Rumex Baukastens](beschreibung.html)
 ======================================================
 
-<p class="datum">Letzte Bearbeitung: 2013-09-18</p>
+<p class="datum">Letzte Bearbeitung: 2013-10-12</p>
 
 
 Hier findest du die Beschreibung des rumex Baukastens.

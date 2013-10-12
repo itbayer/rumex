@@ -4,7 +4,7 @@
   <meta charset="utf-8">
 
 <!-- rumex Version -->
-<meta name="generator" content="rumex 0.8.1.1">
+<meta name="generator" content="rumex 0.8.1.2">
 
 <!-- rumex Suchmaschine -->
 <meta name="robots" content="all">
@@ -71,11 +71,25 @@
 </ul>
 <p>Der aktuelle Stand dieses Baukastens kann als <a href="https://github.com/itbayer/rumex/archive/gh-pages.zip">ZIP Datei herunter geladen</a> werden.</p>
 <p>Aktuell wird dieser Baukasten auch auf der Seite <a href="http://www.it-bayer.de">http://www.it-bayer.de</a> und auf der Seite <a href="http://www.hochfelder.de">http://www.hochfelder.de</a><sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> verwendet.</p>
+<h1>Rumex und pandoc 1.9.4.2</h1>
+<p><em>Am 12.10.2013 um 12:37 schrieb IT-Bayer</em></p>
+<p>pandoc 1.9.4.2 kennt die Option <code>--toc-depth</code> noch nicht. Wer Rumex mit pandoc 1.9.4.2 verwenden will sollte diese Option in der <code>html.mk</code> kommentieren oder die neue Version von pandoc installieren.</p>
+<div class="weblog">
+<p>Bei meiner Distribution LMDE ist leider nur die Version pandoc 1.9.4.2 enthalten. Die neue Version von pandoc muss also her. Die Installation von pandoc ist dabei nicht viel schwerer als ein Paket unter Debian zu installieren, es dauert nur ein wenig länger. Hier die einzelnen Schritte um pandoc 1.12.0.2 auf meinem T41<sup><a href="#fn2" class="footnoteRef" id="fnref2">2</a></sup> mit LMDE UP7 zu installieren.</p>
+<pre><code>sudo apt-get remove pandoc
+sudo apt-get install cabal-install
+sudo apt-get install alex happy
+cabal update
+cabal install pandoc
+ln -s ~/.cabal/bin/pandoc ~/bin/pandoc
+sudo ln -s /home/sb/.cabal/bin/pandoc /usr/local/bin/pandoc</code></pre>
+<p>Anmerkung: cabal installiert das Programm standardmäßig in Benutzerverzeichnis, Unterverzeichnis <code>.cabal</code> des Benutzers der die Installation gestartet hat.</p>
+</div>
 <h1>Rumex auf einem host1free.com Server</h1>
 <p><em>Am 01.10.2013 um 19:14 schrieb IT-Bayer</em></p>
 Heute wurde Rumex auf einem <a href="http://www.host1free.com">host1free.com</a> Server installiert. Eine weitere Testumgebung für Rumex.
 <div class="weblog">
-<p>Den Server bei <a href="http://www.host1free.com">host1free.com</a> habe ich mir schon vor einiger Zeit<sup><a href="#fn2" class="footnoteRef" id="fnref2">2</a></sup> bestellt. Leider wollte er am Anfang nicht so wie er sollte. Dank des Supports von <em>Joseph</em> ging es dann aber schnell und Rumex konnte eingerichtet werden.</p>
+<p>Den Server bei <a href="http://www.host1free.com">host1free.com</a> habe ich mir schon vor einiger Zeit<sup><a href="#fn3" class="footnoteRef" id="fnref3">3</a></sup> bestellt. Leider wollte er am Anfang nicht so wie er sollte. Dank des Supports von <em>Joseph</em> ging es dann aber schnell und Rumex konnte eingerichtet werden.</p>
 <p>Erreichbar ist der Server <del>zur Zeit nur unter seiner IP Adresse <a href="http://5.231.70.214">http://5.231.70.214</a></del> unter der URL <a href="http://www.byvs.de">byvs.de</a>. Es wird also noch ein Domainname gebraucht. Mal schauen wie ich das umsetzen.</p>
 <p>Die Geschwindigkeit des Server mit seinen <code>128MB RAM</code> ist bei Rumex völlig ausreichend. Muss ja nur <code>HTML</code> Dateien ausliefern.</p>
 <p>Interessant wir noch wie zuverlässig der Server ist.</p>
@@ -85,11 +99,11 @@ Heute wurde Rumex auf einem <a href="http://www.host1free.com">host1free.com</a>
 <p>Die Rumex (g)vim Unterstützung <code>rumex-gvim</code>, <code>rumex-vim</code> und auch <code>rumex-tilda</code> können jetzt als symbolischer Link erstellt werden. Die erforderlichen Einstellungen werden aus der <code>.rx/config.mk</code> gelesen.</p>
 <div class="weblog">
 <p>Die <code>.rx/config.mk</code> hat dazu zwei neuen Parameter bekommen.</p>
-<pre><code>#  Autor für den Weblog Eintrag
+<pre><code> #  Autor für den Weblog Eintrag
 WEBLOGAUTOR = &quot;IT-Bayer&quot;
 
 
-# Bildname für das Seitenbanner
+ # Bildname für das Seitenbanner
 SEITENBANNER = &quot;rxtpl/img/rumex.png&quot;</code></pre>
 <p>Diese Parameter werden von den Startdateien eingebunden so dass die einzelnen Bashskripte nicht mehr angepasst werden müssen. Es reicht ein</p>
 <pre><code>ln -s ~/rumex-gh-pages/.rumex/bin/rumex-gvim.sh ~/bin/rumex-gvim</code></pre>
@@ -161,20 +175,20 @@ Wie sich diese neue Funktion auf der Startseite macht soll dieser Beitrag zeigen
 <div class="indexliste">
 <h1><a href="historie.html">Historie</a></h1>
 <p class="datum">
-Letzte Bearbeitung: 2013-09-18
+Letzte Bearbeitung: 2013-10-12
 </p>
 
-<h2>V0.8.1</h2>
-<ul>
-<li>Kleine Anpassungen am Layout</li>
-<li><code>wput</code> wurde durch <code>sitecopy</code> ersetzt</li>
-</ul>
+<h2>V0.8.1.2</h2>
+<p>Kleine Änderungen in der main.mk Datei. Die vim Startdateien rumex-gvim, rumex-vim, rumex-tilda können nun als Sym. Link realisiert werden. Eine Anpassung der Dateien ist nicht mehr nötig.</p>
+<p>Beispiel:</p>
+<pre><code>ln -s /home/user/rumex/.rumex/bin/rumex-gvim.sh meinehp-gvim</code></pre>
+<p>reicht. Alle Pfade und Parameter werden automatisch gesetzt.</p>
 <p><a href="historie.html">… Seite öffnen</a></p>
 </div>
 <div class="indexliste">
 <h1><a href="beschreibung.html">Beschreibung des Rumex Baukastens</a></h1>
 <p class="datum">
-Letzte Bearbeitung: 2013-09-18
+Letzte Bearbeitung: 2013-10-12
 </p>
 
 
@@ -185,7 +199,8 @@ Letzte Bearbeitung: 2013-09-18
 <hr />
 <ol>
 <li id="fn1"><p>Und deren Unterseiten <a href="http://gedanken.hochfelder.de">http://gedanken.hochfelder.de</a> und <a href="http://zettel.hochfelder.de">http://zettel.hochfelder.de</a><a href="#fnref1">↩</a></p></li>
-<li id="fn2"><p>Der Server wurde schon Anfang August 2013 freigeschaltet.<a href="#fnref2">↩</a></p></li>
+<li id="fn2"><p>Der IBM ThinkPad T41 ist mittlerweile schon 10 Jahre alt. Er wurde von Oktober 2003 bis Dezember 2005 verkauft. Der T41 ist also schon in die Jahr gekommen und ist auch nicht mehr so rasend schnell. Er verrichtet aber seine Arbeiten noch einwandfrei und ist ein Rechner der noch so gebaut wurde wie Rechner sein sollten, robust und zuverlässig.<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>Der Server wurde schon Anfang August 2013 freigeschaltet.<a href="#fnref3">↩</a></p></li>
 </ol>
 </section>
 </div>
