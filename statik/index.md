@@ -3,14 +3,18 @@
 % Oktober 2013
 
 
+
+
 Vorwort
 =======
 
 Rumex verwendet pandocs markdown weil man damit sehr einfach und schnell Text erstellen 
 und verschiedenen Formate wandeln kann.
-Dieses kann man aber auch für Beschreibungen auf dem Rechner verwenden.
+Diese Funktion kann man aber auch für Beschreibungen auf dem Rechner verwenden.
 Abgesehen habe ich es bei dieser Beschreibung auf die Formate `html` 
 und `pdf`.
+
+
 
 
 Formate erstellen
@@ -27,21 +31,26 @@ Für PDF[^pdf] verwendet man den  Befehl
 
 Dabei ist der Parameter `--toc` für die Anzeige des Inhaltsverzeichnis zuständig.
 
-[^pdf]: Für das erstellen des PDF Formats muss LaTeX auf dem System installiert sein.
+[^pdf]: Für das Erstellen des PDF Formats muss jedoch LaTeX 
+auf dem System installiert werden.
+
+Fehlen noch die Editor Kurztaste um diese beiden Formate mit einem 
+Tastendruck erstellen zu können.
+
+
+
 
 Gvim Kurztaste
 ==============
 
-Fehlt noch die gvim Kurztaste um diese beiden Formate zu erstellen.
-Da die Unterstützung nur für gvim taugen soll werden die benötigten 
-Befehle in die Datei `~/.gvimrc` geschrieben.
-Somit stehen sie nicht nur unter Rumex sonder Systemweit zur Verfügung.
+Da die Unterstützung nur für gvim aber auch ausserhalb
+Rumex funktionieren soll werden die benötigten 
+Befehle in die Datei `~/.gvimrc` geschrieben und an Kurztasten
+gebunden.
 
-Verwendet werden, in diesem Beispiel die Tasten F8 und F9,
-die die aktuelle Datei speichert und in das entsprechende Format umwandelt.
-
+Verwendet werden, in diesem Beispiel die Tasten F8 und F9.
 F8 für HTML und F9 für das PDF Format.
-Ausserdem werden noch die zwei Tasten CTRL-F8 und CTRL-F9 für die Anzeige 
+Ausserdem werden noch die zwei Tasten ALT-F8 und ALT-F9 für die Anzeige 
 konfiguriert wobei zathura[^zathura] für die PDF Anzeige verwendet wird.
 
 [^zathura]: Zathura wurde deshalb gewählt weil dieses Programm ähnlich wie vi
@@ -54,20 +63,16 @@ und fertig ist diese Anpassung.
 " HTML Datei erstellen
 map <F8> :w<cr>:!pandoc -f markdown -t html5 --toc -s -o <C-R>=expand("%:r")<CR>.html %<CR><CR>
 " HTML Datei anzeigen
-map <C-F8> :!x-www-browser %.html&<CR><CR>
+map <A-F8> :!x-www-browser <C-R>=expand("%:r")<CR>.html&<CR><CR>
 
 
 " PDF Datei erstellen
 map <F9> :w<cr>:!pandoc -f markdown -t latex --toc -V lang=ngermanb -o <C-R>=expand("%:r")<CR>.pdf %<CR><CR>
 " PDF Datei anzeigen
-map <C-F9> :!zathura %.pdf&<CR><CR>
+map <A-F9> :!zathura <C-R>=expand("%:r")<CR>.pdf&<CR><CR>
 ~~~
 
 
-----
-
-Die PDF Datei dieser Beschreibung kann man sich [hier](index.pdf) ansehen.
-Die Markdown Quelldatei kann man sich [hier](index.md) holen.
 
 
 Rumex?
@@ -79,6 +84,11 @@ erstellt dort die Datei `index.md` mit den Texten.
 
 
 
+
+----
+
+Die PDF Datei dieser Beschreibung kann man sich [hier](index.pdf) ansehen.
+Die Markdown Quelldatei kann man sich [hier](index.md) holen.
 
 
 
