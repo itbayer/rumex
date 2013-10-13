@@ -10,22 +10,35 @@ Vorwort
 
 Rumex verwendet pandocs markdown weil man damit sehr einfach und schnell Text erstellen 
 und verschiedenen Formate wandeln kann.
-Diese Funktion kann man aber auch für Beschreibungen auf dem Rechner verwenden.
-Abgesehen habe ich es bei dieser Beschreibung auf die Formate `html` 
-und `pdf`.
+Diese Funktion kann man aber auch außerhalb vom Rumex,
+also für die alltäglichen Beschreibungen und Notizen die
+so anfallen, verwenden.
 
+Abgesehen aber ich es bei dieser Beschreibung auf die beiden 
+Formate `PDF` und `HTML` in der Grundform wie sie panodc
+Standardmäßig liefert.
+Also ohne Anpassung des Layouts weder bei HTML noch bei PDF.
+
+Für PDF muss jedoch LaTeX auf dem Rechner installiert sein.
+Außerdem wurde für die Darstellung, siehe weiter unten, der PDF Dateien das 
+Programm zathura gewählt. 
 
 
 
 Formate erstellen
 =================
 
-Hat man einen Text erstellt reicht ein
+Um die unterschiedlichen Formate mittels pandoc
+zu erstellen braucht man einige Optionen die auf der 
+[Homepage von pandoc](http://johnmacfarlane.net/pandoc/README.html) 
+sehr gut beschrieben sind.
+
+Um den aktuellen Text nach HTML zu wandeln kann dieser Befehl verwendet
+werden.
 
 	pandoc -f markdown -t html5 --toc -s -o test.html test.md
 
-um daraus ein `HTML` Datei zu erstellen.
-Für PDF[^pdf] verwendet man den  Befehl
+Für PDF[^pdf] funktioniert dieser Befehl
 
 	pandoc -f markdown -t latex --toc -V lang=ngermanb -o test.pdf test.md
 
@@ -34,30 +47,29 @@ Dabei ist der Parameter `--toc` für die Anzeige des Inhaltsverzeichnis zuständ
 [^pdf]: Für das Erstellen des PDF Formats muss jedoch LaTeX 
 auf dem System installiert werden.
 
-Fehlen noch die Editor Kurztaste um diese beiden Formate mit einem 
-Tastendruck erstellen zu können.
+Da diese beiden Formate innerhalb des Editors gvim
+zur Verfügung stehen sollten brauchte es noch die 
+Definition der gvim Kurztasten.
 
 
 
 
-Gvim Kurztaste
-==============
+Die Gvim Kurztaste
+===================
 
-Da die Unterstützung nur für gvim aber auch ausserhalb
-Rumex funktionieren soll werden die benötigten 
-Befehle in die Datei `~/.gvimrc` geschrieben und an Kurztasten
-gebunden.
+Die Unterstützung soll nur für gvim aber auch ausserhalb
+Rumex funktionieren darum werden die benötigten 
+Befehle in die Datei `~/.gvimrc` geschrieben.
 
-Verwendet werden, in diesem Beispiel die Tasten F8 und F9.
-F8 für HTML und F9 für das PDF Format.
+Verwendet werden, in diesem Beispiel, die Tasten F8 und F9.\
+F8 für HTML und F9 für das PDF Format.\
 Ausserdem werden noch die zwei Tasten ALT-F8 und ALT-F9 für die Anzeige 
 konfiguriert wobei zathura[^zathura] für die PDF Anzeige verwendet wird.
 
 [^zathura]: Zathura wurde deshalb gewählt weil dieses Programm ähnlich wie vi
 über die Tastatur bedient werden kann.
 
-Nachfolgende Zeilen einfach in die `~/.gvimrc` Datei kopieren
-und fertig ist diese Anpassung.
+Nachfolgende Zeilen in die `~/.gvimrc` Datei kopieren und fertig ist diese Anpassung.
 
 ~~~
 " HTML Datei erstellen
@@ -80,7 +92,7 @@ Rumex?
 
 In Rumex kann man diese Funktion natürlich auch verwenden.
 Am besten erstellt man sich dazu ein eigenes Unterverzeichnis und
-erstellt dort die Datei `index.md` mit den Texten.
+dort die Datei `index.md` mit den Texten.
 
 
 
