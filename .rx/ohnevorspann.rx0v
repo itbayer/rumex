@@ -14,7 +14,7 @@ Das Aussehen entspricht mehr einer Standard
 `markdown` Datei.
 ~~~
 
-Da alle Dateien im .rumex Verzeichnis die die 
+Da alle Dateien im `.rx` Verzeichnis die die 
 Endung `rx?s` besitzen verarbeitet werden,
 tauchen diese auch in der index.html auf.
 Da aber der Vorspann fehlt wird hier nur
@@ -23,3 +23,5 @@ angezeigt.
 
 Für Dateien "ohne Vorspann" sollte man darum
 die Endungen `md?x` bzw. `md?v` verwenden.
+
+<!-- vim: set ft=pandoc: -->
