@@ -29,7 +29,7 @@ code > span.al { color: #ff0000; font-weight: bold; }
 code > span.fu { color: #06287e; }
 code > span.er { color: #ff0000; font-weight: bold; }
   </style>
-  <link href="data:text/css,%2F%2A%20gvim%5Ff8%2Ecss%20%2A%2F%0A%0Aheader%20%7B%0A%09text%2Dalign%3A%20center%3B%0A%09border%2Dbottom%3A%201px%20solid%20silver%3B%0A%7D%0A%0Anav%23TOC%20%7B%0A%09border%2Dbottom%3A%201px%20solid%20silver%3B%0A%09font%2Dsize%3A%200%2E8em%3B%0A%7D%20%0A%0Asection%2Efootnotes%20%7B%0A%09color%3A%20gray%3B%0A%09font%2Dsize%3A%200%2E8em%3B%0A%09margin%2Dtop%3A%204em%3B%0A%7D%0A%0Asection%2Efootnotes%20hr%20%7B%0A%09border%3A%20none%3B%0A%09border%2Dtop%3A%201px%20solid%20silver%3B%0A%09margin%2Dleft%3A%200%3B%0A%09width%3A%2040%25%3B%0A%7D%0A" rel="stylesheet">
+  <link href="data:text/css,%2F%2A%20gvim%5Ff8%2Ecss%20%2A%2F%0A%0Aheader%20%7B%0A%09text%2Dalign%3A%20center%3B%0A%09border%2Dbottom%3A%201px%20solid%20silver%3B%0A%7D%0A%0Anav%23TOC%20%7B%0A%09border%2Dbottom%3A%201px%20solid%20silver%3B%0A%09font%2Dsize%3A%200%2E8em%3B%0A%7D%20%0A%0Asection%2Efootnotes%20%7B%0A%09color%3A%20gray%3B%0A%09font%2Dsize%3A%200%2E8em%3B%0A%09margin%2Dtop%3A%204em%3B%0A%7D%0A%0Asection%2Efootnotes%20hr%20%7B%0A%09border%3A%20none%3B%0A%09border%2Dtop%3A%201px%20solid%20silver%3B%0A%09margin%2Dleft%3A%200%3B%0A%09width%3A%2040%25%3B%0A%7D%0A%0A%2F%2A%20Umformatieren%20der%20%C3%9Cberschriften%20%2A%2F%0A%0Ah1%3Anth%2Dof%2Dtype%28n%2B2%29%20%7B%0A%20%20%20%20margin%2Dtop%3A%204em%3B%0A%7D%0A%0A%0Ah1%20a%2C%0Ah2%20a%2C%0Ah3%20a%2C%0Ah4%20a%2C%0Ah5%20a%2C%0Ah6%20a%20%7B%0A%20%20%20%20text%2Ddecoration%3A%20none%3B%0A%09color%3A%20%23000%3B%0A%7D%0A%0A" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -48,13 +48,12 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </nav>
 <h1 id="vorwort"><a href="#vorwort">Vorwort</a></h1>
 <p>Rumex verwendet pandocs markdown weil man damit sehr einfach und schnell Text erstellen und verschiedenen Formate wandeln kann. Diese Funktion kann man aber auch außerhalb vom Rumex, also für die alltäglichen Beschreibungen und Notizen die so anfallen, verwenden.</p>
-<p>Abgesehen aber ich es bei dieser Beschreibung auf die beiden Formate <code>PDF</code> und <code>HTML</code> in der Grundform wie sie panodc Standardmäßig liefert. Also ohne Anpassung des Layouts weder bei HTML noch bei PDF.</p>
-<p>Für PDF muss jedoch LaTeX auf dem Rechner installiert sein. Außerdem wurde für die Darstellung, siehe weiter unten, der PDF Dateien das Programm zathura gewählt.</p>
+<p>Abgesehen habe ich es bei dieser Beschreibung auf die beiden Formate <code>PDF</code><sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> und <code>HTML</code>.</p>
 <h1 id="ausgabeformate-erstellen"><a href="#ausgabeformate-erstellen">Ausgabeformate erstellen</a></h1>
 <p>Um die unterschiedlichen Ausgabeformate mittels pandoc zu erstellen braucht man einige Optionen die auf der <a href="http://johnmacfarlane.net/pandoc/README.html">Homepage von pandoc</a> sehr gut beschrieben sind.</p>
 <p>Um den aktuellen Text nach HTML zu wandeln kann dieser Befehl verwendet werden.</p>
 <pre><code>pandoc -f markdown -t html5 --toc -s -o test.html test.md</code></pre>
-<p>Für PDF<sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> funktioniert dieser Befehl</p>
+<p>Für PDF funktioniert dieser Befehl</p>
 <pre><code>pandoc -f markdown -t latex --toc -V lang=ngermanb -o test.pdf test.md</code></pre>
 <p>Dabei ist der Parameter <code>--toc</code> für die Anzeige des Inhaltsverzeichnis zuständig.</p>
 <p>Da diese beiden Formate innerhalb des Editors gvim zur Verfügung stehen sollten brauchte es noch die Definition der gvim Kurztasten.</p>
@@ -74,8 +73,7 @@ map &lt;F9&gt; :w&lt;cr&gt;:!pandoc -f markdown -t latex --toc -V lang=ngermanb 
 map &lt;A-F9&gt; :!zathura &lt;C-R&gt;=expand(&quot;%:r&quot;)&lt;CR&gt;.pdf&amp;&lt;CR&gt;&lt;CR&gt;</code></pre>
 <h1 id="formatierung-erweitern"><a href="#formatierung-erweitern">Formatierung erweitern</a></h1>
 <p>Die erzeugte HTML Datei besitzt keine Formatierung bzw. verwendet die Standard Darstellung des Browsers.</p>
-<p>Kopf- und Fusszeile werden dadurch nicht, vom restlichen Text, unterschieden. Auch das Inhaltsverzeichnis ist im ersten Moment als solches nicht zu erkenne.</p>
-<p>Es muss also eine kleine Format Änderung eingebaut werden.</p>
+<p>Kopf- und Fusszeile werden dadurch nicht, vom restlichen Text, unterschieden. Auch das Inhaltsverzeichnis ist im ersten Moment als solches nicht gleich zu erkennen. Dieses kann mit ein wenig CSS geändert werden.</p>
 <pre class="sourceCode css"><code class="sourceCode css"><span class="co">/* gvim_f8.css */</span>
 
 header <span class="kw">{</span>
@@ -99,16 +97,45 @@ section<span class="fl">.footnotes</span> hr <span class="kw">{</span>
     <span class="kw">border-top:</span> <span class="dt">1px</span> <span class="dt">solid</span> <span class="dt">silver</span><span class="kw">;</span>
     <span class="kw">margin-left:</span> <span class="dt">0</span><span class="kw">;</span>
     <span class="kw">width:</span> <span class="dt">40%</span><span class="kw">;</span>
+<span class="kw">}</span>
+
+
+<span class="co">/* ----------------------------------</span>
+<span class="co">    Umformatieren der Überschriften </span>
+<span class="co">    --------------------------------    </span>
+<span class="co">*/</span>
+
+<span class="co">/* Ab der zweiten h1 Überschrift bekommt diese</span>
+<span class="co">    einen größeren Abstand.</span>
+<span class="co">*/</span>
+
+h1<span class="dv">:nth-of-type</span>(n+2) <span class="kw">{</span>
+    <span class="kw">margin-top:</span> <span class="dt">4em</span><span class="kw">;</span>
+<span class="kw">}</span>
+
+<span class="co">/* Der Link der Überschriften sollte </span>
+<span class="co">    nicht unterstrichen </span>
+<span class="co">    und in schwarz dargestellt werden.</span>
+<span class="co">*/</span>
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a <span class="kw">{</span>
+    <span class="kw">text-decoration:</span> <span class="dt">none</span><span class="kw">;</span>
+    <span class="kw">color:</span> <span class="dt">#000</span><span class="kw">;</span>
 <span class="kw">}</span></code></pre>
-<p>Die Zeile in der Datei <code>~/.gvimrc</code> ändert sich dadurch ein wenig. Sie wird um die beiden Optionen <code>--self-contained</code> und <code>--css ~/.pandoc/gvim_f8.css</code> erweitert.</p>
+<p>Gespeichert wird diese Datei in einem separaten Unterverzeichnis. Ich verwende dazu <code>~/.pandoc</code>.</p>
+<p>Die Zeilen für die HTML Erstellung, in der Datei <code>~/.gvimrc</code>, ändert sich dadurch ein wenig. Es sind die Optionen <code>--self-contained</code> und <code>--css ~/.pandoc/gvim_f8.css</code> hinzu gekommen.</p>
 <pre><code>&quot; HTML Datei erstellen
 map &lt;F8&gt; :w&lt;cr&gt;:!pandoc -f markdown -t html5 --toc --self-contained --css ~/.pandoc/gvim_f8.css -s -o &lt;C-R&gt;=expand(&quot;%:r&quot;)&lt;CR&gt;.html %&lt;CR&gt;&lt;CR&gt;</code></pre>
-<p><strong>Parameter Erweiterung</strong></p>
+<p><strong>Anmerkung zu den neuen Parametern</strong></p>
 <dl>
-<dt>--self-contained</dt>
+<dt><code>--self-contained</code></dt>
 <dd><p>Durch diesen Parameter wird die CSS Datei in den HTML Quellcode eingebunden. Funktioniert übrigens auch mit Bildern. Es muss also nur die HTML Datei hoch geladen werden.</p>
 </dd>
-<dt>--css</dt>
+<dt><code>--css</code></dt>
 <dd><p>Die CSS Formatierungsdatei. Da die Datei mittels <code>--self-contained</code> in die HTML Datei eingebunden wird muss diese nicht auf dem Server mit hoch geladen werden.</p>
 </dd>
 </dl>
@@ -120,7 +147,7 @@ map &lt;F8&gt; :w&lt;cr&gt;:!pandoc -f markdown -t html5 --toc --self-contained 
 <section class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Für das Erstellen des PDF Formats muss jedoch LaTeX auf dem System installiert werden.<a href="#fnref1">↩</a></p></li>
+<li id="fn1"><p>Für die Umwandlung nach PDF muss jedoch LaTeX mit den entsprechenden Paketen auf dem Rechner installiert sein. Außerdem wird für die Darstellung der PDF Dateien das Programm zathura verwendet, was natürlich auch installiert sein sollte.<a href="#fnref1">↩</a></p></li>
 <li id="fn2"><p>Zathura wurde deshalb gewählt weil dieses Programm ähnlich wie vi über die Tastatur bedient werden kann.<a href="#fnref2">↩</a></p></li>
 </ol>
 </section>

@@ -14,14 +14,12 @@ Diese Funktion kann man aber auch außerhalb vom Rumex,
 also für die alltäglichen Beschreibungen und Notizen die
 so anfallen, verwenden.
 
-Abgesehen aber ich es bei dieser Beschreibung auf die beiden 
-Formate `PDF` und `HTML` in der Grundform wie sie panodc
-Standardmäßig liefert.
-Also ohne Anpassung des Layouts weder bei HTML noch bei PDF.
+Abgesehen habe ich es bei dieser Beschreibung auf die beiden 
+Formate `PDF`[^latex] und `HTML`.
 
-Für PDF muss jedoch LaTeX auf dem Rechner installiert sein.
-Außerdem wurde für die Darstellung, siehe weiter unten, der PDF Dateien das 
-Programm zathura gewählt. 
+[^latex]: Für die Umwandlung nach PDF muss jedoch LaTeX mit den 
+entsprechenden Paketen auf dem Rechner installiert sein.
+Außerdem wird für die Darstellung der PDF Dateien das Programm zathura verwendet, was natürlich auch installiert sein sollte. 
 
 
 
@@ -38,14 +36,12 @@ werden.
 
 	pandoc -f markdown -t html5 --toc -s -o test.html test.md
 
-Für PDF[^pdf] funktioniert dieser Befehl
+Für PDF funktioniert dieser Befehl
 
 	pandoc -f markdown -t latex --toc -V lang=ngermanb -o test.pdf test.md
 
 Dabei ist der Parameter `--toc` für die Anzeige des Inhaltsverzeichnis zuständig.
 
-[^pdf]: Für das Erstellen des PDF Formats muss jedoch LaTeX 
-auf dem System installiert werden.
 
 Da diese beiden Formate innerhalb des Editors gvim
 zur Verfügung stehen sollten brauchte es noch die 
@@ -66,8 +62,8 @@ F8 für HTML und F9 für das PDF Format.\
 Ausserdem werden noch die zwei Tasten ALT-F8 und ALT-F9 für die Anzeige 
 konfiguriert wobei zathura[^zathura] für die PDF Anzeige verwendet wird.
 
-[^zathura]: Zathura wurde deshalb gewählt weil dieses Programm ähnlich wie vi
-über die Tastatur bedient werden kann.
+[^zathura]: Zathura wurde deshalb gewählt weil dieses Programm ähnlich 
+wie vi über die Tastatur bedient werden kann.
 
 Nachfolgende Zeilen in die `~/.gvimrc` Datei kopieren und fertig ist diese Anpassung.
 
@@ -92,9 +88,9 @@ Die erzeugte HTML Datei besitzt keine Formatierung bzw.
 verwendet die Standard Darstellung des Browsers.
 
 Kopf- und Fusszeile werden dadurch nicht, vom restlichen Text, unterschieden.
-Auch das Inhaltsverzeichnis ist im ersten Moment als solches nicht zu erkenne.
-
-Es muss also eine kleine Format Änderung eingebaut werden.
+Auch das Inhaltsverzeichnis ist im ersten Moment als solches nicht 
+gleich zu erkennen.
+Dieses kann mit ein wenig CSS geändert werden.
 
 ~~~{.css}
 /* gvim_f8.css */
@@ -121,22 +117,54 @@ section.footnotes hr {
 	margin-left: 0;
 	width: 40%;
 }
+
+
+/* ----------------------------------
+	Umformatieren der Überschriften 
+	--------------------------------	
+*/
+
+/* Ab der zweiten h1 Überschrift bekommt diese
+	einen größeren Abstand.
+*/
+
+h1:nth-of-type(n+2) {
+    margin-top: 4em;
+}
+
+/* Der Link der Überschriften sollte 
+	nicht unterstrichen 
+	und in schwarz dargestellt werden.
+*/
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    text-decoration: none;
+	color: #000;
+}
+
 ~~~
 
-Die Zeile in der Datei `~/.gvimrc` ändert sich dadurch ein wenig.
-Sie wird um die beiden Optionen `--self-contained` und `--css ~/.pandoc/gvim_f8.css` erweitert.
+Gespeichert wird diese Datei in einem separaten Unterverzeichnis.
+Ich verwende dazu `~/.pandoc`.
+
+Die Zeilen für die HTML Erstellung, in der Datei `~/.gvimrc`, ändert sich dadurch ein wenig.
+Es sind die Optionen `--self-contained` und `--css ~/.pandoc/gvim_f8.css` hinzu gekommen.
 
 	" HTML Datei erstellen
 	map <F8> :w<cr>:!pandoc -f markdown -t html5 --toc --self-contained --css ~/.pandoc/gvim_f8.css -s -o <C-R>=expand("%:r")<CR>.html %<CR><CR>
 
-**Parameter Erweiterung**
+**Anmerkung zu den neuen Parametern**
 
---self-contained
+`--self-contained`
 :	Durch diesen Parameter wird die CSS Datei in den HTML Quellcode
 	eingebunden. Funktioniert übrigens auch mit Bildern.
 	Es muss also nur die HTML Datei hoch geladen werden.
 
---css
+`--css`
 :	Die CSS Formatierungsdatei. Da die Datei mittels `--self-contained`
 	in die HTML Datei eingebunden wird muss diese nicht auf 
 	dem Server mit hoch geladen werden.
