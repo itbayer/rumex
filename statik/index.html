@@ -9,6 +9,26 @@
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+  <link href="data:text/css,%2F%2A%20gvim%5Ff8%2Ecss%20%2A%2F%0A%0Aheader%20%7B%0A%09text%2Dalign%3A%20center%3B%0A%09border%2Dbottom%3A%201px%20solid%20silver%3B%0A%7D%0A%0Anav%23TOC%20%7B%0A%09border%2Dbottom%3A%201px%20solid%20silver%3B%0A%09font%2Dsize%3A%200%2E8em%3B%0A%7D%20%0A%0A%0Asection%2Efootnotes%20%7B%0A%09color%3A%20gray%3B%0A%09font%2Dsize%3A%200%2E8em%3B%0A%09margin%2Dtop%3A%204em%3B%0A%7D%0A%0Asection%2Efootnotes%20hr%20%7B%0A%09border%3A%20none%3B%0A%09border%2Dtop%3A%201px%20solid%20silver%3B%0A%09margin%2Dleft%3A%200%3B%0A%09width%3A%2040%25%3B%0A%7D%0A" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -19,8 +39,9 @@
 <nav id="TOC">
 <ul>
 <li><a href="#vorwort">Vorwort</a></li>
-<li><a href="#formate-erstellen">Formate erstellen</a></li>
+<li><a href="#ausgabeformate-erstellen">Ausgabeformate erstellen</a></li>
 <li><a href="#die-gvim-kurztaste">Die Gvim Kurztaste</a></li>
+<li><a href="#formatierung-erweitern">Formatierung erweitern</a></li>
 <li><a href="#rumex">Rumex?</a></li>
 </ul>
 </nav>
@@ -28,8 +49,8 @@
 <p>Rumex verwendet pandocs markdown weil man damit sehr einfach und schnell Text erstellen und verschiedenen Formate wandeln kann. Diese Funktion kann man aber auch außerhalb vom Rumex, also für die alltäglichen Beschreibungen und Notizen die so anfallen, verwenden.</p>
 <p>Abgesehen aber ich es bei dieser Beschreibung auf die beiden Formate <code>PDF</code> und <code>HTML</code> in der Grundform wie sie panodc Standardmäßig liefert. Also ohne Anpassung des Layouts weder bei HTML noch bei PDF.</p>
 <p>Für PDF muss jedoch LaTeX auf dem Rechner installiert sein. Außerdem wurde für die Darstellung, siehe weiter unten, der PDF Dateien das Programm zathura gewählt.</p>
-<h1 id="formate-erstellen"><a href="#formate-erstellen">Formate erstellen</a></h1>
-<p>Um die unterschiedlichen Formate mittels pandoc zu erstellen braucht man einige Optionen die auf der <a href="http://johnmacfarlane.net/pandoc/README.html">Homepage von pandoc</a> sehr gut beschrieben sind.</p>
+<h1 id="ausgabeformate-erstellen"><a href="#ausgabeformate-erstellen">Ausgabeformate erstellen</a></h1>
+<p>Um die unterschiedlichen Ausgabeformate mittels pandoc zu erstellen braucht man einige Optionen die auf der <a href="http://johnmacfarlane.net/pandoc/README.html">Homepage von pandoc</a> sehr gut beschrieben sind.</p>
 <p>Um den aktuellen Text nach HTML zu wandeln kann dieser Befehl verwendet werden.</p>
 <pre><code>pandoc -f markdown -t html5 --toc -s -o test.html test.md</code></pre>
 <p>Für PDF<sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> funktioniert dieser Befehl</p>
@@ -50,10 +71,42 @@ map &lt;A-F8&gt; :!x-www-browser &lt;C-R&gt;=expand(&quot;%:r&quot;)&lt;CR&gt;.h
 map &lt;F9&gt; :w&lt;cr&gt;:!pandoc -f markdown -t latex --toc -V lang=ngermanb -o &lt;C-R&gt;=expand(&quot;%:r&quot;)&lt;CR&gt;.pdf %&lt;CR&gt;&lt;CR&gt;
 &quot; PDF Datei anzeigen
 map &lt;A-F9&gt; :!zathura &lt;C-R&gt;=expand(&quot;%:r&quot;)&lt;CR&gt;.pdf&amp;&lt;CR&gt;&lt;CR&gt;</code></pre>
+<h1 id="formatierung-erweitern"><a href="#formatierung-erweitern">Formatierung erweitern</a></h1>
+<p>Die erzeugte HTML Datei besitzt keine Formatierung bzw. verwendet die Standard Darstellung des Browsers.</p>
+<p>Kopf- und Fusszeile werden dadurch nicht, vom restlichen Text, unterschieden. Auch das Inhaltsverzeichnis ist im ersten Moment als solches nicht zu erkenne.</p>
+<p>Es muss also eine kleine Format Änderung eingebaut werden.</p>
+<pre class="sourceCode css"><code class="sourceCode css"><span class="co">/* gvim_f8.css */</span>
+
+header <span class="kw">{</span>
+    <span class="kw">text-align:</span> <span class="dt">center</span><span class="kw">;</span>
+    <span class="kw">border-bottom:</span> <span class="dt">1px</span> <span class="dt">solid</span> <span class="dt">silver</span><span class="kw">;</span>
+<span class="kw">}</span>
+
+nav<span class="fl">#TOC</span> <span class="kw">{</span>
+    <span class="kw">border-bottom:</span> <span class="dt">1px</span> <span class="dt">solid</span> <span class="dt">silver</span><span class="kw">;</span>
+    <span class="kw">font-size:</span> <span class="dt">0.8em</span><span class="kw">;</span>
+<span class="kw">}</span> 
+
+section<span class="fl">.footnotes</span> <span class="kw">{</span>
+    <span class="kw">color:</span> <span class="dt">gray</span><span class="kw">;</span>
+    <span class="kw">font-size:</span> <span class="dt">0.8em</span><span class="kw">;</span>
+    <span class="kw">margin-top:</span> <span class="dt">4em</span><span class="kw">;</span>
+<span class="kw">}</span>
+
+section<span class="fl">.footnotes</span> hr <span class="kw">{</span>
+    <span class="kw">border:</span> <span class="dt">none</span><span class="kw">;</span>
+    <span class="kw">border-top:</span> <span class="dt">1px</span> <span class="dt">solid</span> <span class="dt">silver</span><span class="kw">;</span>
+    <span class="kw">margin-left:</span> <span class="dt">0</span><span class="kw">;</span>
+    <span class="kw">width:</span> <span class="dt">40%</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre>
+<p>Die Zeile in der Datei <code>~/.gvimrc</code> ändert sich dadurch ein wenig. Sie wird um die beiden Optionen <code>--self-contained</code> und <code>--css ~/.pandoc/gvim_f8.css</code> erweitert.</p>
+<pre><code>&quot; HTML Datei erstellen
+map &lt;F8&gt; :w&lt;cr&gt;:!pandoc -f markdown -t html5 --toc --self-contained --css ~/.pandoc/gvim_f8.css -s -o &lt;C-R&gt;=expand(&quot;%:r&quot;)&lt;CR&gt;.html %&lt;CR&gt;&lt;CR&gt;</code></pre>
 <h1 id="rumex"><a href="#rumex">Rumex?</a></h1>
 <p>In Rumex kann man diese Funktion natürlich auch verwenden. Am besten erstellt man sich dazu ein eigenes Unterverzeichnis und dort die Datei <code>index.md</code> mit den Texten.</p>
 <hr />
 <p>Die PDF Datei dieser Beschreibung kann man sich <a href="index.pdf">hier</a> ansehen. Die Markdown Quelldatei kann man sich <a href="index.md">hier</a> holen.</p>
+<hr />
 <section class="footnotes">
 <hr />
 <ol>

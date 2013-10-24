@@ -25,10 +25,10 @@ Programm zathura gewählt.
 
 
 
-Formate erstellen
-=================
+Ausgabeformate erstellen
+========================
 
-Um die unterschiedlichen Formate mittels pandoc
+Um die unterschiedlichen Ausgabeformate mittels pandoc
 zu erstellen braucht man einige Optionen die auf der 
 [Homepage von pandoc](http://johnmacfarlane.net/pandoc/README.html) 
 sehr gut beschrieben sind.
@@ -85,6 +85,51 @@ map <A-F9> :!zathura <C-R>=expand("%:r")<CR>.pdf&<CR><CR>
 ~~~
 
 
+Formatierung erweitern
+======================
+
+Die erzeugte HTML Datei besitzt keine Formatierung bzw.
+verwendet die Standard Darstellung des Browsers.
+
+Kopf- und Fusszeile werden dadurch nicht, vom restlichen Text, unterschieden.
+Auch das Inhaltsverzeichnis ist im ersten Moment als solches nicht zu erkenne.
+
+Es muss also eine kleine Format Änderung eingebaut werden.
+
+~~~{.css}
+/* gvim_f8.css */
+
+header {
+	text-align: center;
+	border-bottom: 1px solid silver;
+}
+
+nav#TOC {
+	border-bottom: 1px solid silver;
+	font-size: 0.8em;
+} 
+
+section.footnotes {
+	color: gray;
+	font-size: 0.8em;
+	margin-top: 4em;
+}
+
+section.footnotes hr {
+	border: none;
+	border-top: 1px solid silver;
+	margin-left: 0;
+	width: 40%;
+}
+~~~
+
+Die Zeile in der Datei `~/.gvimrc` ändert sich dadurch ein wenig.
+Sie wird um die beiden Optionen `--self-contained` und `--css ~/.pandoc/gvim_f8.css` erweitert.
+
+	" HTML Datei erstellen
+	map <F8> :w<cr>:!pandoc -f markdown -t html5 --toc --self-contained --css ~/.pandoc/gvim_f8.css -s -o <C-R>=expand("%:r")<CR>.html %<CR><CR>
+
+
 
 
 Rumex?
@@ -102,8 +147,7 @@ dort die Datei `index.md` mit den Texten.
 Die PDF Datei dieser Beschreibung kann man sich [hier](index.pdf) ansehen.
 Die Markdown Quelldatei kann man sich [hier](index.md) holen.
 
-
-
+----
 
 
 
