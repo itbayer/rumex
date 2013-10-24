@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <meta name="author" content="Stefan Blechschmidt">
   <title>HTML und PDF Dateine mit pandoc und gvim erstellen</title>
   <style type="text/css">code{white-space: pre;}</style>
@@ -28,7 +29,7 @@ code > span.al { color: #ff0000; font-weight: bold; }
 code > span.fu { color: #06287e; }
 code > span.er { color: #ff0000; font-weight: bold; }
   </style>
-  <link href="data:text/css,%2F%2A%20gvim%5Ff8%2Ecss%20%2A%2F%0A%0Aheader%20%7B%0A%09text%2Dalign%3A%20center%3B%0A%09border%2Dbottom%3A%201px%20solid%20silver%3B%0A%7D%0A%0Anav%23TOC%20%7B%0A%09border%2Dbottom%3A%201px%20solid%20silver%3B%0A%09font%2Dsize%3A%200%2E8em%3B%0A%7D%20%0A%0A%0Asection%2Efootnotes%20%7B%0A%09color%3A%20gray%3B%0A%09font%2Dsize%3A%200%2E8em%3B%0A%09margin%2Dtop%3A%204em%3B%0A%7D%0A%0Asection%2Efootnotes%20hr%20%7B%0A%09border%3A%20none%3B%0A%09border%2Dtop%3A%201px%20solid%20silver%3B%0A%09margin%2Dleft%3A%200%3B%0A%09width%3A%2040%25%3B%0A%7D%0A" rel="stylesheet">
+  <link href="data:text/css,%2F%2A%20gvim%5Ff8%2Ecss%20%2A%2F%0A%0Aheader%20%7B%0A%09text%2Dalign%3A%20center%3B%0A%09border%2Dbottom%3A%201px%20solid%20silver%3B%0A%7D%0A%0Anav%23TOC%20%7B%0A%09border%2Dbottom%3A%201px%20solid%20silver%3B%0A%09font%2Dsize%3A%200%2E8em%3B%0A%7D%20%0A%0Asection%2Efootnotes%20%7B%0A%09color%3A%20gray%3B%0A%09font%2Dsize%3A%200%2E8em%3B%0A%09margin%2Dtop%3A%204em%3B%0A%7D%0A%0Asection%2Efootnotes%20hr%20%7B%0A%09border%3A%20none%3B%0A%09border%2Dtop%3A%201px%20solid%20silver%3B%0A%09margin%2Dleft%3A%200%3B%0A%09width%3A%2040%25%3B%0A%7D%0A" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -102,6 +103,15 @@ section<span class="fl">.footnotes</span> hr <span class="kw">{</span>
 <p>Die Zeile in der Datei <code>~/.gvimrc</code> ändert sich dadurch ein wenig. Sie wird um die beiden Optionen <code>--self-contained</code> und <code>--css ~/.pandoc/gvim_f8.css</code> erweitert.</p>
 <pre><code>&quot; HTML Datei erstellen
 map &lt;F8&gt; :w&lt;cr&gt;:!pandoc -f markdown -t html5 --toc --self-contained --css ~/.pandoc/gvim_f8.css -s -o &lt;C-R&gt;=expand(&quot;%:r&quot;)&lt;CR&gt;.html %&lt;CR&gt;&lt;CR&gt;</code></pre>
+<p><strong>Parameter Erweiterung</strong></p>
+<dl>
+<dt>--self-contained</dt>
+<dd><p>Durch diesen Parameter wird die CSS Datei in den HTML Quellcode eingebunden. Funktioniert übrigens auch mit Bildern. Es muss also nur die HTML Datei hoch geladen werden.</p>
+</dd>
+<dt>--css</dt>
+<dd><p>Die CSS Formatierungsdatei. Da die Datei mittels <code>--self-contained</code> in die HTML Datei eingebunden wird muss diese nicht auf dem Server mit hoch geladen werden.</p>
+</dd>
+</dl>
 <h1 id="rumex"><a href="#rumex">Rumex?</a></h1>
 <p>In Rumex kann man diese Funktion natürlich auch verwenden. Am besten erstellt man sich dazu ein eigenes Unterverzeichnis und dort die Datei <code>index.md</code> mit den Texten.</p>
 <hr />

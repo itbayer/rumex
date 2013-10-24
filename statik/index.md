@@ -129,7 +129,17 @@ Sie wird um die beiden Optionen `--self-contained` und `--css ~/.pandoc/gvim_f8.
 	" HTML Datei erstellen
 	map <F8> :w<cr>:!pandoc -f markdown -t html5 --toc --self-contained --css ~/.pandoc/gvim_f8.css -s -o <C-R>=expand("%:r")<CR>.html %<CR><CR>
 
+**Parameter Erweiterung**
 
+--self-contained
+:	Durch diesen Parameter wird die CSS Datei in den HTML Quellcode
+	eingebunden. Funktioniert übrigens auch mit Bildern.
+	Es muss also nur die HTML Datei hoch geladen werden.
+
+--css
+:	Die CSS Formatierungsdatei. Da die Datei mittels `--self-contained`
+	in die HTML Datei eingebunden wird muss diese nicht auf 
+	dem Server mit hoch geladen werden.
 
 
 Rumex?
