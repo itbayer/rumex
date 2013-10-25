@@ -69,9 +69,9 @@ Nachfolgende Zeilen in die `~/.gvimrc` Datei kopieren und fertig ist diese Anpas
 
 ~~~
 " HTML Datei erstellen
-map <F8> :w<cr>:!pandoc -f markdown -t html5 --toc -s -o <C-R>=expand("%:r")<CR>.html %<CR><CR>
+map <F8> :w<cr>:!pandoc -f markdown -t html5 --toc -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
 " HTML Datei anzeigen
-map <A-F8> :!x-www-browser <C-R>=expand("%:r")<CR>.html&<CR><CR>
+map <A-F8> :!x-www-browser <C-R>=expand("%:r")<CR>.htm&<CR><CR>
 
 
 " PDF Datei erstellen
@@ -79,6 +79,7 @@ map <F9> :w<cr>:!pandoc -f markdown -t latex --toc -V lang=ngermanb -o <C-R>=exp
 " PDF Datei anzeigen
 map <A-F9> :!zathura <C-R>=expand("%:r")<CR>.pdf&<CR><CR>
 ~~~
+
 
 
 Formatierung erweitern
@@ -151,7 +152,7 @@ Die Zeilen für die HTML Erstellung, in der Datei `~/.gvimrc`, ändert sich dadu
 Es sind die Optionen `--self-contained` und `--css ~/.pandoc/gvim_f8.css` hinzu gekommen.
 
 	" HTML Datei erstellen
-	map <F8> :w<cr>:!pandoc -f markdown -t html5 --toc --self-contained --css ~/.pandoc/gvim_f8.css -s -o <C-R>=expand("%:r")<CR>.html %<CR><CR>
+	map <F8> :w<cr>:!pandoc -f markdown -t html5 --toc --self-contained --css ~/.pandoc/gvim_f8.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
 
 **Anmerkung zu den neuen Parametern**
 
@@ -174,6 +175,20 @@ Am besten erstellt man sich dazu ein eigenes Unterverzeichnis und
 dort die Datei `index.md` mit den Texten.
 
 
+Warum `.htm` verwendet wird
+---------------------------
+
+Um nicht mit der git Verwaltung, innerhalb Rumex / Unterverzeichnis 
+`.rx`, in Konflikt zu kommen wurde für die HTML Dateien,
+die per F8 erstellt werden, 
+die Endung `.htm` verwendet.
+Durch einen Eintrag in der Datei `.gitignore` können diese
+so von der git Verwaltung ausgenommen werden.
+
+	.rx/*.htm
+
+Zwar werden diese Dateien im lokalen Arbeitsverzeichnis gespeichert
+aber nicht über den Befehl `make online` hoch geladen.
 
 
 ----

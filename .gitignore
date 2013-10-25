@@ -4,3 +4,4 @@
 
 # VIM 
 *.swp
+.rx/*.htm

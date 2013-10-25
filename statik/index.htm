@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <meta name="author" content="Stefan Blechschmidt">
   <title>HTML und PDF Dateine mit pandoc und gvim erstellen</title>
   <style type="text/css">code{white-space: pre;}</style>
@@ -28,7 +29,7 @@ code > span.al { color: #ff0000; font-weight: bold; }
 code > span.fu { color: #06287e; }
 code > span.er { color: #ff0000; font-weight: bold; }
   </style>
-  <link href="data:text/css,%2F%2A%20gvim%5Ff8%2Ecss%20%2A%2F%0A%0Aheader%20%7B%0A%09text%2Dalign%3A%20center%3B%0A%09border%2Dbottom%3A%201px%20solid%20silver%3B%0A%7D%0A%0Anav%23TOC%20%7B%0A%09border%2Dbottom%3A%201px%20solid%20silver%3B%0A%09font%2Dsize%3A%200%2E8em%3B%0A%7D%20%0A%0A%0Asection%2Efootnotes%20%7B%0A%09color%3A%20gray%3B%0A%09font%2Dsize%3A%200%2E8em%3B%0A%09margin%2Dtop%3A%204em%3B%0A%7D%0A%0Asection%2Efootnotes%20hr%20%7B%0A%09border%3A%20none%3B%0A%09border%2Dtop%3A%201px%20solid%20silver%3B%0A%09margin%2Dleft%3A%200%3B%0A%09width%3A%2040%25%3B%0A%7D%0A%0A%2F%2A%20%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%0A%20%20%20%20Umformatieren%20der%20%C3%9Cberschriften%20%0A%20%20%20%20%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%20%2A%2F%0A%0A%2F%2A%20Ab%20der%20zweiten%20h1%20%C3%9Cberschrift%20bekommt%20diese%0A%20%20%20%20einen%20gr%C3%B6%C3%9Feren%20Abstand%2E%0A%2A%2F%0A%0Ah1%3Anth%2Dof%2Dtype%28n%2B2%29%20%7B%0A%20%20%20%20margin%2Dtop%3A%204em%3B%0A%7D%0A%0A%2F%2A%20Der%20Link%20der%20%C3%9Cberschriften%20sollte%20%0A%20%20%20%20nicht%20unterstrichen%20%0A%20%20%20%20und%20in%20schwarz%20dargestellt%20werden%2E%20%20%2A%2F%0Ah1%20a%2C%0Ah2%20a%2C%0Ah3%20a%2C%0Ah4%20a%2C%0Ah5%20a%2C%0Ah6%20a%20%7B%0A%20%20%20%20text%2Ddecoration%3A%20none%3B%0A%20%20%20%20color%3A%20%23000%3B%0A%7D%0A" rel="stylesheet">
+  <link href="data:text/css,%2F%2A%20gvim%5Ff8%2Ecss%20%2A%2F%0A%0Aheader%20%7B%0A%09text%2Dalign%3A%20center%3B%0A%09border%2Dbottom%3A%201px%20solid%20silver%3B%0A%7D%0A%0Anav%23TOC%20%7B%0A%09border%2Dbottom%3A%201px%20solid%20silver%3B%0A%09font%2Dsize%3A%200%2E8em%3B%0A%7D%20%0A%0Asection%2Efootnotes%20%7B%0A%09color%3A%20gray%3B%0A%09font%2Dsize%3A%200%2E8em%3B%0A%09margin%2Dtop%3A%204em%3B%0A%7D%0A%0Asection%2Efootnotes%20hr%20%7B%0A%09border%3A%20none%3B%0A%09border%2Dtop%3A%201px%20solid%20silver%3B%0A%09margin%2Dleft%3A%200%3B%0A%09width%3A%2040%25%3B%0A%7D%0A%0A%2F%2A%20Umformatieren%20der%20%C3%9Cberschriften%20%2A%2F%0A%0Ah1%3Anth%2Dof%2Dtype%28n%2B2%29%20%7B%0A%20%20%20%20margin%2Dtop%3A%204em%3B%0A%7D%0A%0A%0Ah1%20a%2C%0Ah2%20a%2C%0Ah3%20a%2C%0Ah4%20a%2C%0Ah5%20a%2C%0Ah6%20a%20%7B%0A%20%20%20%20text%2Ddecoration%3A%20none%3B%0A%09color%3A%20%23000%3B%0A%7D%0A%0A" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -42,7 +43,9 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><a href="#ausgabeformate-erstellen">Ausgabeformate erstellen</a></li>
 <li><a href="#die-gvim-kurztaste">Die Gvim Kurztaste</a></li>
 <li><a href="#formatierung-erweitern">Formatierung erweitern</a></li>
-<li><a href="#rumex">Rumex?</a></li>
+<li><a href="#rumex">Rumex?</a><ul>
+<li><a href="#warum-.htm-verwendet-wird">Warum <code>.htm</code> verwendet wird</a></li>
+</ul></li>
 </ul>
 </nav>
 <h1 id="vorwort"><a href="#vorwort">Vorwort</a></h1>
@@ -61,9 +64,9 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>Verwendet werden, in diesem Beispiel, die Tasten F8 und F9.<br />F8 für HTML und F9 für das PDF Format.<br />Ausserdem werden noch die zwei Tasten ALT-F8 und ALT-F9 für die Anzeige konfiguriert wobei zathura<sup><a href="#fn2" class="footnoteRef" id="fnref2">2</a></sup> für die PDF Anzeige verwendet wird.</p>
 <p>Nachfolgende Zeilen in die <code>~/.gvimrc</code> Datei kopieren und fertig ist diese Anpassung.</p>
 <pre><code>&quot; HTML Datei erstellen
-map &lt;F8&gt; :w&lt;cr&gt;:!pandoc -f markdown -t html5 --toc -s -o &lt;C-R&gt;=expand(&quot;%:r&quot;)&lt;CR&gt;.html %&lt;CR&gt;&lt;CR&gt;
+map &lt;F8&gt; :w&lt;cr&gt;:!pandoc -f markdown -t html5 --toc -s -o &lt;C-R&gt;=expand(&quot;%:r&quot;)&lt;CR&gt;.htm %&lt;CR&gt;&lt;CR&gt;
 &quot; HTML Datei anzeigen
-map &lt;A-F8&gt; :!x-www-browser &lt;C-R&gt;=expand(&quot;%:r&quot;)&lt;CR&gt;.html&amp;&lt;CR&gt;&lt;CR&gt;
+map &lt;A-F8&gt; :!x-www-browser &lt;C-R&gt;=expand(&quot;%:r&quot;)&lt;CR&gt;.htm&amp;&lt;CR&gt;&lt;CR&gt;
 
 
 &quot; PDF Datei erstellen
@@ -125,7 +128,7 @@ h6 a <span class="kw">{</span>
 <p>Gespeichert wird diese Datei in einem separaten Unterverzeichnis. Ich verwende dazu <code>~/.pandoc</code>.</p>
 <p>Die Zeilen für die HTML Erstellung, in der Datei <code>~/.gvimrc</code>, ändert sich dadurch ein wenig. Es sind die Optionen <code>--self-contained</code> und <code>--css ~/.pandoc/gvim_f8.css</code> hinzu gekommen.</p>
 <pre><code>&quot; HTML Datei erstellen
-map &lt;F8&gt; :w&lt;cr&gt;:!pandoc -f markdown -t html5 --toc --self-contained --css ~/.pandoc/gvim_f8.css -s -o &lt;C-R&gt;=expand(&quot;%:r&quot;)&lt;CR&gt;.html %&lt;CR&gt;&lt;CR&gt;</code></pre>
+map &lt;F8&gt; :w&lt;cr&gt;:!pandoc -f markdown -t html5 --toc --self-contained --css ~/.pandoc/gvim_f8.css -s -o &lt;C-R&gt;=expand(&quot;%:r&quot;)&lt;CR&gt;.htm %&lt;CR&gt;&lt;CR&gt;</code></pre>
 <p><strong>Anmerkung zu den neuen Parametern</strong></p>
 <dl>
 <dt><code>--self-contained</code></dt>
@@ -137,6 +140,10 @@ map &lt;F8&gt; :w&lt;cr&gt;:!pandoc -f markdown -t html5 --toc --self-contained 
 </dl>
 <h1 id="rumex"><a href="#rumex">Rumex?</a></h1>
 <p>In Rumex kann man diese Funktion natürlich auch verwenden. Am besten erstellt man sich dazu ein eigenes Unterverzeichnis und dort die Datei <code>index.md</code> mit den Texten.</p>
+<h2 id="warum-.htm-verwendet-wird"><a href="#warum-.htm-verwendet-wird">Warum <code>.htm</code> verwendet wird</a></h2>
+<p>Um nicht mit der git Verwaltung, innerhalb Rumex / Unterverzeichnis <code>.rx</code>, in Konflikt zu kommen wurde für die HTML Dateien, die per F8 erstellt werden, die Endung <code>.htm</code> verwendet. Durch einen Eintrag in der Datei <code>.gitignore</code> können diese so von der git Verwaltung ausgenommen werden.</p>
+<pre><code>.rx/*.htm</code></pre>
+<p>Zwar werden diese Dateien im lokalen Arbeitsverzeichnis gespeichert aber nicht über den Befehl <code>make online</code> hoch geladen.</p>
 <hr />
 <p>Die PDF Datei dieser Beschreibung kann man sich <a href="index.pdf">hier</a> ansehen. Die Markdown Quelldatei kann man sich <a href="index.md">hier</a> holen.</p>
 <hr />
