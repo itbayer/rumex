@@ -121,12 +121,10 @@ section.footnotes hr {
 
 /* ----------------------------------
 	Umformatieren der Überschriften 
-	--------------------------------	
-*/
+	-------------------------------- */
 
 /* Ab der zweiten h1 Überschrift bekommt diese
-	einen größeren Abstand.
-*/
+	einen größeren Abstand. */
 
 h1:nth-of-type(n+2) {
     margin-top: 4em;
@@ -134,8 +132,7 @@ h1:nth-of-type(n+2) {
 
 /* Der Link der Überschriften sollte 
 	nicht unterstrichen 
-	und in schwarz dargestellt werden.
-*/
+	und in schwarz dargestellt werden. */
 h1 a,
 h2 a,
 h3 a,
@@ -145,7 +142,6 @@ h6 a {
     text-decoration: none;
 	color: #000;
 }
-
 ~~~
 
 Gespeichert wird diese Datei in einem separaten Unterverzeichnis.

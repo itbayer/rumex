@@ -33,9 +33,9 @@ Unterstützung arbeitet sollte sich schon ein paar Kurztasten einprägen.
 
 Mittels dieser Kurztasten können Textbausteine eingebunden werden.
 
-## ,rnd (RumexNeueDatei)
+## `,rnd` (RumexNeueDatei)
 
-Erstellt das eine neues Datei Gerüst.
+Erstellt ein neues Datei Gerüst.
 Dabei wird der Dateiname gleich mit eingebunden.
 
 **So schaut's aus**
@@ -64,12 +64,12 @@ TEXT DER SEITE
 <!-- vim: set ft=pandoc: -->
 ~~~
 
-## ,rnn (RumexNeueNachricht)
+## `,rnn` (RumexNeueNachricht)
 
 Erstellt einen neuen News Eintrag.
 Diese Kurztaste macht eigentlich nur in der Datei `rss.rx0x` Sinn.
 Der Eintrag hinter Datum wird von Rumex gesetzt, ist also immer die
-aktuelle Systemzeit beim ausführen von `.rnn`.
+aktuelle Systemzeit beim ausführen von `,rnn`.
 
 **So schaut's aus**
 
@@ -87,7 +87,7 @@ Ab hier geht die neue Nachricht los.
 ~~~
 
 
-## ,rwl (RumexWeiterLeitung)
+## `,rwl` (RumexWeiterLeitung)
 
 Erstellt einen neue Weiterleitungsseite.
 
@@ -112,7 +112,7 @@ Normalerweise findet man kein `//` vor der
 Zeile `window.location.href=....html`.
 
 
-## ,rmk (RumexMootitKommentar)
+## `,rmk` (RumexMootitKommentar)
 Erstellt einen Moot.it Kommentar Abschnitt.
 Als Kennzeichnung wird der Dateiname ohne `rx??` eingebaut / angehängt.
 
@@ -126,7 +126,7 @@ Als Kennzeichnung wird der Dateiname ohne `rx??` eingebaut / angehängt.
 
 
 
-## ,rnb (RumexNeuenweBlog)
+## `,rnb` (RumexNeuenweBlog)
 
 Erstelle einen neuen Weblog Eintrag.
 
@@ -147,11 +147,11 @@ Text der vorerst ausgeblendet ist.
 
 # Git Kommandos
 
-## ,rgp (RumexGitPull)
+## `,rgp` (RumexGitPull)
 
 Git pull
 
-## ,rgs (RumexGitStatus)
+## `,rgs` (RumexGitStatus)
 
 Git status
 
@@ -160,23 +160,23 @@ Git status
 
 # Text Formatierung
 
-## ,rff (RumexFormatFett)
+## `,rff` (RumexFormatFett)
 
 Markierte Textstelle fett darstellen
 
-## ,rfk (RumexFormatKursiv)
+## `,rfk` (RumexFormatKursiv)
 
 Markierte Textstelle kursiv darstellen
 
-## ,rfl (RumexFormatListe)
+## `,rfl` (RumexFormatListe)
 
 Markierte Zeilen in eine Liste wandeln
 
-## ,rfn (RumexFormatNummernliste)
+## `,rfn` (RumexFormatNummernliste)
 
 Markierte Zeile in eine Nummernliste wandeln
 
-## ,rfb (RumexFormatBlock)
+## `,rfb` (RumexFormatBlock)
 
 Markierte Zeile in einen Block wandeln
 
@@ -198,72 +198,72 @@ Markierte Zeile in einen Block wandeln
 # Make Befehle
 
 
-## ,rma (RumexMakeAll)
+## `,rma` (RumexMakeAll)
 
 Speichert alle offenen Dokumente und erstellt daraus die HTML Datei.
 
-## ,rmb (RumexMakeBild)
+## `,rmb` (RumexMakeBild)
 
 Erstellt die unterschiedlichen Bildgrößen 
 
-## ,rmca (RumexMakeCleanAll)
+## `,rmca` (RumexMakeCleanAll)
 
 Löscht alle html Dateien, alle Bildergrößen und alle xml Dateien.
 beinhaltet die drei Befehle `make bclean`, `make hclean`, `make xclean`.
 
-## ,rmcb (RumexMakeCleanBilder)
+## `,rmcb` (RumexMakeCleanBilder)
 
 Löscht alle Bildgrößen aus dem `bilder/` Verzeichnis.
 Es werden nur die Bilder gelöscht die von Rumex erstellt wurden
 siehe `make bilder`.
 
-## ,rmch (RumexMakeCleanHtml)
+## `,rmch` (RumexMakeCleanHtml)
 
 Löscht alle `.html` Dateien die von Rumex erstellt wurden.
 
-## ,rmcx (RumexMakeCleanXml)
+## `,rmcx` (RumexMakeCleanXml)
 
 Löscht alle `.xlm` Dateien die von Rumex erstellt wurden.
 
 
-## ,rmh (RumexMakeHtml)
+## `,rmh` (RumexMakeHtml)
 
 Erstellt die `.html` Dateien.
 
-## ,rmi (RumexMakeIndex)
+## `,rmi` (RumexMakeIndex)
 
 Erstellt die index Datei.
 
-## ,rmm (RumexMakesiteMap)
+## `,rmm` (RumexMakesiteMap)
 
 Erstellt die sitemap Datei.
 
 
-## ,rmo (RumexMakeOnline)
+## `,rmo` (RumexMakeOnline)
 
 Speichert alle Dateien und stellt diese online.
 
 
-## ,rmr (RumexMakeRss)
+## `,rmr` (RumexMakeRss)
 
 Erstellt die rss Datei.
 
-## ,rms (RumexMakeSuche)
+## `,rms` (RumexMakeSuche)
 
 Erstellt die Rumex Suche, bzw. die Dateiliste die für
 die Suche verwendet werden soll.
 
 # Vorschau
 
-## ,rsf (RumexShowFile)
+## `,rsf` (RumexShowFile)
 
 Zeigt eine Vorschau der Seite der Datei `file:///` im Standardbrowser.
 
-## ,rsw (RumexShowWww)
+## `,rsw` (RumexShowWww)
 
 Zeigt eine Vorschau der Seite **Online** im Standardbrowser.
 
-## ,rsl (RumexShowLocal)
+## `,rsl` (RumexShowLocal)
 
 Zeigt eine Vorschau der Seite auf dem eigenen Rechner.
 Diese Kurztaste kann aber nur verwendet werden wenn auf dem 
@@ -274,16 +274,16 @@ Rechner der Apache installiert und entsprechend eingerichtet ist.
 
 # Sonstiges
 
-## ,rku 
+## `,rku` 
 
 Öffnet das Unterverzeichnis `.rx` in einem neuen VimTab Fenster.
 Keine Ahnung warum ich diese Kurztaste so benannt habe.
 
-## ,ros (RumexOpenStart)
+## `,ros` (RumexOpenStart)
 
 Öffnet die `start.rx0s` in einen neuen VIM Tab Fenster.
 
-## ,ror (RumexOpenRss)
+## `,ror` (RumexOpenRss)
 
 Öffnet die `rss.rx0x` in einen neuen VIM Tab Fenster.
 
