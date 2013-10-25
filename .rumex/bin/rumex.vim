@@ -180,6 +180,7 @@ map <Leader>rmca :make clean<CR>
 map <Leader>rmcb :make bclean<CR>
 map <Leader>rmch :make hclean<CR>
 map <Leader>rmcx :make xclean<CR>
+map <Leader>rmcf8 :make f8clean<CR>
 map <Leader>rmh :make html<CR>
 map <Leader>rmi :make index<CR>
 map <Leader>rmm :make sitemap<CR>

@@ -186,10 +186,27 @@ Durch einen Eintrag in der Datei `.gitignore` können diese
 so von der git Verwaltung ausgenommen werden.
 
 	.rx/*.htm
+	.rx/*.pdf
 
 Zwar werden diese Dateien im lokalen Arbeitsverzeichnis gespeichert
 aber nicht über den Befehl `make online` hoch geladen.
 
+
+`.htm` Dateien im `.rx` Verzeichnis aufräumen
+---------------------------------------------
+
+Um die evtl. angefallenen `.htm` Dateien, die sich im `.rx` Verzeichnis
+befinden, löschen zu können gibt es auch einen entsprechenden make Befehl
+unter Rumex. Mit
+
+	make f8clean
+
+werden alle  `.htm` Dateien im `.rx` Verzeichnis gelöscht.
+Dieser Befehl wurde auch in 
+
+	make clean
+
+aufgenommen.
 
 ----
 

@@ -55,6 +55,7 @@ menu Rumex.make.------make_sauber------ :
 menu &Rumex.&make.&clean.&Bilder<Tab>,rmcb ,rmcb
 menu &Rumex.&make.&clean.&HTML<Tab>,rmch ,rmcd
 menu &Rumex.&make.&clean.&XML<Tab>,rmcx ,rmcx
+menu &Rumex.&make.&clean.&f8_htm<Tab>,rmcf8 ,rmcf8
 menu &Rumex.&make.&clean.&alles<Tab>,rmca ,rmca
 
 menu Rumex.-----------------twitter--------------------------- :

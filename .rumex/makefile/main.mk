@@ -101,9 +101,11 @@ bclean:
 # #######################################################
 # .htm Dateien die per F8 erstellt wurde aus dem .rx 
 # 	Verzeichnis löschen. 
-# 	siehe dazu http://it-bayer.de/rumex/statik/
+# 	Die pdf Dateien F9 werden auch gleich mit genommen.
+# 	Siehe dazu http://it-bayer.de/rumex/statik/.
 f8clean: 
 	rm *.htm
+	rm *.pdf
 
 # #######################################################
 # rumex Installieren

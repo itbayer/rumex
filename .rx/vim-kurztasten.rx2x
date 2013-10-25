@@ -226,6 +226,15 @@ Löscht alle `.html` Dateien die von Rumex erstellt wurden.
 Löscht alle `.xlm` Dateien die von Rumex erstellt wurden.
 
 
+## `,rmcf8` (RumexMakeCleanF8htm)
+
+Löscht alle `.htm` Dateien die mittels der 
+Gvim Taste F8,
+siehe 
+[HTML und PDF Dateine mit pandoc und gvim erstellen](http://www.it-bayer.de/rumex/statik/),
+erstellt wurden.
+
+
 ## `,rmh` (RumexMakeHtml)
 
 Erstellt die `.html` Dateien.

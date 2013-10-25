@@ -5,3 +5,4 @@
 # VIM 
 *.swp
 .rx/*.htm
+.rx/*.pdf
