@@ -78,6 +78,7 @@ clean:
 	make -s hclean
 	make -s xclean
 	make -s bclean
+	make -s f8clean
 
 
 # #######################################################
@@ -97,6 +98,12 @@ xclean:
 bclean: 
 	rm ../bilder/*_???_.*
 
+# #######################################################
+# .htm Dateien die per F8 erstellt wurde aus dem .rx 
+# 	Verzeichnis löschen. 
+# 	siehe dazu http://it-bayer.de/rumex/statik/
+f8clean: 
+	rm *.htm
 
 # #######################################################
 # rumex Installieren
