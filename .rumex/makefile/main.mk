@@ -54,7 +54,7 @@ endif
 
 rss: 
 ifdef RSS_EXTERN
-	@echo "INFO: RSS ist ausgelagert, $(RSS_FILE)"
+	@echo "INFO: RSS ist ausgelagert, $(RSS_EXTERN)"
 else
 	make -s ../rss.xml
 endif

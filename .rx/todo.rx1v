@@ -24,10 +24,6 @@ moot.it
 :	Das Nachladen des Dienstes moot.it dauert sehr lange. 
 	Sollte man beobachten.
 
-RSS Extern
-:	Bei der RSS_EXTERN Konfiguration muss die Variabel RSS_FILE
-	auch auf die RSS_EXTERN Einstellung gestellt werden da sonst
-	der Link in der HTML Datei nicht richtig gesetzt wird.
 
 RSS Text
 :	Zeilen die mit einem Umlaut beginnen

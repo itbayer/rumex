@@ -3,6 +3,20 @@
 # ##############################################
 
 
+
+# ---------------------------------------------
+#  Wenn die Variable RSS_EXTERN gesetzt wurde
+#  	diesen Wert für den Header Link 
+#		-V rssfile=$(RSS_FILE) \
+#  	verwenden bzw. die Variable RSS_FILE mit diesem
+#  	Wert überschreiben.
+ifdef RSS_EXTERN
+	RSS_FILE = $(RSS_EXTERN)
+endif
+
+
+
+
 # ##############################################
 # HTML Datei ohne Inhaltsverzeichnis
 # ##############################################
@@ -82,6 +96,8 @@ html0v: $(HTML0V)
 		-V rumexsuche=$(RUMEXSUCHE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
+
+
 
 
 
@@ -215,6 +231,7 @@ html1v: $(HTML1V)
 		-V rumexsuche=$(RUMEXSUCHE) \
 		--template=$(HTML_TEMPLATE) \
 		$< -o $@
+
 
 
 

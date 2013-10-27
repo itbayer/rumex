@@ -32,7 +32,6 @@ U3="github.com Version"
 RSS_TITEL = "Neuigkeiten von rumex Baukasten"
 
 
-
 # ----------------------------------------------------
 # Schalter ob das externe Tool von moot.it eingebunden werden soll
 # Man sollte hier den Kontonamen angeben..
