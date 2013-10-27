@@ -54,7 +54,7 @@ endif
 
 rss: 
 ifdef RSS_EXTERN
-	@echo "INFO: RSS ist ausgelagert, siehe $(RSS_EXTERN)"
+	@echo "INFO: RSS ist ausgelagert, $(RSS_FILE)"
 else
 	make -s ../rss.xml
 endif
@@ -94,19 +94,19 @@ clean:
 # #######################################################
 # HTML Dateien aus dem root Verzeichnis löschen
 hclean:
-	rm ../*.html
+	rm -f ../*.html
 
 
 # #######################################################
 # XML aus dem root Verzeichnis löschen
 xclean:
-	rm ../*.xml
+	rm -f ../*.xml
 
 
 # #######################################################
 # Bild Verzeichnis bereinigen
 bclean: 
-	rm ../bilder/*_???_.*
+	rm -f ../bilder/*_???_.*
 
 # #######################################################
 # .htm Dateien die per F8 erstellt wurde aus dem .rx 
@@ -114,8 +114,8 @@ bclean:
 # 	Die pdf Dateien F9 werden auch gleich mit genommen.
 # 	Siehe dazu http://it-bayer.de/rumex/statik/.
 f8clean: 
-	rm *.htm
-	rm *.pdf
+	rm -f *.htm
+	rm -f *.pdf
 
 # #######################################################
 # rumex Installieren

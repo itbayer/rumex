@@ -75,7 +75,8 @@
 <p><em>am 10.09.2013 um 08:24 schrieb IT-Bayer</em></p>
 <div class="spn2">
 Eigentlich sollte es funktionieren, die Spaltendarstellung innerhalb eines Weblog Eintrags.
-</div><!-- ENDE .spn2 Darstellung -->
+</div>
+<!-- ENDE .spn2 Darstellung -->
 
 <div class="weblog">
 <div class="spn2">
@@ -91,7 +92,6 @@ Wenn man es aber nicht testet dann kann man es auch nur vermuten.
 
 &lt;a class=&quot;moot&quot; href=&quot;https://moot.it/i/rumex/blog/weblog&quot;&gt;&lt;/a&gt;</code></pre>
 <div class="weblog">
-
 <p>Rumex verwendet den Dateinamen zur Kennzeichnung der einzelnen Kommentar Abschnitte. Diese Kennzeichnung muss für den Weblog Abschnitt erweitert werden. Einfach den letzten Eintrag um ein Schlagwort erweitern.</p>
 <pre><code>&lt;a class=&quot;moot&quot; href=&quot;https://moot.it/i/rumex/blog/weblog_kommentar-im-weblog&quot;&gt;&lt;/a&gt;</code></pre>
 <p>Sinnvoll wäre es auch die Ebenen der Überschrift zu verändern. Die Kommentar Funktion wird als <code>H1</code> eingebaut. Diese wird mit einer Linie abgegrenzt und hat einen größeren Abstand, es scheint als ob ein neuer Beitrag beginnt. Ebenen 2 oder 3 macht sich da schon besser.</p>
@@ -100,12 +100,9 @@ Wenn man es aber nicht testet dann kann man es auch nur vermuten.
 
 &lt;a class=&quot;moot&quot; href=&quot;https://moot.it/i/rumex/blog/weblog_kommentar-im-weblog&quot;&gt;&lt;/a&gt;</code></pre>
 <hr />
-<h2 id="kommentare">Kommentare</h2>
+<h2>Kommentare</h2>
 <p><a class="moot" href="https://moot.it/i/rumex/blog/weblog_kommentar-im-weblog"></a></p>
 </div>
-
-
-
 <h1 id="einen-eintrag-ohne-weiter-lesen.">Einen Eintrag ohne … weiter lesen.</h1>
 <p><em>am 10.09.2013 um 07:50 schrieb IT-Bayer</em></p>
 <p>Will man so einen Eintrag erstellen löscht man einfach die drei Zeilen:</p>
@@ -131,24 +128,18 @@ DA
 ,rmo
 &lt;PAUSE&gt;</code></pre>
 </div>
-
-
 <h1 id="css-nur-über-javascript">CSS nur über javascript</h1>
 <p><em>am 10.09.2013 um 07:20 schrieb IT-Bayer</em></p>
 <p>Alle CSS Anweisungen die, die weblog Funktion benötigt werden per javascript eingebaut.</p>
 <div class="weblog">
 Somit soll sichergestellt werden dass die Texte innerhalb der weblog Funktion auch angezeigt werden wenn javascript ausgeschaltet ist.
 </div>
-
-
 <h1 id="steuerung-des-weblogs">Steuerung des Weblogs</h1>
 <p><em>am 10.09.2013 um 07:18 schrieb IT-Bayer</em></p>
 <p>Die Steuerung übernimmt ein javascript das auf das Framework jquery aufsetzt.</p>
 <div class="weblog">
 Da jquery für die moot.it Funktion benötigt wird, wurde auch die weblog Funktion mit jquery realisiert.
 </div>
-
-
 <h1 id="start-der-weblog-testseite">Start der Weblog Testseite</h1>
 <p><em>am 10.09.2013 um 07:14 schrieb IT-Bayer</em></p>
 <p>Diese Seite ist der Sandkasten der Rumex Weblog Funktion.</p>
@@ -156,9 +147,6 @@ Da jquery für die moot.it Funktion benötigt wird, wurde auch die weblog Funkti
 <p>Im Grunde ist die Weblogfunktion nur ein kleines vim Makro das einen vor definierte Textstruktur in das Dokumente einfügt.</p>
 Dieses Makro kann über die Kurztaste <code>,rnb</code> aufgerufen werden.
 </div>
-
-
-
 <!-- vim: set ft=pandoc: -->
 
 
