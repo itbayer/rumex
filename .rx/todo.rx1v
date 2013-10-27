@@ -1,6 +1,6 @@
 % ToDo
-% Was ist noch alles zu machen 
-% bzw. welche Fehler sind noch offen
+% Welche Fehler sind noch offen
+% und was ist noch alles zu machen 
 
 <!--
 
@@ -14,22 +14,40 @@ Aber auch Fehler **Bugs** die noch nicht behoben sind notiere ich mir hier.
 
 <!-- schnipp -->
 
-tilda
-:	Durch die tilda Erweiterung müssen zwei unterschiedliche vim Konfigurationen
-	erstellt werden. 
+Bugs
+=============================
 
-	1. Standard vim Konfiguration die für vim und gvim verwendet wird.
-	2. gvim Konfiguration die für die Menü Darstellung zuständig ist. \
-	die Standard Datei wird automatisch nachgeladen.
+rxtpl/css/rumexmarker.js
+:	`rumexmarker.js` markiert keine Umlaute.
 
-	tilda Beschreibung überarbeiten, Startdateien anpassen und evtl.
-	als Kopiervorlage in .rumex/bin/ ablegen.
+moot.it
+:	Das Nachladen des Dienstes moot.it dauert sehr lange. 
+	Sollte man beobachten.
 
+RSS Extern
+:	Bei der RSS_EXTERN Konfiguration muss die Variabel RSS_FILE
+	auch auf die RSS_EXTERN Einstellung gestellt werden da sonst
+	der Link in der HTML Datei nicht richtig gesetzt wird.
+
+RSS Text
+:	Zeilen die mit einem Umlaut beginnen
+	werden nicht verarbeitet.
+
+	! Ein Umlaut darf somit nicht am Anfang einer Zeile stehen.
+
+
+
+
+Sonstiges
+==========================================
 
 
 Kurztasten / Menü
-:	In der Menü Erweiterung sollte eigentlich nur die Kurztasten abgebildet werden.
-	Leider sind nicht alle Menübefehle als Kurztaste umgesetztm
+:	In der Menü Erweiterung sollte eigentlich nur die 
+	Kurztasten abgebildet werden.
+	Leider sind nicht alle Menübefehle als Kurztaste umgesetzt.
+
+	! Sollte noch einmal überprüft werden.
 
 
 .htaccess
@@ -38,37 +56,22 @@ Kurztasten / Menü
 config.mk
 :	Eine Vorlage der Benutzer Konfiguration soll bei der Installation 
 	mit kopiert werden.
+	Diese muss auch noch mal überarbeitet werden.
 
 forum.rx0x
 :	Bei `make install` sollte auch die forum.rx0x kopiert werden. 
 
+
 Biographie 
-:	Biographie Funktion einbauen. 
+:	Biographie Funktion könnt man noch einbauen einbauen. 
+
 
 css
 :	Markierungen sollte man evtl. von all.css nach screen.css verschieben.
 
-curl
-:	evtl. Umstellung von wget / wput auf curl
-	
-	**Download**
-	
-		curl -o datei -# http://link.de/datei
-	
-	Durch den `#` Parameter wird ein einfacher Download Balken angezeigt.
-	
-	**Upload**
-	
-		curl -T "{datei1,date2}" -u user:password ftp://link.de
 
-# Bugs
 
-rxtpl/css/rumexmarker.js
-:	`rumexmarker.js` markiert keine Umlaute.
 
-moot.it
-:	Das Nachladen des Dienstes moot.it dauert sehr lange. 
-	Sollte man beobachten.
 
 
 

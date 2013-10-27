@@ -11,7 +11,7 @@
 
 <link rel="icon" type="image/gif" href="favicon.gif" />
 
-  <meta name="author" content="Was ist noch alles zu machen">
+  <meta name="author" content="Welche Fehler sind noch offen">
   <title>ToDo</title>
   <style type="text/css">code{white-space: pre;}</style>
   <!--[if lt IE 9]>
@@ -56,12 +56,13 @@
 </div>
 <header>
 <h1 class="title"><a title="zur Startseite" href="index.html">ToDo</a></h1>
-<h2 class="author"><a title="zur Startseite" href="index.html">Was ist noch alles zu machen</a></h2>
-<h3 class="date"><a title="zur Startseite" href="index.html">bzw. welche Fehler sind noch offen</a></h3>
+<h2 class="author"><a title="zur Startseite" href="index.html">Welche Fehler sind noch offen</a></h2>
+<h3 class="date"><a title="zur Startseite" href="index.html">und was ist noch alles zu machen</a></h3>
 </header>
 <nav id="TOC">
 <ul>
 <li><a href="#bugs">Bugs</a></li>
+<li><a href="#sonstiges">Sonstiges</a></li>
 </ul>
 </nav>
 <div id="seite">
@@ -75,42 +76,6 @@
 <p>Mein Notizzettel über Ideen bzw. Änderungen dieses Home Page Baukastens. Aber auch Fehler <strong>Bugs</strong> die noch nicht behoben sind notiere ich mir hier.</p>
 <!-- schnipp -->
 
-<dl>
-<dt>tilda</dt>
-<dd><p>Durch die tilda Erweiterung müssen zwei unterschiedliche vim Konfigurationen erstellt werden.</p>
-<ol type="1">
-<li>Standard vim Konfiguration die für vim und gvim verwendet wird.</li>
-<li>gvim Konfiguration die für die Menü Darstellung zuständig ist.<br />die Standard Datei wird automatisch nachgeladen.</li>
-</ol>
-<p>tilda Beschreibung überarbeiten, Startdateien anpassen und evtl. als Kopiervorlage in .rumex/bin/ ablegen.</p>
-</dd>
-<dt>Kurztasten / Menü</dt>
-<dd><p>In der Menü Erweiterung sollte eigentlich nur die Kurztasten abgebildet werden. Leider sind nicht alle Menübefehle als Kurztaste umgesetztm</p>
-</dd>
-<dt>.htaccess</dt>
-<dd><p>Bei <code>make install</code> sollte auch die .htaccess Dateinen kopiert werden.</p>
-</dd>
-<dt>config.mk</dt>
-<dd><p>Eine Vorlage der Benutzer Konfiguration soll bei der Installation mit kopiert werden.</p>
-</dd>
-<dt>forum.rx0x</dt>
-<dd><p>Bei <code>make install</code> sollte auch die forum.rx0x kopiert werden.</p>
-</dd>
-<dt>Biographie</dt>
-<dd><p>Biographie Funktion einbauen.</p>
-</dd>
-<dt>css</dt>
-<dd><p>Markierungen sollte man evtl. von all.css nach screen.css verschieben.</p>
-</dd>
-<dt>curl</dt>
-<dd><p>evtl. Umstellung von wget / wput auf curl</p>
-<p><strong>Download</strong></p>
-<pre><code>curl -o datei -# http://link.de/datei</code></pre>
-<p>Durch den <code>#</code> Parameter wird ein einfacher Download Balken angezeigt.</p>
-<p><strong>Upload</strong></p>
-<pre><code>curl -T &quot;{datei1,date2}&quot; -u user:password ftp://link.de</code></pre>
-</dd>
-</dl>
 <h1 id="bugs"><a href="#bugs">Bugs</a></h1>
 <dl>
 <dt>rxtpl/css/rumexmarker.js</dt>
@@ -118,6 +83,35 @@
 </dd>
 <dt>moot.it</dt>
 <dd><p>Das Nachladen des Dienstes moot.it dauert sehr lange. Sollte man beobachten.</p>
+</dd>
+<dt>RSS Extern</dt>
+<dd><p>Bei der RSS_EXTERN Konfiguration muss die Variabel RSS_FILE auch auf die RSS_EXTERN Einstellung gestellt werden da sonst der Link in der HTML Datei nicht richtig gesetzt wird.</p>
+</dd>
+<dt>RSS Text</dt>
+<dd><p>Zeilen die mit einem Umlaut beginnen werden nicht verarbeitet.</p>
+<p>! Ein Umlaut darf somit nicht am Anfang einer Zeile stehen.</p>
+</dd>
+</dl>
+<h1 id="sonstiges"><a href="#sonstiges">Sonstiges</a></h1>
+<dl>
+<dt>Kurztasten / Menü</dt>
+<dd><p>In der Menü Erweiterung sollte eigentlich nur die Kurztasten abgebildet werden. Leider sind nicht alle Menübefehle als Kurztaste umgesetzt.</p>
+<p>! Sollte noch einmal überprüft werden.</p>
+</dd>
+<dt>.htaccess</dt>
+<dd><p>Bei <code>make install</code> sollte auch die .htaccess Dateinen kopiert werden.</p>
+</dd>
+<dt>config.mk</dt>
+<dd><p>Eine Vorlage der Benutzer Konfiguration soll bei der Installation mit kopiert werden. Diese muss auch noch mal überarbeitet werden.</p>
+</dd>
+<dt>forum.rx0x</dt>
+<dd><p>Bei <code>make install</code> sollte auch die forum.rx0x kopiert werden.</p>
+</dd>
+<dt>Biographie</dt>
+<dd><p>Biographie Funktion könnt man noch einbauen einbauen.</p>
+</dd>
+<dt>css</dt>
+<dd><p>Markierungen sollte man evtl. von all.css nach screen.css verschieben.</p>
 </dd>
 </dl>
 <!-- vim:set ft=pandoc: -->
