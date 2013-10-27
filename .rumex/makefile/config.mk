@@ -116,6 +116,11 @@ INDEX="../.rumex/bin/index.pl"
 # Name der RSS Feed Datei
 RSS_FILE = "rss.xml"
 
+# Externe RSS Einbindung verwenden
+# 	Ist diese Variable gesetzt wird die interne
+# 	RSS Verarbeitung übersprungen.
+#RSS_EXTERN = "http://www.it-bayer.de/rss.xml"
+
 # Programm zum erstellen des RSS Feed
 RX2RSS = "../.rumex/bin/rx2rss.pl"
 

@@ -100,12 +100,11 @@ header, nav, #seite {
 	box-shadow: 4px 4px 4px gray;
 	font-size: 0.7em;
 	left: 4px;
-	min-height: 100px;
 	min-width: 56px;
 /* ausgeschaltet, macht sich in der Fusszeile nicht so gut
  * opacity: 0.5;
  */
-	padding: 8px 8px 0 4px;
+	padding: 8px 8px 16px 2px;
 	position: fixed;
 	text-align: right;
 	z-index: 100;

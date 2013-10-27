@@ -28,6 +28,8 @@ all:
 	make -s robots
 
 
+
+
 # ######################################################
 # Seite online stellen. Wenn die SITECOPY Variable in config.mk
 # gesetzt ist wird sitecopy verwenden, sonst git.
@@ -42,6 +44,8 @@ else
 endif
 
 
+
+
 # #######################################################
 # RSS Datei erstellen
 
@@ -49,7 +53,13 @@ endif
 	$(RX2RSS) $(URL)/$(RSS_FILE) > ../$(RSS_FILE)
 
 rss: 
+ifdef RSS_EXTERN
+	@echo "INFO: RSS ist ausgelagert, siehe $(RSS_EXTERN)"
+else
 	make -s ../rss.xml
+endif
+
+
 
 
 # #######################################################

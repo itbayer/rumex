@@ -9,9 +9,13 @@
 # #############################################
 
 
+
+
 # ----------------------------------------------------
 # URL der Seite : ohne abschließenden /
 URL="http://www.it-bayer.de/rumex"
+
+
 
 
 # ----------------------------------------------------
@@ -21,9 +25,13 @@ U2="Der(Ein) HomePage Sand(Bau)kasten"
 U3="github.com Version"
 
 
+
+
 # ----------------------------------------------------
 # RSS Überschrift
 RSS_TITEL = "Neuigkeiten von rumex Baukasten"
+
+
 
 
 # ----------------------------------------------------
@@ -33,13 +41,20 @@ RSS_TITEL = "Neuigkeiten von rumex Baukasten"
 MOOTIT = "rumex"
 
 
+
+
 # ----------------------------------------------------
 #  Autor für den Weblog Eintrag
 WEBLOGAUTOR = "IT-Bayer"
 
 
+
+
+# ----------------------------------------------------
 # Bildname für das Seitenbanner
 SEITENBANNER = "rxtpl/img/rumex.png"
+
+
 
 
 # ##############################################################
