@@ -666,6 +666,8 @@ Der Wert hinter Datum wird von System ausgelesen und entsprechende gesetzt.
 Ab hier geht die neue Nachricht los.
 ~~~
 
+
+
 ## Interna
 
 Durch die beschriebenen RSS Variablen wird die Erstellung des
