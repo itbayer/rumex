@@ -12,5 +12,8 @@ site rumex
   exclude *~
   exclude *.bak
   exclude *.swp
+  exclude start-gvim
+  exclude start-vim
+  exclude start-tilda
 
   
