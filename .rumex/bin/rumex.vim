@@ -98,7 +98,7 @@ map <Leader>rnn i# Neue Nachricht{.nn1}<CR><CR><!--<CR>\| Link: http://www.it-ba
 
 
 " Neue Weiterleitungsseite mit <Leader>rwl (RumexWeiterLeitung)
-map <Leader>rwl i% Weiterleitung nach ....html<CR>%<CR>%<CR><CR><CR><script language="javascript"><CR><!--<CR>window.location.href="....html";<CR>// --><CR></script><CR><CR><noscript><CR>Die Seite ist umgezogen und ist nun &uuml;ber<CR><a href="....html">diesen Link</a><CR>erreichbar.<CR></noscript><ESC>15k11l
+map <Leader>rwl i% Weiterleitung nach ....html<CR>%<CR>%<CR><CR><CR><script language="javascript"><CR><!--<CR>window.location.href="....html";<CR>// --><CR></script><CR><CR><noscript><CR><p>Die Seite ist umgezogen und ist nun &uuml;ber<CR><a href="....html">diesen Link</a><CR>erreichbar.<p><CR></noscript><ESC>15k11l
 
 
 " Kommentar Zeile einfügen mit <Leader>rmk (RumexMootKommentar)
