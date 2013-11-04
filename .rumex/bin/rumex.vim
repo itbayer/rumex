@@ -96,8 +96,10 @@ map <Leader>rnd i% <C-R>=expand("%:r")<CR><CR>%<CR>%<CR><CR><CR><!--<CR><CR>[<C-
 " Neuer NEWS Eintrag mit <Leader><rnn> (RumexNeuNews)
 map <Leader>rnn i# Neue Nachricht{.nn1}<CR><CR><!--<CR>\| Link: http://www.it-bayer.de/rumex/<CR>\| Autor: IT-Bayer<CR>\| Kategorie: Neues<CR>\| Datum: <ESC>:r!date -R<CR>kJA<CR>--><CR><CR>Ab hier geht die neue Nachricht los.<ESC>9k0
 
+
 " Neue Weiterleitungsseite mit <Leader>rwl (RumexWeiterLeitung)
-map <Leader>rwl i% Weiterleitung nach ....html<CR>%<CR>%<CR><CR><CR><script language="javascript"><CR><!--<CR>window.location.href="....html";<CR>// --><CR></script><ESC>9k13l
+map <Leader>rwl i% Weiterleitung nach ....html<CR>%<CR>%<CR><CR><CR><script language="javascript"><CR><!--<CR>window.location.href="....html";<CR>// --><CR></script><CR><CR><noscript><CR>Die Seite ist umgezogen und ist nun &uuml;ber<CR><a href="....html">diesen Link</a><CR>erreichbar.<CR></noscript><ESC>15k11l
+
 
 " Kommentar Zeile einfügen mit <Leader>rmk (RumexMootKommentar)
 map <Leader>rmk i# Kommentare<cr><cr><a class="moot" href="https://moot.it/i/<C-R>=mootit_konto<cr>/blog/<C-R>=expand("%:r")<cr>"></a>
