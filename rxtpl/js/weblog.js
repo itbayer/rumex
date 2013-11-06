@@ -28,14 +28,22 @@ $(document).ready(function() {
 	$(".weiter_lesen").css("color","#0000EE");
 	$(".weiter_lesen").css("cursor","pointer");
 
+
+
+
+
 	// Zeile "am Datum um Uhrzeit schrieb Autor"
 	// formatieren.
+	//	
+	/** Ausgeschaltet wegen Fehler bei
+	 *		Texten die im ersten Absatz eine kursive 
+	 *		Auszeichnung haben.
 	$("h1+p>em").css("display","block");
 	//$("h1+p>em").css("text-align","right");
 	$("h1+p>em").css("font-size",".8em");
 	$("h1+p>em").css("margin-right","4em");
 	$("h1+p>em").css("color","gray");
-
+*/
 
 
 
