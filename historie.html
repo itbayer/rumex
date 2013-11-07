@@ -4,7 +4,7 @@
   <meta charset="utf-8">
 
 <!-- rumex Version -->
-<meta name="generator" content="rumex 0.8.1.4">
+<meta name="generator" content="rumex 0.8.1.6">
 
 <!-- rumex Suchmaschine -->
 <meta name="robots" content="all">
@@ -33,7 +33,7 @@
 <script type='text/javascript' src='rxtpl/js/weblog.js'></script>
 
 <!-- rumex RSS -->
-<link rel="alternate" type="application/rss+xml" title="Neuigkeiten von rumex Baukasten" href="rss.xml" />
+<link rel="alternate" type="application/rss+xml" title="Neuigkeiten von rumex Baukasten" href="" />
 
 <!-- rumex CSS -->
 <link rel="stylesheet" type="text/css" href="rxtpl/css/all.css" media="all" />
@@ -58,6 +58,7 @@
 </header>
 <nav id="TOC">
 <ul>
+<li><a href="#v0.8.1.7">V0.8.1.7</a></li>
 <li><a href="#v0.8.1.2">V0.8.1.2</a></li>
 <li><a href="#v0.8.1">V0.8.1</a></li>
 <li><a href="#v0.8.0">V0.8.0</a></li>
@@ -90,6 +91,44 @@
 ======================================================
 -->
 
+
+<h2 id="v0.8.1.7"><a href="#v0.8.1.7">V0.8.1.7</a></h2>
+<p>Die RSS Feed Funktion wurde neu erstellt. Dadurch muss aber der Aufbau der Quell Datei angepasst werden.</p>
+<h3 id="programmbeschreibung-pod2text"><a href="#programmbeschreibung-pod2text">Programmbeschreibung pod2text</a></h3>
+<h4 id="rx2rss"><a href="#rx2rss">rx2rss</a></h4>
+<p>rx2rss ist kleines Programm das aus einer Markdown Datei einen RSS Feed erstellt.</p>
+<p>Zum schreiben der Texte wird der erweiterte Markdown Syntax von pandoc verwendet. Pandoc ist auch für die Umwandlung der Texte innerhalb der XML Datei zuständig. Muss also auf dem System installiert werden.</p>
+<pre><code>apt-get install pandoc</code></pre>
+<h4 id="manueller-aufruf"><a href="#manueller-aufruf">Manueller Aufruf</a></h4>
+<p>Das Programm wird mit</p>
+<pre><code>perl rx2rss.pl URL+NAME (ohne Endung)</code></pre>
+<p>gestartet. Die Ausgabe erfolgt auf dem Bildschirm.</p>
+<h4 id="rss-feed-standard-werte"><a href="#rss-feed-standard-werte">RSS Feed Standard Werte</a></h4>
+<h5 id="kopf_"><a href="#kopf_">Kopf_</a></h5>
+<p>Für die RSS Grund Datei werden Standardwerte vorgespannt. Diese können jedoch in der jeweiligen Datei angepasst werden. Folgende Kopfwerte stehen zur Verfügung.</p>
+<ul>
+<li>%&gt; Titel: IT Bayers Rumex - Ein Home Page Baukasten</li>
+<li>%&gt; Beschreibung: Aktuelles und Neuigkeiten</li>
+<li>%&gt; Link: http://www.it-bayer.de/rumex/</li>
+<li>%&gt; Lang: de-DE</li>
+<li>%&gt; BildTitel: IT Bayers Rumex - Ein Home Page Baukasten</li>
+<li>%&gt; BildURL: http://www.it-bayer.de/rumex/rxtpl/img/rss.png</li>
+<li>%&gt; BildLink: http://www.it-bayer.de/rumex/</li>
+<li>%&gt; BildBeschreibung: Aktuelles und Neuigkeiten von der rumex Seite.</li>
+</ul>
+<h5 id="meldung"><a href="#meldung">Meldung</a></h5>
+<ul>
+<li>!&gt; Autor: IT-Bayer</li>
+<li>!&gt; Link: http://www.it-bayer.de/rumex/</li>
+<li>!&gt; Kategorie: Neues</li>
+</ul>
+<h4 id="sonstiges"><a href="#sonstiges">Sonstiges</a></h4>
+<h5 id="titel-nach-pandoc"><a href="#titel-nach-pandoc">Titel nach pandoc</a></h5>
+<p>Beispiel</p>
+<pre><code>% Abo Seite - Newsletter - RSS Feed
+% 
+%</code></pre>
+<p>Die Zeilen müssen am Anfang der Datei stehen.</p>
 <h2 id="v0.8.1.2"><a href="#v0.8.1.2">V0.8.1.2</a></h2>
 <p>Kleine Änderungen in der main.mk Datei. Die vim Startdateien rumex-gvim, rumex-vim, rumex-tilda können nun als Sym. Link realisiert werden. Eine Anpassung der Dateien ist nicht mehr nötig.</p>
 <p>Beispiel:</p>
@@ -224,7 +263,6 @@ convert bilder/404.png -resize 800x bilder/404_800_.png
 <p>Version 0.1 ist fertig. Hat zwar hoch nicht viel Funktionen aber der Baukasten funktioniert schon.</p>
 <hr />
 <!-- vim: set ft=pandoc: -->
-
 </div>
 <div id="fuss">
 	<p class="copyleft">
