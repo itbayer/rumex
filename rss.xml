@@ -1,34 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-	<atom:link href="http://www.it-bayer.de/rumex/rss.xml" rel="self" type="application/rss+xml" />
-		<title>IT Bayers Rumex - Ein Home Page Baukasten</title>
-		<description>
-			<![CDATA[
-			Aktuelles und Neuigkeiten vom rumex Home Page Baukasten
-			]]>
-		</description>
-		<link>http://www.it-bayer.de/rumex/</link>
-		<language>de-DE</language>
-
-		<image>
-			<title>IT Bayers Rumex - Ein Home Page Baukasten</title>
-			<url>http://www.it-bayer.de/rumex/rxtpl/img/rss.png</url>
-			<link>http://www.it-bayer.de/rumex/</link>
-			<description>
-				<![CDATA[
-				Aktuelles und Neuigkeiten von der rumex Seite.	
-				]]>
-			</description>
-		</image>
-
-
-
+<channel>
+<atom:link href="http://www.it-bayer.de/rumex/rss.xml" rel="self" type="application/rss+xml" />
+<title>IT Bayers Rumex - Ein Home Page Baukasten</title>
+<description>
+<![CDATA[
+Aktuelles und Neuigkeiten vom rumex Home Page Baukasten
+]]>
+</description>
+<link>http://www.it-bayer.de/rumex/</link>
+<language>de-DE</language>
+<image>
+<title>IT Bayers Rumex - Ein Home Page Baukasten</title>
+<url>http://www.it-bayer.de/rumex/rxtpl/img/rss.png</url>
+<link>http://www.it-bayer.de/rumex/</link>
+<description>
+<![CDATA[
+Aktuelles und Neuigkeiten von der rumex Seite.	
+]]>
+</description>
+</image>
 <item>
-	<title>Rumex Startdateien einfach mit Symlinks </title>
-	<description>
-	<![CDATA[
-
+<title>RSS Funktion, Programm rx2rss neu ertellt</title>
+<description>
+<![CDATA[
+<p>Die RSS Funktion wurde neu erstellt. Es muss nun nicht mehr darauf geachtet werden wie man die Texte innerhalb einer Meldung schreibt. Es werden jetzt alle Pandoc / Markdown Formatierungen verarbeitet. Dazu wurde aber der Quellsyntax der <code>rss.rx0x</code> Datei verändert. Diese muss also angepasst werden. Ein Muster, diese Datei, findet man auf <a href="https://raw.github.com/itbayer/rumex/gh-pages/.rx/rss.rx0x">github</a>.</p>
+<p>Die vim Kurztaste <code>.rnn</code> wurde entsprechend angepasst.</p>
+]]>
+</description>
+<link>http://www.it-bayer.de/rumex/</link>
+<guid>http://www.it-bayer.de/rumex/2013/11/07_0755</guid>
+<dc:creator>IT-Bayer</dc:creator>
+<pubDate>2013/11/07 07:55</pubDate>
+<category><![CDATA[Neues]]></category>
+</item>
+<item>
+<title>Rumex Startdateien einfach mit Symlinks</title>
+<description>
+<![CDATA[
 <p>Die Rumex (g)vim Unterstützung <code>rumex-gvim</code>, <code>rumex-vim</code> und auch <code>rumex-tilda</code> können jetzt als symbolischer Link erstellt werden. Die erforderlichen Einstellungen werden aus der <code>.rx/config.mk</code> gelesen.</p>
 <p>Die <code>.rx/config.mk</code> hat zwei dazu neuen Parameter bekommen.</p>
 <p>Autor für den Weblog Eintrag <br> <code>WEBLOGAUTOR = &quot;IT-Bayer&quot;</code></p>
@@ -36,265 +45,206 @@
 <p>Diese Parameter werden von den Startdateien eingebunden so dass die einzelnen Bashskripte nicht mehr angepasst werden müssen.</p>
 <p>Es reicht ein <br> <code>ln -s ~/rumex-gh-pages/.rumex/bin/rumex-gvim.sh ~/bin/rumex-gvim</code></p>
 <p>um die Startdatei für Rumex zu erstellen. Verzeichnisse und Parameter werden beim Starten automatisch ermittelt und gesetzt.</p>
-
 ]]>
-	</description>
-		<link>http://www.it-bayer.de/rumex/</link>
-		<guid>http://www.it-bayer.de/rumex/</guid>
-		<dc:creator>IT-Bayer</dc:creator>
-		<pubDate>Fri, 20 Sep 2013 07:55:00 +0200</pubDate>
-		<category><![CDATA[Neues]]></category>
+</description>
+<link>http://www.it-bayer.de/rumex/</link>
+<guid>http://www.it-bayer.de/rumex/2013/09/20_0755</guid>
+<dc:creator>IT-Bayer</dc:creator>
+<pubDate>2013/09/20 07:55</pubDate>
+<category><![CDATA[Neues]]></category>
 </item>
-
-
 <item>
-	<title>Rumex kann jetzt auch mit tilda</title>
-	<description>
-	<![CDATA[
-
+<title>Rumex kann jetzt auch mit tilda</title>
+<description>
+<![CDATA[
 <p>Im Abschnitt <a href="http://www.it-bayer.de/rumex/beschreibung.html#homepage-änderung-schnell-und-immer-aktuell"><em>&quot;Homepage Änderungen, schnell und immer aktuell&quot;</em></a> findet man eine Beschreibung wie man Rumex mit tilda verheiratet um so noch schneller Änderungen auf der Rumex Seite machen zu können.</p>
-
 ]]>
-	</description>
-		<link>http://www.it-bayer.de/rumex/beschreibung.html#homepage-änderung-schnell-und-immer-aktuell</link>
-		<guid>http://www.it-bayer.de/rumex/beschreibung.html#homepage-änderung-schnell-und-immer-aktuell</guid>
-		<dc:creator>IT-Bayer</dc:creator>
-		<pubDate>Thu, 05 Sep 2013 16:34:04 +0200</pubDate>
-		<category><![CDATA[Neues]]></category>
+</description>
+<link>http://www.it-bayer.de/rumex/beschreibung.html#homepage-änderung-schnell-und-immer-aktuell</link>
+<guid>http://www.it-bayer.de/rumex/beschreibung.html#homepage-änderung-schnell-und-immer-aktuell2013/09/05_1634</guid>
+<dc:creator>IT-Bayer</dc:creator>
+<pubDate>2013/09/05 16:34</pubDate>
+<category><![CDATA[Neues]]></category>
 </item>
-
-
 <item>
-	<title>Rumex geht in die Beta Phase</title>
-	<description>
-	<![CDATA[
-
+<title>Rumex geht in die Beta Phase</title>
+<description>
+<![CDATA[
 <p>Es ist so weit. Rumex geht in die Beta Phase. Zwar wurde Rumex schon auf <a href="http://www.it-bayer.de">it-bayer.de</a> in der Alpha Phase eingesetzt, in der Beta wird jetzt noch eine Seite bzw. eine Seite und zwei Unterseiten auf Rumex umgestellt.</p>
 <p>Wer will ist herzlich eingeladen mit zu machen.</p>
-
 ]]>
-	</description>
-		<link>http://www.it-bayer.de/rumex/</link>
-		<guid>http://www.it-bayer.de/rumex/</guid>
-		<dc:creator>IT-Bayer</dc:creator>
-		<pubDate>Wed, 21 Aug 2013 07:10:22 +0200</pubDate>
-		<category><![CDATA[Neues]]></category>
+</description>
+<link>http://www.it-bayer.de/rumex/</link>
+<guid>http://www.it-bayer.de/rumex/2013/08/21_0710</guid>
+<dc:creator>IT-Bayer</dc:creator>
+<pubDate>2013/08/21 07:10</pubDate>
+<category><![CDATA[Neues]]></category>
 </item>
-
-
 <item>
-	<title>Rumex Update Funktion wird eingebaut</title>
-	<description>
-	<![CDATA[
-
+<title>Rumex Update Funktion wird eingebaut</title>
+<description>
+<![CDATA[
 <p>Rumex bekommt eine Update Funktion. Dazu wird die Verzeichnisstruktur umgebaut. Die interne Versionsnummer für die Updatefunktion wurde auf V0.7.xxx festgelegt.</p>
-
+<p><strong>In diesem Versionsabschnitt geht es also Wild zu.</strong></p>
 ]]>
-	</description>
-		<link>http://www.it-bayer.de/rumex/</link>
-		<guid>http://www.it-bayer.de/rumex/</guid>
-		<dc:creator>IT-Bayer</dc:creator>
-		<pubDate>Sun, 21 Jul 2013 17:41:15 +0200</pubDate>
-		<category><![CDATA[Neues]]></category>
+</description>
+<link>http://www.it-bayer.de/rumex/</link>
+<guid>http://www.it-bayer.de/rumex/2013/07/21_1741</guid>
+<dc:creator>IT-Bayer</dc:creator>
+<pubDate>2013/07/21 17:41</pubDate>
+<category><![CDATA[Neues]]></category>
 </item>
-
-
 <item>
-	<title>Rumex bekommt eine interne Suche</title>
-	<description>
-	<![CDATA[
-
+<title>Rumex bekommt eine interne Suche</title>
+<description>
+<![CDATA[
 <p>In Rumex wurden zwei JavaScripts eingebaut. Diese ermöglichen zum einen das die Seiten von Rumex durchsucht werden können. Zum anderen das die gefunden Wörter auf der jeweiligen Seite markiert werden.</p>
-
 ]]>
-	</description>
-		<link>http://www.it-bayer.de/rumex/historie.html#V0.6.7</link>
-		<guid>http://www.it-bayer.de/rumex/historie.html#V0.6.7</guid>
-		<dc:creator>IT-Bayer</dc:creator>
-		<pubDate>Mon, 15 Jul 2013 19:57:55 +0200</pubDate>
-		<category><![CDATA[Neues]]></category>
+</description>
+<link>http://www.it-bayer.de/rumex/historie.html#V0.6.7</link>
+<guid>http://www.it-bayer.de/rumex/historie.html#V0.6.72013/07/15_1957</guid>
+<dc:creator>IT-Bayer</dc:creator>
+<pubDate>2013/07/15 19:57</pubDate>
+<category><![CDATA[Neues]]></category>
 </item>
-
-
 <item>
-	<title>Rumex bekommt eine (g)VIM Unterstützung</title>
-	<description>
-	<![CDATA[
-
+<title>Rumex bekommt eine (g)VIM Unterstützung</title>
+<description>
+<![CDATA[
 <p>Da ich hauptsächlich mit (G)VIM an Rumex arbeite und hier schon ein paar <code>.vim</code> Schnippsel entstanden sind, wurden diese jetzt auch eingebaut. Die Erweiterung besteht zur Zeit nur aus ein paar Kurztasten und einem GVIM Menü.</p>
 <div class="figure">
 <img src="http://www.it-bayer.de/rumex/bilder/gvim-menue_400_.png" alt="Das Rumex GVIM Menü" /><p class="caption">Das Rumex GVIM Menü</p>
 </div>
-
 ]]>
-	</description>
-		<link>http://it-bayer.de/rumex/</link>
-		<guid>http://it-bayer.de/rumex/</guid>
-		<dc:creator>IT-Bayer</dc:creator>
-		<pubDate>Thu, 11 Jul 2013 07:09:58 +0200</pubDate>
-		<category><![CDATA[Neues]]></category>
+</description>
+<link>http://it-bayer.de/rumex/</link>
+<guid>http://it-bayer.de/rumex/2013/07/11_0709</guid>
+<dc:creator>IT-Bayer</dc:creator>
+<pubDate>2013/07/11 07:09</pubDate>
+<category><![CDATA[Neues]]></category>
 </item>
-
-
 <item>
-	<title>Rumex's RSS Feed hat nun auch ein Datum bekommen</title>
-	<description>
-	<![CDATA[
-
+<title>Rumex's RSS Feed hat nun auch ein Datum bekommen</title>
+<description>
+<![CDATA[
 <p>Der Newsreader <a href="http://lzone.de/liferea/">Lifera</a> hatte, durch das fehlende XML TAG <code>&lt;pubDate&gt;&lt;/pubDate&gt;</code>, immer wieder Probleme mit der Anzeige der Rumex News. Rumex <code>rss.rx0x</code> wurde darum um das Feld <code>| Datum:</code> erweitert. Das passende Datum bekommt man über die Shell mit dem Befehl <code>date -R</code>, bzw. unter vim mit <code>:r!date -R&lt;CR&gt;kJ</code>.</p>
-
 ]]>
-	</description>
-		<link>http://www.it-bayer.de/rumex/rss.html#rx07</link>
-		<guid>http://www.it-bayer.de/rumex/rss.html#rx07</guid>
-		<dc:creator>IT-Bayer</dc:creator>
-		<pubDate>Thu, 04 Jul 2013 17:28:25 +0200</pubDate>
-		<category><![CDATA[Neues]]></category>
+</description>
+<link>http://www.it-bayer.de/rumex/rss.html#rx07</link>
+<guid>http://www.it-bayer.de/rumex/rss.html#rx072013/07/07_1728</guid>
+<dc:creator>IT-Bayer</dc:creator>
+<pubDate>2013/07/07 17:28</pubDate>
+<category><![CDATA[Neues]]></category>
 </item>
-
-
 <item>
-	<title>Rumex bekommt eine Kommentar und Forum Funktion</title>
-	<description>
-	<![CDATA[
-
+<title>Rumex bekommt eine Kommentar und Forum Funktion</title>
+<description>
+<![CDATA[
 <p>Rumex wurde um eine Kommentar und einer Forum Funktion erweitert. Verwendet wird dazu das Angebot von <a href="http://moot.it">moot.it</a></p>
-<p>Es ist nun möglich jede Seite mit einem Kommentarabschritt zu versehen. Für das Forum wurde eine neue Seite <a href="http://www.it-bayer.de/rumex/forum.html">forum.html</a> erstellt die auch als Link in die Fusszeile eingebaut wurde.</p>
-
+<p>Es ist nun möglich jede Seite mit einem Kommentarabschritt zu versehen. Für das Forum wurde eine neue Seite <a href="http://www.it-bayer.de/rumex/forum.html">forum.html</a> erstellt die auch als Link in die Fusszeile eingebaut wurde. <a href="http://www.it-bayer.de/rumex/historie.html#v0.6">...weiter lesen</a></p>
 ]]>
-	</description>
-		<link>http://www.it-bayer.de/rumex/historie.html#v0.6</link>
-		<guid>http://www.it-bayer.de/rumex/historie.html#v0.6</guid>
-		<dc:creator>IT-Bayer</dc:creator>
-		<pubDate>Thu, 04 Jul 2013 10:15:11 +0200</pubDate>
-		<category><![CDATA[Neues]]></category>
+</description>
+<link>http://www.it-bayer.de/rumex/historie.html#v0.6</link>
+<guid>http://www.it-bayer.de/rumex/historie.html#v0.62013/07/04_1015</guid>
+<dc:creator>IT-Bayer</dc:creator>
+<pubDate>2013/07/04 10:15</pubDate>
+<category><![CDATA[Neues]]></category>
 </item>
-
-
 <item>
-	<title>rumex Systemverzeichnisse werden dot Verzeichnisse </title>
-	<description>
-	<![CDATA[
-
-<p>Die rumex Systemverzeichnisse wurde auf dot Verzeichnisse, nicht sichtbare Verzeichnisse, umbenannt.</p>
-
+<title>rumex Systemverzeichnisse werden dot Verzeichnisse</title>
+<description>
+<![CDATA[
+<p>Die rumex Systemverzeichnisse wurde auf dot Verzeichnisse, nicht sichtbare Verzeichnisse, umbenannt. <a href="http://www.it-bayer.de/rumex/historie.html#v0.5">...weiter lesen</a></p>
 ]]>
-	</description>
-		<link>http://www.it-bayer.de/rumex/historie.html#v0.5</link>
-		<guid>http://www.it-bayer.de/rumex/historie.html#v0.5</guid>
-		<dc:creator>IT-Bayer</dc:creator>
-		<pubDate>Tue, 11 Jun 2013 12:03:19 +0000</pubDate>
-		<category><![CDATA[Neues]]></category>
+</description>
+<link>http://www.it-bayer.de/rumex/historie.html#v0.5</link>
+<guid>http://www.it-bayer.de/rumex/historie.html#v0.52013/07/11_1203</guid>
+<dc:creator>IT-Bayer</dc:creator>
+<pubDate>2013/07/11 12:03</pubDate>
+<category><![CDATA[Neues]]></category>
 </item>
-
-
 <item>
-	<title>rumex kann jetzt auch mit FTP umgehen</title>
-	<description>
-	<![CDATA[
-
-<p>Eine FTP Unterstützung wurde mit <code>wput</code> realisiert.</p>
-
+<title>rumex kann jetzt auch mit FTP umgehen</title>
+<description>
+<![CDATA[
+<p>Eine FTP Unterstützung wurde mit <code>wput</code> realisiert. <a href="http://www.it-bayer.de/rumex/historie.html#v0.4.8">...weiter lesen</a></p>
 ]]>
-	</description>
-		<link>http://www.it-bayer.de/rumex/historie.html#v0.4.8</link>
-		<guid>http://www.it-bayer.de/rumex/historie.html#v0.4.8</guid>
-		<dc:creator>IT-Bayer</dc:creator>
-		<pubDate>Thu, 04 Jul 2013 08:41:47 +0200</pubDate>
-		<category><![CDATA[Neues]]></category>
+</description>
+<link>http://www.it-bayer.de/rumex/historie.html#v0.4.8</link>
+<guid>http://www.it-bayer.de/rumex/historie.html#v0.4.82013/07/04_0841</guid>
+<dc:creator>IT-Bayer</dc:creator>
+<pubDate>2013/07/04 08:41</pubDate>
+<category><![CDATA[Neues]]></category>
 </item>
-
-
 <item>
-	<title>rumex bekommt einen Verzeichnisschutz auf System Verzeichnisse</title>
-	<description>
-	<![CDATA[
-
-<p>Um die Systemverzeichnisse nicht nur durch eine Weiterleitung zu schützen wurde eine <code>.htaccess</code> Datei eingebaut.</p>
-
+<title>rumex bekommt einen Verzeichnisschutz auf System Verzeichnisse</title>
+<description>
+<![CDATA[
+<p>Um die Systemverzeichnisse nicht nur durch eine Weiterleitung zu schützen wurde eine <code>.htaccess</code> Datei eingebaut. <a href="http://www.it-bayer.de/rumex/historie.html#v0.4.7">...weiter lesen</a></p>
 ]]>
-	</description>
-		<link>http://www.it-bayer.de/rumex/historie.html#v0.4.7</link>
-		<guid>http://www.it-bayer.de/rumex/historie.html#v0.4.7</guid>
-		<dc:creator>IT-Bayer</dc:creator>
-		<pubDate>Tue, 11 Jun 2013 12:03:19 +0000</pubDate>
-		<category><![CDATA[Neues]]></category>
+</description>
+<link>http://www.it-bayer.de/rumex/historie.html#v0.4.7</link>
+<guid>http://www.it-bayer.de/rumex/historie.html#v0.4.72013/06/11_1203</guid>
+<dc:creator>IT-Bayer</dc:creator>
+<pubDate>2013/06/11 12:03</pubDate>
+<category><![CDATA[Neues]]></category>
 </item>
-
-
 <item>
-	<title>rumex bekommt ein Installationsskript</title>
-	<description>
-	<![CDATA[
-
-<p>In rumex wurde um ein kleines Installationsskript eingebaut.</p>
-
+<title>rumex bekommt ein Installationsskript</title>
+<description>
+<![CDATA[
+<p>In rumex wurde um ein kleines Installationsskript eingebaut. <a href="http://www.it-bayer.de/rumex/historie.html#v0.4.5">...weiter lesen</a></p>
 ]]>
-	</description>
-		<link>http://www.it-bayer.de/rumex/historie.html#v0.4.5</link>
-		<guid>http://www.it-bayer.de/rumex/historie.html#v0.4.5</guid>
-		<dc:creator>IT-Bayer</dc:creator>
-		<pubDate>Tue, 11 Jun 2013 12:03:19 +0000</pubDate>
-		<category><![CDATA[Neues]]></category>
+</description>
+<link>http://www.it-bayer.de/rumex/historie.html#v0.4.5</link>
+<guid>http://www.it-bayer.de/rumex/historie.html#v0.4.52013/06/11_1203</guid>
+<dc:creator>IT-Bayer</dc:creator>
+<pubDate>2013/06/11 12:03</pubDate>
+<category><![CDATA[Neues]]></category>
 </item>
-
-
 <item>
-	<title>rumex bekommt sein eigenes Verzeichnis</title>
-	<description>
-	<![CDATA[
-
-<p>rumex bekommt sein eigenes Verzeichnis und seine eigene Datei Erweiterung.</p>
-
+<title>rumex bekommt sein eigenes Verzeichnis</title>
+<description>
+<![CDATA[
+<p>rumex bekommt sein eigenes Verzeichnis und seine eigene Datei Erweiterung. <a href="http://www.it-bayer.de/rumex/historie.html#v0.4.0">...weiter lesen</a></p>
 ]]>
-	</description>
-		<link>http://www.it-bayer.de/rumex/historie.html#v0.4.0</link>
-		<guid>http://www.it-bayer.de/rumex/historie.html#v0.4.0</guid>
-		<dc:creator>IT-Bayer</dc:creator>
-		<pubDate>Tue, 11 Jun 2013 12:03:19 +0000</pubDate>
-		<category><![CDATA[Neues]]></category>
+</description>
+<link>http://www.it-bayer.de/rumex/historie.html#v0.4.0</link>
+<guid>http://www.it-bayer.de/rumex/historie.html#v0.4.02013/06/11_1203</guid>
+<dc:creator>IT-Bayer</dc:creator>
+<pubDate>2013/06/11 12:03</pubDate>
+<category><![CDATA[Neues]]></category>
 </item>
-
-
 <item>
-	<title>rumex bekommt jetzt auch einen sitemap.html</title>
-	<description>
-	<![CDATA[
-
+<title>rumex bekommt jetzt auch einen sitemap.html</title>
+<description>
+<![CDATA[
 <p>Nach der <code>sitemap.xml</code> kann rumex jetzt auch eine <code>sitemap.html</code> erstellen. <a href="http://www.it-bayer.de/rumex/historie.html#v0.3.7">...weiter lesen</a></p>
-
 ]]>
-	</description>
-		<link>http://www.it-bayer.de/rumex/historie.html#v0.3.7</link>
-		<guid>http://www.it-bayer.de/rumex/historie.html#v0.3.7</guid>
-		<dc:creator>IT-Bayer</dc:creator>
-		<pubDate>Tue, 11 Jun 2013 12:03:19 +0000</pubDate>
-		<category><![CDATA[Neues]]></category>
+</description>
+<link>http://www.it-bayer.de/rumex/historie.html#v0.3.7</link>
+<guid>http://www.it-bayer.de/rumex/historie.html#v0.3.72013/06/11_1203</guid>
+<dc:creator>IT-Bayer</dc:creator>
+<pubDate>2013/06/11 12:03</pubDate>
+<category><![CDATA[Neues]]></category>
 </item>
-
-
 <item>
-	<title>rumex bekommt eine Weiterleitungsseite</title>
-	<description>
-	<![CDATA[
-
+<title>rumex bekommt eine Weiterleitungsseite</title>
+<description>
+<![CDATA[
 <p>Einbau einer Weiterleitungsfunktion per JavaScript da .htaccess von github.com nicht unterstützt wird.</p>
-
 ]]>
-	</description>
-		<link>http://www.it-bayer.de/rumex/historie.html#v0.3.6</link>
-		<guid>http://www.it-bayer.de/rumex/historie.html#v0.3.6</guid>
-		<dc:creator>IT-Bayer</dc:creator>
-		<pubDate>Tue, 11 Jun 2013 12:03:19 +0000</pubDate>
-		<category><![CDATA[Neues]]></category>
+</description>
+<link>http://www.it-bayer.de/rumex/historie.html#v0.3.6</link>
+<guid>http://www.it-bayer.de/rumex/historie.html#v0.3.62013/06/11_1203</guid>
+<dc:creator>IT-Bayer</dc:creator>
+<pubDate>2013/06/11 12:03</pubDate>
+<category><![CDATA[Neues]]></category>
 </item>
-
-
 <item>
-	<title>rumex bekommt eine Bildbearbeitung</title>
-	<description>
-	<![CDATA[
-
+<title>rumex bekommt eine Bildbearbeitung</title>
+<description>
+<![CDATA[
 <p>Eigentlich ist es gar keine richtige Bildbearbeitung sondern nur eine ImageMagick Befehlsfolge die, die Bilder im Verzeichnis bilder in verschiedene Größen bereitstellt.</p>
 <p>Unterstützt werden zur Zeit die Größen</p>
 <ul>
@@ -304,70 +254,54 @@
 <li>600</li>
 <li>800</li>
 </ul>
-
 ]]>
-	</description>
-		<link>http://www.it-bayer.de/rumex/historie.html#v0.3.5</link>
-		<guid>http://www.it-bayer.de/rumex/historie.html#v0.3.5</guid>
-		<dc:creator>IT-Bayer</dc:creator>
-		<pubDate>Tue, 11 Jun 2013 12:03:19 +0000</pubDate>
-		<category><![CDATA[Neues]]></category>
+</description>
+<link>http://www.it-bayer.de/rumex/historie.html#v0.3.5</link>
+<guid>http://www.it-bayer.de/rumex/historie.html#v0.3.52013/06/11_1203</guid>
+<dc:creator>IT-Bayer</dc:creator>
+<pubDate>2013/06/11 12:03</pubDate>
+<category><![CDATA[Neues]]></category>
 </item>
-
-
 <item>
-	<title>rumex bekommt eine sitemap.xml</title>
-	<description>
-	<![CDATA[
-
+<title>rumex bekommt eine sitemap.xml</title>
+<description>
+<![CDATA[
 <p>Mit einer <code>sitemap.xml</code> erleichtert man den Suchmaschinen das finden einzelner Seite. Man kann auch sagen sie <code>sitemap.xml</code> ist eine Liste der Seiten die sich auf der Webseite befinden.</p>
-<p>Natürlich braucht <code>rumex</code> auch so einen Datei. Erstellt wird die sitemap mit</p>
-
+<p>Natürlich braucht <code>rumex</code> auch so einen Datei. Erstellt wird die sitemap mit <code>make sitemap</code> oder bei <code>make all</code> bzw. <code>make online</code>. .ersteckt markierte Dateien <code>*.md?v</code> werden natürlich nicht aufgenommen.</p>
 ]]>
-	</description>
-		<link>http://www.it-bayer.de/rumex/historie.html#v0.3.2</link>
-		<guid>http://www.it-bayer.de/rumex/historie.html#v0.3.2</guid>
-		<dc:creator>IT-Bayer</dc:creator>
-		<pubDate>Tue, 11 Jun 2013 12:03:19 +0000</pubDate>
-		<category><![CDATA[Neues]]></category>
+</description>
+<link>http://www.it-bayer.de/rumex/historie.html#v0.3.2</link>
+<guid>http://www.it-bayer.de/rumex/historie.html#v0.3.22013/06/11_1203</guid>
+<dc:creator>IT-Bayer</dc:creator>
+<pubDate>2013/06/11 12:03</pubDate>
+<category><![CDATA[Neues]]></category>
 </item>
-
-
 <item>
-	<title>rumex wird auf einen nicht github.com Server installiert</title>
-	<description>
-	<![CDATA[
-
+<title>rumex wird auf einen nicht github.com Server installiert</title>
+<description>
+<![CDATA[
 <p>rumex funktioniert auch auf einen <strong>nicht</strong> <code>github.com</code> Server. Eine Beschreibung wie man den Baukasten dort installiert findet man auf der Seite <a href="http://rumex.it-bayer.de">http://rumex.it-bayer.de</a>.</p>
-
 ]]>
-	</description>
-		<link>http://rumex.it-bayer.de/</link>
-		<guid>http://rumex.it-bayer.de/</guid>
-		<dc:creator>IT-Bayer</dc:creator>
-		<pubDate>Tue, 11 Jun 2013 12:03:19 +0000</pubDate>
-		<category><![CDATA[Neues]]></category>
+</description>
+<link>http://rumex.it-bayer.de/</link>
+<guid>http://rumex.it-bayer.de/2013/06/11_1203</guid>
+<dc:creator>IT-Bayer</dc:creator>
+<pubDate>2013/06/11 12:03</pubDate>
+<category><![CDATA[Neues]]></category>
 </item>
-
-
 <item>
-	<title>rumex bekommt die RSS Feed Funktion</title>
-	<description>
-	<![CDATA[
-
+<title>rumex bekommt die RSS Feed Funktion</title>
+<description>
+<![CDATA[
 <p>In den rumex Baukasten wurde eine RSS Feed Funktion eingebaut. Die Einträge werden dabei auch aus einem <code>pandoc</code> Dokument gelesen und nach <code>rss.xml</code> geschrieben.</p>
 <p>Zusätzlich ist diese Datei auch als <code>rss.html</code> unter <a href="http://www.it-bayer.de/rumex/rss.html">http://www.it-bayer.de/rumex/rss.html</a> verfügbar.</p>
-
 ]]>
-	</description>
-		<link>http://www.it-bayer.de/rumex/historie.html#v0.3</link>
-		<guid>http://www.it-bayer.de/rumex/historie.html#v0.3</guid>
-		<dc:creator>IT-Bayer</dc:creator>
-		<pubDate>Tue, 11 Jun 2013 12:03:19 +0000</pubDate>
-		<category><![CDATA[Neues]]></category>
+</description>
+<link>http://www.it-bayer.de/rumex/historie.html#v0.3</link>
+<guid>http://www.it-bayer.de/rumex/historie.html#v0.32013/06/11_1203</guid>
+<dc:creator>IT-Bayer</dc:creator>
+<pubDate>2013/06/11 12:03</pubDate>
+<category><![CDATA[Neues]]></category>
 </item>
-
-
 </channel>
 </rss>
-

@@ -150,13 +150,10 @@ INDEX="../.rumex/bin/index.pl"
 #-------------------------------------------------------------------------------
 # RSS Feed 
 #-------------------------------------------------------------------------------
-#
-# Name der RSS Feed Datei
-RSS_FILE_NAME = "rss_2"
-# Endung der Eingabe Datei
-RSS_RX = "rx0x"
-# Endung der Ausgabe Datei
-RSS_XML = "xml"
+
+# Programm zum erstellen des RSS Feed
+RX2RSS = "../.rumex/bin/rx2rss.pl"
+
 
 # Externe RSS URL verwenden
 # 	Ist diese Variable gesetzt wird die interne
@@ -164,8 +161,6 @@ RSS_XML = "xml"
 # 	und die externe URL verwendet.
 #RSS_EXTERN = "http://www.it-bayer.de/rss.xml"
 
-# Programm zum erstellen des RSS Feed
-RX2RSS = "../.rumex/bin/rx2rss.pl"
 
 
 

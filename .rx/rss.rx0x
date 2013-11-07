@@ -2,26 +2,48 @@
 % 
 %
 
-
 <!--
-| Titel: IT Bayers Rumex - Ein Home Page Baukasten
-| Beschreibung: Aktuelles und Neuigkeiten vom rumex Home Page Baukasten
-| KLink: http://www.it-bayer.de/rumex/
-| Lang: de-DE
-| BildTitel: IT Bayers Rumex - Ein Home Page Baukasten
-| BildURL: http://www.it-bayer.de/rumex/rxtpl/img/rss.png
-| BildLink: http://www.it-bayer.de/rumex/
-| BildBeschreibung: Aktuelles und Neuigkeiten von der rumex Seite.
+%> URL: http://www.it-bayer.de/rumex/
+%> Titel: IT Bayers Rumex - Ein Home Page Baukasten
+%> Beschreibung: Aktuelles und Neuigkeiten vom rumex Home Page Baukasten
+%> Link: http://www.it-bayer.de/rumex/
+%> Lang: de-DE
+%> BildTitel: IT Bayers Rumex - Ein Home Page Baukasten
+%> BildURL: http://www.it-bayer.de/rumex/rxtpl/img/rss.png
+%> BildLink: http://www.it-bayer.de/rumex/
+%> BildBeschreibung: Aktuelles und Neuigkeiten von der rumex Seite.
 -->
 
 
-# Rumex Startdateien einfach mit Symlinks {.nn1}
+
+# RSS Funktion, Programm rx2rss neu ertellt <!-- 2013/11/07 07:55 -->
 
 <!--
-| Link: http://www.it-bayer.de/rumex/
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Fri, 20 Sep 2013 07:55:00 +0200
+!> Link: http://www.it-bayer.de/rumex/
+!> Autor: IT-Bayer
+!> Kategorie: Neues
+-->
+
+Die RSS Funktion wurde neu erstellt. 
+Es muss nun nicht mehr darauf geachtet werden wie man die
+Texte innerhalb einer Meldung schreibt.
+Es werden jetzt alle Pandoc / Markdown Formatierungen verarbeitet.
+Dazu wurde aber der Quellsyntax der `rss.rx0x` Datei verändert.
+Diese muss also angepasst werden.
+Ein Muster, diese Datei, findet man auf 
+[github](https://raw.github.com/itbayer/rumex/gh-pages/.rx/rss.rx0x).
+
+Die vim Kurztaste `.rnn` wurde entsprechend angepasst.
+
+
+
+
+# Rumex Startdateien einfach mit Symlinks <!-- 2013/09/20 07:55 -->
+
+<!--
+!> Link: http://www.it-bayer.de/rumex/
+!> Autor: IT-Bayer
+!> Kategorie: Neues
 -->
 
 Die Rumex (g)vim Unterstützung `rumex-gvim`, `rumex-vim` und
@@ -44,24 +66,27 @@ um die Startdatei für Rumex zu erstellen. Verzeichnisse und
 Parameter werden beim Starten automatisch ermittelt und gesetzt.
 
 
-# Rumex kann jetzt auch mit tilda{.nn5}
+
+
+# Rumex kann jetzt auch mit tilda <!-- 2013/09/05 16:34 -->
 
 <!--
-| Link: http://www.it-bayer.de/rumex/beschreibung.html#homepage-änderung-schnell-und-immer-aktuell
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Thu, 05 Sep 2013 16:34:04 +0200
+!> Link: http://www.it-bayer.de/rumex/beschreibung.html#homepage-änderung-schnell-und-immer-aktuell
+!> Autor: IT-Bayer
+!> Kategorie: Neues
 -->
 
 Im Abschnitt [_"Homepage Änderungen, schnell und immer aktuell"_](http://www.it-bayer.de/rumex/beschreibung.html#homepage-änderung-schnell-und-immer-aktuell) findet man eine Beschreibung wie man Rumex mit tilda verheiratet um so noch schneller Änderungen auf der Rumex Seite  machen zu können.
 
-# Rumex geht in die Beta Phase{.nn4}
+
+
+
+# Rumex geht in die Beta Phase <!-- 2013/08/21 07:10 -->
 
 <!--
-| Link: http://www.it-bayer.de/rumex/
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Wed, 21 Aug 2013 07:10:22 +0200
+!> Link: http://www.it-bayer.de/rumex/
+!> Autor: IT-Bayer
+!> Kategorie: Neues
 -->
 
 Es ist so weit. Rumex geht in die Beta Phase.
@@ -71,13 +96,15 @@ eine Seite und zwei Unterseiten auf Rumex umgestellt.
 
 Wer will ist herzlich eingeladen mit zu machen.
 
-# Rumex Update Funktion wird eingebaut{.nn3}
+
+
+
+# Rumex Update Funktion wird eingebaut <!-- 2013/07/21 17:41 -->
 
 <!--
-| Link: http://www.it-bayer.de/rumex/
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Sun, 21 Jul 2013 17:41:15 +0200
+!> Link: http://www.it-bayer.de/rumex/
+!> Autor: IT-Bayer
+!> Kategorie: Neues
 -->
 
 Rumex bekommt eine Update Funktion. 
@@ -88,26 +115,28 @@ V0.7.xxx festgelegt.
 **In diesem Versionsabschnitt geht es also Wild zu.**
 
 
-# Rumex bekommt eine interne Suche{.nn2}
+
+
+# Rumex bekommt eine interne Suche <!-- 2013/07/15 19:57 -->
 
 <!--
-| Link: http://www.it-bayer.de/rumex/historie.html#V0.6.7
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Mon, 15 Jul 2013 19:57:55 +0200
+!> Link: http://www.it-bayer.de/rumex/historie.html#V0.6.7
+!> Autor: IT-Bayer
+!> Kategorie: Neues
 -->
 
 In Rumex wurden zwei JavaScripts eingebaut.
 Diese ermöglichen zum einen das die Seiten von Rumex durchsucht werden können. Zum anderen das die gefunden Wörter auf der jeweiligen Seite markiert werden.
 
 
-# Rumex bekommt eine (g)VIM Unterstützung{.nn1}
+
+
+# Rumex bekommt eine (g)VIM Unterstützung <!-- 2013/07/11 07:09 -->
 
 <!--
-| Link: http://it-bayer.de/rumex/
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Thu, 11 Jul 2013 07:09:58 +0200
+!> Link: http://it-bayer.de/rumex/
+!> Autor: IT-Bayer
+!> Kategorie: Neues
 -->
 
 Da ich hauptsächlich mit (G)VIM an Rumex arbeite und hier schon ein paar `.vim`
@@ -119,14 +148,13 @@ Die Erweiterung besteht zur Zeit nur aus ein paar Kurztasten und einem GVIM Men�
 
 
 
-
-# Rumex's RSS Feed hat nun auch ein Datum bekommen{.rx07}
+# Rumex's RSS Feed hat nun auch ein Datum bekommen <!-- 2013/07/07 17:28 -->
 
 <!-- 
-| Link: http://www.it-bayer.de/rumex/rss.html#rx07
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Thu, 04 Jul 2013 17:28:25 +0200
+!> Link: http://www.it-bayer.de/rumex/rss.html#rx07
+!> Autor: IT-Bayer
+!> Kategorie: Neues
+!> Datum: Thu, 04 Jul 2013 17:28:25 +0200
 -->
 
 Der Newsreader [Lifera](http://lzone.de/liferea/) hatte, durch das fehlende XML
@@ -138,13 +166,12 @@ bzw. unter vim mit `:r!date -R<CR>kJ`.
 
 
 
-# Rumex bekommt eine Kommentar und Forum Funktion{.rx06}
+# Rumex bekommt eine Kommentar und Forum Funktion <!-- 2013/07/04 10:15 -->
 
 <!-- 
-| Link: http://www.it-bayer.de/rumex/historie.html#v0.6
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Thu, 04 Jul 2013 10:15:11 +0200
+!> Link: http://www.it-bayer.de/rumex/historie.html#v0.6
+!> Autor: IT-Bayer
+!> Kategorie: Neues
 -->
 
 Rumex wurde um eine Kommentar und einer Forum
@@ -157,13 +184,13 @@ erstellt die auch als Link in die Fusszeile eingebaut wurde.
 
 
 
-# rumex Systemverzeichnisse werden dot Verzeichnisse {.xx9}
+
+# rumex Systemverzeichnisse werden dot Verzeichnisse <!-- 2013/07/11 12:03 -->
 
 <!-- 
-| Link: http://www.it-bayer.de/rumex/historie.html#v0.5
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Tue, 11 Jun 2013 12:03:19 +0000
+!> Link: http://www.it-bayer.de/rumex/historie.html#v0.5
+!> Autor: IT-Bayer
+!> Kategorie: Neues
 -->
 
 Die rumex Systemverzeichnisse wurde auf dot Verzeichnisse, 
@@ -172,13 +199,13 @@ nicht sichtbare Verzeichnisse, umbenannt.
 
 
 
-# rumex kann jetzt auch mit FTP umgehen{.xx8}
+
+# rumex kann jetzt auch mit FTP umgehen <!-- 2013/07/04 08:41 -->
 
 <!-- 
-| Link: http://www.it-bayer.de/rumex/historie.html#v0.4.8
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Thu, 04 Jul 2013 08:41:47 +0200
+!> Link: http://www.it-bayer.de/rumex/historie.html#v0.4.8
+!> Autor: IT-Bayer
+!> Kategorie: Neues
 -->
 
 Eine FTP Unterstützung wurde mit `wput` realisiert.
@@ -186,38 +213,42 @@ Eine FTP Unterstützung wurde mit `wput` realisiert.
 
 
 
-# rumex bekommt einen Verzeichnisschutz auf System Verzeichnisse{.xx8}
+
+# rumex bekommt einen Verzeichnisschutz auf System Verzeichnisse <!-- 2013/06/11 12:03 -->
 
 <!-- 
-| Link: http://www.it-bayer.de/rumex/historie.html#v0.4.7
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Tue, 11 Jun 2013 12:03:19 +0000
+!> Link: http://www.it-bayer.de/rumex/historie.html#v0.4.7
+!> Autor: IT-Bayer
+!> Kategorie: Neues
 -->
 
 Um die Systemverzeichnisse nicht nur durch eine Weiterleitung zu schützen
 wurde eine `.htaccess` Datei eingebaut.
 [...weiter lesen](http://www.it-bayer.de/rumex/historie.html#v0.4.7)
 
-# rumex bekommt ein Installationsskript{.xx7}
+
+
+
+# rumex bekommt ein Installationsskript <!-- 2013/06/11 12:03 -->
 
 <!-- 
-| Link: http://www.it-bayer.de/rumex/historie.html#v0.4.5
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Tue, 11 Jun 2013 12:03:19 +0000
+!> Link: http://www.it-bayer.de/rumex/historie.html#v0.4.5
+!> Autor: IT-Bayer
+!> Kategorie: Neues
 -->
 
 In rumex wurde um ein kleines Installationsskript eingebaut.
 [...weiter lesen](http://www.it-bayer.de/rumex/historie.html#v0.4.5)
 
-# rumex bekommt sein eigenes Verzeichnis{.xx6}
+
+
+
+# rumex bekommt sein eigenes Verzeichnis <!-- 2013/06/11 12:03 -->
 
 <!-- 
-| Link: http://www.it-bayer.de/rumex/historie.html#v0.4.0
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Tue, 11 Jun 2013 12:03:19 +0000
+!> Link: http://www.it-bayer.de/rumex/historie.html#v0.4.0
+!> Autor: IT-Bayer
+!> Kategorie: Neues
 -->
 
 rumex bekommt sein eigenes Verzeichnis und seine eigene Datei
@@ -225,26 +256,27 @@ Erweiterung.
 [...weiter lesen](http://www.it-bayer.de/rumex/historie.html#v0.4.0)
 
 
-# rumex bekommt jetzt auch einen sitemap.html{.xx5}
+
+
+# rumex bekommt jetzt auch einen sitemap.html <!-- 2013/06/11 12:03 -->
 
 <!-- 
-| Link: http://www.it-bayer.de/rumex/historie.html#v0.3.7
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Tue, 11 Jun 2013 12:03:19 +0000
+!> Link: http://www.it-bayer.de/rumex/historie.html#v0.3.7
+!> Autor: IT-Bayer
+!> Kategorie: Neues
 -->
 
 Nach der `sitemap.xml` kann rumex jetzt auch eine `sitemap.html` erstellen. [...weiter lesen](http://www.it-bayer.de/rumex/historie.html#v0.3.7)
 
 
 
-# rumex bekommt eine Weiterleitungsseite{.xx4}
+
+# rumex bekommt eine Weiterleitungsseite <!-- 2013/06/11 12:03 -->
 
 <!-- 
-| Link: http://www.it-bayer.de/rumex/historie.html#v0.3.6
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Tue, 11 Jun 2013 12:03:19 +0000
+!> Link: http://www.it-bayer.de/rumex/historie.html#v0.3.6
+!> Autor: IT-Bayer
+!> Kategorie: Neues
 -->
 
 Einbau einer Weiterleitungsfunktion per JavaScript da .htaccess von github.com nicht unterstützt wird.
@@ -252,13 +284,12 @@ Einbau einer Weiterleitungsfunktion per JavaScript da .htaccess von github.com n
 
 
 
-# rumex bekommt eine Bildbearbeitung{.xx3}
+# rumex bekommt eine Bildbearbeitung <!-- 2013/06/11 12:03 -->
 
 <!-- 
-| Link: http://www.it-bayer.de/rumex/historie.html#v0.3.5
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Tue, 11 Jun 2013 12:03:19 +0000
+!> Link: http://www.it-bayer.de/rumex/historie.html#v0.3.5
+!> Autor: IT-Bayer
+!> Kategorie: Neues
 -->
 
 Eigentlich ist es gar keine richtige Bildbearbeitung sondern nur eine ImageMagick Befehlsfolge die, die Bilder im Verzeichnis bilder in verschiedene Größen bereitstellt.
@@ -273,13 +304,13 @@ Unterstützt werden zur Zeit die Größen
 
 
 
-# rumex bekommt eine sitemap.xml{.xx2}
+
+# rumex bekommt eine sitemap.xml <!-- 2013/06/11 12:03 -->
 
 <!-- 
-| Link: http://www.it-bayer.de/rumex/historie.html#v0.3.2
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Tue, 11 Jun 2013 12:03:19 +0000
+!> Link: http://www.it-bayer.de/rumex/historie.html#v0.3.2
+!> Autor: IT-Bayer
+!> Kategorie: Neues
 -->
 
 Mit einer `sitemap.xml` erleichtert man den Suchmaschinen das finden einzelner
@@ -292,13 +323,13 @@ Natürlich braucht `rumex` auch so einen Datei. Erstellt wird die sitemap mit
 
 
 
-# rumex wird auf einen nicht github.com Server installiert{.xx1}
+
+# rumex wird auf einen nicht github.com Server installiert <!-- 2013/06/11 12:03 -->
 
 <!-- 
-| Link: http://rumex.it-bayer.de/
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Tue, 11 Jun 2013 12:03:19 +0000
+!> Link: http://rumex.it-bayer.de/
+!> Autor: IT-Bayer
+!> Kategorie: Neues
 -->
 
 rumex funktioniert auch auf einen **nicht** `github.com` Server.
@@ -307,13 +338,13 @@ findet man auf der Seite <http://rumex.it-bayer.de>.
 
 
 
-# rumex bekommt die RSS Feed Funktion{.rssfeed}
+
+# rumex bekommt die RSS Feed Funktion <!-- 2013/06/11 12:03 -->
 
 <!-- 
-| Link: http://www.it-bayer.de/rumex/historie.html#v0.3
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Tue, 11 Jun 2013 12:03:19 +0000
+!> Link: http://www.it-bayer.de/rumex/historie.html#v0.3
+!> Autor: IT-Bayer
+!> Kategorie: Neues
 -->
 
 In den rumex Baukasten wurde eine RSS Feed Funktion eingebaut.
@@ -321,11 +352,6 @@ Die Einträge werden dabei auch aus einem `pandoc` Dokument gelesen
 und nach `rss.xml` geschrieben.
 
 Zusätzlich ist diese Datei auch als `rss.html` unter <http://www.it-bayer.de/rumex/rss.html> verfügbar.
-
-
-
-
-<!-- ich bin ein Kommentar -->
 
 
 <!-- vim:set ft=pandoc: -->

@@ -50,7 +50,7 @@ endif
 # RSS Datei erstellen
 
 ../rss.xml: rss.rx0x
-	$(RX2RSS) $(URL)+$(RSS_FILE_NAME)+$(RSS_RX)+$(RSS_XML) > ../$(RSS_FILE_NAME).$(RSS_XML)
+	$(RX2RSS) $(URL)+rss > ../rss.xml
 
 rss: 
 ifdef RSS_EXTERN

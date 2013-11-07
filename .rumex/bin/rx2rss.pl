@@ -1,225 +1,330 @@
 #!/usr/bin/perl 
 #
-# rx2rss.pl V:0.1
+# rx2rss.pl V:1.0
 #
 #
-
-=head1 Beschreibung
-
-Ein kleines Programm das aus einer Markdown Datei einen RSS Feed erstellt.
-Als Vorlage wird C<pandocs markdown> verwendet.
-
-=cut
-
 
 use strict;
 use warnings;
 use utf8;
 
 
-# URL aus erstem Parameter lesen, wird vom make Aufruf übergeben
-my $url = "$ARGV[0]";
 
 
-=head3 rss.rx0x
+=pod
 
-Datei aus der der Inhalt für die Datei rss.xml gelesen wird
-Als Eingabe ist die Datei C<rss.rx0x> vorbelegt.
+=encoding utf8
 
-=cut 
-my $file = "rss.rx0x";
+=head1 rx2rss
 
-# pandoc inc. Parameter
+rx2rss ist kleines Programm das aus einer Markdown Datei einen RSS Feed erstellt.
+
+Zum schreiben der Texte wird der erweiterte Markdown Syntax von pandoc verwendet.
+Pandoc ist auch für die Umwandlung der Texte innerhalb der XML Datei zuständig.
+Muss also auf dem System installiert werden.
+
+	apt-get install pandoc
+
+=cut
+
+
+
+
+=head1 Manueller Aufruf
+
+Das Programm wird mit 
+
+	perl rx2rss.pl URL+NAME (ohne Endung)
+
+gestartet. 
+Die Ausgabe erfolgt auf dem Bildschirm.
+
+=cut
+
+# Einlesen der URL
+# und des Dateinamens
+# Zusammenbau der erforderlichen Variablen.
+my ($url, $name ) = split('\+', $ARGV[0]);
+# Kompletter Name der Eingabe Datei
+my $name_rx = $name.".rx0x";
+# Kompletter Name der Ausgabe Datei
+my $name_xml = $name.".xml";
+
+
+# pandoc inc. Parameter email nicht maskieren.
 my $pandoc = "pandoc --email-obfuscation=none";
+
+
+
+
+# -------------------------------------------------------------------
+# Arbeitsvariable
+# -------------------------------------------------------------------
+
+# Ablage für Titel Daten
+my %titel;
+
+# Zähler für die Titelzeilen
+my $titel_zaehler = 0;
 
 # Ablage für die Kopf Daten
 my %kopf;
 
-# Ablage für die Berichtsdaten
+# Zähler für die Kopfzeilen
+my $kopf_zaehler = 0;
+
+# Ablage für die Meldungen
 my %item;
 
-# Zähler für die einzelnen Berichte
+# Zähler für die einzelnen Meldungen
 my $item_zaehler = 0;
 
-# Inhalt der Berichtsdaten ab arbeiten
-open ("rss_rx", "< $file");
-
-while (<rss_rx>) {
-
-	# Pandocs Kopfzeile raus filtern und merken.
-	if ($_ =~ m/^\%\s+(.*)$/) {
-		$kopf{'dummy'} .= $1;
-	}
-
-	# -----------------------------------------------------
-	# RSS Kopf Parameter
-	# -----------------------------------------------------
-
-	# Wenn ein pandoc Kopf gefunden wurden die einzelnen RSS
-	# Elemente raus suchen und merken.
-	if ($kopf{'dummy'}) {	
-
-		if ($_ =~ m/^\|\s+Titel:\s+(.*)$/) {
-			$kopf{'titel'} = $1;
-		}
-
-		if ($_ =~ m/^\|\s+Beschreibung:\s+(.*)$/) {
-			$kopf{'beschreibung'} = $1;
-		}
-
-		if ($_ =~ m/^\|\s+KLink:\s+(.*)$/) {
-			$kopf{'link'} = $1;
-		}
-
-		if ($_ =~ m/^\|\s+Lang:\s+(.*)$/) {
-			$kopf{'lang'} = $1;
-		}
-
-		# ---------------------------------------------------------
-		# Bild Datei für den Kopf raus suchen und Parameter merken
-		if ($_ =~ m/^\|\s+BildTitel:\s+(.*)$/) {
-			$kopf{'bild_titel'} = $1;
-		}
-
-		if ($_ =~ m/^\|\s+BildURL:\s+(.*)$/) {
-			$kopf{'bild_url'} = $1;
-		}
-
-		if ($_ =~ m/^\|\s+BildLink:\s+(.*)$/) {
-			$kopf{'bild_link'} = $1;
-		}
-
-		if ($_ =~ m/^\|\s+BildBeschreibung:\s+(.*)$/) {
-			$kopf{'bild_beschreibung'} = $1;
-		}
-
-		# ----------------------------------------------
-		# Überschrift für den ersten Eintrag
-		#
-		# BUG: RegEx Fehler
-		#      Die erste Überschrift muss  mit einem {} abschließen.
-		if ($_ =~ m/^#\s+(.+)\s*\{.*\}.*$/) {
-			$item_zaehler++;
-			$item{$item_zaehler}{'titel'} = $1;
-		}
-
-		# Parameter für die einzelnen Einträge
-		if ($_ =~ m/^\|\s+Link:\s+(.*)$/) {
-			$item{$item_zaehler}{'link'} = $1;
-		}
-
-		if ($_ =~ m/^\|\s+Autor:\s+(.*)$/) {
-			$item{$item_zaehler}{'autor'} = $1;
-		}
-
-		if ($_ =~ m/^\|\s+Kategorie:\s+(.*)$/) {
-			$item{$item_zaehler}{'kategorie'} = $1;
-		}
-		
-		if ($_ =~ m/^\|\s+Datum:\s+(.*)$/) {
-			$item{$item_zaehler}{'datum'} = $1;
-		}
-
-		# --------------------------------------------------------
-		# Text der einzelnen Einträge
-		#
-		# Zeilen aus der Datei raus holen die per pandoc nach
-		# HTML umwandeln.
-		# 
-		# BUG:
-		#	Links und Bilder die am Anfang einer Zeile stehen
-		#	werden nicht übernommen.
-		#	Hier fehlt noch der entsprechende Filter.
-		#
-
-		$item{$item_zaehler}{'text'} .= $_ if (
-			$_ =~ m/^\w+.*$/ # Alles was mit einem Buchstaben beginnt
-			|| $_ =~ m/^$/ # Leere Zeilen, braucht man für die Absatztrennung
-			|| $_ =~ m/\*\s+\w+.*$/ # Aufzählung  mit  Stern
-			|| $_ =~ m/\-\s+\w+.*$/ # Aufzählungen mit Minus
-			# Überschrift 2 wird nicht verwendet, schaut scheiße aus
-			|| $_ =~ m/^###.*$/ # Überschrift 3
-			|| $_ =~ m/^####.*$/ # Überschrift 4
-			|| $_ =~ m/^#####.*$/ # Überschrift 5
-			|| $_ =~ m/^######.*$/ # Überschrift 6
-			|| $_ =~ m/^>.*$/ # Zitate
-			|| $_ =~ m/^\!\[.*$/ # Bilder
-				and  $_ !~ m/.*<!--.*-->.*/ # Kommentare nicht mit nehmen
-		);
-	}
-}
-
-# <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-print <<EOF1;
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-	<atom:link href="$url" rel="self" type="application/rss+xml" />
-		<title>$kopf{'titel'}</title>
-		<description>
-			<![CDATA[
-			$kopf{'beschreibung'}
-			]]>
-		</description>
-		<link>$kopf{'link'}</link>
-		<language>$kopf{'lang'}</language>
-
-		<image>
-			<title>$kopf{'bild_titel'}</title>
-			<url>$kopf{'bild_url'}</url>
-			<link>$kopf{'bild_link'}</link>
-			<description>
-				<![CDATA[
-				$kopf{'bild_beschreibung'}	
-				]]>
-			</description>
-		</image>
-
-
-EOF1
 
 
 
-# Verarbeiten der einzelnen Nachrichten
+=head1 RSS Feed Standard Werte
 
-my $x;
-my $i;
-for (keys %item) {$x++};
-for ($i = 1; $i < $x; $i++){
+=head2 Kopf
 
-	print <<EOF2;
+Für die RSS Grund Datei werden Standardwerte vorgespannt.
+Diese können jedoch in der jeweiligen Datei angepasst werden.
+Folgende Kopfwerte stehen zur Verfügung.
 
-<item>
-	<title>$item{$i}{'titel'}</title>
-	<description>
-	<![CDATA[
+=over 
 
-EOF2
+=item *	
+	%> Titel: IT Bayers Rumex - Ein Home Page Baukasten
+
+=item *
+	%> Beschreibung: Aktuelles und Neuigkeiten
+
+=item *
+    %> Link: http://www.it-bayer.de/rumex/
+
+=item *
+	%> Lang: de-DE
+
+=item *
+	%> BildTitel: IT Bayers Rumex - Ein Home Page Baukasten
+
+=item *
+	%> BildURL: http://www.it-bayer.de/rumex/rxtpl/img/rss.png
+
+=item *
+	%> BildLink: http://www.it-bayer.de/rumex/
+
+=item *
+	%> BildBeschreibung: Aktuelles und Neuigkeiten von der rumex Seite.
 
 
-=head2 Anmerkung zum Autor(en) Eintrag
 
-Der Eintrag wurde raus genommen da hier eine E-Mail Adresse
-angegeben werden muss.
 
-<author>sb\@it-bayer.de(it-bayer)</author>
+=back
 
-Ersetzt wurde der Eintrag durch
+=head2 Meldung
 
-<dc:creator>$item{$i}{'autor'}</dc:creator>
 
-dazu musste aber im Kopf der TAG
+=over
 
-<rss...
+=item *
+	!> Autor: IT-Bayer
 
-um diesen Eintrag
+=item *
+	!> Link: http://www.it-bayer.de/rumex/
 
-xmlns:dc="http://purl.org/dc/elements/1.1/"
+=item *
+	!> Kategorie: Neues
 
-erweitert werden.
+=back
 
 =cut
 
+
+=head1 Sonstiges
+
+=head2 Titel nach pandoc
+
+
+B<Beispiel>
+
+	% Abo Seite - Newsletter - RSS Feed
+	% 
+	%
+
+Die Zeilen müssen am Anfang der Datei stehen.
+
+=cut
+
+
+
+
+#-------------------------------------------------------------------------------
+# Datei auslesen und abarbeiten
+#-------------------------------------------------------------------------------
+open ("rss_rx", "< $name_rx");
+
+
+
+
+
+while (<rss_rx>) {
+
+#-------------------------------------------------------------------------------
+# Pandocs Titelzeile raus suchen und merken.
+# Die Titelzeile beginnt mit dem Zeichen %
+#-------------------------------------------------------------------------------
+
+	if ($_ =~ m/^\%\s+(.*)$/) {
+		$titel_zaehler ++;
+		$titel{$titel_zaehler} = $1;
+	}
+
+
+
+
+#-------------------------------------------------------------------------------
+#	Kopfzeile raus suchen und merken
+#	Die Kopfzeile beginnt mit den Zeichen %>
+#	und ist von einem HTML Kommentar TAG umschlossen
+#-------------------------------------------------------------------------------
+
+	if ($_ =~ m/^%\>\s+Titel:\s+(.*)\s*?$/) {
+		$kopf{'titel'} = $1;
+	}
+
+	if ($_ =~ m/^%\>\s+Beschreibung:\s+(.*)\s*?$/) {
+		$kopf{'beschreibung'} = $1;
+	}
+
+	if ($_ =~ m/^%\>\s+Link:\s+(.*)\s*?$/) {
+		$kopf{'link'} = $1;
+	}
+
+	if ($_ =~ m/^%\>\s+Lang:\s+(.*)\s*?/) {
+		$kopf{'lang'} = $1;
+	}
+
+
+
+#-------------------------------------------------------------------------------
+# Bild Datei für den Kopf raus suchen und Parameter merken
+#-------------------------------------------------------------------------------
+	if ($_ =~ m/^%\>\s+BildTitel:\s+(.*)\s*?$/) {
+		$kopf{'bild_titel'} = $1;
+	}
+
+	if ($_ =~ m/^%\>\s+BildURL:\s+(.*)\s*?$/) {
+		$kopf{'bild_url'} = $1;
+	}
+
+	if ($_ =~ m/^%\>\s+BildLink:\s+(.*)\s*?$/) {
+		$kopf{'bild_link'} = $1;
+	}
+
+	if ($_ =~ m/^%\>\s+BildBeschreibung:\s+(.*)\s*?$/) {
+		$kopf{'bild_beschreibung'} = $1;
+	}
+
+
+
+
+
+#-------------------------------------------------------------------------------
+# MeldungsZeilen raus suchen und merken
+#
+# Die Überschrift muss in dem Format
+# Überschrift <!-- YYY/MM/TT SS:MM -->
+# erstellt werden.
+#-------------------------------------------------------------------------------
+
+	if ($_ =~ m/#\s+(.*?)\s*?\<\!--\s*?(\d{4}\/\d{2}\/\d{2})\s*?(\d{2}):(\d{2})\s*?--\>\s*?$/) {
+		$item_zaehler++;
+		$item{$item_zaehler}{'ueberschrift'} = $1;
+		$item{$item_zaehler}{'datum'} = $2;
+		$item{$item_zaehler}{'stunde'} = $3;
+		$item{$item_zaehler}{'minute'} = $4;
+	}
+
+	# MeldungsLink setzen wenn vorhanden
+	if ($_ =~ m/^!\>\s+Link:\s+(.*)$/) {
+		$item{$item_zaehler}{'link'} = $1;
+	}
+
+	# MeldungsAutor setzen wenn vorhanden
+	if ($_ =~ m/^!\>\s+Autor:\s+(.*)$/) {
+		$item{$item_zaehler}{'autor'} = $1;
+	}
+
+	# MeldungsKategorie setzen wenn vorhanden
+	if ($_ =~ m/^!\>\s+Kategorie:\s+(.*)$/) {
+		$item{$item_zaehler}{'kategorie'} = $1;
+	}
+
+	# Text des Berichtes raus suchen und Merken
+	#	Dabei werden die Schlüssel der Kennzeichnung ausgeschlossen.
+	if ($_ !~ m/^!\>/ &&
+		$_ !~ m/^\<!--/	&&
+		$_ !~ m/^--\>/	&&
+		$_ !~ m/^#.*?\<\!--.*?--\>/	
+	) {
+		$item{$item_zaehler}{'text'} .= $_;	
+	}
+}
+
+close("rss_rx");
+
+
+
+
+#-------------------------------------------------------------------------------
+# Ausgabe der rss Datei
+#-------------------------------------------------------------------------------
+
+
+# Kopfdatei schreiben
+print "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
+print "<rss version=\"2.0\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:atom=\"http://www.w3.org/2005/Atom\">\n";
+print "<channel>\n";
+print "<atom:link href=\"$url/$name_xml\" rel=\"self\" type=\"application/rss+xml\" />\n";
+print "<title>$kopf{'titel'}</title>\n";
+print "<description>\n";
+print "<![CDATA[\n";
+print "$kopf{'beschreibung'}\n";
+print "]]>\n";
+print "</description>\n";
+print "<link>$kopf{'link'}</link>\n";
+print "<language>$kopf{'lang'}</language>\n";
+
+print "<image>\n";
+print "<title>$kopf{'bild_titel'}</title>\n";
+print "<url>$kopf{'bild_url'}</url>\n";
+print "<link>$kopf{'bild_link'}</link>\n";
+print "<description>\n";
+print "<![CDATA[\n";
+print "$kopf{'bild_beschreibung'}	\n";
+print "]]>\n";
+print "</description>\n";
+print "</image>\n";
+
+
+
+
+
+#-------------------------------------------------------------------------------
+# Einzelne Meldungen verarbeiten und ausgeben
+#-------------------------------------------------------------------------------
+my $i;
+for ($i = 1; $i <= $item_zaehler; $i++){
+
+	print "<item>\n";
+	print "<title>$item{$i}{'ueberschrift'}</title>\n";
+	print "<description>\n";
+	print "<![CDATA[\n";
+
+
+
+
+#-------------------------------------------------------------------------------
 # Anmerkung zu $item{$i}{'text'}
 # ------------------------------
 # Bei diesem Eintrag darf kein "" verwendet werden.
@@ -227,85 +332,63 @@ erweitert werden.
 # pandoc code Element enthält (`beispiel`),
 # als Programm auszuführen.
 # system("echo \"$item{$i}{'text'}\" | $pandoc"); 
-# funktioniert nicht.
+# funktioniert also nicht.
+#-------------------------------------------------------------------------------
 
-system("echo '$item{$i}{'text'}' | $pandoc");
-#print $item{$i}{'text'}."\n";
+	system("echo '$item{$i}{'text'}' | $pandoc");
 
-print <<EOF3;
+	print "]]>\n";
+	print "</description>\n";
+	print "<link>$item{$i}{'link'}</link>\n";
 
-]]>
-	</description>
-		<link>$item{$i}{'link'}</link>
-		<guid>$item{$i}{'link'}</guid>
-		<dc:creator>$item{$i}{'autor'}</dc:creator>
-		<pubDate>$item{$i}{'datum'}</pubDate>
-		<category><![CDATA[$item{$i}{'kategorie'}]]></category>
-</item>
 
-EOF3
+
+
+#-------------------------------------------------------------------------------
+# Dieser Eintrag braucht einen eindeutige Kennung
+# sonst wird unter Liferea immer nur der letzte Eintrag 
+# angezeigt.
+# Die eindeutige Kennung wird hier mit einer Zufallszahl
+# erstellt.
+#-------------------------------------------------------------------------------
+	print "<guid>$item{$i}{'link'}$item{$i}{'datum'}_$item{$i}{'stunde'}$item{$i}{'minute'}</guid>\n";
+
+
+
+
+#-------------------------------------------------------------------------------
+# Der Eintrag wurde raus genommen da hier eine E-Mail Adresse
+# angegeben werden muss.
+# 
+# <author>sb\@it-bayer.de(it-bayer)</author>
+# 
+# Ersetzt wurde der Eintrag durch
+# 
+# <dc:creator>$item{$i}{'autor'}</dc:creator>
+# 
+# dazu musste aber im Kopf der TAG
+# 
+# <rss...
+# 
+# um diesen Eintrag
+# 
+# xmlns:dc="http://purl.org/dc/elements/1.1/"
+# 
+# erweitert werden.
+#-------------------------------------------------------------------------------
+
+
+	print "<dc:creator>$item{$i}{'autor'}</dc:creator>\n";
+
+	print "<pubDate>$item{$i}{'datum'} $item{$i}{'stunde'}:$item{$i}{'minute'}</pubDate>\n";
+	print "<category><![CDATA[$item{$i}{'kategorie'}]]></category>\n";
+	print "</item>\n";
 }
 
-
-print <<EOF4;
-
-</channel>
-</rss>
-
-EOF4
+print "</channel>\n";
+print "</rss>\n"; 
 
 
-close("rss_rx");
-
-
-=head2 Vorlage der rss.rx0x Datei
-
-Als rss.rx0x kann man sich an folgender Vorlage orientieren.
-
-=cut
-
-=begin text
-
-% Abo Seite - Newsletter - RSS Feed
-% 
-%
-
-
-<!--
-| Titel: Hochfelder Meldungen 
-| Beschreibung: Aktuelles und Neuigkeiten von der Hochfelder Seite
-| KLink: http://www.hochfelder.de/
-| Lang: de-DE
-| BildTitel: Hochfelder Meldungen
-| BildURL: http://www.hochfelder.de/xicons/404.png
-| BildLink: http://www.hochfelder.de/
-| BildBeschreibung: Aktuelles und Neuigkeiten von der Hochfelder Seite.
--->
-
-
-# Änderungen auf der Hochfelder Seite {#aenderung}
-
-<!-- 
-| Link: http://www.hochfelder.de/rss.htm#aenderung
-| Autor: Stefan v. Hochfeld
-| Kategorie: Neues
--->
-
-Auf der Seite gibt es wieder ein paar Änderungen über die
-ich euch kurz informieren möchte.
-
-# Zweiter Eintrag {#e2}
-
-<!-- 
-| Link: http://www.hochfelder.de/rss.htm#e2
-| Autor: Stefan v. Hochfeld
-| Kategorie: Neues
--->
-
-Auf der Seite gibt es wieder ein paar Änderungen über die
-ich euch kurz informieren möchte.
-
-=end text
 
 
 

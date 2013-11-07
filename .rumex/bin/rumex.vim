@@ -93,8 +93,9 @@ abb rumexis Rumex mit is
 " Neue Datei mit <Leader><rnd> (RumexNeueDatei)
 map <Leader>rnd i% <C-R>=expand("%:r")<CR><CR>%<CR>%<CR><CR><CR><!--<CR><CR>[<C-R>=expand("%:r")<CR>](<C-R>=expand("%:r")<CR>.html)<CR>=======================================================<CR><CR>Vortext INDEX<CR><CR>--><CR><CR>Vortext INDEX und SEITE<CR><CR><!-- schnipp --><CR><CR>TEXT DER SEITE<CR><CR><!-- vim: set ft=pandoc: --><ESC>gg
 
+
 " Neuer NEWS Eintrag mit <Leader><rnn> (RumexNeuNews)
-map <Leader>rnn i# Neue Nachricht{.nn1}<CR><CR><!--<CR>\| Link: http://www.it-bayer.de/rumex/<CR>\| Autor: IT-Bayer<CR>\| Kategorie: Neues<CR>\| Datum: <ESC>:r!date -R<CR>kJA<CR>--><CR><CR>Ab hier geht die neue Nachricht los.<ESC>9k0
+map <Leader>rnn i# Neue Nachricht <!-- <ESC>:r!date -R<CR>kJA --><CR><CR><!--<CR>!> Link: http://www.it-bayer.de/rumex/<CR>!> Autor: IT-Bayer<CR>!> Kategorie: Neues<CR>--><CR><CR>Ab hier geht die neuen Nachricht los.<ESC>8k02l
 
 
 " Neue Weiterleitungsseite mit <Leader>rwl (RumexWeiterLeitung)
@@ -103,6 +104,7 @@ map <Leader>rwl i% Weiterleitung nach ....html<CR>%<CR>%<CR><CR><CR><script lang
 
 " Kommentar Zeile einfügen mit <Leader>rmk (RumexMootKommentar)
 map <Leader>rmk i# Kommentare<cr><cr><a class="moot" href="https://moot.it/i/<C-R>=mootit_konto<cr>/blog/<C-R>=expand("%:r")<cr>"></a>
+
 
 " Weblog Abschnitt einfuegen (RumexNewweBlog)
 map <Leader>rnb i# Rumex WebLog<CR><ESC>:r! date +"Am \%d.\%m.\%Y um \%H:\%M schrieb"<CR>I_<ESC>A <C-R>=weblog_autor<CR>_<CR><CR>Text für den Eintrag<CR><CR><div class="weblog"><CR>Text der vorerst ausgeblendet ist.<CR></div><CR><ESC>9k02l
