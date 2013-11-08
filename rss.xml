@@ -24,8 +24,8 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 <title>RSS Funktion, Programm rx2rss neu ertellt</title>
 <description>
 <![CDATA[
-<p>Die RSS Funktion wurde neu erstellt. Es muss nun nicht mehr darauf geachtet werden wie man die Texte innerhalb einer Meldung schreibt. Es werden jetzt alle Pandoc / Markdown Formatierungen verarbeitet. Dazu wurde aber der Quellsyntax der <code>rss.rx0x</code> Datei verändert. Diese muss also angepasst werden. Ein Muster, diese Datei, findet man auf <a href="https://raw.github.com/itbayer/rumex/gh-pages/.rx/rss.rx0x">github</a>.</p>
-<p>Die vim Kurztaste <code>.rnn</code> wurde entsprechend angepasst.</p>
+<p>Die RSS Funktion wurde neu erstellt. Es muss nun nicht mehr darauf geachtet werden wie man die Texte innerhalb einer Meldung schreibt. Es werden jetzt alle Pandoc / Markdown Formatierungen verarbeitet. Dazu wurde aber der Quellsyntax der <code>rss.rx0x</code> Datei verändert. Diese muss also angepasst werden. Ein Muster, des neuen Dateiformates, findet man auf <a href="https://raw.github.com/itbayer/rumex/gh-pages/.rx/rss.rx0x">github</a>.</p>
+<p>Die vim Kurztaste <code>,rnn</code> wurde entsprechend angepasst.</p>
 ]]>
 </description>
 <link>http://www.it-bayer.de/rumex/</link>

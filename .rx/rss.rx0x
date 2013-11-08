@@ -30,10 +30,10 @@ Texte innerhalb einer Meldung schreibt.
 Es werden jetzt alle Pandoc / Markdown Formatierungen verarbeitet.
 Dazu wurde aber der Quellsyntax der `rss.rx0x` Datei verändert.
 Diese muss also angepasst werden.
-Ein Muster, diese Datei, findet man auf 
+Ein Muster, des neuen Dateiformates, findet man auf 
 [github](https://raw.github.com/itbayer/rumex/gh-pages/.rx/rss.rx0x).
 
-Die vim Kurztaste `.rnn` wurde entsprechend angepasst.
+Die vim Kurztaste `,rnn` wurde entsprechend angepasst.
 
 
 
