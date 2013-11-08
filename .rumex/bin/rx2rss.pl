@@ -233,7 +233,7 @@ while (<rss_rx>) {
 # MeldungsZeilen raus suchen und merken
 #
 # Die Überschrift muss in dem Format
-# Überschrift <!-- YYY/MM/TT SS:MM -->
+# Überschrift <!-- YYYY/MM/TT SS:MM -->
 # erstellt werden.
 #-------------------------------------------------------------------------------
 
