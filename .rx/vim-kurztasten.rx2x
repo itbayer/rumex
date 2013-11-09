@@ -33,6 +33,10 @@ Unterstützung arbeitet sollte sich schon ein paar Kurztasten einprägen.
 
 Mittels dieser Kurztasten können Textbausteine eingebunden werden.
 
+
+
+
+
 ## `,rnd` (RumexNeueDatei)
 
 Erstellt ein neues Datei Gerüst.
@@ -64,27 +68,29 @@ TEXT DER SEITE
 <!-- vim: set ft=pandoc: -->
 ~~~
 
+
+
+
 ## `,rnn` (RumexNeueNachricht)
 
 Erstellt einen neuen News Eintrag.
 Diese Kurztaste macht eigentlich nur in der Datei `rss.rx0x` Sinn.
-Der Eintrag hinter Datum wird von Rumex gesetzt, ist also immer die
-aktuelle Systemzeit beim ausführen von `,rnn`.
-
-**So schaut's aus**
+Das Datum hinter dem Titel, Überschrift 1, wird von Rumex gesetzt, 
+ist also immer die aktuelle Systemzeit beim ausführen von `,rnn`.
 
 ~~~
- # Neue Nachricht{.nn1}
+ # Neue Nachricht <!-- 2013/11/10 00:30 -->
 
 <!--
-| Link: http://www.it-bayer.de/rumex/
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Fri, 06 Sep 2013 08:08:10 +0200
+!> Link: http://www.it-bayer.de/rumex/
+!> Autor: IT-Bayer
+!> Kategorie: Neues
 -->
 
-Ab hier geht die neue Nachricht los.
+Ab hier geht die neuen Nachricht los.
 ~~~
+
+
 
 
 ## `,rwl` (RumexWeiterLeitung)
@@ -112,6 +118,8 @@ Normalerweise findet man kein `//` vor der
 Zeile `window.location.href=....html`.
 
 
+
+
 ## `,rmk` (RumexMootitKommentar)
 Erstellt einen Moot.it Kommentar Abschnitt.
 Als Kennzeichnung wird der Dateiname ohne `rx??` eingebaut / angehängt.
@@ -121,7 +129,6 @@ Als Kennzeichnung wird der Dateiname ohne `rx??` eingebaut / angehängt.
 
 <a class="moot" href="https://moot.it/i/rumex/blog/vim-kurztasten"></a>
 ~~~
-
 
 
 
@@ -147,9 +154,15 @@ Text der vorerst ausgeblendet ist.
 
 # Git Kommandos
 
+
+
+
 ## `,rgp` (RumexGitPull)
 
 Git pull
+
+
+
 
 ## `,rgs` (RumexGitStatus)
 
@@ -160,21 +173,39 @@ Git status
 
 # Text Formatierung
 
+
+
+
 ## `,rff` (RumexFormatFett)
 
 Markierte Textstelle fett darstellen
+
+
+
 
 ## `,rfk` (RumexFormatKursiv)
 
 Markierte Textstelle kursiv darstellen
 
+
+
+
+
 ## `,rfl` (RumexFormatListe)
 
 Markierte Zeilen in eine Liste wandeln
 
+
+
+
+
 ## `,rfn` (RumexFormatNummernliste)
 
 Markierte Zeile in eine Nummernliste wandeln
+
+
+
+
 
 ## `,rfb` (RumexFormatBlock)
 
@@ -197,19 +228,30 @@ Markierte Zeile in einen Block wandeln
 
 # Make Befehle
 
-
 ## `,rma` (RumexMakeAll)
 
 Speichert alle offenen Dokumente und erstellt daraus die HTML Datei.
+
+
+
+
 
 ## `,rmb` (RumexMakeBild)
 
 Erstellt die unterschiedlichen Bildgrößen 
 
+
+
+
+
 ## `,rmca` (RumexMakeCleanAll)
 
 Löscht alle html Dateien, alle Bildergrößen und alle xml Dateien.
 beinhaltet die drei Befehle `make bclean`, `make hclean`, `make xclean`.
+
+
+
+
 
 ## `,rmcb` (RumexMakeCleanBilder)
 
@@ -217,13 +259,25 @@ Löscht alle Bildgrößen aus dem `bilder/` Verzeichnis.
 Es werden nur die Bilder gelöscht die von Rumex erstellt wurden
 siehe `make bilder`.
 
+
+
+
+
 ## `,rmch` (RumexMakeCleanHtml)
 
 Löscht alle `.html` Dateien die von Rumex erstellt wurden.
 
+
+
+
+
 ## `,rmcx` (RumexMakeCleanXml)
 
 Löscht alle `.xlm` Dateien die von Rumex erstellt wurden.
+
+
+
+
 
 
 ## `,rmcf8` (RumexMakeCleanF8htm)
@@ -235,17 +289,32 @@ siehe
 erstellt wurden.
 
 
+
+
+
+
 ## `,rmh` (RumexMakeHtml)
 
 Erstellt die `.html` Dateien.
+
+
+
+
 
 ## `,rmi` (RumexMakeIndex)
 
 Erstellt die index Datei.
 
+
+
+
+
 ## `,rmm` (RumexMakesiteMap)
 
 Erstellt die sitemap Datei.
+
+
+
 
 
 ## `,rmo` (RumexMakeOnline)
@@ -253,9 +322,16 @@ Erstellt die sitemap Datei.
 Speichert alle Dateien und stellt diese online.
 
 
+
+
+
 ## `,rmr` (RumexMakeRss)
 
 Erstellt die rss Datei.
+
+
+
+
 
 ## `,rms` (RumexMakeSuche)
 
@@ -268,9 +344,16 @@ die Suche verwendet werden soll.
 
 Zeigt eine Vorschau der Seite der Datei `file:///` im Standardbrowser.
 
+
+
+
 ## `,rsw` (RumexShowWww)
 
 Zeigt eine Vorschau der Seite **Online** im Standardbrowser.
+
+
+
+
 
 ## `,rsl` (RumexShowLocal)
 
@@ -288,9 +371,17 @@ Rechner der Apache installiert und entsprechend eingerichtet ist.
 Öffnet das Unterverzeichnis `.rx` in einem neuen VimTab Fenster.
 Keine Ahnung warum ich diese Kurztaste so benannt habe.
 
+
+
+
+
 ## `,ros` (RumexOpenStart)
 
 Öffnet die `start.rx0s` in einen neuen VIM Tab Fenster.
+
+
+
+
 
 ## `,ror` (RumexOpenRss)
 

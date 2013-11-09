@@ -4,7 +4,7 @@
   <meta charset="utf-8">
 
 <!-- rumex Version -->
-<meta name="generator" content="rumex 0.8.1.4">
+<meta name="generator" content="rumex 0.8.1.7">
 
 <!-- rumex Suchmaschine -->
 <meta name="robots" content="all">
@@ -33,7 +33,7 @@
 <script type='text/javascript' src='rxtpl/js/weblog.js'></script>
 
 <!-- rumex RSS -->
-<link rel="alternate" type="application/rss+xml" title="Neuigkeiten von rumex Baukasten" href="rss.xml" />
+<link rel="alternate" type="application/rss+xml" title="Neuigkeiten von rumex Baukasten" href="" />
 
 <!-- rumex CSS -->
 <link rel="stylesheet" type="text/css" href="rxtpl/css/all.css" media="all" />
@@ -143,18 +143,16 @@ TEXT DER SEITE
 
 &lt;!-- vim: set ft=pandoc: --&gt;</code></pre>
 <h2 id="rnn-rumexneuenachricht"><a href="#rnn-rumexneuenachricht"><code>,rnn</code> (RumexNeueNachricht)</a></h2>
-<p>Erstellt einen neuen News Eintrag. Diese Kurztaste macht eigentlich nur in der Datei <code>rss.rx0x</code> Sinn. Der Eintrag hinter Datum wird von Rumex gesetzt, ist also immer die aktuelle Systemzeit beim ausführen von <code>,rnn</code>.</p>
-<p><strong>So schaut’s aus</strong></p>
-<pre><code> # Neue Nachricht{.nn1}
+<p>Erstellt einen neuen News Eintrag. Diese Kurztaste macht eigentlich nur in der Datei <code>rss.rx0x</code> Sinn. Das Datum hinter dem Titel, Überschrift 1, wird von Rumex gesetzt, ist also immer die aktuelle Systemzeit beim ausführen von <code>,rnn</code>.</p>
+<pre><code> # Neue Nachricht &lt;!-- 2013/11/10 00:30 --&gt;
 
 &lt;!--
-| Link: http://www.it-bayer.de/rumex/
-| Autor: IT-Bayer
-| Kategorie: Neues
-| Datum: Fri, 06 Sep 2013 08:08:10 +0200
+!&gt; Link: http://www.it-bayer.de/rumex/
+!&gt; Autor: IT-Bayer
+!&gt; Kategorie: Neues
 --&gt;
 
-Ab hier geht die neue Nachricht los.</code></pre>
+Ab hier geht die neuen Nachricht los.</code></pre>
 <h2 id="rwl-rumexweiterleitung"><a href="#rwl-rumexweiterleitung"><code>,rwl</code> (RumexWeiterLeitung)</a></h2>
 <p>Erstellt einen neue Weiterleitungsseite.</p>
 <p><strong>So schaut’s aus</strong></p>
