@@ -93,23 +93,30 @@ header, nav, #seite {
 /* Navigation Fuss */
 
 #fussnav {
-	background-color: #F2F2F2;
+	background-color: #CF0000;
 	border: 1px solid #A0A0A0;
 	border-radius: 24px 0 24px 0;
 	bottom: 4px;
-	box-shadow: 4px 4px 4px gray;
+	box-shadow: 4px 4px 4px #808080;
 	font-size: 0.7em;
 	left: 4px;
 	min-width: 56px;
-/* ausgeschaltet, macht sich in der Fusszeile nicht so gut
- * opacity: 0.5;
- */
-	padding: 8px 8px 16px 2px;
+	opacity: 0.8;
+	padding: 8px 8px 16px 8px;
 	position: fixed;
 	text-align: right;
 	z-index: 100;
 }
 
+#fussnav > a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#fussnav > a:hover {
+    color: #FFFF00;
+    text-decoration: underline;
+}
 
 /* Copyleft nach rechts verschieben so dass 
  * fussnav den Bereich nicht überdeckt */
