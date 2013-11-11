@@ -55,7 +55,7 @@ p, ul, dd, div.weblog {
 
 
 /* ----------------------------------------------
- * Überschriften allgemein die Erst3
+ * Überschriften allgemein die Erste
  */
 #seite h1,
 #seite h1 a {
@@ -161,6 +161,9 @@ td.lineNumbers pre {
 	background-color: #fff;
 }
 
+
+
+
 /* ---------------------------------------------- 
  * Quellcode im Text 
  */
@@ -182,6 +185,8 @@ dd * code,
 }
 
 
+
+
 /* ----------------------------------------------
  * Wenn in Definitionslisten Quellcode eingebaut wird,
  * wird dieser durch pandoc mit <pre><code> geformt.
@@ -191,6 +196,21 @@ dd * code,
  */
 pre > code {
 	border: none !important;
+}
+
+
+
+
+/* ----------------------------------------------
+ * Durchgestrichene Texte mit ~~TEXT~~
+ * werden mit opacity abgeblendet.
+ * opacity wird deshalb verwendet da hier die
+ * Farbgebung, von z.B. Links, auch abgeblendet wird,
+ * die eigentliche Farbe aber erhalten bleibt.
+ */
+
+del {
+	opacity: 0.4;
 }
 
 
