@@ -13,7 +13,7 @@
 Die RSS Feed Funktion wurde neu erstellt.
 Dadurch muss aber der Aufbau der Quell Datei angepasst werden.
 
-### Programmbeschreibung pod2text
+### Programmbeschreibung aus pod2text
 
 #### rx2rss
 
@@ -69,6 +69,8 @@ Beispiel
 Die Zeilen müssen am Anfang der Datei stehen.
 
 
+<!-- schnipp -->
+
 ## V0.8.1.2
 
 Kleine Änderungen in der main.mk Datei.
@@ -82,7 +84,6 @@ Beispiel:
 
 reicht. Alle Pfade und Parameter werden automatisch gesetzt.
 
-<!-- schnipp -->
 
 
 

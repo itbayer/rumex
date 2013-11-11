@@ -317,7 +317,7 @@ soll dieser Beitrag zeigen.
 [Historie](historie.html)
 ======================================================
 
-<p class="datum">Letzte Bearbeitung: 2013-11-08</p>
+<p class="datum">Letzte Bearbeitung: 2013-11-11</p>
 
 
 ## V0.8.1.7
@@ -325,7 +325,7 @@ soll dieser Beitrag zeigen.
 Die RSS Feed Funktion wurde neu erstellt.
 Dadurch muss aber der Aufbau der Quell Datei angepasst werden.
 
-### Programmbeschreibung pod2text
+### Programmbeschreibung aus pod2text
 
 #### rx2rss
 
@@ -380,19 +380,6 @@ Beispiel
 
 Die Zeilen müssen am Anfang der Datei stehen.
 
-
-## V0.8.1.2
-
-Kleine Änderungen in der main.mk Datei.
-Die vim Startdateien rumex-gvim, rumex-vim, rumex-tilda
-können nun als Sym. Link realisiert werden.
-Eine Anpassung der Dateien ist nicht mehr nötig.
-
-Beispiel:
-
-	ln -s /home/user/rumex/.rumex/bin/rumex-gvim.sh meinehp-gvim
-
-reicht. Alle Pfade und Parameter werden automatisch gesetzt.
 
 [... Seite öffnen](historie.html)
 
