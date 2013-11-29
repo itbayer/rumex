@@ -191,7 +191,6 @@ so von der git Verwaltung ausgenommen werden.
 Zwar werden diese Dateien im lokalen Arbeitsverzeichnis gespeichert
 aber nicht über den Befehl `make online` hoch geladen.
 
-
 `.htm` Dateien im `.rx` Verzeichnis aufräumen
 ---------------------------------------------
 

@@ -29,7 +29,7 @@ code > span.al { color: #ff0000; font-weight: bold; }
 code > span.fu { color: #06287e; }
 code > span.er { color: #ff0000; font-weight: bold; }
   </style>
-  <link href="data:text/css,%2F%2A%20gvim%5Ff8%2Ecss%20%2A%2F%0A%0Aheader%20%7B%0A%09text%2Dalign%3A%20center%3B%0A%09border%2Dbottom%3A%201px%20solid%20silver%3B%0A%7D%0A%0Anav%23TOC%20%7B%0A%09border%2Dbottom%3A%201px%20solid%20silver%3B%0A%09font%2Dsize%3A%200%2E8em%3B%0A%7D%20%0A%0Asection%2Efootnotes%20%7B%0A%09color%3A%20gray%3B%0A%09font%2Dsize%3A%200%2E8em%3B%0A%09margin%2Dtop%3A%204em%3B%0A%7D%0A%0Asection%2Efootnotes%20hr%20%7B%0A%09border%3A%20none%3B%0A%09border%2Dtop%3A%201px%20solid%20silver%3B%0A%09margin%2Dleft%3A%200%3B%0A%09width%3A%2040%25%3B%0A%7D%0A%0A%2F%2A%20Umformatieren%20der%20%C3%9Cberschriften%20%2A%2F%0A%0Ah1%3Anth%2Dof%2Dtype%28n%2B2%29%20%7B%0A%20%20%20%20margin%2Dtop%3A%204em%3B%0A%7D%0A%0A%0Ah1%20a%2C%0Ah2%20a%2C%0Ah3%20a%2C%0Ah4%20a%2C%0Ah5%20a%2C%0Ah6%20a%20%7B%0A%20%20%20%20text%2Ddecoration%3A%20none%3B%0A%09color%3A%20%23000%3B%0A%7D%0A%0A" rel="stylesheet">
+  <link href="data:text/css,%2F%2A%20gvim%5Ff8%2Ecss%20%2A%2F%0A%0Aheader%20%7B%0A%09text%2Dalign%3A%20center%3B%0A%09border%2Dbottom%3A%201px%20solid%20silver%3B%0A%7D%0A%0Anav%23TOC%20%7B%0A%09border%2Dbottom%3A%201px%20solid%20silver%3B%0A%09font%2Dsize%3A%200%2E8em%3B%0A%7D%20%0A%0A%0Asection%2Efootnotes%20%7B%0A%09color%3A%20gray%3B%0A%09font%2Dsize%3A%200%2E8em%3B%0A%09margin%2Dtop%3A%204em%3B%0A%7D%0A%0Asection%2Efootnotes%20hr%20%7B%0A%09border%3A%20none%3B%0A%09border%2Dtop%3A%201px%20solid%20silver%3B%0A%09margin%2Dleft%3A%200%3B%0A%09width%3A%2040%25%3B%0A%7D%0A%0A%2F%2A%20%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%0A%20%20%20%20Umformatieren%20der%20%C3%9Cberschriften%20%0A%20%20%20%20%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%20%2A%2F%0A%0A%2F%2A%20Ab%20der%20zweiten%20h1%20%C3%9Cberschrift%20bekommt%20diese%0A%20%20%20%20einen%20gr%C3%B6%C3%9Feren%20Abstand%2E%0A%2A%2F%0A%0Ah1%3Anth%2Dof%2Dtype%28n%2B2%29%20%7B%0A%20%20%20%20margin%2Dtop%3A%204em%3B%0A%7D%0A%0A%2F%2A%20Der%20Link%20der%20%C3%9Cberschriften%20sollte%20%0A%20%20%20%20nicht%20unterstrichen%20%0A%20%20%20%20und%20in%20schwarz%20dargestellt%20werden%2E%20%20%2A%2F%0Ah1%20a%2C%0Ah2%20a%2C%0Ah3%20a%2C%0Ah4%20a%2C%0Ah5%20a%2C%0Ah6%20a%20%7B%0A%20%20%20%20text%2Ddecoration%3A%20none%3B%0A%20%20%20%20color%3A%20%23000%3B%0A%7D%0A" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -45,6 +45,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><a href="#formatierung-erweitern">Formatierung erweitern</a></li>
 <li><a href="#rumex">Rumex?</a><ul>
 <li><a href="#warum-.htm-verwendet-wird">Warum <code>.htm</code> verwendet wird</a></li>
+<li><a href="#htm-dateien-im-.rx-verzeichnis-aufräumen"><code>.htm</code> Dateien im <code>.rx</code> Verzeichnis aufräumen</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -142,8 +143,15 @@ map &lt;F8&gt; :w&lt;cr&gt;:!pandoc -f markdown -t html5 --toc --self-contained 
 <p>In Rumex kann man diese Funktion natürlich auch verwenden. Am besten erstellt man sich dazu ein eigenes Unterverzeichnis und dort die Datei <code>index.md</code> mit den Texten.</p>
 <h2 id="warum-.htm-verwendet-wird"><a href="#warum-.htm-verwendet-wird">Warum <code>.htm</code> verwendet wird</a></h2>
 <p>Um nicht mit der git Verwaltung, innerhalb Rumex / Unterverzeichnis <code>.rx</code>, in Konflikt zu kommen wurde für die HTML Dateien, die per F8 erstellt werden, die Endung <code>.htm</code> verwendet. Durch einen Eintrag in der Datei <code>.gitignore</code> können diese so von der git Verwaltung ausgenommen werden.</p>
-<pre><code>.rx/*.htm</code></pre>
+<pre><code>.rx/*.htm
+.rx/*.pdf</code></pre>
 <p>Zwar werden diese Dateien im lokalen Arbeitsverzeichnis gespeichert aber nicht über den Befehl <code>make online</code> hoch geladen.</p>
+<h2 id="htm-dateien-im-.rx-verzeichnis-aufräumen"><a href="#htm-dateien-im-.rx-verzeichnis-aufräumen"><code>.htm</code> Dateien im <code>.rx</code> Verzeichnis aufräumen</a></h2>
+<p>Um die evtl. angefallenen <code>.htm</code> Dateien, die sich im <code>.rx</code> Verzeichnis befinden, löschen zu können gibt es auch einen entsprechenden make Befehl unter Rumex. Mit</p>
+<pre><code>make f8clean</code></pre>
+<p>werden alle <code>.htm</code> Dateien im <code>.rx</code> Verzeichnis gelöscht. Dieser Befehl wurde auch in</p>
+<pre><code>make clean</code></pre>
+<p>aufgenommen.</p>
 <hr />
 <p>Die PDF Datei dieser Beschreibung kann man sich <a href="index.pdf">hier</a> ansehen. Die Markdown Quelldatei kann man sich <a href="index.md">hier</a> holen.</p>
 <hr />
