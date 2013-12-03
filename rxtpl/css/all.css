@@ -108,6 +108,23 @@ p, ul, dd, div.weblog {
 	color: #444;
 }
 
+/* ----------------------------------------------
+ * Link für die Weblog Seite
+ */
+#seite h4.webloglink {
+
+	border-top: 1px dotted silver;
+	margin: 2.5em 0em 1em 0em;
+	padding-top: 4px;
+
+}
+
+#seite h4.webloglink a {
+
+	color: #CF0000;
+	text-decoration: underline;
+}
+
 /* ---------------------------------------------- 
  * Zitate 
  */

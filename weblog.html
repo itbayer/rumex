@@ -4,15 +4,14 @@
   <meta charset="utf-8">
 
 <!-- rumex Version -->
-<meta name="generator" content="rumex 0.8.1.4">
+<meta name="generator" content="rumex 0.8.1.8">
 
 <!-- rumex Suchmaschine -->
 <meta name="robots" content="all">
 
 <link rel="icon" type="image/gif" href="favicon.gif" />
 
-  <meta name="author" content="Bloggen mit Rumex">
-  <title>Weblog</title>
+  <title>WebLog</title>
   <style type="text/css">code{white-space: pre;}</style>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -34,7 +33,7 @@
 <script type='text/javascript' src='rxtpl/js/weblog.js'></script>
 
 <!-- rumex RSS -->
-<link rel="alternate" type="application/rss+xml" title="Neuigkeiten von rumex Baukasten" href="rss.xml" />
+<link rel="alternate" type="application/rss+xml" title="Neuigkeiten von rumex Baukasten" href="" />
 
 <!-- rumex CSS -->
 <link rel="stylesheet" type="text/css" href="rxtpl/css/all.css" media="all" />
@@ -55,117 +54,138 @@
 	<a title="zur Startseite" href="index.html">zur Startseite</a>
 </div>
 <header>
-<h1 class="title"><a title="zur Startseite" href="index.html">Weblog</a></h1>
-<h2 class="author"><a title="zur Startseite" href="index.html">Bloggen mit Rumex</a></h2>
+<h1 class="title"><a title="zur Startseite" href="index.html">WebLog</a></h1>
 </header>
 <div id="seite">
 <!--
 
-[Weblog](weblog.html)
-=======================================================
-
 -->
 
-<p>Diese kleine Erweiterung soll eine Art Blog innerhalb Rumex ermöglichen. Besser gesagt ist diese Erweiterung eher ein Weblog Funktion.</p>
-<p>Der Unterschied zu den eigentlichen Rumex Seiten ist nicht sehr groß. Folgt nach einer <code>h1</code> Überschrift ein <code>div</code> Tag mit der <code>weblog</code> Klasse wird der Text innerhalb dieses <code>div</code> Tags ausgeblendet und mit dem Schriftzug <code>... weiter lesen</code> ersetzt. Die Überschrift und der Text <code>... weiter lesen</code> bekommen eine Link Eigenschaft die den ausgeblendeten Text bei Anforderung einblendet.</p>
-<p>Diese Funktion kann auch in den normalen Seiten verwendet werden.</p>
+<h1 id="rumex-weblog">Rumex WebLog</h1>
+<p><em>Am 03.12.2013 um 12:25 schrieb IT-Bayer</em></p>
+<p>Rumex hat eine neue Seite bekommen <a href="weblog.html">weblog.rx0s</a>. Diese Seite dient nun als WebLog auf der Index Seite und ersetzt die alte WebLog Funktion auf der <code>start.rx0s</code>.</p>
+<p>Ich verspreche mir dadurch ein wenig mehr Übersicht auf der index.html.</p>
+<div class="weblog">
+<p>Wie auch die <code>start.rx0s</code> wird die <code>weblog.rx0s</code> in der index.html immer ganz oben gehalten<sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup>. Egal ob ich der Inhalt dieser Seite geändert hat.</p>
+<p>Als Seite für das WebLog kann eine ganz normale <code>.rx0s</code> Seite verwendet werden. Jedoch muss die Überschrift<sup><a href="#fn2" class="footnoteRef" id="fnref2">2</a></sup> der Seite raus genommen werden.</p>
+<p>Das Schlüsselwort <code>schnipp</code> bestimmt ob die WebLog Einträge auch auf der index.html oder nur im Archiv, die eigentliche Seite <a href="weblog.html">weblog.html</a>, angezeigt werden.</p>
+</div>
 <!-- schnipp -->
 
-<h1 id="spalten-in-einem-weblog-abschnitt">Spalten in einem Weblog Abschnitt</h1>
-<p><em>am 10.09.2013 um 08:24 schrieb IT-Bayer</em></p>
-<div class="spn2">
-Eigentlich sollte es funktionieren, die Spaltendarstellung innerhalb eines Weblog Eintrags.
-</div><!-- ENDE .spn2 Darstellung -->
 
+<h1 id="rumex-statische-dateien">Rumex Statische Dateien</h1>
+<p><em>Am 12.10.2013 um 23:18 schrieb IT-Bayer</em></p>
+<p>Auf der Seite <a href="statik/">statik/</a> findet man einen kleine Beschreibung wie man mit pandocs markdown und gvim kleine Beschreibungen in verschiedene Formate wandeln kann.</p>
+<h1 id="rumex-und-pandoc-1.9.4.2">Rumex und pandoc 1.9.4.2</h1>
+<p><em>Am 12.10.2013 um 12:37 schrieb IT-Bayer</em></p>
+<p>pandoc 1.9.4.2 kennt die Option <code>--toc-depth</code> noch nicht. Wer Rumex mit pandoc 1.9.4.2 verwenden will sollte diese Option in der <code>html.mk</code> kommentieren oder die neue Version von pandoc installieren.</p>
 <div class="weblog">
-<div class="spn2">
-Wenn man es aber nicht testet dann kann man es auch nur vermuten.
-</div><!-- ENDE .spn2 Darstellung -->
+<p>Bei meiner Distribution LMDE ist leider nur die Version pandoc 1.9.4.2 enthalten. Die neue Version von pandoc muss also her. Die Installation von pandoc ist dabei nicht viel schwerer als ein Paket unter Debian zu installieren, es dauert nur ein wenig länger. Hier die einzelnen Schritte um pandoc 1.12.0.2 auf meinem T41<sup><a href="#fn3" class="footnoteRef" id="fnref3">3</a></sup> mit LMDE UP7 zu installieren.</p>
+<pre><code>sudo apt-get remove pandoc
+sudo apt-get install cabal-install
+sudo apt-get install alex happy
+cabal update
+cabal install pandoc
+ln -s ~/.cabal/bin/pandoc ~/bin/pandoc
+sudo ln -s /home/sb/.cabal/bin/pandoc /usr/local/bin/pandoc</code></pre>
+<p>Anmerkung: cabal installiert das Programm standardmäßig in Benutzerverzeichnis, Unterverzeichnis <code>.cabal</code> des Benutzers der die Installation gestartet hat.</p>
 </div>
-
-
-<h1 id="kommentare-im-weblog">Kommentare im Weblog</h1>
-<p><em>am 10.09.2013 um 07:52 schrieb IT-Bayer</em></p>
-<p>Kommentare zu den einzelnen Weblog Einträgen geht, Dank moot.it, auch. Jedoch muss man hier ein wenig nacharbeiten. Mit der Kurztaste <code>.rmk</code> wird das Kommentar Makro aufgerufen. Eingefügt wird dieser Block. Der ein wenig nach bearbeitet werden muss.</p>
-<pre><code># Kommentare
-
-&lt;a class=&quot;moot&quot; href=&quot;https://moot.it/i/rumex/blog/weblog&quot;&gt;&lt;/a&gt;</code></pre>
+<h1 id="rumex-auf-einem-host1free.com-server">Rumex auf einem host1free.com Server</h1>
+<p><em>Am 01.10.2013 um 19:14 schrieb IT-Bayer</em></p>
+Heute wurde Rumex auf einem <a href="http://www.host1free.com">host1free.com</a> Server installiert. Eine weitere Testumgebung für Rumex.
 <div class="weblog">
-
-<p>Rumex verwendet den Dateinamen zur Kennzeichnung der einzelnen Kommentar Abschnitte. Diese Kennzeichnung muss für den Weblog Abschnitt erweitert werden. Einfach den letzten Eintrag um ein Schlagwort erweitern.</p>
-<pre><code>&lt;a class=&quot;moot&quot; href=&quot;https://moot.it/i/rumex/blog/weblog_kommentar-im-weblog&quot;&gt;&lt;/a&gt;</code></pre>
-<p>Sinnvoll wäre es auch die Ebenen der Überschrift zu verändern. Die Kommentar Funktion wird als <code>H1</code> eingebaut. Diese wird mit einer Linie abgegrenzt und hat einen größeren Abstand, es scheint als ob ein neuer Beitrag beginnt. Ebenen 2 oder 3 macht sich da schon besser.</p>
-<p>Hier noch der geänderte Kommentar Abschnitt und das Ergebnis.</p>
-<pre><code>## Kommentare
-
-&lt;a class=&quot;moot&quot; href=&quot;https://moot.it/i/rumex/blog/weblog_kommentar-im-weblog&quot;&gt;&lt;/a&gt;</code></pre>
-<hr />
-<h2 id="kommentare">Kommentare</h2>
-<p><a class="moot" href="https://moot.it/i/rumex/blog/weblog_kommentar-im-weblog"></a></p>
+<p>Den Server bei <a href="http://www.host1free.com">host1free.com</a> habe ich mir schon vor einiger Zeit<sup><a href="#fn4" class="footnoteRef" id="fnref4">4</a></sup> bestellt. Leider wollte er am Anfang nicht so wie er sollte. Dank des Supports von <em>Joseph</em> ging es dann aber schnell und Rumex konnte eingerichtet werden.</p>
+<p>Erreichbar ist der Server <del>zur Zeit nur unter seiner IP Adresse <a href="http://5.231.70.214">http://5.231.70.214</a></del> unter der URL <a href="http://www.byvs.de">byvs.de</a>. <del>Es wird also noch ein Domainname gebraucht.</del> <del>Mal schauen wie ich das umsetzen.</del></p>
+<p>Die Geschwindigkeit des Server mit seinen <code>128MB RAM</code> ist bei Rumex völlig ausreichend. Muss ja nur <code>HTML</code> Dateien ausliefern.</p>
+<p>Interessant wir noch wie zuverlässig der Server ist.</p>
 </div>
-
-
-
-<h1 id="einen-eintrag-ohne-weiter-lesen.">Einen Eintrag ohne … weiter lesen.</h1>
-<p><em>am 10.09.2013 um 07:50 schrieb IT-Bayer</em></p>
-<p>Will man so einen Eintrag erstellen löscht man einfach die drei Zeilen:</p>
-<pre><code>&lt;div class=&quot;weblog&quot;&gt;
-Text der vorerst ausgeblendet ist.
-&lt;/div&gt;</code></pre>
-<h1 id="rumex-weblog-und-tilda">Rumex Weblog und Tilda</h1>
-<p><em>am 10.09.2013 um 07:28 schrieb IT-Bayer</em></p>
-<p>Mit der <a href="beschreibung.html#homepage-änderung-schnell-und-immer-aktuell">Rumex tilda Erweiterung</a> geht es super schnell Weblog Einträgen zu erstellen.</p>
+<h1 id="rumex-startdateien-einfach-mit-symlinks">Rumex Startdateien einfach mit Symlinks</h1>
+<p><em>Am 20.09.2013 um 07:47 schrieb IT-Bayer</em></p>
+<p>Die Rumex (g)vim Unterstützung <code>rumex-gvim</code>, <code>rumex-vim</code> und auch <code>rumex-tilda</code> können jetzt als symbolischer Link erstellt werden. Die erforderlichen Einstellungen werden aus der <code>.rx/config.mk</code> gelesen.</p>
 <div class="weblog">
-<p>Hier mal ein Beispiel<sup><a href="#fn1" class="footnoteRef" id="fnref1">1</a></sup> wie man einen neuen Weblog Eintrag erstellt.</p>
-<pre><code>&lt;PAUSE&gt;
-,rnb
-DA
-...Überschrift schreiben
-&lt;ESC&gt;
-4j0DA
-...Text schreiben
-&lt;ESC&gt;
-3j0DA
-...Text fertig stellen
-&lt;ESC&gt;
-,rmo
-&lt;PAUSE&gt;</code></pre>
+<p>Die <code>.rx/config.mk</code> hat dazu zwei neuen Parameter bekommen.</p>
+<pre><code> #  Autor für den Weblog Eintrag
+WEBLOGAUTOR = &quot;IT-Bayer&quot;
+
+
+ # Bildname für das Seitenbanner
+SEITENBANNER = &quot;rxtpl/img/rumex.png&quot;</code></pre>
+<p>Diese Parameter werden von den Startdateien eingebunden so dass die einzelnen Bashskripte nicht mehr angepasst werden müssen. Es reicht ein</p>
+<pre><code>ln -s ~/rumex-gh-pages/.rumex/bin/rumex-gvim.sh ~/bin/rumex-gvim</code></pre>
+um die Startdatei für Rumex zu erstellen. Verzeichnisse und Parameter werden beim Starten automatisch ermittelt und gesetzt.
 </div>
-
-
-<h1 id="css-nur-über-javascript">CSS nur über javascript</h1>
-<p><em>am 10.09.2013 um 07:20 schrieb IT-Bayer</em></p>
-<p>Alle CSS Anweisungen die, die weblog Funktion benötigt werden per javascript eingebaut.</p>
+<h1 id="rumex-ftp-unterstüzung-jetzt-mit-sitecopy">Rumex FTP Unterstüzung jetzt mit sitecopy</h1>
+<p><em>Am 17.09.2013 um 17:24 schrieb IT-Bayer</em></p>
+<p>Das Programm <code>wput</code> wurde durch <code>sitecopy</code> ersetzt.</p>
 <div class="weblog">
-Somit soll sichergestellt werden dass die Texte innerhalb der weblog Funktion auch angezeigt werden wenn javascript ausgeschaltet ist.
+Die FTP Unterstützung mittels <code>wput</code> hat nie sauber funktioniert. Genauer gesagt ein Update der vorhandenen Seiten. Mit <code>sitecopy</code> scheint es jetzt besser zu funktionieren. Die beiden FTP Test Installationen kann man sich <a href="http://rumex.html-5.me/">hier</a> und <a href="http://localstuff.zxq.net/">hier</a> ansehen.
 </div>
-
-
-<h1 id="steuerung-des-weblogs">Steuerung des Weblogs</h1>
-<p><em>am 10.09.2013 um 07:18 schrieb IT-Bayer</em></p>
-<p>Die Steuerung übernimmt ein javascript das auf das Framework jquery aufsetzt.</p>
+<h1 id="rumex-sendet-nachrichten-direkt-an-twitter">Rumex sendet Nachrichten direkt an twitter</h1>
+<p><em>Am 11.09.2013 um 12:30 schrieb IT-Bayer</em></p>
+<p>Dank dem Programm <a href="http://www.floodgap.com/software/ttytter/">TTYtter for Perl</a> ist es nun möglich Texte aus Rumex direkt an <a href="http://www.twitter.com">Twitter</a> zu senden.</p>
 <div class="weblog">
-Da jquery für die moot.it Funktion benötigt wird, wurde auch die weblog Funktion mit jquery realisiert.
+<p>Eigentlich ist es nicht Rumex der die Funktion zur Verfügung stellt. In der Rumex Konfiguration wurde nur die vim Kurztaste <code>,rtt</code> (RumexToTwitter) definiert. Wird eine Zeile markiert kann diese mit der Kurztaste <code>,rtt</code> an TTYtter weiterleitet werden. Nach der Weiterleitung wird die Zeile entfernt. Eine andere Variante die, die Zeile stehen lässt, findet man kommentiert in der <code>.rumex/bin/rumex.vim</code> Datei.</p>
+Auch eine Link Verkürzung mit <a href="http://is.gd">http://is.gd</a> kann Rumex jetzt anbieten, Kurztasten <code>,rkl</code>. Der Link für Rumex schaut dann so aus <a href="http://is.gd/az0x2a">http://is.gd/az0x2a</a>. Eigentlich ist es aber TTYtter der Rumex diese Erweiterung bietet.
 </div>
-
-
-<h1 id="start-der-weblog-testseite">Start der Weblog Testseite</h1>
-<p><em>am 10.09.2013 um 07:14 schrieb IT-Bayer</em></p>
-<p>Diese Seite ist der Sandkasten der Rumex Weblog Funktion.</p>
+<h1 id="datei-namen-umbenennen">Datei Namen umbenennen</h1>
+<p><em>Am 10.09.2013 um 18:45 schrieb IT-Bayer</em></p>
+<p>So wie es scheint werde ich ein paar Dateien umbenennen.</p>
 <div class="weblog">
-<p>Im Grunde ist die Weblogfunktion nur ein kleines vim Makro das einen vor definierte Textstruktur in das Dokumente einfügt.</p>
-Dieses Makro kann über die Kurztaste <code>,rnb</code> aufgerufen werden.
+<p>Irgendwie passen mir die Name einiger Dateien nicht. Betroffen sind aber nur Namen im <code>.rumex/bin</code> Verzeichnis. Es wird wohl so werden das ich ein paar Dateien einen andern Namen verpasse.</p>
+<ul>
+<li><code>rumex.sh</code> wird <code>rumex-gvim.sh</code></li>
+<li><code>rxt-rumex.sh</code> wird <code>rumex-tilda.sh</code></li>
+<li><code>rumex.tilda.sh</code> wird <code>rumex.vim.sh</code></li>
+</ul>
+<p>Durch die tilda Erweiterung gefallen mir die alten Namen nicht mehr bzw. sind für mich nicht mehr schlüssig.</p>
+<p>Die Datei <code>update_robots.txt.pl</code> hat es auch erwischt und heißt jetzt <code>robots.txt_update.pl</code>. Aber das hat einen anderen Grund.</p>
 </div>
-
-
-
+<h1 id="aus-beta-wird-wieder-alpha">Aus Beta wird wieder Alpha</h1>
+<p><em>Am 10.09.2013 um 11:33 schrieb IT-Bayer</em></p>
+<p>Eigentlich hat ja der beta Test von Rumex begonnen. Durch die neuen Erweiterungen breche ich vorerst den Beta Test ab.</p>
+<div class="weblog">
+Die neuen Erweiterungen <code>tilda</code> und <code>weblog</code> erfordern noch ein paar Grundlegende Anpassungen darum habe ich mich entschlossen den Beta Test abzubrechen.
+</div>
+<h1 id="weblog-layout-auf-der-startseite">WebLog Layout auf der Startseite</h1>
+<p><em>Am 10.09.2013 um 11:27 schrieb IT-Bayer</em></p>
+<p>Das Layout der Weblog Einträge auf der Startseite schaut nicht so schön aus. Hier muss noch nachgebessert werden.</p>
+<div class="weblog">
+<p>Der Eintrag Datum Autor braucht noch einen grau Ton.</p>
+<p>Bei der Übersicht der Einzelseiten gefällt mir auf einmal die Datumsangabe nicht mehr. Die sollte jetzt unter der Überschrift stehen und evtl. mit dem Schlüsselwort <del><code>Stand:</code></del> <code>Letzte Bearbeitung:</code> gekennzeichnet werden.</p>
+</div>
+<h1 id="kurznachrichten">Kurznachrichten</h1>
+<p><em>Am 10.09.2013 um 11:19 schrieb IT-Bayer</em></p>
+<p>Die alten Kurznachrichten, die man auf der Startseite gefunden hat, wurden in einen Weblog Block verlegt.</p>
+<div class="weblog">
+<dl>
+<dt>Rumex Beta Tester</dt>
+<dd><p>Die Seite <a href="http://www.hochfelder.de">hochfelder.de</a> hat auch auf Rumex umgestellt und beteiligt sich somit am Beta Test.</p>
+</dd>
+<dt>Twitter</dt>
+<dd><p><a href="https://twitter.com/itbayer"><img src="bilder/twitter_100_.png" alt="Twitter" /></a> Rumex <a href="https://twitter.com/itbayer">zwitschert</a> seine Änderungen jetzt ins Netz.</p>
+</dd>
+<dt>Beta Phase</dt>
+<dd><p><a href="rss.html#Rumex%20geht%20in%20die%20Beta%20Phase">Rumex geht in die Beta Phase</a></p>
+</dd>
+</dl>
+</div>
+<h1 id="weblog-auf-der-startseite">WebLog auf der Startseite</h1>
+<p><em>Am 10.09.2013 um 11:12 schrieb IT-Bayer</em></p>
+<p>Da jetzt die neue <a href="weblog.html">Weblog</a> Funktion eingebaut wurde, wird diese auch auf der Startseite getestet.</p>
+<div class="weblog">
+<p>Mit der Weblog Funktion von Rumex können kleine Nachrichten auf der Seite erstellt werden. Diese Nachrichten werden dabei mit Datum, Uhrzeit und Autor versehen.</p>
+Wie sich diese neue Funktion auf der Startseite macht soll dieser Beitrag zeigen.
+</div>
 <!-- vim: set ft=pandoc: -->
 
 
 <section class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Besser gesagt sieht man hier die Tastenfolge. Die tilda Erweiterung liegt bei mir auf der Taste <code>&lt;PAUSE&gt;</code>.<a href="#fnref1">↩</a></p></li>
+<li id="fn1"><p>Genauer gesagt wird die <code>weblog.rx0s</code> immer nach der <code>start.rx0s</code> eingebaut.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>Gemeint ist hier die Überschrift mit dem Link zur Seite die am Anfang der Seite in den Kommentar Klammern steht. Diese können übrigens drin bleiben.<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>Der IBM ThinkPad T41 ist mittlerweile schon 10 Jahre alt. Er wurde von Oktober 2003 bis Dezember 2005 verkauft. Der T41 ist also schon in die Jahr gekommen und ist auch nicht mehr so rasend schnell. Er verrichtet aber seine Arbeiten noch einwandfrei und ist ein Rechner der noch so gebaut wurde wie Rechner sein sollten, robust und zuverlässig.<a href="#fnref3">↩</a></p></li>
+<li id="fn4"><p>Der Server wurde schon Anfang August 2013 freigeschaltet.<a href="#fnref4">↩</a></p></li>
 </ol>
 </section>
 </div>

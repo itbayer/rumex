@@ -30,6 +30,18 @@ C<$start_rx> geändert werden.
 
 my $start_rx = "start.rx0s";
 
+# -----------------------------------------------------
+=head2 weblog.rx0s
+
+
+Der Name dieser Datei, Vorgabe C<weblog.rx0s> kann in der Variable
+C<$weblog_rx> geändert werden.
+
+=cut
+
+
+my $weblog_rx = "weblog.rx0s";
+
 
 # index.rx0x zum schreiben öffne
 open (INDEX, ">index.rx0x");
@@ -65,18 +77,19 @@ print INDEX "\n";
 
 
 # ===================================================
-=head2 Datum der start.rx0s
+=head2 Datum der start.rx0s und weblog.rx0s
 
-Der Inhalt der start.rx0s sollte immer ganz oben stehen
-darum wird das Datum dieser Datei mit touch bei jedem 
+Der Inhalt der start.rx0s bzw. weblog.rx0s sollte immer ganz oben stehen
+darum wird das Datum dieser Dateien mit touch bei jedem 
 Lauf neu gesetzt.
 Somit ist sicher gestellt dass bei einer Seitenänderung
-der Inhalt der C<start.rx0s> immer oben steht.
+der Inhalt der C<start.rx0s> bzw. C<weblog.rx0s>  immer oben steht.
 
-Gesetzt wird das Datum aber nur wenn die Datei start.rx0s vorhanden ist.
+Gesetzt wird das Datum aber nur wenn die Datei start.rx0s bzw. weblog.rx0s vorhanden ist.
 
 =cut
 
+system ("/usr/bin/touch $weblog_rx") if (-e $weblog_rx);
 system ("/usr/bin/touch $start_rx") if (-e $start_rx);
 
 # ----------------------------------------------------------
@@ -159,15 +172,16 @@ index.rx0x aufgenommen.
 
 	# Vortext Abschluss und Link zur eigentlichen Seite setzen ...
 	# .. nicht anzeigen bei start.rx0s.
-	print INDEX "[... Seite öffnen]($htmlname)\n\n" if ($name ne $start_rx);
+	print INDEX "[... Seite anzeigen]($htmlname)\n\n" if ($name ne $start_rx && $name ne $weblog_rx);
 
-	# Schlussstrich setzen, nicht bei start.rx0s.
-	#
-	# raus genommen wegen Layout anpassung
-	# print INDEX "---\n" if ($name ne $start_rx);
-	
 	print INDEX "\n";
 	print INDEX "</div>\n";
+	
+	# Die Weblog Datei bekommt, zum öffnen, einen anderen Link.
+	# Dieser Link muss nach dem DIV Tag gesetzt erden da sonst die Klasse
+	# {.webloglink} von pandoc nicht gesetzt wird.
+	print INDEX "#### [... ältere Weblog Einträge anzeigen]($htmlname) {.webloglink}\n\n" if($name eq $weblog_rx);
+
 	print INDEX "\n\n\n";
 
 } # ENDE :: Dateien verarbeiten
