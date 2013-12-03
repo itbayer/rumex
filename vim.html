@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+<!-- rumex Version -->
+<meta name="generator" content="rumex 0.8.1.7">
+
+<!-- rumex Suchmaschine -->
+<meta name="robots" content="all">
+
+<link rel="icon" type="image/gif" href="favicon.gif" />
+
+  <title>vim</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+<!-- rumex moot.it -->
+<link rel="stylesheet" href="https://cdn.moot.it/1/moot.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+<script src="https://cdn.moot.it/1/moot.de.min.js"></script>
+
+<!-- rumex JavaScript Suche -->
+<script type="text/javascript" src="rxtpl/js/rumexsuche_config.js"></script>
+<script type="text/javascript" src="rxtpl/js/rumexsuche.js"></script>
+
+<!-- rumex JavaScript Suchwort markieren -->
+<script type='text/javascript' src='rxtpl/js/rumexmarker.js'></script>
+
+<!-- rumex weblog @todo: Dateiname über config.mk ansprechen -->
+<script type='text/javascript' src='rxtpl/js/weblog.js'></script>
+
+<!-- rumex RSS -->
+<link rel="alternate" type="application/rss+xml" title="Neuigkeiten von rumex Baukasten" href="" />
+
+<!-- rumex CSS -->
+<link rel="stylesheet" type="text/css" href="rxtpl/css/all.css" media="all" />
+<link rel="stylesheet" type="text/css" href="rxtpl/css/screen.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="rxtpl/css/print.css" media="print" />
+
+<!-- Bild für das Seitenbanner -->
+<style type="text/css" media="screen">
+	#kopf { background-image: url("rxtpl/img/rumex.png") !important; }
+</style>
+
+
+  <!-- header.html -->
+</head>
+<body>
+<!-- kopf.html -->
+<div id="kopf">
+	<a title="zur Startseite" href="index.html">zur Startseite</a>
+</div>
+<header>
+<h1 class="title"><a title="zur Startseite" href="index.html">vim</a></h1>
+</header>
+<div id="seite">
+<!--
+
+[vim](vim.html)
+=======================================================
+
+-->
+
+<p>Um die Texte in Rumex zu schreiben verwende ich vim. Vim ist meiner Ansicht ein super Editor. Darum gibt es für Rumex auch gleich drei Erweiterungen</p>
+<ol type="1">
+<li>rumex-gvim</li>
+<li>rumex-vim</li>
+<li>rumex-tilda</li>
+</ol>
+<p>Was mit vim noch alles möglich ist findet man auf dieser Seite.</p>
+<!-- schnipp -->
+
+<h1 id="rumex-tipps">Rumex Tipps</h1>
+<h2 id="rumex-tila-oder-rumex-vim">Rumex Tila oder Rumex vim</h2>
+<p>Beim verwenden der Rumex Tilda Erweiterung sollte man den Befehl <code>make show</code> mit der Erweiterung <code>&amp;</code> also <code>make show&amp;</code> starten das sonst die vim Konsole nicht freigegeben wird.</p>
+<h1 id="erweiterungen">Erweiterungen</h1>
+<p>Für vim (gvim) gibt es ein paar nützliche Erweiterungen.</p>
+<h2 id="vifm.vim">vifm.vim</h2>
+<p>Eine interessante Erweiterung ist vifm.vim. Mit der Erweiterung wird der Browser <code>vifm</code> in vim eingebunden. Natürlich muss <code>vifm</code> installiert sein.</p>
+<pre><code>sudo apt-get install vifm</code></pre>
+<p>Die Erweiterung findet man auf github.com, <a href="https://github.com/istib/vifm.vim">https://github.com/istib/vifm.vim</a>.</p>
+<p>Nach der Installation und dem Neustart vom vim stehen 5 neue Befehle zur Verfügung.</p>
+<dl>
+<dt>EditVifm</dt>
+<dd><p>Öffnet die ausgewählte Datei im aktuellen Fenster</p>
+</dd>
+<dt>SplitVifm</dt>
+<dd><p>Teilt das aktuelle Fenster und öffnet darin die ausgewählte Datei.</p>
+</dd>
+<dt>VsplitVifm</dt>
+<dd><p>Teilt das aktuelle Fenster vertikal und öffnet darin die ausgewählte Datei.</p>
+</dd>
+<dt>TabVifm</dt>
+<dd><p>Öffnet einen neuen Tab und darin die ausgewählte Datei.</p>
+</dd>
+<dt>DiffVifm</dt>
+<dd><p>Vergleicht die aktuelle Datei mit der ausgewählten.</p>
+</dd>
+</dl>
+<h3 id="vifm">vifm</h3>
+<p>Noch ein paar Zeilen zu vifm.<br />Vifm ist eine Dateiverwaltung für die Konsole die sich wie <code>vi</code> bedienen lässt.</p>
+<p>Mit den Tasten <code>j</code> und <code>k</code> kann man die Auswahl nach oben bzw. unten bewegen. Die Tasten <code>h</code> und <code>l</code> sind für ein Verzeichnis höher bzw. ein Verzeichnis tiefer oder wenn es sich um eine Datei handelt für die Auswahl zuständig.</p>
+<p>Mit der Tab Taste kann man zwischen den Fenster wechseln und mit <code>zo</code> bekommt man die dot.Dateien zu sehen. <code>zm</code> lässt diese wieder verschwinden.</p>
+<p>Mit <code>v</code> kann man mehrere Einträge markieren.</p>
+<p>Mit <code>dd</code> werden Dateien ausgeschnitten oder mit <code>yy</code> kopiert und mit <code>d</code> wieder eingebaut.</p>
+<p>Eine Übersicht der aller Tasten bekommt man mit <code>:help</code>.</p>
+<h3 id="gvim-und-vifm.vim">gvim und vifm.vim</h3>
+<p>Mit gvim funktioniert, zumindest bei mir, vifm.vim nicht so gut. Nach dem Start wird beim Navigieren der Bildschirm nicht sauber aufgebaut. Abhilfe schafft der Befehl <code>:sp</code> oder <code>:on</code> so dass der Bildschirm neu eingeteilt wird. Man kann damit leben ist aber eine UnSchönheit.</p>
+<p>Eine andere Möglichkeit Dateien einfach auszuwählen ist das FuzzyFinder Plugin. Das Plugin kann man mit dem Befehl</p>
+<pre><code>wget -O /tmp/vim-fuzzyfinder.zip http://www.vim.org/scripts/download_script.php?src_id=10588</code></pre>
+<p>holen und anschließend installieren. Um den FuzzyFinder Befehl <code>FuzzyFinderFile</code> Befehl an eine Tasten zu binden kann man sich nachfolgende Zeile in die <code>.vimrc</code> Datei einbauen.</p>
+<pre><code>map &lt;F12&gt; :FuzzyFinderFile &lt;CR&gt;</code></pre>
+<!-- vim: set ft=pandoc: -->
+</div>
+<div id="fuss">
+	<p class="copyleft">
+	Copyright(c) 2013,
+	Stefan Blechschmidt.
+	Texte und Bilder dieser Seite sind frei im Sinne der
+	<a href="http://creativecommons.org/licenses/by-sa/3.0/deed.de">CC BY-SA 3.0</a>
+	Lizenz.
+	Texte, Bilder und Zitate aus anderen Quellen sind von dieser Lizenz
+	ausgenommen. Kommentare und Anmerkungen senden Sie bitte an 
+	<!-- E-Mail Adresse codiert -->
+	<a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#x73;&#98;&#64;&#x69;&#116;&#x2d;&#98;&#x61;&#x79;&#x65;&#114;&#46;&#100;&#x65;">&#x73;&#98;&#32;&#x41;&#84;&#32;&#x69;&#116;&#x2d;&#98;&#x61;&#x79;&#x65;&#114;&#32;&#80;&#x55;&#78;&#x4b;&#84;&#32;&#100;&#x65;</a>.
+	</p>
+	<p class="links">
+	<a href="http://www.github.com">hosted on github.com</a>
+
+	&nbsp;&nbsp;|&nbsp;&nbsp;
+	<a href="suche.html">Suche</a>
+
+	&nbsp;&nbsp;|&nbsp;&nbsp;
+	<a href="forum.html">Forum</a>
+
+	&nbsp;&nbsp;|&nbsp;&nbsp;
+	<a href="rss.xml">RSS Feed</a>
+
+	&nbsp;&nbsp;|&nbsp;&nbsp;
+	<a href="sitemap.html">Sitemap</a>
+
+	&nbsp;&nbsp;|&nbsp;&nbsp;
+	<a href="impressum.html">Impressum</a>
+	</p>
+
+	<div id="fussnav">
+		<a title="zur Startseite" href="index.html">Home</a><br />
+		<a title="nach oben" href="#kopf">Oben</a><br />
+		<a title="nach unten" href="#fuss">Unten</a><br /> 
+		<a title="Seite durchsuchen" href="suche.html">Suche</a><br /> 
+	</div>
+</div>
+</body>
+</html>

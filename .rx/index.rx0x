@@ -314,6 +314,33 @@ soll dieser Beitrag zeigen.
 
 <div class="indexliste">
 
+
+
+[vim](vim.html)
+=======================================================
+
+<p class="datum">Letzte Bearbeitung: 2013-12-02</p>
+
+
+Um die Texte in Rumex zu schreiben verwende ich vim.
+Vim ist meiner Ansicht ein super Editor.
+Darum gibt es für Rumex auch gleich drei Erweiterungen
+
+1. rumex-gvim 
+2. rumex-vim
+3. rumex-tilda
+
+Was mit vim noch alles möglich ist findet man auf dieser Seite.
+
+[... Seite öffnen](vim.html)
+
+
+</div>
+
+
+
+<div class="indexliste">
+
 [Historie](historie.html)
 ======================================================
 

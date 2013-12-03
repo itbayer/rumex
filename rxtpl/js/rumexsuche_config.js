@@ -10,3 +10,4 @@ suchseite[7] = new Array("Weblog", 'weblog.html');
 suchseite[8] = new Array("Beschreibung des Rumex Baukastens", 'beschreibung.html');
 suchseite[9] = new Array("Historie", 'historie.html');
 suchseite[10] = new Array("Start", 'start.html');
+suchseite[11] = new Array("vim", 'vim.html');
