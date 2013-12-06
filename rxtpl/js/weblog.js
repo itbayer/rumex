@@ -21,7 +21,12 @@ $(document).ready(function() {
 		});
 
 	// "weiter lesen" Link vor den ausgeblendeten Text .weblog einbauen
-	$('<p class="weiter_lesen">...&nbsp;weiter lesen</p>').insertBefore("div.weblog");
+	//	Der <a> tag wurde eingebaut um auch die F Taste von vrome
+	//	zu unterstützen. Bei pentadactyl funktioniert
+	//	dieser Trick leider nicht da hier der komplette TAG
+	//	<a href=""></a>	vorhanden sein muss und dieser beißt sich mit
+	//	der js Funktion.
+	$('<p class="weiter_lesen"><a>...&nbsp;weiter lesen</a></p>').insertBefore("div.weblog");
 
 	// ...und Text als Link formatieren
 	$(".weiter_lesen").css("text-decoration","underline");
