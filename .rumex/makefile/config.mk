@@ -154,6 +154,8 @@ INDEX="../.rumex/bin/index.pl"
 # Programm zum erstellen des RSS Feed
 RX2RSS = "../.rumex/bin/rx2rss.pl"
 
+# Name der RSS Datei die in den Quelltext eingebaut wird
+RSS_FILE = "rss.xml"
 
 # Externe RSS URL verwenden
 # 	Ist diese Variable gesetzt wird die interne
