@@ -11,10 +11,16 @@
 	display: none;
 }
 
-/* Jede H1 Überschrift der Einzelseiten sollte
- * bei einem Ausdruck auf einer neuen Seite anfangen 
+
+
+/* Jede H1 Überschrift, der Einzelseiten, soll
+ * bei einem Ausdruck auf einer neuen Seite anfangen.
  *
- * Fixme: die erste Überschrift evtl. nicht. */
+ * Die erste H1 Überschrift ist von dieser Regel ausgenommen */
+
+#seite > h1:first-of-type {
+	page-break-before: avoid;
+} 
 
 #seite > h1 {
 	page-break-before:always;
