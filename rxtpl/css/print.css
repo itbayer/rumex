@@ -10,3 +10,14 @@
 #fuss .links {
 	display: none;
 }
+
+/* Jede H1 Überschrift der Einzelseiten sollte
+ * bei einem Ausdruck auf einer neuen Seite anfangen 
+ *
+ * Fixme: die erste Überschrift evtl. nicht. */
+
+#seite > h1 {
+	page-break-before:always;
+}
+
+
