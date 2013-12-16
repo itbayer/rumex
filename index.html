@@ -92,52 +92,6 @@
 </div>
 </div>
 <h4 id="ältere-weblog-einträge-anzeigen" class="webloglink"><a href="weblog.html">… ältere Weblog Einträge anzeigen</a></h4>
-<div class="indexliste">
-<h1><a href="historie.html">Historie</a></h1>
-<p class="datum">
-Letzte Bearbeitung: 2013-12-11
-</p>
-
-
-<h2>V0.8.1.7</h2>
-<p>Die RSS Feed Funktion wurde neu erstellt. Dadurch muss aber der Aufbau der Quell Datei angepasst werden.</p>
-<h3>Programmbeschreibung aus pod2text</h3>
-<h4>rx2rss</h4>
-<p>rx2rss ist kleines Programm das aus einer Markdown Datei einen RSS Feed erstellt.</p>
-<p>Zum schreiben der Texte wird der erweiterte Markdown Syntax von pandoc verwendet. Pandoc ist auch für die Umwandlung der Texte innerhalb der XML Datei zuständig. Muss also auf dem System installiert werden.</p>
-<pre><code>apt-get install pandoc</code></pre>
-<h4>Manueller Aufruf</h4>
-<p>Das Programm wird mit</p>
-<pre><code>perl rx2rss.pl URL+NAME (ohne Endung)</code></pre>
-<p>gestartet. Die Ausgabe erfolgt auf dem Bildschirm.</p>
-<h4>RSS Feed Standard Werte</h4>
-<h5>Kopf_</h5>
-<p>Für die RSS Grund Datei werden Standardwerte vorgespannt. Diese können jedoch in der jeweiligen Datei angepasst werden. Folgende Kopfwerte stehen zur Verfügung.</p>
-<ul>
-<li>%&gt; Titel: IT Bayers Rumex - Ein Home Page Baukasten</li>
-<li>%&gt; Beschreibung: Aktuelles und Neuigkeiten</li>
-<li>%&gt; Link: http://www.it-bayer.de/rumex/</li>
-<li>%&gt; Lang: de-DE</li>
-<li>%&gt; BildTitel: IT Bayers Rumex - Ein Home Page Baukasten</li>
-<li>%&gt; BildURL: http://www.it-bayer.de/rumex/rxtpl/img/rss.png</li>
-<li>%&gt; BildLink: http://www.it-bayer.de/rumex/</li>
-<li>%&gt; BildBeschreibung: Aktuelles und Neuigkeiten von der rumex Seite.</li>
-</ul>
-<h5>Meldung</h5>
-<ul>
-<li>!&gt; Autor: IT-Bayer</li>
-<li>!&gt; Link: http://www.it-bayer.de/rumex/</li>
-<li>!&gt; Kategorie: Neues</li>
-</ul>
-<h4>Sonstiges</h4>
-<h5>Titel nach pandoc</h5>
-<p>Beispiel</p>
-<pre><code>% Abo Seite - Newsletter - RSS Feed
-% 
-%</code></pre>
-<p>Die Zeilen müssen am Anfang der Datei stehen.</p>
-<p><a href="historie.html">… Seite anzeigen</a></p>
-</div>
 <section class="footnotes">
 <hr />
 <ol>
