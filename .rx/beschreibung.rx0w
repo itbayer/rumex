@@ -1,17 +1,17 @@
-% Weiterleitung nach beschreibung/
+% Weiterleitung nach beschreibung/beschreibung.htm
 %
 %
 
 
 <script language="javascript">
 <!--
-window.location.href="beschreibung/";
+window.location.href="beschreibung/beschreibung.htm";
 // -->
 </script>
 
 <noscript>
 <p>Die Seite ist umgezogen und ist nun &uuml;ber
-<a href="beschreibung/">diesen Link</a>
+<a href="beschreibung/beschreibung.htm">diesen Link</a>
 erreichbar.<p>
 </noscript>
 
