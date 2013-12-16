@@ -115,27 +115,6 @@ der index.html oder nur im Archiv, die eigentliche Seite
 
 <div class="indexliste">
 
-
-<script language="javascript">
-window.location.href="beschreibung/";
-</script>
-
-<noscript>
-<p>Die Seite ist umgezogen und ist nun &uuml;ber
-<a href="beschreibung/">diesen Link</a>
-erreichbar.<p>
-</noscript>
-
-
-[... Seite anzeigen](beschreibung.html)
-
-
-</div>
-
-
-
-<div class="indexliste">
-
 [Historie](historie.html)
 ======================================================
 
