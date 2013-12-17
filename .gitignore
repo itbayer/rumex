@@ -4,5 +4,6 @@
 
 # VIM 
 *.swp
+#.rx/*.bak
 .rx/*.htm
 .rx/*.pdf
