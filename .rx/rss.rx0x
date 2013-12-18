@@ -16,6 +16,30 @@
 
 
 
+
+# Rumex kann statische Seiten erstellen <!-- 2013/12/18 09:38 -->
+
+<!--
+!> Link: http://www.it-bayer.de/rumex/statik/
+!> Autor: IT-Bayer
+!> Kategorie: Neues
+-->
+
+Ab der Version 0.8.2 kann Rumex auch andere Formate erstellen.
+Ich nenne diese neuen Funktion _statik Funktion_.
+Angeboten werden die Formate:
+
+- `.htm`
+- `.pdf`
+- `.epub`
+- `.odt`
+- `-mobi`
+
+Mehr zu dieser neuen Funktion findet man auf 
+<http://www.it-bayer.de/rumex/statik>.
+
+
+
 # RSS Funktion, Programm rx2rss neu ertellt <!-- 2013/11/07 07:55 -->
 
 <!--

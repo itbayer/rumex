@@ -21,6 +21,27 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 </description>
 </image>
 <item>
+<title>Rumex kann statische Seiten erstellen</title>
+<description>
+<![CDATA[
+<p>Ab der Version 0.8.2 kann Rumex auch andere Formate erstellen. Ich nenne diese neuen Funktion <em>statik Funktion</em>. Angeboten werden die Formate:</p>
+<ul>
+<li><code>.htm</code></li>
+<li><code>.pdf</code></li>
+<li><code>.epub</code></li>
+<li><code>.odt</code></li>
+<li><code>-mobi</code></li>
+</ul>
+<p>Mehr zu dieser neuen Funktion findet man auf <a href="http://www.it-bayer.de/rumex/statik">http://www.it-bayer.de/rumex/statik</a>.</p>
+]]>
+</description>
+<link>http://www.it-bayer.de/rumex/statik/</link>
+<guid>http://www.it-bayer.de/rumex/statik/2013/12/18_0938</guid>
+<dc:creator>IT-Bayer</dc:creator>
+<pubDate>2013/12/18 09:38</pubDate>
+<category><![CDATA[Neues]]></category>
+</item>
+<item>
 <title>RSS Funktion, Programm rx2rss neu ertellt</title>
 <description>
 <![CDATA[
