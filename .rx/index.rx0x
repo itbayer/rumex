@@ -47,6 +47,27 @@ der Seite <http://www.hochfelder.de>[^hochfelder_unterseiten] verwendet.
 <div class="indexliste">
 
 
+
+!> Link: http://www.it-bayer.de/rumex/statik/
+!> Autor: IT-Bayer
+!> Kategorie: Neues
+
+Ab der Version 0.8.2 kann Rumex auch andere Formate erstellen.
+Ich nenne diese neuen Funktion _statik Funktion_.
+Angeboten werden die Formate:
+
+- `.htm`
+- `.pdf`
+- `.epub`
+- `.odt`
+- `-mobi`
+
+Mehr zu dieser neuen Funktion findet man auf 
+<http://www.it-bayer.de/rumex/statik>.
+
+
+
+
 # Rumex Beschreibung hinkt
 
 _Am 06.12.2013 um 18:13 schrieb IT-Bayer_
