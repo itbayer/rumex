@@ -69,7 +69,7 @@ der index.html oder nur im Archiv, die eigentliche Seite
 
 _Am 12.10.2013 um 23:18 schrieb IT-Bayer_
 
-Auf der Seite [statik/](statik/) findet man einen kleine Beschreibung
+Auf der Seite [statik/](statik/index.htm) findet man einen kleine Beschreibung
 wie man mit pandocs markdown und gvim kleine Beschreibungen in 
 verschiedene Formate wandeln kann.
 

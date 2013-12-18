@@ -814,4 +814,3 @@ Reiter _Allgemein_ -> Schalter _Nicht in der Taskleiste anzeigen_.
 
  
 
-<!-- vim: set ft=pandoc: -->

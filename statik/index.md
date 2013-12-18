@@ -1,211 +1,218 @@
-% HTML und PDF Dateine mit pandoc und gvim erstellen
+% HTML, PDF, epub, odt und mobi Dateien mit Rumex erstellen
 % Stefan Blechschmidt
-% Oktober 2013
+% 2013
 
 
-
-
-Vorwort
-=======
 
 Rumex verwendet pandocs markdown weil man damit sehr einfach und schnell Text erstellen 
-und verschiedenen Formate wandeln kann.
-Diese Funktion kann man aber auch außerhalb vom Rumex,
-also für die alltäglichen Beschreibungen und Notizen die
-so anfallen, verwenden.
+und in verschiedenen Formate wandeln kann.
+Für die Erstellung von Denkschriften[^memorandum] wurde zusätzlich eine, ich nenne sie 
+_statik Funktion_ eingebaut.
+Mit dieser Funktion ist es möglich innerhalb eines Unterverzeichnisses 
+verschiedenen Ausgabe Formate zu erstellen.
+Zur Zeit werden, von Rumex, folgenden Formate unterstützt:
 
-Abgesehen habe ich es bei dieser Beschreibung auf die beiden 
-Formate `PDF`[^latex] und `HTML`.
+[^memorandum]: Neudeutsch würde man die Denkschrift als Memorandum bezeichnen.
 
-[^latex]: Für die Umwandlung nach PDF muss jedoch LaTeX mit den 
-entsprechenden Paketen auf dem Rechner installiert sein.
-Außerdem wird für die Darstellung der PDF Dateien das Programm zathura verwendet, was natürlich auch installiert sein sollte. 
+- .html
+- .pdf 
+- .odt OpenDokument
+- .epub E-Book
+- .mobi E-Book (Kindle)
 
-
-
-Ausgabeformate erstellen
-========================
-
-Um die unterschiedlichen Ausgabeformate mittels pandoc
-zu erstellen braucht man einige Optionen die auf der 
-[Homepage von pandoc](http://johnmacfarlane.net/pandoc/README.html) 
-sehr gut beschrieben sind.
-
-Um den aktuellen Text nach HTML zu wandeln kann dieser Befehl verwendet
-werden.
-
-	pandoc -f markdown -t html5 --toc -s -o test.html test.md
-
-Für PDF funktioniert dieser Befehl
-
-	pandoc -f markdown -t latex --toc -V lang=ngermanb -o test.pdf test.md
-
-Dabei ist der Parameter `--toc` für die Anzeige des Inhaltsverzeichnis zuständig.
-
-
-Da diese beiden Formate innerhalb des Editors gvim
-zur Verfügung stehen sollten brauchte es noch die 
-Definition der gvim Kurztasten.
+Erstellt werden die einzelnen Formate über [Funktionstasten](#rumex-kurztasten).
+Eine Besonderheit ist das die `.htm` Datei auch ohne die zusätzlichen Dateien wie 
+Bilder oder die CSS Datei funktionieren. Alle Daten werden in die `.htm` Datei eingebunden.
+Auch wurde die [Literaturfunktion](#litfunk) von Pandoc eingebaut sodass Verweise
+auf anderen Quellen in den Denkschriften verwendet werden können.
 
 
 
 
-Die Gvim Kurztaste
-===================
 
-Die Unterstützung soll nur für gvim aber auch ausserhalb
-Rumex funktionieren darum werden die benötigten 
-Befehle in die Datei `~/.gvimrc` geschrieben.
+# Die (g)vim statik Kurztaste in Rumex {#rumex-kurztasten}
 
-Verwendet werden, in diesem Beispiel, die Tasten F8 und F9.\
-F8 für HTML und F9 für das PDF Format.\
-Ausserdem werden noch die zwei Tasten ALT-F8 und ALT-F9 für die Anzeige 
-konfiguriert wobei zathura[^zathura] für die PDF Anzeige verwendet wird.
+Ab der Version 0.8.2 sind die Funktionstasten in Rumex enthalten.
+Folgende F-Tasten wurden belegt.
 
-[^zathura]: Zathura wurde deshalb gewählt weil dieses Programm ähnlich 
-wie vi über die Tastatur bedient werden kann.
+F5
+:	Erstellt die `.htm` Datei ohne Inhaltsverzeichnis.
 
-Nachfolgende Zeilen in die `~/.gvimrc` Datei kopieren und fertig ist diese Anpassung.
+ALT+F5
+:	Erstellt die `.htm` Datei mit Inhaltsverzeichnis
 
-~~~
-" HTML Datei erstellen
-map <F8> :w<cr>:!pandoc -f markdown -t html5 --toc -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
-" HTML Datei anzeigen
-map <A-F8> :!x-www-browser <C-R>=expand("%:r")<CR>.htm&<CR><CR>
+CTRL+F5
+:	Öffnet die `.htm` Datei.
+
+F6
+:	Erstellt die `.pdf` Datei ohne Inhaltsverzeichnis
+
+ALT+F6
+:	Erstellt die `.pdf` Datei mit Inhaltsverzeichnis
+
+CTRL+F6
+:	Öffnet die `.pdf` Datei. Zur Zeit wird nur zathura unterstützt.
+
+F7
+:	Erstellt die restlichen Formate, `.epub`, `.odt` und `.mobi`.
+
+ALT-F7
+:	Öffnet die Literatur Verwaltung `rumex.bib`. Voraussetzung, jabref ist installiert. 
 
 
-" PDF Datei erstellen
-map <F9> :w<cr>:!pandoc -f markdown -t latex --toc -V lang=ngermanb -o <C-R>=expand("%:r")<CR>.pdf %<CR><CR>
-" PDF Datei anzeigen
-map <A-F9> :!zathura <C-R>=expand("%:r")<CR>.pdf&<CR><CR>
-~~~
 
+# HTML Formatierung
 
-
-Formatierung erweitern
-======================
-
-Die erzeugte HTML Datei besitzt keine Formatierung bzw.
+Die erzeugte HTML Datei besitzt Standardmäßig keine Formatierung bzw.
 verwendet die Standard Darstellung des Browsers.
 
 Kopf- und Fusszeile werden dadurch nicht, vom restlichen Text, unterschieden.
 Auch das Inhaltsverzeichnis ist im ersten Moment als solches nicht 
 gleich zu erkennen.
 Dieses kann mit ein wenig CSS geändert werden.
+Diese CSS Datei ist ab Rumex Version 0.8.2 enthalten muss aber unter
+Umständen noch eingerichtet werden.
 
-~~~{.css}
-/* gvim_f8.css */
-
-header {
-	text-align: center;
-	border-bottom: 1px solid silver;
-}
-
-nav#TOC {
-	border-bottom: 1px solid silver;
-	font-size: 0.8em;
-} 
-
-section.footnotes {
-	color: gray;
-	font-size: 0.8em;
-	margin-top: 4em;
-}
-
-section.footnotes hr {
-	border: none;
-	border-top: 1px solid silver;
-	margin-left: 0;
-	width: 40%;
-}
+	cd .rx
+	ln -s ../.rumex/default/f5.css f5.css
 
 
-/* ----------------------------------
-	Umformatieren der Überschriften 
-	-------------------------------- */
 
-/* Ab der zweiten h1 Überschrift bekommt diese
-	einen größeren Abstand. */
-
-h1:nth-of-type(n+2) {
-    margin-top: 4em;
-}
-
-/* Der Link der Überschriften sollte 
-	nicht unterstrichen 
-	und in schwarz dargestellt werden. */
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-    text-decoration: none;
-	color: #000;
-}
-~~~
-
-Gespeichert wird diese Datei in einem separaten Unterverzeichnis.
-Ich verwende dazu `~/.pandoc`.
-
-Die Zeilen für die HTML Erstellung, in der Datei `~/.gvimrc`, ändert sich dadurch ein wenig.
-Es sind die Optionen `--self-contained` und `--css ~/.pandoc/gvim_f8.css` hinzu gekommen.
-
-	" HTML Datei erstellen
-	map <F8> :w<cr>:!pandoc -f markdown -t html5 --toc --self-contained --css ~/.pandoc/gvim_f8.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
-
-**Anmerkung zu den neuen Parametern**
-
-`--self-contained`
-:	Durch diesen Parameter wird die CSS Datei in den HTML Quellcode
-	eingebunden. Funktioniert übrigens auch mit Bildern.
-	Es muss also nur die HTML Datei hoch geladen werden.
-
-`--css`
-:	Die CSS Formatierungsdatei. Da die Datei mittels `--self-contained`
-	in die HTML Datei eingebunden wird muss diese nicht auf 
-	dem Server mit hoch geladen werden.
+# Die Literaturverzeichnis Funktion {#litfunk}
 
 
-Rumex?
-======
+Bei lesen des Artikels _"PDF-Dokumente schreiben mit Pandoc und Markdown"
+[@stenderprolinux]_ ist mir die Idee gekommen die Rumex _statik Funktion_ mit einem 
+Literaturverzeichnis, die ja auch in pandoc zur Verfügung steht, zu versehen.
+
+
+## Installation
+
+Für die Verwendung der Literaturfunktion muss pandoc um das Zusatzprogramm 
+`pandoc-citeproc` erweitert werden. 
+Wer Pandoc über die Paketverwaltung installiert hat
+braucht hier nichts zu machen.
+Wer Pandoc manuell, so wie ich, installiert hat 
+muss dieses Programm nachinstallieren.
+
+Dazu erweitert man die Installationszeile um das neue Programm
+
+	cabal update
+	cabal install pandoc pandoc-citeproc
+
+Zu guter Letzt erstellt man noch die symbolischen Links der 
+beiden Programme.
+
+	sudo ln -s /home/USER/.cabal/bin/pandoc /usr/local/bin/.
+	sudo ln -s /home/USER/.cabal/bin/pandoc-citeproc /usr/local/bin/.
+
+
+### Nachinstallation Rumex
+
+Wer Rumex schon im Einsatz hat muss für die Erweiterung ein wenig
+Hand anlegen.
+Zu erste holt man sich die neue Version[^biberweiterung] von rumex. 
+
+[^biberweiterung]: Die Literatur Erweiterung ist ab der Version 0.8.2 enthalten.
+
+Dann braucht man noch drei zusätzliche Dateien im Verzeichnis `.rx`.
+
+- `rumex.bib`
+- `rumex.csl`
+- `f5.css`
+
+Wobei der [Literatur Vorlage Stiel][Literatur Stil] und die CSS Datei nur verlinkt wird. In der `rumex.bib` werden dann die Literatur Verweise verwaltet.
+
+	cd .rx
+	touch rumex.bib
+	ln -s ../.rumex/default/din-1505-2.csl rumex.csl
+	ln -s ../.rumex/default/f5.css f5.css
+
+
+
+### Literatur Stil
+
+Als Literatur Stil kommt `din-1505-2.csl` zum Einsatz.
+Andere Stile findet man im git Repository 
+<https://github.com/citation-style-language/styles.git>.
+Als Name für die Stil Vorlage wurde `rumex.csl` gewählt damit 
+mit eine Änderung des Stils einfach über den Symlink 
+gemacht werden kann.
+
+
+### Literatur Verwaltung
+
+Für die Verwaltung der Literatur Datenbank verwende ich 
+[Jabref](http://jabref.sourceforge.net/).
+
+	sudo apt-get install jabref
+
+Der Aufruf des Programms wurde auch auf einen F Taste gelegt.
+Wer eine anderes Programm verwenden will muss diesen entsprechend anpassen.
+
+
+# Verwendung in- und außerhalb von Rumex?
+
+Innerhalb von Rumex erstellt man in einem separatem Unterverzeichnis 
+die entsprechende markdown Datei und dann kann es auch schon los gehen.
+
+Außerhalb von Rumex kann man diese Funktion natürlich auch verwenden.
+Mit Außerhalb meine ich Denkschriften die nicht veröffentlicht werden.
+Dazu gibt es zwei Möglichkeiten.
+
+1. Die Datei bzw. das Verzeichnis in `.gitignore` hinterlegen.
+Somit wird diese nicht verwaltet und auch nicht, bei
+einem `make online`, hoch geladen.
+
+2. Eine zweite lokale Rumex Installation die nur für Denkschriften
+verwendet wird.
+
+
+
+## Einbinden von Bildern
+
+Bei dem Einbinden der Bilder muss man beachten dass die Erstellung 
+der statik Datei vom Verzeichnis `.rx` ausgeht.
+
+Will man also ein Bild, dass im Ordner der Statik Datei liegt einbinden
+so muss auch auf das Bild aus der Sicht des `.rx` Verzeichnisses eingebunden
+werden.
+
+Beispiel:
+
+Das Bild liegt im Ordner `statik` somit müsste der Markdown Befehl so aussehen.
+
+	![Beispielbild](../statik/beispiel.png)
 
 In Rumex kann man diese Funktion natürlich auch verwenden.
 Am besten erstellt man sich dazu ein eigenes Unterverzeichnis und
 dort die Datei `index.md` mit den Texten.
 
 
-Warum `.htm` verwendet wird
----------------------------
+## Statik Dateien im `.rx` Verzeichnis
 
-Um nicht mit der git Verwaltung, innerhalb Rumex / Unterverzeichnis 
-`.rx`, in Konflikt zu kommen wurde für die HTML Dateien,
-die per F8 erstellt werden, 
-die Endung `.htm` verwendet.
-Durch einen Eintrag in der Datei `.gitignore` können diese
-so von der git Verwaltung ausgenommen werden.
+Es wird sicher passieren dass man die Funktionstasten der Statik Seiten
+auch bei der Bearbeitung der eigentlichen Rumex Dateien drückt.
+Durch entsprechende Einträge in der `.gitignore` Datei werden 
+solche Dateien von einem Upload ausgeschlossen.
+Mit den Aufruf von `make statikclean` können die erstellten 
+statik Dateien Schlussendliche aus dem `.rx` Verzeichnis entfernt 
+werden. Dieser Befehl wird auch bei `make clean` ausgeführt.
 
-	.rx/*.htm
-	.rx/*.pdf
+## Tipps 
 
-Zwar werden diese Dateien im lokalen Arbeitsverzeichnis gespeichert
-aber nicht über den Befehl `make online` hoch geladen.
+Das PDF Programm `zathura` hat die Eigenschaft dass wenn sich die
+Datei ändert diese automatisch nachgeladen wird.
+Eine schöne Funktion wenn man seinen Text, an dem man gerade arbeitet,
+immer wieder einmal im Ausgabe Format betrachten will.
+Einfach die Taste F6 drücken, die Datei wird auch gleich gespeichert,
+und mit ALT-TAB das Programm Fenster wechseln.
 
-`.htm` Dateien im `.rx` Verzeichnis aufräumen
----------------------------------------------
-
-Um die evtl. angefallenen `.htm` Dateien, die sich im `.rx` Verzeichnis
-befinden, löschen zu können gibt es auch einen entsprechenden make Befehl
-unter Rumex. Mit
-
-	make f8clean
-
-werden alle  `.htm` Dateien im `.rx` Verzeichnis gelöscht.
-Dieser Befehl wurde auch in 
-
-	make clean
-
-aufgenommen.
+Bei Format HTML geht das natürlich auch. Nur muss hier eine Erweiterung
+installiert werden.
+Für die Browser Chromium und Firefox habe ich mit 
+`Auto Refresh Plus`$^{Chromium}$ bzw.
+`Tab Auto Reload`$^{FireFox}$ gute Erfahrungen gemacht.
 
 ----
 
@@ -215,5 +222,5 @@ Die Markdown Quelldatei kann man sich [hier](index.md) holen.
 ----
 
 
-
+# Literaturverzeichnis
 

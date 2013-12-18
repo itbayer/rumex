@@ -6,9 +6,6 @@
 " oder mit der ../.rumex/bin/rumex.sh
 "
 
-" Nach dem Schreiben Konfiguration einlesen; wird hier nicht verwendet.
-"autocmd! bufwritepost ~/Arbeitsfläche/test.vim source %
-
 
 
 
@@ -26,25 +23,27 @@
 " in das Verzeichnis gelegt werden.
 "  call pathogen#infect()
 
-" -------------------------------------------------------------
-"  Syntax Farbig machen
-"  syntax on
-
-" -------------------------------------------------------------
-" Zeilennummern anzeigen
-" set nu
-
-" -------------------------------------------------------------
-" öffnende und schließende Klammern hervorheben
-" set showmatch
-
-" -------------------------------------------------------------
-" Vim Modus statt Vi Modus verwenden
-" set nocompatible
-
 " ==============================================================
 " ENDE .vimrc Vorlage
 " ==============================================================
+
+
+" -------------------------------------------------------------
+"  Syntax Farbig machen
+syntax on
+
+" -------------------------------------------------------------
+" Zeilennummern anzeigen
+set nu
+
+" -------------------------------------------------------------
+" öffnende und schließende Klammern hervorheben
+set showmatch
+
+" -------------------------------------------------------------
+" Vim Modus statt Vi Modus verwenden
+set nocompatible
+
 
 
 
@@ -115,16 +114,19 @@ map <Leader>rnb i# Rumex WebLog<CR><ESC>:r! date +"Am \%d.\%m.\%Y um \%H:\%M sch
 " ----------------------------------------------------------
 "  Kurztasten allgemein
 
-" Datei Speichern und html erstellen STRG+S
+"	Datei Speichern und html erstellen STRG+S
 " gvim Zuordnung, funktioniert unter vim (Konsole) nicht, siehe unten.
 map <C-S> :w<CR>:make html<CR><CR><CR>
 imap <C-S> <ESC>:w<CR>:make html<CR><CR><CR>
+"
+"	Ausgeschaltet Funktionstasten werden für die Statik 
+" Funktion verwendet.
 " <F5> für vim bereitstellen. Macht das selbe wie <C-S> 
 " weil <C-S> unter vim nicht funktioniert, 
 " diese Tastenkombination ist dem Terminal zugeordnet.
 " Infolink: http://vim.wikia.com/wiki/Map_Ctrl-S_to_save_current_or_new_files
-map <F5> :w<CR>:make html<CR><CR><CR>
-imap <F5> <ESC>:w<CR>:make html<CR><CR><CR>
+"map <F5> :w<CR>:make html<CR><CR><CR>
+"imap <F5> <ESC>:w<CR>:make html<CR><CR><CR>
 
 
 " Rumex Verzeichnis .rx anzeigen
@@ -184,7 +186,7 @@ map <Leader>rmca :make clean<CR>
 map <Leader>rmcb :make bclean<CR>
 map <Leader>rmch :make hclean<CR>
 map <Leader>rmcx :make xclean<CR>
-map <Leader>rmcf8 :make f8clean<CR>
+map <Leader>rmcf5 :make statikclean<CR>
 map <Leader>rmh :make html<CR>
 map <Leader>rmi :make index<CR>
 map <Leader>rmm :make sitemap<CR>
@@ -210,6 +212,8 @@ map <Leader>rsl :make showlocal&<CR><CR>
 
 map <Leader>ros :tabnew<CR>:e start.rx0s<CR><CR>
 map <Leader>ror :tabnew<CR>:e rss.rx0x<CR><CR>
+
+
 
 
 " -----------------------------------------------------------
@@ -239,6 +243,37 @@ vmap <Leader>rtt !twiet -script<CR>
 " KurzLink erzeugen mit is.gd (RumexKürzeLink)
 vmap <Leader>rkl x:r!echo "/sh <C-R>""\|twiet -script<CR>
 
+
+
+
+" ---------------------------------------------------------------
+"  Funktionstasten für die Statik Seiten
+
+" HTML Datei ohne Inhaltsverzeichnis erstellen
+map <F5> :w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --self-contained --css f5.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
+imap <F5> <ESC>:w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --toc --self-contained --css f5.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
+" HTML Datei mit Inhaltsverzeichnis erstellen
+map <A-F5> :w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --toc --self-contained --css f5.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
+imap <A-F5> <ESC>:w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --toc --self-contained --css f5.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
+" HTML Datei anzeigen
+map <C-F5> :!x-www-browser <C-R>=expand("%:r")<CR>.htm&<CR><CR>
+
+" PDF Datei ohne Inhaltsverzeichnis erstellen
+map <F6> :w<CR>:!pandoc -f markdown --bibliography=rumex.bib --csl=rumex.csl -t latex -V lang=ngermanb -o <C-R>=expand("%:r")<CR>.pdf %<CR><CR>
+imap <F6> <ESC>:w<CR>:!pandoc -f markdown --bibliography=rumex.bib --csl=rumex.csl -t latex -V lang=ngermanb -o <C-R>=expand("%:r")<CR>.pdf %<CR><CR>
+" PDF Datei mit Inhaltsverzeichnis erstellen
+map <A-F6> :w<CR>:!pandoc -f markdown --bibliography=rumex.bib --csl=rumex.csl -t latex --toc -V lang=ngermanb -o <C-R>=expand("%:r")<CR>.pdf %<CR><CR>
+imap <A-F6> :w<CR>:!pandoc -f markdown --bibliography=rumex.bib --csl=rumex.csl -t latex --toc -V lang=ngermanb -o <C-R>=expand("%:r")<CR>.pdf %<CR><CR>
+" PDF Datei anzeigen
+map <C-F6> :!zathura <C-R>=expand("%:r")<CR>.pdf&<CR><CR>
+
+
+" Rest erstellen: epub, mobi, odt 
+map <F7> :w<CR>:!pandoc -f markdown -t epub --bibliography=rumex.bib --csl=rumex.csl -V lang=de_DE -s -o <C-R>=expand("%:r")<CR>.epub %<CR><CR> :!pandoc -f markdown --bibliography=rumex.bib --csl=rumex.csl -t odt -s -o <C-R>=expand("%:r")<CR>.odt %<CR><CR> :!ebook-convert <C-R>=expand("%:r")<CR>.epub <C-R>=expand("%:r")<CR>.mobi --output-profile=kindle<CR><CR>
+
+
+" jabref starten
+map <A-F7> :!jabref rumex.bib&<CR><CR>
 
 
 " vim:ft=vim: 

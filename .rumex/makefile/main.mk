@@ -88,7 +88,7 @@ clean:
 	make -s hclean
 	make -s xclean
 	make -s bclean
-	make -s f8clean
+	make -s statikclean
 
 
 # #######################################################
@@ -109,13 +109,15 @@ bclean:
 	rm -f ../bilder/*_???_.*
 
 # #######################################################
-# .htm Dateien die per F8 erstellt wurde aus dem .rx 
+# .htm Dateien die per F5, F6 oder F7 erstellt wurde aus dem .rx 
 # 	Verzeichnis löschen. 
-# 	Die pdf Dateien F9 werden auch gleich mit genommen.
 # 	Siehe dazu http://it-bayer.de/rumex/statik/.
-f8clean: 
+statikclean: 
 	rm -f *.htm
 	rm -f *.pdf
+	rm -f *.epub
+	rm -f *.odt
+	rm -f *.mobi
 
 # #######################################################
 # rumex Installieren

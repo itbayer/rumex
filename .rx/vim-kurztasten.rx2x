@@ -280,12 +280,12 @@ Löscht alle `.xlm` Dateien die von Rumex erstellt wurden.
 
 
 
-## `,rmcf8` (RumexMakeCleanF8htm)
+## `,rmcf5` (RumexMakeCleanF8htm)
 
 Löscht alle `.htm` Dateien die mittels der 
-Gvim Taste F8,
+Gvim Taste F5,
 siehe 
-[HTML und PDF Dateine mit pandoc und gvim erstellen](http://www.it-bayer.de/rumex/statik/),
+[HTML und PDF Dateine mit pandoc und gvim erstellen](http://www.it-bayer.de/rumex/statik/index.htm),
 erstellt wurden.
 
 

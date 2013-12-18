@@ -4,6 +4,13 @@
 
 # VIM 
 *.swp
+
+# Sicherungskopie jabref
 .rx/*.bak
+
+# Dateien der Rumex statik Funktion
 .rx/*.htm
 .rx/*.pdf
+.rx/*.epub
+.rx/*.odt
+.rx/*.mobi

@@ -55,7 +55,7 @@ menu Rumex.make.------make_sauber------ :
 menu &Rumex.&make.&clean.&Bilder<Tab>,rmcb ,rmcb
 menu &Rumex.&make.&clean.&HTML<Tab>,rmch ,rmcd
 menu &Rumex.&make.&clean.&XML<Tab>,rmcx ,rmcx
-menu &Rumex.&make.&clean.&f8_htm<Tab>,rmcf8 ,rmcf8
+menu &Rumex.&make.&clean.&statik\ Seiten<Tab>,rmcf5 ,rmcf5
 menu &Rumex.&make.&clean.&alles<Tab>,rmca ,rmca
 
 menu Rumex.-----------------twitter--------------------------- :
@@ -68,6 +68,16 @@ menu &Rumex.&Git.Änderungen\ &anzeigen<Tab>,rgs ,rgs
 
 menu Rumex.-----------------config--------------------------- :
 menu &Rumex.&Konfiguration.User\ Verzeichnis<Tab>,rku ,rku
+
+menu Rumex.-----------------statik-------------------------- :
+menu &Rumex.St&atik.&HTML\ ohne\ Inhaltsverzeichnis<Tab><F5> <F5>
+menu &Rumex.St&atik.&HTML\ mit\ Inhaltsverzeichnis<Tab><A-F5> <A-F5>
+menu &Rumex.St&atik.&HTML\ zeigen<Tab><C-F5> <C-F5>
+menu &Rumex.St&atik.&PDF\ ohne\ Inhaltsverzeichnis<Tab><F6> <F6>
+menu &Rumex.St&atik.&PDF\ mit\ Inhaltsverzeichnis<Tab><A-F6> <A-F6>
+menu &Rumex.St&atik.&PDF\ zeigen<Tab><C-F6> <C-F6>
+menu &Rumex.St&atik.Rest\ epub,odt,mobi<Tab><F7> <F7>
+menu &Rumex.St&atik.rumex\.bib(jabref)<Tab><A-F7> <A-F7>
 
 menu Rumex.-----------------Formatierung----------------- :
 vmenu &Rumex.&Formatierung.&Fett<Tab>,rff ,rff 
