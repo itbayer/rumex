@@ -150,6 +150,48 @@ Für die Verwaltung der Literatur Datenbank verwende ich
 Der Aufruf des Programms wurde auch auf einen F Taste gelegt.
 Wer eine anderes Programm verwenden will muss diesen entsprechend anpassen.
 
+### Tipps
+
+- Auf @wiki:bibtex findet man eine schöne Beschreibung über die
+Literatur Verwaltung mit BibTex.
+
+- Die BibTex Einträge muss man sich unter Umständen 
+nicht einmal selber erstellen.
+Da verschiedene Seiten entsprechende Dienste anbieten.
+Gelungen finde ich die Seite von <http://www.literatur-generator.de/>
+aber auch auf <http://lead.to/amazon/en/?op=bt> findet 
+man BibTeX Einträge.
+Zwar muss man diese unter Umständen noch ein wenig überarbeiten
+aber das Grund Gerüst wird einem sozusagen frei Haus geliefert. \
+Wer einen Wikipedia Artikel zitieren dem wird unter
+`"Werkzeuge -> Seite zitieren"` weiter geholfen.
+
+- Für das zitieren von Internetseiten verwende ich folgende Formate.
+
+~~~
+	@ELECTRONIC{ wiki:bibtex,
+		author = "Wikipedia",
+		title = "BibTeX --- Wikipedia{,} Die freie Enzyklopädie",
+		year = "2013",
+		url = "http://de.wikipedia.org/w/index.php?title=BibTeX&oldid=124228120", 
+		note = "[Online; Stand 18. Dezember 2013]"
+	}
+~~~
+
+>...oder 
+
+~~~
+	@WWW{ wiki:bibtex,
+		author = "Wikipedia",
+		title = "BibTeX --- Wikipedia{,} Die freie Enzyklopädie",
+		year = "2013",
+		url = "http://de.wikipedia.org/w/index.php?title=BibTeX&oldid=124228120", 
+		note = "[Online; Stand 18. Dezember 2013]"
+	}
+~~~
+
+>beide erzeugen den Eintrag der auf dieser Seite im Literaturverzeichnis
+zu finden ist.
 
 # Verwendung in- und außerhalb von Rumex?
 

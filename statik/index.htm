@@ -90,6 +90,32 @@ ln -s ../.rumex/default/f5.css f5.css</code></pre>
 <p>Für die Verwaltung der Literatur Datenbank verwende ich <a href="http://jabref.sourceforge.net/">Jabref</a>.</p>
 <pre><code>sudo apt-get install jabref</code></pre>
 <p>Der Aufruf des Programms wurde auch auf einen F Taste gelegt. Wer eine anderes Programm verwenden will muss diesen entsprechend anpassen.</p>
+<h3 id="tipps">Tipps</h3>
+<ul>
+<li><p>Auf <span class="citation" data-cites="wiki:bibtex">Wikipedia (2013)</span> findet man eine schöne Beschreibung über die Literatur Verwaltung mit BibTex.</p></li>
+<li><p>Die BibTex Einträge muss man sich unter Umständen nicht einmal selber erstellen. Da verschiedene Seiten entsprechende Dienste anbieten. Gelungen finde ich die Seite von <a href="http://www.literatur-generator.de/">http://www.literatur-generator.de/</a> aber auch auf <a href="http://lead.to/amazon/en/?op=bt">http://lead.to/amazon/en/?op=bt</a> findet man BibTeX Einträge. Zwar muss man diese unter Umständen noch ein wenig überarbeiten aber das Grund Gerüst wird einem sozusagen frei Haus geliefert.<br />Wer einen Wikipedia Artikel zitieren dem wird unter <code>&quot;Werkzeuge -&gt; Seite zitieren&quot;</code> weiter geholfen.</p></li>
+<li><p>Für das zitieren von Internetseiten verwende ich folgende Formate.</p></li>
+</ul>
+<pre><code>    @ELECTRONIC{ wiki:bibtex,
+        author = &quot;Wikipedia&quot;,
+        title = &quot;BibTeX --- Wikipedia{,} Die freie Enzyklopädie&quot;,
+        year = &quot;2013&quot;,
+        url = &quot;http://de.wikipedia.org/w/index.php?title=BibTeX&amp;oldid=124228120&quot;, 
+        note = &quot;[Online; Stand 18. Dezember 2013]&quot;
+    }</code></pre>
+<blockquote>
+<p>...oder</p>
+</blockquote>
+<pre><code>    @WWW{ wiki:bibtex,
+        author = &quot;Wikipedia&quot;,
+        title = &quot;BibTeX --- Wikipedia{,} Die freie Enzyklopädie&quot;,
+        year = &quot;2013&quot;,
+        url = &quot;http://de.wikipedia.org/w/index.php?title=BibTeX&amp;oldid=124228120&quot;, 
+        note = &quot;[Online; Stand 18. Dezember 2013]&quot;
+    }</code></pre>
+<blockquote>
+<p>beide erzeugen den Eintrag der auf dieser Seite im Literaturverzeichnis zu finden ist.</p>
+</blockquote>
 <h1 id="verwendung-in--und-außerhalb-von-rumex">Verwendung in- und außerhalb von Rumex?</h1>
 <p>Innerhalb von Rumex erstellt man in einem separatem Unterverzeichnis die entsprechende markdown Datei und dann kann es auch schon los gehen.</p>
 <p>Außerhalb von Rumex kann man diese Funktion natürlich auch verwenden. Mit Außerhalb meine ich Denkschriften die nicht veröffentlicht werden. Dazu gibt es zwei Möglichkeiten.</p>
@@ -106,7 +132,7 @@ ln -s ../.rumex/default/f5.css f5.css</code></pre>
 <p>In Rumex kann man diese Funktion natürlich auch verwenden. Am besten erstellt man sich dazu ein eigenes Unterverzeichnis und dort die Datei <code>index.md</code> mit den Texten.</p>
 <h2 id="statik-dateien-im-.rx-verzeichnis">Statik Dateien im <code>.rx</code> Verzeichnis</h2>
 <p>Es wird sicher passieren dass man die Funktionstasten der Statik Seiten auch bei der Bearbeitung der eigentlichen Rumex Dateien drückt. Durch entsprechende Einträge in der <code>.gitignore</code> Datei werden solche Dateien von einem Upload ausgeschlossen. Mit den Aufruf von <code>make statikclean</code> können die erstellten statik Dateien Schlussendliche aus dem <code>.rx</code> Verzeichnis entfernt werden. Dieser Befehl wird auch bei <code>make clean</code> ausgeführt.</p>
-<h2 id="tipps">Tipps</h2>
+<h2 id="tipps-1">Tipps</h2>
 <p>Das PDF Programm <code>zathura</code> hat die Eigenschaft dass wenn sich die Datei ändert diese automatisch nachgeladen wird. Eine schöne Funktion wenn man seinen Text, an dem man gerade arbeitet, immer wieder einmal im Ausgabe Format betrachten will. Einfach die Taste F6 drücken, die Datei wird auch gleich gespeichert, und mit ALT-TAB das Programm Fenster wechseln.</p>
 <p>Bei Format HTML geht das natürlich auch. Nur muss hier eine Erweiterung installiert werden. Für die Browser Chromium und Firefox habe ich mit <code>Auto Refresh Plus</code><span class="math"><em></em><sup><em>C</em><em>h</em><em>r</em><em>o</em><em>m</em><em>i</em><em>u</em><em>m</em></sup></span> bzw. <code>Tab Auto Reload</code><span class="math"><em></em><sup><em>F</em><em>i</em><em>r</em><em>e</em><em>F</em><em>o</em><em>x</em></sup></span> gute Erfahrungen gemacht.</p>
 <hr />
@@ -115,6 +141,7 @@ ln -s ../.rumex/default/f5.css f5.css</code></pre>
 <div class="references">
 <h1>Literaturverzeichnis</h1>
 <p><span style="font-variant: small-caps;">Stender, Daniel</span>: <em>PDF-Dokumente schreiben mit Pandoc und Markdown</em>. URL <a href="http://www.pro-linux.de/artikel/2/1635/3,bibliographie.html">http://www.pro-linux.de/artikel/2/1635/3,bibliographie.html</a></p>
+<p><span style="font-variant: small-caps;">Wikipedia</span>: <em>BibTeX — Wikipedia, Die freie Enzyklopädie</em>. URL <a href="http://de.wikipedia.org/w/index.php?title=BibTeX&amp;oldid=124228120">http://de.wikipedia.org/w/index.php?title=BibTeX&amp;oldid=124228120</a>. — [Online; Stand 18. Dezember 2013]</p>
 </div>
 <section class="footnotes">
 <hr />
