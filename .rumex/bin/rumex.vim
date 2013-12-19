@@ -250,11 +250,11 @@ vmap <Leader>rkl x:r!echo "/sh <C-R>""\|twiet -script<CR>
 "  Funktionstasten für die Statik Seiten
 
 " HTML Datei ohne Inhaltsverzeichnis erstellen
-map <F5> :w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --self-contained --css f5.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
-imap <F5> <ESC>:w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --toc --self-contained --css f5.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
+map <F5> :w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --self-contained --css statik.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
+imap <F5> <ESC>:w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --self-contained --css statik.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
 " HTML Datei mit Inhaltsverzeichnis erstellen
-map <A-F5> :w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --toc --self-contained --css f5.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
-imap <A-F5> <ESC>:w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --toc --self-contained --css f5.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
+map <S-F5> :w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --toc --self-contained --css statik.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
+imap <S-F5> <ESC>:w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --toc --self-contained --css statik.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
 " HTML Datei anzeigen
 map <C-F5> :!x-www-browser <C-R>=expand("%:r")<CR>.htm&<CR><CR>
 
@@ -262,8 +262,8 @@ map <C-F5> :!x-www-browser <C-R>=expand("%:r")<CR>.htm&<CR><CR>
 map <F6> :w<CR>:!pandoc -f markdown --bibliography=rumex.bib --csl=rumex.csl -t latex -V lang=ngermanb -o <C-R>=expand("%:r")<CR>.pdf %<CR><CR>
 imap <F6> <ESC>:w<CR>:!pandoc -f markdown --bibliography=rumex.bib --csl=rumex.csl -t latex -V lang=ngermanb -o <C-R>=expand("%:r")<CR>.pdf %<CR><CR>
 " PDF Datei mit Inhaltsverzeichnis erstellen
-map <A-F6> :w<CR>:!pandoc -f markdown --bibliography=rumex.bib --csl=rumex.csl -t latex --toc -V lang=ngermanb -o <C-R>=expand("%:r")<CR>.pdf %<CR><CR>
-imap <A-F6> :w<CR>:!pandoc -f markdown --bibliography=rumex.bib --csl=rumex.csl -t latex --toc -V lang=ngermanb -o <C-R>=expand("%:r")<CR>.pdf %<CR><CR>
+map <S-F6> :w<CR>:!pandoc -f markdown --bibliography=rumex.bib --csl=rumex.csl -t latex --toc -V lang=ngermanb -o <C-R>=expand("%:r")<CR>.pdf %<CR><CR>
+imap <S-F6> :w<CR>:!pandoc -f markdown --bibliography=rumex.bib --csl=rumex.csl -t latex --toc -V lang=ngermanb -o <C-R>=expand("%:r")<CR>.pdf %<CR><CR>
 " PDF Datei anzeigen
 map <C-F6> :!zathura <C-R>=expand("%:r")<CR>.pdf&<CR><CR>
 

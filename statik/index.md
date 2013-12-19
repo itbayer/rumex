@@ -38,7 +38,7 @@ Folgende F-Tasten wurden belegt.
 F5
 :	Erstellt die `.htm` Datei ohne Inhaltsverzeichnis.
 
-ALT+F5
+Shift+F5
 :	Erstellt die `.htm` Datei mit Inhaltsverzeichnis
 
 CTRL+F5
@@ -47,7 +47,7 @@ CTRL+F5
 F6
 :	Erstellt die `.pdf` Datei ohne Inhaltsverzeichnis
 
-ALT+F6
+Shift+F6
 :	Erstellt die `.pdf` Datei mit Inhaltsverzeichnis
 
 CTRL+F6
@@ -74,7 +74,7 @@ Diese CSS Datei ist ab Rumex Version 0.8.2 enthalten muss aber unter
 Umständen noch eingerichtet werden.
 
 	cd .rx
-	ln -s ../.rumex/default/f5.css f5.css
+	ln -s ../.rumex/default/statik.css statik.css
 
 
 
@@ -119,14 +119,14 @@ Dann braucht man noch drei zusätzliche Dateien im Verzeichnis `.rx`.
 
 - `rumex.bib`
 - `rumex.csl`
-- `f5.css`
+- `statik.css`
 
 Wobei der [Literatur Vorlage Stiel][Literatur Stil] und die CSS Datei nur verlinkt wird. In der `rumex.bib` werden dann die Literatur Verweise verwaltet.
 
 	cd .rx
 	touch rumex.bib
 	ln -s ../.rumex/default/din-1505-2.csl rumex.csl
-	ln -s ../.rumex/default/f5.css f5.css
+	ln -s ../.rumex/default/statik.css statik.css
 
 
 
