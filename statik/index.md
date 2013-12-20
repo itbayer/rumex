@@ -3,7 +3,6 @@
 % 2013
 
 
-
 Rumex verwendet pandocs markdown weil man damit sehr einfach und schnell Text erstellen 
 und in verschiedenen Formate wandeln kann.
 Für die Erstellung von Denkschriften[^memorandum] wurde zusätzlich eine, ich nenne sie 
@@ -39,24 +38,34 @@ F5
 :	Erstellt die `.htm` Datei ohne Inhaltsverzeichnis.
 
 Shift+F5
-:	Erstellt die `.htm` Datei mit Inhaltsverzeichnis
+:	Erstellt die `.htm` Datei mit Inhaltsverzeichnis bin zur Ebene 3.
 
-CTRL+F5
+Alt+F5
+:	Erstellt die `.htm` Datei mit kompletten Inhaltsverzeichnis
+	bzw. bis Ebene 5 da LaTeX auch nicht mehr Ebenen unterstützt
+	und die beiden Ausgabe Format annähernd identisch sein sollten.
+
+Ctrl+F5
 :	Öffnet die `.htm` Datei.
 
 F6
-:	Erstellt die `.pdf` Datei ohne Inhaltsverzeichnis
+:	Erstellt die `.pdf` Datei ohne Inhaltsverzeichnis.
 
 Shift+F6
-:	Erstellt die `.pdf` Datei mit Inhaltsverzeichnis
+:	Erstellt die `.pdf` Datei mit Inhaltsverzeichnis bis zur Ebene 3.
 
-CTRL+F6
+Alt+F6
+:	Erstellt die `.pdf` Datei mit kompletten Inhaltsverzeichnis.
+	Hier ist anzumerken dass LaTeX nur Inhaltsverzeichnisse bis zur Ebene 5 unterstützt.
+	Das HTML Format wurde entsprechend angepasst, siehe oben.
+
+Ctrl+F6
 :	Öffnet die `.pdf` Datei. Zur Zeit wird nur zathura unterstützt.
 
 F7
 :	Erstellt die restlichen Formate, `.epub`, `.odt` und `.mobi`.
 
-ALT-F7
+Ctrl-F7
 :	Öffnet die Literatur Verwaltung `rumex.bib`. Voraussetzung, jabref ist installiert. 
 
 
