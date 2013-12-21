@@ -199,6 +199,9 @@ Wer einen Wikipedia Artikel zitieren dem wird unter
 	}
 ~~~
 
+Dieses Format wird aber von jabref nicht unterstützt und gegen ein anders
+ausgetauscht. 
+
 >beide erzeugen den Eintrag der auf dieser Seite im Literaturverzeichnis
 zu finden ist.
 

@@ -256,18 +256,18 @@ vmap <Leader>rkl x:r!echo "/sh <C-R>""\|twiet -script<CR>
 "	Datei unter Umständen sehr groß wird.
 "	Außerdem werden die Bilder des Dokuments bei den Suchmaschinen
 "	nicht mehr aufgenommen.
-map <F5> :w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --css statik.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
-imap <F5> <ESC>:w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --css statik.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
+map <F5> :w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --css ../rxtpl/css/statik.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
+imap <F5> <ESC>:w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --css ../rxtpl/css/statik.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
 
 " HTML Datei mit Inhaltsverzeichnis bis Ebene 3 erstellen
-map <S-F5> :w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --toc --toc-depth=3 --css statik.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
-imap <S-F5> <ESC>:w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --toc --toc-depth=3 --css statik.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
+map <S-F5> :w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --toc --toc-depth=3 --css ../rxtpl/css/statik.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
+imap <S-F5> <ESC>:w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --toc --toc-depth=3 --css ../rxtpl/css/statik.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
 
 " HTML Datei mit kompletten Inhaltsverzeichnis bzw. bis Ebene 5 erstellen,
 "	da LaTeX auch nicht mehr Ebenen unterstützt und die Ausgabe Formate
 "	annähernd identisch sein sollten.
-map <A-F5> :w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --toc --toc-depth=5 --css statik.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
-imap <A-F5> <ESC>:w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --toc-depth=5 --toc --css statik.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
+map <A-F5> :w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --toc --toc-depth=5 --css ../rxtpl/css/statik.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
+imap <A-F5> <ESC>:w<CR>:!pandoc -f markdown -t html5 --bibliography=rumex.bib --csl=rumex.csl --toc-depth=5 --toc --css ../rxtpl/css/statik.css -s -o <C-R>=expand("%:r")<CR>.htm %<CR><CR>
 
 " HTML Datei anzeigen
 map <C-F5> :!x-www-browser <C-R>=expand("%:r")<CR>.htm&<CR><CR>
