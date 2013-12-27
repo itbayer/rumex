@@ -1,4 +1,4 @@
-/* .rx/default/f5.css */
+/* rxtpl/css/statik.css */
 
 /* ****************************************************
  * Allgemeine Einstellungen
@@ -137,7 +137,7 @@
 	 * Wird für das Einbinden von Videos verwendet da
 	 * diese nicht im Ausdruck angezeigt werden.
 	 */
-	div.drucker {
+	.noscreen {
 		display: none;
 	}
 
@@ -152,12 +152,25 @@
 
 @media print {
 
+	/* Jede H1 Überschrift, der Einzelseiten, soll
+	 * bei einem Ausdruck auf einer neuen Seite anfangen.
+	 *
+	 * Die erste H1 Überschrift ist von dieser Regel ausgenommen */
 
-	/* Jede H1 Überschrift auf einer neuen Seite beginnen */
+	body > h1:first-of-type {
+		page-break-before: avoid;
+	} 
+
 	body > h1 {
 		page-break-before:always;
 	}
 
+
+
+	/* Klasse die nicht gedruckt wird */
+	.noprint {
+		display: none;
+	}
 
 	/* Bilder die nicht mehr auf die Seite passen auf die 
 	 * maximal mögliche Größe skalieren. */
