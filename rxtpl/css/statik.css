@@ -1,4 +1,4 @@
-/* rxtpl/css/statik.css */
+/* .rx/default/f5.css */
 
 /* ****************************************************
  * Allgemeine Einstellungen
@@ -11,11 +11,22 @@
 		border-bottom: 1px solid silver;
 	}
 
+
+	/* Inhaltsverzeichnis */
 	nav#TOC {
 		border-bottom: 1px solid silver;
 		font-size: 0.8em;
 	} 
 
+	/* Inhaltsverzeichnis beschriften */
+	nav#TOC:before {
+		content: "Inhaltsverzeichnis";
+		display: block;
+		font-size: 1.7em;
+		padding-bottom: .7em;
+		padding-left: 1em;
+		padding-top: .7em;
+	}
 
 	section.footnotes {
 		color: gray;
@@ -112,6 +123,15 @@
 		counter-increment: bild; /* Zähler für die Bild Beschriftung um eins hoch setzen */
 		content: "Abbildung " counter(bild) ": "; /*... und Beschriftung voranstellen. */
 	}
+
+	/* Literatur Verzeichnis beschriften */
+	.references:before {
+		content: "Literaturverzeichnis";
+		display: block;
+		font-size: 2em;
+		margin-top: 4em;
+		font-weight: bold;
+	}
 }
 
 
@@ -152,54 +172,54 @@
 
 @media print {
 
-	/* Jede H1 Überschrift, der Einzelseiten, soll
-	 * bei einem Ausdruck auf einer neuen Seite anfangen.
-	 *
-	 * Die erste H1 Überschrift ist von dieser Regel ausgenommen */
+/* Jede H1 Überschrift, der Einzelseiten, soll
+ * bei einem Ausdruck auf einer neuen Seite anfangen.
+ *
+ * Die erste H1 Überschrift ist von dieser Regel ausgenommen */
 
-	body > h1:first-of-type {
-		page-break-before: avoid;
-	} 
+body > h1:first-of-type {
+	page-break-before: avoid;
+} 
 
-	body > h1 {
-		page-break-before:always;
-	}
+body > h1 {
+	page-break-before:always;
+}
 
 
 
-	/* Klasse die nicht gedruckt wird */
-	.noprint {
-		display: none;
-	}
+/* Klasse die nicht gedruckt wird */
+.noprint {
+	display: none;
+}
 
-	/* Bilder die nicht mehr auf die Seite passen auf die 
-	 * maximal mögliche Größe skalieren. */
-	img {
-		max-width: 100%;
-		max-height: 100%;
-	}
+/* Bilder die nicht mehr auf die Seite passen auf die 
+ * maximal mögliche Größe skalieren. */
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
 
-	/* Inhaltsverzeichnis für den Ausdruck ausblenden */
-	nav#TOC {
-		display: none;
-	}
+/* Inhaltsverzeichnis für den Ausdruck ausblenden */
+nav#TOC {
+	display: none;
+}
 
-	/* Für den Ausdruck brauchen die Links nicht hervorgehoben werden
-	 * da diese so wie so nicht funktionieren
-	 */
-	a {
-		color: black;
-		text-decoration: none;
-	}
+/* Für den Ausdruck brauchen die Links nicht hervorgehoben werden
+ * da diese so wie so nicht funktionieren
+ */
+a {
+	color: black;
+	text-decoration: none;
+}
 
-	/* Inhalte die per iframe eingebunden werden ausblenden
-	 * da diese beim Drucken nicht angezeigt werden.
-	 * Der Platz für dieses Element wird aber reserviert 
-	 * so entsteht ein unschöner Leerraum.
-	 */
-	iframe {
-		display: none;
-	}
+/* Inhalte die per iframe eingebunden werden ausblenden
+ * da diese beim Drucken nicht angezeigt werden.
+ * Der Platz für dieses Element wird aber reserviert 
+ * so entsteht ein unschöner Leerraum.
+ */
+iframe {
+	display: none;
+}
 }
 
 
