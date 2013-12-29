@@ -172,13 +172,14 @@ index.rx0x aufgenommen.
 
 	# Vortext Abschluss und Link zur eigentlichen Seite setzen ...
 	# .. nicht anzeigen bei start.rx0s.
-	print INDEX "[... Seite anzeigen]($htmlname)\n\n" if ($name ne $start_rx && $name ne $weblog_rx);
+	print INDEX "[... weiter lesen]($htmlname)\n\n" if ($name ne $start_rx && $name ne $weblog_rx);
 
 	print INDEX "\n";
 	print INDEX "</div>\n";
 	
 	# Die Weblog Datei bekommt, zum öffnen, einen anderen Link.
-	# Dieser Link muss nach dem DIV Tag gesetzt erden da sonst die Klasse
+	# Dieser Link muss nach dem DIV Tag "indexliste" gesetzt 
+	# werden da sonst die Klasse
 	# {.webloglink} von pandoc nicht gesetzt wird.
 	print INDEX "#### [... ältere Weblog Einträge anzeigen]($htmlname) {.webloglink}\n\n" if($name eq $weblog_rx);
 
