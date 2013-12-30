@@ -57,7 +57,7 @@ $(document).ready(function() {
 	// klick auf die Überschrift h1
 	$("#seite h1").click(function() {
 		// "... weiter lesen" Link ausblenden
-		$(this).nextAll(".weiter_lesen").first().hide('500',function(){
+		$(this).nextAll(".weiter_lesen").first().hide(500,function(){
 			// ...und Text in div.weblog einblenden
 			$(this).nextAll("div.weblog").first().slideDown(1500);
 		});
@@ -66,7 +66,7 @@ $(document).ready(function() {
 	// klick auf Link "weiter lesen"
 	$('.weiter_lesen').click(function() {
 		// "... weiter lesen" Link ausblenden
-		$(this).hide('500', function(){
+		$(this).hide(500, function(){
 			// ...und Text in div.weblog einblenden
 			$(this).next().slideDown(1500);
 		});
