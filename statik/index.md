@@ -26,10 +26,11 @@ innerhalb (g)vim zur Verfügung stehen. \
 Auch wurde die [Literaturfunktion](#litfunk) von Pandoc eingebaut sodass Verweise
 auf anderen Quellen in den Denkschriften verwendet werden können.
 
-[^self-contained]: Diese Eigenschaft wurde wieder entfernt da bei Dateien mit sehr 
-vielen Bildern oder gar Videos, die auch in die HTML Datei eingebunden werden,
-diese sehr groß wird. 
-Bei der Verwaltung durch git wirkt sich diese Eigenschaft auch ungünstig aus.
+[^self-contained]: Diese Eigenschaft wurde wieder entfernt da eine Datei
+mit sehr vielen Bildern oder gar Videos, die alle in die HTML 
+Datei eingebunden werden, sehr groß wird. 
+Bei der Verwaltung durch git wirkt sich diese Eigenschaft 
+auch ungünstig aus.
 
 
 
