@@ -4,20 +4,38 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <meta name="author" content="Stefan Blechschmidt">
-  <meta name="dcterms.date" content="2013-01-01">
-  <title>HTML, PDF, epub, odt und mobi Dateien mit Rumex erstellen</title>
+  <meta name="author" content="mit pandocs markdown unter Rumex erstellen">
+  <title>HTML, PDF, epub, odt und mobi</title>
   <style type="text/css">code{white-space: pre;}</style>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
   <link rel="stylesheet" href="../rxtpl/css/statik.css">
 </head>
 <body>
 <header>
-<h1 class="title">HTML, PDF, epub, odt und mobi Dateien mit Rumex erstellen</h1>
-<h2 class="author">Stefan Blechschmidt</h2>
-<h3 class="date">2013</h3>
+<h1 class="title">HTML, PDF, epub, odt und mobi</h1>
+<h2 class="author">mit pandocs markdown unter Rumex erstellen</h2>
+<h3 class="date">Stefan Blechschmidt, 2013</h3>
 </header>
 <p>Rumex verwendet pandocs markdown weil man damit sehr einfach und schnell Text erstellen und in verschiedenen Formate wandeln kann. Für die Erstellung von Denkschriften<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> wurde zusätzlich eine, ich nenne sie <em>statik Funktion</em> eingebaut. Mit dieser Funktion ist es möglich innerhalb eines Unterverzeichnisses verschiedenen Ausgabe Formate zu erstellen. Zur Zeit werden, von Rumex, folgenden Formate unterstützt:</p>
 <ul>
@@ -27,9 +45,9 @@
 <li>.epub E-Book</li>
 <li>.mobi E-Book (Kindle)</li>
 </ul>
-<p>Erstellt werden die einzelnen Formate über <a href="#rumex-kurztasten">Funktionstasten</a>. Eine Besonderheit ist das die <code>.htm</code> Datei auch ohne die zusätzlichen Dateien wie Bilder oder die CSS Datei funktionieren. Alle Daten werden in die <code>.htm</code> Datei eingebunden. Auch wurde die <a href="#litfunk">Literaturfunktion</a> von Pandoc eingebaut sodass Verweise auf anderen Quellen in den Denkschriften verwendet werden können.</p>
+<p>Erstellt werden die einzelnen Formate über <a href="#rumex-kurztasten">Funktionstasten</a> die innerhalb (g)vim zur Verfügung stehen.<br /><del>Eine Besonderheit ist dass die <code>.htm</code> Datei auch ohne die zusätzlichen Dateien wie</del> <del>Bilder oder die CSS Datei funktionieren. Alle Daten werden in die <code>.htm</code> Datei eingebunden.</del><a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a><br />Auch wurde die <a href="#litfunk">Literaturfunktion</a> von Pandoc eingebaut sodass Verweise auf anderen Quellen in den Denkschriften verwendet werden können.</p>
 <h1 id="rumex-kurztasten">Die (g)vim statik Kurztaste in Rumex</h1>
-<p>Ab der Version 0.8.2 sind die Funktionstasten in Rumex enthalten. Folgende F-Tasten wurden belegt.</p>
+<p>Ab der Rumex Version 0.8.2 sind die Funktionstasten in Rumex enthalten. Folgende F-Tasten wurden belegt.</p>
 <dl>
 <dt>F5</dt>
 <dd><p>Erstellt die <code>.htm</code> Datei ohne Inhaltsverzeichnis.</p>
@@ -69,6 +87,14 @@
 ln -s ../.rumex/default/statik.css statik.css</code></pre>
 <h1 id="litfunk">Die Literaturverzeichnis Funktion</h1>
 <p>Bei lesen des Artikels <em>&quot;PDF-Dokumente schreiben mit Pandoc und Markdown&quot; <span class="citation" data-cites="stenderprolinux">(<span style="font-variant: small-caps;">Stender</span>, 2013)</span></em> ist mir die Idee gekommen die Rumex <em>statik Funktion</em> mit einem Literaturverzeichnis, die ja auch in pandoc zur Verfügung steht, zu versehen.</p>
+<h4 id="nachteil-des-literaturverzeichnisses">Nachteil des Literaturverzeichnisses</h4>
+<p>Das Literaturverzeichnis wird immer gesetzt, auch dann wenn es nicht verwendet wird. Bedingt durch die CSS Formatierung</p>
+<pre class="sourceCode css"><code class="sourceCode css"><span class="fl">.references</span><span class="dv">:before</span> <span class="kw">{</span>
+    <span class="kw">content:</span> <span class="st">&quot;Literaturverzeichnis&quot;</span><span class="kw">;</span></code></pre>
+<p>wird somit die Überschrift <em>Literaturverzeichnis</em> immer angezeigt. Will man diese ausschalten kann man folgenden Trick verwenden.</p>
+<p>Man schreibt dazu in die letzte Zeile des Dokuments die HTML Anweisung</p>
+<pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;display:none;&quot;</span><span class="kw">&gt;</span></code></pre>
+<p>Diese Anweisung erstellt zwar eine fehlerhaften HTML Seite. Der Browser wird aber diesen Fehler automatisch korrigieren. Der div TAG, der das Literaturverzeichnis definiert, wird somit von dem <code>display:none</code> div TAG umschlossen und ausgeblendet.</p>
 <h2 id="installation">Installation</h2>
 <p>Für die Verwendung der Literaturfunktion muss pandoc um das Zusatzprogramm <code>pandoc-citeproc</code> erweitert werden. Wer Pandoc über die Paketverwaltung installiert hat braucht hier nichts zu machen. Wer Pandoc manuell, so wie ich, installiert hat muss dieses Programm nachinstallieren.</p>
 <p>Dazu erweitert man die Installationszeile um das neue Programm</p>
@@ -78,7 +104,7 @@ cabal install pandoc pandoc-citeproc</code></pre>
 <pre><code>sudo ln -s /home/USER/.cabal/bin/pandoc /usr/local/bin/.
 sudo ln -s /home/USER/.cabal/bin/pandoc-citeproc /usr/local/bin/.</code></pre>
 <h3 id="nachinstallation-rumex">Nachinstallation Rumex</h3>
-<p>Wer Rumex schon im Einsatz hat muss für die Erweiterung ein wenig Hand anlegen. Zu erste holt man sich die neue Version<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> von rumex.</p>
+<p>Wer Rumex schon im Einsatz hat muss für die Erweiterung ein wenig Hand anlegen. Zu erste holt man sich die neue Version<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> von rumex.</p>
 <p>Dann braucht man noch drei zusätzliche Dateien im Verzeichnis <code>.rx</code>.</p>
 <ul>
 <li><code>rumex.bib</code></li>
@@ -100,7 +126,7 @@ ln -s ../.rumex/default/statik.css statik.css</code></pre>
 <ul>
 <li><p>Auf <span class="citation" data-cites="wiki:bibtex">Wikipedia (2013)</span> findet man eine schöne Beschreibung über die Literatur Verwaltung mit BibTex.</p></li>
 <li><p>Die BibTex Einträge muss man sich unter Umständen nicht einmal selber erstellen. Da verschiedene Seiten entsprechende Dienste anbieten. Gelungen finde ich die Seite von <a href="http://www.literatur-generator.de/">http://www.literatur-generator.de/</a> aber auch auf <a href="http://lead.to/amazon/en/?op=bt">http://lead.to/amazon/en/?op=bt</a> findet man BibTeX Einträge. Zwar muss man diese unter Umständen noch ein wenig überarbeiten aber das Grund Gerüst wird einem sozusagen frei Haus geliefert.<br />Wer einen Wikipedia Artikel zitieren dem wird unter <code>&quot;Werkzeuge -&gt; Seite zitieren&quot;</code> weiter geholfen.</p></li>
-<li><p>Für das zitieren von Internetseiten verwende ich folgende Formate.</p></li>
+<li><p>Für das zitieren von Internetseiten verwende ich folgende Formate. Beide erzeugen dabei den Eintrag der auf dieser Seite im Literaturverzeichnis zu finden ist.</p></li>
 </ul>
 <pre><code>    @ELECTRONIC{ wiki:bibtex,
         author = &quot;Wikipedia&quot;,
@@ -110,7 +136,10 @@ ln -s ../.rumex/default/statik.css statik.css</code></pre>
         note = &quot;[Online; Stand 18. Dezember 2013]&quot;
     }</code></pre>
 <blockquote>
-<p>...oder</p>
+...oder
+<div style="padding-left:5em; font-size: .7em; color: blue; width: 60%;">
+<strong>Achtung:</strong> Dieses Format wird von jabref nicht unterstützt und gegen ein anders ausgetauscht. Bei dem Einsatz von Jabref am besten ELECTRONIC verwenden.
+</div>
 </blockquote>
 <pre><code>    @WWW{ wiki:bibtex,
         author = &quot;Wikipedia&quot;,
@@ -119,10 +148,6 @@ ln -s ../.rumex/default/statik.css statik.css</code></pre>
         url = &quot;http://de.wikipedia.org/w/index.php?title=BibTeX&amp;oldid=124228120&quot;, 
         note = &quot;[Online; Stand 18. Dezember 2013]&quot;
     }</code></pre>
-<p>Dieses Format wird aber von jabref nicht unterstützt und gegen ein anders ausgetauscht.</p>
-<blockquote>
-<p>beide erzeugen den Eintrag der auf dieser Seite im Literaturverzeichnis zu finden ist.</p>
-</blockquote>
 <h1 id="verwendung-in--und-außerhalb-von-rumex">Verwendung in- und außerhalb von Rumex?</h1>
 <p>Innerhalb von Rumex erstellt man in einem separatem Unterverzeichnis die entsprechende markdown Datei und dann kann es auch schon los gehen.</p>
 <p>Außerhalb von Rumex kann man diese Funktion natürlich auch verwenden. Mit Außerhalb meine ich Denkschriften die nicht veröffentlicht werden. Dazu gibt es zwei Möglichkeiten.</p>
@@ -146,7 +171,6 @@ ln -s ../.rumex/default/statik.css statik.css</code></pre>
 <p>Die PDF Datei dieser Beschreibung kann man sich <a href="index.pdf">hier</a> ansehen. Die Markdown Quelldatei kann man sich <a href="index.md">hier</a> holen.</p>
 <hr />
 <div class="references">
-<h1>Literaturverzeichnis</h1>
 <p><span style="font-variant: small-caps;">Stender, Daniel</span>: <em>PDF-Dokumente schreiben mit Pandoc und Markdown</em>. URL <a href="http://www.pro-linux.de/artikel/2/1635/3,bibliographie.html">http://www.pro-linux.de/artikel/2/1635/3,bibliographie.html</a></p>
 <p><span style="font-variant: small-caps;">Wikipedia</span>: <em>BibTeX — Wikipedia, Die freie Enzyklopädie</em>. URL <a href="http://de.wikipedia.org/w/index.php?title=BibTeX&amp;oldid=124228120">http://de.wikipedia.org/w/index.php?title=BibTeX&amp;oldid=124228120</a>. — [Online; Stand 18. Dezember 2013]</p>
 </div>
@@ -154,7 +178,8 @@ ln -s ../.rumex/default/statik.css statik.css</code></pre>
 <hr />
 <ol>
 <li id="fn1"><p>Neudeutsch würde man die Denkschrift als Memorandum bezeichnen.<a href="#fnref1">↩</a></p></li>
-<li id="fn2"><p>Die Literatur Erweiterung ist ab der Version 0.8.2 enthalten.<a href="#fnref2">↩</a></p></li>
+<li id="fn2"><p>Diese Eigenschaft wurde wieder entfernt da bei Dateien mit sehr vielen Bildern oder gar Videos, die auch in die HTML Datei eingebunden werden, diese sehr groß wird. Bei der Verwaltung durch git wirkt sich diese Eigenschaft auch ungünstig aus.<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>Die Literatur Erweiterung ist ab der Rumex Version 0.8.2 enthalten.<a href="#fnref3">↩</a></p></li>
 </ol>
 </section>
 </body>

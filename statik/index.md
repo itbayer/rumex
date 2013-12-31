@@ -1,6 +1,6 @@
-% HTML, PDF, epub, odt und mobi Dateien mit Rumex erstellen
-% Stefan Blechschmidt
-% 2013
+% HTML, PDF, epub, odt und mobi
+% mit pandocs markdown unter Rumex erstellen
+% Stefan Blechschmidt, 2013
 
 
 Rumex verwendet pandocs markdown weil man damit sehr einfach und schnell Text erstellen 
@@ -19,19 +19,23 @@ Zur Zeit werden, von Rumex, folgenden Formate unterstützt:
 - .epub E-Book
 - .mobi E-Book (Kindle)
 
-Erstellt werden die einzelnen Formate über [Funktionstasten](#rumex-kurztasten).
-Eine Besonderheit ist das die `.htm` Datei auch ohne die zusätzlichen Dateien wie 
-Bilder oder die CSS Datei funktionieren. Alle Daten werden in die `.htm` Datei eingebunden.
+Erstellt werden die einzelnen Formate über [Funktionstasten](#rumex-kurztasten) die 
+innerhalb (g)vim zur Verfügung stehen. \
+~~Eine Besonderheit ist dass die `.htm` Datei auch ohne die zusätzlichen Dateien wie~~
+~~Bilder oder die CSS Datei funktionieren. Alle Daten werden in die `.htm` Datei eingebunden.~~[^self-contained] \
 Auch wurde die [Literaturfunktion](#litfunk) von Pandoc eingebaut sodass Verweise
 auf anderen Quellen in den Denkschriften verwendet werden können.
 
-
+[^self-contained]: Diese Eigenschaft wurde wieder entfernt da bei Dateien mit sehr 
+vielen Bildern oder gar Videos, die auch in die HTML Datei eingebunden werden,
+diese sehr groß wird. 
+Bei der Verwaltung durch git wirkt sich diese Eigenschaft auch ungünstig aus.
 
 
 
 # Die (g)vim statik Kurztaste in Rumex {#rumex-kurztasten}
 
-Ab der Version 0.8.2 sind die Funktionstasten in Rumex enthalten.
+Ab der Rumex Version 0.8.2 sind die Funktionstasten in Rumex enthalten.
 Folgende F-Tasten wurden belegt.
 
 F5
@@ -94,6 +98,32 @@ Bei lesen des Artikels _"PDF-Dokumente schreiben mit Pandoc und Markdown"
 [@stenderprolinux]_ ist mir die Idee gekommen die Rumex _statik Funktion_ mit einem 
 Literaturverzeichnis, die ja auch in pandoc zur Verfügung steht, zu versehen.
 
+#### Nachteil des Literaturverzeichnisses
+
+Das Literaturverzeichnis wird immer gesetzt, auch dann wenn es nicht
+verwendet wird.
+Bedingt durch die CSS Formatierung 
+
+~~~{.css}
+.references:before {
+	content: "Literaturverzeichnis";
+~~~
+
+wird somit die Überschrift _Literaturverzeichnis_ immer angezeigt.
+Will man diese ausschalten kann man folgenden Trick verwenden.
+
+Man schreibt dazu in die letzte Zeile des Dokuments die
+HTML Anweisung
+
+~~~{.html}
+<div style="display:none;">
+~~~
+
+Diese Anweisung erstellt zwar eine fehlerhaften HTML Seite.
+Der Browser wird aber diesen Fehler automatisch korrigieren.
+Der div TAG, der das Literaturverzeichnis definiert, wird somit
+von dem `display:none` div TAG umschlossen und ausgeblendet.
+
 
 ## Installation
 
@@ -122,7 +152,7 @@ Wer Rumex schon im Einsatz hat muss für die Erweiterung ein wenig
 Hand anlegen.
 Zu erste holt man sich die neue Version[^biberweiterung] von rumex. 
 
-[^biberweiterung]: Die Literatur Erweiterung ist ab der Version 0.8.2 enthalten.
+[^biberweiterung]: Die Literatur Erweiterung ist ab der Rumex Version 0.8.2 enthalten.
 
 Dann braucht man noch drei zusätzliche Dateien im Verzeichnis `.rx`.
 
@@ -176,6 +206,7 @@ Wer einen Wikipedia Artikel zitieren dem wird unter
 `"Werkzeuge -> Seite zitieren"` weiter geholfen.
 
 - Für das zitieren von Internetseiten verwende ich folgende Formate.
+Beide erzeugen dabei den Eintrag der auf dieser Seite im Literaturverzeichnis zu finden ist.
 
 ~~~
 	@ELECTRONIC{ wiki:bibtex,
@@ -188,6 +219,11 @@ Wer einen Wikipedia Artikel zitieren dem wird unter
 ~~~
 
 >...oder 
+<div style="padding-left:5em; font-size: .7em; color: blue; width: 60%;">
+**Achtung:** Dieses Format wird von jabref nicht unterstützt 
+und gegen ein anders ausgetauscht. 
+Bei dem Einsatz von Jabref am besten ELECTRONIC verwenden.
+</div>
 
 ~~~
 	@WWW{ wiki:bibtex,
@@ -199,11 +235,7 @@ Wer einen Wikipedia Artikel zitieren dem wird unter
 	}
 ~~~
 
-Dieses Format wird aber von jabref nicht unterstützt und gegen ein anders
-ausgetauscht. 
 
->beide erzeugen den Eintrag der auf dieser Seite im Literaturverzeichnis
-zu finden ist.
 
 # Verwendung in- und außerhalb von Rumex?
 
@@ -276,5 +308,4 @@ Die Markdown Quelldatei kann man sich [hier](index.md) holen.
 ----
 
 
-# Literaturverzeichnis
 
