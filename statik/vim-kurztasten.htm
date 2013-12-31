@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>VIM-Kurztasten</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="../rxtpl/css/statik.css">
+</head>
+<body>
+<header>
+<h1 class="title">VIM-Kurztasten</h1>
+</header>
+<p>Alle Rumex Kurztasten, für den Editor VIM, beginnen mit einem <code>,r</code><a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. Für die Bedienung von Rumex braucht mein nur ein paar. Viele der Kurztasten beinhalten eine Kombination einzelner Kurztasten bzw. Befehle.</p>
+<p>Am Anfang ist es sicher einfacher GVIM zu verwenden, da hier ein Menü eingebaut ist welches unter anderem auch die Kurztasten anzeigt.</p>
+<p>Wer jedoch mit der <a href="beschreibung.html#homepage-änderung-schnell-und-immer-aktuell">tilda</a> Unterstützung arbeitet sollte sich schon ein paar Kurztasten einprägen.</p>
+<!-- schnipp -->
+
+<h1 id="textbausteine">Textbausteine</h1>
+<p>Mittels dieser Kurztasten können Textbausteine eingebunden werden.</p>
+<h2 id="rnd-rumexneuedatei"><code>,rnd</code> (RumexNeueDatei)</h2>
+<p>Erstellt ein neues Datei Gerüst. Dabei wird der Dateiname gleich mit eingebunden.</p>
+<p><strong>So schaut's aus</strong></p>
+<pre><code>% vim-kurztasten
+%
+%
+
+
+&lt;!--
+
+ [vim-kurztasten](vim-kurztasten.html)
+ =======================================================
+
+Vortext INDEX
+
+--&gt;
+
+Vortext INDEX und SEITE
+
+&lt;!-- schnipp --&gt;
+
+TEXT DER SEITE
+
+&lt;!-- vim: set ft=pandoc: --&gt;</code></pre>
+<h2 id="rnn-rumexneuenachricht"><code>,rnn</code> (RumexNeueNachricht)</h2>
+<p>Erstellt einen neuen News Eintrag. Diese Kurztaste macht eigentlich nur in der Datei <code>rss.rx0x</code> Sinn. Das Datum hinter dem Titel, Überschrift 1, wird von Rumex gesetzt, ist also immer die aktuelle Systemzeit beim ausführen von <code>,rnn</code>.</p>
+<pre><code> # Neue Nachricht &lt;!-- 2013/11/10 00:30 --&gt;
+
+&lt;!--
+!&gt; Link: http://www.it-bayer.de/rumex/
+!&gt; Autor: IT-Bayer
+!&gt; Kategorie: Neues
+--&gt;
+
+Ab hier geht die neuen Nachricht los.</code></pre>
+<h2 id="rwl-rumexweiterleitung"><code>,rwl</code> (RumexWeiterLeitung)</h2>
+<p>Erstellt einen neue Weiterleitungsseite.</p>
+<p><strong>So schaut's aus</strong></p>
+<pre><code>% Weiterleitung nach ....html
+%
+%
+
+
+&lt;script language=&quot;javascript&quot;&gt;
+&lt;!--
+//window.location.href=&quot;....html&quot;;
+// --&gt;
+&lt;/script&gt;</code></pre>
+<p>Anmerkung: Die Zeile <code>window.location.href=&quot;....html&quot;;</code> wurde hier Kommentiert da sonst die javascript Weiterleitung greift. Normalerweise findet man kein <code>//</code> vor der Zeile <code>window.location.href=....html</code>.</p>
+<h2 id="rmk-rumexmootitkommentar"><code>,rmk</code> (RumexMootitKommentar)</h2>
+<p>Erstellt einen Moot.it Kommentar Abschnitt. Als Kennzeichnung wird der Dateiname ohne <code>rx??</code> eingebaut / angehängt.</p>
+<pre><code> # Kommentare
+
+&lt;a class=&quot;moot&quot; href=&quot;https://moot.it/i/rumex/blog/vim-kurztasten&quot;&gt;&lt;/a&gt;</code></pre>
+<h2 id="rnb-rumexneuenweblog"><code>,rnb</code> (RumexNeuenweBlog)</h2>
+<p>Erstelle einen neuen Weblog Eintrag.</p>
+<pre><code> # Rumex WebLog
+
+_am 09.09.2013 um 15:21 schrieb IT-Bayer_
+
+Text für den Eintrag
+
+&lt;div class=&quot;weblog&quot;&gt;
+Text der vorerst ausgeblendet ist.
+&lt;/div&gt;</code></pre>
+<h1 id="git-kommandos">Git Kommandos</h1>
+<h2 id="rgp-rumexgitpull"><code>,rgp</code> (RumexGitPull)</h2>
+<p>Git pull</p>
+<h2 id="rgs-rumexgitstatus"><code>,rgs</code> (RumexGitStatus)</h2>
+<p>Git status</p>
+<h1 id="text-formatierung">Text Formatierung</h1>
+<h2 id="rff-rumexformatfett"><code>,rff</code> (RumexFormatFett)</h2>
+<p>Markierte Textstelle fett darstellen</p>
+<h2 id="rfk-rumexformatkursiv"><code>,rfk</code> (RumexFormatKursiv)</h2>
+<p>Markierte Textstelle kursiv darstellen</p>
+<h2 id="rfl-rumexformatliste"><code>,rfl</code> (RumexFormatListe)</h2>
+<p>Markierte Zeilen in eine Liste wandeln</p>
+<h2 id="rfn-rumexformatnummernliste"><code>,rfn</code> (RumexFormatNummernliste)</h2>
+<p>Markierte Zeile in eine Nummernliste wandeln</p>
+<h2 id="rfb-rumexformatblock"><code>,rfb</code> (RumexFormatBlock)</h2>
+<p>Markierte Zeile in einen Block wandeln</p>
+<dl>
+<dt>,rfc</dt>
+<dd><p>Markierte Zeile als Code darstellen</p>
+</dd>
+<dt>,spn2</dt>
+<dd><p>Text mit 2er Spalten Formatierung umschließen</p>
+</dd>
+<dt>,spn3</dt>
+<dd><p>Text mit 3er Spalten Formatierung umschließen</p>
+</dd>
+<dt>,spn4</dt>
+<dd><p>Text mit 4er Spalten Formatierung umschließen</p>
+</dd>
+</dl>
+<h1 id="make-befehle">Make Befehle</h1>
+<h2 id="rma-rumexmakeall"><code>,rma</code> (RumexMakeAll)</h2>
+<p>Speichert alle offenen Dokumente und erstellt daraus die HTML Datei.</p>
+<h2 id="rmb-rumexmakebild"><code>,rmb</code> (RumexMakeBild)</h2>
+<p>Erstellt die unterschiedlichen Bildgrößen</p>
+<h2 id="rmca-rumexmakecleanall"><code>,rmca</code> (RumexMakeCleanAll)</h2>
+<p>Löscht alle html Dateien, alle Bildergrößen und alle xml Dateien. beinhaltet die drei Befehle <code>make bclean</code>, <code>make hclean</code>, <code>make xclean</code>.</p>
+<h2 id="rmcb-rumexmakecleanbilder"><code>,rmcb</code> (RumexMakeCleanBilder)</h2>
+<p>Löscht alle Bildgrößen aus dem <code>bilder/</code> Verzeichnis. Es werden nur die Bilder gelöscht die von Rumex erstellt wurden siehe <code>make bilder</code>.</p>
+<h2 id="rmch-rumexmakecleanhtml"><code>,rmch</code> (RumexMakeCleanHtml)</h2>
+<p>Löscht alle <code>.html</code> Dateien die von Rumex erstellt wurden.</p>
+<h2 id="rmcx-rumexmakecleanxml"><code>,rmcx</code> (RumexMakeCleanXml)</h2>
+<p>Löscht alle <code>.xlm</code> Dateien die von Rumex erstellt wurden.</p>
+<h2 id="rmcf5-rumexmakecleanf8htm"><code>,rmcf5</code> (RumexMakeCleanF8htm)</h2>
+<p>Löscht alle <code>.htm</code> Dateien die mittels der Gvim Taste F5, siehe <a href="http://www.it-bayer.de/rumex/statik/index.htm">HTML und PDF Dateine mit pandoc und gvim erstellen</a>, erstellt wurden.</p>
+<h2 id="rmh-rumexmakehtml"><code>,rmh</code> (RumexMakeHtml)</h2>
+<p>Erstellt die <code>.html</code> Dateien.</p>
+<h2 id="rmi-rumexmakeindex"><code>,rmi</code> (RumexMakeIndex)</h2>
+<p>Erstellt die index Datei.</p>
+<h2 id="rmm-rumexmakesitemap"><code>,rmm</code> (RumexMakesiteMap)</h2>
+<p>Erstellt die sitemap Datei.</p>
+<h2 id="rmo-rumexmakeonline"><code>,rmo</code> (RumexMakeOnline)</h2>
+<p>Speichert alle Dateien und stellt diese online.</p>
+<h2 id="rmr-rumexmakerss"><code>,rmr</code> (RumexMakeRss)</h2>
+<p>Erstellt die rss Datei.</p>
+<h2 id="rms-rumexmakesuche"><code>,rms</code> (RumexMakeSuche)</h2>
+<p>Erstellt die Rumex Suche, bzw. die Dateiliste die für die Suche verwendet werden soll.</p>
+<h1 id="vorschau">Vorschau</h1>
+<h2 id="rsf-rumexshowfile"><code>,rsf</code> (RumexShowFile)</h2>
+<p>Zeigt eine Vorschau der Seite der Datei <code>file:///</code> im Standardbrowser.</p>
+<h2 id="rsw-rumexshowwww"><code>,rsw</code> (RumexShowWww)</h2>
+<p>Zeigt eine Vorschau der Seite <strong>Online</strong> im Standardbrowser.</p>
+<h2 id="rsl-rumexshowlocal"><code>,rsl</code> (RumexShowLocal)</h2>
+<p>Zeigt eine Vorschau der Seite auf dem eigenen Rechner. Diese Kurztaste kann aber nur verwendet werden wenn auf dem Rechner der Apache installiert und entsprechend eingerichtet ist.</p>
+<h1 id="sonstiges">Sonstiges</h1>
+<h2 id="rku"><code>,rku</code></h2>
+<p>Öffnet das Unterverzeichnis <code>.rx</code> in einem neuen VimTab Fenster. Keine Ahnung warum ich diese Kurztaste so benannt habe.</p>
+<h2 id="ros-rumexopenstart"><code>,ros</code> (RumexOpenStart)</h2>
+<p>Öffnet die <code>start.rx0s</code> in einen neuen VIM Tab Fenster.</p>
+<h2 id="ror-rumexopenrss"><code>,ror</code> (RumexOpenRss)</h2>
+<p>Öffnet die <code>rss.rx0x</code> in einen neuen VIM Tab Fenster.</p>
+<!-- vim: set ft=pandoc: -->
+
+
+<div class="references">
+
+</div>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Ausnahmen bestätigen die Regel. So wurde für die zwei spaltige Darstellung<br /><code>,spn2</code> verwendet.<a href="#fnref1">↩</a></p></li>
+</ol>
+</section>
+</body>
+</html>

@@ -2,14 +2,6 @@
 %
 %
 
-
-<!--
-
-[VIM-Kurztasten](vim-kurztasten.html)
-=======================================================
-
--->
-
 Alle Rumex Kurztasten, für den Editor VIM, beginnen mit einem `,r`[^ausnahmen].
 Für die Bedienung von Rumex braucht mein nur ein paar.
 Viele der Kurztasten beinhalten eine Kombination einzelner Kurztasten bzw.
@@ -386,7 +378,6 @@ Keine Ahnung warum ich diese Kurztaste so benannt habe.
 ## `,ror` (RumexOpenRss)
 
 Öffnet die `rss.rx0x` in einen neuen VIM Tab Fenster.
-
 
 
 <!-- vim: set ft=pandoc: -->
