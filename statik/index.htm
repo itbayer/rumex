@@ -91,10 +91,7 @@ ln -s ../.rumex/default/statik.css statik.css</code></pre>
 <p>Das Literaturverzeichnis wird immer gesetzt, auch dann wenn es nicht verwendet wird. Bedingt durch die CSS Formatierung</p>
 <pre class="sourceCode css"><code class="sourceCode css"><span class="fl">.references</span><span class="dv">:before</span> <span class="kw">{</span>
     <span class="kw">content:</span> <span class="st">&quot;Literaturverzeichnis&quot;</span><span class="kw">;</span></code></pre>
-<p>wird somit die Überschrift <em>Literaturverzeichnis</em> immer angezeigt. Will man diese ausschalten kann man folgenden Trick verwenden.</p>
-<p>Man schreibt dazu in die letzte Zeile des Dokuments die HTML Anweisung</p>
-<pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;display:none;&quot;</span><span class="kw">&gt;</span></code></pre>
-<p>Diese Anweisung erstellt zwar eine fehlerhaften HTML Seite. Der Browser wird aber diesen Fehler automatisch korrigieren. Der div TAG, der das Literaturverzeichnis definiert, wird somit von dem <code>display:none</code> div TAG umschlossen und ausgeblendet.</p>
+<p>wird somit die Überschrift <em>Literaturverzeichnis</em> immer angezeigt.</p>
 <h2 id="installation">Installation</h2>
 <p>Für die Verwendung der Literaturfunktion muss pandoc um das Zusatzprogramm <code>pandoc-citeproc</code> erweitert werden. Wer Pandoc über die Paketverwaltung installiert hat braucht hier nichts zu machen. Wer Pandoc manuell, so wie ich, installiert hat muss dieses Programm nachinstallieren.</p>
 <p>Dazu erweitert man die Installationszeile um das neue Programm</p>

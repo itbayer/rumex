@@ -110,19 +110,6 @@ Bedingt durch die CSS Formatierung
 ~~~
 
 wird somit die Überschrift _Literaturverzeichnis_ immer angezeigt.
-Will man diese ausschalten kann man folgenden Trick verwenden.
-
-Man schreibt dazu in die letzte Zeile des Dokuments die
-HTML Anweisung
-
-~~~{.html}
-<div style="display:none;">
-~~~
-
-Diese Anweisung erstellt zwar eine fehlerhaften HTML Seite.
-Der Browser wird aber diesen Fehler automatisch korrigieren.
-Der div TAG, der das Literaturverzeichnis definiert, wird somit
-von dem `display:none` div TAG umschlossen und ausgeblendet.
 
 
 ## Installation
