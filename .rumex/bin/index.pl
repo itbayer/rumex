@@ -172,7 +172,7 @@ index.rx0x aufgenommen.
 
 	# Vortext Abschluss und Link zur eigentlichen Seite setzen ...
 	# .. nicht anzeigen bei start.rx0s.
-	print INDEX "[... weiter lesen]($htmlname)\n\n" if ($name ne $start_rx && $name ne $weblog_rx);
+	print INDEX "[... Artikel öffnen]($htmlname)\n\n" if ($name ne $start_rx && $name ne $weblog_rx);
 
 	print INDEX "\n";
 	print INDEX "</div>\n";
