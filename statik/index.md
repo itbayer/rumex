@@ -11,7 +11,7 @@ Mit dieser Funktion ist es möglich innerhalb eines Unterverzeichnisses
 verschiedenen Ausgabe Formate zu erstellen.
 Zur Zeit werden, von Rumex, folgenden Formate unterstützt:
 
-[^memorandum]: Neudeutsch würde man die Denkschrift als Memorandum bezeichnen.
+[^memorandum]: Im Neudeutschen würde man die Denkschrift als Memorandum bezeichnen.
 
 - .html
 - .pdf 
@@ -29,9 +29,17 @@ auf anderen Quellen in den Denkschriften verwendet werden können.
 [^self-contained]: Diese Eigenschaft wurde wieder entfernt da eine Datei
 mit sehr vielen Bildern oder gar Videos, die alle in die HTML 
 Datei eingebunden werden, sehr groß wird. 
+Dieses erhöht die Ladezeit der HTM Datei.
 Bei der Verwaltung durch git wirkt sich diese Eigenschaft 
 auch ungünstig aus.
 
+Wer sich Rumex nicht installieren möchte aber dennoch eine einfache
+Möglichkeit sucht HTML Seiten zu erstellen,
+kann sich einmal [cirsium](http://www.it-bayer.de/cirsium) anschauen.
+Cirsium ist eine Auskopplung aus Rumex, unterteilt aber die Quelltextdatei
+in verschiedene Abschnitte. 
+Am besten einfach mal auf [github.com](http://www.github.com/itbayer/cirsium) 
+anschauen.
 
 
 # Die (g)vim statik Kurztaste in Rumex {#rumex-kurztasten}
