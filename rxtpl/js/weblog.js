@@ -64,11 +64,13 @@ $(document).ready(function() {
 	});
 
 	// klick auf Link "weiter lesen"
+	// ... neue Animations Variante
+	//		schaut besser aus 
+	//		bzw. ist flüssiger.
+	// itb :: Fri, 24 Jan 2014 14:02:13 +0100
 	$('.weiter_lesen').click(function() {
 		// "... weiter lesen" Link ausblenden
-		$(this).hide(500, function(){
-			// ...und Text in div.weblog einblenden
-			$(this).next().slideDown(1500);
-		});
+		$(this).next().slideDown(300)
+		$(this).slideUp(300);
 	});
 });
