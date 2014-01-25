@@ -1,5 +1,5 @@
 % Beschreibung des Rumex Baukastens
-% 
+% zur Zeit in Arbeit
 % 
 
 
@@ -10,11 +10,6 @@
 ======================================================
 
 -->
-
-Hier findest du die Beschreibung des rumex Baukastens.
-Zur Zeit ist hier noch vieles durcheinander da ich
-mehr am System als an der Beschreibung bastle.
-Du kannst aber schon mal gerne rein schauen.
 
 
 <!-- schnipp -->
@@ -52,6 +47,7 @@ Genau das soll Rumex auch sein "ein Lückenfüller" für alle die ... Systeme sa
 
 
 
+![Kleine Gedankenkarte der Rumex Beschreibung. Zur Zeit in Arbeit.](../bilder/beschreibung-vym_800_.png)
 
 
 # Installation und Einrichten des Rumex Baukastens
@@ -129,7 +125,7 @@ Genauer gesagt sollten folgende Angabe für deine neuen Seite angepasst werden.
 - Logo
 
 Eine Kurzbeschreibung findest du, nach der Installation, auf der Startseite von Rumex
-oder [hier](istart.html).
+oder [hier](../istart.html).
 
 ## moot.it
 

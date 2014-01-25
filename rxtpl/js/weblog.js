@@ -35,42 +35,20 @@ $(document).ready(function() {
 
 
 
-
-
-	// Zeile "am Datum um Uhrzeit schrieb Autor"
-	// formatieren.
-	//	
-	/** Ausgeschaltet wegen Fehler bei
-	 *		Texten die im ersten Absatz eine kursive 
-	 *		Auszeichnung haben.
-	$("h1+p>em").css("display","block");
-	//$("h1+p>em").css("text-align","right");
-	$("h1+p>em").css("font-size",".8em");
-	$("h1+p>em").css("margin-right","4em");
-	$("h1+p>em").css("color","gray");
-*/
-
-
-
-	/* Einblenden */
+	/* Einblenden 
+	 * ... weiter lesen
+	 */
 
 	// klick auf die Überschrift h1
 	$("#seite h1").click(function() {
-		// "... weiter lesen" Link ausblenden
-		$(this).nextAll(".weiter_lesen").first().hide(500,function(){
-			// ...und Text in div.weblog einblenden
-			$(this).nextAll("div.weblog").first().slideDown(1500);
-		});
+
+		$(this).nextAll("div.weblog").first().slideDown(500);
+$(this).nextAll(".weiter_lesen").first().slideUp(500);
 	});
 
 	// klick auf Link "weiter lesen"
-	// ... neue Animations Variante
-	//		schaut besser aus 
-	//		bzw. ist flüssiger.
-	// itb :: Fri, 24 Jan 2014 14:02:13 +0100
 	$('.weiter_lesen').click(function() {
-		// "... weiter lesen" Link ausblenden
-		$(this).next().slideDown(300)
-		$(this).slideUp(300);
+		$(this).next().slideDown(500)
+		$(this).slideUp(500);
 	});
 });
