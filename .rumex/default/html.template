@@ -17,6 +17,7 @@ $endfor$
 $if(date-meta)$
   <meta name="dcterms.date" content="$date-meta$">
 $endif$
+
   <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
   <style type="text/css">code{white-space: pre;}</style>
   <!--[if lt IE 9]>
@@ -35,6 +36,21 @@ $for(css)$
 $endfor$
 $if(math)$
   $math$
+$endif$
+
+$if(meta_publisher)$
+<!-- rumex Herausgeber -->
+<meta name="DC.publisher" content="$meta_publisher$" />
+$endif$
+
+$if(meta_creator)$
+<!-- rumex Ersteller -->
+<meta name="DC.creator" content="$meta_creator$" />
+$endif$
+
+$if(meta_filedat)$
+<!-- rumex Speicherdatum der Datei -->
+  <meta name="DCTERMS.modified" scheme="DCTERMS.W3CDTF" content="$meta_filedat$" />
 $endif$
 
 $if(mootit)$

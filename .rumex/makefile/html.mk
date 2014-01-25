@@ -34,6 +34,9 @@ html0s: $(HTML0S)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \
@@ -59,6 +62,9 @@ html0x: $(HTML0X)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \
@@ -85,6 +91,9 @@ html0v: $(HTML0V)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_VERSTECKT) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \
@@ -129,6 +138,9 @@ html0w: $(HTML0W)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_WEITERLEITUNG) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \
@@ -164,6 +176,9 @@ html1s: $(HTML1S)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \
@@ -192,6 +207,9 @@ html1x: $(HTML1X)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \
@@ -220,6 +238,9 @@ html1v: $(HTML1V)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_VERSTECKT) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \
@@ -254,6 +275,9 @@ html2s: $(HTML2S)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \
@@ -282,6 +306,9 @@ html2x: $(HTML2X)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \
@@ -310,6 +337,9 @@ html2v: $(HTML2V)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_VERSTECKT) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \
@@ -344,6 +374,9 @@ html3s: $(HTML3S)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \
@@ -372,6 +405,9 @@ html3x: $(HTML3X)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \
@@ -400,6 +436,9 @@ html3v: $(HTML3V)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_VERSTECKT) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \
@@ -433,6 +472,9 @@ html4s: $(HTML4S)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \
@@ -461,6 +503,9 @@ html4x: $(HTML4X)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \
@@ -489,6 +534,9 @@ html4v: $(HTML4V)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_VERSTECKT) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \
@@ -522,6 +570,9 @@ html5s: $(HTML5S)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \
@@ -550,6 +601,9 @@ html5x: $(HTML5X)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \
@@ -578,6 +632,9 @@ html5v: $(HTML5V)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_VERSTECKT) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \
@@ -611,6 +668,9 @@ html6s: $(HTML6S)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \
@@ -639,6 +699,9 @@ html6x: $(HTML6X)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_STANDARD) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \
@@ -667,6 +730,9 @@ html6v: $(HTML6V)
 		-A $(FUSS_TEMPLATE) \
 		-V meta_generator=$(META_GENERATOR) \
 		-V meta_robots=$(META_ROBOTS_VERSTECKT) \
+		-V meta_filedat=$(shell ls $< -l --time-style=+%Y-%m-%d | awk '{print $$6}') \
+		-V meta_publisher=$(META_PUBLISHER) \
+		-V meta_creator=$(META_CREATOR) \
 		-V rsstitel=$(RSS_TITEL) \
 		-V rssfile=$(RSS_FILE) \
 		-V cssall=$(CSSALL) \

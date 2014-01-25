@@ -35,6 +35,8 @@ U3="github.com Version"
 RSS_TITEL = "Neuigkeiten von rumex Baukasten"
 
 
+
+
 #-------------------------------------------------------------------------------
 # Schalter ob das externe Tool von moot.it eingebunden werden soll
 # Man sollte hier den Kontonamen angeben..
@@ -49,6 +51,17 @@ MOOTIT = "rumex"
 #  Autor für den Weblog Eintrag
 #-------------------------------------------------------------------------------
 WEBLOGAUTOR = "IT-Bayer"
+
+
+
+
+
+#-------------------------------------------------------------------------------
+# Autor Angaben für den HTML Kopf
+#-------------------------------------------------------------------------------
+META_PUBLISHER = "IT-Bayer"
+META_CREATOR = "IT-Bayer (Stefan Blechschmidt)"
+
 
 
 
