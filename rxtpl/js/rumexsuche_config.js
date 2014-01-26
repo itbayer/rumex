@@ -7,6 +7,6 @@ suchseite[4] = new Array("IT Bayer's rumex", 'index.html');
 suchseite[5] = new Array("Abo Seite - Newsletter - RSS Feed", 'rss.html');
 suchseite[6] = new Array("Suche", 'suche.html');
 suchseite[7] = new Array("vim", 'vim.html');
-suchseite[8] = new Array("Weblog", 'weblog_beschreibung.html');
+suchseite[8] = new Array("Weblog Beschreibung", 'weblog_beschreibung.html');
 suchseite[9] = new Array("Start", 'start.html');
 suchseite[10] = new Array("WebLog", 'weblog.html');

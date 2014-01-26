@@ -40,18 +40,33 @@ EOF
 
 # Ausgelesene Dateien verarbeiten.
 foreach(@files) {
+    
+	my $titel;	
+	my $file = $_;
 
 	# Ueberspringen einzelner Dateien
 	# ...wird in der HTML Version der sitemap nicht gebraucht.
-	next if($_ eq "index.rx0x");
-	next if($_ eq "start.rx0s");
+	next if($file eq "index.rx0x");
+	next if($file eq "start.rx0s");
+
+	# Auslesen des Titels
+	open(FH,"< $file");
+	# Merker nur erste Überschrift auslesen
+	my $auslassen = 0;
+	while(<FH>){
+		# Überschrift gefunden, Rest auslassen
+		if ($_ =~ /^\%\s(.*)/ && !$auslassen) {
+			$titel = $1;
+			$auslassen = 1;
+		}
+	}
 
 	# Die Endung .rx?? wird nicht gebraucht, wird später eine .html Datei
-	$_ =~ m/^(.*)\.rx\d.+$/;	
+	$file =~ m/^(.*)\.rx\d.+$/;	
  
 
 	# Zeile für jede Datei erstellen
-	print ":\t* [$1]($1.html)\n";
+	print ":\t* [$titel]($1.html)\n";
 
 }
 
