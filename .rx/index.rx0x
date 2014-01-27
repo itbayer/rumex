@@ -1,6 +1,6 @@
 % IT Bayer's rumex <sup style="font-size: .4em;">(github.com Version)</sup>
-% IT-Bayer (Stefan Blechschmidt)
-% github.com Version
+% Stefan Blechschmidt
+% 2014-01-27
 
 <div class="indexliste">
 
@@ -46,6 +46,28 @@ der Seite <http://www.hochfelder.de> verwendet.
 <div class="indexliste">
 
 
+# Titelzeile umgebaut
+
+_Am 27.01.2014 um 14:27 schrieb IT-Bayer_
+
+Der Umbau der Titelzeile wurde gemacht um die 
+Verwendung durch pandoc, Autor und Datum,
+besser umzusetzen.
+
+
+<div class="weblog">
+
+Es wird zwar nur mehr eine Überschrifszeile
+angezeigt. 
+Dafür können die andere beider Zeilen für die Angaben
+des Autors bzw. des Datums verwendet werden.
+Diese beiden Angaben werden in der Online Version
+nicht angezeigt.
+Sie dienen lediglich für die META Angabe im HEAD Bereich
+der HTML Seite. 
+Wir die Seite ausgedruckt werden diese Beiden Angabe jedoch
+wieder eingeblendet.
+</div>
 
 
 # Rumex Beschreibung hinkt

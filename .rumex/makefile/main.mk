@@ -13,7 +13,7 @@ html: html0s html0x html0v html0w html1s html1x html1v html2s html2x html2v html
 # index.rx0x Seite erstellen
 
 index:
-	$(INDEX) $(U1) $(U2) $(U3)
+	$(INDEX) $(INDEX_TITEL) $(INDEX_AUTOR) $(INDEX_DATUM)
 
 
 # ######################################################

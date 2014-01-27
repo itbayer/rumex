@@ -58,20 +58,15 @@ wird aus dem C<.rx/config.mk> gelesen.
 
 B<Makefile Beispiel>
 
-# Überschriften für die Index Seite
-U1="Willkommen auf der Hochfelder Seite" 
-U2=""
-U3=""
-
 index: 
-	 $(PROG) $(U1) $(U2) $(U3)
+	 $(PROG) $(INDEX_TITLE) $(INDEX_AUTOR) $(INDEX_DATUM)
 
 
 =cut
 
 print INDEX "% $ARGV[0]\n";
-print INDEX "% $ARGV[1]\n"; # HTML Leerzeichen so dass die Zeile auch angezeigt wird
-print INDEX "% $ARGV[2]\n"; # Seitenüberschrift
+print INDEX "% $ARGV[1]\n";
+print INDEX "% $ARGV[2]\n";
 print INDEX "\n";
 
 

@@ -31,10 +31,9 @@ URL="http://www.it-bayer.de/rumex"
 #-------------------------------------------------------------------------------
 # Überschriften für die Index Seite
 #-------------------------------------------------------------------------------
-U1="IT Bayer's rumex"
-U2="Der(Ein) HomePage Sand(Bau)kasten" 
-U3="github.com Version"
-
+INDEX_TITEL = "RUMEX Standard Installation"
+INDEX_AUTOR = " --- "
+INDEX_DATUM = $(shell ls index.rx0x -l --time-style=+%Y-%m-%d | awk '{print $$6}')
 
 
 
