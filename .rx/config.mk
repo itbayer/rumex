@@ -22,9 +22,11 @@ URL="http://www.it-bayer.de/rumex"
 #-------------------------------------------------------------------------------
 # Überschriften für die Index Seite
 #-------------------------------------------------------------------------------
-U1="IT Bayer's rumex"
-U2="Der(Ein) HomePage Sand(Bau)kasten" 
+U1="IT Bayer's rumex <sup style=\"font-size: .4em;\">(github.com Version)</sup>"
+U2="IT-Bayer (Stefan Blechschmidt)"
+# Alte U3 ::: (Ein) HomePage Sand(Bau)kasten" 
 U3="github.com Version"
+# Alte U3 ::: U3="github.com Version"
 
 
 

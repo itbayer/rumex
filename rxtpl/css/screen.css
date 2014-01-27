@@ -117,3 +117,23 @@ header, nav, #seite {
 	margin-left: 80px;
 }
 
+/* Kopfzeile
+ *
+ * U2: Autor ausblenden
+ * U3: Datum ausblenden
+ *
+ * Die zweite bzw. dritte Kopf Zeile wird von pandoc
+ * für den Autor bzw. für das Datum verwendet.
+ * Dieses möchte ich auch übernehmen.
+ * Darum werden diese beiden Zeilen in der Bildschirm
+ * Darstellung ausgeschaltet, in der Druck Darstellung
+ * aber angezeigt.
+ */
+
+header .author {
+ display: none;
+}
+
+header .date {
+	display:none;
+}

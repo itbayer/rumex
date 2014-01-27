@@ -3,7 +3,7 @@ suchseite[0] = new Array("Rumex Forum", 'forum.html');
 suchseite[1] = new Array("GVIM-Menü", 'gvim-menue.html');
 suchseite[2] = new Array("Historie", 'historie.html');
 suchseite[3] = new Array("Impressum", 'impressum.html');
-suchseite[4] = new Array("IT Bayer's rumex", 'index.html');
+suchseite[4] = new Array("IT Bayer's rumex <sup style="font-size: .4em;">(github.com Version)</sup>", 'index.html');
 suchseite[5] = new Array("Abo Seite - Newsletter - RSS Feed", 'rss.html');
 suchseite[6] = new Array("Suche", 'suche.html');
 suchseite[7] = new Array("vim", 'vim.html');
