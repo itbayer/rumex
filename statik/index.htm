@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <meta name="author" content="mit pandocs markdown unter Rumex erstellen">
-  <title>HTML, PDF, epub, odt und mobi</title>
+  <meta name="author" content="Stefan Blechschmidt">
+  <title>HTML, PDF, epub, odt und mobi mit pandocs markdown unter Rumex erstellen</title>
   <style type="text/css">code{white-space: pre;}</style>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -33,9 +33,9 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </head>
 <body>
 <header>
-<h1 class="title">HTML, PDF, epub, odt und mobi</h1>
-<h2 class="author">mit pandocs markdown unter Rumex erstellen</h2>
-<h3 class="date">Stefan Blechschmidt, 2013</h3>
+<h1 class="title">HTML, PDF, epub, odt und mobi mit pandocs markdown unter Rumex erstellen</h1>
+<h2 class="author">Stefan Blechschmidt</h2>
+<h3 class="date">2013, 2014</h3>
 </header>
 <p>Rumex verwendet pandocs markdown weil man damit sehr einfach und schnell Text erstellen und in verschiedenen Formate wandeln kann. Für die Erstellung von Denkschriften<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> wurde zusätzlich eine, ich nenne sie <em>statik Funktion</em> eingebaut. Mit dieser Funktion ist es möglich innerhalb eines Unterverzeichnisses verschiedenen Ausgabe Formate zu erstellen. Zur Zeit werden, von Rumex, folgenden Formate unterstützt:</p>
 <ul>
@@ -45,7 +45,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li>.epub E-Book</li>
 <li>.mobi E-Book (Kindle)</li>
 </ul>
-<p>Erstellt werden die einzelnen Formate über <a href="#rumex-kurztasten">Funktionstasten</a> die innerhalb (g)vim zur Verfügung stehen.<br /><del>Eine Besonderheit ist dass die <code>.htm</code> Datei auch ohne die zusätzlichen Dateien wie</del> <del>Bilder oder die CSS Datei funktionieren. Alle Daten werden in die <code>.htm</code> Datei eingebunden.</del><a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a><br />Auch wurde die <a href="#litfunk">Literaturfunktion</a> von Pandoc eingebaut sodass Verweise auf anderen Quellen in den Denkschriften verwendet werden können.</p>
+<p>Erstellt werden die einzelnen Formate über <a href="#rumex-kurztasten">Funktionstasten</a> die innerhalb (g)vim<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> zur Verfügung stehen.<br /><del>Eine Besonderheit ist dass die <code>.htm</code> Datei auch ohne die zusätzlichen Dateien wie</del> <del>Bilder oder die CSS Datei funktionieren. Alle Daten werden in die <code>.htm</code> Datei eingebunden.</del><a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a><br />Auch wurde die <a href="#litfunk">Literaturfunktion</a> von Pandoc eingebaut sodass Verweise auf anderen Quellen in den Denkschriften verwendet werden können.</p>
 <p>Wer sich Rumex nicht installieren möchte aber dennoch eine einfache Möglichkeit sucht HTML Seiten zu erstellen, kann sich einmal <a href="http://www.it-bayer.de/cirsium">cirsium</a> anschauen. Cirsium ist eine Auskopplung aus Rumex, unterteilt aber die Quelltextdatei in verschiedene Abschnitte. Am besten einfach mal auf <a href="http://www.github.com/itbayer/cirsium">github.com</a> anschauen.</p>
 <h1 id="rumex-kurztasten">Die (g)vim statik Kurztaste in Rumex</h1>
 <p>Ab der Rumex Version 0.8.2 sind die Funktionstasten in Rumex enthalten. Folgende F-Tasten wurden belegt.</p>
@@ -75,10 +75,10 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <dd><p>Öffnet die <code>.pdf</code> Datei. Zur Zeit wird nur zathura unterstützt.</p>
 </dd>
 <dt>F7</dt>
-<dd><p>Erstellt die restlichen Formate, <code>.epub</code>, <code>.odt</code> und <code>.mobi</code>.</p>
+<dd><p>Erstellt die restlichen Formate, <code>.epub</code>, <code>.odt</code> und <code>.mobi</code>. Voraussetzung für das <code>.mobi</code> Format ist <code>calibre</code>.</p>
 </dd>
 <dt>Ctrl-F7</dt>
-<dd><p>Öffnet die Literatur Verwaltung <code>rumex.bib</code>. Voraussetzung, jabref ist installiert.</p>
+<dd><p>Öffnet die Literatur Verwaltung <code>rumex.bib</code>. Voraussetzung, <code>jabref</code> ist installiert.</p>
 </dd>
 </dl>
 <h1 id="html-formatierung">HTML Formatierung</h1>
@@ -101,8 +101,9 @@ cabal install pandoc pandoc-citeproc</code></pre>
 <p>Zu guter Letzt erstellt man noch die symbolischen Links der beiden Programme.</p>
 <pre><code>sudo ln -s /home/USER/.cabal/bin/pandoc /usr/local/bin/.
 sudo ln -s /home/USER/.cabal/bin/pandoc-citeproc /usr/local/bin/.</code></pre>
+<p><strong>Nachtrag:</strong> Bei dieser Beschreibung war ich auf dem Holzweg wie man in diesem <a href="http://it-bayer.de/pandoc/weblog.html#pandoc11233aufdebian74">weblog Eintrag</a> lesen kann.</p>
 <h3 id="nachinstallation-rumex">Nachinstallation Rumex</h3>
-<p>Wer Rumex schon im Einsatz hat muss für die Erweiterung ein wenig Hand anlegen. Zu erste holt man sich die neue Version<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> von rumex.</p>
+<p>Wer Rumex schon im Einsatz hat muss für die Erweiterung ein wenig Hand anlegen. Zu erste holt man sich die neue Version<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a> von rumex.</p>
 <p>Dann braucht man noch drei zusätzliche Dateien im Verzeichnis <code>.rx</code>.</p>
 <ul>
 <li><code>rumex.bib</code></li>
@@ -152,6 +153,7 @@ ln -s ../.rumex/default/statik.css statik.css</code></pre>
 <ol type="1">
 <li><p>Die Datei bzw. das Verzeichnis in <code>.gitignore</code> hinterlegen. Somit wird diese nicht verwaltet und auch nicht, bei einem <code>make online</code>, hoch geladen.</p></li>
 <li><p>Eine zweite lokale Rumex Installation die nur für Denkschriften verwendet wird.</p></li>
+<li><p>...und dann wäre da noch <a href="https://github.com/itbayer/cirsium">Cirsium</a>, eine Auskopplung aus Rumex, mit der man einfache html und pdf Seiten erstellen kann. Die Literaturverzeichnisoption ist auch enthalten. Die Formate odt, epub und mobi sind jedoch nicht eingebaut.</p></li>
 </ol>
 <h2 id="einbinden-von-bildern">Einbinden von Bildern</h2>
 <p>Bei dem Einbinden der Bilder muss man beachten dass die Erstellung der statik Datei vom Verzeichnis <code>.rx</code> ausgeht.</p>
@@ -176,8 +178,9 @@ ln -s ../.rumex/default/statik.css statik.css</code></pre>
 <hr />
 <ol>
 <li id="fn1"><p>Im Neudeutschen würde man die Denkschrift als Memorandum bezeichnen.<a href="#fnref1">↩</a></p></li>
-<li id="fn2"><p>Diese Eigenschaft wurde wieder entfernt da eine Datei mit sehr vielen Bildern oder gar Videos, die alle in die HTML Datei eingebunden werden, sehr groß wird. Dieses erhöht die Ladezeit der HTM Datei. Bei der Verwaltung durch git wirkt sich diese Eigenschaft auch ungünstig aus.<a href="#fnref2">↩</a></p></li>
-<li id="fn3"><p>Die Literatur Erweiterung ist ab der Rumex Version 0.8.2 enthalten.<a href="#fnref3">↩</a></p></li>
+<li id="fn2"><p>Die Funktionstasten sind im gvim Rumex Menü nicht eingebaut. Man sollte sie sich also merken :-).<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>Diese Eigenschaft wurde wieder entfernt da eine Datei mit sehr vielen Bildern oder gar Videos, die alle in die HTML Datei eingebunden werden, sehr groß wird. Dieses erhöht die Ladezeit der HTM Datei. Bei der Verwaltung durch git wirkt sich diese Eigenschaft auch ungünstig aus.<a href="#fnref3">↩</a></p></li>
+<li id="fn4"><p>Die Literatur Erweiterung ist ab der Rumex Version 0.8.2 enthalten.<a href="#fnref4">↩</a></p></li>
 </ol>
 </section>
 </body>

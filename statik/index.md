@@ -1,6 +1,6 @@
-% HTML, PDF, epub, odt und mobi
-% mit pandocs markdown unter Rumex erstellen
-% Stefan Blechschmidt, 2013
+% HTML, PDF, epub, odt und mobi mit pandocs markdown unter Rumex erstellen
+% Stefan Blechschmidt 
+% 2013, 2014
 
 
 Rumex verwendet pandocs markdown weil man damit sehr einfach und schnell Text erstellen 
@@ -20,7 +20,7 @@ Zur Zeit werden, von Rumex, folgenden Formate unterstützt:
 - .mobi E-Book (Kindle)
 
 Erstellt werden die einzelnen Formate über [Funktionstasten](#rumex-kurztasten) die 
-innerhalb (g)vim zur Verfügung stehen. \
+innerhalb (g)vim[^statikfunktionstasten] zur Verfügung stehen. \
 ~~Eine Besonderheit ist dass die `.htm` Datei auch ohne die zusätzlichen Dateien wie~~
 ~~Bilder oder die CSS Datei funktionieren. Alle Daten werden in die `.htm` Datei eingebunden.~~[^self-contained] \
 Auch wurde die [Literaturfunktion](#litfunk) von Pandoc eingebaut sodass Verweise
@@ -32,6 +32,10 @@ Datei eingebunden werden, sehr groß wird.
 Dieses erhöht die Ladezeit der HTM Datei.
 Bei der Verwaltung durch git wirkt sich diese Eigenschaft 
 auch ungünstig aus.
+
+[^statikfunktionstasten]: Die Funktionstasten sind im gvim Rumex Menü nicht eingebaut.
+Man sollte sie sich also merken :-).
+
 
 Wer sich Rumex nicht installieren möchte aber dennoch eine einfache
 Möglichkeit sucht HTML Seiten zu erstellen,
@@ -77,9 +81,10 @@ Ctrl+F6
 
 F7
 :	Erstellt die restlichen Formate, `.epub`, `.odt` und `.mobi`.
+	Voraussetzung für das `.mobi` Format ist `calibre`.
 
 Ctrl-F7
-:	Öffnet die Literatur Verwaltung `rumex.bib`. Voraussetzung, jabref ist installiert. 
+:	Öffnet die Literatur Verwaltung `rumex.bib`. Voraussetzung, `jabref` ist installiert. 
 
 
 
@@ -141,6 +146,9 @@ beiden Programme.
 	sudo ln -s /home/USER/.cabal/bin/pandoc /usr/local/bin/.
 	sudo ln -s /home/USER/.cabal/bin/pandoc-citeproc /usr/local/bin/.
 
+**Nachtrag:** Bei dieser Beschreibung war ich auf dem Holzweg wie man in diesem 
+[weblog Eintrag](http://it-bayer.de/pandoc/weblog.html#pandoc11233aufdebian74)
+lesen kann.
 
 ### Nachinstallation Rumex
 
@@ -249,7 +257,10 @@ einem `make online`, hoch geladen.
 2. Eine zweite lokale Rumex Installation die nur für Denkschriften
 verwendet wird.
 
-
+3. ...und dann wäre da noch [Cirsium](https://github.com/itbayer/cirsium), eine
+Auskopplung aus Rumex, mit der man einfache html und pdf Seiten erstellen kann.
+Die Literaturverzeichnisoption ist auch enthalten. 
+Die Formate odt, epub und mobi sind jedoch nicht eingebaut.
 
 ## Einbinden von Bildern
 
@@ -302,6 +313,5 @@ Die PDF Datei dieser Beschreibung kann man sich [hier](index.pdf) ansehen.
 Die Markdown Quelldatei kann man sich [hier](index.md) holen.
 
 ----
-
 
 
