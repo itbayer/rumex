@@ -147,7 +147,7 @@ beiden Programme.
 	sudo ln -s /home/USER/.cabal/bin/pandoc-citeproc /usr/local/bin/.
 
 **Nachtrag:** Bei dieser Beschreibung war ich auf dem Holzweg wie man in diesem 
-[weblog Eintrag](http://it-bayer.de/pandoc/weblog.html#pandoc11233aufdebian74)
+[weblog Eintrag](http://it-bayer.de/rumex/weblog.html#pandoc11233aufdebian74)
 lesen kann.
 
 ### Nachinstallation Rumex
