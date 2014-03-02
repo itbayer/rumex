@@ -8,12 +8,12 @@
 _Am 18.02.2014 um 18:56 schrieb IT-Bayer_
 
 Vor kurzem habe ich wieder auf die, ich nenne sie
-meine Mutter der Linux Distributionen, umgestellt.
+meine, Mutter der Linux Distributionen umgestellt.
 Natürlich wollte ich das aktuelle pandoc, bei 
 Debian 7.4 ist nur die Version 1.9.4.2 enthalten.
 
-Anscheinend ist aber dieser Version Sprung so groß
-das einige Bibliotheken auch nicht mehr funktionieren.
+Anscheinend ist aber dieser Versionssprung so groß
+dass einige Bibliotheken auch nicht mehr funktionieren.
 Pandoc und alle Abhängigkeiten muss also von Hand installiert werden.
 
 <div class="weblog">
