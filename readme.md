@@ -1,6 +1,5 @@
 # github HomePage Sand(Bau)kasten
 
-
 Ziel des Projektes ist es einen einfachen Homepage Baukasten zur Verfügung zu stellen.
 Als Seiten Sprache wird `pandocs markdown` verwendet.
 Die Steuerung des Systems übernimmt `make`, `bash` und `perl`.
@@ -13,10 +12,14 @@ ansehen.
 
 ## Newsletter
 
-Rumex besitzt auch eine RSS Feed Funktion.
+Rumex besitzt eine RSS Feed Funktion.
 Den RSS Feed des Rumex Baukastens kann man 
 [über diesern Link](http://www.it-bayer.de/rumex/rss.xml) 
 abonnieren.
+
+## Weblog
+
+Rumex ist auch mit einer einfachen Weblog Funktion ausgestattet.
 
 ## Kurz Übersicht 
 
@@ -62,4 +65,4 @@ Der Rumex Baukasten ist auf *nix Systeme ausgerichtet.
 
 ------------------------------------------------------------
 
-\(c) 2013- Stefan Blechschmidt (sb at it-bayer dot de). Released under the GPL, version 2 or greater. This software carries no warranty of any kind. 
+\(c) 2013,2014 - Stefan Blechschmidt (sb at it-bayer dot de). Released under the GPL, version 2 or greater. This software carries no warranty of any kind. 
