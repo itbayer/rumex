@@ -1,9 +1,9 @@
 % IT Bayer's rumex <sup style="font-size: .4em;">(github.com Version)</sup>
 % Stefan Blechschmidt
-% 2014-03-01
+% 2014-03-02
 
-<div class="indexliste">
 
+<!-- START .indexliste --><div class="indexliste">
 Dies ist ein Projekt das mit `pandoc's markdown` und ein paar 
 Skripten eine Internetseite erstellt und verwalten.
 
@@ -39,12 +39,11 @@ Aktuell wird dieser Baukasten auch auf der Seite <http://www.it-bayer.de>,
 
 
 
-</div>
+<!-- ENDE .indexliste --></div>
 
-
-
-<div class="indexliste">
-
+<!-- START .indexliste --><div class="indexliste">
+##Weblog{.h2weblog}
+<!-- START .weblogblock --><div class="weblogblock">
 
 # pandoc 1.12.3.3 auf Debian 7.4 {#pandoc11233aufdebian74}
 
@@ -159,10 +158,34 @@ der index.html oder nur im Archiv, die eigentliche Seite
 </div>
 
 
-
-</div>
 #### [... ältere Weblog Einträge anzeigen](weblog.html) {.webloglink}
 
 
+<!-- ENDE .weblogblock --></div>
+<!-- ENDE .indexliste --></div>
+
+##Seitenübersicht{.h2seitenuebersicht}
+<!-- START .indexliste --><div class="indexliste">
+
+[Weblog Beschreibung](weblog-beschreibung.html)
+=======================================================
+
+<p class="datum">Letzte Bearbeitung: 2014-01-26</p>
 
 
+Diese kleine Erweiterung soll eine Art Blog innerhalb Rumex ermöglichen.
+Besser gesagt ist diese Erweiterung eher ein Weblog Funktion.
+
+Der Unterschied zu den eigentlichen Rumex Seiten ist nicht sehr groß.
+Folgt nach einer `h1` Überschrift ein `div` Tag mit der `weblog` Klasse
+wird der Text innerhalb dieses `div` Tags ausgeblendet und mit dem 
+Schriftzug `... weiter lesen` ersetzt. 
+Die Überschrift und der Text `... weiter lesen` bekommen eine Link
+Eigenschaft die den ausgeblendeten Text bei Anforderung einblendet.
+
+Diese Funktion kann auch in den normalen Seiten verwendet werden.
+
+[... Seite öffnen](weblog_beschreibung.html)
+
+
+<!-- ENDE .indexliste --></div>

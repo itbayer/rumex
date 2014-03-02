@@ -12,7 +12,7 @@
 <link rel="icon" type="image/gif" href="favicon.gif" />
 
   <meta name="author" content="Stefan Blechschmidt">
-  <meta name="dcterms.date" content="2014-03-01">
+  <meta name="dcterms.date" content="2014-03-02">
 
   <title>IT Bayer’s rumex (github.com Version)</title>
   <style type="text/css">code{white-space: pre;}</style>
@@ -68,10 +68,10 @@
 <header>
 <h1 class="title"><a title="zur Startseite" href="index.html">IT Bayer’s rumex <sup style="font-size: .4em;">(github.com Version)</sup></a></h1>
 <h2 class="author">Stefan Blechschmidt</h2>
-<h3 class="date">2014-03-01</h3>
+<h3 class="date">2014-03-02</h3>
 </header>
 <div id="seite">
-<div class="indexliste">
+<!-- START .indexliste --><div class="indexliste">
 <p>Dies ist ein Projekt das mit <code>pandoc's markdown</code> und ein paar Skripten eine Internetseite erstellt und verwalten.</p>
 <p>Gehostet werden kann diese auf <a href="http://github.com">github.com</a> wo auch diese Seite zu finden ist aber auch auf Servern mit git Unterstützung oder mit einem einfachen FTP Zugang kann dieses System verwendet werden.</p>
 <ul>
@@ -82,9 +82,13 @@
 </ul>
 <p>Der aktuelle Stand dieses Baukastens kann als <a href="https://github.com/itbayer/rumex/archive/gh-pages.zip">ZIP Datei herunter geladen</a> werden.</p>
 <p>Aktuell wird dieser Baukasten auch auf der Seite <a href="http://www.it-bayer.de">http://www.it-bayer.de</a>, <a href="http://www.byvs.de">http://www.byvs.de</a> und auf <a href="http://www.hochfelder.de">http://www.hochfelder.de</a> verwendet.</p>
-</div>
-<div class="indexliste">
-<h1>pandoc 1.12.3.3 auf Debian 7.4</h1>
+<!-- ENDE .indexliste --></div>
+
+<!-- START .indexliste --><div class="indexliste">
+<h2 id="weblog" class="h2weblog">Weblog</h2>
+<!-- START .weblogblock --><div class="weblogblock">
+
+<h1 id="pandoc11233aufdebian74">pandoc 1.12.3.3 auf Debian 7.4</h1>
 <p><em>Am 18.02.2014 um 18:56 schrieb IT-Bayer</em></p>
 <p>Vor kurzem habe ich wieder auf die, ich nenne sie meine Mutter der Linux Distributionen, umgestellt. Natürlich wollte ich das aktuelle pandoc, bei Debian 7.4 ist nur die Version 1.9.4.2 enthalten.</p>
 <p>Anscheinend ist aber dieser Version Sprung so groß das einige Bibliotheken auch nicht mehr funktionieren. Pandoc und alle Abhängigkeiten muss also von Hand installiert werden.</p>
@@ -95,13 +99,13 @@ pandoc 1.12.3.3
 Compiled with texmath 0.6.6, highlighting-kate 0.5.6.1.
 ...</code></pre>
 </div>
-<h1>Titelzeilen umgebaut</h1>
+<h1 id="titelzeilen-umgebaut">Titelzeilen umgebaut</h1>
 <p><em>Am 27.01.2014 um 14:27 schrieb IT-Bayer</em></p>
 <p>Der Umbau der Titelzeile wurde gemacht um die Verwendung durch pandoc, Autor und Datum, besser umzusetzen.</p>
 <div class="weblog">
 Es wird zwar nur mehr eine Überschrifszeile angezeigt. Dafür können die andere beider Zeilen für die Angaben des Autors bzw. des Datums verwendet werden. Diese beiden Angaben werden in der Online Version nicht angezeigt. Sie dienen lediglich für die META Angabe im HEAD Bereich der HTML Seite. Wir die Seite ausgedruckt werden diese Beiden Angabe jedoch wieder eingeblendet.
 </div>
-<h1>Rumex Beschreibung hinkt</h1>
+<h1 id="rumex-beschreibung-hinkt">Rumex Beschreibung hinkt</h1>
 <p><em>Am 06.12.2013 um 18:13 schrieb IT-Bayer</em></p>
 <p>So wie es ausschaut komme ich mit der <a href="beschreibung.html">Beschreibung</a> einfach nicht weiter. Kaum will ich mit einem neuen Abschnitt anfangen fällt mir eine neuen Funktion ein die ich noch einbauen will.</p>
 <div class="weblog">
@@ -110,7 +114,7 @@ Es wird zwar nur mehr eine Überschrifszeile angezeigt. Dafür können die ander
 <p>Es wird wohl noch eine weile Dauern bis ich die Beschreibung fertig gestellt habe.</p>
 <p>Meine ersten Versuche findet man <a href="statik/beschreibung.htm">hier</a>.</p>
 </div>
-<h1>Rumex WebLog</h1>
+<h1 id="rumex-weblog">Rumex WebLog</h1>
 <p><em>Am 03.12.2013 um 12:25 schrieb IT-Bayer</em></p>
 <p>Rumex hat eine neue Seite bekommen <a href="weblog.html">weblog.rx0s</a>. Diese Seite dient nun als WebLog auf der Index Seite und ersetzt die alte WebLog Funktion auf der <code>start.rx0s</code>.</p>
 <p>Ich verspreche mir dadurch ein wenig mehr Übersicht auf der <code>index.html</code>.</p>
@@ -119,8 +123,26 @@ Es wird zwar nur mehr eine Überschrifszeile angezeigt. Dafür können die ander
 <p>Als Seitengerüst für die WebLog Seite kann das Standard Gerüst einer <code>.rx0s</code> Seite verwendet werden. Es muss jedoch die Überschrift<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> mit dem Link aus der Seite genommen werden.</p>
 <p>Das Schlüsselwort <code>schnipp</code> bestimmt ob die WebLog Einträge auch auf der index.html oder nur im Archiv, die eigentliche Seite <a href="weblog.html">weblog.html</a>, angezeigt werden.</p>
 </div>
-</div>
 <h4 id="ältere-weblog-einträge-anzeigen" class="webloglink"><a href="weblog.html">… ältere Weblog Einträge anzeigen</a></h4>
+<!-- ENDE .weblogblock --></div>
+<!-- ENDE .indexliste --></div>
+
+<h2 id="seitenübersicht" class="h2seitenuebersicht">Seitenübersicht</h2>
+<!-- START .indexliste --><div class="indexliste">
+
+<h1 id="weblog-beschreibung"><a href="weblog-beschreibung.html">Weblog Beschreibung</a></h1>
+<p class="datum">
+Letzte Bearbeitung: 2014-01-26
+</p>
+
+
+<p>Diese kleine Erweiterung soll eine Art Blog innerhalb Rumex ermöglichen. Besser gesagt ist diese Erweiterung eher ein Weblog Funktion.</p>
+<p>Der Unterschied zu den eigentlichen Rumex Seiten ist nicht sehr groß. Folgt nach einer <code>h1</code> Überschrift ein <code>div</code> Tag mit der <code>weblog</code> Klasse wird der Text innerhalb dieses <code>div</code> Tags ausgeblendet und mit dem Schriftzug <code>... weiter lesen</code> ersetzt. Die Überschrift und der Text <code>... weiter lesen</code> bekommen eine Link Eigenschaft die den ausgeblendeten Text bei Anforderung einblendet.</p>
+<p>Diese Funktion kann auch in den normalen Seiten verwendet werden.</p>
+<p><a href="weblog_beschreibung.html">… Seite öffnen</a></p>
+<!-- ENDE .indexliste --></div>
+
+
 <section class="footnotes">
 <hr />
 <ol>

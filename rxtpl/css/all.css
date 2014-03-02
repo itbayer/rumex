@@ -98,14 +98,50 @@ p, ul, dd, div.weblog {
 	border: none;
 }
 
+
+#seite .h2seitenuebersicht {
+	background-color: #eee;
+	margin-top: 5em;
+	margin-bottom: -3em;
+	border: 1px solid #ddd;
+	padding: 7px;
+}
+
+
 #seite h1, 
 #seite .indexliste h1 a {
 	border: none;
 }
 
+
 #seite .indexliste h1 a:hover {
 	text-decoration: underline;
 	color: #444;
+}
+
+
+/* ----------------------------------------------
+ * Formatierung des Weblog auf der Startseite index.html
+ */
+
+
+#seite .indexliste .h2weblog {
+	margin-top: 5em;
+	background-color: #eee;
+	border: 1px solid #ddd;
+	padding: 7px;
+}
+
+#seite .weblogblock {
+	border: 1px solid silver; 
+	box-shadow: 4px 4px 4px silver; 
+	margin: 2em 0; 
+	padding: 12px;
+}
+
+#seite .weblogblock h1:first-child {
+	margin-top: 0em !important;
+	border: none !important;
 }
 
 /* ----------------------------------------------

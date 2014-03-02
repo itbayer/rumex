@@ -120,7 +120,13 @@ index.rx0x aufgenommen.
 	$htmlname = $htmlname.".html";
 
 	# DIV um jeden Eintrag wickeln
-	print INDEX "<div class=\"indexliste\">\n";
+	print INDEX "\n<!-- START .indexliste --><div class=\"indexliste\">";
+
+	# Anmerkung ab hier Abschnitt Weblog
+    print INDEX "\n##Weblog{.h2weblog}" if($name eq $weblog_rx);
+	
+	# DIV um den Weblog wickeln
+    print INDEX "\n<!-- START .weblogblock --><div class=\"weblogblock\">" if($name eq $weblog_rx);
 
 	# Datum der letzten Änderung vor dem Vortext stellen
 	# ... nicht setzen wenn es sich um die start.rx0s handelt.
@@ -169,16 +175,14 @@ index.rx0x aufgenommen.
 	# .. nicht anzeigen bei start.rx0s.
 	print INDEX "[... Seite öffnen]($htmlname)\n\n" if ($name ne $start_rx && $name ne $weblog_rx);
 
-	print INDEX "\n";
-	print INDEX "</div>\n";
-	
-	# Die Weblog Datei bekommt, zum öffnen, einen anderen Link.
-	# Dieser Link muss nach dem DIV Tag "indexliste" gesetzt 
-	# werden da sonst die Klasse
-	# {.webloglink} von pandoc nicht gesetzt wird.
+	# Das Weblog Archiv, also die eigentlichen Weblog HTML Datei,
+	# bekommt einen Link am Ende aller Weblogeinträge auf der index.html 
+	# Seite.
 	print INDEX "#### [... ältere Weblog Einträge anzeigen]($htmlname) {.webloglink}\n\n" if($name eq $weblog_rx);
+	print INDEX "\n<!-- ENDE .weblogblock --></div>" if($name eq $weblog_rx);
+	print INDEX "\n<!-- ENDE .indexliste --></div>\n";
 
-	print INDEX "\n\n\n";
+	print INDEX "\n##Seitenübersicht{.h2seitenuebersicht}" if($name eq $weblog_rx);
 
 } # ENDE :: Dateien verarbeiten
 
