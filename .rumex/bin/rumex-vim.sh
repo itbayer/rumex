@@ -26,5 +26,10 @@ VIM=/usr/bin/vim
 # wurde dieser hier eingebaut.
 git pull
 
+# Auf der Konsole funktioniert die Tastenkombination C-s für das Speichern 
+# nicht. Dieser Befehl macht diese Tastenkombination wieder möglich.
+/bin/stty -ixon
+
+
 # VIM mit rumex Erweiterung laden
 $VIM -S ../.rumex/bin/rumex.vim -c ":let mootit_konto='$MOOTIT'" -c ":let weblog_autor='$WEBLOGAUTOR'"
