@@ -25,7 +25,7 @@
 <meta name="DC.creator" content="IT-Bayer (Stefan Blechschmidt)" />
 
 <!-- rumex Speicherdatum der Datei -->
-  <meta name="DCTERMS.modified" scheme="DCTERMS.W3CDTF" content="2014-03-02" />
+  <meta name="DCTERMS.modified" scheme="DCTERMS.W3CDTF" content="2014-03-03" />
 
 <!-- rumex moot.it -->
 <link rel="stylesheet" href="https://cdn.moot.it/1/moot.css">
@@ -67,6 +67,24 @@
 <h1 class="title"><a title="zur Startseite" href="index.html">WebLog</a></h1>
 </header>
 <div id="seite">
+<h1 id="abschnittsbeschriftung">Abschnittsbeschriftung</h1>
+<p><em>Am 02.03.2014 um 23:43 schrieb IT-Bayer</em></p>
+<p>Auf der Startseite wurden Beschriftungen für die einzelnen Abschnitte eingebaut. Die index.html setzt sich somit aus drei Teilen zusammen, die jetzt mit einer Überschrift unterteilt sind.</p>
+<pre><code>
+start.rx0s
+
+-&gt; Weblog
+
+weblog.rx0s
+
+-&gt; Seitenübersicht
+
+*.rx?s
+</code></pre>
+<div class="weblog">
+<p>Die mit <code>-&gt;</code> gekennzeichneten Stellen sind neu dazu gekommen. Wird keine <code>weblog.rx0s</code> Datei verwendet, bzw. ist diese Datei nicht vorhanden, werden auch die Abschnittsüberschriften nicht angezeigt. <strong>Auch die Überschrift <em>“Seitenübersicht”</em> wird dann nicht mehr eingeblendet.</strong></p>
+<p>Eine neue Version 0.8.2.9 wurde erstellt und steht für das Update <code>make update</code> bereit.</p>
+</div>
 <h1 id="pandoc11233aufdebian74">pandoc 1.12.3.3 auf Debian 7.4</h1>
 <p><em>Am 18.02.2014 um 18:56 schrieb IT-Bayer</em></p>
 <p>Vor kurzem habe ich wieder auf die, ich nenne sie meine, Mutter der Linux Distributionen umgestellt. Natürlich wollte ich das aktuelle pandoc, bei Debian 7.4 ist nur die Version 1.9.4.2 enthalten.</p>
@@ -82,7 +100,7 @@ Compiled with texmath 0.6.6, highlighting-kate 0.5.6.1.
 <p><em>Am 27.01.2014 um 14:27 schrieb IT-Bayer</em></p>
 <p>Der Umbau der Titelzeile wurde gemacht um die Verwendung durch pandoc, Autor und Datum, besser umzusetzen.</p>
 <div class="weblog">
-Es wird zwar nur mehr eine Überschrifszeile angezeigt. Dafür können die andere beider Zeilen für die Angaben des Autors bzw. des Datums verwendet werden. Diese beiden Angaben werden in der Online Version nicht angezeigt. Sie dienen lediglich für die META Angabe im HEAD Bereich der HTML Seite. Wir die Seite ausgedruckt werden diese Beiden Angabe jedoch wieder eingeblendet.
+Es wird zwar nur mehr eine Überschrifszeile angezeigt. Dafür können die andere beider Zeilen für die Angaben des Autors bzw. des Datums verwendet werden. Diese beiden Angaben werden in der Online Version nicht angezeigt. Sie dienen lediglich für die META Angabe im HEAD Bereich der HTML Seite. Wir die Seite ausgedruckt werden diese beiden Angabe jedoch wieder eingeblendet.
 </div>
 <h1 id="rumex-beschreibung-hinkt">Rumex Beschreibung hinkt</h1>
 <p><em>Am 06.12.2013 um 18:13 schrieb IT-Bayer</em></p>

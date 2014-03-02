@@ -3,6 +3,48 @@
 %
 
 
+
+
+# Abschnittsbeschriftung
+
+_Am 02.03.2014 um 23:43 schrieb IT-Bayer_
+
+Auf der Startseite wurden Beschriftungen für die 
+einzelnen Abschnitte eingebaut.
+Die index.html setzt sich somit aus drei Teilen zusammen,
+die jetzt mit einer Überschrift unterteilt sind.
+
+~~~
+
+start.rx0s
+
+-> Weblog
+
+weblog.rx0s
+
+-> Seitenübersicht
+
+*.rx?s
+
+~~~
+
+<div class="weblog">
+
+Die mit `->` gekennzeichneten Stellen sind neu dazu gekommen.
+Wird keine `weblog.rx0s` Datei verwendet, bzw. ist diese Datei
+nicht vorhanden, werden auch die Abschnittsüberschriften nicht angezeigt.
+**Auch die Überschrift _"Seitenübersicht"_ wird dann nicht
+mehr eingeblendet.**
+
+Eine neue Version 0.8.2.9 wurde erstellt und steht für das Update
+`make update` bereit.
+
+</div>
+
+
+
+
+
 # pandoc 1.12.3.3 auf Debian 7.4 {#pandoc11233aufdebian74}
 
 _Am 18.02.2014 um 18:56 schrieb IT-Bayer_
@@ -50,7 +92,7 @@ Diese beiden Angaben werden in der Online Version
 nicht angezeigt.
 Sie dienen lediglich für die META Angabe im HEAD Bereich
 der HTML Seite. 
-Wir die Seite ausgedruckt werden diese Beiden Angabe jedoch
+Wir die Seite ausgedruckt werden diese beiden Angabe jedoch
 wieder eingeblendet.
 </div>
 

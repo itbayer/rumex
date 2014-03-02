@@ -94,7 +94,7 @@ map <Leader>rnd i% <C-R>=expand("%:r")<CR><CR>%<CR>%<CR><CR><CR><!--<CR><CR>[<C-
 
 
 " Neuer NEWS Eintrag mit <Leader><rnn> (RumexNeuNews)
-map <Leader>rnn i# Neue Nachricht <!-- <ESC>:r!date +"\%Y/\%m/\%d \%H:\%M"<CR>kJA --><CR><CR><!--<CR>!> Link: http://www.it-bayer.de/rumex/<CR>!> Autor: IT-Bayer<CR>!> Kategorie: Neues<CR>--><CR><CR>Ab hier geht die neuen Nachricht los.<ESC>8k02l
+map <Leader>rnn i# Neue Nachricht <!-- <ESC>:r!date +"\%Y/\%m/\%d \%H:\%M"<CR>kJA --><CR><CR><!--<CR>!> Link: http://?????????<CR>!> Autor: ?????????<CR>!> Kategorie: Neues<CR>--><CR><CR>Ab hier geht die neuen Nachricht los.<ESC>8k02l
 
 
 " Neue Weiterleitungsseite mit <Leader>rwl (RumexWeiterLeitung)
