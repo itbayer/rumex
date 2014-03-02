@@ -116,24 +116,18 @@ index.rx0x aufgenommen.
 	next if ($name =~ m/.*?w$/);
 
 	# .rx?? gegen .html austauschen
+	# im Links auf die HTML Datei setzen zu können.
 	(my $htmlname, $dummy1) = split(/\./, $name);
 	$htmlname = $htmlname.".html";
 
-	# DIV um jeden Eintrag wickeln
+	# div.indexliste um jeden Eintrag wickeln
 	print INDEX "\n<!-- START .indexliste --><div class=\"indexliste\">";
 
-	# Anmerkung ab hier Abschnitt Weblog
-    print INDEX "\n##Weblog{.h2weblog}" if($name eq $weblog_rx);
+	# Überschrift Abschnitt Weblog setzen.
+    print INDEX "\n##Weblog{.abschnitt .weblog}" if($name eq $weblog_rx);
 	
-	# DIV um den Weblog wickeln
+	# div.weblogblock um den Weblog wickeln 
     print INDEX "\n<!-- START .weblogblock --><div class=\"weblogblock\">" if($name eq $weblog_rx);
-
-	# Datum der letzten Änderung vor dem Vortext stellen
-	# ... nicht setzen wenn es sich um die start.rx0s handelt.
-	#
-	# Ausgeschaltet - wird nun unter der Überschrift
-	# eingebaut siehe ca. Z:152
-	# print INDEX "\n<p class=\"datum\">$datum</p>\n" if ($name ne $start_rx);
 
 	# Einzelnen Dateien auslesen um den Vortext zu 
 	# erstellen.
@@ -172,17 +166,29 @@ index.rx0x aufgenommen.
 
 
 	# Vortext Abschluss und Link zur eigentlichen Seite setzen ...
-	# .. nicht anzeigen bei start.rx0s.
+	# .. nicht anzeigen bei start.rx0s und weblog.rx0s.
 	print INDEX "[... Seite öffnen]($htmlname)\n\n" if ($name ne $start_rx && $name ne $weblog_rx);
 
 	# Das Weblog Archiv, also die eigentlichen Weblog HTML Datei,
 	# bekommt einen Link am Ende aller Weblogeinträge auf der index.html 
 	# Seite.
 	print INDEX "#### [... ältere Weblog Einträge anzeigen]($htmlname) {.webloglink}\n\n" if($name eq $weblog_rx);
+
+	# DIV .weblog schließen
 	print INDEX "\n<!-- ENDE .weblogblock --></div>" if($name eq $weblog_rx);
+	# DIV .indexliste schließen
 	print INDEX "\n<!-- ENDE .indexliste --></div>\n";
 
-	print INDEX "\n##Seitenübersicht{.h2seitenuebersicht}" if($name eq $weblog_rx);
+	# Abschnitt Seitenübersicht einbauen
+	# der Schalter für dies Überschrift ist die weblog Datei.
+	# Somit muss ein Weblog geführt bzw. mindestens vorhanden sein.
+	# Will man das Weblog nicht verwenden sollte man dieses mittels CSS
+	# ausschalten.
+	# @fixme: Überschrift sollte auch gesetzt werden wenn kein weblog
+	#         Eintrag vorhanden ist bzw. verwendet wird.
+	#         Überlegung: 
+	#         if !weblog_rx else schalter über start_rx
+	print INDEX "\n##Seitenübersicht{.abschnitt .seiten}" if($name eq $weblog_rx);
 
 } # ENDE :: Dateien verarbeiten
 

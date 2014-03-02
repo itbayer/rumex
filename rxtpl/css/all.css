@@ -99,12 +99,35 @@ p, ul, dd, div.weblog {
 }
 
 
-#seite .h2seitenuebersicht {
+/** Gemeinsame Formatierung für die
+  * Abschnittsüberschriften auf der Startseite index.html
+  * Die Abschnttsüberschriften werden von der index.pl eingebaut
+  * und haben zwei Klassen für die Formatierung
+  *
+  *   - .abschnitt (Diese Klasse)
+  *   - .weblog for die Abschnittsüberschirft des Weblog
+  *   - .seiten für die Abschnittsüberschrift der Seiten
+  *
+  * Die eigentliche Formatierung wird in der Klasse .abschnitt
+  * erledigt. Zusätzliche Formatierung können dann in den jeweiligen
+  * Überschriftsklassen gemacht werden.
+  */
+.abschnitt {
 	background-color: #eee;
-	margin-top: 5em;
-	margin-bottom: -3em;
+	text-shadow: 4px 4px 4px silver;
 	border: 1px solid #ddd;
+	margin-top: 5em;
 	padding: 7px;
+}
+
+
+
+/** Überschrift Abschnitt Seiten,
+ * wird in der index.pl gesetzt.
+ * -> auch Klasse .abschnitt
+ */
+#seite .abschnitt.seiten {
+	margin-bottom: -3em;	
 }
 
 
@@ -125,13 +148,25 @@ p, ul, dd, div.weblog {
  */
 
 
-#seite .indexliste .h2weblog {
-	margin-top: 5em;
-	background-color: #eee;
-	border: 1px solid #ddd;
-	padding: 7px;
+
+
+
+/** Überschrift Abschnitt Weblog,
+ * wird in der index.pl gesetzt
+ * Die eigentliche Formatierung wird 
+ * über die Klasse .abschnitt gemacht.
+ * Hier kann eine zusätzliche Formatierung
+ * für die weblog Überschrift gemacht werden.
+ */
+#seite .indexliste .abschnitt.weblog {
+	/* -- ausgeschaltet, dient nur als Plaztzalter für weiter Formatierung
+	      für die Überschrift weblog.
+	display: none; */
 }
 
+/** DIV rund um die Weblog Einträge,
+ * wird in der index.pl gesetzt
+ */
 #seite .weblogblock {
 	border: 1px solid silver; 
 	box-shadow: 4px 4px 4px silver; 
@@ -139,6 +174,10 @@ p, ul, dd, div.weblog {
 	padding: 12px;
 }
 
+/** Die erste Überschrift im weblog DIV
+ * bekommt einen kleineren Abstand und
+ * keinen Rahmen
+ */
 #seite .weblogblock h1:first-child {
 	margin-top: 0em !important;
 	border: none !important;

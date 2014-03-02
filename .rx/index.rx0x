@@ -42,7 +42,7 @@ Aktuell wird dieser Baukasten auch auf der Seite <http://www.it-bayer.de>,
 <!-- ENDE .indexliste --></div>
 
 <!-- START .indexliste --><div class="indexliste">
-##Weblog{.h2weblog}
+##Weblog{.abschnitt .weblog}
 <!-- START .weblogblock --><div class="weblogblock">
 
 # pandoc 1.12.3.3 auf Debian 7.4 {#pandoc11233aufdebian74}
@@ -164,7 +164,7 @@ der index.html oder nur im Archiv, die eigentliche Seite
 <!-- ENDE .weblogblock --></div>
 <!-- ENDE .indexliste --></div>
 
-##Seitenübersicht{.h2seitenuebersicht}
+##Seitenübersicht{.abschnitt .seiten}
 <!-- START .indexliste --><div class="indexliste">
 
 [Weblog Beschreibung](weblog-beschreibung.html)
