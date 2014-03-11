@@ -125,13 +125,20 @@
 	}
 
 	/* Literatur Verzeichnis beschriften */
-	.references:before {
+	/** --------------------------------------------
+	 * Die Beschriftung des Literaturverzeichnisses muss
+	 * manuell, am Ende der Seite, gemacht werden, da 
+	 * sonst in der PDF Version diese Überschrift nicht
+	 * gesetzt wird.
+	 * Darum wurde diese CSS Anweisung ausgeschaltet.
+	 */
+	/*.references:before {
 		content: "Literaturverzeichnis";
 		display: block;
 		font-size: 2em;
 		margin-top: 4em;
 		font-weight: bold;
-	}
+	}*/
 
 	/* Durchgestrichene Elemente abblenden */
 	del {

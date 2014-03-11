@@ -3,10 +3,10 @@
 % 2013, 2014
 
 
-Rumex verwendet pandocs markdown weil man damit sehr einfach und schnell Text erstellen 
-und in verschiedenen Formate wandeln kann.
-Für die Erstellung von Denkschriften[^memorandum] wurde zusätzlich eine, ich nenne sie 
-_statik Funktion_ eingebaut.
+Rumex verwendet pandocs markdown weil man damit sehr einfach und schnell 
+Text erstellen und in verschiedenen Formate wandeln kann.
+Für die Erstellung von Denkschriften[^memorandum] wurde zusätzlich eine, 
+ich nenne sie _statik Funktion_ eingebaut.
 Mit dieser Funktion ist es möglich innerhalb eines Unterverzeichnisses 
 verschiedenen Ausgabe Formate zu erstellen.
 Zur Zeit werden, von Rumex, folgenden Formate unterstützt:
@@ -108,22 +108,43 @@ Umständen noch eingerichtet werden.
 # Die Literaturverzeichnis Funktion {#litfunk}
 
 
-Bei lesen des Artikels _"PDF-Dokumente schreiben mit Pandoc und Markdown"
+Beim Lesen des Artikels _"PDF-Dokumente schreiben mit Pandoc und Markdown"
 [@stenderprolinux]_ ist mir die Idee gekommen die Rumex _statik Funktion_ mit einem 
 Literaturverzeichnis, die ja auch in pandoc zur Verfügung steht, zu versehen.
 
-#### Nachteil des Literaturverzeichnisses
+#### ~~Nachteil des Literaturverzeichnisses~~
 
-Das Literaturverzeichnis wird immer gesetzt, auch dann wenn es nicht
+~~Das Literaturverzeichnis wird immer gesetzt, auch dann wenn es nicht
 verwendet wird.
-Bedingt durch die CSS Formatierung 
+Bedingt durch die CSS Formatierung~~
 
 ~~~{.css}
 .references:before {
 	content: "Literaturverzeichnis";
 ~~~
 
-wird somit die Überschrift _Literaturverzeichnis_ immer angezeigt.
+~~wird somit die Überschrift _Literaturverzeichnis_ immer angezeigt.~~
+
+#### Anmerkung zum durchgestrichenem Text
+
+Die CSS Formatierung bzw. das Setzen der Überschrift für das
+Literaturverzeichnis wurde raus genommen da diese bei der PDF
+Version des Dokumentes nicht gesetzt wird.
+Die Überschrift muss somit manuell, am Ende des Dokumentes,
+eingebaut werden.
+
+
+##### Setzen der Überschrift für das Literaturverzeichnis
+
+Die Überschrift für das Literaturverzeichnis muss immer am Ende
+des Artikels gesetzt werden.
+
+**Beispiel**
+
+	# Literaturverzeichnis
+
+
+
 
 
 ## Installation
@@ -314,4 +335,4 @@ Die Markdown Quelldatei kann man sich [hier](index.md) holen.
 
 ----
 
-
+# Literaturverzeichnis

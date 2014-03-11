@@ -87,12 +87,18 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <pre><code>cd .rx
 ln -s ../.rumex/default/statik.css statik.css</code></pre>
 <h1 id="litfunk">Die Literaturverzeichnis Funktion</h1>
-<p>Bei lesen des Artikels <em>&quot;PDF-Dokumente schreiben mit Pandoc und Markdown&quot; <span class="citation" data-cites="stenderprolinux">(<span style="font-variant: small-caps;">Stender</span>, 2013)</span></em> ist mir die Idee gekommen die Rumex <em>statik Funktion</em> mit einem Literaturverzeichnis, die ja auch in pandoc zur Verfügung steht, zu versehen.</p>
-<h4 id="nachteil-des-literaturverzeichnisses">Nachteil des Literaturverzeichnisses</h4>
-<p>Das Literaturverzeichnis wird immer gesetzt, auch dann wenn es nicht verwendet wird. Bedingt durch die CSS Formatierung</p>
+<p>Beim Lesen des Artikels <em>&quot;PDF-Dokumente schreiben mit Pandoc und Markdown&quot; <span class="citation" data-cites="stenderprolinux">(<span style="font-variant: small-caps;">Stender</span>, 2013)</span></em> ist mir die Idee gekommen die Rumex <em>statik Funktion</em> mit einem Literaturverzeichnis, die ja auch in pandoc zur Verfügung steht, zu versehen.</p>
+<h4 id="nachteil-des-literaturverzeichnisses"><del>Nachteil des Literaturverzeichnisses</del></h4>
+<p><del>Das Literaturverzeichnis wird immer gesetzt, auch dann wenn es nicht verwendet wird. Bedingt durch die CSS Formatierung</del></p>
 <pre class="sourceCode css"><code class="sourceCode css"><span class="fl">.references</span><span class="dv">:before</span> <span class="kw">{</span>
     <span class="kw">content:</span> <span class="st">&quot;Literaturverzeichnis&quot;</span><span class="kw">;</span></code></pre>
-<p>wird somit die Überschrift <em>Literaturverzeichnis</em> immer angezeigt.</p>
+<p><del>wird somit die Überschrift <em>Literaturverzeichnis</em> immer angezeigt.</del></p>
+<h4 id="anmerkung-zum-durchgestrichenem-text">Anmerkung zum durchgestrichenem Text</h4>
+<p>Die CSS Formatierung bzw. das Setzen der Überschrift für das Literaturverzeichnis wurde raus genommen da diese bei der PDF Version des Dokumentes nicht gesetzt wird. Die Überschrift muss somit manuell, am Ende des Dokumentes, eingebaut werden.</p>
+<h5 id="setzen-der-überschrift-für-das-literaturverzeichnis">Setzen der Überschrift für das Literaturverzeichnis</h5>
+<p>Die Überschrift für das Literaturverzeichnis muss immer am Ende des Artikels gesetzt werden.</p>
+<p><strong>Beispiel</strong></p>
+<pre><code># Literaturverzeichnis</code></pre>
 <h2 id="installation">Installation</h2>
 <p>Für die Verwendung der Literaturfunktion muss pandoc um das Zusatzprogramm <code>pandoc-citeproc</code> erweitert werden. Wer Pandoc über die Paketverwaltung installiert hat braucht hier nichts zu machen. Wer Pandoc manuell, so wie ich, installiert hat muss dieses Programm nachinstallieren.</p>
 <p>Dazu erweitert man die Installationszeile um das neue Programm</p>
@@ -171,6 +177,7 @@ ln -s ../.rumex/default/statik.css statik.css</code></pre>
 <p>Die PDF Datei dieser Beschreibung kann man sich <a href="index.pdf">hier</a> ansehen. Die Markdown Quelldatei kann man sich <a href="index.md">hier</a> holen.</p>
 <hr />
 <div class="references">
+<h1>Literaturverzeichnis</h1>
 <p><span style="font-variant: small-caps;">Stender, Daniel</span>: <em>PDF-Dokumente schreiben mit Pandoc und Markdown</em>. URL <a href="http://www.pro-linux.de/artikel/2/1635/3,bibliographie.html">http://www.pro-linux.de/artikel/2/1635/3,bibliographie.html</a></p>
 <p><span style="font-variant: small-caps;">Wikipedia</span>: <em>BibTeX — Wikipedia, Die freie Enzyklopädie</em>. URL <a href="http://de.wikipedia.org/w/index.php?title=BibTeX&amp;oldid=124228120">http://de.wikipedia.org/w/index.php?title=BibTeX&amp;oldid=124228120</a>. — [Online; Stand 18. Dezember 2013]</p>
 </div>
