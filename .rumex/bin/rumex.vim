@@ -229,7 +229,7 @@ map <Leader>ror :tabnew<CR>:e rss.rx0x<CR><CR>
 " Variante 1: 
 "   Kopiert den Text und sendet diesen an Twitter
 "   Unterstützt auch mehr als eine Zeile.
-"vmap <Leader>rtt y:!twiet -status="<C-R>""
+"vmap <Leader>rtt y:!twiet -ssl -status="<C-R>""
 "
 " Variante 2: 
 "   Sendet den Text an Twitter und entfernt diesen
@@ -238,7 +238,11 @@ map <Leader>ror :tabnew<CR>:e rss.rx0x<CR><CR>
 "   stehen muss.
 "   Bei Meldungen aufgeteilt in zwei Zeilen wird nur die 
 "   zweite Zeile gesendet.
-vmap <Leader>rtt !twiet -script<CR>
+"
+"   Sun, 23 Mar 2014 18:16:43 +0100
+"   Option -ssl eingebaut. 
+"   TTYtter meldet *** server reports: 'SSL is required' 
+vmap <Leader>rtt !twiet -ssl -script<CR>
 
 " KurzLink erzeugen mit is.gd (RumexKürzeLink)
 vmap <Leader>rkl x:r!echo "/sh <C-R>""\|twiet -script<CR>

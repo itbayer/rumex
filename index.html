@@ -12,13 +12,32 @@
 <link rel="icon" type="image/gif" href="favicon.gif" />
 
   <meta name="author" content="Stefan Blechschmidt">
-  <meta name="dcterms.date" content="2014-03-13">
+  <meta name="dcterms.date" content="2014-03-23">
 
   <title>IT Bayer’s rumex (github.com Version)</title>
   <style type="text/css">code{white-space: pre;}</style>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
 
 <!-- rumex Herausgeber -->
 <meta name="DC.publisher" content="IT-Bayer" />
@@ -27,7 +46,7 @@
 <meta name="DC.creator" content="IT-Bayer (Stefan Blechschmidt)" />
 
 <!-- rumex Speicherdatum der Datei -->
-  <meta name="DCTERMS.modified" scheme="DCTERMS.W3CDTF" content="2014-03-13" />
+  <meta name="DCTERMS.modified" scheme="DCTERMS.W3CDTF" content="2014-03-23" />
 
 <!-- rumex moot.it -->
 <link rel="stylesheet" href="https://cdn.moot.it/1/moot.css">
@@ -68,28 +87,64 @@
 <header>
 <h1 class="title"><a title="zur Startseite" href="index.html">IT Bayer’s rumex <sup style="font-size: .4em;">(github.com Version)</sup></a></h1>
 <h2 class="author">Stefan Blechschmidt</h2>
-<h3 class="date">2014-03-13</h3>
+<h3 class="date">2014-03-23</h3>
 </header>
 <div id="seite">
 <!-- START .indexliste --><div class="indexliste">
-<p>Dies ist ein Projekt das mit <code>pandoc's markdown</code> und ein paar Skripten eine Internetseite erstellt und verwalten.</p>
-<p>Gehostet werden kann diese auf <a href="http://github.com">github.com</a> wo auch diese Seite zu finden ist aber auch auf Servern mit git Unterstützung oder mit einem einfachen FTP Zugang kann dieses System verwendet werden.</p>
+<p>Rumex ist ein Projekt das mit <code>pandoc's markdown</code> und ein paar Skripten eine einfache Internetseite erstellt und verwalten. Diese Seiten können dann auf <a href="http://github.com">github.com</a>, wo auch diese Seite zu finden ist, gehostet werden. Aber auch auf Servern mit git Unterstützung oder mit einem einfachen FTP Zugang können die Seite veröffentlicht werden.</p>
+<p><strong>Beispiele</strong></p>
 <ul>
 <li><a href="http://www.it-bayer.de/rumex/">Rumex auf github (diese Seite)</a></li>
 <li><a href="http://rumex.it-bayer.de">Rumex auf einem Server mit git Unterstützung</a></li>
 <li><a href="http://rumex.html-5.me">Rumex auf einem Server mit FTP Zugang</a></li>
 <li><a href="http://5.231.70.214">Rumex auf einem host1free.com Server mit git Unterstützung</a></li>
 </ul>
-<p>Der aktuelle Stand dieses Baukastens kann als <a href="https://github.com/itbayer/rumex/archive/gh-pages.zip">ZIP Datei herunter geladen</a> werden.</p>
-<p>Aktuell wird dieser Baukasten auch auf der Seite <a href="http://www.it-bayer.de">http://www.it-bayer.de</a>, <a href="http://www.byvs.de">http://www.byvs.de</a> und auf <a href="http://www.hochfelder.de">http://www.hochfelder.de</a> verwendet.</p>
+<p>Der aktuelle Stand dieses Baukastens kann als <a href="https://github.com/itbayer/rumex/archive/gh-pages.zip">ZIP Datei holen</a>.</p>
+<p>Aktuell wird dieser Baukasten auch folgenden Seiten eingesetzt bzw. getestet.</p>
+<ul>
+<li><a href="http://www.it-bayer.de">http://www.it-bayer.de</a></li>
+<li><a href="http://www.byvs.de">http://www.byvs.de</a></li>
+<li><a href="http://www.hochfelder.de">http://www.hochfelder.de</a></li>
+<li><a href="http://www.auggenbach.de">http://www.auggenbach.de</a></li>
+</ul>
 <!-- ENDE .indexliste --></div>
 
 <!-- START .indexliste --><div class="indexliste">
 <h2 id="weblog" class="abschnitt weblog">Weblog</h2>
 <!-- START .weblogblock --><div class="weblogblock">
-
-
-
+<h1 id="twitter-und-ttytter">Twitter und TTYtter</h1>
+<p><em>Am 23.03.2014 um 18:35 schrieb IT-Bayer</em></p>
+<p>Twitter verlangt jetzt eine SSL Verbindung.</p>
+<pre><code>*** server reports: &quot;SSL is required&quot;</code></pre>
+<p>Dazu muss dem Programm <code>TTYtter.pl</code> der Parameter <code>-ssl</code> mitgegeben werden. Die Vim Konfiguration in <code>.rumex/bin/rumex.vim</code> wurde entsprechend angepasst. Bis zur nächsten Version kann man nachfolgenden Patch einspielen.</p>
+<div class="weblog">
+<p><strong>Patch - Twitter - TTYtter - ssl</strong></p>
+<pre class="sourceCode diff"><code class="sourceCode diff">index 6e9fd96..be91173 100644
+<span class="kw">--- a/.rumex/bin/rumex.vim</span>
+<span class="dt">+++ b/.rumex/bin/rumex.vim</span>
+<span class="dt">@@ -229,7 +229,7 @@ map &lt;Leader&gt;ror :tabnew&lt;CR&gt;:e rss.rx0x&lt;CR&gt;&lt;CR&gt;</span>
+ &quot; Variante 1: 
+ &quot;   Kopiert den Text und sendet diesen an Twitter
+ &quot;   Unterstützt auch mehr als eine Zeile.
+<span class="st">-&quot;vmap &lt;Leader&gt;rtt y:!twiet -status=&quot;&lt;C-R&gt;&quot;&quot;</span>
+<span class="ot">+&quot;vmap &lt;Leader&gt;rtt y:!twiet -ssl -status=&quot;&lt;C-R&gt;&quot;&quot;</span>
+ &quot;
+ &quot; Variante 2: 
+ &quot;   Sendet den Text an Twitter und entfernt diesen
+<span class="dt">@@ -238,7 +238,11 @@ map &lt;Leader&gt;ror :tabnew&lt;CR&gt;:e rss.rx0x&lt;CR&gt;&lt;CR&gt;</span>
+ &quot;   stehen muss.
+ &quot;   Bei Meldungen aufgeteilt in zwei Zeilen wird nur die 
+ &quot;   zweite Zeile gesendet.
+<span class="st">-vmap &lt;Leader&gt;rtt !twiet -script&lt;CR&gt;</span>
+<span class="ot">+&quot;</span>
+<span class="ot">+&quot;   Sun, 23 Mar 2014 18:16:43 +0100</span>
+<span class="ot">+&quot;   Option -ssl eingebaut. </span>
+<span class="ot">+&quot;   TTYtter meldet *** server reports: &#39;SSL is required&#39; </span>
+<span class="ot">+vmap &lt;Leader&gt;rtt !twiet -ssl -script&lt;CR&gt;</span>
+ 
+ &quot; KurzLink erzeugen mit is.gd (RumexKürzeLink)
+ vmap &lt;Leader&gt;rkl x:r!echo &quot;/sh &lt;C-R&gt;&quot;&quot;\|twiet -script&lt;CR&gt;</code></pre>
+</div>
 <h1 id="abschnittsbeschriftung">Abschnittsbeschriftung</h1>
 <p><em>Am 02.03.2014 um 23:43 schrieb IT-Bayer</em></p>
 <p>Auf der Startseite wurden Beschriftungen für die einzelnen Abschnitte eingebaut. Die index.html setzt sich somit aus drei Teilen zusammen, die jetzt mit einer Überschrift unterteilt sind.</p>
@@ -152,7 +207,7 @@ Es wird zwar nur mehr eine Überschrifszeile angezeigt. Dafür können die ander
 
 <h1 id="weblog-beschreibung"><a href="weblog-beschreibung.html">Weblog Beschreibung</a></h1>
 <p class="datum">
-Letzte Bearbeitung: 2014-03-13
+Letzte Bearbeitung: 2014-01-26
 </p>
 
 

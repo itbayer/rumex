@@ -2,23 +2,30 @@
 % 
 %
 
-Dies ist ein Projekt das mit `pandoc's markdown` und ein paar 
-Skripten eine Internetseite erstellt und verwalten.
+Rumex ist ein Projekt das mit `pandoc's markdown` und ein paar 
+Skripten eine einfache Internetseite erstellt und verwalten.
+Diese Seiten können dann auf
+[github.com](http://github.com),
+wo auch diese Seite zu finden ist,
+gehostet werden.
+Aber auch auf Servern mit git Unterstützung oder mit einem 
+einfachen FTP Zugang können die Seite veröffentlicht werden.
 
-Gehostet werden kann diese auf [github.com](http://github.com)
-wo auch diese Seite zu finden ist aber auch auf Servern
-mit git Unterstützung oder mit einem einfachen FTP Zugang
-kann dieses System verwendet werden.
+**Beispiele**
 
 * [Rumex auf github (diese Seite)](http://www.it-bayer.de/rumex/)
 * [Rumex auf einem Server mit git Unterstützung](http://rumex.it-bayer.de)
 * [Rumex auf einem Server mit FTP Zugang](http://rumex.html-5.me) 
 * [Rumex auf einem host1free.com Server mit git Unterstützung](http://5.231.70.214)
 
-Der aktuelle Stand dieses Baukastens kann als [ZIP Datei herunter geladen](https://github.com/itbayer/rumex/archive/gh-pages.zip) werden.
+Der aktuelle Stand dieses Baukastens kann als [ZIP Datei holen](https://github.com/itbayer/rumex/archive/gh-pages.zip).
 
-Aktuell wird dieser Baukasten auch auf der Seite <http://www.it-bayer.de>, 
-<http://www.byvs.de> und auf <http://www.hochfelder.de> verwendet.
+Aktuell wird dieser Baukasten auch folgenden Seiten eingesetzt bzw. getestet.
+
+- <http://www.it-bayer.de> 
+- <http://www.byvs.de> 
+- <http://www.hochfelder.de>
+- <http://www.auggenbach.de>
 
 
 

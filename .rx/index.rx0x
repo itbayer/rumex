@@ -1,26 +1,33 @@
 % IT Bayer's rumex <sup style="font-size: .4em;">(github.com Version)</sup>
 % Stefan Blechschmidt
-% 2014-03-13
+% 2014-03-23
 
 
 <!-- START .indexliste --><div class="indexliste">
-Dies ist ein Projekt das mit `pandoc's markdown` und ein paar 
-Skripten eine Internetseite erstellt und verwalten.
+Rumex ist ein Projekt das mit `pandoc's markdown` und ein paar 
+Skripten eine einfache Internetseite erstellt und verwalten.
+Diese Seiten können dann auf
+[github.com](http://github.com),
+wo auch diese Seite zu finden ist,
+gehostet werden.
+Aber auch auf Servern mit git Unterstützung oder mit einem 
+einfachen FTP Zugang können die Seite veröffentlicht werden.
 
-Gehostet werden kann diese auf [github.com](http://github.com)
-wo auch diese Seite zu finden ist aber auch auf Servern
-mit git Unterstützung oder mit einem einfachen FTP Zugang
-kann dieses System verwendet werden.
+**Beispiele**
 
 * [Rumex auf github (diese Seite)](http://www.it-bayer.de/rumex/)
 * [Rumex auf einem Server mit git Unterstützung](http://rumex.it-bayer.de)
 * [Rumex auf einem Server mit FTP Zugang](http://rumex.html-5.me) 
 * [Rumex auf einem host1free.com Server mit git Unterstützung](http://5.231.70.214)
 
-Der aktuelle Stand dieses Baukastens kann als [ZIP Datei herunter geladen](https://github.com/itbayer/rumex/archive/gh-pages.zip) werden.
+Der aktuelle Stand dieses Baukastens kann als [ZIP Datei holen](https://github.com/itbayer/rumex/archive/gh-pages.zip).
 
-Aktuell wird dieser Baukasten auch auf der Seite <http://www.it-bayer.de>, 
-<http://www.byvs.de> und auf <http://www.hochfelder.de> verwendet.
+Aktuell wird dieser Baukasten auch folgenden Seiten eingesetzt bzw. getestet.
+
+- <http://www.it-bayer.de> 
+- <http://www.byvs.de> 
+- <http://www.hochfelder.de>
+- <http://www.auggenbach.de>
 
 
 
@@ -44,6 +51,53 @@ Aktuell wird dieser Baukasten auch auf der Seite <http://www.it-bayer.de>,
 <!-- START .indexliste --><div class="indexliste">
 ##Weblog{.abschnitt .weblog}
 <!-- START .weblogblock --><div class="weblogblock">
+# Twitter und TTYtter
+
+_Am 23.03.2014 um 18:35 schrieb IT-Bayer_
+
+Twitter verlangt jetzt eine SSL Verbindung.
+
+	*** server reports: "SSL is required"
+
+Dazu muss dem Programm `TTYtter.pl` der Parameter `-ssl`
+mitgegeben werden.
+Die Vim Konfiguration in `.rumex/bin/rumex.vim` wurde entsprechend
+angepasst. 
+Bis zur nächsten Version kann man nachfolgenden Patch einspielen.
+
+
+<div class="weblog">
+
+**Patch - Twitter - TTYtter - ssl**
+
+~~~{.diff}
+index 6e9fd96..be91173 100644
+--- a/.rumex/bin/rumex.vim
++++ b/.rumex/bin/rumex.vim
+@@ -229,7 +229,7 @@ map <Leader>ror :tabnew<CR>:e rss.rx0x<CR><CR>
+ " Variante 1: 
+ "   Kopiert den Text und sendet diesen an Twitter
+ "   Unterstützt auch mehr als eine Zeile.
+-"vmap <Leader>rtt y:!twiet -status="<C-R>""
++"vmap <Leader>rtt y:!twiet -ssl -status="<C-R>""
+ "
+ " Variante 2: 
+ "   Sendet den Text an Twitter und entfernt diesen
+@@ -238,7 +238,11 @@ map <Leader>ror :tabnew<CR>:e rss.rx0x<CR><CR>
+ "   stehen muss.
+ "   Bei Meldungen aufgeteilt in zwei Zeilen wird nur die 
+ "   zweite Zeile gesendet.
+-vmap <Leader>rtt !twiet -script<CR>
++"
++"   Sun, 23 Mar 2014 18:16:43 +0100
++"   Option -ssl eingebaut. 
++"   TTYtter meldet *** server reports: 'SSL is required' 
++vmap <Leader>rtt !twiet -ssl -script<CR>
+ 
+ " KurzLink erzeugen mit is.gd (RumexKürzeLink)
+ vmap <Leader>rkl x:r!echo "/sh <C-R>""\|twiet -script<CR>
+~~~
+</div>
 
 
 
@@ -212,7 +266,7 @@ der index.html oder nur im Archiv, die eigentliche Seite
 [Weblog Beschreibung](weblog-beschreibung.html)
 =======================================================
 
-<p class="datum">Letzte Bearbeitung: 2014-03-13</p>
+<p class="datum">Letzte Bearbeitung: 2014-01-26</p>
 
 
 Diese kleine Erweiterung soll eine Art Blog innerhalb Rumex ermöglichen.
