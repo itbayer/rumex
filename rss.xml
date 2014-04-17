@@ -21,14 +21,27 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 </description>
 </image>
 <item>
+<title>Test RSS</title>
+<description>
+<![CDATA[
+<p>Nur eine Testnachricht ob das Datum bzw. die Uhrzeit jetzt richtig gesetzt wird.</p>
+]]>
+</description>
+<link>http://http://www.it-bayer.de/rumex/</link>
+<guid isPermaLink="false">http://http://www.it-bayer.de/rumex/_Thu_17Apr2014</guid>
+<dc:creator>it-bayer</dc:creator>
+<pubDate>Thu, 17 Apr 2014 16:59:29 +0200</pubDate>
+<category><![CDATA[Test]]></category>
+</item>
+<item>
 <title>RSS Feed überarbeitet</title>
 <description>
 <![CDATA[
 <p>Die Feed Funktion funktioniert noch nicht richtig. Im Feed Reader Liferea wird immer noch das falsche Datum angezeigt. So wie es ausschaut liegt es am TAG <code>pubDate</code> das ich im falschen Format gesetzt habe.</p>
 ]]>
 </description>
-<link>http://www.it-bayer.de/rumex</link>
-<guid isPermaLink="false">http://www.it-bayer.de/rumex_Thu_17Apr2014</guid>
+<link>http://www.it-bayer.de/rumex/</link>
+<guid isPermaLink="false">http://www.it-bayer.de/rumex/_Thu_17Apr2014</guid>
 <dc:creator>it-bayer</dc:creator>
 <pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
