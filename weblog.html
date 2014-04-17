@@ -17,25 +17,6 @@
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <style type="text/css">
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; }
-code > span.dt { color: #902000; }
-code > span.dv { color: #40a070; }
-code > span.bn { color: #40a070; }
-code > span.fl { color: #40a070; }
-code > span.ch { color: #4070a0; }
-code > span.st { color: #4070a0; }
-code > span.co { color: #60a0b0; font-style: italic; }
-code > span.ot { color: #007020; }
-code > span.al { color: #ff0000; font-weight: bold; }
-code > span.fu { color: #06287e; }
-code > span.er { color: #ff0000; font-weight: bold; }
-  </style>
 
 <!-- rumex Herausgeber -->
 <meta name="DC.publisher" content="IT-Bayer" />
@@ -86,57 +67,140 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <h1 class="title"><a title="zur Startseite" href="index.html">WebLog</a></h1>
 </header>
 <div id="seite">
-<h1 id="twitter-und-ttytter">Twitter und TTYtter</h1>
-<p><em>Am 23.03.2014 um 18:35 schrieb IT-Bayer</em></p>
-<p>Twitter verlangt jetzt eine SSL Verbindung.</p>
-<pre><code>*** server reports: &quot;SSL is required&quot;</code></pre>
-<p>Dazu muss dem Programm <code>TTYtter.pl</code> der Parameter <code>-ssl</code> mitgegeben werden. Die Vim Konfiguration in <code>.rumex/bin/rumex.vim</code> wurde entsprechend angepasst. Bis zur nächsten Version kann man nachfolgenden Patch einspielen.</p>
+<!--
+
+# RSS Update
+
+_Am 17.04.2014 um 17:57 schrieb IT-Bayer_
+
+Die RSS Funktion von Rumex wurde überarbeitet.
+Das Datum der Nachricht wird jetzt korrekt angezeigt bzw. verarbeitet.
+Diese Neue Funktion ist in der Version
+0.8.3.0 enthalten die auch schon zum Download
+`make update` bereit steht.
+
+
 <div class="weblog">
-<p><strong>Patch - Twitter - TTYtter - ssl</strong></p>
-<pre class="sourceCode diff"><code class="sourceCode diff">index 6e9fd96..be91173 100644
-<span class="kw">--- a/.rumex/bin/rumex.vim</span>
-<span class="dt">+++ b/.rumex/bin/rumex.vim</span>
-<span class="dt">@@ -229,7 +229,7 @@ map &lt;Leader&gt;ror :tabnew&lt;CR&gt;:e rss.rx0x&lt;CR&gt;&lt;CR&gt;</span>
- &quot; Variante 1: 
- &quot;   Kopiert den Text und sendet diesen an Twitter
- &quot;   Unterstützt auch mehr als eine Zeile.
-<span class="st">-&quot;vmap &lt;Leader&gt;rtt y:!twiet -status=&quot;&lt;C-R&gt;&quot;&quot;</span>
-<span class="ot">+&quot;vmap &lt;Leader&gt;rtt y:!twiet -ssl -status=&quot;&lt;C-R&gt;&quot;&quot;</span>
- &quot;
- &quot; Variante 2: 
- &quot;   Sendet den Text an Twitter und entfernt diesen
-<span class="dt">@@ -238,7 +238,11 @@ map &lt;Leader&gt;ror :tabnew&lt;CR&gt;:e rss.rx0x&lt;CR&gt;&lt;CR&gt;</span>
- &quot;   stehen muss.
- &quot;   Bei Meldungen aufgeteilt in zwei Zeilen wird nur die 
- &quot;   zweite Zeile gesendet.
-<span class="st">-vmap &lt;Leader&gt;rtt !twiet -script&lt;CR&gt;</span>
-<span class="ot">+&quot;</span>
-<span class="ot">+&quot;   Sun, 23 Mar 2014 18:16:43 +0100</span>
-<span class="ot">+&quot;   Option -ssl eingebaut. </span>
-<span class="ot">+&quot;   TTYtter meldet *** server reports: &#39;SSL is required&#39; </span>
-<span class="ot">+vmap &lt;Leader&gt;rtt !twiet -ssl -script&lt;CR&gt;</span>
- 
- &quot; KurzLink erzeugen mit is.gd (RumexKürzeLink)
- vmap &lt;Leader&gt;rkl x:r!echo &quot;/sh &lt;C-R&gt;&quot;&quot;\|twiet -script&lt;CR&gt;</code></pre>
+
+Nach dem Update muss die `../.rumex/bin/rumex.vim` neu eingelesen werden
+so dass vim das neue Datumsformat übernimmt.
+
+    :so ../.rumex/bin/rumex.vim
+
+
+**Achtung:** Durch die Änderung der Datumsangabe in den 
+NEWS Einträgen ist eine Überarbeitung der alten Einträge 
+in der Datei `rss.rx0x` erforderlich.
+Diese müssen das neue Format des Zeitstempels tragen.
+
+Das neue Datumsformat kann mit der Kurztaste 
+`,rnn` gesichtet werden, es wird eine neuer
+NEWS Eintrag mit dem aktuellen Datum Zeitstempel erstellt.
+
+Der Zeitstemple / Kommentar, hinter der Überschrift, kann 
+kopiert und für die alten Einträge verwendet werden.
+
+**Wichtig: Die alten Einträge müssen geändert werden.**
+
 </div>
-<h1 id="abschnittsbeschriftung">Abschnittsbeschriftung</h1>
-<p><em>Am 02.03.2014 um 23:43 schrieb IT-Bayer</em></p>
-<p>Auf der Startseite wurden Beschriftungen für die einzelnen Abschnitte eingebaut. Die index.html setzt sich somit aus drei Teilen zusammen, die jetzt mit einer Überschrift unterteilt sind.</p>
-<pre><code>
+
+
+
+
+
+# Twitter und TTYtter
+
+_Am 23.03.2014 um 18:35 schrieb IT-Bayer_
+
+Twitter verlangt jetzt eine SSL Verbindung.
+
+    *** server reports: "SSL is required"
+
+Dazu muss dem Programm `TTYtter.pl` der Parameter `-ssl`
+mitgegeben werden.
+Die Vim Konfiguration in `.rumex/bin/rumex.vim` wurde entsprechend
+angepasst. 
+Bis zur nächsten Version kann man nachfolgenden Patch einspielen.
+
+
+<div class="weblog">
+
+**Patch - Twitter - TTYtter - ssl**
+
+~~~{.diff}
+index 6e9fd96..be91173 100644
+--- a/.rumex/bin/rumex.vim
++++ b/.rumex/bin/rumex.vim
+@@ -229,7 +229,7 @@ map <Leader>ror :tabnew<CR>:e rss.rx0x<CR><CR>
+ " Variante 1: 
+ "   Kopiert den Text und sendet diesen an Twitter
+ "   Unterstützt auch mehr als eine Zeile.
+-"vmap <Leader>rtt y:!twiet -status="<C-R>""
++"vmap <Leader>rtt y:!twiet -ssl -status="<C-R>""
+ "
+ " Variante 2: 
+ "   Sendet den Text an Twitter und entfernt diesen
+@@ -238,7 +238,11 @@ map <Leader>ror :tabnew<CR>:e rss.rx0x<CR><CR>
+ "   stehen muss.
+ "   Bei Meldungen aufgeteilt in zwei Zeilen wird nur die 
+ "   zweite Zeile gesendet.
+-vmap <Leader>rtt !twiet -script<CR>
++"
++"   Sun, 23 Mar 2014 18:16:43 +0100
++"   Option -ssl eingebaut. 
++"   TTYtter meldet *** server reports: 'SSL is required' 
++vmap <Leader>rtt !twiet -ssl -script<CR>
+ 
+ " KurzLink erzeugen mit is.gd (RumexKürzeLink)
+ vmap <Leader>rkl x:r!echo "/sh <C-R>""\|twiet -script<CR>
+~~~
+</div>
+
+
+
+# Abschnittsbeschriftung
+
+_Am 02.03.2014 um 23:43 schrieb IT-Bayer_
+
+Auf der Startseite wurden Beschriftungen für die 
+einzelnen Abschnitte eingebaut.
+Die index.html setzt sich somit aus drei Teilen zusammen,
+die jetzt mit einer Überschrift unterteilt sind.
+
+~~~
+
 start.rx0s
 
--&gt; Weblog
+-> Weblog
 
 weblog.rx0s
 
--&gt; Seitenübersicht
+-> Seitenübersicht
 
 *.rx?s
-</code></pre>
+
+~~~
+
 <div class="weblog">
-<p>Die mit <code>-&gt;</code> gekennzeichneten Stellen sind neu dazu gekommen. Wird keine <code>weblog.rx0s</code> Datei verwendet, bzw. ist diese Datei nicht vorhanden, werden auch die Abschnittsüberschriften nicht angezeigt. <strong>Auch die Überschrift <em>“Seitenübersicht”</em> wird dann nicht mehr eingeblendet.</strong></p>
-<p>Eine neue Version 0.8.2.9 wurde erstellt und steht für das Update <code>make update</code> bereit.</p>
+
+Die mit `->` gekennzeichneten Stellen sind neu dazu gekommen.
+Wird keine `weblog.rx0s` Datei verwendet, bzw. ist diese Datei
+nicht vorhanden, werden auch die Abschnittsüberschriften nicht angezeigt.
+**Auch die Überschrift _"Seitenübersicht"_ wird dann nicht
+mehr eingeblendet.**
+
+Eine neue Version 0.8.2.9 wurde erstellt und steht für das Update
+`make update` bereit.
+
 </div>
+
+
+-->
+
+<!-- schnipp -->
+
+
+
 <h1 id="pandoc11233aufdebian74">pandoc 1.12.3.3 auf Debian 7.4</h1>
 <p><em>Am 18.02.2014 um 18:56 schrieb IT-Bayer</em></p>
 <p>Vor kurzem habe ich wieder auf die, ich nenne sie meine, Mutter der Linux Distributionen umgestellt. Natürlich wollte ich das aktuelle pandoc, bei Debian 7.4 ist nur die Version 1.9.4.2 enthalten.</p>
@@ -172,9 +236,6 @@ Es wird zwar nur mehr eine Überschrifszeile angezeigt. Dafür können die ander
 <p>Als Seitengerüst für die WebLog Seite kann das Standard Gerüst einer <code>.rx0s</code> Seite verwendet werden. Es muss jedoch die Überschrift<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> mit dem Link aus der Seite genommen werden.</p>
 <p>Das Schlüsselwort <code>schnipp</code> bestimmt ob die WebLog Einträge auch auf der index.html oder nur im Archiv, die eigentliche Seite <a href="weblog.html">weblog.html</a>, angezeigt werden.</p>
 </div>
-<!-- schnipp -->
-
-
 <h1 id="rumex-statische-dateien">Rumex Statische Dateien</h1>
 <p><em>Am 12.10.2013 um 23:18 schrieb IT-Bayer</em></p>
 <p>Auf der Seite <a href="statik/index.htm">statik/</a> findet man einen kleine Beschreibung wie man mit pandocs markdown und gvim kleine Beschreibungen in verschiedene Formate wandeln kann.</p>

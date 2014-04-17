@@ -18,7 +18,7 @@ einfachen FTP Zugang können die Seite veröffentlicht werden.
 * [Rumex auf github (diese Seite)](http://www.it-bayer.de/rumex/)
 * [Rumex auf einem Server mit git Unterstützung](http://rumex.it-bayer.de)
 * [Rumex auf einem Server mit FTP Zugang](http://rumex.html-5.me) 
-* [Rumex auf einem host1free.com Server mit git Unterstützung](http://5.231.70.214)
+* [Rumex auf einem host1free.com Server mit git Unterstützung](http://www1.byvs.de/)
 
 Der aktuelle Stand dieses Baukastens kann als [ZIP Datei holen](https://github.com/itbayer/rumex/archive/gh-pages.zip).
 
@@ -51,6 +51,47 @@ Aktuell wird dieser Baukasten auch folgenden Seiten eingesetzt bzw. getestet.
 <!-- START .indexliste --><div class="indexliste">
 ##Weblog{.abschnitt .weblog}
 <!-- START .weblogblock --><div class="weblogblock">
+
+
+# RSS Update
+
+_Am 17.04.2014 um 17:57 schrieb IT-Bayer_
+
+Die RSS Funktion von Rumex wurde überarbeitet.
+Das Datum der Nachricht wird jetzt korrekt angezeigt bzw. verarbeitet.
+Diese Neue Funktion ist in der Version
+0.8.3.0 enthalten die auch schon zum Download
+`make update` bereit steht.
+
+
+<div class="weblog">
+
+Nach dem Update muss die `../.rumex/bin/rumex.vim` neu eingelesen werden
+so dass vim das neue Datumsformat übernimmt.
+
+	:so ../.rumex/bin/rumex.vim
+
+
+**Achtung:** Durch die Änderung der Datumsangabe in den 
+NEWS Einträgen ist eine Überarbeitung der alten Einträge 
+in der Datei `rss.rx0x` erforderlich.
+Diese müssen das neue Format des Zeitstempels tragen.
+
+Das neue Datumsformat kann mit der Kurztaste 
+`,rnn` gesichtet werden, es wird eine neuer
+NEWS Eintrag mit dem aktuellen Datum Zeitstempel erstellt.
+
+Der Zeitstemple / Kommentar, hinter der Überschrift, kann 
+kopiert und für die alten Einträge verwendet werden.
+
+**Wichtig: Die alten Einträge müssen geändert werden.**
+
+</div>
+
+
+
+
+
 # Twitter und TTYtter
 
 _Am 23.03.2014 um 18:35 schrieb IT-Bayer_
@@ -137,121 +178,6 @@ Eine neue Version 0.8.2.9 wurde erstellt und steht für das Update
 
 </div>
 
-
-
-
-
-# pandoc 1.12.3.3 auf Debian 7.4 {#pandoc11233aufdebian74}
-
-_Am 18.02.2014 um 18:56 schrieb IT-Bayer_
-
-Vor kurzem habe ich wieder auf die, ich nenne sie
-meine, Mutter der Linux Distributionen umgestellt.
-Natürlich wollte ich das aktuelle pandoc, bei 
-Debian 7.4 ist nur die Version 1.9.4.2 enthalten.
-
-Anscheinend ist aber dieser Versionssprung so groß
-dass einige Bibliotheken auch nicht mehr funktionieren.
-Pandoc und alle Abhängigkeiten muss also von Hand installiert werden.
-
-<div class="weblog">
-
-Was soll ich sagen _"es funktioniert"_. Zwar ist es sehr Zeitaufwendig.
-Liegt wahrscheinlich daran dass ich nicht den richtigen Weg eingeschlagen habe.
-Am Ende wurde ich aber belohnt mit einem:: 
-
-	:~$ pandoc -v
-	pandoc 1.12.3.3
-	Compiled with texmath 0.6.6, highlighting-kate 0.5.6.1.
-	...
-
-</div>
-
-
-
-# Titelzeilen umgebaut
-
-_Am 27.01.2014 um 14:27 schrieb IT-Bayer_
-
-Der Umbau der Titelzeile wurde gemacht um die 
-Verwendung durch pandoc, Autor und Datum,
-besser umzusetzen.
-
-
-<div class="weblog">
-
-Es wird zwar nur mehr eine Überschrifszeile
-angezeigt. 
-Dafür können die andere beider Zeilen für die Angaben
-des Autors bzw. des Datums verwendet werden.
-Diese beiden Angaben werden in der Online Version
-nicht angezeigt.
-Sie dienen lediglich für die META Angabe im HEAD Bereich
-der HTML Seite. 
-Wir die Seite ausgedruckt werden diese beiden Angabe jedoch
-wieder eingeblendet.
-</div>
-
-
-# Rumex Beschreibung hinkt
-
-_Am 06.12.2013 um 18:13 schrieb IT-Bayer_
-
-So wie es ausschaut komme ich mit der 
-[Beschreibung](beschreibung.html) einfach nicht weiter.
-Kaum will ich mit einem neuen Abschnitt anfangen
-fällt mir eine neuen Funktion ein die ich noch einbauen will.
-
-<div class="weblog">
-Bei der WebLog Funktion ist es mir schon wieder so gegangen.
-Aber nicht nur dass ich die neuen Funktion in Rumex einbauen,
-ich mache dann auch gleich die Updates auf den 
-anderen Rumex Testseiten.
-
-Wenn ich fertig bin habe ich dann keinen Lust mehr an der
-Beschreibung zu arbeiten. 
-Was soll es!
-Rumex ist noch immer in der Alpha Phase den die 
-[Beta Phase habe ich ja wieder gestrichen.](historie.html#beta-gestrichen).
-
-Es wird wohl noch eine weile Dauern bis ich die Beschreibung fertig
-gestellt habe.
-
-Meine ersten Versuche findet man [hier](statik/beschreibung.htm).
-
-</div>
-
-
-# Rumex WebLog 
-
-_Am 03.12.2013 um 12:25 schrieb IT-Bayer_
-
-Rumex hat eine neue Seite bekommen [weblog.rx0s](weblog.html).
-Diese Seite dient nun als WebLog auf der Index Seite
-und ersetzt die alte WebLog Funktion auf der `start.rx0s`.
-
-Ich verspreche mir dadurch ein wenig mehr Übersicht auf der `index.html`.
-
-
-<div class="weblog">
-Wie auch die `start.rx0s` wird die `weblog.rx0s` in der index.html 
-immer ganz oben gehalten[^weblognachstart].
-Egal ob sich der Inhalt dieser Seite geändert hat.
-
-[^weblognachstart]: Genauer gesagt wird die `weblog.rx0s` immer nach der `start.rx0s` eingebaut.
-
-Als Seitengerüst für die WebLog Seite kann 
-das Standard Gerüst einer `.rx0s` Seite verwendet werden.
-Es muss jedoch die Überschrift[^ueberschriftmitlink] mit dem Link aus der Seite genommen werden.
-
-[^ueberschriftmitlink]: Gemeint ist hier die Überschrift mit dem Link zur Seite die am
-Anfang der Seite in den Kommentar Klammern steht. Diese können übrigens drin bleiben.
-
-Das Schlüsselwort `schnipp` bestimmt ob die WebLog Einträge auch auf 
-der index.html oder nur im Archiv, die eigentliche Seite 
-[weblog.html](weblog.html), angezeigt werden.
-
-</div>
 
 
 #### [... ältere Weblog Einträge anzeigen](weblog.html) {.webloglink}

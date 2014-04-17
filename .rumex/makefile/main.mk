@@ -14,6 +14,7 @@ html: html0s html0x html0v html0w html1s html1x html1v html2s html2x html2v html
 
 index:
 	$(INDEX) $(INDEX_TITEL) $(INDEX_AUTOR) $(INDEX_DATUM)
+	make -s html
 
 
 # ######################################################
@@ -80,6 +81,7 @@ sitemapxml:
 # wird dann durch make html erstellt.
 sitemaprx:
 	$(SITEMAP_RX) $(URL) > $(SITEMAP_RX_FILE)
+	make -s html
 
 
 # #######################################################
