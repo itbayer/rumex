@@ -15,6 +15,37 @@
 -->
 
 
+
+# Update RSS Rumex V0.8.3.0 <!-- Thu, 17 Apr 2014 17:02:34 +0200 -->
+
+<!--
+!> Link: http://www.it-bayer.de/rumex/
+!> Autor: it-bayer
+!> Kategorie: Update
+-->
+
+
+Die RSS Funktion von Rumex wurde überarbeitet.
+Das Datum der Nachricht wird jetzt korrekt angezeigt bzw. verarbeitet.
+Diese Neue Funktion ist in der Version
+0.8.3.0 enthalten die auch schon zum Download bereit steht.
+
+**Achtung:** Durch die Änderung der Datumsangabe in den 
+NEWS Einträgen ist eine Überarbeitung der alten Einträge 
+in der Datei `rss.rx0x` erforderlich.
+Diese müssen das neue Format des Zeitstempels tragen.
+
+Das neue Datumsformat kann mit der Kurztaste 
+`,rnn` gesichtet werden, es wird eine neuer
+NEWS Eintrag mit dem aktuellen Datum Zeitstempel erstellt.
+
+Der Zeitstemple / Kommentar, hinter der Überschrift, kann 
+kopiert und für die alten Einträge verwendet werden.
+
+**Wichtig: Die alten Einträge müssen geändert werden.**
+
+
+
 # Test RSS <!-- Thu, 17 Apr 2014 16:59:29 +0200 -->
 
 <!--
