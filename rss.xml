@@ -21,6 +21,19 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 </description>
 </image>
 <item>
+<title>RSS Feed überarbeitet</title>
+<description>
+<![CDATA[
+<p>Die Feed Funktion funktioniert noch nicht richtig. Im Feed Reader Liferea wird immer noch das falsche Datum angezeigt. So wie es ausschaut liegt es am TAG <code>pubDate</code> das ich im falschen Format gesetzt habe.</p>
+]]>
+</description>
+<link>http://www.it-bayer.de/rumex</link>
+<guid isPermaLink="false">http://www.it-bayer.de/rumex_Thu_17Apr2014</guid>
+<dc:creator>it-bayer</dc:creator>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
+<category><![CDATA[Neues]]></category>
+</item>
+<item>
 <title>Rumex kann statische Seiten erstellen</title>
 <description>
 <![CDATA[
@@ -36,9 +49,9 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 ]]>
 </description>
 <link>http://www.it-bayer.de/rumex/statik/</link>
-<guid>http://www.it-bayer.de/rumex/statik/2013/12/18_0938</guid>
+<guid isPermaLink="false">http://www.it-bayer.de/rumex/statik/_Thu_17Apr2014</guid>
 <dc:creator>IT-Bayer</dc:creator>
-<pubDate>2013/12/18 09:38</pubDate>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
 </item>
 <item>
@@ -50,9 +63,9 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 ]]>
 </description>
 <link>http://www.it-bayer.de/rumex/</link>
-<guid>http://www.it-bayer.de/rumex/2013/11/07_0755</guid>
+<guid isPermaLink="false">http://www.it-bayer.de/rumex/_Thu_17Apr2014</guid>
 <dc:creator>IT-Bayer</dc:creator>
-<pubDate>2013/11/07 07:55</pubDate>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
 </item>
 <item>
@@ -69,9 +82,9 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 ]]>
 </description>
 <link>http://www.it-bayer.de/rumex/</link>
-<guid>http://www.it-bayer.de/rumex/2013/09/20_0755</guid>
+<guid isPermaLink="false">http://www.it-bayer.de/rumex/_Thu_17Apr2014</guid>
 <dc:creator>IT-Bayer</dc:creator>
-<pubDate>2013/09/20 07:55</pubDate>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
 </item>
 <item>
@@ -82,9 +95,9 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 ]]>
 </description>
 <link>http://www.it-bayer.de/rumex/beschreibung.html#homepage-änderung-schnell-und-immer-aktuell</link>
-<guid>http://www.it-bayer.de/rumex/beschreibung.html#homepage-änderung-schnell-und-immer-aktuell2013/09/05_1634</guid>
+<guid isPermaLink="false">http://www.it-bayer.de/rumex/beschreibung.html#homepage-änderung-schnell-und-immer-aktuell_Thu_17Apr2014</guid>
 <dc:creator>IT-Bayer</dc:creator>
-<pubDate>2013/09/05 16:34</pubDate>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
 </item>
 <item>
@@ -96,9 +109,9 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 ]]>
 </description>
 <link>http://www.it-bayer.de/rumex/</link>
-<guid>http://www.it-bayer.de/rumex/2013/08/21_0710</guid>
+<guid isPermaLink="false">http://www.it-bayer.de/rumex/_Thu_17Apr2014</guid>
 <dc:creator>IT-Bayer</dc:creator>
-<pubDate>2013/08/21 07:10</pubDate>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
 </item>
 <item>
@@ -110,9 +123,9 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 ]]>
 </description>
 <link>http://www.it-bayer.de/rumex/</link>
-<guid>http://www.it-bayer.de/rumex/2013/07/21_1741</guid>
+<guid isPermaLink="false">http://www.it-bayer.de/rumex/_Thu_17Apr2014</guid>
 <dc:creator>IT-Bayer</dc:creator>
-<pubDate>2013/07/21 17:41</pubDate>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
 </item>
 <item>
@@ -123,9 +136,9 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 ]]>
 </description>
 <link>http://www.it-bayer.de/rumex/historie.html#V0.6.7</link>
-<guid>http://www.it-bayer.de/rumex/historie.html#V0.6.72013/07/15_1957</guid>
+<guid isPermaLink="false">http://www.it-bayer.de/rumex/historie.html#V0.6.7_Thu_17Apr2014</guid>
 <dc:creator>IT-Bayer</dc:creator>
-<pubDate>2013/07/15 19:57</pubDate>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
 </item>
 <item>
@@ -139,9 +152,9 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 ]]>
 </description>
 <link>http://it-bayer.de/rumex/</link>
-<guid>http://it-bayer.de/rumex/2013/07/11_0709</guid>
+<guid isPermaLink="false">http://it-bayer.de/rumex/_Thu_17Apr2014</guid>
 <dc:creator>IT-Bayer</dc:creator>
-<pubDate>2013/07/11 07:09</pubDate>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
 </item>
 <item>
@@ -152,9 +165,9 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 ]]>
 </description>
 <link>http://www.it-bayer.de/rumex/rss.html#rx07</link>
-<guid>http://www.it-bayer.de/rumex/rss.html#rx072013/07/07_1728</guid>
+<guid isPermaLink="false">http://www.it-bayer.de/rumex/rss.html#rx07_Thu_17Apr2014</guid>
 <dc:creator>IT-Bayer</dc:creator>
-<pubDate>2013/07/07 17:28</pubDate>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
 </item>
 <item>
@@ -166,9 +179,9 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 ]]>
 </description>
 <link>http://www.it-bayer.de/rumex/historie.html#v0.6</link>
-<guid>http://www.it-bayer.de/rumex/historie.html#v0.62013/07/04_1015</guid>
+<guid isPermaLink="false">http://www.it-bayer.de/rumex/historie.html#v0.6_Thu_17Apr2014</guid>
 <dc:creator>IT-Bayer</dc:creator>
-<pubDate>2013/07/04 10:15</pubDate>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
 </item>
 <item>
@@ -179,9 +192,9 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 ]]>
 </description>
 <link>http://www.it-bayer.de/rumex/historie.html#v0.5</link>
-<guid>http://www.it-bayer.de/rumex/historie.html#v0.52013/07/11_1203</guid>
+<guid isPermaLink="false">http://www.it-bayer.de/rumex/historie.html#v0.5_Thu_17Apr2014</guid>
 <dc:creator>IT-Bayer</dc:creator>
-<pubDate>2013/07/11 12:03</pubDate>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
 </item>
 <item>
@@ -192,9 +205,9 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 ]]>
 </description>
 <link>http://www.it-bayer.de/rumex/historie.html#v0.4.8</link>
-<guid>http://www.it-bayer.de/rumex/historie.html#v0.4.82013/07/04_0841</guid>
+<guid isPermaLink="false">http://www.it-bayer.de/rumex/historie.html#v0.4.8_Thu_17Apr2014</guid>
 <dc:creator>IT-Bayer</dc:creator>
-<pubDate>2013/07/04 08:41</pubDate>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
 </item>
 <item>
@@ -205,9 +218,9 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 ]]>
 </description>
 <link>http://www.it-bayer.de/rumex/historie.html#v0.4.7</link>
-<guid>http://www.it-bayer.de/rumex/historie.html#v0.4.72013/06/11_1203</guid>
+<guid isPermaLink="false">http://www.it-bayer.de/rumex/historie.html#v0.4.7_Thu_17Apr2014</guid>
 <dc:creator>IT-Bayer</dc:creator>
-<pubDate>2013/06/11 12:03</pubDate>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
 </item>
 <item>
@@ -218,9 +231,9 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 ]]>
 </description>
 <link>http://www.it-bayer.de/rumex/historie.html#v0.4.5</link>
-<guid>http://www.it-bayer.de/rumex/historie.html#v0.4.52013/06/11_1203</guid>
+<guid isPermaLink="false">http://www.it-bayer.de/rumex/historie.html#v0.4.5_Thu_17Apr2014</guid>
 <dc:creator>IT-Bayer</dc:creator>
-<pubDate>2013/06/11 12:03</pubDate>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
 </item>
 <item>
@@ -231,9 +244,9 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 ]]>
 </description>
 <link>http://www.it-bayer.de/rumex/historie.html#v0.4.0</link>
-<guid>http://www.it-bayer.de/rumex/historie.html#v0.4.02013/06/11_1203</guid>
+<guid isPermaLink="false">http://www.it-bayer.de/rumex/historie.html#v0.4.0_Thu_17Apr2014</guid>
 <dc:creator>IT-Bayer</dc:creator>
-<pubDate>2013/06/11 12:03</pubDate>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
 </item>
 <item>
@@ -244,9 +257,9 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 ]]>
 </description>
 <link>http://www.it-bayer.de/rumex/historie.html#v0.3.7</link>
-<guid>http://www.it-bayer.de/rumex/historie.html#v0.3.72013/06/11_1203</guid>
+<guid isPermaLink="false">http://www.it-bayer.de/rumex/historie.html#v0.3.7_Thu_17Apr2014</guid>
 <dc:creator>IT-Bayer</dc:creator>
-<pubDate>2013/06/11 12:03</pubDate>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
 </item>
 <item>
@@ -257,9 +270,9 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 ]]>
 </description>
 <link>http://www.it-bayer.de/rumex/historie.html#v0.3.6</link>
-<guid>http://www.it-bayer.de/rumex/historie.html#v0.3.62013/06/11_1203</guid>
+<guid isPermaLink="false">http://www.it-bayer.de/rumex/historie.html#v0.3.6_Thu_17Apr2014</guid>
 <dc:creator>IT-Bayer</dc:creator>
-<pubDate>2013/06/11 12:03</pubDate>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
 </item>
 <item>
@@ -278,9 +291,9 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 ]]>
 </description>
 <link>http://www.it-bayer.de/rumex/historie.html#v0.3.5</link>
-<guid>http://www.it-bayer.de/rumex/historie.html#v0.3.52013/06/11_1203</guid>
+<guid isPermaLink="false">http://www.it-bayer.de/rumex/historie.html#v0.3.5_Thu_17Apr2014</guid>
 <dc:creator>IT-Bayer</dc:creator>
-<pubDate>2013/06/11 12:03</pubDate>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
 </item>
 <item>
@@ -292,9 +305,9 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 ]]>
 </description>
 <link>http://www.it-bayer.de/rumex/historie.html#v0.3.2</link>
-<guid>http://www.it-bayer.de/rumex/historie.html#v0.3.22013/06/11_1203</guid>
+<guid isPermaLink="false">http://www.it-bayer.de/rumex/historie.html#v0.3.2_Thu_17Apr2014</guid>
 <dc:creator>IT-Bayer</dc:creator>
-<pubDate>2013/06/11 12:03</pubDate>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
 </item>
 <item>
@@ -305,9 +318,9 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 ]]>
 </description>
 <link>http://rumex.it-bayer.de/</link>
-<guid>http://rumex.it-bayer.de/2013/06/11_1203</guid>
+<guid isPermaLink="false">http://rumex.it-bayer.de/_Thu_17Apr2014</guid>
 <dc:creator>IT-Bayer</dc:creator>
-<pubDate>2013/06/11 12:03</pubDate>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
 </item>
 <item>
@@ -319,9 +332,9 @@ Aktuelles und Neuigkeiten von der rumex Seite.
 ]]>
 </description>
 <link>http://www.it-bayer.de/rumex/historie.html#v0.3</link>
-<guid>http://www.it-bayer.de/rumex/historie.html#v0.32013/06/11_1203</guid>
+<guid isPermaLink="false">http://www.it-bayer.de/rumex/historie.html#v0.3_Thu_17Apr2014</guid>
 <dc:creator>IT-Bayer</dc:creator>
-<pubDate>2013/06/11 12:03</pubDate>
+<pubDate>Thu, 17 Apr 2014 15:16:02 +0200</pubDate>
 <category><![CDATA[Neues]]></category>
 </item>
 </channel>

@@ -15,9 +15,22 @@
 -->
 
 
+# RSS Feed überarbeitet <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
+
+<!--
+!> Link: http://www.it-bayer.de/rumex
+!> Autor: it-bayer
+!> Kategorie: Neues
+-->
+
+Die Feed Funktion funktioniert noch nicht richtig.
+Im Feed Reader Liferea wird immer noch das falsche
+Datum angezeigt. 
+So wie es ausschaut liegt es am TAG `pubDate` das ich
+im falschen Format gesetzt habe.
 
 
-# Rumex kann statische Seiten erstellen <!-- 2013/12/18 09:38 -->
+# Rumex kann statische Seiten erstellen <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
 
 <!--
 !> Link: http://www.it-bayer.de/rumex/statik/
@@ -40,7 +53,7 @@ Mehr zu dieser neuen Funktion findet man auf
 
 
 
-# RSS Funktion, Programm rx2rss neu ertellt <!-- 2013/11/07 07:55 -->
+# RSS Funktion, Programm rx2rss neu ertellt <!-- Thu, 17 Apr 2014 15:16:02 +0200 --> 
 
 <!--
 !> Link: http://www.it-bayer.de/rumex/
@@ -62,7 +75,7 @@ Die vim Kurztaste `,rnn` wurde entsprechend angepasst.
 
 
 
-# Rumex Startdateien einfach mit Symlinks <!-- 2013/09/20 07:55 -->
+# Rumex Startdateien einfach mit Symlinks <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
 
 <!--
 !> Link: http://www.it-bayer.de/rumex/
@@ -92,7 +105,7 @@ Parameter werden beim Starten automatisch ermittelt und gesetzt.
 
 
 
-# Rumex kann jetzt auch mit tilda <!-- 2013/09/05 16:34 -->
+# Rumex kann jetzt auch mit tilda <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
 
 <!--
 !> Link: http://www.it-bayer.de/rumex/beschreibung.html#homepage-änderung-schnell-und-immer-aktuell
@@ -105,7 +118,7 @@ Im Abschnitt [_"Homepage Änderungen, schnell und immer aktuell"_](http://www.it
 
 
 
-# Rumex geht in die Beta Phase <!-- 2013/08/21 07:10 -->
+# Rumex geht in die Beta Phase <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
 
 <!--
 !> Link: http://www.it-bayer.de/rumex/
@@ -123,7 +136,7 @@ Wer will ist herzlich eingeladen mit zu machen.
 
 
 
-# Rumex Update Funktion wird eingebaut <!-- 2013/07/21 17:41 -->
+# Rumex Update Funktion wird eingebaut <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
 
 <!--
 !> Link: http://www.it-bayer.de/rumex/
@@ -141,7 +154,7 @@ V0.7.xxx festgelegt.
 
 
 
-# Rumex bekommt eine interne Suche <!-- 2013/07/15 19:57 -->
+# Rumex bekommt eine interne Suche <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
 
 <!--
 !> Link: http://www.it-bayer.de/rumex/historie.html#V0.6.7
@@ -155,7 +168,7 @@ Diese ermöglichen zum einen das die Seiten von Rumex durchsucht werden können.
 
 
 
-# Rumex bekommt eine (g)VIM Unterstützung <!-- 2013/07/11 07:09 -->
+# Rumex bekommt eine (g)VIM Unterstützung <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
 
 <!--
 !> Link: http://it-bayer.de/rumex/
@@ -172,7 +185,7 @@ Die Erweiterung besteht zur Zeit nur aus ein paar Kurztasten und einem GVIM Men�
 
 
 
-# Rumex's RSS Feed hat nun auch ein Datum bekommen <!-- 2013/07/07 17:28 -->
+# Rumex's RSS Feed hat nun auch ein Datum bekommen <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
 
 <!-- 
 !> Link: http://www.it-bayer.de/rumex/rss.html#rx07
@@ -190,7 +203,7 @@ bzw. unter vim mit `:r!date -R<CR>kJ`.
 
 
 
-# Rumex bekommt eine Kommentar und Forum Funktion <!-- 2013/07/04 10:15 -->
+# Rumex bekommt eine Kommentar und Forum Funktion <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
 
 <!-- 
 !> Link: http://www.it-bayer.de/rumex/historie.html#v0.6
@@ -209,7 +222,7 @@ erstellt die auch als Link in die Fusszeile eingebaut wurde.
 
 
 
-# rumex Systemverzeichnisse werden dot Verzeichnisse <!-- 2013/07/11 12:03 -->
+# rumex Systemverzeichnisse werden dot Verzeichnisse <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
 
 <!-- 
 !> Link: http://www.it-bayer.de/rumex/historie.html#v0.5
@@ -224,7 +237,7 @@ nicht sichtbare Verzeichnisse, umbenannt.
 
 
 
-# rumex kann jetzt auch mit FTP umgehen <!-- 2013/07/04 08:41 -->
+# rumex kann jetzt auch mit FTP umgehen <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
 
 <!-- 
 !> Link: http://www.it-bayer.de/rumex/historie.html#v0.4.8
@@ -238,7 +251,7 @@ Eine FTP Unterstützung wurde mit `wput` realisiert.
 
 
 
-# rumex bekommt einen Verzeichnisschutz auf System Verzeichnisse <!-- 2013/06/11 12:03 -->
+# rumex bekommt einen Verzeichnisschutz auf System Verzeichnisse <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
 
 <!-- 
 !> Link: http://www.it-bayer.de/rumex/historie.html#v0.4.7
@@ -253,7 +266,7 @@ wurde eine `.htaccess` Datei eingebaut.
 
 
 
-# rumex bekommt ein Installationsskript <!-- 2013/06/11 12:03 -->
+# rumex bekommt ein Installationsskript <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
 
 <!-- 
 !> Link: http://www.it-bayer.de/rumex/historie.html#v0.4.5
@@ -267,7 +280,7 @@ In rumex wurde um ein kleines Installationsskript eingebaut.
 
 
 
-# rumex bekommt sein eigenes Verzeichnis <!-- 2013/06/11 12:03 -->
+# rumex bekommt sein eigenes Verzeichnis <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
 
 <!-- 
 !> Link: http://www.it-bayer.de/rumex/historie.html#v0.4.0
@@ -282,7 +295,7 @@ Erweiterung.
 
 
 
-# rumex bekommt jetzt auch einen sitemap.html <!-- 2013/06/11 12:03 -->
+# rumex bekommt jetzt auch einen sitemap.html <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
 
 <!-- 
 !> Link: http://www.it-bayer.de/rumex/historie.html#v0.3.7
@@ -295,7 +308,7 @@ Nach der `sitemap.xml` kann rumex jetzt auch eine `sitemap.html` erstellen. [...
 
 
 
-# rumex bekommt eine Weiterleitungsseite <!-- 2013/06/11 12:03 -->
+# rumex bekommt eine Weiterleitungsseite <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
 
 <!-- 
 !> Link: http://www.it-bayer.de/rumex/historie.html#v0.3.6
@@ -308,7 +321,7 @@ Einbau einer Weiterleitungsfunktion per JavaScript da .htaccess von github.com n
 
 
 
-# rumex bekommt eine Bildbearbeitung <!-- 2013/06/11 12:03 -->
+# rumex bekommt eine Bildbearbeitung <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
 
 <!-- 
 !> Link: http://www.it-bayer.de/rumex/historie.html#v0.3.5
@@ -329,7 +342,7 @@ Unterstützt werden zur Zeit die Größen
 
 
 
-# rumex bekommt eine sitemap.xml <!-- 2013/06/11 12:03 -->
+# rumex bekommt eine sitemap.xml <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
 
 <!-- 
 !> Link: http://www.it-bayer.de/rumex/historie.html#v0.3.2
@@ -348,7 +361,7 @@ Natürlich braucht `rumex` auch so einen Datei. Erstellt wird die sitemap mit
 
 
 
-# rumex wird auf einen nicht github.com Server installiert <!-- 2013/06/11 12:03 -->
+# rumex wird auf einen nicht github.com Server installiert <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
 
 <!-- 
 !> Link: http://rumex.it-bayer.de/
@@ -363,7 +376,7 @@ findet man auf der Seite <http://rumex.it-bayer.de>.
 
 
 
-# rumex bekommt die RSS Feed Funktion <!-- 2013/06/11 12:03 -->
+# rumex bekommt die RSS Feed Funktion <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
 
 <!-- 
 !> Link: http://www.it-bayer.de/rumex/historie.html#v0.3

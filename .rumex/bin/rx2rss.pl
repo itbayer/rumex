@@ -233,16 +233,20 @@ while (<rss_rx>) {
 # MeldungsZeilen raus suchen und merken
 #
 # Die Überschrift muss in dem Format
-# Überschrift <!-- YYYY/MM/TT SS:MM -->
+# Überschrift <!-- Thu, 17 Apr 2014 15:16:02 +0200 -->
 # erstellt werden.
 #-------------------------------------------------------------------------------
 
-	if ($_ =~ m/#\s+(.*?)\s*?\<\!--\s*?(\d{4}\/\d{2}\/\d{2})\s*?(\d{2}):(\d{2})\s*?--\>\s*?$/) {
+	if ($_ =~ m/#\s+(.*?)\s*?\<\!--\s*?(.{3}),\s*?(\d{2})\s*?(.{3})\s*?(\d{4})\s*?(\d{2}:\d{2}:\d{2})\s*?(\+\d{4})\s*?--\>\s*?$/) {
+
 		$item_zaehler++;
 		$item{$item_zaehler}{'ueberschrift'} = $1;
-		$item{$item_zaehler}{'datum'} = $2;
-		$item{$item_zaehler}{'stunde'} = $3;
-		$item{$item_zaehler}{'minute'} = $4;
+		$item{$item_zaehler}{'tag_name'} = $2;
+		$item{$item_zaehler}{'tag_zahl'} = $3;
+		$item{$item_zaehler}{'monat'} = $4;
+		$item{$item_zaehler}{'jahr'} = $5;
+		$item{$item_zaehler}{'zeit'} = $6;
+		$item{$item_zaehler}{'zeit_zone'} = $7;
 	}
 
 	# MeldungsLink setzen wenn vorhanden
@@ -348,11 +352,9 @@ for ($i = 1; $i <= $item_zaehler; $i++){
 # Dieser Eintrag braucht einen eindeutige Kennung
 # sonst wird unter Liferea immer nur der letzte Eintrag 
 # angezeigt.
-# Die eindeutige Kennung wird hier mit einer Zufallszahl
-# erstellt.
+# Die eindeutige Kennung wird Anhand des Datums erstellt 
 #-------------------------------------------------------------------------------
-	print "<guid>$item{$i}{'link'}$item{$i}{'datum'}_$item{$i}{'stunde'}$item{$i}{'minute'}</guid>\n";
-
+	print "<guid isPermaLink=\"false\">$item{$i}{'link'}_$item{$i}{'tag_name'}_$item{$i}{'tag_zahl'}$item{$i}{'monat'}$item{$i}{'jahr'}</guid>\n"; 
 
 
 
@@ -380,7 +382,7 @@ for ($i = 1; $i <= $item_zaehler; $i++){
 
 	print "<dc:creator>$item{$i}{'autor'}</dc:creator>\n";
 
-	print "<pubDate>$item{$i}{'datum'} $item{$i}{'stunde'}:$item{$i}{'minute'}</pubDate>\n";
+	print "<pubDate>$item{$i}{'tag_name'}, $item{$i}{'tag_zahl'} $item{$i}{'monat'} $item{$i}{'jahr'} $item{$i}{'zeit'} $item{$i}{'zeit_zone'}</pubDate>\n";
 	print "<category><![CDATA[$item{$i}{'kategorie'}]]></category>\n";
 	print "</item>\n";
 }
