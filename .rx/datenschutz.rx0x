@@ -1,0 +1,61 @@
+% Datenschutz
+%
+%
+
+
+<!--
+
+[Datenschutz](datenschutz.html)
+=======================================================
+
+-->
+
+
+<!-- schnipp -->
+
+Diese Seite verwendet keine Kontakt / Kommentar Formulare,
+E-Mail Newsletter[^newsletter],
+Trackingtools wie zum Beispiel Piwik
+oder sonstige Funktionen zur Verarbeitung
+externer Daten. 
+Die Informationen werden über reine HTML Dokumente
+angeboten.
+
+Diese Seite ist zwar über die URL <http://www.it-bayer.de/rumex/> erreichbar,
+wird jedoch auf der Plattform <http://www.github.com>
+gehostet, siehe <https://github.com/itbayer/rumex> bzw. <http://itbayer.github.io/rumex>.
+In wie weit diese Server externe Verbindungsdaten speichern kann ich 
+leider nicht sagen. Ggf. muss man sich auf dieser Plattform, über die
+externe Verbindungsdaten Speicherung erkundigen.
+
+[^newsletter]: Eine Art Newsletter ist aber dennoch vorhanden.
+Diese wird über die [RSS Feed](http://www.hochfelder.de/rss.xml) Funktion realisiert.
+
+Bei Kontaktaufnahme über elektronischer oder gar gelber[^gelbepost] Post bitte
+ich den Verfasser mir mitzuteilen wie ich mit seinen Daten verfahren soll.
+Bei fehlenden Angaben werden die Daten, für evtl. spätere Kontaktaufnahme,
+zwischen gespeichert zugleich aber auch zugesichert dass diese nicht an Dritte 
+weitergegeben werden.
+
+[^gelbepost]: Mit gelber Post ist hier der normalen Brief, geschrieben auf
+Papier und verpackt im einem Kuvert, gemeint.
+
+
+
+**Achtung:** Diese Seite verwendet auch Funktionen[^kennzeichnung] der Seiten:
+
+- <http://www.moot.it/>  bzw. <http://www.muut.com>
+
+[^kennzeichnung]:Die Einbindungen werden durch den Anbieter entsprechend gekennzeichnet.
+Diese Kennzeichnung wurde am 21.04.2014 überprüft. Sollte diese Kennzeichnung mittlerweile
+entfernt worden sein bitte ich umgehende mich zu [informieren](mailto:sb@hochfelder.de) 
+sodass die entsprechende Einbindung entfernen kann.
+
+
+Sämtliche Daten die über diese Einbindung verarbeitet werden, 
+werden auf deren Servern gespeichert. 
+Ich möchte außerdem darauf hinweisen dass die Speicherung wahrscheinlich auch auf Servern außerhalb Europas stattfindet. 
+Für die Speicherung bzw. Verarbeitung dieser Daten gelten die Nutzungsbedingungen 
+bzw. Dateschutzrichtlinien der jeweiligen Seite.
+
+<!-- vim: set ft=pandoc: -->
