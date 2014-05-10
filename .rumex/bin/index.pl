@@ -124,8 +124,12 @@ index.rx0x aufgenommen.
 	print INDEX "\n<!-- START .indexliste --><div class=\"indexliste\">";
 
 	# Überschrift Abschnitt Weblog setzen.
-    print INDEX "\n##Weblog{.abschnitt .weblog}" if($name eq $weblog_rx);
-	
+	# Nach dem Update auf 1.12.4 wird der Syntax ##Weblog{.abschnitt .weblog}
+	# nicht mehr unterstützt. Die Abschnittsüberschrift wurde somit per
+	# HTML Befehl eingebaut.
+	# print INDEX "\n##Weblog{.abschnitt .weblog}" if($name eq $weblog_rx);
+	print INDEX "<h2 id=\"weblog\" class=\"abschnitt weblog\">Weblog</h2>" if($name eq $weblog_rx); 
+
 	# div.weblogblock um den Weblog wickeln 
     print INDEX "\n<!-- START .weblogblock --><div class=\"weblogblock\">" if($name eq $weblog_rx);
 
