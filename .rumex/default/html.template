@@ -2,9 +2,10 @@
 <html$if(lang)$ lang="$lang$"$endif$>
 <head>
   <meta charset="utf-8">
-
 <!-- rumex Version -->
 <meta name="generator" content="$meta_generator$">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <!-- rumex Suchmaschine -->
 <meta name="robots" content="$meta_robots$">
