@@ -206,12 +206,12 @@ verwende ich aber schon sehr gerne.
 ### vim Kurztasten
 
 Eine Übersicht der Rumex Kurztasten für den Editor vim findest 
-du auf der Seite [VIM-Kurztasten](vim-kurztasten.html).
+du auf der Seite [VIM-Kurztasten](vim-kurztasten.htm).
 
 ### gvim Menü
 
 Eine Übersicht des Rumex Menüs für den Editor gvim findest
-du auf der Seite [GVIM-Menü](gvim-menue.html).
+du auf der Seite [GVIM-Menü](gvim-menue.htm).
 
 #### Dateiname ergänzen
 
