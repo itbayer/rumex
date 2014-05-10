@@ -176,7 +176,10 @@ index.rx0x aufgenommen.
 	# Das Weblog Archiv, also die eigentlichen Weblog HTML Datei,
 	# bekommt einen Link am Ende aller Weblogeinträge auf der index.html 
 	# Seite.
-	print INDEX "#### [... ältere Weblog Einträge anzeigen]($htmlname) {.webloglink}\n\n" if($name eq $weblog_rx);
+	# Umgebaut wegen, siehe oben, Weblog Überschrift.
+	# print INDEX "#### [... ältere Weblog Einträge anzeigen]($htmlname) {.webloglink}\n\n" if($name eq $weblog_rx);
+    print INDEX "<h4 class=\"webloglink\"><a href=\"$htmlname\">… &auml;ltere Weblog Eintr&auml;ge anzeigen</a></h4>\n\n" if($name eq $weblog_rx);
+
 
 	# DIV .weblog schließen
 	print INDEX "\n<!-- ENDE .weblogblock --></div>" if($name eq $weblog_rx);

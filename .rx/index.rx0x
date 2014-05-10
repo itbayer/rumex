@@ -58,14 +58,14 @@ getestet werden.
 <div class="weblog">
 **Was hat sich geändert?**
 
-Der Syntax `##Weblog{.abschnitt .weblog}` funktioniert anscheinend nicht mehr,
-wird nicht mehr unterstützt. 
-Die Abschnittsüberschrift wurde somit per HTML Befehl eingebaut.
+Der Syntax `##Weblog{.abschnitt .weblog}` bzw. `{.webloglink}`, für den Weblog
+Archiv Link, funktioniert anscheinend nicht mehr, wird nicht mehr unterstützt. 
+Die Klassen, die zur CSS Formatierung benötigt werden, wurden somit per HTML Befehl eingebaut.
 Außerdem wurde die Erweiterung des HTML Templates nach geflickt.
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-Ein Update, `0.8.3.1`, steht zur Verfügung.
+Ein Update, `0.8.3.2`, steht zur Verfügung.
 
 
 </div>
@@ -199,7 +199,7 @@ Eine neue Version 0.8.2.9 wurde erstellt und steht für das Update
 
 
 
-#### [... ältere Weblog Einträge anzeigen](weblog.html) {.webloglink}
+<h4 class="webloglink"><a href="weblog.html">… &auml;ltere Weblog Eintr&auml;ge anzeigen</a></h4>
 
 
 <!-- ENDE .weblogblock --></div>

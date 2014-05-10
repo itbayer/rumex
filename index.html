@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <!-- rumex Version -->
-<meta name="generator" content="rumex 0.8.3.1">
+<meta name="generator" content="rumex 0.8.3.2">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -123,9 +123,9 @@ Weblog
 <p>pandoc 1.12.4 ist am 7. Mai 2014 erschienen. Musste natürlich gleich installiert und mit Rumex getestet werden.</p>
 <div class="weblog">
 <p><strong>Was hat sich geändert?</strong></p>
-<p>Der Syntax <code>##Weblog{.abschnitt .weblog}</code> funktioniert anscheinend nicht mehr, wird nicht mehr unterstützt. Die Abschnittsüberschrift wurde somit per HTML Befehl eingebaut. Außerdem wurde die Erweiterung des HTML Templates nach geflickt.</p>
+<p>Der Syntax <code>##Weblog{.abschnitt .weblog}</code> bzw. <code>{.webloglink}</code>, für den Weblog Archiv Link, funktioniert anscheinend nicht mehr, wird nicht mehr unterstützt. Die Klassen, die zur CSS Formatierung benötigt werden, wurden somit per HTML Befehl eingebaut. Außerdem wurde die Erweiterung des HTML Templates nach geflickt.</p>
 <pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, user-scalable=yes&quot;&gt;</code></pre>
-<p>Ein Update, <code>0.8.3.1</code>, steht zur Verfügung.</p>
+<p>Ein Update, <code>0.8.3.2</code>, steht zur Verfügung.</p>
 </div>
 <h1>RSS Update</h1>
 <p><em>Am 17.04.2014 um 17:57 schrieb IT-Bayer</em></p>
@@ -189,7 +189,11 @@ weblog.rx0s
 <p>Die mit <code>-&gt;</code> gekennzeichneten Stellen sind neu dazu gekommen. Wird keine <code>weblog.rx0s</code> Datei verwendet, bzw. ist diese Datei nicht vorhanden, werden auch die Abschnittsüberschriften nicht angezeigt. <strong>Auch die Überschrift <em>“Seitenübersicht”</em> wird dann nicht mehr eingeblendet.</strong></p>
 <p>Eine neue Version 0.8.2.9 wurde erstellt und steht für das Update <code>make update</code> bereit.</p>
 </div>
-<h4><a href="weblog.html">… ältere Weblog Einträge anzeigen</a></h4>
+<h4 class="webloglink">
+<a href="weblog.html">… ältere Weblog Einträge anzeigen</a>
+</h4>
+
+
 <!-- ENDE .weblogblock -->
 </div>
 <!-- ENDE .indexliste -->
