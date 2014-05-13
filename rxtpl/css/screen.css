@@ -7,8 +7,8 @@ html, body {
 
 
 body{
-	width: 1000px;
-	/* margin: 0 auto; */
+	/* Bug 2 :: width: 1000px; */
+	/* off :: margin: 0 auto; */
 	overflow-y:scroll;
 }
 
@@ -36,8 +36,10 @@ body{
 /* Seiten Ausrichtung und Breite, Textbereich */
 
 header, nav, #seite {
-	margin: 0 44px 0 auto;
-	width: 844px;
+	margin: 0 44px 0 99px;
+	/* bug 2 :: change	
+	 * margin: 0 44px 0 auto;
+	width: 844px; */
 }
 
 
@@ -129,6 +131,12 @@ header, nav, #seite {
  * Darstellung ausgeschaltet, in der Druck Darstellung
  * aber angezeigt.
  */
+
+
+/* Bug 2 :: add */
+#fuss .links {
+ margin-left: 68px !important;
+}
 
 header .author {
  display: none;
