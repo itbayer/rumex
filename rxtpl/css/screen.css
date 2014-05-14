@@ -10,6 +10,8 @@ body{
 	/* Bug 2 :: width: 1000px; */
 	/* off :: margin: 0 auto; */
 	overflow-y:scroll;
+	/* Bug 2 :: Maximale Breite wieder auf 1000px */
+	max-width: 1000px;
 }
 
 /* Home Link Seitenkopf */

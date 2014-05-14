@@ -1,6 +1,6 @@
 % IT Bayer's rumex <sup style="font-size: .4em;">(github.com Version)</sup>
 % Stefan Blechschmidt
-% 2014-05-13
+% 2014-05-14
 
 
 <!-- START .indexliste --><div class="indexliste">
@@ -45,6 +45,19 @@ Aktuell wird dieser Baukasten auch folgenden Seiten eingesetzt bzw. getestet.
 
 <!-- START .indexliste --><div class="indexliste"><h2 id="weblog" class="abschnitt weblog">Weblog</h2>
 <!-- START .weblogblock --><div class="weblogblock">
+
+
+# Rumex Layout Änderung
+
+_Am 14.05.2014 um 07:47 schrieb IT-Bayer_
+
+Das Layout für Rumex wurde angepasst, sodass
+die Seite jetzt auch auf mobilen Geräten, in der
+entsprechenden Breite, angezeigt wird.
+
+Die neue Version 0.8.3.4 steht zum Download bereit.
+
+
 
 
 # Pandoc 1.12.4
@@ -109,96 +122,6 @@ kopiert und für die alten Einträge verwendet werden.
 
 
 
-
-
-# Twitter und TTYtter
-
-_Am 23.03.2014 um 18:35 schrieb IT-Bayer_
-
-Twitter verlangt jetzt eine SSL Verbindung.
-
-	*** server reports: "SSL is required"
-
-Dazu muss dem Programm `TTYtter.pl` der Parameter `-ssl`
-mitgegeben werden.
-Die Vim Konfiguration in `.rumex/bin/rumex.vim` wurde entsprechend
-angepasst. 
-Bis zur nächsten Version kann man nachfolgenden Patch einspielen.
-
-
-<div class="weblog">
-
-**Patch - Twitter - TTYtter - ssl**
-
-~~~{.diff}
-index 6e9fd96..be91173 100644
---- a/.rumex/bin/rumex.vim
-+++ b/.rumex/bin/rumex.vim
-@@ -229,7 +229,7 @@ map <Leader>ror :tabnew<CR>:e rss.rx0x<CR><CR>
- " Variante 1: 
- "   Kopiert den Text und sendet diesen an Twitter
- "   Unterstützt auch mehr als eine Zeile.
--"vmap <Leader>rtt y:!twiet -status="<C-R>""
-+"vmap <Leader>rtt y:!twiet -ssl -status="<C-R>""
- "
- " Variante 2: 
- "   Sendet den Text an Twitter und entfernt diesen
-@@ -238,7 +238,11 @@ map <Leader>ror :tabnew<CR>:e rss.rx0x<CR><CR>
- "   stehen muss.
- "   Bei Meldungen aufgeteilt in zwei Zeilen wird nur die 
- "   zweite Zeile gesendet.
--vmap <Leader>rtt !twiet -script<CR>
-+"
-+"   Sun, 23 Mar 2014 18:16:43 +0100
-+"   Option -ssl eingebaut. 
-+"   TTYtter meldet *** server reports: 'SSL is required' 
-+vmap <Leader>rtt !twiet -ssl -script<CR>
- 
- " KurzLink erzeugen mit is.gd (RumexKürzeLink)
- vmap <Leader>rkl x:r!echo "/sh <C-R>""\|twiet -script<CR>
-~~~
-</div>
-
-
-
-# Abschnittsbeschriftung
-
-_Am 02.03.2014 um 23:43 schrieb IT-Bayer_
-
-Auf der Startseite wurden Beschriftungen für die 
-einzelnen Abschnitte eingebaut.
-Die index.html setzt sich somit aus drei Teilen zusammen,
-die jetzt mit einer Überschrift unterteilt sind.
-
-~~~
-
-start.rx0s
-
--> Weblog
-
-weblog.rx0s
-
--> Seitenübersicht
-
-*.rx?s
-
-~~~
-
-<div class="weblog">
-
-Die mit `->` gekennzeichneten Stellen sind neu dazu gekommen.
-Wird keine `weblog.rx0s` Datei verwendet, bzw. ist diese Datei
-nicht vorhanden, werden auch die Abschnittsüberschriften nicht angezeigt.
-**Auch die Überschrift _"Seitenübersicht"_ wird dann nicht
-mehr eingeblendet.**
-
-Eine neue Version 0.8.2.9 wurde erstellt und steht für das Update
-`make update` bereit.
-
-</div>
-
-
-
 <h4 class="webloglink"><a href="weblog.html">… &auml;ltere Weblog Eintr&auml;ge anzeigen</a></h4>
 
 
@@ -211,7 +134,7 @@ Eine neue Version 0.8.2.9 wurde erstellt und steht für das Update
 [Weblog Beschreibung](weblog-beschreibung.html)
 =======================================================
 
-<p class="datum">Letzte Bearbeitung: 2014-03-13</p>
+<p class="datum">Letzte Bearbeitung: 2014-04-21</p>
 
 
 Diese kleine Erweiterung soll eine Art Blog innerhalb Rumex ermöglichen.

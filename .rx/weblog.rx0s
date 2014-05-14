@@ -3,6 +3,19 @@
 
 <!--
 
+# Rumex Layout Änderung
+
+_Am 14.05.2014 um 07:47 schrieb IT-Bayer_
+
+Das Layout für Rumex wurde angepasst, sodass
+die Seite jetzt auch auf mobilen Geräten, in der
+entsprechenden Breite, angezeigt wird.
+
+Die neue Version 0.8.3.4 steht zum Download bereit.
+
+
+
+
 # Pandoc 1.12.4
 
 _Am 10.05.2014 um 19:31 schrieb IT-Bayer_
@@ -64,6 +77,9 @@ kopiert und für die alten Einträge verwendet werden.
 </div>
 
 
+-->
+
+<!-- schnipp -->
 
 
 
@@ -154,9 +170,6 @@ Eine neue Version 0.8.2.9 wurde erstellt und steht für das Update
 </div>
 
 
--->
-
-<!-- schnipp -->
 
 
 

@@ -7,7 +7,8 @@
 header {
 	border-bottom: 1px solid #AFAFAF;
 	margin-bottom: 4em;
-	text-align: center;
+	/* Kopfzeile zentrieren ausgeschaltet 
+	 * text-align: center;*/
 	color: #555555;
 	text-shadow: 4px 4px 4px silver;
 	top:0px;
@@ -216,6 +217,7 @@ blockquote {
 	background-repeat: no-repeat;
 	min-height: 60px;
 	padding-left: 60px;
+	margin-left: 0px; /* nicht mehr einrücken, Ausrichtung am linken Rand */
 }
 
 /* ---------------------------------------------- 
