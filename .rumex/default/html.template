@@ -82,6 +82,7 @@ $endif$
 <link rel="stylesheet" type="text/css" href="$cssall$" media="all" />
 <link rel="stylesheet" type="text/css" href="$cssscreen$" media="screen" />
 <link rel="stylesheet" type="text/css" href="$cssprint$" media="print" />
+<link rel="stylesheet" type="text/css" href="$csshandheld$" media="handheld" />
 
 $if(seitenbanner)$
 <!-- Bild für das Seitenbanner -->

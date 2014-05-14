@@ -51,6 +51,7 @@ RSS_TITEL = "Neuigkeiten von rumex Baukasten"
 CSSALL = "rxtpl/css/all.css"
 CSSSCREEN = "rxtpl/css/screen.css"
 CSSPRINT = "rxtpl/css/print.css"
+CSSHANDHELD = "rxtpl/css/handheld.css"
 
 
 

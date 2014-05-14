@@ -42,6 +42,7 @@ html0s: $(HTML0S)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \
@@ -70,6 +71,7 @@ html0x: $(HTML0X)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \
@@ -99,6 +101,7 @@ html0v: $(HTML0V)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \
@@ -146,6 +149,7 @@ html0w: $(HTML0W)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \
@@ -184,6 +188,7 @@ html1s: $(HTML1S)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \
@@ -215,6 +220,7 @@ html1x: $(HTML1X)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \
@@ -246,6 +252,7 @@ html1v: $(HTML1V)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \
@@ -283,6 +290,7 @@ html2s: $(HTML2S)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \
@@ -314,6 +322,7 @@ html2x: $(HTML2X)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \
@@ -345,6 +354,7 @@ html2v: $(HTML2V)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \
@@ -382,6 +392,7 @@ html3s: $(HTML3S)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \
@@ -413,6 +424,7 @@ html3x: $(HTML3X)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \
@@ -444,6 +456,7 @@ html3v: $(HTML3V)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \
@@ -480,6 +493,7 @@ html4s: $(HTML4S)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \
@@ -511,6 +525,7 @@ html4x: $(HTML4X)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \
@@ -542,6 +557,7 @@ html4v: $(HTML4V)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \
@@ -578,6 +594,7 @@ html5s: $(HTML5S)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \
@@ -609,6 +626,7 @@ html5x: $(HTML5X)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \
@@ -640,6 +658,7 @@ html5v: $(HTML5V)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \
@@ -676,6 +695,7 @@ html6s: $(HTML6S)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \
@@ -707,6 +727,7 @@ html6x: $(HTML6X)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \
@@ -738,6 +759,7 @@ html6v: $(HTML6V)
 		-V cssall=$(CSSALL) \
 		-V cssscreen=$(CSSSCREEN) \
 		-V cssprint=$(CSSPRINT) \
+		-V csshandheld=$(CSSHANDHELD) \
 		-V seitenbanner=$(SEITENBANNER) \
 		-V mootit=$(MOOTIT) \
 		-V favicon=$(FAVICON) \

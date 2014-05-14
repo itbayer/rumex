@@ -2,9 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-
 <!-- rumex Version -->
-<meta name="generator" content="rumex 0.8.3.0">
+<meta name="generator" content="rumex 0.8.3.4">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <!-- rumex Suchmaschine -->
 <meta name="robots" content="noindex,nofollow,noarchive">
@@ -46,7 +47,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <meta name="DC.creator" content="IT-Bayer (Stefan Blechschmidt)" />
 
 <!-- rumex Speicherdatum der Datei -->
-  <meta name="DCTERMS.modified" scheme="DCTERMS.W3CDTF" content="2014-04-21" />
+  <meta name="DCTERMS.modified" scheme="DCTERMS.W3CDTF" content="2014-05-14" />
 
 <!-- rumex moot.it -->
 <link rel="stylesheet" href="https://cdn.moot.it/1/moot.css">
@@ -70,6 +71,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <link rel="stylesheet" type="text/css" href="rxtpl/css/all.css" media="all" />
 <link rel="stylesheet" type="text/css" href="rxtpl/css/screen.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="rxtpl/css/print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="rxtpl/css/handheld.css" media="handheld" />
 
 <!-- Bild für das Seitenbanner -->
 <style type="text/css" media="screen">
@@ -419,7 +421,13 @@ Zitat mit einem<br />Zeilen<br />wechsel.<br />
 <hr />
 <table>
 <caption>Here’s the caption. It, too, may span multiple lines.</caption>
-<col style="width: 16%" /><col style="width: 11%" /><col style="width: 22%" /><col style="width: 34%" /><thead>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 11%" />
+<col style="width: 22%" />
+<col style="width: 34%" />
+</colgroup>
+<thead>
 <tr class="header">
 <th style="text-align: center;">Centered Header</th>
 <th style="text-align: left;">Default Aligned</th>
@@ -445,7 +453,13 @@ Zitat mit einem<br />Zeilen<br />wechsel.<br />
 <hr />
 <table>
 <caption>Here’s a multiline table without headers.</caption>
-<col style="width: 16%" /><col style="width: 11%" /><col style="width: 22%" /><col style="width: 34%" /><tbody>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 11%" />
+<col style="width: 22%" />
+<col style="width: 34%" />
+</colgroup>
+<tbody>
 <tr class="odd">
 <td style="text-align: center;">First</td>
 <td style="text-align: left;">row</td>
@@ -463,7 +477,12 @@ Zitat mit einem<br />Zeilen<br />wechsel.<br />
 <hr />
 <table>
 <caption>Sample grid table.</caption>
-<col style="width: 22%" /><col style="width: 22%" /><col style="width: 29%" /><thead>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
 <tr class="header">
 <th style="text-align: left;">Fruit</th>
 <th style="text-align: left;">Price</th>
