@@ -82,7 +82,10 @@ $endif$
 <link rel="stylesheet" type="text/css" href="$cssall$" media="all" />
 <link rel="stylesheet" type="text/css" href="$cssscreen$" media="screen" />
 <link rel="stylesheet" type="text/css" href="$cssprint$" media="print" />
+<!-- Einstellung für mobile Geräte -->
 <link rel="stylesheet" type="text/css" href="$csshandheld$" media="handheld" />
+<link rel="stylesheet" type= "text/css" media="only screen and (max-device-width: 480px)" href="$csshandheld$" />
+
 
 $if(seitenbanner)$
 <!-- Bild für das Seitenbanner -->

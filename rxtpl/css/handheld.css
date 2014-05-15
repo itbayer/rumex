@@ -1,5 +1,30 @@
 /* handheld.css */
 
+/* Schriftart kleiner */
+body {
+	font-size: .7em;
+}
+
+/* Seitenbanner Schriftzug ausblenden */
 #kopf {
 	display: none;
 }
+
+/* Seiteninhalt wieder auf volle Breite bringen */
+#seite,
+header,
+nav {
+	margin: 0px 1em;
+}
+
+/* Navigation im Fussbereich ausblenden */
+#fussnav {
+	display: none;
+}
+
+/* Fussbereich wieder auf volle Breite bringen */
+#fuss .copyleft,
+#fuss .links {
+	margin-left: 0px !important ;
+}
+
