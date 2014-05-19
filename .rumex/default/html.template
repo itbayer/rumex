@@ -57,7 +57,6 @@ $endif$
 $if(mootit)$
 <!-- rumex moot.it -->
 <link rel="stylesheet" href="https://cdn.moot.it/1/moot.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
 <script src="https://cdn.moot.it/1/moot.de.min.js"></script>
 $endif$
 
@@ -72,6 +71,10 @@ $endif$
 
 <!-- rumex weblog @todo: Dateiname über config.mk ansprechen -->
 <script type='text/javascript' src='rxtpl/js/weblog.js'></script>
+
+<!-- jquery fest eingebunden, so kann moot.it deaktiviert und
+	weblog immer noch verwendet werden. -->
+<script src="rxtpl/js/jquery.min.js"></script> 
 
 $if(rsstitel)$
 <!-- rumex RSS -->
