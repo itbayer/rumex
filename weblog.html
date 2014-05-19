@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <!-- rumex Version -->
-<meta name="generator" content="rumex 0.8.3.5">
+<meta name="generator" content="rumex 0.8.3.6">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -96,6 +96,15 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <div id="seite">
 <!--
 
+# Kleine Änderungen
+
+_Am 19.05.2014 um 12:43 schrieb IT-Bayer_
+
+Rumex hat ein paar keine Änderungen bekommen.
+Eigentlich nichts wichtiges, ein
+Download, Version 0.8.3.6 gibt es aber dennoch.
+
+
 # Rumex Layout Änderung
 
 _Am 14.05.2014 um 07:47 schrieb IT-Bayer_
@@ -134,48 +143,21 @@ Ein Update, `0.8.3.2`, steht zur Verfügung.
 
 
 
-# RSS Update
-
-_Am 17.04.2014 um 17:57 schrieb IT-Bayer_
-
-Die RSS Funktion von Rumex wurde überarbeitet.
-Das Datum der Nachricht wird jetzt korrekt angezeigt bzw. verarbeitet.
-Diese Neue Funktion ist in der Version
-0.8.3.0 enthalten die auch schon zum Download
-`make update` bereit steht.
-
-
-<div class="weblog">
-
-Nach dem Update muss die `../.rumex/bin/rumex.vim` neu eingelesen werden
-so dass vim das neue Datumsformat übernimmt.
-
-    :so ../.rumex/bin/rumex.vim
-
-
-**Achtung:** Durch die Änderung der Datumsangabe in den 
-NEWS Einträgen ist eine Überarbeitung der alten Einträge 
-in der Datei `rss.rx0x` erforderlich.
-Diese müssen das neue Format des Zeitstempels tragen.
-
-Das neue Datumsformat kann mit der Kurztaste 
-`,rnn` gesichtet werden, es wird eine neuer
-NEWS Eintrag mit dem aktuellen Datum Zeitstempel erstellt.
-
-Der Zeitstemple / Kommentar, hinter der Überschrift, kann 
-kopiert und für die alten Einträge verwendet werden.
-
-**Wichtig: Die alten Einträge müssen geändert werden.**
-
-</div>
-
-
--->
-
 <!-- schnipp -->
 
 
-
+<h1 id="rss-update">RSS Update</h1>
+<p><em>Am 17.04.2014 um 17:57 schrieb IT-Bayer</em></p>
+<p>Die RSS Funktion von Rumex wurde überarbeitet. Das Datum der Nachricht wird jetzt korrekt angezeigt bzw. verarbeitet. Diese Neue Funktion ist in der Version 0.8.3.0 enthalten die auch schon zum Download <code>make update</code> bereit steht.</p>
+<div class="weblog">
+<p>Nach dem Update muss die <code>../.rumex/bin/rumex.vim</code> neu eingelesen werden so dass vim das neue Datumsformat übernimmt.</p>
+<pre><code>:so ../.rumex/bin/rumex.vim</code></pre>
+<p><strong>Achtung:</strong> Durch die Änderung der Datumsangabe in den NEWS Einträgen ist eine Überarbeitung der alten Einträge in der Datei <code>rss.rx0x</code> erforderlich. Diese müssen das neue Format des Zeitstempels tragen.</p>
+<p>Das neue Datumsformat kann mit der Kurztaste <code>,rnn</code> gesichtet werden, es wird eine neuer NEWS Eintrag mit dem aktuellen Datum Zeitstempel erstellt.</p>
+<p>Der Zeitstemple / Kommentar, hinter der Überschrift, kann kopiert und für die alten Einträge verwendet werden.</p>
+<p><strong>Wichtig: Die alten Einträge müssen geändert werden.</strong></p>
+</div>
+<p>–&gt;</p>
 <h1 id="twitter-und-ttytter">Twitter und TTYtter</h1>
 <p><em>Am 23.03.2014 um 18:35 schrieb IT-Bayer</em></p>
 <p>Twitter verlangt jetzt eine SSL Verbindung.</p>

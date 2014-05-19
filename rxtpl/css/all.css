@@ -217,6 +217,7 @@ blockquote {
 	background-repeat: no-repeat;
 	min-height: 60px;
 	padding-left: 60px;
+	padding-right: 1em; /* BUGID: 3 */
 	margin-left: 0px; /* nicht mehr einrücken, Ausrichtung am linken Rand */
 }
 
@@ -431,7 +432,7 @@ dd > p {
 }
 
 .marker3 {
-	background: lightgreenn;
+	background: lightgreen;
 }
 
 .marker4 {

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <!-- rumex Version -->
-<meta name="generator" content="rumex 0.8.3.5">
+<meta name="generator" content="rumex 0.8.3.6">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -79,8 +79,7 @@
 <h3 class="date">2014-05-19</h3>
 </header>
 <div id="seite">
-<!-- START .indexliste -->
-<div class="indexliste">
+<!-- START .indexliste --><div class="indexliste">
 <p>Rumex ist ein Projekt das mit <code>pandoc's markdown</code> und ein paar Skripten eine einfache Internetseite erstellt und verwalten. Diese Seiten können dann auf <a href="http://github.com">github.com</a>, wo auch diese Seite zu finden ist, gehostet werden. Aber auch auf Servern mit git Unterstützung oder mit einem einfachen FTP Zugang können die Seite veröffentlicht werden.</p>
 <p><strong>Beispiele</strong></p>
 <ul>
@@ -97,20 +96,22 @@
 <li><a href="http://www.hochfelder.de">http://www.hochfelder.de</a></li>
 <li><a href="http://www.auggenbach.de">http://www.auggenbach.de</a></li>
 </ul>
-<!-- ENDE .indexliste -->
-</div>
-<!-- START .indexliste -->
-<div class="indexliste">
-<h2 id="weblog" class="abschnitt weblog">
+<!-- ENDE .indexliste --></div>
+
+<!-- START .indexliste --><div class="indexliste"><h2 id="weblog" class="abschnitt weblog">
 Weblog
 </h2>
-<!-- START .weblogblock -->
-<div class="weblogblock">
-<h1>Rumex Layout Änderung</h1>
+<!-- START .weblogblock --><div class="weblogblock">
+
+
+<h1 id="kleine-änderungen">Kleine Änderungen</h1>
+<p><em>Am 19.05.2014 um 12:43 schrieb IT-Bayer</em></p>
+<p>Rumex hat ein paar keine Änderungen bekommen. Eigentlich nichts wichtiges, ein Download, Version 0.8.3.6 gibt es aber dennoch.</p>
+<h1 id="rumex-layout-änderung">Rumex Layout Änderung</h1>
 <p><em>Am 14.05.2014 um 07:47 schrieb IT-Bayer</em></p>
 <p>Das Layout für Rumex wurde angepasst, sodass die Seite jetzt auch auf mobilen Geräten, in der entsprechenden Breite, angezeigt wird.</p>
 <p>Die neue Version 0.8.3.4 steht zum Download bereit.</p>
-<h1>Pandoc 1.12.4</h1>
+<h1 id="pandoc-1.12.4">Pandoc 1.12.4</h1>
 <p><em>Am 10.05.2014 um 19:31 schrieb IT-Bayer</em></p>
 <p>pandoc 1.12.4 ist am 7. Mai 2014 erschienen. Musste natürlich gleich installiert und mit Rumex getestet werden.</p>
 <div class="weblog">
@@ -119,30 +120,18 @@ Weblog
 <pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, user-scalable=yes&quot;&gt;</code></pre>
 <p>Ein Update, <code>0.8.3.2</code>, steht zur Verfügung.</p>
 </div>
-<h1>RSS Update</h1>
-<p><em>Am 17.04.2014 um 17:57 schrieb IT-Bayer</em></p>
-<p>Die RSS Funktion von Rumex wurde überarbeitet. Das Datum der Nachricht wird jetzt korrekt angezeigt bzw. verarbeitet. Diese Neue Funktion ist in der Version 0.8.3.0 enthalten die auch schon zum Download <code>make update</code> bereit steht.</p>
-<div class="weblog">
-<p>Nach dem Update muss die <code>../.rumex/bin/rumex.vim</code> neu eingelesen werden so dass vim das neue Datumsformat übernimmt.</p>
-<pre><code>:so ../.rumex/bin/rumex.vim</code></pre>
-<p><strong>Achtung:</strong> Durch die Änderung der Datumsangabe in den NEWS Einträgen ist eine Überarbeitung der alten Einträge in der Datei <code>rss.rx0x</code> erforderlich. Diese müssen das neue Format des Zeitstempels tragen.</p>
-<p>Das neue Datumsformat kann mit der Kurztaste <code>,rnn</code> gesichtet werden, es wird eine neuer NEWS Eintrag mit dem aktuellen Datum Zeitstempel erstellt.</p>
-<p>Der Zeitstemple / Kommentar, hinter der Überschrift, kann kopiert und für die alten Einträge verwendet werden.</p>
-<p><strong>Wichtig: Die alten Einträge müssen geändert werden.</strong></p>
-</div>
 <h4 class="webloglink">
 <a href="weblog.html">… ältere Weblog Einträge anzeigen</a>
 </h4>
 
 
-<!-- ENDE .weblogblock -->
-</div>
-<!-- ENDE .indexliste -->
-</div>
+<!-- ENDE .weblogblock --></div>
+<!-- ENDE .indexliste --></div>
+
 <h2 id="seitenübersicht" class="abschnitt seiten">Seitenübersicht</h2>
-<!-- START .indexliste -->
-<div class="indexliste">
-<h1><a href="weblog-beschreibung.html">Weblog Beschreibung</a></h1>
+<!-- START .indexliste --><div class="indexliste">
+
+<h1 id="weblog-beschreibung"><a href="weblog-beschreibung.html">Weblog Beschreibung</a></h1>
 <p class="datum">
 Letzte Bearbeitung: 2014-05-19
 </p>
@@ -152,8 +141,7 @@ Letzte Bearbeitung: 2014-05-19
 <p>Der Unterschied zu den eigentlichen Rumex Seiten ist nicht sehr groß. Folgt nach einer <code>h1</code> Überschrift ein <code>div</code> Tag mit der <code>weblog</code> Klasse wird der Text innerhalb dieses <code>div</code> Tags ausgeblendet und mit dem Schriftzug <code>... weiter lesen</code> ersetzt. Die Überschrift und der Text <code>... weiter lesen</code> bekommen eine Link Eigenschaft die den ausgeblendeten Text bei Anforderung einblendet.</p>
 <p>Diese Funktion kann auch in den normalen Seiten verwendet werden.</p>
 <p><a href="weblog_beschreibung.html">… Seite öffnen</a></p>
-<!-- ENDE .indexliste -->
-</div>
+<!-- ENDE .indexliste --></div>
 </div>
 <div id="fuss">
 	<p class="copyleft">
