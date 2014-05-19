@@ -54,6 +54,10 @@ $if(meta_filedat)$
   <meta name="DCTERMS.modified" scheme="DCTERMS.W3CDTF" content="$meta_filedat$" />
 $endif$
 
+<!-- jquery fest eingebunden, so kann moot.it deaktiviert und
+	weblog immer noch verwendet werden. -->
+<script src="rxtpl/js/jquery.min.js"></script> 
+
 $if(mootit)$
 <!-- rumex moot.it -->
 <link rel="stylesheet" href="https://cdn.moot.it/1/moot.css">
@@ -71,10 +75,6 @@ $endif$
 
 <!-- rumex weblog @todo: Dateiname über config.mk ansprechen -->
 <script type='text/javascript' src='rxtpl/js/weblog.js'></script>
-
-<!-- jquery fest eingebunden, so kann moot.it deaktiviert und
-	weblog immer noch verwendet werden. -->
-<script src="rxtpl/js/jquery.min.js"></script> 
 
 $if(rsstitel)$
 <!-- rumex RSS -->
