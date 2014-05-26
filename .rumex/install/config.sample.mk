@@ -29,8 +29,8 @@ RSS_TITEL = "Neuigkeiten von rumex Baukasten"
 # ----------------------------------------------------
 # Schalter ob das externe Tool von moot.it eingebunden werden soll
 # Man sollte hier den Kontonamen angeben..
-# Wird moot.it nicht verwendet, den Parameter kommentieren. 
-MOOTIT = "rumex"
+# Wird moot.it nicht verwendet, den Parameter kommentiert lassen. 
+# MOOTIT = "rumex"
 
 
 # ----------------------------------------------------

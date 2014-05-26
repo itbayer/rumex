@@ -67,9 +67,10 @@ SEITENBANNER = "rxtpl/img/rumex.png"
 #-------------------------------------------------------------------------------
 # Schalter ob das externe Tool von moot.it eingebunden werden soll
 # Man sollte hier den Kontonamen angeben..
-# Wird moot.it nicht verwendet, den Parameter kommentieren. 
+# Wird moot.it nicht verwendet, den Parameter kommentiert
+# lassen.
 #-------------------------------------------------------------------------------
-MOOTIT = "rumex"
+# MOOTIT = "rumex"
 
 
 
