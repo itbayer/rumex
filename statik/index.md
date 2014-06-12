@@ -51,39 +51,39 @@ anschauen.
 Ab der Rumex Version 0.8.2 sind die Funktionstasten in Rumex enthalten.
 Folgende F-Tasten wurden belegt.
 
-F5
+**F5**
 :	Erstellt die `.htm` Datei ohne Inhaltsverzeichnis.
 
-Shift+F5
-:	Erstellt die `.htm` Datei mit Inhaltsverzeichnis bin zur Ebene 3.
+**Shift+F5**
+:	Erstellt die `.htm` Datei mit Inhaltsverzeichnis bis zur Ebene 3.
 
-Alt+F5
+**Alt+F5**
 :	Erstellt die `.htm` Datei mit kompletten Inhaltsverzeichnis
 	bzw. bis Ebene 5 da LaTeX auch nicht mehr Ebenen unterstützt
 	und die beiden Ausgabe Format annähernd identisch sein sollten.
 
-Ctrl+F5
+**Ctrl+F5**
 :	Öffnet die `.htm` Datei.
 
-F6
+**F6**
 :	Erstellt die `.pdf` Datei ohne Inhaltsverzeichnis.
 
-Shift+F6
+**Shift+F6**
 :	Erstellt die `.pdf` Datei mit Inhaltsverzeichnis bis zur Ebene 3.
 
-Alt+F6
+**Alt+F6**
 :	Erstellt die `.pdf` Datei mit kompletten Inhaltsverzeichnis.
 	Hier ist anzumerken dass LaTeX nur Inhaltsverzeichnisse bis zur Ebene 5 unterstützt.
 	Das HTML Format wurde entsprechend angepasst, siehe oben.
 
-Ctrl+F6
+**Ctrl+F6**
 :	Öffnet die `.pdf` Datei. Zur Zeit wird nur zathura unterstützt.
 
-F7
+**F7**
 :	Erstellt die restlichen Formate, `.epub`, `.odt` und `.mobi`.
 	Voraussetzung für das `.mobi` Format ist `calibre`.
 
-Ctrl-F7
+**Ctrl-F7**
 :	Öffnet die Literatur Verwaltung `rumex.bib`. Voraussetzung, `jabref` ist installiert. 
 
 
@@ -112,42 +112,7 @@ Beim Lesen des Artikels _"PDF-Dokumente schreiben mit Pandoc und Markdown"
 [@stenderprolinux]_ ist mir die Idee gekommen die Rumex _statik Funktion_ mit einem 
 Literaturverzeichnis, die ja auch in pandoc zur Verfügung steht, zu versehen.
 
-#### ~~Nachteil des Literaturverzeichnisses~~
-
-~~Das Literaturverzeichnis wird immer gesetzt, auch dann wenn es nicht
-verwendet wird.
-Bedingt durch die CSS Formatierung~~
-
-~~~{.css}
-.references:before {
-	content: "Literaturverzeichnis";
-~~~
-
-~~wird somit die Überschrift _Literaturverzeichnis_ immer angezeigt.~~
-
-#### Anmerkung zum durchgestrichenem Text
-
-Die CSS Formatierung bzw. das Setzen der Überschrift für das
-Literaturverzeichnis wurde raus genommen da diese bei der PDF
-Version des Dokumentes nicht gesetzt wird.
-Die Überschrift muss somit manuell, am Ende des Dokumentes,
-eingebaut werden.
-
-
-##### Setzen der Überschrift für das Literaturverzeichnis
-
-Die Überschrift für das Literaturverzeichnis muss immer am Ende
-des Artikels gesetzt werden.
-
-**Beispiel**
-
-	# Literaturverzeichnis
-
-
-
-
-
-## Installation
+# Installation pandoc manuell
 
 Für die Verwendung der Literaturfunktion muss pandoc um das Zusatzprogramm 
 `pandoc-citeproc` erweitert werden. 
@@ -167,9 +132,6 @@ beiden Programme.
 	sudo ln -s /home/USER/.cabal/bin/pandoc /usr/local/bin/.
 	sudo ln -s /home/USER/.cabal/bin/pandoc-citeproc /usr/local/bin/.
 
-**Nachtrag:** Bei dieser Beschreibung war ich auf dem Holzweg wie man in diesem 
-[weblog Eintrag](http://it-bayer.de/rumex/weblog.html#pandoc11233aufdebian74)
-lesen kann.
 
 ### Nachinstallation Rumex
 
@@ -230,8 +192,8 @@ aber das Grund Gerüst wird einem sozusagen frei Haus geliefert. \
 Wer einen Wikipedia Artikel zitieren dem wird unter
 `"Werkzeuge -> Seite zitieren"` weiter geholfen.
 
-- Für das zitieren von Internetseiten verwende ich folgende Formate.
-Beide erzeugen dabei den Eintrag der auf dieser Seite im Literaturverzeichnis zu finden ist.
+- Für das zitieren von Internetseiten verwende ich folgende Formate, 
+siehe dazu Abschnitt [Literaturverzeichnis](#literaturverzeichnis).
 
 ~~~
 	@ELECTRONIC{ wiki:bibtex,
@@ -245,9 +207,9 @@ Beide erzeugen dabei den Eintrag der auf dieser Seite im Literaturverzeichnis zu
 
 >...oder 
 <div style="padding-left:5em; font-size: .7em; color: blue; width: 60%;">
-**Achtung:** Dieses Format wird von jabref nicht unterstützt 
+**Achtung:** Das Formate `@WWW` wird von jabref nicht unterstützt 
 und gegen ein anders ausgetauscht. 
-Bei dem Einsatz von Jabref am besten ELECTRONIC verwenden.
+Bei dem Einsatz von Jabref am besten `@ELECTRONIC` verwenden.
 </div>
 
 ~~~
@@ -282,6 +244,17 @@ verwendet wird.
 Auskopplung aus Rumex, mit der man einfache html und pdf Seiten erstellen kann.
 Die Literaturverzeichnisoption ist auch enthalten. 
 Die Formate odt, epub und mobi sind jedoch nicht eingebaut.
+
+## Setzen der Überschrift für das Literaturverzeichnis
+
+Die Überschrift für das Literaturverzeichnis muss immer am Ende
+des Artikels gesetzt werden.
+
+**Beispiel**
+
+	# Literaturverzeichnis
+
+
 
 ## Einbinden von Bildern
 
@@ -335,4 +308,7 @@ Die Markdown Quelldatei kann man sich [hier](index.md) holen.
 
 ----
 
-# Literaturverzeichnis
+
+# Literaturverzeichnis 
+
+<!-- an dieser Stelle wird das Literaturverzeichnis erscheinen. -->

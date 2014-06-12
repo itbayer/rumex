@@ -10,25 +10,6 @@
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <style type="text/css">
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; }
-code > span.dt { color: #902000; }
-code > span.dv { color: #40a070; }
-code > span.bn { color: #40a070; }
-code > span.fl { color: #40a070; }
-code > span.ch { color: #4070a0; }
-code > span.st { color: #4070a0; }
-code > span.co { color: #60a0b0; font-style: italic; }
-code > span.ot { color: #007020; }
-code > span.al { color: #ff0000; font-weight: bold; }
-code > span.fu { color: #06287e; }
-code > span.er { color: #ff0000; font-weight: bold; }
-  </style>
   <link rel="stylesheet" href="../rxtpl/css/statik.css">
 </head>
 <body>
@@ -50,34 +31,34 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <h1 id="rumex-kurztasten">Die (g)vim statik Kurztaste in Rumex</h1>
 <p>Ab der Rumex Version 0.8.2 sind die Funktionstasten in Rumex enthalten. Folgende F-Tasten wurden belegt.</p>
 <dl>
-<dt>F5</dt>
+<dt><strong>F5</strong></dt>
 <dd><p>Erstellt die <code>.htm</code> Datei ohne Inhaltsverzeichnis.</p>
 </dd>
-<dt>Shift+F5</dt>
-<dd><p>Erstellt die <code>.htm</code> Datei mit Inhaltsverzeichnis bin zur Ebene 3.</p>
+<dt><strong>Shift+F5</strong></dt>
+<dd><p>Erstellt die <code>.htm</code> Datei mit Inhaltsverzeichnis bis zur Ebene 3.</p>
 </dd>
-<dt>Alt+F5</dt>
+<dt><strong>Alt+F5</strong></dt>
 <dd><p>Erstellt die <code>.htm</code> Datei mit kompletten Inhaltsverzeichnis bzw. bis Ebene 5 da LaTeX auch nicht mehr Ebenen unterstützt und die beiden Ausgabe Format annähernd identisch sein sollten.</p>
 </dd>
-<dt>Ctrl+F5</dt>
+<dt><strong>Ctrl+F5</strong></dt>
 <dd><p>Öffnet die <code>.htm</code> Datei.</p>
 </dd>
-<dt>F6</dt>
+<dt><strong>F6</strong></dt>
 <dd><p>Erstellt die <code>.pdf</code> Datei ohne Inhaltsverzeichnis.</p>
 </dd>
-<dt>Shift+F6</dt>
+<dt><strong>Shift+F6</strong></dt>
 <dd><p>Erstellt die <code>.pdf</code> Datei mit Inhaltsverzeichnis bis zur Ebene 3.</p>
 </dd>
-<dt>Alt+F6</dt>
+<dt><strong>Alt+F6</strong></dt>
 <dd><p>Erstellt die <code>.pdf</code> Datei mit kompletten Inhaltsverzeichnis. Hier ist anzumerken dass LaTeX nur Inhaltsverzeichnisse bis zur Ebene 5 unterstützt. Das HTML Format wurde entsprechend angepasst, siehe oben.</p>
 </dd>
-<dt>Ctrl+F6</dt>
+<dt><strong>Ctrl+F6</strong></dt>
 <dd><p>Öffnet die <code>.pdf</code> Datei. Zur Zeit wird nur zathura unterstützt.</p>
 </dd>
-<dt>F7</dt>
+<dt><strong>F7</strong></dt>
 <dd><p>Erstellt die restlichen Formate, <code>.epub</code>, <code>.odt</code> und <code>.mobi</code>. Voraussetzung für das <code>.mobi</code> Format ist <code>calibre</code>.</p>
 </dd>
-<dt>Ctrl-F7</dt>
+<dt><strong>Ctrl-F7</strong></dt>
 <dd><p>Öffnet die Literatur Verwaltung <code>rumex.bib</code>. Voraussetzung, <code>jabref</code> ist installiert.</p>
 </dd>
 </dl>
@@ -88,18 +69,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 ln -s ../.rumex/default/statik.css statik.css</code></pre>
 <h1 id="litfunk">Die Literaturverzeichnis Funktion</h1>
 <p>Beim Lesen des Artikels <em>&quot;PDF-Dokumente schreiben mit Pandoc und Markdown&quot; <span class="citation" data-cites="stenderprolinux">(<span style="font-variant: small-caps;">Stender</span>, 2013)</span></em> ist mir die Idee gekommen die Rumex <em>statik Funktion</em> mit einem Literaturverzeichnis, die ja auch in pandoc zur Verfügung steht, zu versehen.</p>
-<h4 id="nachteil-des-literaturverzeichnisses"><del>Nachteil des Literaturverzeichnisses</del></h4>
-<p><del>Das Literaturverzeichnis wird immer gesetzt, auch dann wenn es nicht verwendet wird. Bedingt durch die CSS Formatierung</del></p>
-<pre class="sourceCode css"><code class="sourceCode css"><span class="fl">.references</span><span class="dv">:before</span> <span class="kw">{</span>
-    <span class="kw">content:</span> <span class="st">&quot;Literaturverzeichnis&quot;</span><span class="kw">;</span></code></pre>
-<p><del>wird somit die Überschrift <em>Literaturverzeichnis</em> immer angezeigt.</del></p>
-<h4 id="anmerkung-zum-durchgestrichenem-text">Anmerkung zum durchgestrichenem Text</h4>
-<p>Die CSS Formatierung bzw. das Setzen der Überschrift für das Literaturverzeichnis wurde raus genommen da diese bei der PDF Version des Dokumentes nicht gesetzt wird. Die Überschrift muss somit manuell, am Ende des Dokumentes, eingebaut werden.</p>
-<h5 id="setzen-der-überschrift-für-das-literaturverzeichnis">Setzen der Überschrift für das Literaturverzeichnis</h5>
-<p>Die Überschrift für das Literaturverzeichnis muss immer am Ende des Artikels gesetzt werden.</p>
-<p><strong>Beispiel</strong></p>
-<pre><code># Literaturverzeichnis</code></pre>
-<h2 id="installation">Installation</h2>
+<h1 id="installation-pandoc-manuell">Installation pandoc manuell</h1>
 <p>Für die Verwendung der Literaturfunktion muss pandoc um das Zusatzprogramm <code>pandoc-citeproc</code> erweitert werden. Wer Pandoc über die Paketverwaltung installiert hat braucht hier nichts zu machen. Wer Pandoc manuell, so wie ich, installiert hat muss dieses Programm nachinstallieren.</p>
 <p>Dazu erweitert man die Installationszeile um das neue Programm</p>
 <pre><code>cabal update
@@ -107,7 +77,6 @@ cabal install pandoc pandoc-citeproc</code></pre>
 <p>Zu guter Letzt erstellt man noch die symbolischen Links der beiden Programme.</p>
 <pre><code>sudo ln -s /home/USER/.cabal/bin/pandoc /usr/local/bin/.
 sudo ln -s /home/USER/.cabal/bin/pandoc-citeproc /usr/local/bin/.</code></pre>
-<p><strong>Nachtrag:</strong> Bei dieser Beschreibung war ich auf dem Holzweg wie man in diesem <a href="http://it-bayer.de/rumex/weblog.html#pandoc11233aufdebian74">weblog Eintrag</a> lesen kann.</p>
 <h3 id="nachinstallation-rumex">Nachinstallation Rumex</h3>
 <p>Wer Rumex schon im Einsatz hat muss für die Erweiterung ein wenig Hand anlegen. Zu erste holt man sich die neue Version<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a> von rumex.</p>
 <p>Dann braucht man noch drei zusätzliche Dateien im Verzeichnis <code>.rx</code>.</p>
@@ -131,7 +100,7 @@ ln -s ../.rumex/default/statik.css statik.css</code></pre>
 <ul>
 <li><p>Auf <span class="citation" data-cites="wiki:bibtex">Wikipedia (2013)</span> findet man eine schöne Beschreibung über die Literatur Verwaltung mit BibTex.</p></li>
 <li><p>Die BibTex Einträge muss man sich unter Umständen nicht einmal selber erstellen. Da verschiedene Seiten entsprechende Dienste anbieten. Gelungen finde ich die Seite von <a href="http://www.literatur-generator.de/">http://www.literatur-generator.de/</a> aber auch auf <a href="http://lead.to/amazon/en/?op=bt">http://lead.to/amazon/en/?op=bt</a> findet man BibTeX Einträge. Zwar muss man diese unter Umständen noch ein wenig überarbeiten aber das Grund Gerüst wird einem sozusagen frei Haus geliefert.<br />Wer einen Wikipedia Artikel zitieren dem wird unter <code>&quot;Werkzeuge -&gt; Seite zitieren&quot;</code> weiter geholfen.</p></li>
-<li><p>Für das zitieren von Internetseiten verwende ich folgende Formate. Beide erzeugen dabei den Eintrag der auf dieser Seite im Literaturverzeichnis zu finden ist.</p></li>
+<li><p>Für das zitieren von Internetseiten verwende ich folgende Formate, siehe dazu Abschnitt <a href="#literaturverzeichnis">Literaturverzeichnis</a>.</p></li>
 </ul>
 <pre><code>    @ELECTRONIC{ wiki:bibtex,
         author = &quot;Wikipedia&quot;,
@@ -143,7 +112,7 @@ ln -s ../.rumex/default/statik.css statik.css</code></pre>
 <blockquote>
 ...oder
 <div style="padding-left:5em; font-size: .7em; color: blue; width: 60%;">
-<strong>Achtung:</strong> Dieses Format wird von jabref nicht unterstützt und gegen ein anders ausgetauscht. Bei dem Einsatz von Jabref am besten ELECTRONIC verwenden.
+<strong>Achtung:</strong> Das Formate <code>@WWW</code> wird von jabref nicht unterstützt und gegen ein anders ausgetauscht. Bei dem Einsatz von Jabref am besten <code>@ELECTRONIC</code> verwenden.
 </div>
 </blockquote>
 <pre><code>    @WWW{ wiki:bibtex,
@@ -161,6 +130,10 @@ ln -s ../.rumex/default/statik.css statik.css</code></pre>
 <li><p>Eine zweite lokale Rumex Installation die nur für Denkschriften verwendet wird.</p></li>
 <li><p>...und dann wäre da noch <a href="https://github.com/itbayer/cirsium">Cirsium</a>, eine Auskopplung aus Rumex, mit der man einfache html und pdf Seiten erstellen kann. Die Literaturverzeichnisoption ist auch enthalten. Die Formate odt, epub und mobi sind jedoch nicht eingebaut.</p></li>
 </ol>
+<h2 id="setzen-der-überschrift-für-das-literaturverzeichnis">Setzen der Überschrift für das Literaturverzeichnis</h2>
+<p>Die Überschrift für das Literaturverzeichnis muss immer am Ende des Artikels gesetzt werden.</p>
+<p><strong>Beispiel</strong></p>
+<pre><code># Literaturverzeichnis</code></pre>
 <h2 id="einbinden-von-bildern">Einbinden von Bildern</h2>
 <p>Bei dem Einbinden der Bilder muss man beachten dass die Erstellung der statik Datei vom Verzeichnis <code>.rx</code> ausgeht.</p>
 <p>Will man also ein Bild, dass im Ordner der Statik Datei liegt einbinden so muss auch auf das Bild aus der Sicht des <code>.rx</code> Verzeichnisses eingebunden werden.</p>
@@ -176,8 +149,11 @@ ln -s ../.rumex/default/statik.css statik.css</code></pre>
 <hr />
 <p>Die PDF Datei dieser Beschreibung kann man sich <a href="index.pdf">hier</a> ansehen. Die Markdown Quelldatei kann man sich <a href="index.md">hier</a> holen.</p>
 <hr />
+<h1 id="literaturverzeichnis">Literaturverzeichnis</h1>
+<!-- an dieser Stelle wird das Literaturverzeichnis erscheinen. -->
+
+
 <div class="references">
-<h1>Literaturverzeichnis</h1>
 <p><span style="font-variant: small-caps;">Stender, Daniel</span>: <em>PDF-Dokumente schreiben mit Pandoc und Markdown</em>. URL <a href="http://www.pro-linux.de/artikel/2/1635/3,bibliographie.html">http://www.pro-linux.de/artikel/2/1635/3,bibliographie.html</a></p>
 <p><span style="font-variant: small-caps;">Wikipedia</span>: <em>BibTeX — Wikipedia, Die freie Enzyklopädie</em>. URL <a href="http://de.wikipedia.org/w/index.php?title=BibTeX&amp;oldid=124228120">http://de.wikipedia.org/w/index.php?title=BibTeX&amp;oldid=124228120</a>. — [Online; Stand 18. Dezember 2013]</p>
 </div>
