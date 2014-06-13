@@ -1,0 +1,325 @@
+Rumex verwendet pandocs markdown weil man damit sehr einfach und schnell
+Text erstellen und in verschiedenen Formate wandeln kann. Für die
+Erstellung von Denkschriften\footnote{Im Neudeutschen würde man die
+  Denkschrift als Memorandum bezeichnen.} wurde zusätzlich eine, ich
+nenne sie \emph{statik Funktion} eingebaut. Mit dieser Funktion ist es
+möglich innerhalb eines Unterverzeichnisses verschiedenen Ausgabe
+Formate zu erstellen. Zur Zeit werden, von Rumex, folgenden Formate
+unterstützt:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  .html
+\item
+  .pdf
+\item
+  .odt OpenDokument
+\item
+  .epub E-Book
+\item
+  .mobi E-Book (Kindle)
+\end{itemize}
+
+Erstellt werden die einzelnen Formate über
+\hyperref[rumex-kurztasten]{Funktionstasten} die innerhalb
+(g)vim\footnote{Die Funktionstasten sind im gvim Rumex Menü nicht
+  eingebaut. Man sollte sie sich also merken :-).} zur Verfügung
+stehen.\sout{Eine Besonderheit ist dass die \texttt{.htm} Datei auch
+ohne die zusätzlichen Dateien wie} \sout{Bilder oder die CSS Datei
+funktionieren. Alle Daten werden in die \texttt{.htm} Datei
+eingebunden.}\footnote{Diese Eigenschaft wurde wieder entfernt da eine
+  Datei mit sehr vielen Bildern oder gar Videos, die alle in die HTML
+  Datei eingebunden werden, sehr groß wird. Dieses erhöht die Ladezeit
+  der HTM Datei. Bei der Verwaltung durch git wirkt sich diese
+  Eigenschaft auch ungünstig aus.}\\Auch wurde die
+\hyperref[litfunk]{Literaturfunktion} von Pandoc eingebaut sodass
+Verweise auf anderen Quellen in den Denkschriften verwendet werden
+können.
+
+Wer sich Rumex nicht installieren möchte aber dennoch eine einfache
+Möglichkeit sucht HTML Seiten zu erstellen, kann sich einmal
+\href{http://www.it-bayer.de/cirsium}{cirsium} anschauen. Cirsium ist
+eine Auskopplung aus Rumex, unterteilt aber die Quelltextdatei in
+verschiedene Abschnitte. Am besten einfach mal auf
+\href{http://www.github.com/itbayer/cirsium}{github.com} anschauen.
+
+\hyperdef{}{rumex-kurztasten}{\section{Die (g)vim statik Kurztaste in
+Rumex}\label{rumex-kurztasten}}
+
+Ab der Rumex Version 0.8.2 sind die Funktionstasten in Rumex enthalten.
+Folgende F-Tasten wurden belegt.
+
+\begin{description}
+\item[\textbf{F5}]
+Erstellt die \texttt{.htm} Datei ohne Inhaltsverzeichnis.
+\item[\textbf{Shift+F5}]
+Erstellt die \texttt{.htm} Datei mit Inhaltsverzeichnis bis zur Ebene 3.
+\item[\textbf{Alt+F5}]
+Erstellt die \texttt{.htm} Datei mit kompletten Inhaltsverzeichnis bzw.
+bis Ebene 5 da LaTeX auch nicht mehr Ebenen unterstützt und die beiden
+Ausgabe Format annähernd identisch sein sollten.
+\item[\textbf{Ctrl+F5}]
+Öffnet die \texttt{.htm} Datei.
+\item[\textbf{F6}]
+Erstellt die \texttt{.pdf} Datei ohne Inhaltsverzeichnis.
+\item[\textbf{Shift+F6}]
+Erstellt die \texttt{.pdf} Datei mit Inhaltsverzeichnis bis zur Ebene 3.
+\item[\textbf{Alt+F6}]
+Erstellt die \texttt{.pdf} Datei mit kompletten Inhaltsverzeichnis. Hier
+ist anzumerken dass LaTeX nur Inhaltsverzeichnisse bis zur Ebene 5
+unterstützt. Das HTML Format wurde entsprechend angepasst, siehe oben.
+\item[\textbf{Ctrl+F6}]
+Öffnet die \texttt{.pdf} Datei. Zur Zeit wird nur zathura unterstützt.
+\item[\textbf{F7}]
+Erstellt die restlichen Formate, \texttt{.epub}, \texttt{.odt} und
+\texttt{.mobi}. Voraussetzung für das \texttt{.mobi} Format ist
+\texttt{calibre}.
+\item[\textbf{Ctrl-F7}]
+Öffnet die Literatur Verwaltung \texttt{rumex.bib}. Voraussetzung,
+\texttt{jabref} ist installiert.
+\end{description}
+
+\section{HTML Formatierung}\label{html-formatierung}
+
+Die erzeugte HTML Datei besitzt Standardmäßig keine Formatierung bzw.
+verwendet die Standard Darstellung des Browsers.
+
+Kopf- und Fusszeile werden dadurch nicht, vom restlichen Text,
+unterschieden. Auch das Inhaltsverzeichnis ist im ersten Moment als
+solches nicht gleich zu erkennen. Dieses kann mit ein wenig CSS geändert
+werden. Diese CSS Datei ist ab Rumex Version 0.8.2 enthalten muss aber
+unter Umständen noch eingerichtet werden.
+
+\begin{verbatim}
+cd .rx
+ln -s ../.rumex/default/statik.css statik.css
+\end{verbatim}
+
+\hyperdef{}{litfunk}{\section{Die Literaturverzeichnis
+Funktion}\label{litfunk}}
+
+Beim Lesen des Artikels \emph{``PDF-Dokumente schreiben mit Pandoc und
+Markdown'' {[}@stenderprolinux{]}} ist mir die Idee gekommen die Rumex
+\emph{statik Funktion} mit einem Literaturverzeichnis, die ja auch in
+pandoc zur Verfügung steht, zu versehen.
+
+\section{Installation pandoc manuell}\label{installation-pandoc-manuell}
+
+Für die Verwendung der Literaturfunktion muss pandoc um das
+Zusatzprogramm \texttt{pandoc-citeproc} erweitert werden. Wer Pandoc
+über die Paketverwaltung installiert hat braucht hier nichts zu machen.
+Wer Pandoc manuell, so wie ich, installiert hat muss dieses Programm
+nachinstallieren.
+
+Dazu erweitert man die Installationszeile um das neue Programm
+
+\begin{verbatim}
+cabal update
+cabal install pandoc pandoc-citeproc
+\end{verbatim}
+
+Zu guter Letzt erstellt man noch die symbolischen Links der beiden
+Programme.
+
+\begin{verbatim}
+sudo ln -s /home/USER/.cabal/bin/pandoc /usr/local/bin/.
+sudo ln -s /home/USER/.cabal/bin/pandoc-citeproc /usr/local/bin/.
+\end{verbatim}
+
+\subsubsection{Nachinstallation Rumex}\label{nachinstallation-rumex}
+
+Wer Rumex schon im Einsatz hat muss für die Erweiterung ein wenig Hand
+anlegen. Zu erste holt man sich die neue Version\footnote{Die Literatur
+  Erweiterung ist ab der Rumex Version 0.8.2 enthalten.} von rumex.
+
+Dann braucht man noch drei zusätzliche Dateien im Verzeichnis
+\texttt{.rx}.
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \texttt{rumex.bib}
+\item
+  \texttt{rumex.csl}
+\item
+  \texttt{statik.css}
+\end{itemize}
+
+Wobei der \hyperref[literatur-stil]{Literatur Vorlage Stiel} und die CSS
+Datei nur verlinkt wird. In der \texttt{rumex.bib} werden dann die
+Literatur Verweise verwaltet.
+
+\begin{verbatim}
+cd .rx
+touch rumex.bib
+ln -s ../.rumex/default/din-1505-2.csl rumex.csl
+ln -s ../.rumex/default/statik.css statik.css
+\end{verbatim}
+
+\hyperdef{}{literatur-stil}{\subsubsection{Literatur
+Stil}\label{literatur-stil}}
+
+Als Literatur Stil kommt \texttt{din-1505-2.csl} zum Einsatz. Andere
+Stile findet man im git Repository
+\url{https://github.com/citation-style-language/styles.git}. Als Name
+für die Stil Vorlage wurde \texttt{rumex.csl} gewählt damit mit eine
+Änderung des Stils einfach über den Symlink gemacht werden kann.
+
+\subsubsection{Literatur Verwaltung}\label{literatur-verwaltung}
+
+Für die Verwaltung der Literatur Datenbank verwende ich
+\href{http://jabref.sourceforge.net/}{Jabref}.
+
+\begin{verbatim}
+sudo apt-get install jabref
+\end{verbatim}
+
+Der Aufruf des Programms wurde auch auf einen F Taste gelegt. Wer eine
+anderes Programm verwenden will muss diesen entsprechend anpassen.
+
+\subsubsection{Tipps}\label{tipps}
+
+\begin{itemize}
+\item
+  Auf @wiki:bibtex findet man eine schöne Beschreibung über die
+  Literatur Verwaltung mit BibTex.
+\item
+  Die BibTex Einträge muss man sich unter Umständen nicht einmal selber
+  erstellen. Da verschiedene Seiten entsprechende Dienste anbieten.
+  Gelungen finde ich die Seite von
+  \url{http://www.literatur-generator.de/} aber auch auf
+  \url{http://lead.to/amazon/en/?op=bt} findet man BibTeX Einträge. Zwar
+  muss man diese unter Umständen noch ein wenig überarbeiten aber das
+  Grund Gerüst wird einem sozusagen frei Haus geliefert.\\Wer einen
+  Wikipedia Artikel zitieren dem wird unter
+  \texttt{"Werkzeuge -\textgreater{} Seite zitieren"} weiter geholfen.
+\item
+  Für das zitieren von Internetseiten verwende ich folgende Formate,
+  siehe dazu Abschnitt
+  \hyperref[literaturverzeichnis]{Literaturverzeichnis}.
+\end{itemize}
+
+\begin{verbatim}
+    @ELECTRONIC{ wiki:bibtex,
+        author = "Wikipedia",
+        title = "BibTeX --- Wikipedia{,} Die freie Enzyklopädie",
+        year = "2013",
+        url = "http://de.wikipedia.org/w/index.php?title=BibTeX&oldid=124228120", 
+        note = "[Online; Stand 18. Dezember 2013]"
+    }
+\end{verbatim}
+
+\begin{quote}
+\ldots{}oder
+
+\textbf{Achtung:} Das Formate \texttt{@WWW} wird von jabref nicht
+unterstützt und gegen ein anders ausgetauscht. Bei dem Einsatz von
+Jabref am besten \texttt{@ELECTRONIC} verwenden.
+\end{quote}
+
+\begin{verbatim}
+    @WWW{ wiki:bibtex,
+        author = "Wikipedia",
+        title = "BibTeX --- Wikipedia{,} Die freie Enzyklopädie",
+        year = "2013",
+        url = "http://de.wikipedia.org/w/index.php?title=BibTeX&oldid=124228120", 
+        note = "[Online; Stand 18. Dezember 2013]"
+    }
+\end{verbatim}
+
+\section{Verwendung in- und außerhalb von
+Rumex?}\label{verwendung-in--und-auuxdferhalb-von-rumex}
+
+Innerhalb von Rumex erstellt man in einem separatem Unterverzeichnis die
+entsprechende markdown Datei und dann kann es auch schon los gehen.
+
+Außerhalb von Rumex kann man diese Funktion natürlich auch verwenden.
+Mit Außerhalb meine ich Denkschriften die nicht veröffentlicht werden.
+Dazu gibt es zwei Möglichkeiten.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Die Datei bzw. das Verzeichnis in \texttt{.gitignore} hinterlegen.
+  Somit wird diese nicht verwaltet und auch nicht, bei einem
+  \texttt{make online}, hoch geladen.
+\item
+  Eine zweite lokale Rumex Installation die nur für Denkschriften
+  verwendet wird.
+\item
+  \ldots{}und dann wäre da noch
+  \href{https://github.com/itbayer/cirsium}{Cirsium}, eine Auskopplung
+  aus Rumex, mit der man einfache html und pdf Seiten erstellen kann.
+  Die Literaturverzeichnisoption ist auch enthalten. Die Formate odt,
+  epub und mobi sind jedoch nicht eingebaut.
+\end{enumerate}
+
+\subsection{Setzen der Überschrift für das
+Literaturverzeichnis}\label{setzen-der-uxfcberschrift-fuxfcr-das-literaturverzeichnis}
+
+Die Überschrift für das Literaturverzeichnis muss immer am Ende des
+Artikels gesetzt werden.
+
+\textbf{Beispiel}
+
+\begin{verbatim}
+# Literaturverzeichnis
+\end{verbatim}
+
+\subsection{Einbinden von Bildern}\label{einbinden-von-bildern}
+
+Bei dem Einbinden der Bilder muss man beachten dass die Erstellung der
+statik Datei vom Verzeichnis \texttt{.rx} ausgeht.
+
+Will man also ein Bild, dass im Ordner der Statik Datei liegt einbinden
+so muss auch auf das Bild aus der Sicht des \texttt{.rx} Verzeichnisses
+eingebunden werden.
+
+Beispiel:
+
+Das Bild liegt im Ordner \texttt{statik} somit müsste der Markdown
+Befehl so aussehen.
+
+\begin{verbatim}
+![Beispielbild](../statik/beispiel.png)
+\end{verbatim}
+
+In Rumex kann man diese Funktion natürlich auch verwenden. Am besten
+erstellt man sich dazu ein eigenes Unterverzeichnis und dort die Datei
+\texttt{index.md} mit den Texten.
+
+\subsection{Statik Dateien im \texttt{.rx}
+Verzeichnis}\label{statik-dateien-im-.rx-verzeichnis}
+
+Es wird sicher passieren dass man die Funktionstasten der Statik Seiten
+auch bei der Bearbeitung der eigentlichen Rumex Dateien drückt. Durch
+entsprechende Einträge in der \texttt{.gitignore} Datei werden solche
+Dateien von einem Upload ausgeschlossen. Mit den Aufruf von
+\texttt{make statikclean} können die erstellten statik Dateien
+Schlussendliche aus dem \texttt{.rx} Verzeichnis entfernt werden. Dieser
+Befehl wird auch bei \texttt{make clean} ausgeführt.
+
+\subsection{Tipps}\label{tipps-1}
+
+Das PDF Programm \texttt{zathura} hat die Eigenschaft dass wenn sich die
+Datei ändert diese automatisch nachgeladen wird. Eine schöne Funktion
+wenn man seinen Text, an dem man gerade arbeitet, immer wieder einmal im
+Ausgabe Format betrachten will. Einfach die Taste F6 drücken, die Datei
+wird auch gleich gespeichert, und mit ALT-TAB das Programm Fenster
+wechseln.
+
+Bei Format HTML geht das natürlich auch. Nur muss hier eine Erweiterung
+installiert werden. Für die Browser Chromium und Firefox habe ich mit
+\texttt{Auto Refresh Plus}$^{Chromium}$ bzw.
+\texttt{Tab Auto Reload}$^{FireFox}$ gute Erfahrungen gemacht.
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+Die PDF Datei dieser Beschreibung kann man sich \href{index.pdf}{hier}
+ansehen. Die Markdown Quelldatei kann man sich \href{index.md}{hier}
+holen.
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+\hyperdef{}{literaturverzeichnis}{\section{Literaturverzeichnis}\label{literaturverzeichnis}}

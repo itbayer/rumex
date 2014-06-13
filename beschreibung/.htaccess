@@ -1,0 +1,61 @@
+# Standard Index um den Namen der Datei
+DirectoryIndex rumex.html index.html index.htm
+
+
+# Arbeitsdateien vor dem ausliefern schützen.
+<FilesMatch "\.log$"> 
+deny from all 
+</FilesMatch> 
+
+<FilesMatch "\.aux$"> 
+deny from all 
+</FilesMatch> 
+
+<FilesMatch "Makefile$"> 
+deny from all 
+</FilesMatch> 
+
+<FilesMatch "\.4ct$"> 
+deny from all 
+</FilesMatch> 
+
+<FilesMatch "\.4tc$"> 
+deny from all 
+</FilesMatch> 
+
+<FilesMatch "\.aux$"> 
+deny from all 
+</FilesMatch> 
+
+<FilesMatch "\.dvi$"> 
+deny from all 
+</FilesMatch> 
+
+<FilesMatch "\.idv$"> 
+deny from all 
+</FilesMatch> 
+
+<FilesMatch "\.lg$"> 
+deny from all 
+</FilesMatch> 
+
+<FilesMatch "\.out$"> 
+deny from all 
+</FilesMatch> 
+
+<FilesMatch "\.tex$"> 
+deny from all 
+</FilesMatch> 
+
+<FilesMatch "\.tmp$"> 
+deny from all 
+</FilesMatch> 
+
+<FilesMatch "\.toc$"> 
+deny from all 
+</FilesMatch> 
+
+<FilesMatch "\.xref$"> 
+deny from all 
+</FilesMatch> 
+

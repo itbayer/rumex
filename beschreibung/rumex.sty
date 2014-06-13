@@ -1,0 +1,29 @@
+%
+% Präambel Teil für die htlatex Konfiguration
+%
+
+% wurde das Paket varioref geladen dann
+% den Befehl \vref umschreiben
+% htlatex kann mit dieser Erweiterung nicht umgehen
+\makeatletter % maskiert das @ Zeichen
+\@ifpackageloaded{varioref}{
+	\@ifpackageloaded{tex4ht}{
+		\renewcommand{\vref}[1]{\ref{#1}}
+	}{}%else tex4ht
+}{}%else varioref
+\makeatother % Ende der @ Zeichen Maskierung
+
+
+% Schalter um innerhalb des Dokumenten Abschnittes
+% zwischen dem Lauf mit bzw. ohne htlatex
+% umschalten zu können.
+% Ein Muster findte man in der Datei tex4htconfig.tex
+\makeatletter
+\edef\htorlx{TT\noexpand\fi
+  \@ifpackageloaded{tex4ht}
+    {\noexpand\iftrue}
+    {\noexpand\iffalse}}
+\makeatother
+
+
+

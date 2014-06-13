@@ -1,0 +1,922 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+<head><title>Rumex Beschreibung</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,info,2,fn-in --> 
+<meta name="src" content="rumex.tex"> 
+<meta name="date" content="2014-06-13 08:25:00"> 
+<link rel="stylesheet" type="text/css" href="rumex.css"> 
+</head><body 
+>
+<div class="maketitle"><div class="titlepage">
+                                                                                     
+                                                                                     
+                                                                                     
+                                                                                     
+                                                                                     
+                                                                                     
+
+<h2 class="titleHead">Rumex Beschreibung</h2>
+<div class="author" ><span 
+class="ecrm-1728">Stefan Blechschmidt</span></div><br />
+<div class="date" ><span 
+class="ecrm-1728">Juni 2014</span></div>
+                                                                                     
+                                                                                     
+</div> </div>
+<!--l. 72--><p class="noindent" ><table 
+class="abstract"><tr><td 
+>
+                                                                                     
+                                                                                     
+                                                                                     
+                                                                                     
+<!--l. 72--><p class="noindent" >
+                                                                                     
+                                                                                     
+<!--l. 73--><p class="noindent" >An diesem Dokument wird zur Zeit gearbeitet.
+<!--l. 74--><p class="noindent" >
+                                                                                     
+                                                                                     
+<!--l. 74--><p class="noindent" ></td></tr></table>
+<div class="tableofcontents">
+<span class="chapterToc" >1&#x00A0;&#x00A0;<a 
+href="rumexch1.html#x2-450001" id="QQ2-2-47">Statik Funktion</a></span>
+<br /><span class="chapterToc" >2&#x00A0;&#x00A0;<a 
+href="rumexch2.html#x3-600002" id="QQ2-3-62">vim-Kurztasten</a></span>
+</div>
+<h3 class="sectionHead"><span class="titlemark">0.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-10000.1"></a>Vorwort</h3>
+<!--l. 79--><p class="noindent" >Die Beweggründe mit einem eigenen System eine Internet Seite zu Verwalten sind mit der Zeit
+in mir gewachsen.
+<!--l. 82--><p class="noindent" >Es gibt immer mehr Systeme die zum Erstellen und Verwalten von Internetseiten
+eingesetzt werden. Probiert habe ich schon viele und mit den meisten war ich auch sehr
+zufrieden, wenn da nicht immer der Hacken mit dem Updates wäre. Irgendwie,
+zumindest kommt es mir so vor, ist der Aufwand das System der Seite auf dem
+aktuellen Stand zu halten größer geworden als den Inhalt der eigentlichen Seite zu
+pflegen.
+<!--l. 89--><p class="noindent" >Ich wünschte mir wieder eine Internetseite wie in früheren Zeiten. Eine Seite die aus einfachen
+HTML Seiten besteht.
+<!--l. 92--><p class="noindent" >Irgendwann bin ich dann auf <span 
+class="ectt-1200">markdown </span>und <span 
+class="ectt-1200">pandoc </span>gestoßen und die Idee dieses Home Page
+Baukastens ist entstanden.
+<!--l. 95--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.1.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-20000.1.1"></a>Rumex?</h4>
+<!--l. 97--><p class="noindent" >Rumex ist die lateinische Bezeichnung für den <a 
+href="http://de.wikipedia.org/wiki/Ampfer" >Ampfer</a> und dieser taucht in der Natur dann
+auf, wenn der Boden Überdüngt, Verdichtung und Beschädigt ist. Rumex gehört zu den
+sogenannten Pionier Pflanzen. Er ist ein Lückenfüller.
+<!--l. 103--><p class="noindent" >Genau das soll Rumex auch sein &#8220;ein Lückenfüller&#8221; für alle die &hellip; Systeme satt haben.
+<!--l. 106--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                     
+                                                                                     
+<a 
+ id="x1-20011"></a>
+                                                                                     
+                                                                                     
+
+<!--l. 108--><p class="noindent" ><img 
+src="../bilder/beschreibung-vym_800_.png" alt="PIC"  
+>
+<br /> <div class="caption"><table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Abbildung&#x00A0;0.1: </td><td  
+class="content">Kleine Gedankenkarte der Rumex Beschreibung. Zur Zeit in Arbeit.</td></tr></table></div><!--tex4ht:label?: x1-20011 -->
+                                                                                     
+                                                                                     
+<!--l. 111--><p class="noindent" ></div><hr class="endfigure">
+<h3 class="sectionHead"><span class="titlemark">0.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-30000.2"></a>Installation und Einrichten des Rumex Baukastens</h3>
+<!--l. 116--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.2.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-40000.2.1"></a>Vorbereitung des Rechners</h4>
+<!--l. 118--><p class="noindent" >Rumex ist auf ein *nix System ausgerichtet. Auf diesem sollten folgende Programme installiert
+sein:
+      <ul class="itemize1">
+      <li class="itemize">bash
+      </li>
+      <li class="itemize">make
+      </li>
+      <li class="itemize">perl
+      </li>
+      <li class="itemize">git
+      </li>
+      <li class="itemize">pandoc
+      </li>
+      <li class="itemize">imagemagick
+      </li>
+      <li class="itemize">wget
+      </li>
+      <li class="itemize"><span class="sout">wput</span>
+      </li>
+      <li class="itemize">sitecopy
+      </li>
+      <li class="itemize">vim (g)vim
+                                                                                     
+                                                                                     
+      </li>
+      <li class="itemize">texlive</li></ul>
+<!--l. 146--><p class="noindent" >Wobei <span 
+class="ectt-1200">bash</span>, <span 
+class="ectt-1200">make </span>und <span 
+class="ectt-1200">perl </span>eigentlich bei jeder <span 
+class="ectt-1200">*nix </span>Installation bereits vorhanden sein dürft.
+Die restlichen Programme müssen nach installiert werden.
+<!--l. 150--><p class="noindent" >Wer mit dem Editor <span 
+class="ectt-1200">vim </span>zurecht kommt sollte sich auch <span 
+class="ectt-1200">(g)vim </span>installieren. Rumex besitzt
+eine <span 
+class="ectt-1200">gvim </span>Erweiterung die, die Arbeit bzw. die Suche nach dem richtigen Befehl am Anfang
+um einiges erleichtert.
+<!--l. 155--><p class="noindent" ><span 
+class="ectt-1200">texlive</span><span class="footnote-mark"><a 
+href="#fn1x0" id="fn1x0-bk"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-4001f1"></a>
+wird nur gebraucht wenn man auch PDF Dateien erstellen möchte.
+<!--l. 159--><p class="noindent" ><span class="sout"><span 
+class="ectt-1200">wput</span></span> <span 
+class="ectt-1200">sitecopy </span>wird nur gebraucht wenn man die Daten per FTP hoch laden möchte.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-1">
+sudo&#x00A0;apt-get&#x00A0;install&#x00A0;make&#x00A0;perl
+&#x00A0;<br />
+&#x00A0;<br />sudo&#x00A0;apt-get&#x00A0;install&#x00A0;git-core&#x00A0;wget&#x00A0;sitecopy&#x00A0;pandoc&#x00A0;imagemagick
+&#x00A0;<br />
+&#x00A0;<br />sudo&#x00A0;apt-get&#x00A0;install&#x00A0;gvim
+&#x00A0;<br />
+&#x00A0;<br />sudo&#x00A0;apt-get&#x00A0;install&#x00A0;texlive
+</div>
+<!--l. 170--><p class="nopar" >
+<!--l. 173--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.2.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-50000.2.2"></a>Installation von Rumex auf dem lokalen Arbeitsplatz</h4>
+<!--l. 175--><p class="noindent" >Für die Installation auf deinem Rechner musst du dir zu erst das ZIP bzw. das tar.gz Archiv
+vom github Server holen und entpacken
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-2">
+wget&#x00A0;https://github.com/itbayer/rumex/archive/gh-pages.zip
+&#x00A0;<br />unzip&#x00A0;gh-pages.zip
+</div>
+<!--l. 181--><p class="nopar" >
+<!--l. 183--><p class="noindent" >oder
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-3">
+wget&#x00A0;https://github.com/itbayer/rumex/archive/gh-pages.tar.gz
+&#x00A0;<br />tar&#x00A0;-xzvf&#x00A0;gh-pages.tar.gz
+</div>
+<!--l. 188--><p class="nopar" >
+<!--l. 190--><p class="noindent" >Jetzt wechsle in das Verzeichnis <span 
+class="ectt-1200">rumex-gh-pages/.rx </span>und starte die Befehle <span 
+class="ectt-1200">make install</span>
+und <span 
+class="ectt-1200">make show</span>.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-4">
+cd&#x00A0;rumex-gh-pages/.rx/
+&#x00A0;<br />make&#x00A0;install
+&#x00A0;<br />make&#x00A0;show
+</div>
+<!--l. 197--><p class="nopar" >
+<!--l. 199--><p class="noindent" >Fertig :-)
+<!--l. 201--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.2.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-60000.2.3"></a>Rumex auf dich einstellen</h4>
+<!--l. 203--><p class="noindent" >Nach der Installation muss Rumex noch auf dich eingestellt werden. Genauer gesagt sollten
+folgende Angabe für deine neuen Seite angepasst werden.
+      <ul class="itemize1">
+      <li class="itemize">URL deiner Seite
+      </li>
+      <li class="itemize">Impressum
+      </li>
+      <li class="itemize">Kopf / Fusszeile
+      </li>
+      <li class="itemize">Logo</li></ul>
+<!--l. 219--><p class="noindent" >Eine Kurzbeschreibung findest du, nach der Installation, auf der Startseite von Rumex oder
+<a 
+href="../istart.html" >hier</a>.
+                                                                                     
+                                                                                     
+<!--l. 222--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.2.4</span>&#x00A0;&#x00A0;<a 
+ id="x1-70000.2.4"></a>moot.it</h4>
+<!--l. 224--><p class="noindent" >@todo: Hier fehlt noch die Beschreibung
+      <ul class="itemize1">
+      <li class="itemize">ein/auschalten
+      </li>
+      <li class="itemize">Kontoname einstellen</li></ul>
+<!--l. 235--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.2.5</span>&#x00A0;&#x00A0;<a 
+ id="x1-80000.2.5"></a>gvim Unterstützung einrichten</h4>
+<!--l. 237--><p class="noindent" >@todo: Hier fehlt noch die Beschreibung@
+      <ul class="itemize1">
+      <li class="itemize">Erstellen der Startdatei
+      </li>
+      <li class="itemize">Einrichten</li></ul>
+<!--l. 313--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x1-90000.2.5"></a>Tipps zur Benutzung gvim</h5>
+<!--l. 315--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x1-100000.2.5"></a>vim Kurztasten</h5>
+<!--l. 317--><p class="noindent" >Eine Übersicht der Rumex Kurztasten für den Editor vim findest du auf der Seite
+<a 
+href="vim-kurztasten.htm" >VIM-Kurztasten</a>.
+                                                                                     
+                                                                                     
+<!--l. 320--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x1-110000.2.5"></a>gvim Menü</h5>
+<!--l. 322--><p class="noindent" >Eine Übersicht des Rumex Menüs für den Editor gvim findest du auf der Seite <a 
+href="gvim-menue.htm" >GVIM-Menü</a>.
+<!--l. 325--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-120000.2.5"></a><span 
+class="ecbx-1200">Dateiname erg</span><span 
+class="ecbx-1200">änzen</span></span>
+Will man in die Datei einen Dateinamen einbauen, weiß aber nicht mehr genau wie er heißt,
+kann man folgenden Trick verwenden. In diesem Beispiel wird ein Bildname gesucht. Im Text
+schreibe man <span 
+class="ectt-1200">../bilder/tw </span>und drückt dann die Tastenkombination <span 
+class="ectt-1200">C-X + C-F</span>, gvim öffnet
+ein Dialogfeld in dem alle Dateien die auf dieses Muster übereinstimmen geöffnet. Gibt es nur
+einen Treffer wird dieser gleich eingefügt.
+<!--l. 336--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-130000.2.5"></a><span 
+class="ecbx-1200">Wort innerhalb des Dokumentes suchen</span></span>
+Sucht man ein Wort das man im Dokument schon einmal verwendet hat, um zum Beispiel
+darauf zu verweisen. Schreibt man den Wortanfang und drückt dann <span 
+class="ectt-1200">C-P</span>. Es öffnet sich ein
+Dialogfeld in dem alle Wörter die auf dieses Muster passen angezeigt werden. Gibt es nur
+einen Treffer wird dieser gleich eingefügt.
+<!--l. 344--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-140000.2.5"></a><span 
+class="ecbx-1200">N</span><span 
+class="ecbx-1200">ützliche Erweiterungen</span></span>
+Vim bietet ein paar nützliche Erweiterungen in Form von plugins an. Hier eine Liste, der
+plugins, die ich gerne verwende.
+      <dl class="description"><dt class="description">
+<span 
+class="ecsx-1200">pathogen.vim</span> </dt><dd 
+class="description">Diese Erweiterung macht das Installieren weitere Erweiterungen einfach.
+      Dabei ist die Installation von <span 
+class="ectt-1200">pathogen </span>schnell erledigt.
+      <!--l. 362--><p class="noindent" >In die <span 
+class="ectt-1200">.vimrc </span>muss dann noch nachfolgende Zeile eingebaut werden.
+                                                                                     
+                                                                                     
+      <div class="verbatim" id="verbatim-5">
+      call&#x00A0;pathogen#infect()</div>
+      <!--l. 367--><p class="nopar" >
+      <!--l. 369--><p class="noindent" >eingebaut werden.
+      <!--l. 371--><p class="noindent" >Jetzt braucht man die Erweiterungen nur mehr in das Verzeichnis <span 
+class="ectt-1200">.vim/bundle </span>zu
+      kopieren und vim neu starten. In Verbindung mit <span 
+class="ectt-1200">git </span>wieder eine einfache
+      Sache.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">vim-pandoc</span> </dt><dd 
+class="description">Erweiterung rund um pandoc.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">FuzzyFinder</span> </dt><dd 
+class="description">Dateien schnell zum editieren öffnen. Installiert ist diese Erweiterung,
+      vorausgesetzt man verwendet pathogen, mit dem Befehl:
+                                                                                     
+                                                                                     
+      <div class="verbatim" id="verbatim-6">
+      wget&#x00A0;-O&#x00A0;/tmp/vim-fuzzyfinder.zip&#x00A0;http://www.vim.org/scripts/download_script.php?src_id=10588
+      &#x00A0;<br />mkdir&#x00A0;~/.vim/bundle/vim-fuzzyfinder
+      &#x00A0;<br />unzip&#x00A0;/tmp/vim-fuzzyfinder.zip&#x00A0;-d&#x00A0;~/.vim/bundle/vim-fuzzyfinder/</div>
+      <!--l. 392--><p class="nopar" >
+      <!--l. 394--><p class="noindent" >Für das öffnen dies Datei Dialogs sollte man sich dann noch eine Kurztaste
+      konfigurieren.
+                                                                                     
+                                                                                     
+      <div class="verbatim" id="verbatim-7">
+      "&#x00A0;-------------------------------------------------------------
+      &#x00A0;<br />"&#x00A0;FuzzyFinder&#x00A0;File&#x00A0;Suche&#x00A0;auf&#x00A0;&#x003C;F12&#x003E;&#x00A0;binden
+      &#x00A0;<br />map&#x00A0;&#x003C;F12&#x003E;&#x00A0;:FuzzyFinderFile&#x00A0;&#x003C;CR&#x003E;</div>
+      <!--l. 401--><p class="nopar" ></dd></dl>
+<!--l. 405--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.2.6</span>&#x00A0;&#x00A0;<a 
+ id="x1-150000.2.6"></a>Seite auf einem github.com Server einrichten</h4>
+<!--l. 407--><p class="noindent" >@todo
+      <ul class="itemize1">
+      <li class="itemize">Einrichten eines github.com Zugangs
+      </li>
+      <li class="itemize">Arbeits- Repository auf den AP<span class="footnote-mark"><a 
+href="#fn2x0" id="fn2x0-bk"><sup class="textsuperscript">2</sup></a></span><a 
+ id="x1-15001f2"></a>
+      holen
+      </li>
+      <li class="itemize">Die Rumex ZIP Datei
+      </li>
+      <li class="itemize">Die Dateien des ZIP Archives in das Arbeits- Repository kopieren
+      </li>
+      <li class="itemize">Grund Dateien anpassen
+           <ul class="itemize2">
+           <li class="itemize">@fixme: Angabe welche Dateien fehlt noch@</li></ul>
+      </li>
+      <li class="itemize">Erste Änderungen vornehme
+      </li>
+      <li class="itemize"><span 
+class="ectt-1200">make online </span>- Fertig.</li></ul>
+                                                                                     
+                                                                                     
+<!--l. 435--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.2.7</span>&#x00A0;&#x00A0;<a 
+ id="x1-160000.2.7"></a>Seite auf einem nicht github.com Server einrichten</h4>
+<!--l. 437--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x1-170000.2.7"></a>Datei upload per git</h5>
+<!--l. 439--><p class="noindent" >@todo
+<!--l. 441--><p class="noindent" >Auf der Seite <a 
+href="http://rumex.it-bayer.de" >rumex.it-bayer.de</a> findet man eine Beschreibung wie man den rumex Baukasten
+auf einen <span 
+class="ecbx-1200">nicht </span><span 
+class="ectt-1200">github.com </span>Server installiert.
+<!--l. 445--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x1-180000.2.7"></a>Datei upload per ftp</h5>
+<!--l. 447--><p class="noindent" >@todo
+<!--l. 449--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">0.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-190000.3"></a>Aufbau des rumex Baukastens</h3>
+<!--l. 451--><p class="noindent" >@todo
+                                                                                     
+                                                                                     
+<!--l. 453--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.3.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-200000.3.1"></a>root Verzeichnis</h4>
+<!--l. 455--><p class="noindent" >Im <span 
+class="ectt-1200">root </span>Verzeichnis findet man alle <span 
+class="ectt-1200">HTML </span>Dateien der Seite. Diese werde vom Baukasten
+erstellt und müssen nicht von Hand verändert werden. Zusätzlich findet man noch ein folgende
+Systemdateien:
+      <dl class="description"><dt class="description">
+<span 
+class="ecsx-1200">rss.xml</span> </dt><dd 
+class="description">News Feed Datei, wird vom System erstelle
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">readme.md</span> </dt><dd 
+class="description">Beschreibungsdatei die von github.com gebraucht wird
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">robots.txt</span> </dt><dd 
+class="description">Datei für die Suchmaschinen
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">favicon.ico</span> </dt><dd 
+class="description">Icon für den Browser
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">.htaccess</span> </dt><dd 
+class="description">Konfiguration für den Apache Server
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">CNAME</span> </dt><dd 
+class="description">@fixme: Beschreibung@</dd></dl>
+<!--l. 474--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.3.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-210000.3.2"></a>Unterverzeichnisse</h4>
+      <dl class="description"><dt class="description">
+<span 
+class="ecsx-1200">.rumex/</span> </dt><dd 
+class="description">@fixme: Beschreibung@
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">.rx/</span> </dt><dd 
+class="description">@fixme: Beschreibung@
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">rxtpl/</span> </dt><dd 
+class="description">Standard Template Verzeichnis. In diesem Verzeichnis befinden sich die Dateien
+      die für das Aussehen der Seite verantwortlich sind.
+      <!--l. 485--><p class="noindent" >Folgende Dateinen und Verzeichnisse sind hier zu finden
+                                                                                     
+                                                                                     
+           <ul class="itemize1">
+           <li class="itemize">index.html (Weiterleitung zum root Verzeichnis)
+           </li>
+           <li class="itemize">css/<br 
+class="newline" />
+           </li>
+           <li class="itemize">js/
+           </li>
+           <li class="itemize">img/</li></ul>
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">bilder/</span> </dt><dd 
+class="description">In diesem Verzeichnis werden alle Bilder der Seite abgelegt.</dd></dl>
+<!--l. 503--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.3.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-220000.3.3"></a>Steuerung durch Dateiendung</h4>
+<!--l. 505--><p class="noindent" >Das Aussehen der Dateien bezüglich des Inhaltsverzeichnisses könnte auch durch die
+Dateiendung gesteuert werden.
+<!--l. 508--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x1-230000.3.3"></a>Beispiel</h5>
+      <dl class="description"><dt class="description">
+<span 
+class="ecsx-1200">datei.rx0s</span> </dt><dd 
+class="description">Würde eine HTML Datei ohne Inhaltsverzeichnis erstellen.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">datei.rx1s</span> </dt><dd 
+class="description">Erstellt die HTML Datei mit dem Inhaltsverzeichnis aus den Einträgen der
+      H1 Überschriften.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">datei.rx2s</span> </dt><dd 
+class="description">Erstellt eine HTML Datei mit dem Inhaltsverzeichnis aud den Einträgen der
+      H1 und H2 Überschriften.</dd></dl>
+<!--l. 521--><p class="noindent" >Zusätzlich könnte die Dateiendung auch eine unterschiedliche Verwendung der Dateien
+ermöglichen.
+                                                                                     
+                                                                                     
+      <dl class="description"><dt class="description">
+<span 
+class="ecsx-1200">datei.rx0s, datei.rx1s </span><span 
+class="ecsx-1200">&hellip;</span> </dt><dd 
+class="description">Standard Datei.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">datei.rx0x, datei.rx1x </span><span 
+class="ecsx-1200">&hellip;</span> </dt><dd 
+class="description">Datei die nicht in die Liste auf <span 
+class="ectt-1200">index.html </span>eingebunden wird.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">datei.rx0v, datie.rx1v </span><span 
+class="ecsx-1200">&hellip;</span> </dt><dd 
+class="description">Versteckte Datei. Diese taucht weder in der <span 
+class="ectt-1200">index.html </span>noch
+      in der <span 
+class="ectt-1200">sitemap.xml </span>auf.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">datei.rx0w</span> </dt><dd 
+class="description">Datei  mit  einer  Weiterleitung.  Die  Weiterleitung  wird  dabei  mittels
+      <span 
+class="ectt-1200">javascript </span>realisiert, da github keine <span 
+class="ectt-1200">.htaccess </span>Weiterleitung unterstützt.
+                                                                                     
+                                                                                     
+      <div class="verbatim" id="verbatim-8">
+      %&#x00A0;Weiterleitung&#x00A0;nach&#x00A0;beschreibung.html
+      &#x00A0;<br />%
+      &#x00A0;<br />%
+      &#x00A0;<br />
+      &#x00A0;<br />&#x003C;script&#x00A0;language="javascript"&#x003E;
+      &#x00A0;<br />&#x003C;!--
+      &#x00A0;<br />window.location.href="beschreibung.html";
+      &#x00A0;<br />//&#x00A0;--&#x003E;
+      &#x00A0;<br />&#x003C;/script&#x003E;</div>
+      <!--l. 547--><p class="nopar" ></dd></dl>
+<!--l. 550--><p class="noindent" >Bei der Änderung der Dateiendung bleibt der eigentliche <span 
+class="ectt-1200">html </span>Name gleich. Nur die Funktion
+der Einbindung ändert sich.
+<!--l. 553--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.3.4</span>&#x00A0;&#x00A0;<a 
+ id="x1-240000.3.4"></a>Sonderseiten</h4>
+<!--l. 555--><p class="noindent" >Im Verzeichnis <span 
+class="ectt-1200">pandoc </span>befinden sich Sonderseiten.
+      <dl class="description"><dt class="description">
+<span 
+class="ecsx-1200">rumex/index.rx0x</span> </dt><dd 
+class="description">Diese  Datei  wird  vom  Programm  <span 
+class="ectt-1200">.bin/make_index.pl </span>erstellt,
+      muss somit nicht vorhanden sein.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">rumex/start.rx0s</span> </dt><dd 
+class="description">Die <span 
+class="ectt-1200">start.rx0s </span>wird als Vortext in die <span 
+class="ectt-1200">index.rx0x </span>eingebunden.
+      Mit ihr kann man oberhalb der Seiten Liste einen extra Text in die <span 
+class="ectt-1200">index.html</span>
+      eingebunden werden.<br 
+class="newline" /><span 
+class="ecbx-1200">Diese Datei ist erforderlich und muss vorhanden sein.</span>
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">rumex/rss.rx0x</span> </dt><dd 
+class="description">Datei für die RSS Feed Funktion.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">rumex/impressum.rx0x</span> </dt><dd 
+class="description">Datei für die Impressumsangaben.<br 
+class="newline" /><span 
+class="ecbx-1200">Ist  nicht  zwingend  erforderlich.  Jedoch  muss  die  </span><span 
+class="ectt-1200">.inc/fuss.html</span>
+      <span 
+class="ecbx-1200">entsprechende bearbeitet, der Link muss raus genommen, werden.</span>
+                                                                                     
+                                                                                     
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">rumex/Makefile</span> </dt><dd 
+class="description">Sie <span 
+class="ectt-1200">make </span>Steuerdatei.</dd></dl>
+<!--l. 576--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.3.5</span>&#x00A0;&#x00A0;<a 
+ id="x1-250000.3.5"></a>Aufbau der Startseite</h4>
+<!--l. 578--><p class="noindent" >Die Startseite <span 
+class="ectt-1200">markdown/start.rx0s </span>muss vorhanden sein. Es reicht auch ein &#8216;touch
+markdown/start.rx0s.
+<!--l. 581--><p class="noindent" >Der normale Aufbau könnte so ausschauen. Die <span 
+class="ectt-1200">pandoc </span>Kopfzeile sind nicht zwingend
+erforderlich.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-9">
+%&#x00A0;start.rx0s
+&#x00A0;<br />%
+&#x00A0;<br />%
+&#x00A0;<br />
+&#x00A0;<br />Hier&#x00A0;kommt&#x00A0;auch&#x00A0;schon&#x00A0;der&#x00A0;Vortext&#x00A0;für&#x00A0;die&#x00A0;index.html
+</div>
+<!--l. 590--><p class="nopar" >
+<!--l. 592--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.3.6</span>&#x00A0;&#x00A0;<a 
+ id="x1-260000.3.6"></a>Aufbau der Einzelseiten</h4>
+<!--l. 594--><p class="noindent" >Die Einzelseiten liegen alle im Verzeichnis <span 
+class="ectt-1200">rumex </span>und zwar in der Sprache <span 
+class="ectt-1200">markdown </span>bzw. der
+Erweiterung von <span 
+class="ectt-1200">pandoc</span>.
+<!--l. 597--><p class="noindent" >Diese Einzelseiten werden in chronologischer Reihenfolge in die Startseite <span 
+class="ectt-1200">index.html</span>
+eingebunden und bilden sozusagen das Inhaltsverzeichnis der Seite. In jeder Einzelseite wird
+dazu ein sogenannter <span 
+class="ecti-1200">&#8220;Vortext&#8221; </span>hinterlegt. Die Seite bzw. der Kopf der Seite hat dabei
+folgenden Aufbau.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-10">
+%&#x00A0;Seiten&#x00A0;Überschrift&#x00A0;1
+&#x00A0;<br />%&#x00A0;Seiten&#x00A0;Überschrift&#x00A0;2
+&#x00A0;<br />%&#x00A0;Seiten&#x00A0;Überschrift&#x00A0;3
+&#x00A0;<br />
+&#x00A0;<br />&#x003C;!--
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />#&#x00A0;Listen-Überschrift
+&#x00A0;<br />
+Ü&#x00A0;<br />xberschrift&#x00A0;und&#x00A0;Text&#x00A0;der&#x00A0;in&#x00A0;der&#x00A0;Listenübersicht
+&#x00A0;<br />auf&#x00A0;index.html&#x00A0;angezeigt&#x00A0;wird.
+&#x00A0;<br />
+&#x00A0;<br />Alles&#x00A0;was&#x00A0;innerhalb&#x00A0;der&#x00A0;HTML&#x00A0;Kommentar&#x00A0;Marken
+&#x00A0;<br />steht&#x00A0;wird&#x00A0;nur&#x00A0;auf&#x00A0;der&#x00A0;index.html&#x00A0;Seite&#x00A0;angezeigt.
+&#x00A0;<br />
+&#x00A0;<br />--&#x003E;
+&#x00A0;<br />
+&#x00A0;<br />Alles&#x00A0;was&#x00A0;sich&#x00A0;außerhalb&#x00A0;der&#x00A0;HTML&#x00A0;Marken
+&#x00A0;<br />befindet&#x00A0;wird&#x00A0;auch&#x00A0;auf&#x00A0;der&#x00A0;eigentlichen&#x00A0;Seite&#x00A0;angezeigt.
+&#x00A0;<br />
+&#x00A0;<br />Durch&#x00A0;das&#x00A0;Schlüsselwort&#x00A0;"schnipp",&#x00A0;das&#x00A0;auch&#x00A0;in&#x00A0;HTML
+&#x00A0;<br />Kommentar&#x00A0;Marken&#x00A0;stehen&#x00A0;muss,&#x00A0;wird&#x00A0;der&#x00A0;Vortext&#x00A0;beendet.
+&#x00A0;<br />Auf&#x00A0;der&#x00A0;index.html&#x00A0;erscheint&#x00A0;an&#x00A0;dieser&#x00A0;Stelle&#x00A0;der&#x00A0;Link
+&#x00A0;<br />"...&#x00A0;weiter&#x00A0;lesen".
+&#x00A0;<br />
+&#x00A0;<br />&#x003C;!--&#x00A0;schnipp&#x00A0;--&#x003E;
+&#x00A0;<br />
+&#x00A0;<br />Ab&#x00A0;hier&#x00A0;geht&#x00A0;dann&#x00A0;der&#x00A0;Inhlat&#x00A0;der&#x00A0;eigentlichen&#x00A0;Seite&#x00A0;los.
+</div>
+<!--l. 632--><p class="nopar" >
+<!--l. 634--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.3.7</span>&#x00A0;&#x00A0;<a 
+ id="x1-270000.3.7"></a>Template</h4>
+<!--l. 636--><p class="noindent" >@todo
+                                                                                     
+                                                                                     
+<!--l. 638--><p class="noindent" >Änderung gegenüber des Original <span 
+class="ectt-1200">pandoc </span>Templates.
+<!--l. 671--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">0.4</span>&#x00A0;&#x00A0;<a 
+ id="x1-280000.4"></a>RSS Feed Funktion</h3>
+<!--l. 673--><p class="noindent" >@todo
+<!--l. 675--><p class="noindent" >Wird nicht aus den einzelnen Dateien erstellt sondern muss manuell editiert werden, Datei
+<span 
+class="ectt-1200">.rx/rss.rx0x</span>.
+<!--l. 678--><p class="noindent" >Jede Überschrift eines Eintrags muss mit einem <span 
+class="ectt-1200">{.nn1} </span>enden.
+<!--l. 680--><p class="noindent" >Danach kommen die Angaben zu:
+<!--l. 682--><p class="noindent" ><span 
+class="ecbx-1200">Link: </span><span 
+class="ecti-1200">Verweis zur Seite mit weiteren Informationen</span><br 
+class="newline" /><span 
+class="ecbx-1200">Autor: </span><span 
+class="ecti-1200">Autor der den Eintrag geschrieben hat</span><br 
+class="newline" /><span 
+class="ecbx-1200">Kategorie: </span><span 
+class="ecti-1200">Kategoie des Eintrags</span><br 
+class="newline" /><span 
+class="ecbx-1200">Datum: </span><span 
+class="ecti-1200">Datum des Eintrags. </span>Das richtige Format bekommt man mit dem Befehl <span 
+class="ectt-1200">date</span>
+<span 
+class="ectt-1200">-R</span>.
+<!--l. 688--><p class="noindent" >die in HTML Kommentar Marker eingeschlossen sind.
+<!--l. 690--><p class="noindent" >Anschließend folgt die Meldung. Zur Zeit werden folgende <span 
+class="ectt-1200">pandoc </span>Formatierungen
+unterstützt.
+      <ul class="itemize1">
+      <li class="itemize">Überschriften ab der Stufe 3 <span 
+class="ectt-1200">###</span>
+      </li>
+      <li class="itemize">Aufzählungen <span 
+class="ectt-1200">-</span>
+      </li>
+      <li class="itemize">Aufzählungen <span 
+class="ectt-1200">*</span>
+      </li>
+      <li class="itemize">Zitate <span 
+class="ectt-1200">&#x003E;</span>
+      </li>
+      <li class="itemize">Links <span 
+class="ectt-1200">[Link](http://muster.tdl)</span>. Diese dürfen nicht am Anfang einer Zeile
+      stehen.
+      </li>
+      <li class="itemize">Bilder <span 
+class="ectt-1200">![Bild](../bilder/muster.png "muster.png")</span>, Diese dürfen nicht am
+      Anfang einer Zeile stehen.
+      </li>
+      <li class="itemize">Code &#8216;Code&#8216;.</li></ul>
+                                                                                     
+                                                                                     
+<!--l. 714--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.4.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-290000.4.1"></a>Beispiel einer RSS Feed Seite</h4>
+<!--l. 751--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.4.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-300000.4.2"></a>RSS Dateiname</h4>
+<!--l. 753--><p class="noindent" >Der Dateiname ist mit <span 
+class="ectt-1200">rss.xml </span>vorbelegt und kann über die Variable <span 
+class="ectt-1200">RSS_FILE </span>in der
+<span 
+class="ectt-1200">config.md </span>geändert werden.
+<!--l. 756--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.4.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-310000.4.3"></a>RSS Titel</h4>
+<!--l. 758--><p class="noindent" >Der Title des RSS Feed wird durch die Variable <span 
+class="ectt-1200">RSS_TITEL </span>angepasst.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-11">
+RSS_TITEL&#x00A0;=&#x00A0;"Neuigkeiten&#x00A0;von&#x00A0;rumex&#x00A0;Baukasten"
+</div>
+<!--l. 763--><p class="nopar" >
+<!--l. 765--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.4.4</span>&#x00A0;&#x00A0;<a 
+ id="x1-320000.4.4"></a>RSS auslagern</h4>
+<!--l. 767--><p class="noindent" >Den RSS Link kann man auch auslagern so dass dieser auf eine andere Seite zeigt. Dazu setzt
+man die Variable <span 
+class="ectt-1200">RSS_EXTERN </span>mit dem entsprechenden Link. Die Variabel <span 
+class="ectt-1200">RSS_FILE </span>wird
+dadurch nicht mehr verwendet. Auch der RSS Lauf wird dadurch ausgeschaltet und durch eine
+Meldung ersetzt.
+<!--l. 773--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.4.5</span>&#x00A0;&#x00A0;<a 
+ id="x1-330000.4.5"></a>RSS Kurztaste</h4>
+<!--l. 775--><p class="noindent" >Für die einzelnen Einträge steht auch eine Kurztaste <span 
+class="ectt-1200">.rnn </span>zur Verfügung.<br 
+class="newline" />In Gvim unter
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-12">
+Rumex&#x00A0;-&#x003E;&#x00A0;TextBausteine&#x00A0;-&#x003E;&#x00A0;NeuerNews&#x00A0;Eintrag
+</div>
+<!--l. 780--><p class="nopar" >
+<!--l. 782--><p class="noindent" >Eingefügt wird dann folgende Vorgabe. Der Wert hinter Datum wird von System ausgelesen
+und entsprechende gesetzt.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-13">
+&#x00A0;#&#x00A0;Neue&#x00A0;Nachricht{.nn1}
+&#x00A0;<br />
+&#x00A0;<br />&#x003C;!--
+&#x00A0;<br />|&#x00A0;Link:&#x00A0;http://www.it-bayer.de/rumex/
+&#x00A0;<br />|&#x00A0;Autor:&#x00A0;IT-Bayer
+&#x00A0;<br />|&#x00A0;Kategorie:&#x00A0;Neues
+&#x00A0;<br />|&#x00A0;Datum:&#x00A0;Mon,&#x00A0;28&#x00A0;Oct&#x00A0;2013&#x00A0;07:36:56&#x00A0;+0100
+&#x00A0;<br />--&#x003E;
+&#x00A0;<br />
+&#x00A0;<br />Ab&#x00A0;hier&#x00A0;geht&#x00A0;die&#x00A0;neue&#x00A0;Nachricht&#x00A0;los.
+</div>
+<!--l. 796--><p class="nopar" >
+<!--l. 798--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.4.6</span>&#x00A0;&#x00A0;<a 
+ id="x1-340000.4.6"></a>Interna</h4>
+<!--l. 800--><p class="noindent" >Durch die beschriebenen RSS Variablen wird die Erstellung des RSS Feed gesteuert.
+Es wird in jede HTML Datei nachfolgender Header Abschnitt eingebaut wenn die
+<span 
+class="ectt-1200">RSS_TITLE </span>Variable gesetzt wurde. <span 
+class="ectt-1200">RSS_FILE </span>bzw. <span 
+class="ectt-1200">RSS_EXTERN </span>steuern den <span 
+class="ectt-1200">href</span>
+Eintrag.
+<!--l. 813--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">0.5</span>&#x00A0;&#x00A0;<a 
+ id="x1-350000.5"></a>Rumex auf einem USB Stick</h3>
+<!--l. 815--><p class="noindent" >Rumex kann auch auf einem USB Stich installiert werden. Der Stick muss aber ein
+Dateiformat besitzt<br 
+class="newline" />welches mit Dateirechten und Symbolische Links umgehen kann.
+<!--l. 819--><p class="noindent" ><span 
+class="ecbx-1200">USB Sticks im VFAT Format funktionieren nicht. </span>Man kann zwar die Daten darauf
+ablegen. Das Arbeiten über den Stick funktioniert nicht wirklich. Auch wenn man die Daten,
+von einem VFAT Stick, auf ein *nix System kopiert werden muss händisch nach gebessert
+werden.
+                                                                                     
+                                                                                     
+<!--l. 824--><p class="noindent" >LinkTipp: <a 
+href="http://www.it-bayer.de/usb-stick.html?suchwort=versch#usb-stick-unter-linux-verschl%C3%BCsseln" >USB Stick unter Linux verschlüsseln</a>
+<!--l. 828--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">0.6</span>&#x00A0;&#x00A0;<a 
+ id="x1-360000.6"></a>make Steuerung</h3>
+<!--l. 830--><p class="noindent" >@todo
+<!--l. 832--><p class="noindent" >Gesteuert wird der Baukasten mittels <span 
+class="ectt-1200">make </span>im Unterverzeichnis <span 
+class="ectt-1200">rumex</span>. Folgende <span 
+class="ectt-1200">make </span>Befehle
+stehen dabei zur Verfügung.
+      <dl class="description"><dt class="description">
+<span 
+class="ecsx-1200">make html</span> </dt><dd 
+class="description">Erstellt die einzelnen html Dateien. Hier kann auch nur <span 
+class="ectt-1200">make </span>verwendet
+      werden.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">make index</span> </dt><dd 
+class="description">Erstellt die <span 
+class="ectt-1200">index.md </span>Datei aus der dann die <span 
+class="ectt-1200">index.html </span>Datei erstellt
+      wird.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">make all</span> </dt><dd 
+class="description">Eine Zusammenstellung aus <span 
+class="ectt-1200">make index </span>und <span 
+class="ectt-1200">make html</span>.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">make online</span> </dt><dd 
+class="description">Daten auf github hoch laden.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">make bilder</span> </dt><dd 
+class="description">Erstellt Bilder in verschiedenen Auflösungen.</dd></dl>
+<!--l. 851--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">0.7</span>&#x00A0;&#x00A0;<a 
+ id="x1-370000.7"></a>Update</h3>
+<!--l. 853--><p class="noindent" >@todo
+                                                                                     
+                                                                                     
+<!--l. 856--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">0.8</span>&#x00A0;&#x00A0;<a 
+ id="x1-380000.8"></a>Homepage Änderung, schnell und immer aktuell</h3>
+<!--l. 858--><p class="noindent" >Wer wünscht es sich nicht einen schnellen Zugriff auf seine Homepage. Sei es um schnell was zu
+ändern oder genauso schnell was neues einzustellen. Rumex bietet in Verbindung mit <span 
+class="ectt-1200">tilda</span>
+eine schöne, einfache und auch schnelle Lösung.
+<!--l. 863--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                     
+                                                                                     
+<a 
+ id="x1-380012"></a>
+                                                                                     
+                                                                                     
+
+<!--l. 865--><p class="noindent" ><img 
+src="../bilder/rumex-tilda_800_.png" alt="PIC"  
+>
+<br /> <div class="caption"><table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Abbildung&#x00A0;0.2: </td><td  
+class="content">Rumex im tilda Fenster. Mit einem Tastendruck öffnet sch das tilda
+Fenster und man kann die Texte eintippen. Ein erneuter Tastendruck schließt das tilda
+Fenster wieder und der Bildschirm ist wieder frei. Hat man seine Änderung abgeschossen
+kann man mit den Rumex <a 
+href="vim-kurztasten.html" >vim Kurztasten</a> die Änderung schnell online stellen.</td></tr></table></div><!--tex4ht:label?: x1-380012 -->
+                                                                                     
+                                                                                     
+<!--l. 872--><p class="noindent" ></div><hr class="endfigure">
+<h4 class="subsectionHead"><span class="titlemark">0.8.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-390000.8.1"></a>Installation der tilda Unterstützung</h4>
+<!--l. 877--><p class="noindent" >Die Installation ist nicht umfangreich. Man braucht vim und tilda und dann noch zwei bash
+Script. Eine Kopiervorlage der beiden Scripte findet man findet man im <span 
+class="ectt-1200">.rumex/bin/</span>
+Verzeichnis.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-14">
+sudo&#x00A0;apt-get&#x00A0;install&#x00A0;tilda&#x00A0;vim
+&#x00A0;<br />cp&#x00A0;.../rumex/.rumex/bin/rxt-rumex.sh&#x00A0;~/bin/.
+&#x00A0;<br />cp&#x00A0;.../rumex/.rumex/bin/rumex-tilda.sh&#x00A0;~/bin/.
+</div>
+<!--l. 885--><p class="nopar" >
+<!--l. 887--><p class="noindent" >Diese beiden bash Scripte müssen anschließend noch angepasst werden.
+<!--l. 889--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x1-400000.8.1"></a>Shell Scripte</h5>
+<!--l. 891--><p class="noindent" >Die Scripte starten zum einem <span 
+class="ectt-1200">tilda </span>und zum anderem übergeben sie <span 
+class="ectt-1200">tilda </span>die Kommandos
+die dafür sorgen <span 
+class="ectt-1200">vim </span>im richtigen Rumex Ordner zu öffnet. Installiert werden können diese
+Scripte im <span 
+class="ectt-1200">~/bin </span>oder <span 
+class="ectt-1200">/usr/local/bin/ </span>Verzeichnis.
+<!--l. 897--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-410000.8.1"></a><span 
+class="ecbx-1200">rumex-tilda.sh</span></span>
+Die Datei <span 
+class="ectt-1200">rumex-tilda.sh </span>starte tilda und übergibt der tilda Shell die Befehle um den
+Rumex Baukasten zu starten, siehe <span 
+class="ecbx-1200">??</span>.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-15">
+#!/bin/bash
+&#x00A0;<br />
+&#x00A0;<br />/usr/bin/tilda&#x00A0;-c&#x00A0;&#x00A0;~/bin/rumex-vim.sh
+</div>
+<!--l. 907--><p class="nopar" >
+<!--l. 909--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-420000.8.1"></a><span 
+class="ecbx-1200">rumex-vim.sh</span></span>
+Mit dem Befehl <span 
+class="ectt-1200">rumex-vim.sh </span>wird der Rumex Baukastens aufgerufen. Dieser Befehl wird
+unter anderem auch von <span 
+class="ectt-1200">rumex-tilda.sh </span>verwendet. <span 
+class="ectt-1200">rumex-vim.sh </span>kann natürlich auch in
+einem Shellfenster ausgeführt werden.
+<!--l. 916--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-430000.8.1"></a><span 
+class="ecbx-1200">rumex-gvim.sh</span></span>
+Mit dem Befehl <span 
+class="ectt-1200">rumex-gvim.sh </span>wird der Rumex Baukasten mit dem Editor gvim
+gestartet.
+<!--l. 921--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">0.8.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-440000.8.2"></a>Tilda einrichten</h4>
+<!--l. 923--><p class="noindent" >Nach dem ersten Start wird Tilda in linken oberen Bildschirm Bereich eingeblendet. Man
+sollte Tilda nun noch an seine Bedürfnissen anpassen. Dazu in das Tilda Fenster mit der
+rechten Maustaste klicken und <span 
+class="ectt-1200">Eigenschaften </span>aus wählen.
+<!--l. 928--><p class="noindent" ><span 
+class="ecbx-1200">Übrigens: </span>Man kann <span 
+class="ectt-1200">tilda </span>mehrfach starten. Somit kann auf mehreren Rumex Installationen
+parallel über diese Weiße zugegriffen werden. Man sollte nur jede <span 
+class="ectt-1200">tilda </span>Sitzung ein wenig
+anders konfigurieren.
+<!--l. 933--><p class="noindent" ><span 
+class="ecbx-1200">Nachteil: </span>Ein Nachteil von <span 
+class="ectt-1200">tilda </span>darf man aber nicht verschweigen. Bei wechseln zwischen
+den Fenstern kann man die Tastenkombination <span 
+class="ectt-1200">&#x003C;ALT&#x003E;+&#x003C;TAB&#x003E; </span>nicht verwenden bzw. man
+kommt mit dieser Kombination nicht mehr zurück nach <span 
+class="ectt-1200">tilda</span>. Schließt und öffnet
+man <span 
+class="ectt-1200">tilda </span>mit der definierten Taste bekommt man aber den Fokus wieder in das
+Fenster.
+                                                                                     
+                                                                                     
+<!--l. 941--><p class="noindent" >Will man die <span 
+class="ectt-1200">&#x003C;ALT&#x003E;+&#x003C;TAB&#x003E; </span>Kombination doch verwenden muss man die Standardeinstellung
+von tilda ändern. Den erforderlichen Schalter findet man in der Konfiguration, Reiter
+<span 
+class="ecti-1200">Allgemein </span>-&#x003E; Schalter <span 
+class="ecti-1200">Nicht in der Taskleiste anzeigen</span>.
+                                                                                     
+                                                                                     
+
+                                                                                     
+                                                                                     
+<div class="footnotes"><!--l. 155--><p class="noindent" ><span class="footnote-mark"><a 
+href="#fn1x0-bk" id="fn1x0"></a></span><span 
+class="ecrm-1000">Die Funktion der PDF Erstellung ist zur Zeit noch nicht enthalten.</span>
+<!--l. 414--><p class="noindent" ><span class="footnote-mark"><a 
+href="#fn2x0-bk" id="fn2x0"></a></span><span 
+class="ecrm-1000">Mit AP ist der </span><span 
+class="ecbx-1000">A</span><span 
+class="ecrm-1000">rbeits</span><span 
+class="ecbx-1000">P</span><span 
+class="ecrm-1000">latz Rechner gemeint.</span>                                                                         </div>
+ 
+</body></html> 
+
+                                                                                     
+
+

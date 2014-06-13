@@ -1,0 +1,9 @@
+Die Dokumente
+
+- index.md (statik-funktion) 
+- vim-kurztasten.md 
+- beschreibung.md
+
+wurden nach ../beschreibung verlagert.
+
+sb :: 2014-06-13

@@ -1,0 +1,458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+<head><title>1 Statik Funktion</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,info,2,fn-in --> 
+<meta name="src" content="rumex.tex"> 
+<meta name="date" content="2014-06-13 08:25:00"> 
+<link rel="stylesheet" type="text/css" href="rumex.css"> 
+</head><body 
+>
+<!--l. 951--><div class="crosslinks"><p class="noindent">[<a 
+href="rumexch2.html" >Nächste Seite</a>][<a 
+href="#tailrumexch1.html">Seitenende</a>][<a 
+href="rumex.html#rumexch1.html" >Startseite</a>]</p></div>
+<h2 class="chapterHead"><span class="titlemark">1</span>&#x00A0;&#x00A0;<a 
+ id="x2-450001"></a>Statik Funktion</h2>
+<!--l. 1--><p class="noindent" >Rumex verwendet pandocs markdown weil man damit sehr einfach und schnell Text
+erstellen und in verschiedenen Formate wandeln kann. Für die Erstellung von
+Denkschriften<span class="footnote-mark"><a 
+href="#fn1x2" id="fn1x2-bk"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x2-45001f1"></a>
+wurde zusätzlich eine, ich nenne sie <span 
+class="ecti-1200">statik Funktion </span>eingebaut. Mit dieser Funktion ist es
+möglich innerhalb eines Unterverzeichnisses verschiedenen Ausgabe Formate zu erstellen. Zur
+Zeit werden, von Rumex, folgenden Formate unterstützt:
+      <ul class="itemize1">
+      <li class="itemize">.html
+      </li>
+      <li class="itemize">.pdf
+      </li>
+      <li class="itemize">.odt OpenDokument
+      </li>
+      <li class="itemize">.epub E-Book
+      </li>
+      <li class="itemize">.mobi E-Book (Kindle)</li></ul>
+<!--l. 24--><p class="noindent" >Erstellt werden die einzelnen Formate über <a 
+href="#x2-460001.1">Funktionstasten</a> die innerhalb
+(g)vim<span class="footnote-mark"><a 
+href="#fn2x2" id="fn2x2-bk"><sup class="textsuperscript">2</sup></a></span><a 
+ id="x2-45002f2"></a>
+zur Verfügung stehen.<span class="sout">Eine Besonderheit ist dass die <span 
+class="ectt-1200">.htm </span>Datei auch ohne die zusätzlichen
+Dateien wie</span> <span class="sout">Bilder oder die CSS Datei funktionieren. Alle Daten werden in die <span 
+class="ectt-1200">.htm </span>Datei
+eingebunden.</span><span class="footnote-mark"><a 
+href="#fn3x2" id="fn3x2-bk"><sup class="textsuperscript">3</sup></a></span><a 
+ id="x2-45003f3"></a><br 
+class="newline" />Auch wurde die <a 
+href="#x2-480001.3">Literaturfunktion</a> von Pandoc eingebaut sodass Verweise auf anderen Quellen
+in den Denkschriften verwendet werden können.
+<!--l. 40--><p class="noindent" >Wer sich Rumex nicht installieren möchte aber dennoch eine einfache Möglichkeit sucht
+HTML Seiten zu erstellen, kann sich einmal <a 
+href="http://www.it-bayer.de/cirsium" >cirsium</a> anschauen. Cirsium ist eine Auskopplung
+aus Rumex, unterteilt aber die Quelltextdatei in verschiedene Abschnitte. Am besten einfach
+mal auf <a 
+href="http://www.github.com/itbayer/cirsium" >github.com</a> anschauen.
+<!--l. 48--><p class="noindent" ><a 
+ id="rumex-kurztasten"></a>
+<div class="sectionTOCS">1.1&#x00A0;<a 
+href="#x2-460001.1" id="QQ2-2-48">Die (g)vim statik Kurztaste in Rumex</a><br 
+class="newline" />1.2&#x00A0;<a 
+href="#x2-470001.2" id="QQ2-2-49">HTML Formatierung</a><br 
+class="newline" />1.3&#x00A0;<a 
+href="#x2-480001.3" id="QQ2-2-50">Die Literaturverzeichnis Funktion</a><br 
+class="newline" />1.4&#x00A0;<a 
+href="#x2-490001.4" id="QQ2-2-51">Installation pandoc manuell</a><br 
+class="newline" />1.5&#x00A0;<a 
+href="#x2-540001.5" id="QQ2-2-56">Verwendung in- und außerhalb von Rumex?</a><br 
+class="newline" />1.5.1&#x00A0;<a 
+href="#x2-550001.5.1" id="QQ2-2-57">Setzen der Überschrift für das Literaturverzeichnis</a><br 
+class="newline" />1.5.2&#x00A0;<a 
+href="#x2-560001.5.2" id="QQ2-2-58">Einbinden von Bildern</a><br 
+class="newline" />1.5.3&#x00A0;<a 
+href="#x2-570001.5.3" id="QQ2-2-59">Statik Dateien im <span 
+class="ectt-1200">.rx </span>Verzeichnis</a><br 
+class="newline" />1.5.4&#x00A0;<a 
+href="#x2-580001.5.4" id="QQ2-2-60">Tipps</a><br 
+class="newline" />1.6&#x00A0;<a 
+href="#x2-590001.6" id="QQ2-2-61">Literaturverzeichnis</a><br 
+class="newline" />
+</div>
+<h3 class="sectionHead"><span class="titlemark">1.1</span>&#x00A0;&#x00A0;<a 
+ id="x2-460001.1"></a>Die (g)vim statik Kurztaste in Rumex</h3>
+<!--l. 50--><p class="noindent" >Ab der Rumex Version 0.8.2 sind die Funktionstasten in Rumex enthalten. Folgende F-Tasten
+wurden belegt.
+      <dl class="description"><dt class="description">
+<span 
+class="ecsx-1200">F5</span> </dt><dd 
+class="description">Erstellt die <span 
+class="ectt-1200">.htm </span>Datei ohne Inhaltsverzeichnis.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">Shift+F5</span> </dt><dd 
+class="description">Erstellt die <span 
+class="ectt-1200">.htm </span>Datei mit Inhaltsverzeichnis bis zur Ebene 3.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">Alt+F5</span> </dt><dd 
+class="description">Erstellt die <span 
+class="ectt-1200">.htm </span>Datei mit kompletten Inhaltsverzeichnis bzw. bis Ebene 5
+      da LaTeX auch nicht mehr Ebenen unterstützt und die beiden Ausgabe Format
+      annähernd identisch sein sollten.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">Ctrl+F5</span> </dt><dd 
+class="description">Öffnet die <span 
+class="ectt-1200">.htm </span>Datei.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">F6</span> </dt><dd 
+class="description">Erstellt die <span 
+class="ectt-1200">.pdf </span>Datei ohne Inhaltsverzeichnis.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">Shift+F6</span> </dt><dd 
+class="description">Erstellt die <span 
+class="ectt-1200">.pdf </span>Datei mit Inhaltsverzeichnis bis zur Ebene 3.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">Alt+F6</span> </dt><dd 
+class="description">Erstellt die <span 
+class="ectt-1200">.pdf </span>Datei mit kompletten Inhaltsverzeichnis. Hier ist anzumerken
+      dass  LaTeX  nur  Inhaltsverzeichnisse  bis  zur  Ebene  5  unterstützt.  Das  HTML
+      Format wurde entsprechend angepasst, siehe oben.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">Ctrl+F6</span> </dt><dd 
+class="description">Öffnet die <span 
+class="ectt-1200">.pdf </span>Datei. Zur Zeit wird nur zathura unterstützt.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">F7</span> </dt><dd 
+class="description">Erstellt die restlichen Formate, <span 
+class="ectt-1200">.epub</span>, <span 
+class="ectt-1200">.odt </span>und <span 
+class="ectt-1200">.mobi</span>. Voraussetzung für das <span 
+class="ectt-1200">.mobi</span>
+      Format ist <span 
+class="ectt-1200">calibre</span>.
+      </dd><dt class="description">
+<span 
+class="ecsx-1200">Ctrl-F7</span> </dt><dd 
+class="description">Öffnet  die  Literatur  Verwaltung  <span 
+class="ectt-1200">rumex.bib</span>.  Voraussetzung,  <span 
+class="ectt-1200">jabref  </span>ist
+      installiert.</dd></dl>
+                                                                                     
+                                                                                     
+<!--l. 83--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">1.2</span>&#x00A0;&#x00A0;<a 
+ id="x2-470001.2"></a>HTML Formatierung</h3>
+<!--l. 85--><p class="noindent" >Die erzeugte HTML Datei besitzt Standardmäßig keine Formatierung bzw. verwendet die
+Standard Darstellung des Browsers.
+<!--l. 88--><p class="noindent" >Kopf- und Fusszeile werden dadurch nicht, vom restlichen Text, unterschieden. Auch das
+Inhaltsverzeichnis ist im ersten Moment als solches nicht gleich zu erkennen. Dieses kann mit
+ein wenig CSS geändert werden. Diese CSS Datei ist ab Rumex Version 0.8.2 enthalten muss
+aber unter Umständen noch eingerichtet werden.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-16">
+cd&#x00A0;.rx
+&#x00A0;<br />ln&#x00A0;-s&#x00A0;../.rumex/default/statik.css&#x00A0;statik.css
+</div>
+<!--l. 97--><p class="nopar" >
+<!--l. 100--><p class="noindent" ><a 
+ id="litfunk"></a>
+<h3 class="sectionHead"><span class="titlemark">1.3</span>&#x00A0;&#x00A0;<a 
+ id="x2-480001.3"></a>Die Literaturverzeichnis Funktion</h3>
+<!--l. 102--><p class="noindent" >Beim Lesen des Artikels <span 
+class="ecti-1200">&#8220;PDF-Dokumente schreiben mit Pandoc und Markdown&#8221;</span>
+<span 
+class="ecti-1200">[@stenderprolinux] </span>ist mir die Idee gekommen die Rumex <span 
+class="ecti-1200">statik Funktion </span>mit einem
+Literaturverzeichnis, die ja auch in pandoc zur Verfügung steht, zu versehen.
+<!--l. 107--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">1.4</span>&#x00A0;&#x00A0;<a 
+ id="x2-490001.4"></a>Installation pandoc manuell</h3>
+<!--l. 109--><p class="noindent" >Für die Verwendung der Literaturfunktion muss pandoc um das Zusatzprogramm
+<span 
+class="ectt-1200">pandoc-citeproc </span>erweitert werden. Wer Pandoc über die Paketverwaltung installiert hat
+braucht hier nichts zu machen. Wer Pandoc manuell, so wie ich, installiert hat muss dieses
+Programm nachinstallieren.
+<!--l. 115--><p class="noindent" >Dazu erweitert man die Installationszeile um das neue Programm
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-17">
+cabal&#x00A0;update
+&#x00A0;<br />cabal&#x00A0;install&#x00A0;pandoc&#x00A0;pandoc-citeproc
+</div>
+<!--l. 120--><p class="nopar" >
+<!--l. 122--><p class="noindent" >Zu guter Letzt erstellt man noch die symbolischen Links der beiden Programme.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-18">
+sudo&#x00A0;ln&#x00A0;-s&#x00A0;/home/USER/.cabal/bin/pandoc&#x00A0;/usr/local/bin/.
+&#x00A0;<br />sudo&#x00A0;ln&#x00A0;-s&#x00A0;/home/USER/.cabal/bin/pandoc-citeproc&#x00A0;/usr/local/bin/.
+</div>
+<!--l. 128--><p class="nopar" >
+<!--l. 130--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x2-500001.4"></a>Nachinstallation Rumex</h5>
+<!--l. 132--><p class="noindent" >Wer Rumex schon im Einsatz hat muss für die Erweiterung ein wenig Hand anlegen. Zu erste holt man sich
+die neue Version<span class="footnote-mark"><a 
+href="#fn4x2" id="fn4x2-bk"><sup class="textsuperscript">4</sup></a></span><a 
+ id="x2-50001f4"></a>
+von rumex.
+<!--l. 136--><p class="noindent" >Dann braucht man noch drei zusätzliche Dateien im Verzeichnis <span 
+class="ectt-1200">.rx</span>.
+      <ul class="itemize1">
+      <li class="itemize"><span 
+class="ectt-1200">rumex.bib</span>
+      </li>
+      <li class="itemize"><span 
+class="ectt-1200">rumex.csl</span>
+      </li>
+      <li class="itemize"><span 
+class="ectt-1200">statik.css</span></li></ul>
+<!--l. 149--><p class="noindent" >Wobei der <a 
+href="#x2-510001.4">Literatur Vorlage Stiel</a> und die CSS Datei nur verlinkt wird. In der <span 
+class="ectt-1200">rumex.bib</span>
+werden dann die Literatur Verweise verwaltet.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-19">
+cd&#x00A0;.rx
+&#x00A0;<br />touch&#x00A0;rumex.bib
+&#x00A0;<br />ln&#x00A0;-s&#x00A0;../.rumex/default/din-1505-2.csl&#x00A0;rumex.csl
+&#x00A0;<br />ln&#x00A0;-s&#x00A0;../.rumex/default/statik.css&#x00A0;statik.css
+</div>
+<!--l. 158--><p class="nopar" >
+<!--l. 161--><p class="noindent" ><a 
+ id="literatur-stil"></a>
+<h5 class="subsubsectionHead"><a 
+ id="x2-510001.4"></a>Literatur Stil</h5>
+<!--l. 163--><p class="noindent" >Als Literatur Stil kommt <span 
+class="ectt-1200">din-1505-2.csl </span>zum Einsatz. Andere Stile findet man im git
+Repository <a 
+href="https://github.com/citation-style-language/styles.git" class="url" ><span 
+class="ectt-1200">https://github.com/citation-style-language/styles.git</span></a>. Als Name für die
+Stil Vorlage wurde <span 
+class="ectt-1200">rumex.csl </span>gewählt damit mit eine Änderung des Stils einfach über den
+Symlink gemacht werden kann.
+<!--l. 169--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x2-520001.4"></a>Literatur Verwaltung</h5>
+<!--l. 171--><p class="noindent" >Für die Verwaltung der Literatur Datenbank verwende ich <a 
+href="http://jabref.sourceforge.net/" >Jabref</a>.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-20">
+sudo&#x00A0;apt-get&#x00A0;install&#x00A0;jabref
+</div>
+<!--l. 176--><p class="nopar" >
+<!--l. 178--><p class="noindent" >Der Aufruf des Programms wurde auch auf einen F Taste gelegt. Wer eine anderes Programm
+verwenden will muss diesen entsprechend anpassen.
+<!--l. 181--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x2-530001.4"></a>Tipps</h5>
+      <ul class="itemize1">
+      <li class="itemize">Auf  @wiki:bibtex  findet  man  eine  schöne  Beschreibung  über  die  Literatur
+      Verwaltung mit BibTex.
+      </li>
+      <li class="itemize">Die  BibTex  Einträge  muss  man  sich  unter  Umständen  nicht  einmal  selber
+      erstellen.  Da  verschiedene  Seiten  entsprechende  Dienste  anbieten.  Gelungen
+      finde  ich  die  Seite  von  <a 
+href="http://www.literatur-generator.de/" class="url" ><span 
+class="ectt-1200">http://www.literatur-generator.de/</span></a> aber  auch  auf
+      <a 
+href="http://lead.to/amazon/en/?op=bt" class="url" ><span 
+class="ectt-1200">http://lead.to/amazon/en/?op=bt</span></a> findet  man  BibTeX  Einträge.  Zwar  muss
+      man diese unter Umständen noch ein wenig überarbeiten aber das Grund Gerüst
+      wird einem sozusagen frei Haus geliefert.<br 
+class="newline" />Wer  einen  Wikipedia  Artikel  zitieren  dem  wird  unter  <span 
+class="ectt-1200">"Werkzeuge -&#x003E; Seite</span>
+      <span 
+class="ectt-1200">zitieren" </span>weiter geholfen.
+      </li>
+      <li class="itemize">Für das zitieren von Internetseiten verwende ich folgende Formate, siehe dazu
+      Abschnitt <a 
+href="#x2-590001.6">Literaturverzeichnis</a>.</li></ul>
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-21">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;@ELECTRONIC{&#x00A0;wiki:bibtex,
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;author&#x00A0;=&#x00A0;"Wikipedia",
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;title&#x00A0;=&#x00A0;"BibTeX&#x00A0;---&#x00A0;Wikipedia{,}&#x00A0;Die&#x00A0;freie&#x00A0;Enzyklopädie",
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;year&#x00A0;=&#x00A0;"2013",
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;url&#x00A0;=&#x00A0;"http://de.wikipedia.org/w/index.php?title=BibTeX&amp;oldid=124228120",
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;note&#x00A0;=&#x00A0;"[Online;&#x00A0;Stand&#x00A0;18.&#x00A0;Dezember&#x00A0;2013]"
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;}
+</div>
+<!--l. 211--><p class="nopar" >
+<!--l. 213--><p class="noindent" >
+      <div class="quote">
+
+      <!--l. 214--><p class="noindent" >&hellip;oder
+      <!--l. 216--><p class="noindent" ><span 
+class="ecbx-1200">Achtung: </span>Das Formate <span 
+class="ectt-1200">@WWW </span>wird von jabref nicht unterstützt und gegen ein
+      anders ausgetauscht. Bei dem Einsatz von Jabref am besten <span 
+class="ectt-1200">@ELECTRONIC</span>
+      verwenden.</div>
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-22">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;@WWW{&#x00A0;wiki:bibtex,
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;author&#x00A0;=&#x00A0;"Wikipedia",
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;title&#x00A0;=&#x00A0;"BibTeX&#x00A0;---&#x00A0;Wikipedia{,}&#x00A0;Die&#x00A0;freie&#x00A0;Enzyklopädie",
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;year&#x00A0;=&#x00A0;"2013",
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;url&#x00A0;=&#x00A0;"http://de.wikipedia.org/w/index.php?title=BibTeX&amp;oldid=124228120",
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;note&#x00A0;=&#x00A0;"[Online;&#x00A0;Stand&#x00A0;18.&#x00A0;Dezember&#x00A0;2013]"
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;}
+</div>
+<!--l. 229--><p class="nopar" >
+<!--l. 232--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">1.5</span>&#x00A0;&#x00A0;<a 
+ id="x2-540001.5"></a>Verwendung in- und außerhalb von Rumex?</h3>
+<!--l. 234--><p class="noindent" >Innerhalb von Rumex erstellt man in einem separatem Unterverzeichnis die entsprechende
+markdown Datei und dann kann es auch schon los gehen.
+<!--l. 237--><p class="noindent" >Außerhalb von Rumex kann man diese Funktion natürlich auch verwenden. Mit
+Außerhalb meine ich Denkschriften die nicht veröffentlicht werden. Dazu gibt es zwei
+Möglichkeiten.
+<!--l. 241--><p class="noindent" >
+      <ol  class="enumerate1" >
+      <li 
+  class="enumerate" id="x2-54002x1">Die Datei bzw. das Verzeichnis in <span 
+class="ectt-1200">.gitignore </span>hinterlegen. Somit wird diese nicht
+      verwaltet und auch nicht, bei einem <span 
+class="ectt-1200">make online</span>, hoch geladen.
+      </li>
+      <li 
+  class="enumerate" id="x2-54004x2">Eine zweite lokale Rumex Installation die nur für Denkschriften verwendet wird.
+      </li>
+      <li 
+  class="enumerate" id="x2-54006x3">&hellip;und dann wäre da noch <a 
+href="https://github.com/itbayer/cirsium" >Cirsium</a>, eine Auskopplung aus Rumex, mit der man
+      einfache html und pdf Seiten erstellen kann. Die Literaturverzeichnisoption ist auch
+      enthalten. Die Formate odt, epub und mobi sind jedoch nicht eingebaut.</li></ol>
+                                                                                     
+                                                                                     
+<!--l. 259--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">1.5.1</span>&#x00A0;&#x00A0;<a 
+ id="x2-550001.5.1"></a>Setzen der Überschrift für das Literaturverzeichnis</h4>
+<!--l. 261--><p class="noindent" >Die Überschrift für das Literaturverzeichnis muss immer am Ende des Artikels gesetzt
+werden.
+<!--l. 264--><p class="noindent" ><span 
+class="ecbx-1200">Beispiel</span>
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-23">
+#&#x00A0;Literaturverzeichnis
+</div>
+<!--l. 268--><p class="nopar" >
+<!--l. 270--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">1.5.2</span>&#x00A0;&#x00A0;<a 
+ id="x2-560001.5.2"></a>Einbinden von Bildern</h4>
+<!--l. 272--><p class="noindent" >Bei dem Einbinden der Bilder muss man beachten dass die Erstellung der statik Datei vom
+Verzeichnis <span 
+class="ectt-1200">.rx </span>ausgeht.
+<!--l. 275--><p class="noindent" >Will man also ein Bild, dass im Ordner der Statik Datei liegt einbinden so muss auch auf das
+Bild aus der Sicht des <span 
+class="ectt-1200">.rx </span>Verzeichnisses eingebunden werden.
+<!--l. 279--><p class="noindent" >Beispiel:
+<!--l. 281--><p class="noindent" >Das Bild liegt im Ordner <span 
+class="ectt-1200">statik </span>somit müsste der Markdown Befehl so aussehen.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-24">
+![Beispielbild](../statik/beispiel.png)
+</div>
+<!--l. 286--><p class="nopar" >
+<!--l. 288--><p class="noindent" >In Rumex kann man diese Funktion natürlich auch verwenden. Am besten erstellt
+man sich dazu ein eigenes Unterverzeichnis und dort die Datei <span 
+class="ectt-1200">index.md </span>mit den
+Texten.
+<!--l. 293--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">1.5.3</span>&#x00A0;&#x00A0;<a 
+ id="x2-570001.5.3"></a>Statik Dateien im <span 
+class="ectt-1200">.rx </span>Verzeichnis</h4>
+<!--l. 295--><p class="noindent" >Es wird sicher passieren dass man die Funktionstasten der Statik Seiten auch bei der
+Bearbeitung der eigentlichen Rumex Dateien drückt. Durch entsprechende Einträge in der
+<span 
+class="ectt-1200">.gitignore </span>Datei werden solche Dateien von einem Upload ausgeschlossen. Mit den
+Aufruf von <span 
+class="ectt-1200">make statikclean </span>können die erstellten statik Dateien Schlussendliche
+aus dem <span 
+class="ectt-1200">.rx </span>Verzeichnis entfernt werden. Dieser Befehl wird auch bei <span 
+class="ectt-1200">make clean</span>
+ausgeführt.
+<!--l. 303--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">1.5.4</span>&#x00A0;&#x00A0;<a 
+ id="x2-580001.5.4"></a>Tipps</h4>
+<!--l. 305--><p class="noindent" >Das PDF Programm <span 
+class="ectt-1200">zathura </span>hat die Eigenschaft dass wenn sich die Datei ändert diese
+automatisch nachgeladen wird. Eine schöne Funktion wenn man seinen Text, an dem man
+gerade arbeitet, immer wieder einmal im Ausgabe Format betrachten will. Einfach die Taste
+F6 drücken, die Datei wird auch gleich gespeichert, und mit ALT-TAB das Programm Fenster
+wechseln.
+<!--l. 312--><p class="noindent" >Bei Format HTML geht das natürlich auch. Nur muss hier eine Erweiterung installiert werden.
+Für die Browser Chromium und Firefox habe ich mit <span 
+class="ectt-1200">Auto Refresh Plus</span><sup><span 
+class="cmmi-8">Chromium</span></sup> bzw. <span 
+class="ectt-1200">Tab</span>
+<span 
+class="ectt-1200">Auto Reload</span><sup><span 
+class="cmmi-8">FireFox</span></sup> gute Erfahrungen gemacht.
+                                                                                     
+                                                                                     
+<div class="center" 
+>
+<!--l. 317--><p class="noindent" >
+<!--l. 317--><p class="noindent" >_________________________________________</div>
+<!--l. 319--><p class="noindent" >Die PDF Datei dieser Beschreibung kann man sich <a 
+href="index.pdf" >hier</a> ansehen. Die Markdown Quelldatei
+kann man sich <a 
+href="index.md" >hier</a> holen.
+<div class="center" 
+>
+<!--l. 323--><p class="noindent" >
+<!--l. 323--><p class="noindent" >_________________________________________</div>
+<!--l. 325--><p class="noindent" ><a 
+ id="literaturverzeichnis"></a>
+<h3 class="sectionHead"><span class="titlemark">1.6</span>&#x00A0;&#x00A0;<a 
+ id="x2-590001.6"></a>Literaturverzeichnis</h3>
+                                                                                     
+                                                                                     
+<div class="footnotes"><!--l. 3--><p class="noindent" ><span class="footnote-mark"><a 
+href="#fn1x2-bk" id="fn1x2"></a></span><span 
+class="ecrm-1000">Im Neudeutschen w</span><span 
+class="ecrm-1000">ürde man die Denkschrift als Memorandum bezeichnen.</span>
+<!--l. 26--><p class="noindent" ><span class="footnote-mark"><a 
+href="#fn2x2-bk" id="fn2x2"></a></span><span 
+class="ecrm-1000">Die Funktionstasten sind im gvim Rumex Men</span><span 
+class="ecrm-1000">ü nicht eingebaut. Man sollte sie sich also merken</span>
+<span 
+class="ecrm-1000">:-).</span>
+<!--l. 31--><p class="noindent" ><span class="footnote-mark"><a 
+href="#fn3x2-bk" id="fn3x2"></a></span><span 
+class="ecrm-1000">Diese Eigenschaft wurde wieder entfernt da eine Datei mit sehr vielen Bildern oder gar Videos, die alle in die</span>
+<span 
+class="ecrm-1000">HTML Datei eingebunden werden, sehr groß wird. Dieses erh</span><span 
+class="ecrm-1000">öht die Ladezeit der HTM Datei. Bei der</span>
+<span 
+class="ecrm-1000">Verwaltung durch git wirkt sich diese Eigenschaft auch ung</span><span 
+class="ecrm-1000">ünstig aus.</span>
+<!--l. 133--><p class="noindent" ><span class="footnote-mark"><a 
+href="#fn4x2-bk" id="fn4x2"></a></span><span 
+class="ecrm-1000">Die Literatur Erweiterung ist ab der Rumex Version 0.8.2 enthalten.</span>                            </div>
+<!--l. 956--><div class="crosslinks"><p class="noindent">[<a 
+href="rumexch2.html" >Nächste Seite</a>][<a 
+href="rumexch1.html" >Seitenanfang</a>][<a 
+href="rumex.html#rumexch1.html" >Startseite</a>]</p></div>
+<!--l. 956--><p class="noindent" ><a 
+ id="tailrumexch1.html"></a>  
+</body></html> 
