@@ -47,7 +47,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <meta name="DC.creator" content="IT-Bayer (Stefan Blechschmidt)" />
 
 <!-- rumex Speicherdatum der Datei -->
-  <meta name="DCTERMS.modified" scheme="DCTERMS.W3CDTF" content="2014-05-19" />
+  <meta name="DCTERMS.modified" scheme="DCTERMS.W3CDTF" content="2014-07-11" />
 
 <!-- jquery fest eingebunden, so kann moot.it deaktiviert und
 	weblog immer noch verwendet werden. -->
@@ -93,7 +93,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 	<a title="zur Startseite" href="index.html">zur Startseite</a>
 </div>
 <header>
-<h1 class="title"><a title="zur Startseite" href="index.html">github HP Sandkasten</a></h1>
+<h1 class="title"><a title="zur&uuml;ck" href="javascript:history.back()">github HP Sandkasten</a></h1>
 <h2 class="author">IT Bayer</h2>
 <h3 class="date">2013</h3>
 </header>
@@ -427,7 +427,13 @@ Zitat mit einem<br />Zeilen<br />wechsel.<br />
 <hr />
 <table>
 <caption>Here’s the caption. It, too, may span multiple lines.</caption>
-<col style="width: 16%" /><col style="width: 11%" /><col style="width: 22%" /><col style="width: 34%" /><thead>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 11%" />
+<col style="width: 22%" />
+<col style="width: 34%" />
+</colgroup>
+<thead>
 <tr class="header">
 <th style="text-align: center;">Centered Header</th>
 <th style="text-align: left;">Default Aligned</th>
@@ -453,7 +459,13 @@ Zitat mit einem<br />Zeilen<br />wechsel.<br />
 <hr />
 <table>
 <caption>Here’s a multiline table without headers.</caption>
-<col style="width: 16%" /><col style="width: 11%" /><col style="width: 22%" /><col style="width: 34%" /><tbody>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 11%" />
+<col style="width: 22%" />
+<col style="width: 34%" />
+</colgroup>
+<tbody>
 <tr class="odd">
 <td style="text-align: center;">First</td>
 <td style="text-align: left;">row</td>
@@ -471,7 +483,12 @@ Zitat mit einem<br />Zeilen<br />wechsel.<br />
 <hr />
 <table>
 <caption>Sample grid table.</caption>
-<col style="width: 22%" /><col style="width: 22%" /><col style="width: 29%" /><thead>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
 <tr class="header">
 <th style="text-align: left;">Fruit</th>
 <th style="text-align: left;">Price</th>

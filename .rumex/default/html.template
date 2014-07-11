@@ -108,7 +108,7 @@ $include-before$
 $endfor$
 $if(title)$
 <header>
-<h1 class="title"><a title="zur Startseite" href="index.html">$title$</a></h1>
+<h1 class="title"><a title="zur&uuml;ck" href="javascript:history.back()">$title$</a></h1>
 $for(author)$
 <h2 class="author">$author$</h2>
 $endfor$
