@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=latex 2014.5.29)  30 JUL 2014 11:10
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=latex 2014.5.29)  30 JUL 2014 11:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7,8 +7,8 @@ de"##1"{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.
 {\g@addto@macro\@documentclasshook{\RequirePackage[#1,html]{tex4ht}}\let\HCode\
 documentstyle\def\documentstyle{\let\documentstyle\HCode\expandafter\def\csname
  tex4ht\endcsname{#1,html}\def\HCode####1{\documentstyle[tex4ht,}\@ifnextchar[{
-\HCode}{\documentstyle[tex4ht]}}}\makeatother\HCode html,info,2,charset=utf-8,f
-n-in.a.b.c.\input  rumex
+\HCode}{\documentstyle[tex4ht]}}}\makeatother\HCode xhtml,info,2,fn-in.a.b.c.\i
+nput  rumex
 (./rumex.tex (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrreprt.cls
 Document Class: scrreprt 2012/05/15 v3.11 KOMA-Script document class (report)
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
@@ -544,9 +544,6 @@ File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 
 (./rumex.tmp)
 \tmp:dim=\skip48
---------------------------------------
---- Note --- for XML code, use the command line option `xml' or `xhtml'
---------------------------------------
  (./rumex.xref)
 \:refout=\write4
 \openout4 = `rumex.xref'.
@@ -1939,6 +1936,10 @@ version 2009-05-18-23:01
  line option `sec-filename'
 --------------------------------------
 --------------------------------------
+--- Note --- for alternative charset, use the command line option `charset=...'
+
+--------------------------------------
+--------------------------------------
 --- Note --- to ignore CSS font decoration, use the `NoFonts' command line opti
 on
 --------------------------------------
@@ -1963,7 +1964,7 @@ option `frames-fn'
 --------------------------------------
 --- Note --- for file extension name xht, use the command line option `xht'
 --------------------------------------
-TeX4ht package options: html,info,2,charset=utf-8,fn-in
+TeX4ht package options: xhtml,info,2,fn-in,html
 --------------------------------------
 --- Note --- to ignore CSS code, use the command line option `-css
 --------------------------------------
@@ -3338,13 +3339,13 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 77.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-[6] [7
+[6] [7] [8
 
 ]
 l.108 --- TeX4ht warning --- Cannot determine size of graphic in ../bilder/besc
 hreibung-vym_800_.png (no BoundingBox) ---
 l. 108 --- needs --- ../bilder/beschreibung-vym_800_.png ---
-[8
+[9
 
 ]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 123.
@@ -3354,51 +3355,51 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 123.
- [9
+ [10
 
-] [10] [11]
-[12] [13] [14] [15]
+] [11] [12]
+[13] [14] [15] [16]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 325.
- [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26]
-[27] [28] [29] [30] [31] [32] [33] [34] [35
+ [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27]
+[28] [29] [30] [31] [32] [33] [34] [35] [36] [37
 
 ]
 l.865 --- TeX4ht warning --- Cannot determine size of graphic in ../bilder/rume
 x-tilda_800_.png (no BoundingBox) ---
 l. 865 --- needs --- ../bilder/rumex-tilda_800_.png ---
-[36
+[38
 
-] [37
+] [39
 
 ]
 
-LaTeX Warning: Reference `rumex.vim.sh' on page 38 undefined on input line 901.
+LaTeX Warning: Reference `rumex.vim.sh' on page 40 undefined on input line 901.
 
 
-[38] [39] [40]
+[40] [41] [42]
 Kapitel 1.
 --- file rumexch1.html ---
 \fn:box1=\box34
-(./statik-funktion.tex (./rumex.4ct) [41
+(./statik-funktion.tex (./rumex.4ct) [43
 
-] [42] [43] [44] [45] [46]
+] [44] [45] [46] [47] [48]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 165.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 165.
- [47]
-[48] [49] [50] [51] [52] [53]) [54] [55
+ [49]
+[50] [51] [52] [53] [54] [55]) [56] [57
 
 ]
 Kapitel 2.
 --- file rumexch2.html ---
-(./vim-kurztasten.tex (./rumex.4ct [56
+(./vim-kurztasten.tex (./rumex.4ct [58
 
-]) [57] [58] [59] [60] [61] [62] [63]
-[64] [65] [66] [67]) [68]
+]) [59] [60] [61] [62] [63] [64] [65]
+[66] [67] [68] [69] [70] [71]) [72]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 960.
- [69
+ [73
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 960.
@@ -3412,12 +3413,12 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 960.
  ) 
 Here is how much of TeX's memory you used:
- 11609 strings out of 495008
- 163672 string characters out of 3179713
- 388444 words of memory out of 3000000
- 14429 multiletter control sequences out of 15000+200000
+ 11613 strings out of 495008
+ 163693 string characters out of 3179713
+ 389576 words of memory out of 3000000
+ 14433 multiletter control sequences out of 15000+200000
  17169 words of font info for 41 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 41i,6n,41p,1845b,696s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,6n,41p,1832b,696s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on rumex.dvi (72 pages, 141008 bytes).
+Output written on rumex.dvi (76 pages, 145888 bytes).

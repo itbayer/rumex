@@ -7,7 +7,7 @@ pdf:
 	pdflatex rumex.tex
 
 html:
-	htlatex rumex "html,info,2,charset=utf-8,fn-in"
+	htlatex rumex "xhtml,info,2,fn-in"
 	# mit der next Erweiterung wird auf der Startseite
 	# auch ein Link "Nächsten Seite" eingeblendet
 	# htlatex tex4ht_itb "html,info,2,fn-in,next"
