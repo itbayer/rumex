@@ -13,7 +13,7 @@
 <link rel="icon" type="image/gif" href="favicon.gif" />
 
   <meta name="author" content="Stefan Blechschmidt">
-  <meta name="dcterms.date" content="2014-07-30">
+  <meta name="dcterms.date" content="2014-08-29">
 
   <title>IT Bayer’s rumex (github.com Version)</title>
   <style type="text/css">code{white-space: pre;}</style>
@@ -28,7 +28,7 @@
 <meta name="DC.creator" content="IT-Bayer (Stefan Blechschmidt)" />
 
 <!-- rumex Speicherdatum der Datei -->
-  <meta name="DCTERMS.modified" scheme="DCTERMS.W3CDTF" content="2014-07-30" />
+  <meta name="DCTERMS.modified" scheme="DCTERMS.W3CDTF" content="2014-08-29" />
 
 <!-- jquery fest eingebunden, so kann moot.it deaktiviert und
 	weblog immer noch verwendet werden. -->
@@ -76,7 +76,7 @@
 <header>
 <h1 class="title"><a title="zur&uuml;ck" href="javascript:history.back()">IT Bayer’s rumex <sup style="font-size: .4em;">(github.com Version)</sup></a></h1>
 <h2 class="author">Stefan Blechschmidt</h2>
-<h3 class="date">2014-07-30</h3>
+<h3 class="date">2014-08-29</h3>
 </header>
 <div id="seite">
 <!-- START .indexliste -->
@@ -92,10 +92,10 @@
 <p>Der aktuelle Stand dieses Baukastens kann als <a href="https://github.com/itbayer/rumex/archive/gh-pages.zip">ZIP Datei holen</a>.</p>
 <p>Aktuell wird dieser Baukasten auch folgenden Seiten eingesetzt bzw. getestet.</p>
 <ul>
-<li><a href="http://www.it-bayer.de">http://www.it-bayer.de</a></li>
-<li><a href="http://www.byvs.de">http://www.byvs.de</a></li>
-<li><a href="http://www.hochfelder.de">http://www.hochfelder.de</a></li>
-<li><a href="http://www.auggenbach.de">http://www.auggenbach.de</a></li>
+<li><a href="http://www.it-bayer.de" class="uri">http://www.it-bayer.de</a></li>
+<li><a href="http://www.byvs.de" class="uri">http://www.byvs.de</a></li>
+<li><a href="http://www.hochfelder.de" class="uri">http://www.hochfelder.de</a></li>
+<li><a href="http://www.auggenbach.de" class="uri">http://www.auggenbach.de</a></li>
 </ul>
 <!-- ENDE .indexliste -->
 </div>
@@ -106,27 +106,18 @@ Weblog
 </h2>
 <!-- START .weblogblock -->
 <div class="weblogblock">
-<h1>Kleine Änderungen</h1>
-<p><em>Am 19.05.2014 um 12:43 schrieb IT-Bayer</em></p>
-<p>Rumex hat ein paar keine Änderungen bekommen. Eigentlich nichts wichtiges, ein Download, Version 0.8.3.7 gibt es aber dennoch.</p>
-<h1>Rumex Layout Änderung</h1>
-<p><em>Am 14.05.2014 um 07:47 schrieb IT-Bayer</em></p>
-<p>Das Layout für Rumex wurde angepasst, sodass die Seite jetzt auch auf mobilen Geräten, in der entsprechenden Breite, angezeigt wird.</p>
-<p>Die neue Version 0.8.3.4 steht zum Download bereit.</p>
-<h1>Pandoc 1.12.4</h1>
-<p><em>Am 10.05.2014 um 19:31 schrieb IT-Bayer</em></p>
-<p>pandoc 1.12.4 ist am 7. Mai 2014 erschienen. Musste natürlich gleich installiert und mit Rumex getestet werden.</p>
+<h1>Pandoc 1.13.0.1</h1>
+<p><em>Am 29.08.2014 um 14:58 schrieb IT-Bayer</em></p>
+<p>Pandoc hat wieder eine neue Version heraus gebracht. Diese neue Version 1.13.0.1 (17 August 2014) muss natürlich auch getestet werden.</p>
+<p>Da ich immer noch die Ubuntu Version Ubuntu 12.10 verwende funktionierte ein einfaches <code>cabal update;cabal install pandoc;cabal install pandoc-citeproc</code> nicht.</p>
 <div class="weblog">
-<p><strong>Was hat sich geändert?</strong></p>
-<p>Der Syntax <code>##Weblog{.abschnitt .weblog}</code> bzw. <code>{.webloglink}</code>, für den Weblog Archiv Link, funktioniert anscheinend nicht mehr, wird nicht mehr unterstützt. Die Klassen, die zur CSS Formatierung benötigt werden, wurden somit per HTML Befehl eingebaut. Außerdem wurde die Erweiterung des HTML Templates nach geflickt.</p>
-<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, user-scalable=yes&quot;&gt;</code></pre>
-<p>Ein Update, <code>0.8.3.2</code>, steht zur Verfügung.</p>
+<p>Bevor man die neuen Version von pandoc installieren kann müssen erste ein paar Module auf den neusten Stand gebracht werden. Welche erfährt man nach dem man den Befehl <code>cabal install pandoc</code> ausgeführt hat.</p>
+<p><strong>Rumex</strong></p>
+<p>Rumex funktioniert mit der neuen Pandoc Version einwandfrei. Zumindest konnte ich bis jetzt kein Fehlverhalten entdecken.</p>
 </div>
 <h4 class="webloglink">
 <a href="weblog.html">… ältere Weblog Einträge anzeigen</a>
 </h4>
-
-
 <!-- ENDE .weblogblock -->
 </div>
 <!-- ENDE .indexliste -->
@@ -138,8 +129,6 @@ Weblog
 <p class="datum">
 Letzte Bearbeitung: 2014-07-11
 </p>
-
-
 <p>Diese kleine Erweiterung soll eine Art Blog innerhalb Rumex ermöglichen. Besser gesagt ist diese Erweiterung eher ein Weblog Funktion.</p>
 <p>Der Unterschied zu den eigentlichen Rumex Seiten ist nicht sehr groß. Folgt nach einer <code>h1</code> Überschrift ein <code>div</code> Tag mit der <code>weblog</code> Klasse wird der Text innerhalb dieses <code>div</code> Tags ausgeblendet und mit dem Schriftzug <code>... weiter lesen</code> ersetzt. Die Überschrift und der Text <code>... weiter lesen</code> bekommen eine Link Eigenschaft die den ausgeblendeten Text bei Anforderung einblendet.</p>
 <p>Diese Funktion kann auch in den normalen Seiten verwendet werden.</p>

@@ -1,6 +1,6 @@
 % IT Bayer's rumex <sup style="font-size: .4em;">(github.com Version)</sup>
 % Stefan Blechschmidt
-% 2014-07-30
+% 2014-08-29
 
 
 <!-- START .indexliste --><div class="indexliste">
@@ -47,52 +47,38 @@ Aktuell wird dieser Baukasten auch folgenden Seiten eingesetzt bzw. getestet.
 <!-- START .weblogblock --><div class="weblogblock">
 
 
-# Kleine Änderungen
-
-_Am 19.05.2014 um 12:43 schrieb IT-Bayer_
-
-Rumex hat ein paar keine Änderungen bekommen.
-Eigentlich nichts wichtiges, ein
-Download, Version 0.8.3.7 gibt es aber dennoch.
 
 
-# Rumex Layout Änderung
+# Pandoc 1.13.0.1
 
-_Am 14.05.2014 um 07:47 schrieb IT-Bayer_
+_Am 29.08.2014 um 14:58 schrieb IT-Bayer_
 
-Das Layout für Rumex wurde angepasst, sodass
-die Seite jetzt auch auf mobilen Geräten, in der
-entsprechenden Breite, angezeigt wird.
+Pandoc hat wieder eine neue Version heraus gebracht.
+Diese neue Version 1.13.0.1 (17 August 2014)
+muss natürlich auch getestet werden.
 
-Die neue Version 0.8.3.4 steht zum Download bereit.
-
-
-
-
-# Pandoc 1.12.4
-
-_Am 10.05.2014 um 19:31 schrieb IT-Bayer_
-
-pandoc 1.12.4 ist am 7. Mai 2014 erschienen. 
-Musste natürlich gleich installiert und mit Rumex
-getestet werden.
+Da ich immer noch die Ubuntu Version Ubuntu 12.10 verwende
+funktionierte ein einfaches 
+`cabal update;cabal install pandoc;cabal install pandoc-citeproc` 
+nicht.
 
 <div class="weblog">
-**Was hat sich geändert?**
+Bevor man die neuen Version von pandoc installieren kann
+müssen erste ein paar Module auf den neusten Stand
+gebracht werden.
+Welche erfährt man nach dem man den  Befehl
+`cabal install pandoc`
+ausgeführt hat.
 
-Der Syntax `##Weblog{.abschnitt .weblog}` bzw. `{.webloglink}`, für den Weblog
-Archiv Link, funktioniert anscheinend nicht mehr, wird nicht mehr unterstützt. 
-Die Klassen, die zur CSS Formatierung benötigt werden, wurden somit per HTML Befehl eingebaut.
-Außerdem wurde die Erweiterung des HTML Templates nach geflickt.
+**Rumex**
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-Ein Update, `0.8.3.2`, steht zur Verfügung.
+Rumex funktioniert mit der neuen Pandoc Version 
+einwandfrei.
+Zumindest konnte ich bis jetzt kein Fehlverhalten 
+entdecken.
 
 
 </div>
-
-
 
 <h4 class="webloglink"><a href="weblog.html">… &auml;ltere Weblog Eintr&auml;ge anzeigen</a></h4>
 
