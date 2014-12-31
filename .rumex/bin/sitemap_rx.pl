@@ -36,6 +36,7 @@ print <<EOF;
 
 <div id="sitemap">
 Übersicht aller Seiten dieser Homepage
+
 EOF
 
 # Ausgelesene Dateien verarbeiten.
@@ -66,8 +67,8 @@ foreach(@files) {
  
 
 	# Zeile für jede Datei erstellen
-	print ":\t* [$titel]($1.html)\n";
+	print "* [$titel]($1.html)\n";
 
 }
 
-print "</div>\n";
+print "\n</div>\n";

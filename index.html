@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <!-- rumex Version -->
-<meta name="generator" content="rumex 0.8.3.7">
+<meta name="generator" content="rumex 0.8.3.8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,7 +13,7 @@
 <link rel="icon" type="image/gif" href="favicon.gif" />
 
   <meta name="author" content="Stefan Blechschmidt">
-  <meta name="dcterms.date" content="2014-08-29">
+  <meta name="dcterms.date" content="2014-12-31">
 
   <title>IT Bayer’s rumex (github.com Version)</title>
   <style type="text/css">code{white-space: pre;}</style>
@@ -28,7 +28,7 @@
 <meta name="DC.creator" content="IT-Bayer (Stefan Blechschmidt)" />
 
 <!-- rumex Speicherdatum der Datei -->
-  <meta name="DCTERMS.modified" scheme="DCTERMS.W3CDTF" content="2014-08-29" />
+  <meta name="DCTERMS.modified" scheme="DCTERMS.W3CDTF" content="2014-12-31" />
 
 <!-- jquery fest eingebunden, so kann moot.it deaktiviert und
 	weblog immer noch verwendet werden. -->
@@ -76,7 +76,7 @@
 <header>
 <h1 class="title"><a title="zur&uuml;ck" href="javascript:history.back()">IT Bayer’s rumex <sup style="font-size: .4em;">(github.com Version)</sup></a></h1>
 <h2 class="author">Stefan Blechschmidt</h2>
-<h3 class="date">2014-08-29</h3>
+<h3 class="date">2014-12-31</h3>
 </header>
 <div id="seite">
 <!-- START .indexliste -->
@@ -106,14 +106,17 @@ Weblog
 </h2>
 <!-- START .weblogblock -->
 <div class="weblogblock">
-<h1>Pandoc 1.13.0.1</h1>
-<p><em>Am 29.08.2014 um 14:58 schrieb IT-Bayer</em></p>
-<p>Pandoc hat wieder eine neue Version heraus gebracht. Diese neue Version 1.13.0.1 (17 August 2014) muss natürlich auch getestet werden.</p>
-<p>Da ich immer noch die Ubuntu Version Ubuntu 12.10 verwende funktionierte ein einfaches <code>cabal update;cabal install pandoc;cabal install pandoc-citeproc</code> nicht.</p>
+<h1 id="pandoc-1.13.2">Pandoc 1.13.2</h1>
+<p><em>Am 31.12.2014 um 09:40 schrieb IT-Bayer</em></p>
+<p>Am 20. Dezember ist eine neuen Version von pandoc heraus gekommen. Da ich letztens schon Probleme mit einen Update von pandoc hatte <em>(siehe Weblogeintrag “Pandoc 1.13.0.1”)</em> habe ich die Version 1.13.1 nicht mehr installiert.</p>
+<p>Jetzt zu Weihnachten, wo ich endlich wieder einmal Zeit habe, wage ich das Update auf 1.13.2. So wie es ausschaut sind einige Neuerungen bezüglich der Lese- Schreibmodule hinzugekommen. Ein zusätzlicher Grund sich das Update einzuspielen.</p>
 <div class="weblog">
-<p>Bevor man die neuen Version von pandoc installieren kann müssen erste ein paar Module auf den neusten Stand gebracht werden. Welche erfährt man nach dem man den Befehl <code>cabal install pandoc</code> ausgeführt hat.</p>
-<p><strong>Rumex</strong></p>
-<p>Rumex funktioniert mit der neuen Pandoc Version einwandfrei. Zumindest konnte ich bis jetzt kein Fehlverhalten entdecken.</p>
+<h2 id="installation">Installation</h2>
+<p>Das Update ging dieses Mal, mit folgenden Befehlen, auf einen Rutsch.</p>
+<pre><code>cabal install --force-reinstalls pandoc
+cabal install --force-reinstalls pandoc-citeproc</code></pre>
+<h2 id="fehler-innerhalb-von-rumex">Fehler innerhalb von Rumex</h2>
+<p>Bei der ersten Durchsicht konnte ich keinen Fehler entdecken. Jedoch ein alter Fehler ist mir aufgefallen. Die Seite <code>sitemap.html</code> wurde nicht richtig dargestellt. Habe ich natürlich gleich behoben. Neue Version 0.8.3.8.</p>
 </div>
 <h4 class="webloglink">
 <a href="weblog.html">… ältere Weblog Einträge anzeigen</a>
@@ -125,7 +128,7 @@ Weblog
 <h2 id="seitenübersicht" class="abschnitt seiten">Seitenübersicht</h2>
 <!-- START .indexliste -->
 <div class="indexliste">
-<h1><a href="weblog_beschreibung.html">Weblog Beschreibung</a></h1>
+<h1 id="weblog-beschreibung"><a href="weblog_beschreibung.html">Weblog Beschreibung</a></h1>
 <p class="datum">
 Letzte Bearbeitung: 2014-07-11
 </p>

@@ -4,6 +4,46 @@
 <!--
 
 
+# Pandoc 1.13.2
+
+_Am 31.12.2014 um 09:40 schrieb IT-Bayer_
+
+Am 20. Dezember ist eine neuen Version von pandoc heraus
+gekommen.
+Da ich letztens schon Probleme mit einen Update von pandoc
+hatte _(siehe Weblogeintrag "Pandoc 1.13.0.1")_ habe ich
+die Version 1.13.1 nicht mehr installiert.
+
+Jetzt zu Weihnachten, wo ich endlich wieder einmal Zeit habe,
+wage ich das Update auf 1.13.2.
+So wie es ausschaut sind einige Neuerungen bezüglich der
+Lese- Schreibmodule hinzugekommen.
+Ein zusätzlicher Grund sich das Update einzuspielen.
+
+<div class="weblog">
+
+Installation
+------------
+
+Das Update ging dieses Mal, mit folgenden Befehlen, auf einen Rutsch.
+
+	cabal install --force-reinstalls pandoc
+	cabal install --force-reinstalls pandoc-citeproc
+
+
+Fehler innerhalb von Rumex
+--------------------------
+
+Bei der ersten Durchsicht konnte ich keinen Fehler entdecken.
+Jedoch ein alter Fehler ist mir aufgefallen.
+Die Seite `sitemap.html` wurde nicht richtig dargestellt.
+Habe ich natürlich gleich behoben.
+Neue Version 0.8.3.8.
+
+</div>
+
+
+<!-- schnipp -->
 
 # Pandoc 1.13.0.1
 
@@ -36,7 +76,6 @@ entdecken.
 
 </div>
 
-<!-- schnipp -->
 
 
 

@@ -1,6 +1,6 @@
 % IT Bayer's rumex <sup style="font-size: .4em;">(github.com Version)</sup>
 % Stefan Blechschmidt
-% 2014-08-29
+% 2014-12-31
 
 
 <!-- START .indexliste --><div class="indexliste">
@@ -48,37 +48,44 @@ Aktuell wird dieser Baukasten auch folgenden Seiten eingesetzt bzw. getestet.
 
 
 
+# Pandoc 1.13.2
 
-# Pandoc 1.13.0.1
+_Am 31.12.2014 um 09:40 schrieb IT-Bayer_
 
-_Am 29.08.2014 um 14:58 schrieb IT-Bayer_
+Am 20. Dezember ist eine neuen Version von pandoc heraus
+gekommen.
+Da ich letztens schon Probleme mit einen Update von pandoc
+hatte _(siehe Weblogeintrag "Pandoc 1.13.0.1")_ habe ich
+die Version 1.13.1 nicht mehr installiert.
 
-Pandoc hat wieder eine neue Version heraus gebracht.
-Diese neue Version 1.13.0.1 (17 August 2014)
-muss natürlich auch getestet werden.
-
-Da ich immer noch die Ubuntu Version Ubuntu 12.10 verwende
-funktionierte ein einfaches 
-`cabal update;cabal install pandoc;cabal install pandoc-citeproc` 
-nicht.
+Jetzt zu Weihnachten, wo ich endlich wieder einmal Zeit habe,
+wage ich das Update auf 1.13.2.
+So wie es ausschaut sind einige Neuerungen bezüglich der
+Lese- Schreibmodule hinzugekommen.
+Ein zusätzlicher Grund sich das Update einzuspielen.
 
 <div class="weblog">
-Bevor man die neuen Version von pandoc installieren kann
-müssen erste ein paar Module auf den neusten Stand
-gebracht werden.
-Welche erfährt man nach dem man den  Befehl
-`cabal install pandoc`
-ausgeführt hat.
 
-**Rumex**
+Installation
+------------
 
-Rumex funktioniert mit der neuen Pandoc Version 
-einwandfrei.
-Zumindest konnte ich bis jetzt kein Fehlverhalten 
-entdecken.
+Das Update ging dieses Mal, mit folgenden Befehlen, auf einen Rutsch.
 
+	cabal install --force-reinstalls pandoc
+	cabal install --force-reinstalls pandoc-citeproc
+
+
+Fehler innerhalb von Rumex
+--------------------------
+
+Bei der ersten Durchsicht konnte ich keinen Fehler entdecken.
+Jedoch ein alter Fehler ist mir aufgefallen.
+Die Seite `sitemap.html` wurde nicht richtig dargestellt.
+Habe ich natürlich gleich behoben.
+Neue Version 0.8.3.8.
 
 </div>
+
 
 <h4 class="webloglink"><a href="weblog.html">… &auml;ltere Weblog Eintr&auml;ge anzeigen</a></h4>
 
