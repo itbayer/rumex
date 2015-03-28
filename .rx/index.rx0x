@@ -1,6 +1,6 @@
 % IT Bayer's rumex <sup style="font-size: .4em;">(github.com Version)</sup>
 % Stefan Blechschmidt
-% 2014-12-31
+% 2015-03-28
 
 
 <!-- START .indexliste --><div class="indexliste">
@@ -48,6 +48,7 @@ Aktuell wird dieser Baukasten auch folgenden Seiten eingesetzt bzw. getestet.
 
 
 
+
 # Pandoc 1.13.2
 
 _Am 31.12.2014 um 09:40 schrieb IT-Bayer_
@@ -87,7 +88,11 @@ Neue Version 0.8.3.8.
 </div>
 
 
-<h4 class="webloglink"><a href="weblog.html">… &auml;ltere Weblog Eintr&auml;ge anzeigen</a></h4>
+
+
+
+
+<h4 class="webloglink"><a href="weblog.html">… Weblog Seite mit weiteren Eintr&auml;gen anzeigen</a></h4>
 
 
 <!-- ENDE .weblogblock --></div>
@@ -99,7 +104,7 @@ Neue Version 0.8.3.8.
 [Weblog Beschreibung](weblog_beschreibung.html)
 =======================================================
 
-<p class="datum">Letzte Bearbeitung: 2014-07-11</p>
+<p class="datum">Letzte Bearbeitung: 2015-03-27</p>
 
 
 Diese kleine Erweiterung soll eine Art Blog innerhalb Rumex ermöglichen.

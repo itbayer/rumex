@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <!-- rumex Version -->
-<meta name="generator" content="rumex 0.8.3.8">
+<meta name="generator" content="rumex 0.8.3.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,7 +13,7 @@
 <link rel="icon" type="image/gif" href="favicon.gif" />
 
 
-  <title>WebLog</title>
+  <title>WebLog Seite</title>
   <style type="text/css">code{white-space: pre;}</style>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -45,7 +45,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <meta name="DC.creator" content="IT-Bayer (Stefan Blechschmidt)" />
 
 <!-- rumex Speicherdatum der Datei -->
-  <meta name="DCTERMS.modified" scheme="DCTERMS.W3CDTF" content="2015-01-22" />
+  <meta name="DCTERMS.modified" scheme="DCTERMS.W3CDTF" content="2015-03-28" />
 
 <!-- jquery fest eingebunden, so kann moot.it deaktiviert und
 	weblog immer noch verwendet werden. -->
@@ -91,52 +91,33 @@ code > span.er { color: #ff0000; font-weight: bold; }
 	<a title="zur Startseite" href="index.html">zur Startseite</a>
 </div>
 <header>
-<h1 class="title"><a title="zur&uuml;ck" href="javascript:history.back()">WebLog</a></h1>
+<h1 class="title"><a title="zur&uuml;ck" href="javascript:history.back()">WebLog Seite</a></h1>
 </header>
 <div id="seite">
 <!--
 
+-->
 
-# Pandoc 1.13.2
 
-_Am 31.12.2014 um 09:40 schrieb IT-Bayer_
-
-Am 20. Dezember ist eine neuen Version von pandoc heraus
-gekommen.
-Da ich letztens schon Probleme mit einen Update von pandoc
-hatte _(siehe Weblogeintrag "Pandoc 1.13.0.1")_ habe ich
-die Version 1.13.1 nicht mehr installiert.
-
-Jetzt zu Weihnachten, wo ich endlich wieder einmal Zeit habe,
-wage ich das Update auf 1.13.2.
-So wie es ausschaut sind einige Neuerungen bezüglich der
-Lese- Schreibmodule hinzugekommen.
-Ein zusätzlicher Grund sich das Update einzuspielen.
-
+<h1 id="pandoc-1.13.2">Pandoc 1.13.2</h1>
+<p><em>Am 31.12.2014 um 09:40 schrieb IT-Bayer</em></p>
+<p>Am 20. Dezember ist eine neuen Version von pandoc heraus gekommen. Da ich letztens schon Probleme mit einen Update von pandoc hatte <em>(siehe Weblogeintrag “Pandoc 1.13.0.1”)</em> habe ich die Version 1.13.1 nicht mehr installiert.</p>
+<p>Jetzt zu Weihnachten, wo ich endlich wieder einmal Zeit habe, wage ich das Update auf 1.13.2. So wie es ausschaut sind einige Neuerungen bezüglich der Lese- Schreibmodule hinzugekommen. Ein zusätzlicher Grund sich das Update einzuspielen.</p>
 <div class="weblog">
-
-Installation
-------------
-
-Das Update ging dieses Mal, mit folgenden Befehlen, auf einen Rutsch.
-
-    cabal install --force-reinstalls pandoc
-    cabal install --force-reinstalls pandoc-citeproc
-
-
-Fehler innerhalb von Rumex
---------------------------
-
-Bei der ersten Durchsicht konnte ich keinen Fehler entdecken.
-Jedoch ein alter Fehler ist mir aufgefallen.
-Die Seite `sitemap.html` wurde nicht richtig dargestellt.
-Habe ich natürlich gleich behoben.
-Neue Version 0.8.3.8.
-
+<h2>Installation</h2>
+<p>Das Update ging dieses Mal, mit folgenden Befehlen, auf einen Rutsch.</p>
+<pre><code>cabal install --force-reinstalls pandoc
+cabal install --force-reinstalls pandoc-citeproc</code></pre>
+<h2>Fehler innerhalb von Rumex</h2>
+<p>Bei der ersten Durchsicht konnte ich keinen Fehler entdecken. Jedoch ein alter Fehler ist mir aufgefallen. Die Seite <code>sitemap.html</code> wurde nicht richtig dargestellt. Habe ich natürlich gleich behoben. Neue Version 0.8.3.8.</p>
 </div>
-
-
 <!-- schnipp -->
+
+
+
+
+
+
 <h1 id="pandoc-1.13.0.1">Pandoc 1.13.0.1</h1>
 <p><em>Am 29.08.2014 um 14:58 schrieb IT-Bayer</em></p>
 <p>Pandoc hat wieder eine neue Version heraus gebracht. Diese neue Version 1.13.0.1 (17 August 2014) muss natürlich auch getestet werden.</p>
@@ -173,7 +154,6 @@ Neue Version 0.8.3.8.
 <p>Der Zeitstemple / Kommentar, hinter der Überschrift, kann kopiert und für die alten Einträge verwendet werden.</p>
 <p><strong>Wichtig: Die alten Einträge müssen geändert werden.</strong></p>
 </div>
-<p>–&gt;</p>
 <h1 id="twitter-und-ttytter">Twitter und TTYtter</h1>
 <p><em>Am 23.03.2014 um 18:35 schrieb IT-Bayer</em></p>
 <p>Twitter verlangt jetzt eine SSL Verbindung.</p>
@@ -240,7 +220,7 @@ Compiled with texmath 0.6.6, highlighting-kate 0.5.6.1.
 <p><em>Am 27.01.2014 um 14:27 schrieb IT-Bayer</em></p>
 <p>Der Umbau der Titelzeile wurde gemacht um die Verwendung durch pandoc, Autor und Datum, besser umzusetzen.</p>
 <div class="weblog">
-<p>Es wird zwar nur mehr eine Überschrifszeile angezeigt. Dafür können die andere beider Zeilen für die Angaben des Autors bzw. des Datums verwendet werden. Diese beiden Angaben werden in der Online Version nicht angezeigt. Sie dienen lediglich für die META Angabe im HEAD Bereich der HTML Seite. Wir die Seite ausgedruckt werden diese beiden Angabe jedoch wieder eingeblendet.</p>
+Es wird zwar nur mehr eine Überschrifszeile angezeigt. Dafür können die andere beider Zeilen für die Angaben des Autors bzw. des Datums verwendet werden. Diese beiden Angaben werden in der Online Version nicht angezeigt. Sie dienen lediglich für die META Angabe im HEAD Bereich der HTML Seite. Wir die Seite ausgedruckt werden diese beiden Angabe jedoch wieder eingeblendet.
 </div>
 <h1 id="rumex-beschreibung-hinkt">Rumex Beschreibung hinkt</h1>
 <p><em>Am 06.12.2013 um 18:13 schrieb IT-Bayer</em></p>
@@ -258,7 +238,7 @@ Compiled with texmath 0.6.6, highlighting-kate 0.5.6.1.
 <div class="weblog">
 <p>Wie auch die <code>start.rx0s</code> wird die <code>weblog.rx0s</code> in der index.html immer ganz oben gehalten<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. Egal ob sich der Inhalt dieser Seite geändert hat.</p>
 <p>Als Seitengerüst für die WebLog Seite kann das Standard Gerüst einer <code>.rx0s</code> Seite verwendet werden. Es muss jedoch die Überschrift<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> mit dem Link aus der Seite genommen werden.</p>
-<p>Das Schlüsselwort <code>schnipp</code> bestimmt ob die WebLog Einträge auch auf der index.html oder nur im Archiv, die eigentliche Seite <a href="weblog.html" class="uri">weblog.html</a>, angezeigt werden.</p>
+<p>Das Schlüsselwort <code>schnipp</code> bestimmt ob die WebLog Einträge auch auf der index.html oder nur im Archiv, die eigentliche Seite <a href="weblog.html">weblog.html</a>, angezeigt werden.</p>
 </div>
 <h1 id="rumex-statische-dateien">Rumex Statische Dateien</h1>
 <p><em>Am 12.10.2013 um 23:18 schrieb IT-Bayer</em></p>
@@ -282,7 +262,7 @@ sudo ln -s /home/sb/.cabal/bin/pandoc /usr/local/bin/pandoc</code></pre>
 Heute wurde Rumex auf einem <a href="http://www.host1free.com">host1free.com</a> Server installiert. Eine weitere Testumgebung für Rumex.
 <div class="weblog">
 <p>Den Server bei <a href="http://www.host1free.com">host1free.com</a> habe ich mir schon vor einiger Zeit<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a> bestellt. Leider wollte er am Anfang nicht so wie er sollte. Dank des Supports von <em>Joseph</em> ging es dann aber schnell und Rumex konnte eingerichtet werden.</p>
-<p>Erreichbar ist der Server <del>zur Zeit nur unter seiner IP Adresse <a href="http://5.231.70.214" class="uri">http://5.231.70.214</a></del> unter der URL <a href="http://www.byvs.de">byvs.de</a>. <del>Es wird also noch ein Domainname gebraucht.</del> <del>Mal schauen wie ich das umsetzen.</del></p>
+<p>Erreichbar ist der Server <del>zur Zeit nur unter seiner IP Adresse <a href="http://5.231.70.214">http://5.231.70.214</a></del> unter der URL <a href="http://www.byvs.de">byvs.de</a>. <del>Es wird also noch ein Domainname gebraucht.</del> <del>Mal schauen wie ich das umsetzen.</del></p>
 <p>Die Geschwindigkeit des Server mit seinen <code>128MB RAM</code> ist bei Rumex völlig ausreichend. Muss ja nur <code>HTML</code> Dateien ausliefern.</p>
 <p>Interessant wir noch wie zuverlässig der Server ist.</p>
 </div>
@@ -299,20 +279,20 @@ WEBLOGAUTOR = &quot;IT-Bayer&quot;
 SEITENBANNER = &quot;rxtpl/img/rumex.png&quot;</code></pre>
 <p>Diese Parameter werden von den Startdateien eingebunden so dass die einzelnen Bashskripte nicht mehr angepasst werden müssen. Es reicht ein</p>
 <pre><code>ln -s ~/rumex-gh-pages/.rumex/bin/rumex-gvim.sh ~/bin/rumex-gvim</code></pre>
-<p>um die Startdatei für Rumex zu erstellen. Verzeichnisse und Parameter werden beim Starten automatisch ermittelt und gesetzt.</p>
+um die Startdatei für Rumex zu erstellen. Verzeichnisse und Parameter werden beim Starten automatisch ermittelt und gesetzt.
 </div>
 <h1 id="rumex-ftp-unterstüzung-jetzt-mit-sitecopy">Rumex FTP Unterstüzung jetzt mit sitecopy</h1>
 <p><em>Am 17.09.2013 um 17:24 schrieb IT-Bayer</em></p>
 <p>Das Programm <code>wput</code> wurde durch <code>sitecopy</code> ersetzt.</p>
 <div class="weblog">
-<p>Die FTP Unterstützung mittels <code>wput</code> hat nie sauber funktioniert. Genauer gesagt ein Update der vorhandenen Seiten. Mit <code>sitecopy</code> scheint es jetzt besser zu funktionieren. Die beiden FTP Test Installationen kann man sich <a href="http://rumex.html-5.me/">hier</a> und <a href="http://localstuff.zxq.net/">hier</a> ansehen.</p>
+Die FTP Unterstützung mittels <code>wput</code> hat nie sauber funktioniert. Genauer gesagt ein Update der vorhandenen Seiten. Mit <code>sitecopy</code> scheint es jetzt besser zu funktionieren. Die beiden FTP Test Installationen kann man sich <a href="http://rumex.html-5.me/">hier</a> und <a href="http://localstuff.zxq.net/">hier</a> ansehen.
 </div>
 <h1 id="rumex-sendet-nachrichten-direkt-an-twitter">Rumex sendet Nachrichten direkt an twitter</h1>
 <p><em>Am 11.09.2013 um 12:30 schrieb IT-Bayer</em></p>
 <p>Dank dem Programm <a href="http://www.floodgap.com/software/ttytter/">TTYtter for Perl</a> ist es nun möglich Texte aus Rumex direkt an <a href="http://www.twitter.com">Twitter</a> zu senden.</p>
 <div class="weblog">
 <p>Eigentlich ist es nicht Rumex der die Funktion zur Verfügung stellt. In der Rumex Konfiguration wurde nur die vim Kurztaste <code>,rtt</code> (RumexToTwitter) definiert. Wird eine Zeile markiert kann diese mit der Kurztaste <code>,rtt</code> an TTYtter weiterleitet werden. Nach der Weiterleitung wird die Zeile entfernt. Eine andere Variante die, die Zeile stehen lässt, findet man kommentiert in der <code>.rumex/bin/rumex.vim</code> Datei.</p>
-<p>Auch eine Link Verkürzung mit <a href="http://is.gd" class="uri">http://is.gd</a> kann Rumex jetzt anbieten, Kurztasten <code>,rkl</code>. Der Link für Rumex schaut dann so aus <a href="http://is.gd/az0x2a" class="uri">http://is.gd/az0x2a</a>. Eigentlich ist es aber TTYtter der Rumex diese Erweiterung bietet.</p>
+Auch eine Link Verkürzung mit <a href="http://is.gd">http://is.gd</a> kann Rumex jetzt anbieten, Kurztasten <code>,rkl</code>. Der Link für Rumex schaut dann so aus <a href="http://is.gd/az0x2a">http://is.gd/az0x2a</a>. Eigentlich ist es aber TTYtter der Rumex diese Erweiterung bietet.
 </div>
 <h1 id="datei-namen-umbenennen">Datei Namen umbenennen</h1>
 <p><em>Am 10.09.2013 um 18:45 schrieb IT-Bayer</em></p>
@@ -331,7 +311,7 @@ SEITENBANNER = &quot;rxtpl/img/rumex.png&quot;</code></pre>
 <p><em>Am 10.09.2013 um 11:33 schrieb IT-Bayer</em></p>
 <p>Eigentlich hat ja der beta Test von Rumex begonnen. Durch die neuen Erweiterungen breche ich vorerst den Beta Test ab.</p>
 <div class="weblog">
-<p>Die neuen Erweiterungen <code>tilda</code> und <code>weblog</code> erfordern noch ein paar Grundlegende Anpassungen darum habe ich mich entschlossen den Beta Test abzubrechen.</p>
+Die neuen Erweiterungen <code>tilda</code> und <code>weblog</code> erfordern noch ein paar Grundlegende Anpassungen darum habe ich mich entschlossen den Beta Test abzubrechen.
 </div>
 <h1 id="weblog-layout-auf-der-startseite">WebLog Layout auf der Startseite</h1>
 <p><em>Am 10.09.2013 um 11:27 schrieb IT-Bayer</em></p>
@@ -346,13 +326,13 @@ SEITENBANNER = &quot;rxtpl/img/rumex.png&quot;</code></pre>
 <div class="weblog">
 <dl>
 <dt>Rumex Beta Tester</dt>
-<dd>Die Seite <a href="http://www.hochfelder.de">hochfelder.de</a> hat auch auf Rumex umgestellt und beteiligt sich somit am Beta Test.
+<dd><p>Die Seite <a href="http://www.hochfelder.de">hochfelder.de</a> hat auch auf Rumex umgestellt und beteiligt sich somit am Beta Test.</p>
 </dd>
 <dt>Twitter</dt>
-<dd><a href="https://twitter.com/itbayer"><img src="bilder/twitter_100_.png" alt="Twitter" /></a> Rumex <a href="https://twitter.com/itbayer">zwitschert</a> seine Änderungen jetzt ins Netz.
+<dd><p><a href="https://twitter.com/itbayer"><img src="bilder/twitter_100_.png" alt="Twitter" /></a> Rumex <a href="https://twitter.com/itbayer">zwitschert</a> seine Änderungen jetzt ins Netz.</p>
 </dd>
 <dt>Beta Phase</dt>
-<dd><a href="rss.html#Rumex%20geht%20in%20die%20Beta%20Phase">Rumex geht in die Beta Phase</a>
+<dd><p><a href="rss.html#Rumex%20geht%20in%20die%20Beta%20Phase">Rumex geht in die Beta Phase</a></p>
 </dd>
 </dl>
 </div>
@@ -361,9 +341,11 @@ SEITENBANNER = &quot;rxtpl/img/rumex.png&quot;</code></pre>
 <p>Da jetzt die neue <a href="weblog.html">Weblog</a> Funktion eingebaut wurde, wird diese auch auf der Startseite getestet.</p>
 <div class="weblog">
 <p>Mit der Weblog Funktion von Rumex können kleine Nachrichten auf der Seite erstellt werden. Diese Nachrichten werden dabei mit Datum, Uhrzeit und Autor versehen.</p>
-<p>Wie sich diese neue Funktion auf der Startseite macht soll dieser Beitrag zeigen.</p>
+Wie sich diese neue Funktion auf der Startseite macht soll dieser Beitrag zeigen.
 </div>
 <!-- vim: set ft=pandoc: -->
+
+
 <section class="footnotes">
 <hr />
 <ol>

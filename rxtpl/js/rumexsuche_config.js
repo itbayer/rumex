@@ -9,5 +9,5 @@ suchseite[6] = new Array("Abo Seite - Newsletter - RSS Feed", 'rss.html');
 suchseite[7] = new Array("Suche", 'suche.html');
 suchseite[8] = new Array("vim", 'vim.html');
 suchseite[9] = new Array("Start", 'start.html');
-suchseite[10] = new Array("WebLog", 'weblog.html');
+suchseite[10] = new Array("WebLog Seite", 'weblog.html');
 suchseite[11] = new Array("Weblog Beschreibung", 'weblog_beschreibung.html');

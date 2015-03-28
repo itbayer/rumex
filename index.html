@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <!-- rumex Version -->
-<meta name="generator" content="rumex 0.8.3.8">
+<meta name="generator" content="rumex 0.8.3.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,7 +13,7 @@
 <link rel="icon" type="image/gif" href="favicon.gif" />
 
   <meta name="author" content="Stefan Blechschmidt">
-  <meta name="dcterms.date" content="2014-12-31">
+  <meta name="dcterms.date" content="2015-03-28">
 
   <title>IT Bayer’s rumex (github.com Version)</title>
   <style type="text/css">code{white-space: pre;}</style>
@@ -28,7 +28,7 @@
 <meta name="DC.creator" content="IT-Bayer (Stefan Blechschmidt)" />
 
 <!-- rumex Speicherdatum der Datei -->
-  <meta name="DCTERMS.modified" scheme="DCTERMS.W3CDTF" content="2015-01-22" />
+  <meta name="DCTERMS.modified" scheme="DCTERMS.W3CDTF" content="2015-03-28" />
 
 <!-- jquery fest eingebunden, so kann moot.it deaktiviert und
 	weblog immer noch verwendet werden. -->
@@ -76,7 +76,7 @@
 <header>
 <h1 class="title"><a title="zur&uuml;ck" href="javascript:history.back()">IT Bayer’s rumex <sup style="font-size: .4em;">(github.com Version)</sup></a></h1>
 <h2 class="author">Stefan Blechschmidt</h2>
-<h3 class="date">2014-12-31</h3>
+<h3 class="date">2015-03-28</h3>
 </header>
 <div id="seite">
 <!-- START .indexliste -->
@@ -92,10 +92,10 @@
 <p>Der aktuelle Stand dieses Baukastens kann als <a href="https://github.com/itbayer/rumex/archive/gh-pages.zip">ZIP Datei holen</a>.</p>
 <p>Aktuell wird dieser Baukasten auch folgenden Seiten eingesetzt bzw. getestet.</p>
 <ul>
-<li><a href="http://www.it-bayer.de" class="uri">http://www.it-bayer.de</a></li>
-<li><a href="http://www.byvs.de" class="uri">http://www.byvs.de</a></li>
-<li><a href="http://www.hochfelder.de" class="uri">http://www.hochfelder.de</a></li>
-<li><a href="http://www.auggenbach.de" class="uri">http://www.auggenbach.de</a></li>
+<li><a href="http://www.it-bayer.de">http://www.it-bayer.de</a></li>
+<li><a href="http://www.byvs.de">http://www.byvs.de</a></li>
+<li><a href="http://www.hochfelder.de">http://www.hochfelder.de</a></li>
+<li><a href="http://www.auggenbach.de">http://www.auggenbach.de</a></li>
 </ul>
 <!-- ENDE .indexliste -->
 </div>
@@ -106,21 +106,23 @@ Weblog
 </h2>
 <!-- START .weblogblock -->
 <div class="weblogblock">
-<h1 id="pandoc-1.13.2">Pandoc 1.13.2</h1>
+<h1>Pandoc 1.13.2</h1>
 <p><em>Am 31.12.2014 um 09:40 schrieb IT-Bayer</em></p>
 <p>Am 20. Dezember ist eine neuen Version von pandoc heraus gekommen. Da ich letztens schon Probleme mit einen Update von pandoc hatte <em>(siehe Weblogeintrag “Pandoc 1.13.0.1”)</em> habe ich die Version 1.13.1 nicht mehr installiert.</p>
 <p>Jetzt zu Weihnachten, wo ich endlich wieder einmal Zeit habe, wage ich das Update auf 1.13.2. So wie es ausschaut sind einige Neuerungen bezüglich der Lese- Schreibmodule hinzugekommen. Ein zusätzlicher Grund sich das Update einzuspielen.</p>
 <div class="weblog">
-<h2 id="installation">Installation</h2>
+<h2>Installation</h2>
 <p>Das Update ging dieses Mal, mit folgenden Befehlen, auf einen Rutsch.</p>
 <pre><code>cabal install --force-reinstalls pandoc
 cabal install --force-reinstalls pandoc-citeproc</code></pre>
-<h2 id="fehler-innerhalb-von-rumex">Fehler innerhalb von Rumex</h2>
+<h2>Fehler innerhalb von Rumex</h2>
 <p>Bei der ersten Durchsicht konnte ich keinen Fehler entdecken. Jedoch ein alter Fehler ist mir aufgefallen. Die Seite <code>sitemap.html</code> wurde nicht richtig dargestellt. Habe ich natürlich gleich behoben. Neue Version 0.8.3.8.</p>
 </div>
 <h4 class="webloglink">
-<a href="weblog.html">… ältere Weblog Einträge anzeigen</a>
+<a href="weblog.html">… Weblog Seite mit weiteren Einträgen anzeigen</a>
 </h4>
+
+
 <!-- ENDE .weblogblock -->
 </div>
 <!-- ENDE .indexliste -->
@@ -128,10 +130,12 @@ cabal install --force-reinstalls pandoc-citeproc</code></pre>
 <h2 id="seitenübersicht" class="abschnitt seiten">Seitenübersicht</h2>
 <!-- START .indexliste -->
 <div class="indexliste">
-<h1 id="weblog-beschreibung"><a href="weblog_beschreibung.html">Weblog Beschreibung</a></h1>
+<h1><a href="weblog_beschreibung.html">Weblog Beschreibung</a></h1>
 <p class="datum">
-Letzte Bearbeitung: 2014-07-11
+Letzte Bearbeitung: 2015-03-27
 </p>
+
+
 <p>Diese kleine Erweiterung soll eine Art Blog innerhalb Rumex ermöglichen. Besser gesagt ist diese Erweiterung eher ein Weblog Funktion.</p>
 <p>Der Unterschied zu den eigentlichen Rumex Seiten ist nicht sehr groß. Folgt nach einer <code>h1</code> Überschrift ein <code>div</code> Tag mit der <code>weblog</code> Klasse wird der Text innerhalb dieses <code>div</code> Tags ausgeblendet und mit dem Schriftzug <code>... weiter lesen</code> ersetzt. Die Überschrift und der Text <code>... weiter lesen</code> bekommen eine Link Eigenschaft die den ausgeblendeten Text bei Anforderung einblendet.</p>
 <p>Diese Funktion kann auch in den normalen Seiten verwendet werden.</p>
