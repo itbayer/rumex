@@ -179,7 +179,7 @@ index.rx0x aufgenommen.
 	# Umgebaut wegen, siehe oben, Weblog Überschrift.
 	# print INDEX "#### [... ältere Weblog Einträge anzeigen]($htmlname) {.webloglink}\n\n" if($name eq $weblog_rx);
 	# Link Beschriftung geändert ::  März 2015 :: print INDEX "<h4 class=\"webloglink\"><a href=\"$htmlname\">… &auml;ltere Weblog Eintr&auml;ge anzeigen</a></h4>\n\n" if($name eq $weblog_rx);
-    print INDEX "<h4 class=\"webloglink\"><a href=\"$htmlname\">… Weblog Seite mit weiteren Eintr&auml;gen anzeigen</a></h4>\n\n" if($name eq $weblog_rx);
+    print INDEX "<h4 class=\"webloglink\"><a href=\"$htmlname\">… komplette Weblog Seite anzeigen</a></h4>\n\n" if($name eq $weblog_rx);
 
 
 	# DIV .weblog schließen

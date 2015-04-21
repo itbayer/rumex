@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Stefan Blechschmidt">
+  <title>Rumex Beschreibung</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="../rxtpl/css/statik.css">
+</head>
+<body>
+<header>
+<h1 class="title">Rumex Beschreibung</h1>
+<h2 class="author">Stefan Blechschmidt</h2>
+<h3 class="date">2013, 2014, 2015</h3>
+</header>
+<h1 id="vorwort">Vorwort</h1>
+<p>Auf dieser Seite versuche ich meinen Rumex Baukasten zu beschreiben. Eine Beschreibung zu erstellen schiebe ich schon seit Anfang an. Da ich Rumex mittlerweile schon seit drei Jahren verwende und in letzter Zeit keine großen Veränderungen mehr einbauen musste ist es Zeit sich der Beschreibung zu widmen.</p>
+<p><strong>Beweggründe</strong></p>
+<p>Es gibt immer mehr Systeme zum Erstellen und Verwalten von Internetseiten. Probiert habe ich schon viele und mit den meisten war ich auch sehr zufrieden. Was mich aber immer gestört hat waren die ständigen Updates.</p>
+<p><em>Irgendwie hat sich alles immer gebissen</em></p>
+<p>Einmal brauchte das, ich nenne es stellvertretend für alle Systeme, CMS eine besondere Version eines Programms. Dann war es wieder umgekehrt ein Update des Programms konnte nicht gemacht werden weil das CMS noch nicht damit zurecht kam.</p>
+<p>Ab und zu kam es mir so vor als ob ich die meiste Zeit damit verbrachte das CMS und dessen Plattform dazu zu überreden mit einander zu arbeiten.</p>
+<p>Ich wünschte mir immer mehr eine einfache Internetseite, eine HTML Seite, so wie in früheren Zeiten.</p>
+<p>Irgendwann bin ich dann auf <code>markdown</code> und <code>pandoc</code> gestoßen und die Rumex Idee ist entstanden.</p>
+<h2 id="der-name-rumex">Der Name Rumex</h2>
+<p>Rumex ist die lateinische Bezeichnung für den <a href="http://de.wikipedia.org/wiki/Ampfer">Ampfer</a> und dieser taucht in der Natur dann auf, wenn der Boden Überdüngt, Verdichtung und Beschädigt ist. Rumex gehört zu den sogenannten Pionier Pflanzen. Er ist ein Lückenfüller.</p>
+<p>Genau das soll Rumex auch sein ein Lückenfüller für alle die diese Systeme satt haben.</p>
+<h1 id="kurzbeschreibung">Kurzbeschreibung</h1>
+<h1 id="die-index-seite">Die Index Seite</h1>
+<h1 id="seiten-arten">Seiten Arten</h1>
+<p>Rumex drei Arten von Seiten ein. Diese Verwendung wird über die Dateiendung gesteuert. Eine Zahl in dieser Dateiendung bestimmt außerdem ob ein Inhaltsverzeichnis erstellt werden soll und bis welcher Tiefe es angezeigt wird. Der Aufbau der Datei Endung ist dabei folgender</p>
+<ul>
+<li>Die ersten beiden Zeichen <code>rx</code> kennzeichnen eine Rumex Datei</li>
+<li>Das dritte Zeichen, immer eine Zahl, kennzeichnet ob die Datei ein Inhaltsverzeichnis besitzt und bis welcher Ebene dieses eingebunden werden soll.</li>
+<li>Das vierte Zeichen zeigt die Verwendung, sprich Einbindung an.</li>
+</ul>
+<p><strong>Bedeutung der Zahl in der Dateiendung</strong></p>
+<p>0 Datei ohne Inhaltsverzeichnis.</p>
+<p>1 Datei mit Inhaltsverzeichnis bis zur ersten Ordnung.</p>
+<p>2 Datei mit Inhaltsverzeichnis bis zur zweiten Ordnung.</p>
+<p>3 Datei mit Inhaltsverzeichnis bis zur dritten Ordnung.</p>
+<p>4 Datei mit Inhaltsverzeichnis bis zur vierten Ordnung.</p>
+<p>5 Datei mit Inhaltsverzeichnis bis zur fünften Ordnung.</p>
+<p>6 Datei mit Inhaltsverzeichnis bis zur sechsten Ordnung.</p>
+<h2 id="verwendungskennzeichnung">Verwendungskennzeichnung</h2>
+<h2 id="rx0w">rx0w</h2>
+<h2 id="rx0x">rx0x</h2>
+<h1 id="sonderseiten">Sonderseiten</h1>
+<h2 id="index">index</h2>
+<h2 id="suche">suche</h2>
+<h2 id="start">start</h2>
+<h2 id="weblog">weblog</h2>
+<h2 id="sitemap">sitemap</h2>
+<h2 id="rss">rss</h2>
+<h1 id="installation">Installation</h1>
+<p>Rumex kann in zwei Stufen verwendet werden. Einmal als lokale, private Installation<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> und als dann noch als öffentliche Installation.</p>
+<h2 id="vorbereitung-des-rechners">Vorbereitung des Rechners</h2>
+<p>Rumex ist auf ein *nix System ausgerichtet. Auf diesem sollten folgende Programme installiert sein:</p>
+<ul>
+<li>bash</li>
+<li>make</li>
+<li>perl</li>
+<li>git</li>
+<li>pandoc</li>
+<li>imagemagick</li>
+<li>wget</li>
+<li>sitecopy</li>
+<li>vim (g)vim</li>
+<li>texlive</li>
+</ul>
+<p>Wer mit dem Editor <code>vim</code> zurecht kommt sollte sich auch <code>gvim</code> installieren. Rumex besitzt eine <code>gvim</code> Erweiterung die, die Arbeit bzw. die Suche nach dem richtigen Befehl am Anfang um einiges erleichtert.</p>
+<p><code>texlive</code> wird nur gebraucht wenn man auch PDF Dateien erstellen möchte.</p>
+<p><code>sitecopy</code> wird nur gebraucht wenn man die Daten per FTP hoch laden möchte.</p>
+<p>Bei Debian dürfte dies die nachfolgender Zeile erledigen.</p>
+<pre><code>sudo apt-get install make perl git-core \
+pandoc imagemagick sitecopy gvim texlive</code></pre>
+<h2 id="die-lokale-installation">Die lokale Installation</h2>
+<p>Für die Installation auf deinem Rechner musst zu erst das ZIP bzw. das tar.gz Archiv vom github Server holen und entpacken werden.</p>
+<pre><code>wget https://github.com/itbayer/rumex/archive/gh-pages.zip
+unzip gh-pages.zip</code></pre>
+<p>bzw.</p>
+<pre><code>wget https://github.com/itbayer/rumex/archive/gh-pages.tar.gz
+tar -xzvf gh-pages.tar.gz</code></pre>
+<p>Nach dem entpacken wechselt man in das Verzeichnis <code>rumex-gh-pages/.rx</code> und starte die Befehle <code>make install</code> und <code>make show</code>.</p>
+<pre><code>cd rumex-gh-pages/.rx/
+make install
+make show</code></pre>
+<p>Rumex ist jetzt lokal installiert und zeigt die erste Seite an. Auf dieser findet man eine kurz Information der Schritte die man noch machen sollte. Diese Schritte sind vor allen wichtig wenn man seine Seiten veröffentlichen möchte.</p>
+<h2 id="veröffentlichen-der-seite">Veröffentlichen der Seite</h2>
+<p>In der zweiten Stufen kann die Seite auf drei Arten veröffentlicht werden.</p>
+<p>1. Hosting auf <a href="http://www.github.com">Github</a></p>
+<p>2. Hosting auf einem Server mit git Unterstützung</p>
+<p>3. Hosting klassisch per FTP</p>
+<h3 id="veröffentlichung-auf-github">Veröffentlichung auf github</h3>
+<p>TODO hier fehlt noch was</p>
+<h3 id="veröffentlichung-auf-einem-server-mit-git-unterstützung">Veröffentlichung auf einem Server mit git Unterstützung</h3>
+<h3 id="veröffentlichung-auf-einem-server-mit-ftp">Veröffentlichung auf einem Server mit FTP</h3>
+<h1 id="konfiguration">Konfiguration</h1>
+<h2 id="rumex-auf-dich-einstellen">Rumex auf dich einstellen</h2>
+<p>Nach der Installation muss Rumex noch auf dich eingestellt werden. Genauer gesagt sollten folgende Angabe für deine neuen Seite angepasst werden.</p>
+<ul>
+<li>Url deiner Seite</li>
+<li>Impressum</li>
+<li>Kopf / Fusszeile</li>
+<li>Logo</li>
+</ul>
+<p>Eine Kurzbeschreibung dieser Anpassungen findest du, nach der Installation, auf der ersten Seite<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> die dir Rumex zeigt.</p>
+<h2 id="rumex-konfigurationsvariable">Rumex Konfigurationsvariable</h2>
+<p>In diesem Abschnitt werden alle Varablen die Rumex verwendet beschrieben. Diese Variablen befinden sich in zwei Dateien. Zu einem ist das die Vorgabe Datei <code>.rumex/makefile/config.mk</code> und die Benutzerdatei <code>.rx/config.mk</code>, wobei die Einträge der Vorgabe Datei von den Einträgen der Benutzer Datei ,soweit vorhanden, überschrieben werden.</p>
+<p>Es sind nicht gewünschten Einträge in der Benutzerdatei vorhanden, braucht man die entsprechende Variable nur in die Benutzerdatei einzutragen.</p>
+<p><strong>URL</strong> Definiert die URL über die die Seite erreichbar ist. Die URL muss hier ohne abschließendes <code>/</code> eingegeben werden.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">ja</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>URL=&quot;http://www.it-bayer.de/rumex&quot;</code></pre>
+<hr>
+
+<p><strong>INDEX_TITEL</strong> Definiert den Titel der Seite. Es können auch HTML Tags verwendet werden.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">ja</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel: (eine Zeile)</p>
+<pre><code>INDEX_TITEL = &quot;IT Bayer&#39;s rumex &lt;sup style=\&quot;font-size: .4em;\&quot;&gt; 
+(github.com Version)&lt;/sup&gt;&quot;</code></pre>
+<hr>
+
+<p><strong>INDEX_AUTOR</strong> Definiert den Autor der Seite.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">ja</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>INDEX_AUTOR = &quot;Stefan Blechschmidt&quot;!</code></pre>
+<hr>
+
+<p><strong>INDEX_DATUM</strong> Definiert den Stand, Datum der Seite.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>INDEX_DATUM = $(shell ls index.rx0x -l --time-style=+%Y-%m-%d | awk &#39;{print $$6}&#39;)</code></pre>
+<hr>
+
+<p><strong>RSS_TITEL</strong> Definiert den Titel der RSS Seite.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">ja</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>RSS_TITEL = &quot;Neuigkeiten von rumex Baukasten&quot;</code></pre>
+<hr>
+
+<p><strong>CSSALL</strong> Definiert die CSS Datei für die Formatierung aller Seiten.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>CSSALL = &quot;rxtpl/css/all.css&quot;</code></pre>
+<hr>
+
+<p><strong>CSSSCREEN</strong> Definiert die CSS Datei für die Formatierung der Bildschirmausgabe.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>CSSSCREEN = &quot;rxtpl/css/screen.css&quot;</code></pre>
+<hr>
+
+<p><strong>CSSPRINT</strong> Definiert die CSS Datei für die Formatierung der Druckausgabe.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>CSSPRINT = &quot;rxtpl/css/print.css&quot;</code></pre>
+<hr>
+
+<p><strong>CSSHANDHELD</strong> Definiert die CSS Datei für die Formatierung Mobiler Endgeräte.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>CSSHANDHELD = &quot;rxtpl/css/handheld.css&quot;</code></pre>
+<hr>
+
+<p><strong>SEITENBANNER</strong> Definiert die CSS Datei für das Seitenbanner.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">ja</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>SEITENBANNER = &quot;rxtpl/img/rumex.png&quot;</code></pre>
+<hr>
+
+<p><strong>MOOTIT</strong> Kontoname für die Diskusionserweiterung mittels moot.it. Wird diese Variable kommentiert ist diese Erweiterung ausgeschaltet.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">ja</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code># MOOTIT = &quot;rumex&quot;</code></pre>
+<hr>
+
+<p><strong>WEBLOGAUTOR</strong> Diese Variable definert den Autor der Weblog Einträge.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">ja</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>WEBLOGAUTOR = &quot;IT-Bayer&quot;</code></pre>
+<hr>
+
+<p><strong>META_PUBLISHER</strong> Angaben zum Autor der HTML Seite.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">ja</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>META_PUBLISHER = &quot;IT-Bayer&quot;</code></pre>
+<hr>
+
+<p><strong>META_CREATOR</strong> Angaben zum Autor der HTML Seite.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">ja</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>META_CREATOR = &quot;IT-Bayer (Stefan Blechschmidt)&quot;</code></pre>
+<hr>
+
+<p><strong>RUMEXSUCHE</strong> Verzeichnis in dem sich das JavaScript für die Suche befindet.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>RUMEXSUCHE = &quot;rxtpl/js&quot;</code></pre>
+<hr>
+
+<p><strong>FAVICON</strong> Definiert das Favicon Bild der Seite.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>FAVICON = &quot;favicon.gif&quot;</code></pre>
+<hr>
+
+<p><strong>SITECOPY</strong> Definiert das Programm für die FTP Upload Funktion. Ist diese Variabel kommentiert wird git verwendet.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">ja</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>#SITECOPY = /usr/bin/sitecopy</code></pre>
+<hr>
+
+<p>Die TEMPLATE Dateien definieren den Seitenaufbau. Hierzu werden vier Dateien verwendet.</p>
+<ol type="1">
+<li>HTML_TEMPLATE</li>
+<li>KOPF_TEMPLATE</li>
+<li>HEADER_TEMPLATE</li>
+<li>FUSS_TEMPLATE</li>
+</ol>
+<p>Ist im Verzeichnis <code>rx/</code> eine entsprechende Datei vorhanden wird diese verwendet. Ansonst wird die Datei aus dem Verzeichnis <code>.rumex/default</code> eingebunden.</p>
+<hr>
+
+<p><strong>HTML_TEMPLATE</strong> HTML Vorlage Datei für die Seite.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel: (eine Zeile)</p>
+<pre><code>HTML_TEMPLATE = $(shell if [ -f ../.rx/html.template ];
+then echo \&quot;../.rx/html.template\&quot;;
+else echo \&quot;../.rumex/default/html.template\&quot;;
+fi)</code></pre>
+<hr>
+
+<p><strong>KOPF_TEMPLATE</strong> Definiert die Kopfdatei der Seite.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel: (eine Zeile)</p>
+<pre><code>KOPF_TEMPLATE = $(shell if [ -f ../.rx/kopf.html ];
+then echo \&quot;../.rx/kopf.html\&quot;;
+else echo \&quot;../.rumex/default/kopf.html\&quot;;
+fi)</code></pre>
+<hr>
+
+<p><strong>HEADER_TEMPLATE</strong> Definiert die Datei in der Header Einträge der Seite vorhanden sind.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel: (eine Zeile)</p>
+<pre><code>HEADER_TEMPLATE = $(shell if [ -f ../.rx/header.html ];
+then echo \&quot;../.rx/header.html\&quot;;
+else echo \&quot;../.rumex/default/header.html\&quot;;
+fi)</code></pre>
+<hr>
+
+<p><strong>FUSS_TEMPLATE</strong> Definiert die Datei der Informationen des Fußbereiches.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel: (eine Zeile)</p>
+<pre><code>FUSS_TEMPLATE = $(shell if [ -f ../.rx/fuss.html ];
+then echo \&quot;../.rx/fuss.html\&quot;;
+else echo \&quot;../.rumex/default/fuss.html\&quot;;
+fi)</code></pre>
+<p>Jede der drei Seitentypen bekommt in HEADER der HTML Datei die <code>meta_robots</code> Variable mitgeliefert. Anhand der nachfolgenden drei Konfigurationsvariablen werden diese Parameter für jeden Seitentyp gesetzt.</p>
+<hr>
+
+<p><strong>META_ROBOTS_STANDARD</strong> Meta Angabe für die Standard Seiten <code>rx?s</code>.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">ja</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>META_ROBOTS_STANDARD = &quot;all&quot;</code></pre>
+<hr>
+
+<p><strong>META_ROBOTS_VERSTECKT</strong> Meta Angabe für die versteckten Seiten <code>rx?v</code>.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">ja</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>META_ROBOTS_VERSTECKT = &quot;noindex,nofollow,noarchive&quot;</code></pre>
+<hr>
+
+<p><strong>META_ROBOTS_WEITERLEITUNG</strong> Meta Angabe für die Seiten die weiterleiten <code>rx?w</code>.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">ja</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>META_ROBOTS_WEITERLEITUNG = &quot;noindex,follow,noarchive&quot;</code></pre>
+<hr>
+
+<p><strong>INDEX</strong> Programm zum erstellen der <code>index.rx0x</code> Datei.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>INDEX=&quot;../.rumex/bin/index.pl&quot;</code></pre>
+<hr>
+
+<p><strong>RX2RSS</strong> Programm zum Erstellen der RSS Feed Datei.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>RX2RSS = &quot;../.rumex/bin/rx2rss.pl&quot;</code></pre>
+<hr>
+
+<p><strong>RSS_FILE</strong> Name der RSS Datei die in den Quelltext eingebaut wird.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>RSS_FILE = &quot;rss.xml&quot;</code></pre>
+<hr>
+
+<p><strong>RSS_EXTERN</strong> Verwenden einer externen RSS Seite. Ist diese Seite gesetzt wird die RSS Seite der angegebenen URL verwendet.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">ja</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>#RSS_EXTERN = &quot;http://www.it-bayer.de/rss.xml&quot;</code></pre>
+<hr>
+
+<p><strong>SITEMAP_XML</strong> Programm zum erstellen der XML Sitemap Datei</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>SITEMAP_XML = &quot;../.rumex/bin/sitemap_xml.pl&quot;</code></pre>
+<hr>
+
+<p><strong>SITEMAP_XML_FILE</strong> Zieldatei der Sitemap Datei.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>SITEMAP_XML_FILE = &quot;../sitemap.xml&quot;</code></pre>
+<hr>
+
+<p><strong>SITEMAP_RX</strong> Programm zum erstellen der rx0v Sitemap Datei.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>SITEMAP_RX = &quot;../.rumex/bin/sitemap_rx.pl&quot;</code></pre>
+<hr>
+
+<p><strong>SITEMAP_RX_FILE</strong> Zieldatei der HTML Sitemap Datei.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>SITEMAP_RX_FILE = &quot;sitemap.rx0v&quot;</code></pre>
+<hr>
+
+<p><strong>BVZ</strong> Verzeichnis in dem sich die Bilder befinden.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>BVZ=&quot;../bilder&quot;</code></pre>
+<hr>
+
+<p><strong>PANDOC</strong> Pandoc Programm.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<hr>
+
+<p><strong>SUCHE</strong> Programm zum Erstellen der <code>rumexsuche_config.js</code>.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>SUCHE = &quot;../.rumex/bin/suche.pl&quot;</code></pre>
+<hr>
+
+<p><strong>SUCHE_JS_CONFIG</strong> Ziel Datei für die JavaScript Suche.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>SUCHE_JS_CONFIG=&quot;../$(RUMEXSUCHE)/rumexsuche_config.js&quot;</code></pre>
+<hr>
+
+<p><strong>META_GENERATOR</strong> Rumex Versionshinweis für die HTML Dateien.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Datei</th>
+<th style="text-align: center;">Vorgabe</th>
+<th style="text-align: center;">Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">vorhanden</td>
+<td style="text-align: center;">ja</td>
+<td style="text-align: center;">nein</td>
+</tr>
+</tbody>
+</table>
+<p>Beispiel:</p>
+<pre><code>META_GENERATOR = &quot;rumex &quot;$(shell cat ../.rumex/default/version.txt)</code></pre>
+<h1 id="diskussion">Diskussion</h1>
+<h2 id="moot.it">moot.it</h2>
+<p>TODO hier fehlt noch die Beschreibung</p>
+<ul>
+<li><p>ein/ausschalten</p></li>
+<li><p>Kontoname einstellen</p></li>
+</ul>
+<h1 id="weblog-1">Weblog</h1>
+<h1 id="rss-feed">RSS Feed</h1>
+<h1 id="vim-kurztasten">Vim Kurztasten</h1>
+<p>Alle Rumex Kurztasten, für den Editor VIM, beginnen mit einem <code>,r</code><a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>. Für die Bedienung von Rumex braucht mein nur ein paar. Viele der Kurztasten beinhalten eine Kombination einzelner Kurztasten bzw. Befehle.</p>
+<p>Am Anfang ist es sicher einfacher GVIM zu verwenden, da hier ein Menü eingebaut ist welches unter anderem auch die Kurztasten anzeigt.</p>
+<p>Wer jedoch mit der <a href="#homepage-aenderung-schnell-und-immer-aktuell">tilda</a> Unterstützung arbeitet sollte sich schon ein paar Kurztasten einprägen.</p>
+<h2 id="textbausteine">Textbausteine</h2>
+<p>Mittels dieser Kurztasten können Textbausteine eingebunden werden.</p>
+<h3 id="rnd-rumexneuedatei"><code>,rnd</code> (RumexNeueDatei)</h3>
+<p>Erstellt ein neues Datei Gerüst. Dabei wird der Dateiname gleich mit eingebunden.</p>
+<p><strong>So schaut’s aus</strong></p>
+<pre><code>% vim-kurztasten
+%
+%
+
+
+&lt;!--
+
+ [vim-kurztasten](vim-kurztasten.html)
+ =======================================================
+
+Vortext INDEX
+
+--&gt;
+
+Vortext INDEX und SEITE
+
+&lt;!-- schnipp --&gt;
+
+TEXT DER SEITE
+
+&lt;!-- vim: set ft=pandoc: --&gt;</code></pre>
+<h3 id="rnn-rumexneuenachricht"><code>,rnn</code> (RumexNeueNachricht)</h3>
+<p>Erstellt einen neuen News Eintrag. Diese Kurztaste macht eigentlich nur in der Datei <code>rss.rx0x</code> Sinn. Das Datum hinter dem Titel, Überschrift 1, wird von Rumex gesetzt, ist also immer die aktuelle Systemzeit beim ausführen von <code>,rnn</code>.</p>
+<pre><code> # Neue Nachricht &lt;!-- 2013/11/10 00:30 --&gt;
+
+&lt;!--
+!&gt; Link: http://www.it-bayer.de/rumex/
+!&gt; Autor: IT-Bayer
+!&gt; Kategorie: Neues
+--&gt;
+
+Ab hier geht die neuen Nachricht los.</code></pre>
+<h3 id="rwl-rumexweiterleitung"><code>,rwl</code> (RumexWeiterLeitung)</h3>
+<p>Erstellt einen neue Weiterleitungsseite.</p>
+<p><strong>So schaut’s aus</strong></p>
+<pre><code>% Weiterleitung nach ....html
+%
+%
+
+
+&lt;script language=&quot;javascript&quot;&gt;
+&lt;!--
+//window.location.href=&quot;....html&quot;;
+// --&gt;
+&lt;/script&gt;</code></pre>
+<p>Anmerkung: Die Zeile <code>window.location.href=....html;</code> wurde hier Kommentiert da sonst die javascript Weiterleitung greift. Normalerweise findet man kein <code>//</code> vor der Zeile <code>window.location.href=....html</code>.</p>
+<h3 id="rmk-rumexmootitkommentar"><code>,rmk</code> (RumexMootitKommentar)</h3>
+<p>Erstellt einen Moot.it Kommentar Abschnitt. Als Kennzeichnung wird der Dateiname ohne <code>rx??</code> eingebaut / angehängt.</p>
+<pre><code> # Kommentare
+
+&lt;a class=&quot;moot&quot; href=&quot;https://moot.it/i/rumex/blog/vim-kurztasten&quot;&gt;&lt;/a&gt;</code></pre>
+<h3 id="rnb-rumexneuenweblog"><code>,rnb</code> (RumexNeuenweBlog)</h3>
+<p>Erstelle einen neuen Weblog Eintrag.</p>
+<pre><code> # Rumex WebLog
+
+_am 09.09.2013 um 15:21 schrieb IT-Bayer_
+
+Text für den Eintrag
+
+&lt;div class=&quot;weblog&quot;&gt;
+Text der vorerst ausgeblendet ist.
+&lt;/div&gt;</code></pre>
+<h2 id="git-kommandos">Git Kommandos</h2>
+<h3 id="rgp-rumexgitpull"><code>,rgp</code> (RumexGitPull)</h3>
+<p>Git pull</p>
+<h3 id="rgs-rumexgitstatus"><code>,rgs</code> (RumexGitStatus)</h3>
+<p>Git status</p>
+<h2 id="text-formatierung">Text Formatierung</h2>
+<h3 id="rff-rumexformatfett"><code>,rff</code> (RumexFormatFett)</h3>
+<p>Markierte Textstelle fett darstellen</p>
+<h3 id="rfk-rumexformatkursiv"><code>,rfk</code> (RumexFormatKursiv)</h3>
+<p>Markierte Textstelle kursiv darstellen</p>
+<h3 id="rfl-rumexformatliste"><code>,rfl</code> (RumexFormatListe)</h3>
+<p>Markierte Zeilen in eine Liste wandeln</p>
+<h3 id="rfn-rumexformatnummernliste"><code>,rfn</code> (RumexFormatNummernliste)</h3>
+<p>Markierte Zeile in eine Nummernliste wandeln</p>
+<h3 id="rfb-rumexformatblock"><code>,rfb</code> (RumexFormatBlock)</h3>
+<p>Markierte Zeile in einen Block wandeln</p>
+<dl>
+<dt>,rfc</dt>
+<dd><p>Markierte Zeile als Code darstellen</p>
+</dd>
+<dt>,spn2</dt>
+<dd><p>Text mit 2er Spalten Formatierung umschließen</p>
+</dd>
+<dt>,spn3</dt>
+<dd><p>Text mit 3er Spalten Formatierung umschließen</p>
+</dd>
+<dt>,spn4</dt>
+<dd><p>Text mit 4er Spalten Formatierung umschließen</p>
+</dd>
+</dl>
+<h2 id="make-befehle">Make Befehle</h2>
+<h3 id="rma-rumexmakeall"><code>,rma</code> (RumexMakeAll)</h3>
+<p>Speichert alle offenen Dokumente und erstellt daraus die HTML Datei.</p>
+<h3 id="rmb-rumexmakebild"><code>,rmb</code> (RumexMakeBild)</h3>
+<p>Erstellt die unterschiedlichen Bildgrößen</p>
+<h3 id="rmca-rumexmakecleanall"><code>,rmca</code> (RumexMakeCleanAll)</h3>
+<p>Löscht alle html Dateien, alle Bildergrößen und alle xml Dateien. beinhaltet die drei Befehle <code>make bclean</code>, <code>make hclean</code>, <code>make xclean</code>.</p>
+<h3 id="rmcb-rumexmakecleanbilder"><code>,rmcb</code> (RumexMakeCleanBilder)</h3>
+<p>Löscht alle Bildgrößen aus dem <code>bilder/</code> Verzeichnis. Es werden nur die Bilder gelöscht die von Rumex erstellt wurden siehe <code>make bilder</code>.</p>
+<h3 id="rmch-rumexmakecleanhtml"><code>,rmch</code> (RumexMakeCleanHtml)</h3>
+<p>Löscht alle <code>.html</code> Dateien die von Rumex erstellt wurden.</p>
+<h3 id="rmcx-rumexmakecleanxml"><code>,rmcx</code> (RumexMakeCleanXml)</h3>
+<p>Löscht alle <code>.xlm</code> Dateien die von Rumex erstellt wurden.</p>
+<h3 id="rmcf5-rumexmakecleanf8htm"><code>,rmcf5</code> (RumexMakeCleanF8htm)</h3>
+<p>Löscht alle <code>.htm</code> Dateien die mittels der Gvim Taste F5, siehe <a href="http://www.it-bayer.de/rumex/statik/index.htm">HTML und PDF Dateine mit pandoc und gvim erstellen</a>, erstellt wurden.</p>
+<h3 id="rmh-rumexmakehtml"><code>,rmh</code> (RumexMakeHtml)</h3>
+<p>Erstellt die <code>.html</code> Dateien.</p>
+<h3 id="rmi-rumexmakeindex"><code>,rmi</code> (RumexMakeIndex)</h3>
+<p>Erstellt die index Datei.</p>
+<h3 id="rmm-rumexmakesitemap"><code>,rmm</code> (RumexMakesiteMap)</h3>
+<p>Erstellt die sitemap Datei.</p>
+<h3 id="rmo-rumexmakeonline"><code>,rmo</code> (RumexMakeOnline)</h3>
+<p>Speichert alle Dateien und stellt diese online.</p>
+<h3 id="rmr-rumexmakerss"><code>,rmr</code> (RumexMakeRss)</h3>
+<p>Erstellt die rss Datei.</p>
+<h3 id="rms-rumexmakesuche"><code>,rms</code> (RumexMakeSuche)</h3>
+<p>Erstellt die Rumex Suche, bzw. die Dateiliste die für die Suche verwendet werden soll.</p>
+<h2 id="vorschau">Vorschau</h2>
+<h3 id="rsf-rumexshowfile"><code>,rsf</code> (RumexShowFile)</h3>
+<p>Zeigt eine Vorschau der Seite der Datei <code>file:///</code> im Standardbrowser.</p>
+<h3 id="rsw-rumexshowwww"><code>,rsw</code> (RumexShowWww)</h3>
+<p>Zeigt eine Vorschau der Seite <strong>Online</strong> im Standardbrowser.</p>
+<h3 id="rsl-rumexshowlocal"><code>,rsl</code> (RumexShowLocal)</h3>
+<p>Zeigt eine Vorschau der Seite auf dem eigenen Rechner. Diese Kurztaste kann aber nur verwendet werden wenn auf dem Rechner der Apache installiert und entsprechend eingerichtet ist.</p>
+<h2 id="sonstiges">Sonstiges</h2>
+<h3 id="rku"><code>,rku</code></h3>
+<p>Öffnet das Unterverzeichnis <code>.rx</code> in einem neuen VimTab Fenster. Keine Ahnung warum ich diese Kurztaste so benannt habe.</p>
+<h3 id="ros-rumexopenstart"><code>,ros</code> (RumexOpenStart)</h3>
+<p>Öffnet die <code>start.rx0s</code> in einen neuen VIM Tab Fenster.</p>
+<h3 id="ror-rumexopenrss"><code>,ror</code> (RumexOpenRss)</h3>
+<p>Öffnet die <code>rss.rx0x</code> in einen neuen VIM Tab Fenster.</p>
+<h1 id="statik-funktion">Statik Funktion</h1>
+<p>Rumex verwendet pandocs markdown weil man damit sehr einfach und schnell Text erstellen und in verschiedenen Formate wandeln kann. Für die Erstellung von Denkschriften<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a> wurde zusätzlich eine, ich nenne sie <em>statik Funktion</em> eingebaut. Mit dieser Funktion ist es möglich innerhalb eines Unterverzeichnisses verschiedenen Ausgabe Formate zu erstellen. Zur Zeit werden, von Rumex, folgenden Formate unterstützt:</p>
+<ul>
+<li>.html</li>
+<li>.pdf</li>
+<li>.odt OpenDokument</li>
+<li>.epub E-Book</li>
+<li>.mobi E-Book (Kindle)</li>
+</ul>
+<p>Erstellt werden die einzelnen Formate über die innerhalb (g)vim<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a> zur Verfügung stehen. Auch wurde die von Pandoc eingebaut sodass Verweise auf anderen Quellen in den Denkschriften verwendet werden können.</p>
+<p>Wer sich Rumex nicht installieren möchte aber dennoch eine einfache Möglichkeit sucht HTML Seiten zu erstellen, kann sich einmal <a href="http://www.it-bayer.de/cirsium">cirsium</a> anschauen. Cirsium ist eine Auskopplung aus Rumex, unterteilt aber die Quelltextdatei in verschiedene Abschnitte. Am besten einfach mal auf <a href="http://www.github.com/itbayer/cirsium">github.com</a> anschauen.</p>
+<p>Ab der Rumex Version 0.8.2 sind die Funktionstasten in Rumex enthalten. Folgende F-Tasten wurden belegt.</p>
+<dl>
+<dt><strong>F5</strong></dt>
+<dd><p>Erstellt die <code>.htm</code> Datei ohne Inhaltsverzeichnis.</p>
+</dd>
+<dt><strong>Shift+F5</strong></dt>
+<dd><p>Erstellt die <code>.htm</code> Datei mit Inhaltsverzeichnis bis zur Ebene 3.</p>
+</dd>
+<dt><strong>Alt+F5</strong></dt>
+<dd><p>Erstellt die <code>.htm</code> Datei mit kompletten Inhaltsverzeichnis bzw. bis Ebene 5 da LaTeX auch nicht mehr Ebenen unterstützt und die beiden Ausgabe Format annähernd identisch sein sollten.</p>
+</dd>
+<dt><strong>Ctrl+F5</strong></dt>
+<dd><p>Öffnet die <code>.htm</code> Datei.</p>
+</dd>
+<dt><strong>F6</strong></dt>
+<dd><p>Erstellt die <code>.pdf</code> Datei ohne Inhaltsverzeichnis.</p>
+</dd>
+<dt><strong>Shift+F6</strong></dt>
+<dd><p>Erstellt die <code>.pdf</code> Datei mit Inhaltsverzeichnis bis zur Ebene 3.</p>
+</dd>
+<dt><strong>Alt+F6</strong></dt>
+<dd><p>Erstellt die <code>.pdf</code> Datei mit kompletten Inhaltsverzeichnis. Hier ist anzumerken dass LaTeX nur Inhaltsverzeichnisse bis zur Ebene 5 unterstützt. Das HTML Format wurde entsprechend angepasst, siehe oben.</p>
+</dd>
+<dt><strong>Ctrl+F6</strong></dt>
+<dd><p>Öffnet die <code>.pdf</code> Datei. Zur Zeit wird nur zathura unterstützt.</p>
+</dd>
+<dt><strong>F7</strong></dt>
+<dd><p>Erstellt die restlichen Formate, <code>.epub</code>, <code>.odt</code> und <code>.mobi</code>. Voraussetzung für das <code>.mobi</code> Format ist <code>calibre</code>.</p>
+</dd>
+<dt><strong>Ctrl-F7</strong></dt>
+<dd><p>Öffnet die Literatur Verwaltung <code>rumex.bib</code>. Voraussetzung, <code>jabref</code> ist installiert.</p>
+</dd>
+</dl>
+<h2 id="html-formatierung">HTML Formatierung</h2>
+<p>Die erzeugte HTML Datei besitzt Standardmäßig keine Formatierung bzw. verwendet die Standard Darstellung des Browsers.</p>
+<p>Kopf- und Fusszeile werden dadurch nicht, vom restlichen Text, unterschieden. Auch das Inhaltsverzeichnis ist im ersten Moment als solches nicht gleich zu erkennen. Dieses kann mit ein wenig CSS geändert werden. Diese CSS Datei ist ab Rumex Version 0.8.2 enthalten muss aber unter Umständen noch eingerichtet werden.</p>
+<pre><code>cd .rx
+ln -s ../.rumex/default/statik.css statik.css</code></pre>
+<p>Beim Lesen des Artikels <em>“PDF-Dokumente schreiben mit Pandoc und Markdown” [^stenderprolinux] ist mir die Idee gekommen die Rumex </em>statik Funktion* mit einem Literaturverzeichnis, die ja auch in pandoc zur Verfügung steht, zu versehen.</p>
+<h2 id="installation-pandoc-manuell">Installation pandoc manuell</h2>
+<p>Für die Verwendung der Literaturfunktion muss pandoc um das Zusatzprogramm <code>pandoc-citeproc</code> erweitert werden. Wer Pandoc über die Paketverwaltung installiert hat braucht hier nichts zu machen. Wer Pandoc manuell, so wie ich, installiert hat muss dieses Programm nachinstallieren.</p>
+<p>Dazu erweitert man die Installationszeile um das neue Programm</p>
+<pre><code>cabal update
+cabal install pandoc pandoc-citeproc</code></pre>
+<p>Zu guter Letzt erstellt man noch die symbolischen Links der beiden Programme.</p>
+<pre><code>sudo ln -s /home/USER/.cabal/bin/pandoc /usr/local/bin/.
+sudo ln -s /home/USER/.cabal/bin/pandoc-citeproc /usr/local/bin/.</code></pre>
+<h3 id="nachinstallation-rumex">Nachinstallation Rumex</h3>
+<p>Wer Rumex schon im Einsatz hat muss für die Erweiterung ein wenig Hand anlegen. Zu erste holt man sich die neue Version<a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a> von rumex.</p>
+<p>Dann braucht man noch drei zusätzliche Dateien im Verzeichnis <code>.rx</code>.</p>
+<ul>
+<li><p><code>rumex.bib</code></p></li>
+<li><p><code>rumex.csl</code></p></li>
+<li><p><code>statik.css</code></p></li>
+</ul>
+<p>Wobei der und die CSS Datei nur verlinkt wird. In der <code>rumex.bib</code> werden dann die Literatur Verweise verwaltet.</p>
+<pre><code>cd .rx
+touch rumex.bib
+ln -s ../.rumex/default/din-1505-2.csl rumex.csl
+ln -s ../.rumex/default/statik.css statik.css</code></pre>
+<p>Als Literatur Stil kommt <code>din-1505-2.csl</code> zum Einsatz. Andere Stile findet man im git Repository <a href="https://github.com/citation-style-language/styles.git">https://github.com/citation-style-language/styles.git</a>. Als Name für die Stil Vorlage wurde <code>rumex.csl</code> gewählt damit mit eine Änderung des Stils einfach über den Symlink gemacht werden kann.</p>
+<h3 id="literatur-verwaltung">Literatur Verwaltung</h3>
+<p>Für die Verwaltung der Literatur Datenbank verwende ich <a href="http://jabref.sourceforge.net/">Jabref</a>.</p>
+<pre><code>sudo apt-get install jabref</code></pre>
+<p>Der Aufruf des Programms wurde auch auf einen F Taste gelegt. Wer eine anderes Programm verwenden will muss diesen entsprechend anpassen.</p>
+<h3 id="tipps">Tipps</h3>
+<ul>
+<li><p>Auf <span class="citation" data-cites="wiki:bibtex">@wiki:bibtex</span> findet man eine schöne Beschreibung über die Literatur Verwaltung mit BibTex.</p></li>
+<li><p>Die BibTex Einträge muss man sich unter Umständen nicht einmal selber erstellen. Da verschiedene Seiten entsprechende Dienste anbieten. Gelungen finde ich die Seite von <a href="http://www.literatur-generator.de/">http://www.literatur-generator.de/</a> aber auch auf <a href="http://lead.to/amazon/en/?op=bt">http://lead.to/amazon/en/?op=bt</a> findet man BibTeX Einträge. Zwar muss man diese unter Umständen noch ein wenig überarbeiten aber das Grund Gerüst wird einem sozusagen frei Haus geliefert.<br />Wer einen Wikipedia Artikel zitieren dem wird unter <code>Werkzeuge -&gt; Seite zitieren</code> weiter geholfen.</p></li>
+<li><p>Für das zitieren von Internetseiten verwende ich folgende Formate, siehe dazu Abschnitt .</p></li>
+</ul>
+<!-- -->
+
+<pre><code>    @ELECTRONIC{ wiki:bibtex,
+        author = &quot;Wikipedia&quot;,
+        title = &quot;BibTeX --- Wikipedia{,} Die freie Enzyklopädie&quot;,
+        year = &quot;2013&quot;,
+        url = &quot;http://de.wikipedia.org/w/index.php?title=BibTeX&amp;oldid=124228120&quot;, 
+        note = &quot;[Online; Stand 18. Dezember 2013]&quot;
+    }</code></pre>
+<blockquote>
+<p>…oder</p>
+<p><strong>Achtung:</strong> Das Formate <code>@WWW</code> wird von jabref nicht unterstützt und gegen ein anders ausgetauscht. Bei dem Einsatz von Jabref am besten <code>@ELECTRONIC</code> verwenden.</p>
+</blockquote>
+<pre><code>    @WWW{ wiki:bibtex,
+        author = &quot;Wikipedia&quot;,
+        title = &quot;BibTeX --- Wikipedia{,} Die freie Enzyklopädie&quot;,
+        year = &quot;2013&quot;,
+        url = &quot;http://de.wikipedia.org/w/index.php?title=BibTeX&amp;oldid=124228120&quot;, 
+        note = &quot;[Online; Stand 18. Dezember 2013]&quot;
+    }</code></pre>
+<h2 id="verwendung-in-und-ausserhalb-von-rumex">Verwendung in- und außerhalb von Rumex?</h2>
+<p>Innerhalb von Rumex erstellt man in einem separatem Unterverzeichnis die entsprechende markdown Datei und dann kann es auch schon los gehen.</p>
+<p>Außerhalb von Rumex kann man diese Funktion natürlich auch verwenden. Mit Außerhalb meine ich Denkschriften die nicht veröffentlicht werden. Dazu gibt es zwei Möglichkeiten.</p>
+<ol type="1">
+<li><p>Die Datei bzw. das Verzeichnis in <code>.gitignore</code> hinterlegen. Somit wird diese nicht verwaltet und auch nicht, bei einem <code>make online</code>, hoch geladen.</p></li>
+<li><p>Eine zweite lokale Rumex Installation die nur für Denkschriften verwendet wird.</p></li>
+<li><p>…und dann wäre da noch <a href="https://github.com/itbayer/cirsium">Cirsium</a>, eine Auskopplung aus Rumex, mit der man einfache html und pdf Seiten erstellen kann. Die Literaturverzeichnisoption ist auch enthalten. Die Formate odt, epub und mobi sind jedoch nicht eingebaut.</p></li>
+</ol>
+<h2 id="pandoc-funktionen-ohne-rumex-verwenden">Pandoc Funktionen ohne Rumex verwenden</h2>
+<p>Vielleicht will der eine oder andere zwar Rumex nicht verwenden aber die Funktionen von pandoc in Vim verwenden.</p>
+<p>Für diese Variante muss natürlich <code>pandoc</code> installiert sein. Dann braucht man noch die entsprechenden Befehle um die Datei in die unterschiedlichen Formate zu wandeln. Diese Befehle bindet man in der <code>.vimrc</code> an, zum Beispiel, Funktionstasten.</p>
+<p>Nachfolgend die zwei Varianten wie sie in meiner <code>.vimrc</code> zu finden sind.</p>
+<h3 id="umwandlung-nach-html">Umwandlung nach HTML</h3>
+<pre><code>&quot; -------------------------------------------------------------
+&quot; pandoc HTML Lauf über die Taste F8 zu starten
+&quot; Datei wird zuerst gespeichert und dann wird der pandoc Lauf ausgeführt
+map &lt;F8&gt; :w&lt;CR&gt; :!pandoc  -f markdown -t html5 -s -N --toc --section-divs --self-contained --template /home/sb/.pandoc/html.template -c /home/sb/.pandoc/css_include.css -o %.htm %&lt;CR&gt;&lt;CR&gt;
+map &lt;S-F8&gt; :!midori %.htm&amp; &lt;CR&gt;&lt;CR&gt;</code></pre>
+<h3 id="umwandlung-nach-pdf">Umwandlung nach PDF</h3>
+<pre><code>&quot; -------------------------------------------------------------
+&quot; pandoc Latex Lauf über die Taste F9 zu starten
+&quot; Datei wird zuerst gespeichert und dann wird der pandoc Lauf ausgeführt
+map &lt;F9&gt; :w&lt;CR&gt; :!pandoc --template=/home/sb/.pandoc/A4de.latex -o %.pdf %&lt;CR&gt;&lt;CR&gt;
+map &lt;S-F9&gt; :!evince %.pdf&amp; &lt;CR&gt;&lt;CR&gt;</code></pre>
+<h3 id="setzen-der-uxfcberschrift-fuxfcr-das-literaturverzeichnis">Setzen der Überschrift für das Literaturverzeichnis</h3>
+<p>Die Überschrift für das Literaturverzeichnis muss immer am Ende des Artikels gesetzt werden.</p>
+<p><strong>Beispiel</strong></p>
+<pre><code># Literaturverzeichnis</code></pre>
+<h3 id="einbinden-von-bildern">Einbinden von Bildern</h3>
+<p>Bei dem Einbinden der Bilder muss man beachten dass die Erstellung der statik Datei vom Verzeichnis <code>.rx</code> ausgeht.</p>
+<p>Will man also ein Bild, dass im Ordner der Statik Datei liegt einbinden so muss auch auf das Bild aus der Sicht des <code>.rx</code> Verzeichnisses eingebunden werden.</p>
+<p>Beispiel:</p>
+<p>Das Bild liegt im Ordner <code>statik</code> somit müsste der Markdown Befehl so aussehen.</p>
+<pre><code>![Beispielbild](../statik/beispiel.png)</code></pre>
+<p>In Rumex kann man diese Funktion natürlich auch verwenden. Am besten erstellt man sich dazu ein eigenes Unterverzeichnis und dort die Datei <code>index.md</code> mit den Texten.</p>
+<h3 id="statik-dateien-im-.rx-verzeichnis">Statik Dateien im <code>.rx</code> Verzeichnis</h3>
+<p>Es wird sicher passieren dass man die Funktionstasten der Statik Seiten auch bei der Bearbeitung der eigentlichen Rumex Dateien drückt. Durch entsprechende Einträge in der <code>.gitignore</code> Datei werden solche Dateien von einem Upload ausgeschlossen. Mit den Aufruf von <code>make statikclean</code> können die erstellten statik Dateien Schlussendliche aus dem <code>.rx</code> Verzeichnis entfernt werden. Dieser Befehl wird auch bei <code>make clean</code> ausgeführt.</p>
+<h3 id="tipps-1">Tipps</h3>
+<p>Das PDF Programm <code>zathura</code> hat die Eigenschaft dass wenn sich die Datei ändert diese automatisch nachgeladen wird. Eine schöne Funktion wenn man seinen Text, an dem man gerade arbeitet, immer wieder einmal im Ausgabe Format betrachten will. Einfach die Taste F6 drücken, die Datei wird auch gleich gespeichert, und mit ALT-TAB das Programm Fenster wechseln.</p>
+<p>Bei Format HTML geht das natürlich auch. Nur muss hier eine Erweiterung installiert werden. Für die Browser Chromium und Firefox habe ich mit <code>Auto Refresh Plus</code><span class="math"><em></em><sup><em>C</em><em>h</em><em>r</em><em>o</em><em>m</em><em>i</em><em>u</em><em>m</em></sup></span> bzw. <code>Tab Auto Reload</code><span class="math"><em></em><sup><em>F</em><em>i</em><em>r</em><em>e</em><em>F</em><em>o</em><em>x</em></sup></span> gute Erfahrungen gemacht.</p>
+<hr />
+<p>Die PDF Datei dieser Beschreibung kann man sich <a href="index.pdf">hier</a> ansehen. Die Markdown Quelldatei kann man sich <a href="index.md">hier</a> holen.</p>
+<hr />
+<h1 id="lager">Lager</h1>
+<p>Zwischenlager der Texte die noch nicht aufgearbeitet wurden.</p>
+<h3 id="gvim-unterstützung-einrichten">gvim unterstützung einrichten</h3>
+<p><span class="citation" data-cites="todo">@todo</span>: hier fehlt noch die beschreibung@</p>
+<ul>
+<li><p>erstellen der startdatei</p></li>
+<li><p>einrichten</p></li>
+</ul>
+<h4 id="tipps-zur-benutzung-gvim">tipps zur benutzung gvim</h4>
+<h4 id="vim-kurztasten">vim kurztasten</h4>
+<p>eine übersicht der rumex kurztasten für den editor vim findest du auf der seite <a href="vim-kurztasten.htm">vim-kurztasten</a>.</p>
+<h4 id="gvim-menuxfc">gvim menü</h4>
+<p>eine übersicht des rumex menüs für den editor gvim findest du auf der seite <a href="gvim-menue.htm">gvim-menü</a>.</p>
+<h5 id="dateiname-erguxe4nzen">dateiname ergänzen</h5>
+<p>will man in die datei einen dateinamen einbauen, weiß aber nicht mehr genau wie er heißt, kann man folgenden trick verwenden. in diesem beispiel wird ein bildname gesucht. im text schreibe man <code>../bilder/tw</code> und drückt dann die tastenkombination <code>c-x + c-f</code>, gvim öffnet ein dialogfeld in dem alle dateien die auf dieses muster übereinstimmen geöffnet. gibt es nur einen treffer wird dieser gleich eingefügt.</p>
+<h5 id="wort-innerhalb-des-dokumentes-suchen">Wort innerhalb des Dokumentes suchen</h5>
+<p>Sucht man ein Wort das man im Dokument schon einmal verwendet hat, um zum Beispiel darauf zu verweisen. Schreibt man den Wortanfang und drückt dann <code>c-p</code>. Es öffnet sich ein Dialogfeld in dem alle Wörter die auf dieses Muster passen angezeigt werden. Gibt es nur einen Treffer wird dieser gleich eingefügt. Diese Wortsuche funktioniert auch Dateiübergreifend. Die Datei muss jedoch geöffnet sein.</p>
+<h5 id="nuezliche-erweiterungen">Nützliche Erweiterungen</h5>
+<p>Vim bietet ein paar nützliche Erweiterungen in Form von Plugins an. Hier eine Liste, der Plugins, die ich gerne verwende.</p>
+<dl>
+<dt>pathogen.vim</dt>
+<dd><p>diese Erweiterung macht das Installieren weitere Erweiterungen einfach. Dabei ist die Installation von <code>pathogen</code> schnell erledigt.</p>
+</dd>
+<dt>vim-pandoc</dt>
+<dd><p>Erweiterung rund um Pandoc.</p>
+</dd>
+<dt>fuzzyfinder</dt>
+<dd><p>Dateien schnell zum editieren öffnen. Installiert ist diese Erweiterung, vorausgesetzt man verwendet pathogen, mit dem Befehl:</p>
+<pre><code>wget -o /tmp/vim-fuzzyfinder.zip http://www.vim.org/scripts/download_script.php?src_id=10588
+mkdir ~/.vim/bundle/vim-fuzzyfinder
+unzip /tmp/vim-fuzzyfinder.zip -d ~/.vim/bundle/vim-fuzzyfinder/</code></pre>
+<p>für das öffnen dies datei dialogs sollte man sich dann noch eine kurztaste konfigurieren.</p>
+<pre><code>&quot; -------------------------------------------------------------
+&quot; fuzzyfinder file suche auf &lt;f12&gt; binden
+map &lt;f12&gt; :fuzzyfinderfile &lt;cr&gt;</code></pre>
+</dd>
+</dl>
+<h3 id="seite-auf-einem-github.com-server-einrichten">seite auf einem github.com server einrichten</h3>
+<p><span class="citation" data-cites="todo">@todo</span></p>
+<ul>
+<li><p>einrichten eines github.com zugangs</p></li>
+<li><p>arbeits- repository auf den ap<a href="#fn7" class="footnoteRef" id="fnref7"><sup>7</sup></a> holen</p></li>
+<li><p>die rumex zip datei</p></li>
+<li><p>die dateien des zip archives in das arbeits- repository kopieren</p></li>
+<li><p>grund dateien anpassen</p>
+<ul>
+<li><span class="citation" data-cites="fixme">@fixme</span>: angabe welche dateien fehlt noch@</li>
+</ul></li>
+<li><p>erste änderungen vornehme</p></li>
+<li><p><code>make online</code> - fertig.</p></li>
+</ul>
+<h3 id="seite-auf-einem-nicht-github.com-server-einrichten">seite auf einem nicht github.com server einrichten</h3>
+<h4 id="datei-upload-per-git">datei upload per git</h4>
+<p><span class="citation" data-cites="todo">@todo</span></p>
+<p>Auf der Seite <a href="http://rumex.it-bayer.de">rumex.it-bayer.de</a> findet man eine Beschreibung wie man den rumex Baukasten auf einen <strong>nicht</strong> <code>github.com</code> Server installiert.</p>
+<h4 id="datei-upload-per-ftp">datei upload per ftp</h4>
+<p><span class="citation" data-cites="todo">@todo</span></p>
+<h3 id="root-verzeichnis">root verzeichnis</h3>
+<p>Im <code>root</code> Verzeichnis findet man alle <code>html</code> Dateien der Seite. Diese werde vom Baukasten erstellt und müssen nicht von Hand verändert werden. Zusätzlich findet man noch ein folgende Systemdateien:</p>
+<dl>
+<dt>rss.xml</dt>
+<dd><p>news feed datei, wird vom system erstelle</p>
+</dd>
+<dt>readme.md</dt>
+<dd><p>beschreibungsdatei die von github.com gebraucht wird</p>
+</dd>
+<dt>robots.txt</dt>
+<dd><p>datei für die suchmaschinen</p>
+</dd>
+<dt>favicon.ico</dt>
+<dd><p>icon für den browser</p>
+</dd>
+<dt>.htaccess</dt>
+<dd><p>Konfiguration für den Apache Server</p>
+</dd>
+<dt>cname</dt>
+<dd><p><span class="citation" data-cites="fixme">@fixme</span>: beschreibung@</p>
+</dd>
+</dl>
+<h3 id="unterverzeichnisse">Unterverzeichnisse</h3>
+<dl>
+<dt>.rumex/</dt>
+<dd><p><span class="citation" data-cites="fixme">@fixme</span>: beschreibung@</p>
+</dd>
+<dt>.rx/</dt>
+<dd><p><span class="citation" data-cites="fixme">@fixme</span>: beschreibung@</p>
+</dd>
+<dt>rxtpl/</dt>
+<dd><p>Standard Template Verzeichnis. In diesem Verzeichnis befinden sich die Dateien die für das aussehen der Seite verantwortlich sind.</p>
+<p>Folgende Dateinen und Verzeichnisse sind hier zu finden</p>
+<ul>
+<li><p>index.html (Weiterleitung zum root Verzeichnis)</p></li>
+<li>css/<br /></li>
+<li><p>js/</p></li>
+<li><p>img/</p></li>
+</ul>
+</dd>
+<dt>bilder/</dt>
+<dd><p>in diesem Verzeichnis werden alle Bilder der Seite abgelegt.</p>
+</dd>
+</dl>
+<h3 id="steuerung-durch-dateiendung">Steuerung durch Dateiendung</h3>
+<p>Das aussehen der Dateien bezüglich des Inhaltsverzeichnisses könnte auch durch die Dateiendung gesteuert werden.</p>
+<h4 id="beispiel">Beispiel</h4>
+<dl>
+<dt>datei.rx0s</dt>
+<dd><p>würde eine html Datei ohne Inhaltsverzeichnis erstellen.</p>
+</dd>
+<dt>datei.rx1s</dt>
+<dd><p>erstellt die html Datei mit dem Inhaltsverzeichnis aus den Einträgen der h1 Überschriften.</p>
+</dd>
+<dt>datei.rx2s</dt>
+<dd><p>erstellt eine html Datei mit dem Inhaltsverzeichnis aus den Einträgen der h1 und h2 Überschriften.</p>
+</dd>
+</dl>
+<p>Zusätzlich könnte die Dateiendung auch eine unterschiedliche Verwendung der Dateien ermöglichen.</p>
+<dl>
+<dt>datei.rx0s, datei.rx1s …</dt>
+<dd><p>Standard Datei.</p>
+</dd>
+<dt>datei.rx0x, datei.rx1x …</dt>
+<dd><p>Datei die nicht in die Liste auf <code>index.html</code> eingebunden wird.</p>
+</dd>
+<dt>datei.rx0v, datie.rx1v …</dt>
+<dd><p>Versteckte Datei. Diese taucht weder in der <code>index.html</code> noch in der <code>sitemap.xml</code> auf.</p>
+</dd>
+<dt>datei.rx0w</dt>
+<dd><p>Datei mit einer Weiterleitung. Die Weiterleitung wird dabei mittels <code>javascript</code> realisiert, da github keine <code>.htaccess</code> Weiterleitung unterstützt.</p>
+<pre><code>% weiterleitung nach beschreibung.html
+%
+%
+
+&lt;script language=&quot;javascript&quot;&gt;
+&lt;!--
+window.location.href=&quot;beschreibung.html&quot;;
+// --&gt;
+&lt;/script&gt; </code></pre>
+</dd>
+</dl>
+<p>Bei der Änderung der Dateiendung bleibt der eigentliche <code>html</code> Name gleich. Nur die Funktion der Einbindung ändert sich.</p>
+<h3 id="sonderseiten">sonderseiten</h3>
+<p>Im Verzeichnis <code>pandoc</code> befinden sich Sonderseiten.</p>
+<dl>
+<dt>rumex/index.rx0x</dt>
+<dd><p>Diese Datei wird vom Programm <code>.bin/make_index.pl</code> erstellt, muss somit nicht vorhanden sein.</p>
+</dd>
+<dt>rumex/start.rx0s</dt>
+<dd><p>Die <code>start.rx0s</code> wird als Vortext in die <code>index.rx0x</code> eingebunden. Mit ihr kann man oberhalb der Seiten Liste einen extra Text in die <code>index.html</code> eingebunden werden.<br /><strong>diese Datei ist erforderlich und muss vorhanden sein.</strong></p>
+</dd>
+<dt>rumex/rss.rx0x</dt>
+<dd><p>Datei für die RSS FEED Funktion.</p>
+</dd>
+<dt>rumex/impressum.rx0x</dt>
+<dd><p>Datei für die Impressumsangaben.<br /><strong>ist nicht zwingend erforderlich. Jedoch muss die <code>.inc/fuss.html</code> entsprechende bearbeitet, der link muss raus genommen, werden.</strong></p>
+</dd>
+<dt>rumex/makefile</dt>
+<dd><p>sie <code>make</code> Steuerdatei.</p>
+</dd>
+</dl>
+<h3 id="aufbau-der-startseite">Aufbau der Startseite</h3>
+<p>Die Startseite <code>markdown/start.rx0s</code> muss vorhanden sein. Es reicht auch ein `touch markdown/start.rx0s.</p>
+<p>Der normale Aufbau könnte so ausschauen. Die <code>pandoc</code> kopfzeile sind nicht zwingend erforderlich.</p>
+<pre><code>% start.rx0s
+%
+%
+
+hier kommt auch schon der vortext für die index.html</code></pre>
+<h3 id="aufbau-der-einzelseiten">aufbau der einzelseiten</h3>
+<p>Die Einzelseiten liegen alle im Verzeichnis <code>rumex</code> und zwar in der Sprache <code>markdown</code> bzw. der Erweiterung von <code>pandoc</code>.</p>
+<p>Diese Einzelseiten werden in chronologischer Reihenfolge in die Startseite <code>index.html</code> eingebunden und bilden sozusagen das Inhaltsverzeichnis der Seite. In jeder Einzelseite wird dazu ein sogenannter <em>“vortext”</em> hinterlegt. Die Seite bzw. der Kopf der Seite hat dabei folgenden Aufbau.</p>
+<pre><code>% seiten überschrift 1
+% seiten überschrift 2
+% seiten überschrift 3
+
+&lt;!--
+
+
+# listen-überschrift
+
+überschrift und text der in der listenübersicht
+auf index.html angezeigt wird.
+
+alles was innerhalb der html kommentar marken
+steht wird nur auf der index.html seite angezeigt.
+
+--&gt;
+
+alles was sich außerhalb der html marken
+befindet wird auch auf der eigentlichen seite angezeigt.
+
+durch das schlüsselwort &quot;schnipp&quot;, das auch in html
+kommentar marken stehen muss, wird der vortext beendet.
+auf der index.html erscheint an dieser stelle der link
+&quot;... weiter lesen&quot;.
+
+&lt;!-- schnipp --&gt;
+
+ab hier geht dann der inhlat der eigentlichen seite los.</code></pre>
+<h3 id="template">template</h3>
+<p><span class="citation" data-cites="todo">@todo</span></p>
+<p>Änderung gegenüber des original <code>pandoc</code> templates.</p>
+<h2 id="rss-feed-funktion">rss feed funktion</h2>
+<p><span class="citation" data-cites="todo">@todo</span></p>
+<p>Wird nicht aus den einzelnen dateien erstellt sondern muss manuell editiert werden, datei <code>.rx/rss.rx0x</code>.</p>
+<p>Jede Überschrift eines Eintrags muss mit einem <code>{.nn1}</code> enden.</p>
+<p>Danach kommen die angaben zu:</p>
+<p><strong>link:</strong> <em>verweis zur seite mit weiteren informationen</em><br /><strong>autor:</strong> <em>autor der den eintrag geschrieben hat</em><br /><strong>kategorie:</strong> <em>kategoie des eintrags</em><br /><strong>datum:</strong> <em>datum des eintrags.</em> das richtige format bekommt man mit dem Befehl <code>date -r</code>.</p>
+<p>die in html kommentar marker eingeschlossen sind.</p>
+<p>anschließend folgt die meldung. zur zeit werden folgende <code>pandoc</code> formatierungen unterstützt.</p>
+<ul>
+<li><p>überschriften ab der stufe 3 <code>###</code></p></li>
+<li><p>aufzählungen <code>-</code></p></li>
+<li><p>aufzählungen <code>*</code></p></li>
+<li><p>zitate <code>&gt;</code></p></li>
+<li><p>links <code>[link](http://muster.tdl)</code>. diese dürfen nicht am anfang einer zeile stehen.</p></li>
+<li><p>bilder <code>![bild](../bilder/muster.png muster.png)</code>, diese dürfen nicht am anfang einer zeile stehen.</p></li>
+<li><p>code `code`.</p></li>
+</ul>
+<h3 id="beispiel-einer-rss-feed-seite">beispiel einer rss feed seite</h3>
+<h3 id="rss-dateiname">rss dateiname</h3>
+<p>der dateiname ist mit <code>rss.xml</code> vorbelegt und kann über die variable <code>rss_file</code> in der <code>config.md</code> geändert werden.</p>
+<h3 id="rss-titel">rss titel</h3>
+<p>der title des rss feed wird durch die variable <code>rss_titel</code> angepasst.</p>
+<pre><code>rss_titel = &quot;neuigkeiten von rumex baukasten&quot;</code></pre>
+<h3 id="rss-auslagern">rss auslagern</h3>
+<p>den rss link kann man auch auslagern so dass dieser auf eine andere seite zeigt. dazu setzt man die variable <code>rss_extern</code> mit dem entsprechenden link. die variabel <code>rss_file</code> wird dadurch nicht mehr verwendet. auch der rss lauf wird dadurch ausgeschaltet und durch eine meldung ersetzt.</p>
+<h3 id="rss-kurztaste">rss kurztaste</h3>
+<p>für die einzelnen einträge steht auch eine kurztaste <code>.rnn</code> zur verfügung.<br />in gvim unter</p>
+<pre><code>rumex -&gt; textbausteine -&gt; neuernews eintrag</code></pre>
+<p>eingefügt wird dann folgende vorgabe. der wert hinter datum wird von system ausgelesen und entsprechende gesetzt.</p>
+<pre><code> # neue nachricht{.nn1}
+
+&lt;!--
+| link: http://www.it-bayer.de/rumex/
+| autor: it-bayer
+| kategorie: neues
+| datum: mon, 28 oct 2013 07:36:56 +0100
+--&gt;
+
+ab hier geht die neue nachricht los.</code></pre>
+<h3 id="interna">interna</h3>
+<p>durch die beschriebenen rss variablen wird die erstellung des rss feed gesteuert. es wird in jede html datei nachfolgender header abschnitt eingebaut wenn die <code>rss_title</code> variable gesetzt wurde. <code>rss_file</code> bzw. <code>rss_extern</code> steuern den <code>href</code> eintrag.</p>
+<h2 id="rumex-auf-einem-usb-stick">Rumex auf einem USB Stick</h2>
+<p>Rumex kann auch auf einem USB Stich installiert werden. Der Stick muss aber ein Dateiformat besitzt<br />welches mit Dateirechten und symbolische links umgehen kann.</p>
+<p><strong>USB Sticks im vfat Format funktionieren nicht.</strong> man kann zwar die Daten darauf ablegen. Das arbeiten über den Stick funktioniert nicht wirklich. Auch wenn man die Daten, von einem vfat Stick, auf ein *nix System kopiert werden muss händisch nach gebessert werden.</p>
+<p>Linktipp: <a href="http://www.it-bayer.de/usb-stick.html?suchwort=versch#usb-stick-unter-linux-verschl%c3%bcsseln">USB Stick unter linux verschlüsseln</a></p>
+<h2 id="make-steuerung">make Steuerung</h2>
+<p><span class="citation" data-cites="todo">@todo</span></p>
+<p>Gesteuert wird der Baukasten mittels <code>make</code> im Unterverzeichnis <code>rumex</code>. Folgende <code>make</code> Befehle stehen dabei zur Verfügung.</p>
+<dl>
+<dt>make html</dt>
+<dd><p>erstellt die einzelnen html dateien. hier kann auch nur <code>make</code> verwendet werden.</p>
+</dd>
+<dt>make index</dt>
+<dd><p>erstellt die <code>index.md</code> datei aus der dann die <code>index.html</code> datei erstellt wird.</p>
+</dd>
+<dt>make all</dt>
+<dd><p>eine zusammenstellung aus <code>make index</code> und <code>make html</code>.</p>
+</dd>
+<dt>make online</dt>
+<dd><p>daten auf github hoch laden.</p>
+</dd>
+<dt>make bilder</dt>
+<dd><p>erstellt bilder in verschiedenen auflösungen.</p>
+</dd>
+</dl>
+<h2 id="update">update</h2>
+<p><span class="citation" data-cites="todo">@todo</span></p>
+<h2 id="homepage-aenderung-schnell-und-immer-aktuell">Homepage Änderung, schnell und immer aktuell</h2>
+<p>Wer wünscht es sich nicht einen schnellen Zugriff auf seine Homepage. Sei es um schnell was zu ändern oder genauso schnell was neues einzustellen. Rumex bietet in Verbindung mit <code>tilda</code> eine, so finde ich, schöne, einfache und auch, schnelle lösung.</p>
+<figure>
+<img src="../bilder/rumex-tilda_800_.png" alt="rumex im tilda Fenster. Mit einem Tastendruck öffnet sich das tilda Fenster und man kann die Texte eintippen. Ein erneuter Tastendruck schließt das tilda Fenster wieder und der Bildschirm ist wieder frei. Hat man seine Änderung abgeschossen kann man mit den Rumex Kurztasten die Änderung schnell online stellen." /><figcaption>rumex im tilda Fenster. Mit einem Tastendruck öffnet sich das tilda Fenster und man kann die Texte eintippen. Ein erneuter Tastendruck schließt das tilda Fenster wieder und der Bildschirm ist wieder frei. Hat man seine Änderung abgeschossen kann man mit den Rumex <a href="#vim-kurztasten">Kurztasten</a> die Änderung schnell online stellen.</figcaption>
+</figure>
+<h3 id="installation-der-tilda-unterstuetzung">Installation der tilda Unterstützung</h3>
+<p>Die Installation ist nicht umfangreich. Man braucht vim und tilda und dann noch zwei bash script. Eine Kopiervorlage der beiden Scripte findet man findet man im <code>.rumex/bin/</code> Verzeichnis.</p>
+<pre><code>sudo apt-get install tilda vim
+cp .../rumex/.rumex/bin/rxt-rumex.sh ~/bin/.
+cp .../rumex/.rumex/bin/rumex-tilda.sh ~/bin/.</code></pre>
+<p>Diese beiden Bash Scripte müssen anschließend noch angepasst werden.</p>
+<h4 id="shell-scripte">Shell Scripte</h4>
+<p>Die Scripte starten zum einem <code>tilda</code> und zum anderem übergeben sie <code>tilda</code> die Kommandos die dafür sorgen <code>vim</code> im richtigen rumex Ordner zu öffnet. Installiert werden können diese scripte im <code>~/bin</code> oder <code>/usr/local/bin/</code> Verzeichnis.</p>
+<h5 id="rumex-tilda.sh">rumex-tilda.sh</h5>
+<p>Die Datei <code>rumex-tilda.sh</code> starte tilda und übergibt der tilda Shell die Befehle um den rumex Baukasten zu starten, siehe .</p>
+<pre><code>#!/bin/bash
+
+/usr/bin/tilda -c  ~/bin/rumex-vim.sh</code></pre>
+<h5 id="rumex-vim.sh">rumex-vim.sh</h5>
+<p>Mit dem Befehl <code>rumex-vim.sh</code> wird der rumex Baukastens aufgerufen. Dieser Befehl wird unter anderem auch von <code>rumex-tilda.sh</code> verwendet. <code>rumex-vim.sh</code> kann natürlich auch in einem Shellfenster ausgeführt werden.</p>
+<h5 id="rumex-gvim.sh">rumex-gvim.sh</h5>
+<p>Mit dem Befehl <code>rumex-gvim.sh</code> wird der rumex Baukasten mit dem Editor gvim gestartet.</p>
+<h3 id="tilda-einrichten">tilda einrichten</h3>
+<p>Nach dem ersten Start wird tilda in linken oberen Bildschirm Bereich eingeblendet. Man sollte tilda nun noch an seine Bedürfnissen anpassen. Dazu in das tilda Fenster mit der rechten Maustaste klicken und <code>eigenschaften</code> aus wählen.</p>
+<p><strong>Übrigens:</strong> Man kann <code>tilda</code> mehrfach starten. Somit kann auf mehreren rumex Installationen parallel über diese weiße zugegriffen werden. Man sollte nur jede <code>tilda</code> Sitzung ein wenig anders konfigurieren.</p>
+<p><strong>Nachteil:</strong> Ein Nachteil von <code>tilda</code> darf man aber nicht verschweigen. Bei wechseln zwischen den Fenstern kann man die Tastenkombination <code>&lt;alt&gt;+&lt;tab&gt;</code> nicht verwenden bzw. man kommt mit dieser Kombination nicht mehr zurück nach <code>tilda</code>. Schließt und öffnet man <code>tilda</code> mit der definierten Taste bekommt man aber den Fokus wieder in das Fenster.</p>
+<p>Will man die <code>&lt;alt&gt;+&lt;tab&gt;</code> Kombination doch verwenden muss man die Standardeinstellung von tilda ändern. Den erforderlichen Schalter findet man in der Konfiguration, Reiter <em>allgemein</em> -&gt; schalter <em>nicht in der taskleiste anzeigen</em>.</p>
+<h1 id="über-dieses-dokument">Über dieses Dokument</h1>
+<p>Dieses Dokument wurde mit der <a href="#statik-funktion">Statik</a> Funktion von Rumex erstellt. Dadurch ist es natürlich möglich diesen Text in verschiedene Formate anzubieten. Zur Zeit stehen diese Formate zur Verfügung:</p>
+<ul>
+<li>EPUB <a href="rumex.epub">(download)</a></li>
+<li>HTML <a href="rumex.htm">(download)</a></li>
+<li>MOBI <a href="rumex.mobi">(download)</a></li>
+<li>ODT <a href="rumex.odt">(download)</a></li>
+<li>PDF <a href="rumex.pdf">(download)</a></li>
+</ul>
+<h1 id="lizenz">Lizenz</h1>
+<p>Diese Vorlage veröffentliche ich mit den Bedienungen der <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/de/">cc-by-nc-sa Lizenz</a>.</p>
+<h3 id="namensnennung">Namensnennung</h3>
+<p>Sie müssen den Namen des Autors/Rechteinhabers in der von ihm festgelegten Weise nennen.</p>
+<h3 id="keine-kommerzielle-nutzung">Keine kommerzielle Nutzung</h3>
+<p>Dieses Werk bzw. dieser Inhalt darf nicht für kommerzielle Zwecke verwendet werden.</p>
+<h3 id="weitergabe-unter-gleichen-bedingungen">Weitergabe unter gleichen Bedingungen</h3>
+<p>Wenn Sie das lizenzierte Werk bzw. den lizenzierten Inhalt bearbeiten oder in anderer Weise erkennbar als Grundlage für eigenes Schaffen verwenden, dürfen Sie die daraufhin neu entstandenen Werke bzw. Inhalte nur unter Verwendung von Lizenzbedingungen weitergeben, die mit denen dieses Lizenzvertrages identisch oder vergleichbar sind.</p>
+<p>Außerdem müssen die Lizenzen der Programme, die zum Erstellen des jeweiligen Dokumentes verwendet werden, berücksichtigt werden.</p>
+<h1 id="impressum-kontakt">Impressum / Kontakt</h1>
+<p><strong>Verwendung:</strong> Privat</p>
+<p><strong>Anschrift:</strong> Stefan Blechschmidt<br />Auggenbach 9<br />94357 Konzell<br />oder per E-Mail an <script type="text/javascript">
+<!--
+h='&#x69;&#116;&#x2d;&#98;&#x61;&#x79;&#x65;&#114;&#46;&#100;&#x65;';a='&#64;';n='&#x73;&#98;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+'sb(at)it-bayer.de'+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x73;&#98;&#40;&#x61;&#116;&#x29;&#x69;&#116;&#x2d;&#98;&#x61;&#x79;&#x65;&#114;&#46;&#100;&#x65;&#32;&#40;&#x73;&#98;&#32;&#x61;&#116;&#32;&#x69;&#116;&#x2d;&#98;&#x61;&#x79;&#x65;&#114;&#32;&#100;&#x6f;&#116;&#32;&#100;&#x65;&#x29;</noscript>.</p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Rumex braucht generell keine online Verbindung. Alle benötigten öffentlichen Scripte werden statisch gespeichert, sind in der Installation enthalten. Nicht einmal ein Webserver muss installiert werden.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>Diese Seite, die bei der Installation kopiert wird trägt den Namen <code>istart.rx0v</code>.<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>Ausnahmen bestätigen die Regel. So wurde für die zwei spaltige Darstellung <code>,spn2</code> verwendet.<a href="#fnref3">↩</a></p></li>
+<li id="fn4"><p>Im Neudeutschen würde man die Denkschrift als Memorandum bezeichnen.<a href="#fnref4">↩</a></p></li>
+<li id="fn5"><p>Die Funktionstasten sind im gvim Rumex Menü nicht eingebaut. Man sollte sie sich also merken :-).<a href="#fnref5">↩</a></p></li>
+<li id="fn6"><p>Die Literatur Erweiterung ist ab der Rumex Version 0.8.2 enthalten.<a href="#fnref6">↩</a></p></li>
+<li id="fn7"><p>mit ap ist der <strong>a</strong>rbeits<strong>p</strong>latz rechner gemeint.<a href="#fnref7">↩</a></p></li>
+</ol>
+</section>
+</body>
+</html>

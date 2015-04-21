@@ -1,0 +1,109 @@
+\BOOKMARK [0][-]{chapter.1}{Vorwort}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Rumex?}{chapter.1}% 2
+\BOOKMARK [0][-]{chapter.2}{Kurzbeschreibung}{}% 3
+\BOOKMARK [0][-]{chapter.3}{Die Index Seite}{}% 4
+\BOOKMARK [0][-]{chapter.4}{Seiten Arten}{}% 5
+\BOOKMARK [1][-]{section.4.1}{Inhaltsverzeichnis Kennzeichnung}{chapter.4}% 6
+\BOOKMARK [1][-]{section.4.2}{Verwendungskennzeichnung}{chapter.4}% 7
+\BOOKMARK [1][-]{section.4.3}{rx0w}{chapter.4}% 8
+\BOOKMARK [1][-]{section.4.4}{rx0x}{chapter.4}% 9
+\BOOKMARK [0][-]{chapter.5}{Sonderseiten}{}% 10
+\BOOKMARK [1][-]{section.5.1}{index}{chapter.5}% 11
+\BOOKMARK [1][-]{section.5.2}{suche}{chapter.5}% 12
+\BOOKMARK [1][-]{section.5.3}{start}{chapter.5}% 13
+\BOOKMARK [1][-]{section.5.4}{weblog}{chapter.5}% 14
+\BOOKMARK [1][-]{section.5.5}{sitemap}{chapter.5}% 15
+\BOOKMARK [1][-]{section.5.6}{rss}{chapter.5}% 16
+\BOOKMARK [0][-]{chapter.6}{Installation}{}% 17
+\BOOKMARK [1][-]{section.6.1}{Vorbereitung des Rechners}{chapter.6}% 18
+\BOOKMARK [1][-]{section.6.2}{Die lokale Installation}{chapter.6}% 19
+\BOOKMARK [1][-]{section.6.3}{Ver\366ffentlichen der Seite}{chapter.6}% 20
+\BOOKMARK [2][-]{subsection.6.3.1}{Ver\366ffentlichung auf github}{section.6.3}% 21
+\BOOKMARK [2][-]{subsection.6.3.2}{Ver\366ffentlichung auf einem Server mit git Unterst\374tzung}{section.6.3}% 22
+\BOOKMARK [2][-]{subsection.6.3.3}{Ver\366ffentlichung auf einem Server mit FTP}{section.6.3}% 23
+\BOOKMARK [0][-]{chapter.7}{Konfiguration}{}% 24
+\BOOKMARK [1][-]{section.7.1}{Rumex auf dich einstellen}{chapter.7}% 25
+\BOOKMARK [1][-]{section.7.2}{Rumex Konfigurationsvariable}{chapter.7}% 26
+\BOOKMARK [0][-]{chapter.8}{Diskussion}{}% 27
+\BOOKMARK [1][-]{section.8.1}{moot.it}{chapter.8}% 28
+\BOOKMARK [0][-]{chapter.9}{Weblog}{}% 29
+\BOOKMARK [0][-]{chapter.10}{RSS Feed}{}% 30
+\BOOKMARK [0][-]{chapter.11}{Vim Kurztasten}{}% 31
+\BOOKMARK [1][-]{section.11.1}{Textbausteine}{chapter.11}% 32
+\BOOKMARK [2][-]{subsection.11.1.1}{,rnd \(RumexNeueDatei\)}{section.11.1}% 33
+\BOOKMARK [2][-]{subsection.11.1.2}{,rnn \(RumexNeueNachricht\)}{section.11.1}% 34
+\BOOKMARK [2][-]{subsection.11.1.3}{,rwl \(RumexWeiterLeitung\)}{section.11.1}% 35
+\BOOKMARK [2][-]{subsection.11.1.4}{,rmk \(RumexMootitKommentar\)}{section.11.1}% 36
+\BOOKMARK [2][-]{subsection.11.1.5}{,rnb \(RumexNeuenweBlog\)}{section.11.1}% 37
+\BOOKMARK [1][-]{section.11.2}{Git Kommandos}{chapter.11}% 38
+\BOOKMARK [2][-]{subsection.11.2.1}{,rgp \(RumexGitPull\)}{section.11.2}% 39
+\BOOKMARK [2][-]{subsection.11.2.2}{,rgs \(RumexGitStatus\)}{section.11.2}% 40
+\BOOKMARK [1][-]{section.11.3}{Text Formatierung}{chapter.11}% 41
+\BOOKMARK [2][-]{subsection.11.3.1}{,rff \(RumexFormatFett\)}{section.11.3}% 42
+\BOOKMARK [2][-]{subsection.11.3.2}{,rfk \(RumexFormatKursiv\)}{section.11.3}% 43
+\BOOKMARK [2][-]{subsection.11.3.3}{,rfl \(RumexFormatListe\)}{section.11.3}% 44
+\BOOKMARK [2][-]{subsection.11.3.4}{,rfn \(RumexFormatNummernliste\)}{section.11.3}% 45
+\BOOKMARK [2][-]{subsection.11.3.5}{,rfb \(RumexFormatBlock\)}{section.11.3}% 46
+\BOOKMARK [1][-]{section.11.4}{Make Befehle}{chapter.11}% 47
+\BOOKMARK [2][-]{subsection.11.4.1}{,rma \(RumexMakeAll\)}{section.11.4}% 48
+\BOOKMARK [2][-]{subsection.11.4.2}{,rmb \(RumexMakeBild\)}{section.11.4}% 49
+\BOOKMARK [2][-]{subsection.11.4.3}{,rmca \(RumexMakeCleanAll\)}{section.11.4}% 50
+\BOOKMARK [2][-]{subsection.11.4.4}{,rmcb \(RumexMakeCleanBilder\)}{section.11.4}% 51
+\BOOKMARK [2][-]{subsection.11.4.5}{,rmch \(RumexMakeCleanHtml\)}{section.11.4}% 52
+\BOOKMARK [2][-]{subsection.11.4.6}{,rmcx \(RumexMakeCleanXml\)}{section.11.4}% 53
+\BOOKMARK [2][-]{subsection.11.4.7}{,rmcf5 \(RumexMakeCleanF8htm\)}{section.11.4}% 54
+\BOOKMARK [2][-]{subsection.11.4.8}{,rmh \(RumexMakeHtml\)}{section.11.4}% 55
+\BOOKMARK [2][-]{subsection.11.4.9}{,rmi \(RumexMakeIndex\)}{section.11.4}% 56
+\BOOKMARK [2][-]{subsection.11.4.10}{,rmm \(RumexMakesiteMap\)}{section.11.4}% 57
+\BOOKMARK [2][-]{subsection.11.4.11}{,rmo \(RumexMakeOnline\)}{section.11.4}% 58
+\BOOKMARK [2][-]{subsection.11.4.12}{,rmr \(RumexMakeRss\)}{section.11.4}% 59
+\BOOKMARK [2][-]{subsection.11.4.13}{,rms \(RumexMakeSuche\)}{section.11.4}% 60
+\BOOKMARK [1][-]{section.11.5}{Vorschau}{chapter.11}% 61
+\BOOKMARK [2][-]{subsection.11.5.1}{,rsf \(RumexShowFile\)}{section.11.5}% 62
+\BOOKMARK [2][-]{subsection.11.5.2}{,rsw \(RumexShowWww\)}{section.11.5}% 63
+\BOOKMARK [2][-]{subsection.11.5.3}{,rsl \(RumexShowLocal\)}{section.11.5}% 64
+\BOOKMARK [1][-]{section.11.6}{Sonstiges}{chapter.11}% 65
+\BOOKMARK [2][-]{subsection.11.6.1}{,rku}{section.11.6}% 66
+\BOOKMARK [2][-]{subsection.11.6.2}{,ros \(RumexOpenStart\)}{section.11.6}% 67
+\BOOKMARK [2][-]{subsection.11.6.3}{,ror \(RumexOpenRss\)}{section.11.6}% 68
+\BOOKMARK [0][-]{chapter.12}{Statik Funktion}{}% 69
+\BOOKMARK [1][-]{section.12.1}{Die \(g\)vim statik Kurztaste in Rumex}{chapter.12}% 70
+\BOOKMARK [1][-]{section.12.2}{HTML Formatierung}{chapter.12}% 71
+\BOOKMARK [1][-]{section.12.3}{Die Literaturverzeichnis Funktion}{chapter.12}% 72
+\BOOKMARK [1][-]{section.12.4}{Installation pandoc manuell}{chapter.12}% 73
+\BOOKMARK [1][-]{section.12.5}{Verwendung in- und au\337erhalb von Rumex?}{chapter.12}% 74
+\BOOKMARK [2][-]{subsection.12.5.1}{Setzen der \334berschrift f\374r das Literaturverzeichnis}{section.12.5}% 75
+\BOOKMARK [2][-]{subsection.12.5.2}{Einbinden von Bildern}{section.12.5}% 76
+\BOOKMARK [2][-]{subsection.12.5.3}{Statik Dateien im .rx Verzeichnis}{section.12.5}% 77
+\BOOKMARK [2][-]{subsection.12.5.4}{Tipps}{section.12.5}% 78
+\BOOKMARK [1][-]{section.12.6}{Literaturverzeichnis}{chapter.12}% 79
+\BOOKMARK [0][-]{chapter.13}{Lager}{}% 80
+\BOOKMARK [1][-]{subsection.13.0.1}{gvim unterst\374tzung einrichten}{chapter.13}% 81
+\BOOKMARK [2][-]{subsection.13.0.2}{seite auf einem github.com server einrichten}{subsection.13.0.1}% 82
+\BOOKMARK [2][-]{subsection.13.0.3}{seite auf einem nicht github.com server einrichten}{subsection.13.0.1}% 83
+\BOOKMARK [1][-]{section.13.1}{aufbau des rumex baukastens}{chapter.13}% 84
+\BOOKMARK [2][-]{subsection.13.1.1}{root verzeichnis}{section.13.1}% 85
+\BOOKMARK [2][-]{subsection.13.1.2}{unterverzeichnisse}{section.13.1}% 86
+\BOOKMARK [2][-]{subsection.13.1.3}{steuerung durch dateiendung}{section.13.1}% 87
+\BOOKMARK [2][-]{subsection.13.1.4}{sonderseiten}{section.13.1}% 88
+\BOOKMARK [2][-]{subsection.13.1.5}{aufbau der startseite}{section.13.1}% 89
+\BOOKMARK [2][-]{subsection.13.1.6}{aufbau der einzelseiten}{section.13.1}% 90
+\BOOKMARK [2][-]{subsection.13.1.7}{template}{section.13.1}% 91
+\BOOKMARK [1][-]{section.13.2}{rss feed funktion}{chapter.13}% 92
+\BOOKMARK [2][-]{subsection.13.2.1}{beispiel einer rss feed seite}{section.13.2}% 93
+\BOOKMARK [2][-]{subsection.13.2.2}{rss dateiname}{section.13.2}% 94
+\BOOKMARK [2][-]{subsection.13.2.3}{rss titel}{section.13.2}% 95
+\BOOKMARK [2][-]{subsection.13.2.4}{rss auslagern}{section.13.2}% 96
+\BOOKMARK [2][-]{subsection.13.2.5}{rss kurztaste}{section.13.2}% 97
+\BOOKMARK [2][-]{subsection.13.2.6}{interna}{section.13.2}% 98
+\BOOKMARK [1][-]{section.13.3}{rumex auf einem usb stick}{chapter.13}% 99
+\BOOKMARK [1][-]{section.13.4}{make steuerung}{chapter.13}% 100
+\BOOKMARK [1][-]{section.13.5}{update}{chapter.13}% 101
+\BOOKMARK [1][-]{section.13.6}{homepage \344nderung, schnell und immer aktuell}{chapter.13}% 102
+\BOOKMARK [2][-]{subsection.13.6.1}{installation der tilda unterst\374tzung}{section.13.6}% 103
+\BOOKMARK [2][-]{subsection.13.6.2}{tilda einrichten}{section.13.6}% 104
+\BOOKMARK [1][-]{section.13.7}{Warum wurde diese Beschreibung nicht mit Rumex erstellt}{chapter.13}% 105
+\BOOKMARK [0][-]{appendix.A}{Lizenz}{}% 106
+\BOOKMARK [0][-]{appendix.B}{Impressum / Kontakt}{}% 107
+\BOOKMARK [0][-]{appendix.C}{Literatur}{}% 108
+\BOOKMARK [0][-]{appendix*.29}{Literatur}{}% 109

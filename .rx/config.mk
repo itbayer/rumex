@@ -54,7 +54,8 @@ SEITENBANNER = "rxtpl/img/rumex.png"
 #-----------------------------------------------------------------------
 MOOTIT = "rumex"
 
-
+# FIXME :: wird wahrscheinlich nicht mehr gebraucht, wurde
+# 			ersetzt durch sitecopy
 #-----------------------------------------------------------------------
 # FTP URL / Zugangsdaten. Ist diese Variabel gesetzt wird das 
 # Programm wput bzw. bin/wput.sh verwendet um die Daten auf

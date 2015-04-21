@@ -1,0 +1,137 @@
+\select@language {ngerman}
+\contentsline {chapter}{\numberline {1}Vorwort}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}Rumex?}{5}{section.1.1}
+\contentsline {chapter}{\numberline {2}Kurzbeschreibung}{6}{chapter.2}
+\contentsline {chapter}{\numberline {3}Die Index Seite}{7}{chapter.3}
+\contentsline {chapter}{\numberline {4}Seiten Arten}{8}{chapter.4}
+\contentsline {section}{\numberline {4.1}Inhaltsverzeichnis Kennzeichnung}{8}{section.4.1}
+\contentsline {paragraph}{0}{8}{section*.2}
+\contentsline {paragraph}{1}{8}{section*.3}
+\contentsline {paragraph}{2}{8}{section*.4}
+\contentsline {paragraph}{3}{8}{section*.5}
+\contentsline {paragraph}{4}{8}{section*.6}
+\contentsline {paragraph}{5}{8}{section*.7}
+\contentsline {paragraph}{6}{8}{section*.8}
+\contentsline {section}{\numberline {4.2}Verwendungskennzeichnung}{9}{section.4.2}
+\contentsline {section}{\numberline {4.3}rx0w}{9}{section.4.3}
+\contentsline {section}{\numberline {4.4}rx0x}{9}{section.4.4}
+\contentsline {chapter}{\numberline {5}Sonderseiten}{10}{chapter.5}
+\contentsline {section}{\numberline {5.1}index}{10}{section.5.1}
+\contentsline {section}{\numberline {5.2}suche}{10}{section.5.2}
+\contentsline {section}{\numberline {5.3}start}{10}{section.5.3}
+\contentsline {section}{\numberline {5.4}weblog}{10}{section.5.4}
+\contentsline {section}{\numberline {5.5}sitemap}{10}{section.5.5}
+\contentsline {section}{\numberline {5.6}rss}{10}{section.5.6}
+\contentsline {chapter}{\numberline {6}Installation}{11}{chapter.6}
+\contentsline {section}{\numberline {6.1}Vorbereitung des Rechners}{11}{section.6.1}
+\contentsline {section}{\numberline {6.2}Die lokale Installation}{12}{section.6.2}
+\contentsline {section}{\numberline {6.3}Ver\IeC {\"o}ffentlichen der Seite}{12}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Ver\IeC {\"o}ffentlichung auf github}{13}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Ver\IeC {\"o}ffentlichung auf einem Server mit git Unterst\IeC {\"u}tzung}{13}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Ver\IeC {\"o}ffentlichung auf einem Server mit FTP}{13}{subsection.6.3.3}
+\contentsline {chapter}{\numberline {7}Konfiguration}{14}{chapter.7}
+\contentsline {section}{\numberline {7.1}Rumex auf dich einstellen}{14}{section.7.1}
+\contentsline {section}{\numberline {7.2}Rumex Konfigurationsvariable}{14}{section.7.2}
+\contentsline {chapter}{\numberline {8}Diskussion}{24}{chapter.8}
+\contentsline {section}{\numberline {8.1}moot.it}{24}{section.8.1}
+\contentsline {chapter}{\numberline {9}Weblog}{25}{chapter.9}
+\contentsline {chapter}{\numberline {10}RSS Feed}{26}{chapter.10}
+\contentsline {chapter}{\numberline {11}Vim Kurztasten}{27}{chapter.11}
+\contentsline {section}{\numberline {11.1}Textbausteine}{27}{section.11.1}
+\contentsline {subsection}{\numberline {11.1.1}\texttt {,rnd} (RumexNeueDatei)}{27}{subsection.11.1.1}
+\contentsline {subsection}{\numberline {11.1.2}\texttt {,rnn} (RumexNeueNachricht)}{28}{subsection.11.1.2}
+\contentsline {subsection}{\numberline {11.1.3}\texttt {,rwl} (RumexWeiterLeitung)}{28}{subsection.11.1.3}
+\contentsline {subsection}{\numberline {11.1.4}\texttt {,rmk} (RumexMootitKommentar)}{29}{subsection.11.1.4}
+\contentsline {subsection}{\numberline {11.1.5}\texttt {,rnb} (RumexNeuenweBlog)}{29}{subsection.11.1.5}
+\contentsline {section}{\numberline {11.2}Git Kommandos}{29}{section.11.2}
+\contentsline {subsection}{\numberline {11.2.1}\texttt {,rgp} (RumexGitPull)}{29}{subsection.11.2.1}
+\contentsline {subsection}{\numberline {11.2.2}\texttt {,rgs} (RumexGitStatus)}{30}{subsection.11.2.2}
+\contentsline {section}{\numberline {11.3}Text Formatierung}{30}{section.11.3}
+\contentsline {subsection}{\numberline {11.3.1}\texttt {,rff} (RumexFormatFett)}{30}{subsection.11.3.1}
+\contentsline {subsection}{\numberline {11.3.2}\texttt {,rfk} (RumexFormatKursiv)}{30}{subsection.11.3.2}
+\contentsline {subsection}{\numberline {11.3.3}\texttt {,rfl} (RumexFormatListe)}{30}{subsection.11.3.3}
+\contentsline {subsection}{\numberline {11.3.4}\texttt {,rfn} (RumexFormatNummernliste)}{30}{subsection.11.3.4}
+\contentsline {subsection}{\numberline {11.3.5}\texttt {,rfb} (RumexFormatBlock)}{30}{subsection.11.3.5}
+\contentsline {section}{\numberline {11.4}Make Befehle}{31}{section.11.4}
+\contentsline {subsection}{\numberline {11.4.1}\texttt {,rma} (RumexMakeAll)}{31}{subsection.11.4.1}
+\contentsline {subsection}{\numberline {11.4.2}\texttt {,rmb} (RumexMakeBild)}{31}{subsection.11.4.2}
+\contentsline {subsection}{\numberline {11.4.3}\texttt {,rmca} (RumexMakeCleanAll)}{31}{subsection.11.4.3}
+\contentsline {subsection}{\numberline {11.4.4}\texttt {,rmcb} (RumexMakeCleanBilder)}{31}{subsection.11.4.4}
+\contentsline {subsection}{\numberline {11.4.5}\texttt {,rmch} (RumexMakeCleanHtml)}{31}{subsection.11.4.5}
+\contentsline {subsection}{\numberline {11.4.6}\texttt {,rmcx} (RumexMakeCleanXml)}{31}{subsection.11.4.6}
+\contentsline {subsection}{\numberline {11.4.7}\texttt {,rmcf5} (RumexMakeCleanF8htm)}{31}{subsection.11.4.7}
+\contentsline {subsection}{\numberline {11.4.8}\texttt {,rmh} (RumexMakeHtml)}{32}{subsection.11.4.8}
+\contentsline {subsection}{\numberline {11.4.9}\texttt {,rmi} (RumexMakeIndex)}{32}{subsection.11.4.9}
+\contentsline {subsection}{\numberline {11.4.10}\texttt {,rmm} (RumexMakesiteMap)}{32}{subsection.11.4.10}
+\contentsline {subsection}{\numberline {11.4.11}\texttt {,rmo} (RumexMakeOnline)}{32}{subsection.11.4.11}
+\contentsline {subsection}{\numberline {11.4.12}\texttt {,rmr} (RumexMakeRss)}{32}{subsection.11.4.12}
+\contentsline {subsection}{\numberline {11.4.13}\texttt {,rms} (RumexMakeSuche)}{32}{subsection.11.4.13}
+\contentsline {section}{\numberline {11.5}Vorschau}{32}{section.11.5}
+\contentsline {subsection}{\numberline {11.5.1}\texttt {,rsf} (RumexShowFile)}{32}{subsection.11.5.1}
+\contentsline {subsection}{\numberline {11.5.2}\texttt {,rsw} (RumexShowWww)}{32}{subsection.11.5.2}
+\contentsline {subsection}{\numberline {11.5.3}\texttt {,rsl} (RumexShowLocal)}{33}{subsection.11.5.3}
+\contentsline {section}{\numberline {11.6}Sonstiges}{33}{section.11.6}
+\contentsline {subsection}{\numberline {11.6.1}\texttt {,rku}}{33}{subsection.11.6.1}
+\contentsline {subsection}{\numberline {11.6.2}\texttt {,ros} (RumexOpenStart)}{33}{subsection.11.6.2}
+\contentsline {subsection}{\numberline {11.6.3}\texttt {,ror} (RumexOpenRss)}{33}{subsection.11.6.3}
+\contentsline {chapter}{\numberline {12}Statik Funktion}{34}{chapter.12}
+\contentsline {section}{\numberline {12.1}Die (g)vim statik Kurztaste in Rumex}{35}{section.12.1}
+\contentsline {section}{\numberline {12.2}HTML Formatierung}{35}{section.12.2}
+\contentsline {section}{\numberline {12.3}Die Literaturverzeichnis Funktion}{36}{section.12.3}
+\contentsline {section}{\numberline {12.4}Installation pandoc manuell}{36}{section.12.4}
+\contentsline {subsubsection}{Nachinstallation Rumex}{36}{section*.9}
+\contentsline {subsubsection}{Literatur Stil}{37}{section*.10}
+\contentsline {subsubsection}{Literatur Verwaltung}{37}{section*.11}
+\contentsline {subsubsection}{Tipps}{37}{section*.12}
+\contentsline {section}{\numberline {12.5}Verwendung in- und au\IeC {\ss }erhalb von Rumex?}{38}{section.12.5}
+\contentsline {subsection}{\numberline {12.5.1}Setzen der \IeC {\"U}berschrift f\IeC {\"u}r das Literaturverzeichnis}{39}{subsection.12.5.1}
+\contentsline {subsection}{\numberline {12.5.2}Einbinden von Bildern}{39}{subsection.12.5.2}
+\contentsline {subsection}{\numberline {12.5.3}Statik Dateien im \texttt {.rx} Verzeichnis}{39}{subsection.12.5.3}
+\contentsline {subsection}{\numberline {12.5.4}Tipps}{40}{subsection.12.5.4}
+\contentsline {section}{\numberline {12.6}Literaturverzeichnis}{40}{section.12.6}
+\contentsline {chapter}{\numberline {13}Lager}{41}{chapter.13}
+\contentsline {subsection}{\numberline {13.0.1}gvim unterst\IeC {\"u}tzung einrichten}{41}{subsection.13.0.1}
+\contentsline {subsubsection}{tipps zur benutzung gvim}{41}{section*.13}
+\contentsline {subsubsection}{vim kurztasten}{41}{section*.14}
+\contentsline {subsubsection}{gvim men\IeC {\"u}}{41}{section*.15}
+\contentsline {paragraph}{dateiname erg\IeC {\"a}nzen}{41}{section*.16}
+\contentsline {paragraph}{wort innerhalb des dokumentes suchen}{42}{section*.17}
+\contentsline {paragraph}{n\IeC {\"u}tzliche erweiterungen}{42}{section*.18}
+\contentsline {subsection}{\numberline {13.0.2}seite auf einem github.com server einrichten}{42}{subsection.13.0.2}
+\contentsline {subsection}{\numberline {13.0.3}seite auf einem nicht github.com server einrichten}{43}{subsection.13.0.3}
+\contentsline {subsubsection}{datei upload per git}{43}{section*.19}
+\contentsline {subsubsection}{datei upload per ftp}{43}{section*.20}
+\contentsline {section}{\numberline {13.1}aufbau des rumex baukastens}{43}{section.13.1}
+\contentsline {subsection}{\numberline {13.1.1}root verzeichnis}{43}{subsection.13.1.1}
+\contentsline {subsection}{\numberline {13.1.2}unterverzeichnisse}{44}{subsection.13.1.2}
+\contentsline {subsection}{\numberline {13.1.3}steuerung durch dateiendung}{44}{subsection.13.1.3}
+\contentsline {subsubsection}{beispiel}{44}{section*.21}
+\contentsline {subsection}{\numberline {13.1.4}sonderseiten}{45}{subsection.13.1.4}
+\contentsline {subsection}{\numberline {13.1.5}aufbau der startseite}{46}{subsection.13.1.5}
+\contentsline {subsection}{\numberline {13.1.6}aufbau der einzelseiten}{46}{subsection.13.1.6}
+\contentsline {subsection}{\numberline {13.1.7}template}{47}{subsection.13.1.7}
+\contentsline {section}{\numberline {13.2}rss feed funktion}{47}{section.13.2}
+\contentsline {subsection}{\numberline {13.2.1}beispiel einer rss feed seite}{48}{subsection.13.2.1}
+\contentsline {subsection}{\numberline {13.2.2}rss dateiname}{48}{subsection.13.2.2}
+\contentsline {subsection}{\numberline {13.2.3}rss titel}{48}{subsection.13.2.3}
+\contentsline {subsection}{\numberline {13.2.4}rss auslagern}{48}{subsection.13.2.4}
+\contentsline {subsection}{\numberline {13.2.5}rss kurztaste}{48}{subsection.13.2.5}
+\contentsline {subsection}{\numberline {13.2.6}interna}{49}{subsection.13.2.6}
+\contentsline {section}{\numberline {13.3}rumex auf einem usb stick}{49}{section.13.3}
+\contentsline {section}{\numberline {13.4}make steuerung}{49}{section.13.4}
+\contentsline {section}{\numberline {13.5}update}{50}{section.13.5}
+\contentsline {section}{\numberline {13.6}homepage \IeC {\"a}nderung, schnell und immer aktuell}{50}{section.13.6}
+\contentsline {subsection}{\numberline {13.6.1}installation der tilda unterst\IeC {\"u}tzung}{50}{subsection.13.6.1}
+\contentsline {subsubsection}{shell scripte}{50}{section*.22}
+\contentsline {paragraph}{rumex-tilda.sh}{52}{section*.23}
+\contentsline {paragraph}{rumex-vim.sh}{52}{section*.24}
+\contentsline {paragraph}{rumex-gvim.sh}{52}{section*.25}
+\contentsline {subsection}{\numberline {13.6.2}tilda einrichten}{52}{subsection.13.6.2}
+\contentsline {section}{\numberline {13.7}Warum wurde diese Beschreibung nicht mit Rumex erstellt}{53}{section.13.7}
+\contentsline {chapter}{\numberline {A}Lizenz}{54}{appendix.A}
+\contentsline {paragraph}{Namensnennung}{54}{section*.26}
+\contentsline {paragraph}{Keine kommerzielle Nutzung}{54}{section*.27}
+\contentsline {paragraph}{Weitergabe unter gleichen Bedingungen}{54}{section*.28}
+\contentsline {chapter}{\numberline {B}Impressum / Kontakt}{55}{appendix.B}
+\contentsline {chapter}{\numberline {C}Literatur}{56}{appendix.C}
+\contentsline {chapter}{Literatur}{57}{appendix*.29}
