@@ -1,0 +1,117 @@
+\label{kap:installation}
+\chapter{Installation}
+
+Rumex kann in zwei Stufen verwendet werden.
+Einmal als lokale, private Installation%
+\footnote{ 
+Rumex braucht generell keine online Verbindung.
+Alle benötigten öffentlichen Scripte 
+werden statisch gespeichert, sind in der Installation enthalten.
+Nicht einmal ein Webserver muss installiert werden.}
+und als öffentliche Installation.
+
+
+
+\label{sec:vorbereitung-des-rechners}
+\section{Vorbereitung des Rechners}
+
+Rumex ist auf ein *nix System ausgerichtet. 
+Auf diesem sollten folgende Programme installiert sein:
+
+\begin{itemize}
+\item bash
+\item make
+\item perl
+\item git
+\item pandoc
+\item imagemagick
+\item wget
+\item sitecopy
+\item vim (g)vim
+\item texlive
+\end{itemize}
+
+Wer mit dem Editor \texttt{vim} zurecht kommt sollte sich auch
+\texttt{gvim} installieren. 
+Rumex besitzt eine \texttt{gvim} Erweiterung die, 
+die Arbeit bzw. die Suche nach dem richtigen Befehl am
+Anfang um einiges erleichtert.
+
+\texttt{texlive} wird nur gebraucht wenn man auch PDF Dateien erstellen möchte.
+
+\texttt{sitecopy} wird nur gebraucht wenn man die Daten per FTP hoch laden möchte.
+
+
+Bei Debian dürfte dies die nachfolgender Zeile erledigen.
+\begin{verbatim}
+sudo apt-get install make perl git-core \
+pandoc imagemagick sitecopy gvim texlive
+\end{verbatim}
+
+
+
+
+
+\label{sec:die-lokale-installation}
+\section{Die lokale Installation}
+
+Für die Installation auf deinem Rechner musst 
+zu erst das ZIP bzw. das tar.gz Archiv 
+vom github Server holen und entpacken werden.
+
+\begin{verbatim}
+wget https://github.com/itbayer/rumex/archive/gh-pages.zip
+unzip gh-pages.zip
+\end{verbatim}
+
+bzw.
+
+\begin{verbatim}
+wget https://github.com/itbayer/rumex/archive/gh-pages.tar.gz
+tar -xzvf gh-pages.tar.gz
+\end{verbatim}
+
+Nach dem entpacken wechselt man in das Verzeichnis
+\texttt{rumex-gh-pages/.rx} und starte
+die Befehle \texttt{make install} und \texttt{make show}.
+
+\begin{verbatim}
+cd rumex-gh-pages/.rx/
+make install
+make show
+\end{verbatim}
+
+Rumex ist jetzt lokal installiert und zeigt die erste Seite an.
+Auf dieser findet man eine kurz Information der Schritte die
+man noch machen sollte. 
+Diese Schritte sind vor allen wichtig wenn man seine Seiten
+veröffentlichen möchte.
+
+
+
+\label{sec:veroeffentlichen-der-seite}
+\section{Veröffentlichen der Seite}
+
+In der zweiten Stufen kann die Seite auf drei
+Arten veröffentlicht werden.
+
+1. Hosting auf \href{http://www.github.com}{Github}
+
+2. Hosting auf einem Server mit git Unterstützung
+
+3. Hosting klassisch per FTP
+
+
+\label{ssec:installation-github}
+\subsection{Veröffentlichung auf github}
+
+
+\label{ssec:installation-gitserver}
+\subsection{Veröffentlichung auf einem Server mit git Unterstützung}
+
+
+\label{ssec:installation-ftpserver}
+\subsection{Veröffentlichung auf einem Server mit FTP}
+
+
+

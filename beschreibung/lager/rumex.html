@@ -1,0 +1,2791 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html xml:lang="de" > 
+<head><title>Beschreibung des Rumex Baukasten</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html,info --> 
+<meta name="src" content="rumex.tex"> 
+<meta name="date" content="2015-04-03 10:18:00"> 
+<link rel="stylesheet" type="text/css" href="rumex.css"> 
+</head><body 
+>
+<div class="maketitle"><div class="titlepage">
+                                                                                     
+                                                                                     
+                                                                                     
+                                                                                     
+                                                                                     
+                                                                                     
+
+<h2 class="titleHead">Beschreibung des Rumex Baukasten</h2>
+<div class="author" ><span 
+class="ec-lmr-17">Stefan Blechschmidt</span></div><br />
+<div class="date" ><span 
+class="ec-lmr-17">April 2015 &#8211; 3.</span><span 
+class="ec-lmr-17">&#x00A0;April 2015</span></div>
+                                                                                     
+                                                                                     
+</div> </div>
+                                                                                     
+                                                                                     
+<h2 class="likechapterHead"><a 
+ id="x1-1000"></a>Inhaltsverzeichnis</h2>
+<div class="tableofcontents">
+<span class="chapterToc" >1&#x00A0;&#x00A0;<a 
+href="#x1-20001" id="QQ2-1-2">Vorwort</a></span>
+<br />&#x00A0;<span class="sectionToc" >1.1&#x00A0;&#x00A0;<a 
+href="#x1-30001.1" id="QQ2-1-3">Rumex?</a></span>
+<br /><span class="chapterToc" >2&#x00A0;&#x00A0;<a 
+href="#x1-40002" id="QQ2-1-4">Kurzbeschreibung</a></span>
+<br /><span class="chapterToc" >3&#x00A0;&#x00A0;<a 
+href="#x1-50003" id="QQ2-1-5">Die Index Seite</a></span>
+<br /><span class="chapterToc" >4&#x00A0;&#x00A0;<a 
+href="#x1-60004" id="QQ2-1-6">Seiten Arten</a></span>
+<br />&#x00A0;<span class="sectionToc" >4.1&#x00A0;&#x00A0;<a 
+href="#x1-70004.1" id="QQ2-1-7">Inhaltsverzeichnis Kennzeichnung</a></span>
+<br />&#x00A0;<span class="sectionToc" >4.2&#x00A0;&#x00A0;<a 
+href="#x1-150004.2" id="QQ2-1-15">Verwendungskennzeichnung</a></span>
+<br />&#x00A0;<span class="sectionToc" >4.3&#x00A0;&#x00A0;<a 
+href="#x1-160004.3" id="QQ2-1-16">rx0w</a></span>
+<br />&#x00A0;<span class="sectionToc" >4.4&#x00A0;&#x00A0;<a 
+href="#x1-170004.4" id="QQ2-1-17">rx0x</a></span>
+<br /><span class="chapterToc" >5&#x00A0;&#x00A0;<a 
+href="#x1-180005" id="QQ2-1-18">Sonderseiten</a></span>
+<br />&#x00A0;<span class="sectionToc" >5.1&#x00A0;&#x00A0;<a 
+href="#x1-190005.1" id="QQ2-1-19">index</a></span>
+<br />&#x00A0;<span class="sectionToc" >5.2&#x00A0;&#x00A0;<a 
+href="#x1-200005.2" id="QQ2-1-20">suche</a></span>
+<br />&#x00A0;<span class="sectionToc" >5.3&#x00A0;&#x00A0;<a 
+href="#x1-210005.3" id="QQ2-1-21">start</a></span>
+<br />&#x00A0;<span class="sectionToc" >5.4&#x00A0;&#x00A0;<a 
+href="#x1-220005.4" id="QQ2-1-22">weblog</a></span>
+<br />&#x00A0;<span class="sectionToc" >5.5&#x00A0;&#x00A0;<a 
+href="#x1-230005.5" id="QQ2-1-23">sitemap</a></span>
+<br />&#x00A0;<span class="sectionToc" >5.6&#x00A0;&#x00A0;<a 
+href="#x1-240005.6" id="QQ2-1-24">rss</a></span>
+<br /><span class="chapterToc" >6&#x00A0;&#x00A0;<a 
+href="#x1-250006" id="QQ2-1-25">Installation</a></span>
+<br />&#x00A0;<span class="sectionToc" >6.1&#x00A0;&#x00A0;<a 
+href="#x1-260006.1" id="QQ2-1-26">Vorbereitung des Rechners</a></span>
+<br />&#x00A0;<span class="sectionToc" >6.2&#x00A0;&#x00A0;<a 
+href="#x1-270006.2" id="QQ2-1-27">Die lokale Installation</a></span>
+<br />&#x00A0;<span class="sectionToc" >6.3&#x00A0;&#x00A0;<a 
+href="#x1-280006.3" id="QQ2-1-28">Veröffentlichen der Seite</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >6.3.1&#x00A0;&#x00A0;<a 
+href="#x1-290006.3.1" id="QQ2-1-29">Veröffentlichung auf github</a></span>
+                                                                                     
+                                                                                     
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >6.3.2&#x00A0;&#x00A0;<a 
+href="#x1-300006.3.2" id="QQ2-1-30">Veröffentlichung auf einem Server mit git Unterstützung</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >6.3.3&#x00A0;&#x00A0;<a 
+href="#x1-310006.3.3" id="QQ2-1-31">Veröffentlichung auf einem Server mit FTP</a></span>
+<br /><span class="chapterToc" >7&#x00A0;&#x00A0;<a 
+href="#x1-320007" id="QQ2-1-32">Konfiguration</a></span>
+<br />&#x00A0;<span class="sectionToc" >7.1&#x00A0;&#x00A0;<a 
+href="#x1-330007.1" id="QQ2-1-33">Rumex auf dich einstellen</a></span>
+<br />&#x00A0;<span class="sectionToc" >7.2&#x00A0;&#x00A0;<a 
+href="#x1-340007.2" id="QQ2-1-34">Rumex Konfigurationsvariable</a></span>
+<br /><span class="chapterToc" >8&#x00A0;&#x00A0;<a 
+href="#x1-350008" id="QQ2-1-35">Diskussion</a></span>
+<br />&#x00A0;<span class="sectionToc" >8.1&#x00A0;&#x00A0;<a 
+href="#x1-360008.1" id="QQ2-1-36">moot.it</a></span>
+<br /><span class="chapterToc" >9&#x00A0;&#x00A0;<a 
+href="#x1-370009" id="QQ2-1-37">Weblog</a></span>
+<br /><span class="chapterToc" >10&#x00A0;&#x00A0;<a 
+href="#x1-3800010" id="QQ2-1-38">RSS Feed</a></span>
+<br /><span class="chapterToc" >11&#x00A0;&#x00A0;<a 
+href="#x1-3900011" id="QQ2-1-39">Vim Kurztasten</a></span>
+<br />&#x00A0;<span class="sectionToc" >11.1&#x00A0;&#x00A0;<a 
+href="#x1-4000011.1" id="QQ2-1-40">Textbausteine</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.1.1&#x00A0;&#x00A0;<a 
+href="#x1-4100011.1.1" id="QQ2-1-41"><span 
+class="ec-lmtt-12">,rnd </span>(RumexNeueDatei)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.1.2&#x00A0;&#x00A0;<a 
+href="#x1-4200011.1.2" id="QQ2-1-42"><span 
+class="ec-lmtt-12">,rnn </span>(RumexNeueNachricht)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.1.3&#x00A0;&#x00A0;<a 
+href="#x1-4300011.1.3" id="QQ2-1-43"><span 
+class="ec-lmtt-12">,rwl </span>(RumexWeiterLeitung)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.1.4&#x00A0;&#x00A0;<a 
+href="#x1-4400011.1.4" id="QQ2-1-44"><span 
+class="ec-lmtt-12">,rmk </span>(RumexMootitKommentar)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.1.5&#x00A0;&#x00A0;<a 
+href="#x1-4500011.1.5" id="QQ2-1-45"><span 
+class="ec-lmtt-12">,rnb </span>(RumexNeuenweBlog)</a></span>
+<br />&#x00A0;<span class="sectionToc" >11.2&#x00A0;&#x00A0;<a 
+href="#x1-4600011.2" id="QQ2-1-46">Git Kommandos</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.2.1&#x00A0;&#x00A0;<a 
+href="#x1-4700011.2.1" id="QQ2-1-47"><span 
+class="ec-lmtt-12">,rgp </span>(RumexGitPull)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.2.2&#x00A0;&#x00A0;<a 
+href="#x1-4800011.2.2" id="QQ2-1-48"><span 
+class="ec-lmtt-12">,rgs </span>(RumexGitStatus)</a></span>
+<br />&#x00A0;<span class="sectionToc" >11.3&#x00A0;&#x00A0;<a 
+href="#x1-4900011.3" id="QQ2-1-49">Text Formatierung</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.3.1&#x00A0;&#x00A0;<a 
+href="#x1-5000011.3.1" id="QQ2-1-50"><span 
+class="ec-lmtt-12">,rff </span>(RumexFormatFett)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.3.2&#x00A0;&#x00A0;<a 
+href="#x1-5100011.3.2" id="QQ2-1-51"><span 
+class="ec-lmtt-12">,rfk </span>(RumexFormatKursiv)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.3.3&#x00A0;&#x00A0;<a 
+href="#x1-5200011.3.3" id="QQ2-1-52"><span 
+class="ec-lmtt-12">,rfl </span>(RumexFormatListe)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.3.4&#x00A0;&#x00A0;<a 
+href="#x1-5300011.3.4" id="QQ2-1-53"><span 
+class="ec-lmtt-12">,rfn </span>(RumexFormatNummernliste)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.3.5&#x00A0;&#x00A0;<a 
+href="#x1-5400011.3.5" id="QQ2-1-54"><span 
+class="ec-lmtt-12">,rfb </span>(RumexFormatBlock)</a></span>
+<br />&#x00A0;<span class="sectionToc" >11.4&#x00A0;&#x00A0;<a 
+href="#x1-5500011.4" id="QQ2-1-55">Make Befehle</a></span>
+                                                                                     
+                                                                                     
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.4.1&#x00A0;&#x00A0;<a 
+href="#x1-5600011.4.1" id="QQ2-1-56"><span 
+class="ec-lmtt-12">,rma </span>(RumexMakeAll)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.4.2&#x00A0;&#x00A0;<a 
+href="#x1-5700011.4.2" id="QQ2-1-57"><span 
+class="ec-lmtt-12">,rmb </span>(RumexMakeBild)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.4.3&#x00A0;&#x00A0;<a 
+href="#x1-5800011.4.3" id="QQ2-1-58"><span 
+class="ec-lmtt-12">,rmca </span>(RumexMakeCleanAll)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.4.4&#x00A0;&#x00A0;<a 
+href="#x1-5900011.4.4" id="QQ2-1-59"><span 
+class="ec-lmtt-12">,rmcb </span>(RumexMakeCleanBilder)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.4.5&#x00A0;&#x00A0;<a 
+href="#x1-6000011.4.5" id="QQ2-1-60"><span 
+class="ec-lmtt-12">,rmch </span>(RumexMakeCleanHtml)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.4.6&#x00A0;&#x00A0;<a 
+href="#x1-6100011.4.6" id="QQ2-1-61"><span 
+class="ec-lmtt-12">,rmcx </span>(RumexMakeCleanXml)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.4.7&#x00A0;&#x00A0;<a 
+href="#x1-6200011.4.7" id="QQ2-1-62"><span 
+class="ec-lmtt-12">,rmcf5 </span>(RumexMakeCleanF8htm)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.4.8&#x00A0;&#x00A0;<a 
+href="#x1-6300011.4.8" id="QQ2-1-63"><span 
+class="ec-lmtt-12">,rmh </span>(RumexMakeHtml)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.4.9&#x00A0;&#x00A0;<a 
+href="#x1-6400011.4.9" id="QQ2-1-64"><span 
+class="ec-lmtt-12">,rmi </span>(RumexMakeIndex)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.4.10&#x00A0;&#x00A0;<a 
+href="#x1-6500011.4.10" id="QQ2-1-65"><span 
+class="ec-lmtt-12">,rmm </span>(RumexMakesiteMap)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.4.11&#x00A0;&#x00A0;<a 
+href="#x1-6600011.4.11" id="QQ2-1-66"><span 
+class="ec-lmtt-12">,rmo </span>(RumexMakeOnline)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.4.12&#x00A0;&#x00A0;<a 
+href="#x1-6700011.4.12" id="QQ2-1-67"><span 
+class="ec-lmtt-12">,rmr </span>(RumexMakeRss)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.4.13&#x00A0;&#x00A0;<a 
+href="#x1-6800011.4.13" id="QQ2-1-68"><span 
+class="ec-lmtt-12">,rms </span>(RumexMakeSuche)</a></span>
+<br />&#x00A0;<span class="sectionToc" >11.5&#x00A0;&#x00A0;<a 
+href="#x1-6900011.5" id="QQ2-1-69">Vorschau</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.5.1&#x00A0;&#x00A0;<a 
+href="#x1-7000011.5.1" id="QQ2-1-70"><span 
+class="ec-lmtt-12">,rsf </span>(RumexShowFile)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.5.2&#x00A0;&#x00A0;<a 
+href="#x1-7100011.5.2" id="QQ2-1-71"><span 
+class="ec-lmtt-12">,rsw </span>(RumexShowWww)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.5.3&#x00A0;&#x00A0;<a 
+href="#x1-7200011.5.3" id="QQ2-1-72"><span 
+class="ec-lmtt-12">,rsl </span>(RumexShowLocal)</a></span>
+<br />&#x00A0;<span class="sectionToc" >11.6&#x00A0;&#x00A0;<a 
+href="#x1-7300011.6" id="QQ2-1-73">Sonstiges</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.6.1&#x00A0;&#x00A0;<a 
+href="#x1-7400011.6.1" id="QQ2-1-74"><span 
+class="ec-lmtt-12">,rku</span></a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.6.2&#x00A0;&#x00A0;<a 
+href="#x1-7500011.6.2" id="QQ2-1-75"><span 
+class="ec-lmtt-12">,ros </span>(RumexOpenStart)</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >11.6.3&#x00A0;&#x00A0;<a 
+href="#x1-7600011.6.3" id="QQ2-1-76"><span 
+class="ec-lmtt-12">,ror </span>(RumexOpenRss)</a></span>
+<br /><span class="chapterToc" >12&#x00A0;&#x00A0;<a 
+href="#x1-7700012" id="QQ2-1-77">Statik Funktion</a></span>
+<br />&#x00A0;<span class="sectionToc" >12.1&#x00A0;&#x00A0;<a 
+href="#x1-7800012.1" id="QQ2-1-78">Die (g)vim statik Kurztaste in Rumex</a></span>
+<br />&#x00A0;<span class="sectionToc" >12.2&#x00A0;&#x00A0;<a 
+href="#x1-7900012.2" id="QQ2-1-79">HTML Formatierung</a></span>
+<br />&#x00A0;<span class="sectionToc" >12.3&#x00A0;&#x00A0;<a 
+href="#x1-8000012.3" id="QQ2-1-80">Die Literaturverzeichnis Funktion</a></span>
+<br />&#x00A0;<span class="sectionToc" >12.4&#x00A0;&#x00A0;<a 
+href="#x1-8100012.4" id="QQ2-1-81">Installation pandoc manuell</a></span>
+                                                                                     
+                                                                                     
+<br />&#x00A0;<span class="sectionToc" >12.5&#x00A0;&#x00A0;<a 
+href="#x1-8600012.5" id="QQ2-1-86">Verwendung in- und außerhalb von Rumex?</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >12.5.1&#x00A0;&#x00A0;<a 
+href="#x1-8700012.5.1" id="QQ2-1-87">Setzen der Überschrift für das Literaturverzeichnis</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >12.5.2&#x00A0;&#x00A0;<a 
+href="#x1-8800012.5.2" id="QQ2-1-88">Einbinden von Bildern</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >12.5.3&#x00A0;&#x00A0;<a 
+href="#x1-8900012.5.3" id="QQ2-1-89">Statik Dateien im <span 
+class="ec-lmtt-12">.rx </span>Verzeichnis</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >12.5.4&#x00A0;&#x00A0;<a 
+href="#x1-9000012.5.4" id="QQ2-1-90">Tipps</a></span>
+<br />&#x00A0;<span class="sectionToc" >12.6&#x00A0;&#x00A0;<a 
+href="#x1-9100012.6" id="QQ2-1-91">Literaturverzeichnis</a></span>
+<br /><span class="chapterToc" >13&#x00A0;&#x00A0;<a 
+href="#x1-9200013" id="QQ2-1-92">Lager</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >13.0.1&#x00A0;&#x00A0;<a 
+href="#x1-9300013.0.1" id="QQ2-1-93">gvim unterstützung einrichten</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >13.0.2&#x00A0;&#x00A0;<a 
+href="#x1-10000013.0.2" id="QQ2-1-100">seite auf einem github.com server einrichten</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >13.0.3&#x00A0;&#x00A0;<a 
+href="#x1-10100013.0.3" id="QQ2-1-101">seite auf einem nicht github.com server einrichten</a></span>
+<br />&#x00A0;<span class="sectionToc" >13.1&#x00A0;&#x00A0;<a 
+href="#x1-10400013.1" id="QQ2-1-104">aufbau des rumex baukastens</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >13.1.1&#x00A0;&#x00A0;<a 
+href="#x1-10500013.1.1" id="QQ2-1-105">root verzeichnis</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >13.1.2&#x00A0;&#x00A0;<a 
+href="#x1-10600013.1.2" id="QQ2-1-106">unterverzeichnisse</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >13.1.3&#x00A0;&#x00A0;<a 
+href="#x1-10700013.1.3" id="QQ2-1-107">steuerung durch dateiendung</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >13.1.4&#x00A0;&#x00A0;<a 
+href="#x1-10900013.1.4" id="QQ2-1-109">sonderseiten</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >13.1.5&#x00A0;&#x00A0;<a 
+href="#x1-11000013.1.5" id="QQ2-1-110">aufbau der startseite</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >13.1.6&#x00A0;&#x00A0;<a 
+href="#x1-11100013.1.6" id="QQ2-1-111">aufbau der einzelseiten</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >13.1.7&#x00A0;&#x00A0;<a 
+href="#x1-11200013.1.7" id="QQ2-1-112">template</a></span>
+<br />&#x00A0;<span class="sectionToc" >13.2&#x00A0;&#x00A0;<a 
+href="#x1-11300013.2" id="QQ2-1-113">rss feed funktion</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >13.2.1&#x00A0;&#x00A0;<a 
+href="#x1-11400013.2.1" id="QQ2-1-114">beispiel einer rss feed seite</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >13.2.2&#x00A0;&#x00A0;<a 
+href="#x1-11500013.2.2" id="QQ2-1-115">rss dateiname</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >13.2.3&#x00A0;&#x00A0;<a 
+href="#x1-11600013.2.3" id="QQ2-1-116">rss titel</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >13.2.4&#x00A0;&#x00A0;<a 
+href="#x1-11700013.2.4" id="QQ2-1-117">rss auslagern</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >13.2.5&#x00A0;&#x00A0;<a 
+href="#x1-11800013.2.5" id="QQ2-1-118">rss kurztaste</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >13.2.6&#x00A0;&#x00A0;<a 
+href="#x1-11900013.2.6" id="QQ2-1-119">interna</a></span>
+<br />&#x00A0;<span class="sectionToc" >13.3&#x00A0;&#x00A0;<a 
+href="#x1-12000013.3" id="QQ2-1-120">rumex auf einem usb stick</a></span>
+                                                                                     
+                                                                                     
+<br />&#x00A0;<span class="sectionToc" >13.4&#x00A0;&#x00A0;<a 
+href="#x1-12100013.4" id="QQ2-1-121">make steuerung</a></span>
+<br />&#x00A0;<span class="sectionToc" >13.5&#x00A0;&#x00A0;<a 
+href="#x1-12200013.5" id="QQ2-1-122">update</a></span>
+<br />&#x00A0;<span class="sectionToc" >13.6&#x00A0;&#x00A0;<a 
+href="#x1-12300013.6" id="QQ2-1-123">homepage änderung, schnell und immer aktuell</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >13.6.1&#x00A0;&#x00A0;<a 
+href="#x1-12400013.6.1" id="QQ2-1-125">installation der tilda unterstützung</a></span>
+<br />&#x00A0;&#x00A0;<span class="subsectionToc" >13.6.2&#x00A0;&#x00A0;<a 
+href="#x1-12900013.6.2" id="QQ2-1-130">tilda einrichten</a></span>
+<br />&#x00A0;<span class="sectionToc" >13.7&#x00A0;&#x00A0;<a 
+href="#x1-13000013.7" id="QQ2-1-131">Warum wurde diese Beschreibung nicht mit Rumex erstellt</a></span>
+<br /><span class="appendixToc" >A&#x00A0;&#x00A0;<a 
+href="#x1-131000A" id="QQ2-1-132">Lizenz</a></span>
+<br /><span class="appendixToc" >B&#x00A0;&#x00A0;<a 
+href="#x1-135000B" id="QQ2-1-136">Impressum / Kontakt</a></span>
+<br /><span class="appendixToc" >C&#x00A0;&#x00A0;<a 
+href="#x1-136000C" id="QQ2-1-137">Literatur</a></span>
+</div>
+                                                                                     
+                                                                                     
+<h2 class="chapterHead"><span class="titlemark">1</span>&#x00A0;&#x00A0;<a 
+ id="x1-20001"></a>Vorwort</h2>
+<!--l. 4--><p class="noindent" >Es gibt immer mehr Systeme zum Erstellen und Verwalten von Internetseiten. Probiert habe
+ich schon viele und mit den meisten war ich auch sehr zufrieden. Was mich aber immer gestört
+hat waren die ständigen Updates.
+<!--l. 10--><p class="noindent" ><span 
+class="ec-lmbx-12">Irgendwie hat sich alles immer gebissen</span>
+<!--l. 12--><p class="noindent" >Einmal brauchte das, ich nenne es stellvertretend für alle Systeme, CMS eine besondere
+Version eines Programms. Dann war es wieder umgekehrt ein Update des Programms konnte
+nicht gemacht werden weil das CMS noch nicht damit zurecht kam.
+<!--l. 19--><p class="noindent" >Ab und zu kam es mir so vor als ob ich die meiste Zeit damit verbrachte das CMS und dessen
+Plattform dazu zu überreden mit einander zu arbeiten.
+<!--l. 23--><p class="noindent" >Ich wünschte mir immer mehr eine einfache Internetseite, eine HTML Seite, so wie in früheren
+Zeiten.
+<!--l. 26--><p class="noindent" >Irgendwann bin ich dann auf <span 
+class="ec-lmtt-12">markdown </span>und <span 
+class="ec-lmtt-12">pandoc </span>gestoßen und die Rumex Idee ist
+entstanden.
+<h3 class="sectionHead"><span class="titlemark">1.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-30001.1"></a>Rumex?</h3>
+<!--l. 33--><p class="noindent" >Rumex ist die lateinische Bezeichnung für den <a 
+href="http://de.wikipedia.org/wiki/Ampfer" >Ampfer</a> und dieser taucht in der Natur dann
+auf, wenn der Boden Überdüngt, Verdichtung und Beschädigt ist. Rumex gehört zu den
+sogenannten Pionier Pflanzen. Er ist ein Lückenfüller.
+<!--l. 39--><p class="noindent" >Genau das soll Rumex auch sein «ein Lückenfüller» für alle die &hellip; Systeme satt haben.
+                                                                                     
+                                                                                     
+<h2 class="chapterHead"><span class="titlemark">2</span>&#x00A0;&#x00A0;<a 
+ id="x1-40002"></a>Kurzbeschreibung</h2>
+                                                                                     
+                                                                                     
+<h2 class="chapterHead"><span class="titlemark">3</span>&#x00A0;&#x00A0;<a 
+ id="x1-50003"></a>Die Index Seite</h2>
+                                                                                     
+                                                                                     
+<h2 class="chapterHead"><span class="titlemark">4</span>&#x00A0;&#x00A0;<a 
+ id="x1-60004"></a>Seiten Arten</h2>
+<!--l. 4--><p class="noindent" >Die Verwendung der Seiten wird über die Dateiendung gesteuert. Hierzu werden vier Zeichen
+eingesetzt.
+      <ul class="itemize1">
+      <li class="itemize">Die ersten beiden Zeichen <span class="obeylines-h"><span class="verb"><span 
+class="ec-lmtt-12">rx</span></span></span> kennzeichnen eine Rumex Datei
+      </li>
+      <li class="itemize">Das   dritte   Zeichen,   immer   eine   Zahl,   kennzeichnet   ob   die   Datei   ein
+      Inhaltsverzeichnis besitzt und bis welcher Ebene dieses eingebunden werden soll.
+      </li>
+      <li class="itemize">Das vierte Zeichen zeigt die Verwendung, sprich Einbindung an.</li></ul>
+<h3 class="sectionHead"><span class="titlemark">4.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-70004.1"></a>Inhaltsverzeichnis Kennzeichnung</h3>
+<!--l. 25--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-80004.1"></a><span 
+class="ec-lmbx-12">0</span></span> Datei ohne Inhaltsverzeichnis.
+<!--l. 27--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-90004.1"></a><span 
+class="ec-lmbx-12">1</span></span> &#8212; Datei mit Inhaltsverzeichnis bis zur ersten Ordnung.
+<!--l. 29--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-100004.1"></a><span 
+class="ec-lmbx-12">2</span></span> &#8212; Datei mit Inhaltsverzeichnis bis zur zweiten Ordnung.
+<!--l. 31--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-110004.1"></a><span 
+class="ec-lmbx-12">3</span></span> &#8212; Datei mit Inhaltsverzeichnis bis zur dritten Ordnung.
+<!--l. 33--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-120004.1"></a><span 
+class="ec-lmbx-12">4</span></span> &#8212; Datei mit Inhaltsverzeichnis bis zur vierten Ordnung.
+                                                                                     
+                                                                                     
+<!--l. 35--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-130004.1"></a><span 
+class="ec-lmbx-12">5</span></span> &#8212; Datei mit Inhaltsverzeichnis bis zur fünften Ordnung.
+<!--l. 37--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-140004.1"></a><span 
+class="ec-lmbx-12">6</span></span> &#8212; Datei mit Inhaltsverzeichnis bis zur sechsten Ordnung.
+<!--l. 44--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">4.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-150004.2"></a>Verwendungskennzeichnung</h3>
+<!--l. 50--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">4.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-160004.3"></a>rx0w</h3>
+<!--l. 52--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">4.4</span>&#x00A0;&#x00A0;<a 
+ id="x1-170004.4"></a>rx0x</h3>
+                                                                                     
+                                                                                     
+<h2 class="chapterHead"><span class="titlemark">5</span>&#x00A0;&#x00A0;<a 
+ id="x1-180005"></a>Sonderseiten</h2>
+<h3 class="sectionHead"><span class="titlemark">5.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-190005.1"></a>index</h3>
+<!--l. 9--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">5.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-200005.2"></a>suche</h3>
+<!--l. 12--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">5.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-210005.3"></a>start</h3>
+<!--l. 15--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">5.4</span>&#x00A0;&#x00A0;<a 
+ id="x1-220005.4"></a>weblog</h3>
+<!--l. 18--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">5.5</span>&#x00A0;&#x00A0;<a 
+ id="x1-230005.5"></a>sitemap</h3>
+                                                                                     
+                                                                                     
+<!--l. 21--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">5.6</span>&#x00A0;&#x00A0;<a 
+ id="x1-240005.6"></a>rss</h3>
+                                                                                     
+                                                                                     
+<h2 class="chapterHead"><span class="titlemark">6</span>&#x00A0;&#x00A0;<a 
+ id="x1-250006"></a>Installation</h2>
+<!--l. 4--><p class="noindent" >Rumex kann in zwei Stufen verwendet werden. Einmal als lokale, private
+Installation<span class="footnote-mark"><a 
+href="rumex2.html#fn1x7"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-25001f1"></a>
+und als öffentliche Installation.
+<h3 class="sectionHead"><span class="titlemark">6.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-260006.1"></a>Vorbereitung des Rechners</h3>
+<!--l. 18--><p class="noindent" >Rumex ist auf ein *nix System ausgerichtet. Auf diesem sollten folgende Programme installiert
+sein:
+      <ul class="itemize1">
+      <li class="itemize">bash
+      </li>
+      <li class="itemize">make
+      </li>
+      <li class="itemize">perl
+      </li>
+      <li class="itemize">git
+      </li>
+      <li class="itemize">pandoc
+      </li>
+      <li class="itemize">imagemagick
+      </li>
+      <li class="itemize">wget
+      </li>
+      <li class="itemize">sitecopy
+                                                                                     
+                                                                                     
+      </li>
+      <li class="itemize">vim (g)vim
+      </li>
+      <li class="itemize">texlive</li></ul>
+<!--l. 34--><p class="noindent" >Wer mit dem Editor <span 
+class="ec-lmtt-12">vim </span>zurecht kommt sollte sich auch <span 
+class="ec-lmtt-12">gvim </span>installieren. Rumex besitzt eine
+<span 
+class="ec-lmtt-12">gvim </span>Erweiterung die, die Arbeit bzw. die Suche nach dem richtigen Befehl am Anfang um
+einiges erleichtert.
+<!--l. 40--><p class="noindent" ><span 
+class="ec-lmtt-12">texlive </span>wird nur gebraucht wenn man auch PDF Dateien erstellen möchte.
+<!--l. 42--><p class="noindent" ><span 
+class="ec-lmtt-12">sitecopy </span>wird nur gebraucht wenn man die Daten per FTP hoch laden möchte.
+<!--l. 45--><p class="noindent" >Bei Debian dürfte dies die nachfolgender Zeile erledigen.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-1">
+sudo&#x00A0;apt-get&#x00A0;install&#x00A0;make&#x00A0;perl&#x00A0;git-core&#x00A0;\
+&#x00A0;<br />pandoc&#x00A0;imagemagick&#x00A0;sitecopy&#x00A0;gvim&#x00A0;texlive
+</div>
+<!--l. 49--><p class="nopar" >
+<!--l. 56--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">6.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-270006.2"></a>Die lokale Installation</h3>
+<!--l. 58--><p class="noindent" >Für die Installation auf deinem Rechner musst zu erst das ZIP bzw. das tar.gz Archiv vom
+github Server holen und entpacken werden.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-2">
+wget&#x00A0;https://github.com/itbayer/rumex/archive/gh-pages.zip
+&#x00A0;<br />unzip&#x00A0;gh-pages.zip
+</div>
+<!--l. 65--><p class="nopar" >
+<!--l. 67--><p class="noindent" >bzw.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-3">
+wget&#x00A0;https://github.com/itbayer/rumex/archive/gh-pages.tar.gz
+&#x00A0;<br />tar&#x00A0;-xzvf&#x00A0;gh-pages.tar.gz
+</div>
+<!--l. 72--><p class="nopar" >
+<!--l. 74--><p class="noindent" >Nach dem entpacken wechselt man in das Verzeichnis <span 
+class="ec-lmtt-12">rumex-gh-pages/.rx </span>und starte die
+Befehle <span 
+class="ec-lmtt-12">make install </span>und <span 
+class="ec-lmtt-12">make show</span>.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-4">
+cd&#x00A0;rumex-gh-pages/.rx/
+&#x00A0;<br />make&#x00A0;install
+&#x00A0;<br />make&#x00A0;show
+</div>
+<!--l. 82--><p class="nopar" >
+<!--l. 84--><p class="noindent" >Rumex ist jetzt lokal installiert und zeigt die erste Seite an. Auf dieser findet man eine kurz
+Information der Schritte die man noch machen sollte. Diese Schritte sind vor allen wichtig
+wenn man seine Seiten veröffentlichen möchte.
+<!--l. 93--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">6.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-280006.3"></a>Veröffentlichen der Seite</h3>
+<!--l. 95--><p class="noindent" >In der zweiten Stufen kann die Seite auf drei Arten veröffentlicht werden.
+<!--l. 98--><p class="noindent" >1. Hosting auf <a 
+href="http://www.github.com" >Github</a>
+<!--l. 100--><p class="noindent" >2. Hosting auf einem Server mit git Unterstützung
+<!--l. 102--><p class="noindent" >3. Hosting klassisch per FTP
+<!--l. 106--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">6.3.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-290006.3.1"></a>Veröffentlichung auf github</h4>
+<!--l. 110--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">6.3.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-300006.3.2"></a>Veröffentlichung auf einem Server mit git Unterstützung</h4>
+                                                                                     
+                                                                                     
+<!--l. 114--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">6.3.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-310006.3.3"></a>Veröffentlichung auf einem Server mit FTP</h4>
+                                                                                     
+                                                                                     
+<h2 class="chapterHead"><span class="titlemark">7</span>&#x00A0;&#x00A0;<a 
+ id="x1-320007"></a>Konfiguration</h2>
+<h3 class="sectionHead"><span class="titlemark">7.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-330007.1"></a>Rumex auf dich einstellen</h3>
+<!--l. 8--><p class="noindent" >Nach der Installation muss Rumex noch auf dich eingestellt werden. Genauer gesagt sollten
+folgende Angabe für deine neuen Seite angepasst werden.
+      <ul class="itemize1">
+      <li class="itemize">Url deiner Seite
+      </li>
+      <li class="itemize">Impressum
+      </li>
+      <li class="itemize">Kopf / Fusszeile
+      </li>
+      <li class="itemize">Logo</li></ul>
+<!--l. 19--><p class="noindent" >Eine Kurzbeschreibung findest du, nach der Installation, auf der ersten Seite die dir Rumex
+zeigt.
+<!--l. 24--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">7.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-340007.2"></a>Rumex Konfigurationsvariable</h3>
+<!--l. 26--><p class="noindent" >Die Konfiguration von Rumex wird über zwei Dateien gesteuert. Zu einem ist das die Vorgabe
+Datei <span class="obeylines-h"><span class="verb"><span 
+class="ec-lmtt-12">.rumex/makefile/config.mk</span></span></span> und die Benutzerdatei <span class="obeylines-h"><span class="verb"><span 
+class="ec-lmtt-12">.rx/config.mk</span></span></span>, wobei die
+Einträge der Vorgabe Datei <span class="obeylines-h"><span class="verb"><span 
+class="ec-lmtt-12">.rumex/makefile/config.mk</span></span></span> von den Einträgen der Benutzer
+Datei <span class="obeylines-h"><span class="verb"><span 
+class="ec-lmtt-12">.rx/config.mk</span></span></span> überschrieben werden.
+<!--l. 37--><p class="noindent" >Es sind auch nicht alle Einträge in der Benutzerdatei vorhanden. Für erweiterte Einstellungen
+muss man Einträge aus der Vorgabedatei in die Benutzerdatei kopieren und dementsprechend
+anpassen.
+<!--l. 41--><p class="noindent" >Nach der Installation wird eine einfache Benutzerdatei in das Verzeichnis <span class="obeylines-h"><span class="verb"><span 
+class="ec-lmtt-12">.rx</span></span></span> kopiert.
+                                                                                     
+                                                                                     
+<!--l. 52--><p class="noindent" ><span 
+class="ec-lmtt-12x-x-120">URL</span>&#x00A0;     Definiert die URL über die die Seite erreichbar ist. Die URL muss hier ohne
+abschließendes / eingegeben werden.
+<!--l. 52--><p class="noindent" ><span 
+class="ec-lmr-10x-x-109">Diese Variable ist in der Vorlage und in der Benutzerdatei vorhanden.</span>
+<div class="fancyvrb" id="fancyvrb1"><a 
+ id="x1-34002r1"></a><span 
+class="ec-lmtt-8">&#x00A0;</span><span 
+class="ec-lmtt-8">&#x00A0;URL="http://www.it-bayer.de/rumex"</span></div>
+<!--l. 62--><p class="noindent" ><span 
+class="ec-lmtt-12x-x-120">INDEX_TITEL</span>&#x00A0;     Definiert den Titel der Seite. Es können auch HTML Tags verwendet
+werden.
+<!--l. 62--><p class="noindent" ><span 
+class="ec-lmr-10x-x-109">Diese Variable ist in der Vorlage und in der Benutzerdatei vorhanden.</span>
+<div class="fancyvrb" id="fancyvrb2"><a 
+ id="x1-34004r1"></a><span 
+class="ec-lmtt-8">&#x00A0;</span><span 
+class="ec-lmtt-8">&#x00A0;INDEX_TITEL</span><span 
+class="ec-lmtt-8">&#x00A0;=</span><span 
+class="ec-lmtt-8">&#x00A0;"IT</span><span 
+class="ec-lmtt-8">&#x00A0;Bayer&#8217;s</span><span 
+class="ec-lmtt-8">&#x00A0;rumex</span><span 
+class="ec-lmtt-8">&#x00A0;&#x003C;sup</span><span 
+class="ec-lmtt-8">&#x00A0;style=\"font-size:</span><span 
+class="ec-lmtt-8">&#x00A0;.4em;\"&#x003E;</span><span 
+class="ec-lmtt-8">&#x00A0;(github.com</span><span 
+class="ec-lmtt-8">&#x00A0;Version)&#x003C;/sup&#x003E;"</span></div>
+<!--l. 70--><p class="noindent" ><span 
+class="ec-lmtt-12x-x-120">INDEX_AUTOR</span>&#x00A0;    Definiert den Autor der Seite.
+<!--l. 70--><p class="noindent" ><span 
+class="ec-lmr-10x-x-109">Diese Variable ist in der Vorlage und in der Benutzerdatei vorhanden.</span>
+<div class="fancyvrb" id="fancyvrb3"><a 
+ id="x1-34006r1"></a><span 
+class="ec-lmtt-8">&#x00A0;</span><span 
+class="ec-lmtt-8">&#x00A0;INDEX_AUTOR</span><span 
+class="ec-lmtt-8">&#x00A0;=</span><span 
+class="ec-lmtt-8">&#x00A0;"Stefan</span><span 
+class="ec-lmtt-8">&#x00A0;Blechschmidt"!</span></div>
+<!--l. 77--><p class="noindent" ><span 
+class="ec-lmtt-12x-x-120">INDEX_DATUM</span>&#x00A0;    Definiert den Stand, Datum der Seite.
+<!--l. 77--><p class="noindent" ><span 
+class="ec-lmr-10x-x-109">Diese Variable ist nur in der Vorlage vorhanden.</span>
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-5">
+INDEX_DATUM&#x00A0;=&#x00A0;$(shell&#x00A0;ls&#x00A0;index.rx0x&#x00A0;-l&#x00A0;--time-style=+%Y-%m-%d&#x00A0;|&#x00A0;awk&#x00A0;&#8217;{print&#x00A0;$$6}&#8217;)
+</div>
+<!--l. 80--><p class="nopar" >
+<!--l. 84--><p class="noindent" ><span 
+class="ec-lmtt-12x-x-120">RSS_TITEL</span>&#x00A0;    Definiert den Titel der RSS Seite.
+<!--l. 84--><p class="noindent" ><span 
+class="ec-lmr-10x-x-109">Diese Variable ist in der Vorlage und in der Benutzerdatei vorhanden.</span>
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-6">
+RSS_TITEL&#x00A0;=&#x00A0;"Neuigkeiten&#x00A0;von&#x00A0;rumex&#x00A0;Baukasten"
+</div>
+<!--l. 87--><p class="nopar" >
+<!--l. 93--><p class="noindent" ><span 
+class="ec-lmtt-12x-x-120">CSSALL</span>&#x00A0;    Definiert die CSS Datei für die Formatierung aller Seiten.
+<!--l. 93--><p class="noindent" ><span 
+class="ec-lmr-10x-x-109">Diese Variable ist nur in der Vorlage vorhanden.</span>
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-7">
+CSSALL&#x00A0;=&#x00A0;"rxtpl/css/all.css"
+</div>
+<!--l. 97--><p class="nopar" >
+<!--l. 103--><p class="noindent" ><span 
+class="ec-lmtt-12x-x-120">CSSSCREEN</span>&#x00A0;    Definiert die CSS Datei für die Formatierung der Bildschirmausgabe.
+<!--l. 103--><p class="noindent" ><span 
+class="ec-lmr-10x-x-109">Diese Variable ist nur in der Vorlage vorhanden.</span>
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-8">
+CSSSCREEN&#x00A0;=&#x00A0;"rxtpl/css/screen.css"
+</div>
+<!--l. 106--><p class="nopar" >
+<!--l. 112--><p class="noindent" ><span 
+class="ec-lmtt-12x-x-120">CSSPRINT</span>&#x00A0;    Definiert die CSS Datei für die Formatierung der Druckausgabe.
+<!--l. 112--><p class="noindent" ><span 
+class="ec-lmr-10x-x-109">Diese Variable ist nur in der Vorlage vorhanden.</span>
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-9">
+CSSPRINT&#x00A0;=&#x00A0;"rxtpl/css/print.css"
+</div>
+<!--l. 115--><p class="nopar" >
+<!--l. 121--><p class="noindent" ><span 
+class="ec-lmtt-12x-x-120">CSSHANDHELD</span>&#x00A0;    Definiert die CSS Datei für die Formatierung Mobiler Endgeräte.
+<!--l. 121--><p class="noindent" ><span 
+class="ec-lmr-10x-x-109">Diese Variable ist nur in der Vorlage vorhanden.</span>
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-10">
+CSSHANDHELD&#x00A0;=&#x00A0;"rxtpl/css/handheld.css"
+</div>
+<!--l. 124--><p class="nopar" >
+<!--l. 129--><p class="noindent" ><span 
+class="ec-lmtt-12x-x-120">SEITENBANNER</span>&#x00A0;    Definiert die CSS Datei für das Seitenbanner.
+<!--l. 129--><p class="noindent" ><span 
+class="ec-lmr-10x-x-109">Diese Variable ist in der Vorlage und in der Benutzerdatei vorhanden.</span>
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-11">
+SEITENBANNER&#x00A0;=&#x00A0;"rxtpl/img/rumex.png"
+</div>
+<!--l. 132--><p class="nopar" >
+<!--l. 139--><p class="noindent" ><span 
+class="ec-lmtt-12x-x-120">MOOTIT</span>&#x00A0;    Kontoname für die Diskusionserweiterung mittels moot.it. Wird diese Variable
+kommentiert ist diese Erweiterung ausgeschaltet.
+<!--l. 139--><p class="noindent" ><span 
+class="ec-lmr-10x-x-109">Diese Variable ist in der Vorlage und in der Benutzerdatei vorhanden.</span>
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-12">
+#&#x00A0;MOOTIT&#x00A0;=&#x00A0;"rumex"
+</div>
+<!--l. 142--><p class="nopar" >
+<!--l. 146--><p class="noindent" ><span 
+class="ec-lmtt-12x-x-120">WEBLOGAUTOR</span>&#x00A0;    Diese Variable definert den Autor der Weblog Einträge
+<!--l. 146--><p class="noindent" ><span 
+class="ec-lmr-10x-x-109">Diese Variable ist in der Vorlage und in der Benutzerdatei vorhanden.</span>
+<div class="fancyvrb" id="fancyvrb4"><a 
+ id="x1-34008r1"></a><span 
+class="ec-lmtt-8">&#x00A0;</span><span 
+class="ec-lmtt-8">&#x00A0;WEBLOGAUTOR</span><span 
+class="ec-lmtt-8">&#x00A0;=</span><span 
+class="ec-lmtt-8">&#x00A0;"IT-Bayer"</span></div>
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-13">
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />#&#x00A0;Autor&#x00A0;Angaben&#x00A0;für&#x00A0;den&#x00A0;HTML&#x00A0;Kopf
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />META_PUBLISHER&#x00A0;=&#x00A0;"IT-Bayer"
+&#x00A0;<br />META_PUBLISHER&#x00A0;=&#x00A0;"IT-Bayer"
+&#x00A0;<br />META_CREATOR&#x00A0;=&#x00A0;"IT-Bayer&#x00A0;(Stefan&#x00A0;Blechschmidt)"
+&#x00A0;<br />META_CREATOR&#x00A0;=&#x00A0;"IT-Bayer&#x00A0;(Stefan&#x00A0;Blechschmidt)"
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />#&#x00A0;Rumexsuche,&#x00A0;Verzeichnis&#x00A0;für&#x00A0;die&#x00A0;JavaScript&#x00A0;Suchfunktion
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />RUMEXSUCHE&#x00A0;=&#x00A0;"rxtpl/js"
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />#&#x00A0;Favicon
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />FAVICON&#x00A0;=&#x00A0;"favicon.gif"
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />#&#x00A0;FTP&#x00A0;Upload&#x00A0;Funktion&#x00A0;mit&#x00A0;sitecopy
+&#x00A0;<br />#
+&#x00A0;<br />#SITECOPY&#x00A0;=&#x00A0;/usr/bin/sitecopy
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />#==============================================================================
+                                                                                     
+                                                                                     
+&#x00A0;<br />#&#x00A0;&#x00A0;Die&#x00A0;Variabel&#x00A0;ab&#x00A0;hier&#x00A0;brauchst&#x00A0;du&#x00A0;nicht&#x00A0;unbedingt&#x00A0;anpassen.
+&#x00A0;<br />#==============================================================================
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />#&#x00A0;Auswahl&#x00A0;der&#x00A0;Pandoc&#x00A0;Vorlagen&#x00A0;zur&#x00A0;Seiten&#x00A0;Erstellung
+&#x00A0;<br />#
+&#x00A0;<br />#&#x00A0;...ist&#x00A0;im&#x00A0;.rx/&#x00A0;Verzeichnis&#x00A0;eine&#x00A0;entsprechende&#x00A0;Datei&#x00A0;vorhanden
+&#x00A0;<br />#&#x00A0;wird&#x00A0;diese&#x00A0;verwendet.
+&#x00A0;<br />#&#x00A0;Ansonst&#x00A0;wird&#x00A0;die&#x00A0;Datei&#x00A0;aus&#x00A0;dem&#x00A0;Verzeichnis
+&#x00A0;<br />#&#x00A0;.rumex/default&#x00A0;verwendet.
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />#
+&#x00A0;<br />HTML_TEMPLATE&#x00A0;=&#x00A0;$(shell&#x00A0;if&#x00A0;[&#x00A0;-f&#x00A0;../.rx/html.template&#x00A0;];then&#x00A0;echo&#x00A0;\"../.rx/html.template\";else&#x00A0;echo&#x00A0;\"../.rumex/default/html.template\";fi)
+&#x00A0;<br />KOPF_TEMPLATE&#x00A0;=&#x00A0;$(shell&#x00A0;if&#x00A0;[&#x00A0;-f&#x00A0;../.rx/kopf.html&#x00A0;];then&#x00A0;echo&#x00A0;\"../.rx/kopf.html\";else&#x00A0;echo&#x00A0;\"../.rumex/default/kopf.html\";fi)
+&#x00A0;<br />HEADER_TEMPLATE&#x00A0;=&#x00A0;$(shell&#x00A0;if&#x00A0;[&#x00A0;-f&#x00A0;../.rx/header.html&#x00A0;];then&#x00A0;echo&#x00A0;\"../.rx/header.html\";else&#x00A0;echo&#x00A0;\"../.rumex/default/header.html\";fi)
+&#x00A0;<br />FUSS_TEMPLATE&#x00A0;=&#x00A0;$(shell&#x00A0;if&#x00A0;[&#x00A0;-f&#x00A0;../.rx/fuss.html&#x00A0;];then&#x00A0;echo&#x00A0;\"../.rx/fuss.html\";else&#x00A0;echo&#x00A0;\"../.rumex/default/fuss.html\";fi)
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />#&#x00A0;META&#x00A0;Angabe&#x00A0;der&#x00A0;unterschiedlichen&#x00A0;Seitentypen
+&#x00A0;<br />#&#x00A0;rx?s,&#x00A0;rx?v,&#x00A0;rx?w
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />META_ROBOTS_STANDARD&#x00A0;=&#x00A0;"all"
+&#x00A0;<br />META_ROBOTS_VERSTECKT&#x00A0;=&#x00A0;"noindex,nofollow,noarchive"
+&#x00A0;<br />META_ROBOTS_WEITERLEITUNG&#x00A0;=&#x00A0;"noindex,follow,noarchive"
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />#&#x00A0;Programm&#x00A0;zum&#x00A0;erstellen&#x00A0;der&#x00A0;index.rx0x
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />INDEX="../.rumex/bin/index.pl"
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />#&#x00A0;RSS&#x00A0;Feed
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />
+&#x00A0;<br />#&#x00A0;Programm&#x00A0;zum&#x00A0;erstellen&#x00A0;des&#x00A0;RSS&#x00A0;Feed
+                                                                                     
+                                                                                     
+&#x00A0;<br />RX2RSS&#x00A0;=&#x00A0;"../.rumex/bin/rx2rss.pl"
+&#x00A0;<br />
+&#x00A0;<br />#&#x00A0;Name&#x00A0;der&#x00A0;RSS&#x00A0;Datei&#x00A0;die&#x00A0;in&#x00A0;den&#x00A0;Quelltext&#x00A0;eingebaut&#x00A0;wird
+&#x00A0;<br />RSS_FILE&#x00A0;=&#x00A0;"rss.xml"
+&#x00A0;<br />
+&#x00A0;<br />#&#x00A0;Externe&#x00A0;RSS&#x00A0;URL&#x00A0;verwenden
+&#x00A0;<br />#&#x00A0; Ist&#x00A0;diese&#x00A0;Variable&#x00A0;gesetzt&#x00A0;wird&#x00A0;die&#x00A0;interne
+&#x00A0;<br />#&#x00A0; RSS&#x00A0;Verarbeitung,&#x00A0;RSS_FILE,&#x00A0;übersprungen.
+&#x00A0;<br />#&#x00A0; und&#x00A0;die&#x00A0;externe&#x00A0;URL&#x00A0;verwendet.
+&#x00A0;<br />#RSS_EXTERN&#x00A0;=&#x00A0;"http://www.it-bayer.de/rss.xml"
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />#&#x00A0;XML&#x00A0;Sitemap
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />#
+&#x00A0;<br />#&#x00A0;Programm&#x00A0;zum&#x00A0;erstellen&#x00A0;der&#x00A0;XML&#x00A0;Sitemap&#x00A0;Datei
+&#x00A0;<br />SITEMAP_XML&#x00A0;=&#x00A0;"../.rumex/bin/sitemap_xml.pl"
+&#x00A0;<br />
+&#x00A0;<br />#&#x00A0;Zieldatei&#x00A0;der&#x00A0;Sitemap&#x00A0;Datei
+&#x00A0;<br />SITEMAP_XML_FILE&#x00A0;=&#x00A0;"../sitemap.xml"
+&#x00A0;<br />
+&#x00A0;<br />#&#x00A0;Programm&#x00A0;zum&#x00A0;erstellen&#x00A0;der&#x00A0;rx0v&#x00A0;Sitemap&#x00A0;Datei
+&#x00A0;<br />SITEMAP_RX&#x00A0;=&#x00A0;"../.rumex/bin/sitemap_rx.pl"
+&#x00A0;<br />
+&#x00A0;<br />#&#x00A0;Zieldatei&#x00A0;der&#x00A0;HTML&#x00A0;Sitemap&#x00A0;Datei
+&#x00A0;<br />SITEMAP_RX_FILE&#x00A0;=&#x00A0;"sitemap.rx0v"
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />#&#x00A0;Verzeichnis&#x00A0;in&#x00A0;dem&#x00A0;sich&#x00A0;die&#x00A0;Bilder&#x00A0;befinden.
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />BVZ="../bilder"
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />#&#x00A0;Pandoc&#x00A0;Programm
+                                                                                     
+                                                                                     
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />PANDOC&#x00A0;=&#x00A0;pandoc
+&#x00A0;<br />#&#x00A0;PANDOC&#x00A0;=&#x00A0;/usr/bin/pandoc
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />#&#x00A0;Rumex&#x00A0;Suche
+&#x00A0;<br />#
+&#x00A0;<br />#&#x00A0;Programm&#x00A0;zum&#x00A0;Erstellen&#x00A0;der&#x00A0;rumexsuche_config.js
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />SUCHE&#x00A0;=&#x00A0;"../.rumex/bin/suche.pl"
+&#x00A0;<br />
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />#&#x00A0;Ziel&#x00A0;Datei&#x00A0;für&#x00A0;die&#x00A0;JavaScript&#x00A0;Suche
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />SUCHE_JS_CONFIG="../$(RUMEXSUCHE)/rumexsuche_config.js"
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />#&#x00A0;Rumex&#x00A0;Versionshinweis&#x00A0;für&#x00A0;die&#x00A0;HTML&#x00A0;Dateien
+&#x00A0;<br />#-------------------------------------------------------------------------------
+&#x00A0;<br />META_GENERATOR&#x00A0;=&#x00A0;"rumex&#x00A0;"$(shell&#x00A0;cat&#x00A0;../.rumex/default/version.txt)
+&#x00A0;<br />
+</div>
+<!--l. 314--><p class="nopar" >
+                                                                                     
+                                                                                     
+<h2 class="chapterHead"><span class="titlemark">8</span>&#x00A0;&#x00A0;<a 
+ id="x1-350008"></a>Diskussion</h2>
+<h3 class="sectionHead"><span class="titlemark">8.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-360008.1"></a>moot.it</h3>
+<!--l. 7--><p class="noindent" >@todo: hier fehlt noch die Beschreibung
+      <ul class="itemize1">
+      <li class="itemize">ein/ausschalten
+      </li>
+      <li class="itemize">Kontoname einstellen</li></ul>
+                                                                                     
+                                                                                     
+<h2 class="chapterHead"><span class="titlemark">9</span>&#x00A0;&#x00A0;<a 
+ id="x1-370009"></a>Weblog</h2>
+                                                                                     
+                                                                                     
+<h2 class="chapterHead"><span class="titlemark">10</span>&#x00A0;&#x00A0;<a 
+ id="x1-3800010"></a>RSS Feed</h2>
+                                                                                     
+                                                                                     
+<h2 class="chapterHead"><span class="titlemark">11</span>&#x00A0;&#x00A0;<a 
+ id="x1-3900011"></a>Vim Kurztasten</h2>
+<!--l. 2--><p class="noindent" >Alle Rumex Kurztasten, für den Editor VIM, beginnen mit einem
+<span 
+class="ec-lmtt-12">,r</span><span class="footnote-mark"><a 
+href="rumex3.html#fn1x12"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-39001f1"></a>.
+Für die Bedienung von Rumex braucht mein nur ein paar. Viele der Kurztasten beinhalten
+eine Kombination einzelner Kurztasten bzw. Befehle.
+<!--l. 8--><p class="noindent" >Am Anfang ist es sicher einfacher GVIM zu verwenden, da hier ein Menü eingebaut ist welches
+unter anderem auch die Kurztasten anzeigt.
+<!--l. 11--><p class="noindent" >Wer jedoch mit der <a 
+href="beschreibung.html#homepage-\protect \let \prOteCt \relax \let \prOteCt \relax \let \prOteCt \relax \let \prOteCt \relax \let \prOteCt \relax \Protect \csname acp:c\endcsname {23}anderung-schnell-und-immer-aktuell" >tilda</a> Unterstützung arbeitet sollte sich schon ein paar Kurztasten
+einprägen.
+<h3 class="sectionHead"><span class="titlemark">11.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-4000011.1"></a>Textbausteine</h3>
+<!--l. 17--><p class="noindent" >Mittels dieser Kurztasten können Textbausteine eingebunden werden.
+<!--l. 19--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.1.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-4100011.1.1"></a><span 
+class="ec-lmtt-12">,rnd </span>(RumexNeueDatei)</h4>
+<!--l. 21--><p class="noindent" >Erstellt ein neues Datei Gerüst. Dabei wird der Dateiname gleich mit eingebunden.
+<!--l. 24--><p class="noindent" ><span 
+class="ec-lmbx-12">So schaut&#8217;s aus</span>
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-14">
+%&#x00A0;vim-kurztasten
+&#x00A0;<br />%
+&#x00A0;<br />%
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />&#x003C;!--
+&#x00A0;<br />
+&#x00A0;<br />&#x00A0;[vim-kurztasten](vim-kurztasten.html)
+&#x00A0;<br />&#x00A0;=======================================================
+&#x00A0;<br />
+&#x00A0;<br />Vortext&#x00A0;INDEX
+&#x00A0;<br />
+&#x00A0;<br />--&#x003E;
+&#x00A0;<br />
+&#x00A0;<br />Vortext&#x00A0;INDEX&#x00A0;und&#x00A0;SEITE
+&#x00A0;<br />
+&#x00A0;<br />&#x003C;!--&#x00A0;schnipp&#x00A0;--&#x003E;
+&#x00A0;<br />
+&#x00A0;<br />TEXT&#x00A0;DER&#x00A0;SEITE
+&#x00A0;<br />
+&#x00A0;<br />&#x003C;!--&#x00A0;vim:&#x00A0;set&#x00A0;ft=pandoc:&#x00A0;--&#x003E;
+</div>
+<!--l. 48--><p class="nopar" >
+<!--l. 51--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.1.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-4200011.1.2"></a><span 
+class="ec-lmtt-12">,rnn </span>(RumexNeueNachricht)</h4>
+<!--l. 53--><p class="noindent" >Erstellt einen neuen News Eintrag. Diese Kurztaste macht eigentlich nur in der Datei
+<span 
+class="ec-lmtt-12">rss.rx0x </span>Sinn. Das Datum hinter dem Titel, Überschrift 1, wird von Rumex gesetzt, ist also
+immer die aktuelle Systemzeit beim ausführen von <span 
+class="ec-lmtt-12">,rnn</span>.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-15">
+&#x00A0;#&#x00A0;Neue&#x00A0;Nachricht&#x00A0;&#x003C;!--&#x00A0;2013/11/10&#x00A0;00:30&#x00A0;--&#x003E;
+&#x00A0;<br />
+&#x00A0;<br />&#x003C;!--
+&#x00A0;<br />!&#x003E;&#x00A0;Link:&#x00A0;http://www.it-bayer.de/rumex/
+&#x00A0;<br />!&#x003E;&#x00A0;Autor:&#x00A0;IT-Bayer
+&#x00A0;<br />!&#x003E;&#x00A0;Kategorie:&#x00A0;Neues
+&#x00A0;<br />--&#x003E;
+&#x00A0;<br />
+&#x00A0;<br />Ab&#x00A0;hier&#x00A0;geht&#x00A0;die&#x00A0;neuen&#x00A0;Nachricht&#x00A0;los.
+</div>
+<!--l. 68--><p class="nopar" >
+<!--l. 71--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.1.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-4300011.1.3"></a><span 
+class="ec-lmtt-12">,rwl </span>(RumexWeiterLeitung)</h4>
+<!--l. 73--><p class="noindent" >Erstellt einen neue Weiterleitungsseite.
+<!--l. 75--><p class="noindent" ><span 
+class="ec-lmbx-12">So schaut&#8217;s aus</span>
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-16">
+%&#x00A0;Weiterleitung&#x00A0;nach&#x00A0;....html
+&#x00A0;<br />%
+&#x00A0;<br />%
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />&#x003C;script&#x00A0;language="javascript"&#x003E;
+&#x00A0;<br />&#x003C;!--
+&#x00A0;<br />//window.location.href="....html";
+&#x00A0;<br />//&#x00A0;--&#x003E;
+&#x00A0;<br />&#x003C;/script&#x003E;
+</div>
+<!--l. 88--><p class="nopar" >
+<!--l. 90--><p class="noindent" >Anmerkung: Die Zeile <span 
+class="ec-lmtt-12">window.location.href="....html"; </span>wurde hier Kommentiert da
+sonst die javascript Weiterleitung greift. Normalerweise findet man kein <span 
+class="ec-lmtt-12">// </span>vor der Zeile
+<span 
+class="ec-lmtt-12">window.location.href=....html</span>.
+<!--l. 96--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.1.4</span>&#x00A0;&#x00A0;<a 
+ id="x1-4400011.1.4"></a><span 
+class="ec-lmtt-12">,rmk </span>(RumexMootitKommentar)</h4>
+<!--l. 98--><p class="noindent" >Erstellt einen Moot.it Kommentar Abschnitt. Als Kennzeichnung wird der Dateiname ohne
+<span 
+class="ec-lmtt-12">rx?? </span>eingebaut / angehängt.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-17">
+&#x00A0;#&#x00A0;Kommentare
+&#x00A0;<br />
+&#x00A0;<br />&#x003C;a&#x00A0;class="moot"&#x00A0;href="https://moot.it/i/rumex/blog/vim-kurztasten"&#x003E;&#x003C;/a&#x003E;
+</div>
+<!--l. 105--><p class="nopar" >
+<!--l. 108--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.1.5</span>&#x00A0;&#x00A0;<a 
+ id="x1-4500011.1.5"></a><span 
+class="ec-lmtt-12">,rnb </span>(RumexNeuenweBlog)</h4>
+<!--l. 110--><p class="noindent" >Erstelle einen neuen Weblog Eintrag.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-18">
+&#x00A0;#&#x00A0;Rumex&#x00A0;WebLog
+&#x00A0;<br />
+&#x00A0;<br />_am&#x00A0;09.09.2013&#x00A0;um&#x00A0;15:21&#x00A0;schrieb&#x00A0;IT-Bayer_
+&#x00A0;<br />
+&#x00A0;<br />Text&#x00A0;für&#x00A0;den&#x00A0;Eintrag
+&#x00A0;<br />
+&#x00A0;<br />&#x003C;div&#x00A0;class="weblog"&#x003E;
+&#x00A0;<br />Text&#x00A0;der&#x00A0;vorerst&#x00A0;ausgeblendet&#x00A0;ist.
+&#x00A0;<br />&#x003C;/div&#x003E;
+</div>
+<!--l. 122--><p class="nopar" >
+<!--l. 124--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">11.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-4600011.2"></a>Git Kommandos</h3>
+<!--l. 126--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.2.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-4700011.2.1"></a><span 
+class="ec-lmtt-12">,rgp </span>(RumexGitPull)</h4>
+<!--l. 128--><p class="noindent" >Git pull
+<!--l. 130--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.2.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-4800011.2.2"></a><span 
+class="ec-lmtt-12">,rgs </span>(RumexGitStatus)</h4>
+<!--l. 132--><p class="noindent" >Git status
+                                                                                     
+                                                                                     
+<!--l. 134--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">11.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-4900011.3"></a>Text Formatierung</h3>
+<!--l. 136--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.3.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-5000011.3.1"></a><span 
+class="ec-lmtt-12">,rff </span>(RumexFormatFett)</h4>
+<!--l. 138--><p class="noindent" >Markierte Textstelle fett darstellen
+<!--l. 141--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.3.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-5100011.3.2"></a><span 
+class="ec-lmtt-12">,rfk </span>(RumexFormatKursiv)</h4>
+<!--l. 143--><p class="noindent" >Markierte Textstelle kursiv darstellen
+<!--l. 146--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.3.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-5200011.3.3"></a><span 
+class="ec-lmtt-12">,rfl </span>(RumexFormatListe)</h4>
+<!--l. 148--><p class="noindent" >Markierte Zeilen in eine Liste wandeln
+<!--l. 151--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.3.4</span>&#x00A0;&#x00A0;<a 
+ id="x1-5300011.3.4"></a><span 
+class="ec-lmtt-12">,rfn </span>(RumexFormatNummernliste)</h4>
+<!--l. 153--><p class="noindent" >Markierte Zeile in eine Nummernliste wandeln
+                                                                                     
+                                                                                     
+<!--l. 156--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.3.5</span>&#x00A0;&#x00A0;<a 
+ id="x1-5400011.3.5"></a><span 
+class="ec-lmtt-12">,rfb </span>(RumexFormatBlock)</h4>
+<!--l. 158--><p class="noindent" >Markierte Zeile in einen Block wandeln
+      <dl class="description"><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">,rfc</span> </dt><dd 
+class="description">Markierte Zeile als Code darstellen
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">,spn2</span> </dt><dd 
+class="description">Text mit 2er Spalten Formatierung umschließen
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">,spn3</span> </dt><dd 
+class="description">Text mit 3er Spalten Formatierung umschließen
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">,spn4</span> </dt><dd 
+class="description">Text mit 4er Spalten Formatierung umschließen</dd></dl>
+<!--l. 171--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">11.4</span>&#x00A0;&#x00A0;<a 
+ id="x1-5500011.4"></a>Make Befehle</h3>
+<!--l. 173--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.4.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-5600011.4.1"></a><span 
+class="ec-lmtt-12">,rma </span>(RumexMakeAll)</h4>
+<!--l. 175--><p class="noindent" >Speichert alle offenen Dokumente und erstellt daraus die HTML Datei.
+<!--l. 177--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.4.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-5700011.4.2"></a><span 
+class="ec-lmtt-12">,rmb </span>(RumexMakeBild)</h4>
+<!--l. 179--><p class="noindent" >Erstellt die unterschiedlichen Bildgrößen
+                                                                                     
+                                                                                     
+<!--l. 182--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.4.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-5800011.4.3"></a><span 
+class="ec-lmtt-12">,rmca </span>(RumexMakeCleanAll)</h4>
+<!--l. 184--><p class="noindent" >Löscht alle html Dateien, alle Bildergrößen und alle xml Dateien. beinhaltet die drei Befehle
+<span 
+class="ec-lmtt-12">make bclean</span>, <span 
+class="ec-lmtt-12">make hclean</span>, <span 
+class="ec-lmtt-12">make xclean</span>.
+<!--l. 189--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.4.4</span>&#x00A0;&#x00A0;<a 
+ id="x1-5900011.4.4"></a><span 
+class="ec-lmtt-12">,rmcb </span>(RumexMakeCleanBilder)</h4>
+<!--l. 191--><p class="noindent" >Löscht alle Bildgrößen aus dem <span 
+class="ec-lmtt-12">bilder/ </span>Verzeichnis. Es werden nur die Bilder gelöscht die
+von Rumex erstellt wurden siehe <span 
+class="ec-lmtt-12">make bilder</span>.
+<!--l. 196--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.4.5</span>&#x00A0;&#x00A0;<a 
+ id="x1-6000011.4.5"></a><span 
+class="ec-lmtt-12">,rmch </span>(RumexMakeCleanHtml)</h4>
+<!--l. 198--><p class="noindent" >Löscht alle <span 
+class="ec-lmtt-12">.html </span>Dateien die von Rumex erstellt wurden.
+<!--l. 201--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.4.6</span>&#x00A0;&#x00A0;<a 
+ id="x1-6100011.4.6"></a><span 
+class="ec-lmtt-12">,rmcx </span>(RumexMakeCleanXml)</h4>
+<!--l. 203--><p class="noindent" >Löscht alle <span 
+class="ec-lmtt-12">.xlm </span>Dateien die von Rumex erstellt wurden.
+                                                                                     
+                                                                                     
+<!--l. 206--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.4.7</span>&#x00A0;&#x00A0;<a 
+ id="x1-6200011.4.7"></a><span 
+class="ec-lmtt-12">,rmcf5 </span>(RumexMakeCleanF8htm)</h4>
+<!--l. 208--><p class="noindent" >Löscht alle <span 
+class="ec-lmtt-12">.htm </span>Dateien die mittels der Gvim Taste F5, siehe <a 
+href="http://www.it-bayer.de/rumex/statik/index.htm" >HTML und PDF Dateine mit
+pandoc und gvim erstellen</a>, erstellt wurden.
+<!--l. 212--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.4.8</span>&#x00A0;&#x00A0;<a 
+ id="x1-6300011.4.8"></a><span 
+class="ec-lmtt-12">,rmh </span>(RumexMakeHtml)</h4>
+<!--l. 214--><p class="noindent" >Erstellt die <span 
+class="ec-lmtt-12">.html </span>Dateien.
+<!--l. 216--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.4.9</span>&#x00A0;&#x00A0;<a 
+ id="x1-6400011.4.9"></a><span 
+class="ec-lmtt-12">,rmi </span>(RumexMakeIndex)</h4>
+<!--l. 218--><p class="noindent" >Erstellt die index Datei.
+<!--l. 221--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.4.10</span>&#x00A0;&#x00A0;<a 
+ id="x1-6500011.4.10"></a><span 
+class="ec-lmtt-12">,rmm </span>(RumexMakesiteMap)</h4>
+<!--l. 223--><p class="noindent" >Erstellt die sitemap Datei.
+<!--l. 225--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.4.11</span>&#x00A0;&#x00A0;<a 
+ id="x1-6600011.4.11"></a><span 
+class="ec-lmtt-12">,rmo </span>(RumexMakeOnline)</h4>
+<!--l. 227--><p class="noindent" >Speichert alle Dateien und stellt diese online.
+                                                                                     
+                                                                                     
+<!--l. 229--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.4.12</span>&#x00A0;&#x00A0;<a 
+ id="x1-6700011.4.12"></a><span 
+class="ec-lmtt-12">,rmr </span>(RumexMakeRss)</h4>
+<!--l. 231--><p class="noindent" >Erstellt die rss Datei.
+<!--l. 233--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.4.13</span>&#x00A0;&#x00A0;<a 
+ id="x1-6800011.4.13"></a><span 
+class="ec-lmtt-12">,rms </span>(RumexMakeSuche)</h4>
+<!--l. 235--><p class="noindent" >Erstellt die Rumex Suche, bzw. die Dateiliste die für die Suche verwendet werden
+soll.
+<!--l. 238--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">11.5</span>&#x00A0;&#x00A0;<a 
+ id="x1-6900011.5"></a>Vorschau</h3>
+<!--l. 240--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.5.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-7000011.5.1"></a><span 
+class="ec-lmtt-12">,rsf </span>(RumexShowFile)</h4>
+<!--l. 242--><p class="noindent" >Zeigt eine Vorschau der Seite der Datei <span 
+class="ec-lmtt-12">file:/// </span>im Standardbrowser.
+<!--l. 245--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.5.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-7100011.5.2"></a><span 
+class="ec-lmtt-12">,rsw </span>(RumexShowWww)</h4>
+<!--l. 247--><p class="noindent" >Zeigt eine Vorschau der Seite <span 
+class="ec-lmbx-12">Online </span>im Standardbrowser.
+                                                                                     
+                                                                                     
+<!--l. 249--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.5.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-7200011.5.3"></a><span 
+class="ec-lmtt-12">,rsl </span>(RumexShowLocal)</h4>
+<!--l. 251--><p class="noindent" >Zeigt eine Vorschau der Seite auf dem eigenen Rechner. Diese Kurztaste kann aber nur
+verwendet werden wenn auf dem Rechner der Apache installiert und entsprechend eingerichtet
+ist.
+<!--l. 255--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">11.6</span>&#x00A0;&#x00A0;<a 
+ id="x1-7300011.6"></a>Sonstiges</h3>
+<!--l. 257--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.6.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-7400011.6.1"></a><span 
+class="ec-lmtt-12">,rku</span></h4>
+<!--l. 259--><p class="noindent" >Öffnet das Unterverzeichnis <span 
+class="ec-lmtt-12">.rx </span>in einem neuen VimTab Fenster. Keine Ahnung warum ich
+diese Kurztaste so benannt habe.
+<!--l. 262--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.6.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-7500011.6.2"></a><span 
+class="ec-lmtt-12">,ros </span>(RumexOpenStart)</h4>
+<!--l. 264--><p class="noindent" >Öffnet die <span 
+class="ec-lmtt-12">start.rx0s </span>in einen neuen VIM Tab Fenster.
+<!--l. 266--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">11.6.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-7600011.6.3"></a><span 
+class="ec-lmtt-12">,ror </span>(RumexOpenRss)</h4>
+<!--l. 268--><p class="noindent" >Öffnet die <span 
+class="ec-lmtt-12">rss.rx0x </span>in einen neuen VIM Tab Fenster.
+                                                                                     
+                                                                                     
+<h2 class="chapterHead"><span class="titlemark">12</span>&#x00A0;&#x00A0;<a 
+ id="x1-7700012"></a>Statik Funktion</h2>
+<!--l. 3--><p class="noindent" >Rumex verwendet pandocs markdown weil man damit sehr einfach und schnell Text
+erstellen und in verschiedenen Formate wandeln kann. Für die Erstellung von
+Denkschriften<span class="footnote-mark"><a 
+href="rumex4.html#fn1x13"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-77001f1"></a>
+wurde zusätzlich eine, ich nenne sie <span 
+class="ec-lmri-12">statik Funktion </span>eingebaut. Mit dieser Funktion ist es
+möglich innerhalb eines Unterverzeichnisses verschiedenen Ausgabe Formate zu erstellen. Zur
+Zeit werden, von Rumex, folgenden Formate unterstützt:
+      <ul class="itemize1">
+      <li class="itemize">.html
+      </li>
+      <li class="itemize">.pdf
+      </li>
+      <li class="itemize">.odt OpenDokument
+      </li>
+      <li class="itemize">.epub E-Book
+      </li>
+      <li class="itemize">.mobi E-Book (Kindle)</li></ul>
+<!--l. 26--><p class="noindent" >Erstellt werden die einzelnen Formate über <a 
+href="#x1-7800012.1">Funktionstasten</a> die innerhalb
+(g)vim<span class="footnote-mark"><a 
+href="rumex5.html#fn2x13"><sup class="textsuperscript">2</sup></a></span><a 
+ id="x1-77002f2"></a>
+zur Verfügung stehen.<span class="sout">Eine Besonderheit ist dass die <span 
+class="ec-lmtt-12">.htm </span>Datei auch ohne die zusätzlichen
+Dateien wie</span> <span class="sout">Bilder oder die CSS Datei funktionieren. Alle Daten werden in die <span 
+class="ec-lmtt-12">.htm </span>Datei
+eingebunden.</span><span class="footnote-mark"><a 
+href="rumex6.html#fn3x13"><sup class="textsuperscript">3</sup></a></span><a 
+ id="x1-77003f3"></a><br 
+class="newline" />Auch wurde die <a 
+href="#x1-8000012.3">Literaturfunktion</a> von Pandoc eingebaut sodass Verweise auf anderen Quellen
+in den Denkschriften verwendet werden können.
+<!--l. 42--><p class="noindent" >Wer sich Rumex nicht installieren möchte aber dennoch eine einfache Möglichkeit sucht
+HTML Seiten zu erstellen, kann sich einmal <a 
+href="http://www.it-bayer.de/cirsium" >cirsium</a> anschauen. Cirsium ist eine Auskopplung
+aus Rumex, unterteilt aber die Quelltextdatei in verschiedene Abschnitte. Am besten einfach
+mal auf <a 
+href="http://www.github.com/itbayer/cirsium" >github.com</a> anschauen.
+<!--l. 50--><p class="noindent" ><a 
+ id="rumex-kurztasten"></a>
+<h3 class="sectionHead"><span class="titlemark">12.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-7800012.1"></a>Die (g)vim statik Kurztaste in Rumex</h3>
+<!--l. 52--><p class="noindent" >Ab der Rumex Version 0.8.2 sind die Funktionstasten in Rumex enthalten. Folgende F-Tasten
+wurden belegt.
+      <dl class="description"><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">F5</span> </dt><dd 
+class="description">Erstellt die <span 
+class="ec-lmtt-12">.htm </span>Datei ohne Inhaltsverzeichnis.
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">Shift+F5</span> </dt><dd 
+class="description">Erstellt die <span 
+class="ec-lmtt-12">.htm </span>Datei mit Inhaltsverzeichnis bis zur Ebene 3.
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">Alt+F5</span> </dt><dd 
+class="description">Erstellt die <span 
+class="ec-lmtt-12">.htm </span>Datei mit kompletten Inhaltsverzeichnis bzw. bis Ebene 5
+      da LaTeX auch nicht mehr Ebenen unterstützt und die beiden Ausgabe Format
+      annähernd identisch sein sollten.
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">Ctrl+F5</span> </dt><dd 
+class="description">Öffnet die <span 
+class="ec-lmtt-12">.htm </span>Datei.
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">F6</span> </dt><dd 
+class="description">Erstellt die <span 
+class="ec-lmtt-12">.pdf </span>Datei ohne Inhaltsverzeichnis.
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">Shift+F6</span> </dt><dd 
+class="description">Erstellt die <span 
+class="ec-lmtt-12">.pdf </span>Datei mit Inhaltsverzeichnis bis zur Ebene 3.
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">Alt+F6</span> </dt><dd 
+class="description">Erstellt die <span 
+class="ec-lmtt-12">.pdf </span>Datei mit kompletten Inhaltsverzeichnis. Hier ist anzumerken
+      dass  LaTeX  nur  Inhaltsverzeichnisse  bis  zur  Ebene  5  unterstützt.  Das  HTML
+      Format wurde entsprechend angepasst, siehe oben.
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">Ctrl+F6</span> </dt><dd 
+class="description">Öffnet die <span 
+class="ec-lmtt-12">.pdf </span>Datei. Zur Zeit wird nur zathura unterstützt.
+                                                                                     
+                                                                                     
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">F7</span> </dt><dd 
+class="description">Erstellt die restlichen Formate, <span 
+class="ec-lmtt-12">.epub</span>, <span 
+class="ec-lmtt-12">.odt </span>und <span 
+class="ec-lmtt-12">.mobi</span>. Voraussetzung für das <span 
+class="ec-lmtt-12">.mobi</span>
+      Format ist <span 
+class="ec-lmtt-12">calibre</span>.
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">Ctrl-F7</span> </dt><dd 
+class="description">Öffnet  die  Literatur  Verwaltung   <span 
+class="ec-lmtt-12">rumex.bib</span>.  Voraussetzung,  <span 
+class="ec-lmtt-12">jabref  </span>ist
+      installiert.</dd></dl>
+<!--l. 85--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">12.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-7900012.2"></a>HTML Formatierung</h3>
+<!--l. 87--><p class="noindent" >Die erzeugte HTML Datei besitzt Standardmäßig keine Formatierung bzw. verwendet die
+Standard Darstellung des Browsers.
+<!--l. 90--><p class="noindent" >Kopf- und Fusszeile werden dadurch nicht, vom restlichen Text, unterschieden. Auch das
+Inhaltsverzeichnis ist im ersten Moment als solches nicht gleich zu erkennen. Dieses kann mit
+ein wenig CSS geändert werden. Diese CSS Datei ist ab Rumex Version 0.8.2 enthalten muss
+aber unter Umständen noch eingerichtet werden.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-19">
+cd&#x00A0;.rx
+&#x00A0;<br />ln&#x00A0;-s&#x00A0;../.rumex/default/statik.css&#x00A0;statik.css
+</div>
+<!--l. 99--><p class="nopar" >
+<!--l. 102--><p class="noindent" ><a 
+ id="litfunk"></a>
+<h3 class="sectionHead"><span class="titlemark">12.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-8000012.3"></a>Die Literaturverzeichnis Funktion</h3>
+<!--l. 104--><p class="noindent" >Beim Lesen des Artikels <span 
+class="ec-lmri-12">&#8220;PDF-Dokumente schreiben mit Pandoc und Markdown&#8221;</span>
+<span 
+class="ec-lmri-12">[@stenderprolinux] </span>ist mir die Idee gekommen die Rumex <span 
+class="ec-lmri-12">statik Funktion </span>mit einem
+Literaturverzeichnis, die ja auch in pandoc zur Verfügung steht, zu versehen.
+<!--l. 109--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">12.4</span>&#x00A0;&#x00A0;<a 
+ id="x1-8100012.4"></a>Installation pandoc manuell</h3>
+<!--l. 111--><p class="noindent" >Für die Verwendung der Literaturfunktion muss pandoc um das Zusatzprogramm
+<span 
+class="ec-lmtt-12">pandoc-citeproc </span>erweitert werden. Wer Pandoc über die Paketverwaltung installiert hat
+braucht hier nichts zu machen. Wer Pandoc manuell, so wie ich, installiert hat muss dieses
+Programm nachinstallieren.
+<!--l. 117--><p class="noindent" >Dazu erweitert man die Installationszeile um das neue Programm
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-20">
+cabal&#x00A0;update
+&#x00A0;<br />cabal&#x00A0;install&#x00A0;pandoc&#x00A0;pandoc-citeproc
+</div>
+<!--l. 122--><p class="nopar" >
+<!--l. 124--><p class="noindent" >Zu guter Letzt erstellt man noch die symbolischen Links der beiden Programme.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-21">
+sudo&#x00A0;ln&#x00A0;-s&#x00A0;/home/USER/.cabal/bin/pandoc&#x00A0;/usr/local/bin/.
+&#x00A0;<br />sudo&#x00A0;ln&#x00A0;-s&#x00A0;/home/USER/.cabal/bin/pandoc-citeproc&#x00A0;/usr/local/bin/.
+</div>
+<!--l. 130--><p class="nopar" >
+<!--l. 132--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x1-8200012.4"></a>Nachinstallation Rumex</h5>
+<!--l. 134--><p class="noindent" >Wer Rumex schon im Einsatz hat muss für die Erweiterung ein wenig Hand anlegen. Zu erste holt man sich
+die neue Version<span class="footnote-mark"><a 
+href="rumex7.html#fn4x13"><sup class="textsuperscript">4</sup></a></span><a 
+ id="x1-82001f4"></a>
+von rumex.
+<!--l. 138--><p class="noindent" >Dann braucht man noch drei zusätzliche Dateien im Verzeichnis <span 
+class="ec-lmtt-12">.rx</span>.
+      <ul class="itemize1">
+      <li class="itemize"><span 
+class="ec-lmtt-12">rumex.bib</span>
+      </li>
+      <li class="itemize"><span 
+class="ec-lmtt-12">rumex.csl</span>
+      </li>
+      <li class="itemize"><span 
+class="ec-lmtt-12">statik.css</span></li></ul>
+<!--l. 151--><p class="noindent" >Wobei der <a 
+href="#x1-8300012.4">Literatur Vorlage Stiel</a> und die CSS Datei nur verlinkt wird. In der <span 
+class="ec-lmtt-12">rumex.bib</span>
+werden dann die Literatur Verweise verwaltet.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-22">
+cd&#x00A0;.rx
+&#x00A0;<br />touch&#x00A0;rumex.bib
+&#x00A0;<br />ln&#x00A0;-s&#x00A0;../.rumex/default/din-1505-2.csl&#x00A0;rumex.csl
+&#x00A0;<br />ln&#x00A0;-s&#x00A0;../.rumex/default/statik.css&#x00A0;statik.css
+</div>
+<!--l. 160--><p class="nopar" >
+<!--l. 163--><p class="noindent" ><a 
+ id="literatur-stil"></a>
+<h5 class="subsubsectionHead"><a 
+ id="x1-8300012.4"></a>Literatur Stil</h5>
+<!--l. 165--><p class="noindent" >Als Literatur Stil kommt <span 
+class="ec-lmtt-12">din-1505-2.csl </span>zum Einsatz. Andere Stile findet man im git
+Repository <a 
+href="https://github.com/citation-style-language/styles.git" class="url" ><span 
+class="ec-lmtt-12">https://github.com/citation-style-language/styles.git</span></a>. Als Name für die
+Stil Vorlage wurde <span 
+class="ec-lmtt-12">rumex.csl </span>gewählt damit mit eine Änderung des Stils einfach über den
+Symlink gemacht werden kann.
+<!--l. 171--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x1-8400012.4"></a>Literatur Verwaltung</h5>
+<!--l. 173--><p class="noindent" >Für die Verwaltung der Literatur Datenbank verwende ich <a 
+href="http://jabref.sourceforge.net/" >Jabref</a>.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-23">
+sudo&#x00A0;apt-get&#x00A0;install&#x00A0;jabref
+</div>
+<!--l. 178--><p class="nopar" >
+<!--l. 180--><p class="noindent" >Der Aufruf des Programms wurde auch auf einen F Taste gelegt. Wer eine anderes Programm
+verwenden will muss diesen entsprechend anpassen.
+<!--l. 183--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x1-8500012.4"></a>Tipps</h5>
+      <ul class="itemize1">
+      <li class="itemize">Auf  @wiki:bibtex  findet  man  eine  schöne  Beschreibung  über  die  Literatur
+      Verwaltung mit BibTex.
+      </li>
+      <li class="itemize">Die  BibTex  Einträge  muss  man  sich  unter  Umständen  nicht  einmal  selber
+      erstellen.  Da  verschiedene  Seiten  entsprechende  Dienste  anbieten.  Gelungen
+      finde  ich  die  Seite  von  <a 
+href="http://www.literatur-generator.de/" class="url" ><span 
+class="ec-lmtt-12">http://www.literatur-generator.de/</span></a> aber  auch  auf
+      <a 
+href="http://lead.to/amazon/en/?op=bt" class="url" ><span 
+class="ec-lmtt-12">http://lead.to/amazon/en/?op=bt</span></a> findet  man  BibTeX  Einträge.  Zwar  muss
+      man diese unter Umständen noch ein wenig überarbeiten aber das Grund Gerüst
+      wird einem sozusagen frei Haus geliefert.<br 
+class="newline" />Wer  einen  Wikipedia  Artikel  zitieren  dem  wird  unter  <span 
+class="ec-lmtt-12">"Werkzeuge -&#x003E; Seite</span>
+      <span 
+class="ec-lmtt-12">zitieren" </span>weiter geholfen.
+      </li>
+      <li class="itemize">Für das zitieren von Internetseiten verwende ich folgende Formate, siehe dazu
+      Abschnitt <a 
+href="#x1-9100012.6">Literaturverzeichnis</a>.</li></ul>
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-24">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;@ELECTRONIC{&#x00A0;wiki:bibtex,
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;author&#x00A0;=&#x00A0;"Wikipedia",
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;title&#x00A0;=&#x00A0;"BibTeX&#x00A0;---&#x00A0;Wikipedia{,}&#x00A0;Die&#x00A0;freie&#x00A0;Enzyklopädie",
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;year&#x00A0;=&#x00A0;"2013",
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;url&#x00A0;=&#x00A0;"http://de.wikipedia.org/w/index.php?title=BibTeX&amp;oldid=124228120",
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;note&#x00A0;=&#x00A0;"[Online;&#x00A0;Stand&#x00A0;18.&#x00A0;Dezember&#x00A0;2013]"
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;}
+</div>
+<!--l. 213--><p class="nopar" >
+<!--l. 215--><p class="noindent" >
+      <div class="quote">
+
+      <!--l. 216--><p class="noindent" >&hellip;oder
+      <!--l. 218--><p class="noindent" ><span 
+class="ec-lmbx-12">Achtung: </span>Das Formate <span 
+class="ec-lmtt-12">@WWW </span>wird von jabref nicht unterstützt und gegen ein
+      anders ausgetauscht. Bei dem Einsatz von Jabref am besten <span 
+class="ec-lmtt-12">@ELECTRONIC</span>
+      verwenden.</div>
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-25">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;@WWW{&#x00A0;wiki:bibtex,
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;author&#x00A0;=&#x00A0;"Wikipedia",
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;title&#x00A0;=&#x00A0;"BibTeX&#x00A0;---&#x00A0;Wikipedia{,}&#x00A0;Die&#x00A0;freie&#x00A0;Enzyklopädie",
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;year&#x00A0;=&#x00A0;"2013",
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;url&#x00A0;=&#x00A0;"http://de.wikipedia.org/w/index.php?title=BibTeX&amp;oldid=124228120",
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;note&#x00A0;=&#x00A0;"[Online;&#x00A0;Stand&#x00A0;18.&#x00A0;Dezember&#x00A0;2013]"
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;}
+</div>
+<!--l. 231--><p class="nopar" >
+<!--l. 234--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">12.5</span>&#x00A0;&#x00A0;<a 
+ id="x1-8600012.5"></a>Verwendung in- und außerhalb von Rumex?</h3>
+<!--l. 236--><p class="noindent" >Innerhalb von Rumex erstellt man in einem separatem Unterverzeichnis die entsprechende
+markdown Datei und dann kann es auch schon los gehen.
+<!--l. 239--><p class="noindent" >Außerhalb von Rumex kann man diese Funktion natürlich auch verwenden. Mit
+Außerhalb meine ich Denkschriften die nicht veröffentlicht werden. Dazu gibt es zwei
+Möglichkeiten.
+<!--l. 243--><p class="noindent" >
+      <ol  class="enumerate1" >
+      <li 
+  class="enumerate" id="x1-86002x1">Die Datei bzw. das Verzeichnis in <span 
+class="ec-lmtt-12">.gitignore </span>hinterlegen. Somit wird diese nicht
+      verwaltet und auch nicht, bei einem <span 
+class="ec-lmtt-12">make online</span>, hoch geladen.
+      </li>
+      <li 
+  class="enumerate" id="x1-86004x2">Eine zweite lokale Rumex Installation die nur für Denkschriften verwendet wird.
+      </li>
+      <li 
+  class="enumerate" id="x1-86006x3">&hellip;und dann wäre da noch <a 
+href="https://github.com/itbayer/cirsium" >Cirsium</a>, eine Auskopplung aus Rumex, mit der man
+      einfache html und pdf Seiten erstellen kann. Die Literaturverzeichnisoption ist
+      auch enthalten. Die Formate odt, epub und mobi sind jedoch nicht eingebaut.</li></ol>
+                                                                                     
+                                                                                     
+<!--l. 261--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">12.5.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-8700012.5.1"></a>Setzen der Überschrift für das Literaturverzeichnis</h4>
+<!--l. 263--><p class="noindent" >Die Überschrift für das Literaturverzeichnis muss immer am Ende des Artikels gesetzt
+werden.
+<!--l. 266--><p class="noindent" ><span 
+class="ec-lmbx-12">Beispiel</span>
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-26">
+#&#x00A0;Literaturverzeichnis
+</div>
+<!--l. 270--><p class="nopar" >
+<!--l. 272--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">12.5.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-8800012.5.2"></a>Einbinden von Bildern</h4>
+<!--l. 274--><p class="noindent" >Bei dem Einbinden der Bilder muss man beachten dass die Erstellung der statik Datei vom
+Verzeichnis <span 
+class="ec-lmtt-12">.rx </span>ausgeht.
+<!--l. 277--><p class="noindent" >Will man also ein Bild, dass im Ordner der Statik Datei liegt einbinden so muss auch auf das
+Bild aus der Sicht des <span 
+class="ec-lmtt-12">.rx </span>Verzeichnisses eingebunden werden.
+<!--l. 281--><p class="noindent" >Beispiel:
+<!--l. 283--><p class="noindent" >Das Bild liegt im Ordner <span 
+class="ec-lmtt-12">statik </span>somit müsste der Markdown Befehl so aussehen.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-27">
+![Beispielbild](../statik/beispiel.png)
+</div>
+<!--l. 288--><p class="nopar" >
+<!--l. 290--><p class="noindent" >In Rumex kann man diese Funktion natürlich auch verwenden. Am besten erstellt
+man sich dazu ein eigenes Unterverzeichnis und dort die Datei <span 
+class="ec-lmtt-12">index.md </span>mit den
+Texten.
+<!--l. 295--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">12.5.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-8900012.5.3"></a>Statik Dateien im <span 
+class="ec-lmtt-12">.rx </span>Verzeichnis</h4>
+<!--l. 297--><p class="noindent" >Es wird sicher passieren dass man die Funktionstasten der Statik Seiten auch bei der
+Bearbeitung der eigentlichen Rumex Dateien drückt. Durch entsprechende Einträge in der
+<span 
+class="ec-lmtt-12">.gitignore </span>Datei werden solche Dateien von einem Upload ausgeschlossen. Mit den
+Aufruf von <span 
+class="ec-lmtt-12">make statikclean </span>können die erstellten statik Dateien Schlussendliche
+aus dem <span 
+class="ec-lmtt-12">.rx </span>Verzeichnis entfernt werden. Dieser Befehl wird auch bei <span 
+class="ec-lmtt-12">make clean</span>
+ausgeführt.
+<!--l. 305--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">12.5.4</span>&#x00A0;&#x00A0;<a 
+ id="x1-9000012.5.4"></a>Tipps</h4>
+<!--l. 307--><p class="noindent" >Das PDF Programm <span 
+class="ec-lmtt-12">zathura </span>hat die Eigenschaft dass wenn sich die Datei ändert diese
+automatisch nachgeladen wird. Eine schöne Funktion wenn man seinen Text, an dem man
+gerade arbeitet, immer wieder einmal im Ausgabe Format betrachten will. Einfach die Taste
+F6 drücken, die Datei wird auch gleich gespeichert, und mit ALT-TAB das Programm Fenster
+wechseln.
+<!--l. 314--><p class="noindent" >Bei Format HTML geht das natürlich auch. Nur muss hier eine Erweiterung installiert werden.
+Für die Browser Chromium und Firefox habe ich mit <span 
+class="ec-lmtt-12">Auto Refresh Plus</span><sup><span 
+class="lmmi-8">Chromium</span></sup> bzw. <span 
+class="ec-lmtt-12">Tab</span>
+<span 
+class="ec-lmtt-12">Auto Reload</span><sup><span 
+class="lmmi-8">FireFox</span></sup> gute Erfahrungen gemacht.
+                                                                                     
+                                                                                     
+<div class="center" 
+>
+<!--l. 319--><p class="noindent" >
+<!--l. 319--><p class="noindent" >_________________________________________</div>
+<!--l. 321--><p class="noindent" >Die PDF Datei dieser Beschreibung kann man sich <a 
+href="index.pdf" >hier</a> ansehen. Die Markdown Quelldatei
+kann man sich <a 
+href="index.md" >hier</a> holen.
+<div class="center" 
+>
+<!--l. 325--><p class="noindent" >
+<!--l. 325--><p class="noindent" >_________________________________________</div>
+<!--l. 327--><p class="noindent" ><a 
+ id="literaturverzeichnis"></a>
+<h3 class="sectionHead"><span class="titlemark">12.6</span>&#x00A0;&#x00A0;<a 
+ id="x1-9100012.6"></a>Literaturverzeichnis</h3>
+                                                                                     
+                                                                                     
+<h2 class="chapterHead"><span class="titlemark">13</span>&#x00A0;&#x00A0;<a 
+ id="x1-9200013"></a>Lager</h2>
+<!--l. 4--><p class="noindent" >Zwischenlager der Texte die noch nicht aufgearbeitet wurden.
+<h4 class="subsectionHead"><span class="titlemark">13.0.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-9300013.0.1"></a>gvim unterstützung einrichten</h4>
+<!--l. 9--><p class="noindent" >@todo: hier fehlt noch die beschreibung@
+      <ul class="itemize1">
+      <li class="itemize">erstellen der startdatei
+      </li>
+      <li class="itemize">einrichten</li></ul>
+<!--l. 85--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x1-9400013.0.1"></a>tipps zur benutzung gvim</h5>
+<!--l. 87--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x1-9500013.0.1"></a>vim kurztasten</h5>
+<!--l. 89--><p class="noindent" >eine übersicht der rumex kurztasten für den editor vim findest du auf der seite
+<a 
+href="vim-kurztasten.htm" >vim-kurztasten</a>.
+<!--l. 92--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x1-9600013.0.1"></a>gvim menü</h5>
+<!--l. 94--><p class="noindent" >eine übersicht des rumex menüs für den editor gvim findest du auf der seite <a 
+href="gvim-menue.htm" >gvim-menü</a>.
+                                                                                     
+                                                                                     
+<!--l. 97--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-9700013.0.1"></a><span 
+class="ec-lmbx-12">dateiname erg</span><span 
+class="ec-lmbx-12">änzen</span></span>
+will man in die datei einen dateinamen einbauen, weiß aber nicht mehr genau wie er heißt,
+kann man folgenden trick verwenden. in diesem beispiel wird ein bildname gesucht. im text
+schreibe man <span 
+class="ec-lmtt-12">../bilder/tw </span>und drückt dann die tastenkombination <span 
+class="ec-lmtt-12">c-x + c-f</span>, gvim öffnet
+ein dialogfeld in dem alle dateien die auf dieses muster übereinstimmen geöffnet. gibt es nur
+einen treffer wird dieser gleich eingefügt.
+<!--l. 108--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-9800013.0.1"></a><span 
+class="ec-lmbx-12">wort innerhalb des dokumentes suchen</span></span>
+sucht man ein wort das man im dokument schon einmal verwendet hat, um zum beispiel
+darauf zu verweisen. schreibt man den wortanfang und drückt dann <span 
+class="ec-lmtt-12">c-p</span>. es öffnet sich ein
+dialogfeld in dem alle wörter die auf dieses muster passen angezeigt werden. gibt es nur einen
+treffer wird dieser gleich eingefügt.
+<!--l. 116--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-9900013.0.1"></a><span 
+class="ec-lmbx-12">n</span><span 
+class="ec-lmbx-12">ützliche erweiterungen</span></span>
+vim bietet ein paar nützliche erweiterungen in form von plugins an. hier eine liste, der plugins,
+die ich gerne verwende.
+      <dl class="description"><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">pathogen.vim</span> </dt><dd 
+class="description">diese erweiterung macht das installieren weitere erweiterungen einfach.
+      dabei ist die installation von <span 
+class="ec-lmtt-12">pathogen </span>schnell erledigt.
+      <!--l. 134--><p class="noindent" >in die <span 
+class="ec-lmtt-12">.vimrc </span>muss dann noch nachfolgende zeile eingebaut werden.
+                                                                                     
+                                                                                     
+      <div class="verbatim" id="verbatim-28">
+      call&#x00A0;pathogen#infect()</div>
+      <!--l. 139--><p class="nopar" >
+      <!--l. 141--><p class="noindent" >eingebaut werden.
+      <!--l. 143--><p class="noindent" >jetzt braucht man die erweiterungen nur mehr in das verzeichnis <span 
+class="ec-lmtt-12">.vim/bundle </span>zu
+      kopieren und vim neu starten. in verbindung mit <span 
+class="ec-lmtt-12">git </span>wieder eine einfache
+      sache.
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">vim-pandoc</span> </dt><dd 
+class="description">erweiterung rund um pandoc.
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">fuzzyfinder</span> </dt><dd 
+class="description">dateien schnell zum editieren öffnen. installiert ist diese erweiterung,
+      vorausgesetzt man verwendet pathogen, mit dem befehl:
+                                                                                     
+                                                                                     
+      <div class="verbatim" id="verbatim-29">
+      wget&#x00A0;-o&#x00A0;/tmp/vim-fuzzyfinder.zip&#x00A0;http://www.vim.org/scripts/download_script.php?src_id=10588
+      &#x00A0;<br />mkdir&#x00A0;~/.vim/bundle/vim-fuzzyfinder
+      &#x00A0;<br />unzip&#x00A0;/tmp/vim-fuzzyfinder.zip&#x00A0;-d&#x00A0;~/.vim/bundle/vim-fuzzyfinder/</div>
+      <!--l. 164--><p class="nopar" >
+      <!--l. 166--><p class="noindent" >für das öffnen dies datei dialogs sollte man sich dann noch eine kurztaste konfigurieren.
+                                                                                     
+                                                                                     
+      <div class="verbatim" id="verbatim-30">
+      "&#x00A0;-------------------------------------------------------------
+      &#x00A0;<br />"&#x00A0;fuzzyfinder&#x00A0;file&#x00A0;suche&#x00A0;auf&#x00A0;&#x003C;f12&#x003E;&#x00A0;binden
+      &#x00A0;<br />map&#x00A0;&#x003C;f12&#x003E;&#x00A0;:fuzzyfinderfile&#x00A0;&#x003C;cr&#x003E;</div>
+      <!--l. 173--><p class="nopar" ></dd></dl>
+<!--l. 177--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">13.0.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-10000013.0.2"></a>seite auf einem github.com server einrichten</h4>
+<!--l. 179--><p class="noindent" >@todo
+      <ul class="itemize1">
+      <li class="itemize">einrichten eines github.com zugangs
+      </li>
+      <li class="itemize">arbeits- repository auf den ap<span class="footnote-mark"><a 
+href="rumex8.html#fn1x14"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-100001f1"></a>
+      holen
+      </li>
+      <li class="itemize">die rumex zip datei
+      </li>
+      <li class="itemize">die dateien des zip archives in das arbeits- repository kopieren
+      </li>
+      <li class="itemize">grund dateien anpassen
+           <ul class="itemize2">
+           <li class="itemize">@fixme: angabe welche dateien fehlt noch@</li></ul>
+      </li>
+      <li class="itemize">erste änderungen vornehme
+      </li>
+      <li class="itemize"><span 
+class="ec-lmtt-12">make online </span>- fertig.</li></ul>
+                                                                                     
+                                                                                     
+<!--l. 207--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">13.0.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-10100013.0.3"></a>seite auf einem nicht github.com server einrichten</h4>
+<!--l. 209--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x1-10200013.0.3"></a>datei upload per git</h5>
+<!--l. 211--><p class="noindent" >@todo
+<!--l. 213--><p class="noindent" >auf der seite <a 
+href="http://rumex.it-bayer.de" >rumex.it-bayer.de</a> findet man eine beschreibung wie man den rumex baukasten
+auf einen <span 
+class="ec-lmbx-12">nicht </span><span 
+class="ec-lmtt-12">github.com </span>server installiert.
+<!--l. 217--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x1-10300013.0.3"></a>datei upload per ftp</h5>
+<!--l. 219--><p class="noindent" >@todo
+<!--l. 221--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">13.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-10400013.1"></a>aufbau des rumex baukastens</h3>
+<!--l. 223--><p class="noindent" >@todo
+                                                                                     
+                                                                                     
+<!--l. 225--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">13.1.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-10500013.1.1"></a>root verzeichnis</h4>
+<!--l. 227--><p class="noindent" >im <span 
+class="ec-lmtt-12">root </span>verzeichnis findet man alle <span 
+class="ec-lmtt-12">html </span>dateien der seite. diese werde vom baukasten erstellt
+und müssen nicht von hand verändert werden. zusätzlich findet man noch ein folgende
+systemdateien:
+      <dl class="description"><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">rss.xml</span> </dt><dd 
+class="description">news feed datei, wird vom system erstelle
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">readme.md</span> </dt><dd 
+class="description">beschreibungsdatei die von github.com gebraucht wird
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">robots.txt</span> </dt><dd 
+class="description">datei für die suchmaschinen
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">favicon.ico</span> </dt><dd 
+class="description">icon für den browser
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">.htaccess</span> </dt><dd 
+class="description">konfiguration für den apache server
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">cname</span> </dt><dd 
+class="description">@fixme: beschreibung@</dd></dl>
+<!--l. 246--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">13.1.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-10600013.1.2"></a>unterverzeichnisse</h4>
+      <dl class="description"><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">.rumex/</span> </dt><dd 
+class="description">@fixme: beschreibung@
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">.rx/</span> </dt><dd 
+class="description">@fixme: beschreibung@
+                                                                                     
+                                                                                     
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">rxtpl/</span> </dt><dd 
+class="description">standard template verzeichnis. in diesem verzeichnis befinden sich die dateien die
+      für das aussehen der seite verantwortlich sind.
+      <!--l. 257--><p class="noindent" >folgende dateinen und verzeichnisse sind hier zu finden
+           <ul class="itemize1">
+           <li class="itemize">index.html (weiterleitung zum root verzeichnis)
+           </li>
+           <li class="itemize">css/<br 
+class="newline" />
+           </li>
+           <li class="itemize">js/
+           </li>
+           <li class="itemize">img/</li></ul>
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">bilder/</span> </dt><dd 
+class="description">in diesem verzeichnis werden alle bilder der seite abgelegt.</dd></dl>
+<!--l. 275--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">13.1.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-10700013.1.3"></a>steuerung durch dateiendung</h4>
+<!--l. 277--><p class="noindent" >das aussehen der dateien bezüglich des inhaltsverzeichnisses könnte auch durch die
+dateiendung gesteuert werden.
+<!--l. 280--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x1-10800013.1.3"></a>beispiel</h5>
+      <dl class="description"><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">datei.rx0s</span> </dt><dd 
+class="description">würde eine html datei ohne inhaltsverzeichnis erstellen.
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">datei.rx1s</span> </dt><dd 
+class="description">erstellt die html datei mit dem inhaltsverzeichnis aus den einträgen der h1
+      überschriften.
+                                                                                     
+                                                                                     
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">datei.rx2s</span> </dt><dd 
+class="description">erstellt eine html datei mit dem inhaltsverzeichnis aud den einträgen der h1
+      und h2 überschriften.</dd></dl>
+<!--l. 293--><p class="noindent" >zusätzlich könnte die dateiendung auch eine unterschiedliche verwendung der dateien
+ermöglichen.
+      <dl class="description"><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">datei.rx0s, datei.rx1s </span><span 
+class="ec-lmssbx-10x-x-120">&hellip;</span> </dt><dd 
+class="description">standard datei.
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">datei.rx0x, datei.rx1x </span><span 
+class="ec-lmssbx-10x-x-120">&hellip;</span> </dt><dd 
+class="description">datei die nicht in die liste auf <span 
+class="ec-lmtt-12">index.html </span>eingebunden wird.
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">datei.rx0v, datie.rx1v </span><span 
+class="ec-lmssbx-10x-x-120">&hellip;</span> </dt><dd 
+class="description">versteckte datei. diese taucht weder in der <span 
+class="ec-lmtt-12">index.html </span>noch
+      in der <span 
+class="ec-lmtt-12">sitemap.xml </span>auf.
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">datei.rx0w</span> </dt><dd 
+class="description">datei   mit   einer   weiterleitung.   die   weiterleitung   wird   dabei   mittels
+      <span 
+class="ec-lmtt-12">javascript </span>realisiert, da github keine <span 
+class="ec-lmtt-12">.htaccess </span>weiterleitung unterstützt.
+                                                                                     
+                                                                                     
+      <div class="verbatim" id="verbatim-31">
+      %&#x00A0;weiterleitung&#x00A0;nach&#x00A0;beschreibung.html
+      &#x00A0;<br />%
+      &#x00A0;<br />%
+      &#x00A0;<br />
+      &#x00A0;<br />&#x003C;script&#x00A0;language="javascript"&#x003E;
+      &#x00A0;<br />&#x003C;!--
+      &#x00A0;<br />window.location.href="beschreibung.html";
+      &#x00A0;<br />//&#x00A0;--&#x003E;
+      &#x00A0;<br />&#x003C;/script&#x003E;</div>
+      <!--l. 319--><p class="nopar" ></dd></dl>
+<!--l. 322--><p class="noindent" >bei der änderung der dateiendung bleibt der eigentliche <span 
+class="ec-lmtt-12">html </span>name gleich. nur die funktion der
+einbindung ändert sich.
+<!--l. 325--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">13.1.4</span>&#x00A0;&#x00A0;<a 
+ id="x1-10900013.1.4"></a>sonderseiten</h4>
+<!--l. 327--><p class="noindent" >im verzeichnis <span 
+class="ec-lmtt-12">pandoc </span>befinden sich sonderseiten.
+      <dl class="description"><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">rumex/index.rx0x</span> </dt><dd 
+class="description">diese datei wird vom programm <span 
+class="ec-lmtt-12">.bin/make_index.pl </span>erstellt, muss
+      somit nicht vorhanden sein.
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">rumex/start.rx0s</span> </dt><dd 
+class="description">die <span 
+class="ec-lmtt-12">start.rx0s </span>wird als vortext in die <span 
+class="ec-lmtt-12">index.rx0x </span>eingebunden.
+      mit ihr kann man oberhalb der seiten liste einen extra text in die <span 
+class="ec-lmtt-12">index.html</span>
+      eingebunden werden.<br 
+class="newline" /><span 
+class="ec-lmbx-12">diese datei ist erforderlich und muss vorhanden sein.</span>
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">rumex/rss.rx0x</span> </dt><dd 
+class="description">datei für die rss feed funktion.
+                                                                                     
+                                                                                     
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">rumex/impressum.rx0x</span> </dt><dd 
+class="description">datei für die impressumsangaben.<br 
+class="newline" /><span 
+class="ec-lmbx-12">ist  nicht  zwingend  erforderlich.  jedoch  muss  die  </span><span 
+class="ec-lmtk-10x-x-120">.inc/fuss.html</span>
+      <span 
+class="ec-lmbx-12">entsprechende bearbeitet, der link muss raus genommen, werden.</span>
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">rumex/makefile</span> </dt><dd 
+class="description">sie <span 
+class="ec-lmtt-12">make </span>steuerdatei.</dd></dl>
+<!--l. 348--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">13.1.5</span>&#x00A0;&#x00A0;<a 
+ id="x1-11000013.1.5"></a>aufbau der startseite</h4>
+<!--l. 350--><p class="noindent" >die startseite <span 
+class="ec-lmtt-12">markdown/start.rx0s </span>muss vorhanden sein. es reicht auch ein &#8216;touch
+markdown/start.rx0s.
+<!--l. 353--><p class="noindent" >der normale aufbau könnte so ausschauen. die <span 
+class="ec-lmtt-12">pandoc </span>kopfzeile sind nicht zwingend
+erforderlich.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-32">
+%&#x00A0;start.rx0s
+&#x00A0;<br />%
+&#x00A0;<br />%
+&#x00A0;<br />
+&#x00A0;<br />hier&#x00A0;kommt&#x00A0;auch&#x00A0;schon&#x00A0;der&#x00A0;vortext&#x00A0;für&#x00A0;die&#x00A0;index.html
+</div>
+<!--l. 362--><p class="nopar" >
+<!--l. 364--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">13.1.6</span>&#x00A0;&#x00A0;<a 
+ id="x1-11100013.1.6"></a>aufbau der einzelseiten</h4>
+<!--l. 366--><p class="noindent" >die einzelseiten liegen alle im verzeichnis <span 
+class="ec-lmtt-12">rumex </span>und zwar in der sprache <span 
+class="ec-lmtt-12">markdown </span>bzw. der
+erweiterung von <span 
+class="ec-lmtt-12">pandoc</span>.
+<!--l. 369--><p class="noindent" >diese einzelseiten werden in chronologischer reihenfolge in die startseite <span 
+class="ec-lmtt-12">index.html</span>
+eingebunden und bilden sozusagen das inhaltsverzeichnis der seite. in jeder einzelseite wird
+dazu ein sogenannter <span 
+class="ec-lmri-12">&#8220;vortext&#8221; </span>hinterlegt. die seite bzw. der kopf der seite hat dabei folgenden
+aufbau.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-33">
+%&#x00A0;seiten&#x00A0;überschrift&#x00A0;1
+&#x00A0;<br />%&#x00A0;seiten&#x00A0;überschrift&#x00A0;2
+&#x00A0;<br />%&#x00A0;seiten&#x00A0;überschrift&#x00A0;3
+&#x00A0;<br />
+&#x00A0;<br />&#x003C;!--
+&#x00A0;<br />
+&#x00A0;<br />
+&#x00A0;<br />#&#x00A0;listen-überschrift
+&#x00A0;<br />
+ü&#x00A0;<br />xberschrift&#x00A0;und&#x00A0;text&#x00A0;der&#x00A0;in&#x00A0;der&#x00A0;listenübersicht
+&#x00A0;<br />auf&#x00A0;index.html&#x00A0;angezeigt&#x00A0;wird.
+&#x00A0;<br />
+&#x00A0;<br />alles&#x00A0;was&#x00A0;innerhalb&#x00A0;der&#x00A0;html&#x00A0;kommentar&#x00A0;marken
+&#x00A0;<br />steht&#x00A0;wird&#x00A0;nur&#x00A0;auf&#x00A0;der&#x00A0;index.html&#x00A0;seite&#x00A0;angezeigt.
+&#x00A0;<br />
+&#x00A0;<br />--&#x003E;
+&#x00A0;<br />
+&#x00A0;<br />alles&#x00A0;was&#x00A0;sich&#x00A0;außerhalb&#x00A0;der&#x00A0;html&#x00A0;marken
+&#x00A0;<br />befindet&#x00A0;wird&#x00A0;auch&#x00A0;auf&#x00A0;der&#x00A0;eigentlichen&#x00A0;seite&#x00A0;angezeigt.
+&#x00A0;<br />
+&#x00A0;<br />durch&#x00A0;das&#x00A0;schlüsselwort&#x00A0;"schnipp",&#x00A0;das&#x00A0;auch&#x00A0;in&#x00A0;html
+&#x00A0;<br />kommentar&#x00A0;marken&#x00A0;stehen&#x00A0;muss,&#x00A0;wird&#x00A0;der&#x00A0;vortext&#x00A0;beendet.
+&#x00A0;<br />auf&#x00A0;der&#x00A0;index.html&#x00A0;erscheint&#x00A0;an&#x00A0;dieser&#x00A0;stelle&#x00A0;der&#x00A0;link
+&#x00A0;<br />"...&#x00A0;weiter&#x00A0;lesen".
+&#x00A0;<br />
+&#x00A0;<br />&#x003C;!--&#x00A0;schnipp&#x00A0;--&#x003E;
+&#x00A0;<br />
+&#x00A0;<br />ab&#x00A0;hier&#x00A0;geht&#x00A0;dann&#x00A0;der&#x00A0;inhlat&#x00A0;der&#x00A0;eigentlichen&#x00A0;seite&#x00A0;los.
+</div>
+<!--l. 404--><p class="nopar" >
+<!--l. 406--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">13.1.7</span>&#x00A0;&#x00A0;<a 
+ id="x1-11200013.1.7"></a>template</h4>
+                                                                                     
+                                                                                     
+<!--l. 408--><p class="noindent" >@todo
+<!--l. 410--><p class="noindent" >änderung gegenüber des original <span 
+class="ec-lmtt-12">pandoc </span>templates.
+<!--l. 443--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">13.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-11300013.2"></a>rss feed funktion</h3>
+<!--l. 445--><p class="noindent" >@todo
+<!--l. 447--><p class="noindent" >wird nicht aus den einzelnen dateien erstellt sondern muss manuell editiert werden, datei
+<span 
+class="ec-lmtt-12">.rx/rss.rx0x</span>.
+<!--l. 450--><p class="noindent" >jede überschrift eines eintrags muss mit einem <span 
+class="ec-lmtt-12">{.nn1} </span>enden.
+<!--l. 452--><p class="noindent" >danach kommen die angaben zu:
+<!--l. 454--><p class="noindent" ><span 
+class="ec-lmbx-12">link: </span><span 
+class="ec-lmri-12">verweis zur seite mit weiteren informationen</span><br 
+class="newline" /><span 
+class="ec-lmbx-12">autor: </span><span 
+class="ec-lmri-12">autor der den eintrag geschrieben hat</span><br 
+class="newline" /><span 
+class="ec-lmbx-12">kategorie: </span><span 
+class="ec-lmri-12">kategoie des eintrags</span><br 
+class="newline" /><span 
+class="ec-lmbx-12">datum: </span><span 
+class="ec-lmri-12">datum des eintrags. </span>das richtige format bekommt man mit dem befehl <span 
+class="ec-lmtt-12">date</span>
+<span 
+class="ec-lmtt-12">-r</span>.
+<!--l. 460--><p class="noindent" >die in html kommentar marker eingeschlossen sind.
+<!--l. 462--><p class="noindent" >anschließend folgt die meldung. zur zeit werden folgende <span 
+class="ec-lmtt-12">pandoc </span>formatierungen
+unterstützt.
+      <ul class="itemize1">
+      <li class="itemize">überschriften ab der stufe 3 <span 
+class="ec-lmtt-12">###</span>
+      </li>
+      <li class="itemize">aufzählungen <span 
+class="ec-lmtt-12">-</span>
+      </li>
+      <li class="itemize">aufzählungen <span 
+class="ec-lmtt-12">*</span>
+      </li>
+      <li class="itemize">zitate <span 
+class="ec-lmtt-12">&#x003E;</span>
+      </li>
+      <li class="itemize">links  <span 
+class="ec-lmtt-12">[link](http://muster.tdl)</span>.  diese  dürfen  nicht  am  anfang  einer  zeile
+      stehen.
+                                                                                     
+                                                                                     
+      </li>
+      <li class="itemize">bilder <span 
+class="ec-lmtt-12">![bild](../bilder/muster.png "muster.png")</span>, diese dürfen nicht am
+      anfang einer zeile stehen.
+      </li>
+      <li class="itemize">code &#8216;code&#8216;.</li></ul>
+<!--l. 486--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">13.2.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-11400013.2.1"></a>beispiel einer rss feed seite</h4>
+<!--l. 523--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">13.2.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-11500013.2.2"></a>rss dateiname</h4>
+<!--l. 525--><p class="noindent" >der dateiname ist mit <span 
+class="ec-lmtt-12">rss.xml </span>vorbelegt und kann über die variable <span 
+class="ec-lmtt-12">rss_file </span>in der
+<span 
+class="ec-lmtt-12">config.md </span>geändert werden.
+<!--l. 528--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">13.2.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-11600013.2.3"></a>rss titel</h4>
+<!--l. 530--><p class="noindent" >der title des rss feed wird durch die variable <span 
+class="ec-lmtt-12">rss_titel </span>angepasst.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-34">
+rss_titel&#x00A0;=&#x00A0;"neuigkeiten&#x00A0;von&#x00A0;rumex&#x00A0;baukasten"
+</div>
+<!--l. 535--><p class="nopar" >
+<!--l. 537--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">13.2.4</span>&#x00A0;&#x00A0;<a 
+ id="x1-11700013.2.4"></a>rss auslagern</h4>
+<!--l. 539--><p class="noindent" >den rss link kann man auch auslagern so dass dieser auf eine andere seite zeigt. dazu setzt man
+die variable <span 
+class="ec-lmtt-12">rss_extern </span>mit dem entsprechenden link. die variabel <span 
+class="ec-lmtt-12">rss_file </span>wird dadurch
+nicht mehr verwendet. auch der rss lauf wird dadurch ausgeschaltet und durch eine meldung
+ersetzt.
+<!--l. 545--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">13.2.5</span>&#x00A0;&#x00A0;<a 
+ id="x1-11800013.2.5"></a>rss kurztaste</h4>
+<!--l. 547--><p class="noindent" >für die einzelnen einträge steht auch eine kurztaste <span 
+class="ec-lmtt-12">.rnn </span>zur verfügung.<br 
+class="newline" />in gvim unter
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-35">
+rumex&#x00A0;-&#x003E;&#x00A0;textbausteine&#x00A0;-&#x003E;&#x00A0;neuernews&#x00A0;eintrag
+</div>
+<!--l. 552--><p class="nopar" >
+<!--l. 554--><p class="noindent" >eingefügt wird dann folgende vorgabe. der wert hinter datum wird von system ausgelesen und
+entsprechende gesetzt.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-36">
+&#x00A0;#&#x00A0;neue&#x00A0;nachricht{.nn1}
+&#x00A0;<br />
+&#x00A0;<br />&#x003C;!--
+&#x00A0;<br />|&#x00A0;link:&#x00A0;http://www.it-bayer.de/rumex/
+&#x00A0;<br />|&#x00A0;autor:&#x00A0;it-bayer
+&#x00A0;<br />|&#x00A0;kategorie:&#x00A0;neues
+&#x00A0;<br />|&#x00A0;datum:&#x00A0;mon,&#x00A0;28&#x00A0;oct&#x00A0;2013&#x00A0;07:36:56&#x00A0;+0100
+&#x00A0;<br />--&#x003E;
+&#x00A0;<br />
+&#x00A0;<br />ab&#x00A0;hier&#x00A0;geht&#x00A0;die&#x00A0;neue&#x00A0;nachricht&#x00A0;los.
+</div>
+<!--l. 568--><p class="nopar" >
+<!--l. 570--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">13.2.6</span>&#x00A0;&#x00A0;<a 
+ id="x1-11900013.2.6"></a>interna</h4>
+<!--l. 572--><p class="noindent" >durch die beschriebenen rss variablen wird die erstellung des rss feed gesteuert. es wird in jede
+html datei nachfolgender header abschnitt eingebaut wenn die <span 
+class="ec-lmtt-12">rss_title </span>variable gesetzt
+wurde. <span 
+class="ec-lmtt-12">rss_file </span>bzw. <span 
+class="ec-lmtt-12">rss_extern </span>steuern den <span 
+class="ec-lmtt-12">href </span>eintrag.
+<!--l. 585--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">13.3</span>&#x00A0;&#x00A0;<a 
+ id="x1-12000013.3"></a>rumex auf einem usb stick</h3>
+<!--l. 587--><p class="noindent" >rumex kann auch auf einem usb stich installiert werden. der stick muss aber ein dateiformat
+besitzt<br 
+class="newline" />welches mit dateirechten und symbolische links umgehen kann.
+                                                                                     
+                                                                                     
+<!--l. 591--><p class="noindent" ><span 
+class="ec-lmbx-12">usb sticks im vfat format funktionieren nicht. </span>man kann zwar die daten darauf ablegen.
+das arbeiten über den stick funktioniert nicht wirklich. auch wenn man die daten, von
+einem vfat stick, auf ein *nix system kopiert werden muss händisch nach gebessert
+werden.
+<!--l. 596--><p class="noindent" >linktipp: <a 
+href="http://www.it-bayer.de/usb-stick.html?suchwort=versch#usb-stick-unter-linux-verschl%c3%bcsseln" >usb stick unter linux verschlüsseln</a>
+<!--l. 600--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">13.4</span>&#x00A0;&#x00A0;<a 
+ id="x1-12100013.4"></a>make steuerung</h3>
+<!--l. 602--><p class="noindent" >@todo
+<!--l. 604--><p class="noindent" >gesteuert wird der baukasten mittels <span 
+class="ec-lmtt-12">make </span>im unterverzeichnis <span 
+class="ec-lmtt-12">rumex</span>. folgende <span 
+class="ec-lmtt-12">make </span>befehle
+stehen dabei zur verfügung.
+      <dl class="description"><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">make html</span> </dt><dd 
+class="description">erstellt  die  einzelnen  html  dateien.  hier  kann  auch  nur  <span 
+class="ec-lmtt-12">make </span>verwendet
+      werden.
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">make index</span> </dt><dd 
+class="description">erstellt die <span 
+class="ec-lmtt-12">index.md </span>datei aus der dann die <span 
+class="ec-lmtt-12">index.html </span>datei erstellt wird.
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">make all</span> </dt><dd 
+class="description">eine zusammenstellung aus <span 
+class="ec-lmtt-12">make index </span>und <span 
+class="ec-lmtt-12">make html</span>.
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">make online</span> </dt><dd 
+class="description">daten auf github hoch laden.
+      </dd><dt class="description">
+<span 
+class="ec-lmssbx-10x-x-120">make bilder</span> </dt><dd 
+class="description">erstellt bilder in verschiedenen auflösungen.</dd></dl>
+<!--l. 623--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">13.5</span>&#x00A0;&#x00A0;<a 
+ id="x1-12200013.5"></a>update</h3>
+<!--l. 625--><p class="noindent" >@todo
+                                                                                     
+                                                                                     
+<!--l. 628--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">13.6</span>&#x00A0;&#x00A0;<a 
+ id="x1-12300013.6"></a>homepage änderung, schnell und immer aktuell</h3>
+<!--l. 630--><p class="noindent" >wer wünscht es sich nicht einen schnellen zugriff auf seine homepage. sei es um schnell was zu
+ändern oder genauso schnell was neues einzustellen. rumex bietet in verbindung mit <span 
+class="ec-lmtt-12">tilda</span>
+eine schöne, einfache und auch schnelle lösung.
+<!--l. 635--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                     
+                                                                                     
+<a 
+ id="x1-1230011"></a>
+                                                                                     
+                                                                                     
+
+<!--l. 637--><p class="noindent" ><img 
+src="../bilder/rumex-tilda_800_.png" alt="PIC"  
+>
+<br /> <div class="caption"><table class="caption" 
+><tr style="vertical-align:baseline;" class="caption"><td class="id">Abbildung&#x00A0;13.1.: </td><td  
+class="content">rumex im tilda fenster. mit einem tastendruck öffnet sch das tilda
+fenster und man kann die texte eintippen. ein erneuter tastendruck schließt das tilda
+fenster wieder und der bildschirm ist wieder frei. hat man seine änderung abgeschossen
+kann man mit den rumex <a 
+href="vim-kurztasten.html" >vim kurztasten</a> die änderung schnell online stellen.</td></tr></table></div><!--tex4ht:label?: x1-1230011 -->
+                                                                                     
+                                                                                     
+<!--l. 644--><p class="noindent" ></div><hr class="endfigure">
+<h4 class="subsectionHead"><span class="titlemark">13.6.1</span>&#x00A0;&#x00A0;<a 
+ id="x1-12400013.6.1"></a>installation der tilda unterstützung</h4>
+<!--l. 649--><p class="noindent" >die installation ist nicht umfangreich. man braucht vim und tilda und dann noch zwei bash
+script. eine kopiervorlage der beiden scripte findet man findet man im <span 
+class="ec-lmtt-12">.rumex/bin/</span>
+verzeichnis.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-37">
+sudo&#x00A0;apt-get&#x00A0;install&#x00A0;tilda&#x00A0;vim
+&#x00A0;<br />cp&#x00A0;.../rumex/.rumex/bin/rxt-rumex.sh&#x00A0;~/bin/.
+&#x00A0;<br />cp&#x00A0;.../rumex/.rumex/bin/rumex-tilda.sh&#x00A0;~/bin/.
+</div>
+<!--l. 657--><p class="nopar" >
+<!--l. 659--><p class="noindent" >diese beiden bash scripte müssen anschließend noch angepasst werden.
+<!--l. 661--><p class="noindent" >
+<h5 class="subsubsectionHead"><a 
+ id="x1-12500013.6.1"></a>shell scripte</h5>
+<!--l. 663--><p class="noindent" >die scripte starten zum einem <span 
+class="ec-lmtt-12">tilda </span>und zum anderem übergeben sie <span 
+class="ec-lmtt-12">tilda </span>die kommandos
+die dafür sorgen <span 
+class="ec-lmtt-12">vim </span>im richtigen rumex ordner zu öffnet. installiert werden können diese
+scripte im <span 
+class="ec-lmtt-12">~/bin </span>oder <span 
+class="ec-lmtt-12">/usr/local/bin/ </span>verzeichnis.
+<!--l. 669--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-12600013.6.1"></a><span 
+class="ec-lmbx-12">rumex-tilda.sh</span></span>
+die datei <span 
+class="ec-lmtt-12">rumex-tilda.sh </span>starte tilda und übergibt der tilda shell die befehle um den rumex
+baukasten zu starten, siehe <span 
+class="ec-lmbx-12">??</span>.
+                                                                                     
+                                                                                     
+<div class="verbatim" id="verbatim-38">
+#!/bin/bash
+&#x00A0;<br />
+&#x00A0;<br />/usr/bin/tilda&#x00A0;-c&#x00A0;&#x00A0;~/bin/rumex-vim.sh
+</div>
+<!--l. 679--><p class="nopar" >
+<!--l. 681--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-12700013.6.1"></a><span 
+class="ec-lmbx-12">rumex-vim.sh</span></span>
+mit dem befehl <span 
+class="ec-lmtt-12">rumex-vim.sh </span>wird der rumex baukastens aufgerufen. dieser befehl wird unter
+anderem auch von <span 
+class="ec-lmtt-12">rumex-tilda.sh </span>verwendet. <span 
+class="ec-lmtt-12">rumex-vim.sh </span>kann natürlich auch in einem
+shellfenster ausgeführt werden.
+<!--l. 688--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-12800013.6.1"></a><span 
+class="ec-lmbx-12">rumex-gvim.sh</span></span>
+mit dem befehl <span 
+class="ec-lmtt-12">rumex-gvim.sh </span>wird der rumex baukasten mit dem editor gvim
+gestartet.
+<!--l. 693--><p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">13.6.2</span>&#x00A0;&#x00A0;<a 
+ id="x1-12900013.6.2"></a>tilda einrichten</h4>
+<!--l. 695--><p class="noindent" >nach dem ersten start wird tilda in linken oberen bildschirm bereich eingeblendet. man sollte
+tilda nun noch an seine bedürfnissen anpassen. dazu in das tilda fenster mit der rechten
+maustaste klicken und <span 
+class="ec-lmtt-12">eigenschaften </span>aus wählen.
+<!--l. 700--><p class="noindent" ><span 
+class="ec-lmbx-12">übrigens: </span>man kann <span 
+class="ec-lmtt-12">tilda </span>mehrfach starten. somit kann auf mehreren rumex installationen
+parallel über diese weiße zugegriffen werden. man sollte nur jede <span 
+class="ec-lmtt-12">tilda </span>sitzung ein wenig
+anders konfigurieren.
+                                                                                     
+                                                                                     
+<!--l. 705--><p class="noindent" ><span 
+class="ec-lmbx-12">nachteil: </span>ein nachteil von <span 
+class="ec-lmtt-12">tilda </span>darf man aber nicht verschweigen. bei wechseln zwischen den
+fenstern kann man die tastenkombination <span 
+class="ec-lmtt-12">&#x003C;alt&#x003E;+&#x003C;tab&#x003E; </span>nicht verwenden bzw. man
+kommt mit dieser kombination nicht mehr zurück nach <span 
+class="ec-lmtt-12">tilda</span>. schließt und öffnet
+man <span 
+class="ec-lmtt-12">tilda </span>mit der definierten taste bekommt man aber den fokus wieder in das
+fenster.
+<!--l. 713--><p class="noindent" >will man die <span 
+class="ec-lmtt-12">&#x003C;alt&#x003E;+&#x003C;tab&#x003E; </span>kombination doch verwenden muss man die standardeinstellung von
+tilda ändern. den erforderlichen schalter findet man in der konfiguration, reiter <span 
+class="ec-lmri-12">allgemein </span>-&#x003E;
+schalter <span 
+class="ec-lmri-12">nicht in der taskleiste anzeigen</span>.
+<!--l. 722--><p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">13.7</span>&#x00A0;&#x00A0;<a 
+ id="x1-13000013.7"></a>Warum wurde diese Beschreibung nicht mit Rumex erstellt</h3>
+<!--l. 724--><p class="noindent" >Eigentlich sollte Rumex sich auch selber beschreiben. Bei der Erstellung meiner <span 
+class="ec-lmri-12">Sensen</span>
+<span 
+class="ec-lmri-12">Denkschrift </span>ist mir Rumex jedoch zu klein geworden. Große Dokumente sind mit Rumex nicht
+mehr so einfach zu handeln. Da es sich bei der Rumex Beschreibung auch um ein
+großes Dokument handelt. Es wächst zumindest immer weiter. Bin ich auf meine
+Vorlage für tex4ht umgestiegen. Ich kann somit die Texte mit einem Programm wie
+Texstudio<span class="footnote-mark"><a 
+href="rumex9.html#fn2x14"><sup class="textsuperscript">2</sup></a></span><a 
+ id="x1-130001f2"></a>
+bearbeiten und fühle mich bei der Bearbeitung größere Dokumente einfach wohler.
+<!--l. 736--><p class="noindent" >Außerdem finde ich die PDF Ausgabe mittels KOMA-Scripts auch schöner als die von
+Pandoc.
+                                                                                     
+                                                                                     
+<a 
+ id="x1-130002r92"></a>
+<h2 class="appendixHead"><span class="titlemark">A</span>.&#x00A0;&#x00A0;<a 
+ id="x1-131000A"></a>Lizenz</h2>
+<!--l. 4--><p class="noindent" >Diese Vorlage veröffentliche ich mit den Bedienungen der <a 
+href="http://creativecommons.org/licenses/by-nc-sa/3.0/de/" >cc-by-nc-sa Lizenz</a>.
+<!--l. 8--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-132000A"></a><span 
+class="ec-lmbx-12">Namensnennung</span></span> Sie müssen den Namen des Autors/Rechteinhabers in der von ihm
+festgelegten Weise nennen.
+<!--l. 11--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-133000A"></a><span 
+class="ec-lmbx-12">Keine kommerzielle Nutzung</span></span> Dieses Werk bzw. dieser Inhalt darf nicht für kommerzielle
+Zwecke verwendet werden.
+<!--l. 14--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-134000A"></a><span 
+class="ec-lmbx-12">Weitergabe unter gleichen Bedingungen</span></span> Wenn Sie das lizenzierte Werk bzw. den
+lizenzierten Inhalt bearbeiten oder in anderer Weise erkennbar als Grundlage für eigenes
+Schaffen verwenden, dürfen Sie die daraufhin neu entstandenen Werke bzw. Inhalte nur unter
+Verwendung von Lizenzbedingungen weitergeben, die mit denen dieses Lizenzvertrages
+identisch oder vergleichbar sind.
+____________________________________________________
+<!--l. 23--><p class="noindent" >Außerdem müssen die Lizenzen der Programme, die zum Erstellen des jeweiligen Dokumentes
+verwendet werden, berücksichtigt werden.
+                                                                                     
+                                                                                     
+<a 
+ id="x1-134001r92"></a>
+<h2 class="appendixHead"><span class="titlemark">B</span>.&#x00A0;&#x00A0;<a 
+ id="x1-135000B"></a>Impressum / Kontakt</h2>
+<!--l. 4--><p class="noindent" ><span 
+class="ec-lmbx-12">Verwendung: </span>Privat
+<!--l. 7--><p class="noindent" ><span 
+class="ec-lmbx-12">Anschrift: </span>Stefan Blechschmidt<br 
+class="newline" />Auggenbach 9<br 
+class="newline" />94357 Konzell <br 
+class="newline" />oder per E-Mail an <a 
+href="mailto:sb@it-bayer.de" >sb(at)it-bayer.de</a>.
+                                                                                     
+                                                                                     
+<a 
+ id="x1-135001r92"></a>
+<h2 class="appendixHead"><span class="titlemark">C</span>.&#x00A0;&#x00A0;<a 
+ id="x1-136000C"></a>Literatur</h2>
+<div class="flushleft" 
+>
+<!--l. 4--><p class="noindent" >
+                                                                                     
+                                                                                     
+<h2 class="likechapterHead"><a 
+ id="x1-137000C"></a>Literaturverzeichnis</h2>
+      <div class="thebibliography">
+      <p class="bibitem" ><span class="biblabel">
+   [1]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
+      <a 
+ id="Xsensendenkschrift"></a><span 
+class="ec-lmcsc-10x-x-120">Blechschmidt,</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Stefan</span>:
+      <span 
+class="ec-lmri-12">Die</span>
+      <span 
+class="ec-lmri-12">Sensen</span>
+      <span 
+class="ec-lmri-12">Denkschrift</span>,
+      2012,
+      <a 
+href="http://www.hochfelder.de/sense/" class="url" ><span 
+class="ec-lmtt-12">http://www.hochfelder.de/sense/</span></a>
+      </p>
+      <p class="bibitem" ><span class="biblabel">
+   [2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
+      <a 
+ id="Xrumex"></a><span 
+class="ec-lmcsc-10x-x-120">Blechschmidt,</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Stefan</span>:
+      <span 
+class="ec-lmri-12">Ein</span>
+      <span 
+class="ec-lmri-12">HTML</span>
+      <span 
+class="ec-lmri-12">Baukasten</span>
+      <span 
+class="ec-lmri-12">mit</span>
+      <span 
+class="ec-lmri-12">pandoc</span>,
+      2012,
+      <a 
+href="http://www.it-bayer.de/rumex/" class="url" ><span 
+class="ec-lmtt-12">http://www.it-bayer.de/rumex/</span></a>
+      </p>
+      <p class="bibitem" ><span class="biblabel">
+   [3]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
+      <a 
+ id="Xtex4ht"></a><span 
+class="ec-lmcsc-10x-x-120">Gurari,</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Eitan</span>:
+      <span 
+class="ec-lmri-12">TeX4ht:</span>
+      <span 
+class="ec-lmri-12">LaTeX</span>
+                                                                                     
+                                                                                     
+      <span 
+class="ec-lmri-12">and</span>
+      <span 
+class="ec-lmri-12">TeX</span>
+      <span 
+class="ec-lmri-12">for</span>
+      <span 
+class="ec-lmri-12">Hypertext</span>,
+      2009,
+      <a 
+href="http://www.tug.org/applications/tex4ht/mn.html/" class="url" ><span 
+class="ec-lmtt-12">http://www.tug.org/applications/tex4ht/mn.html/</span></a>
+      </p>
+      <p class="bibitem" ><span class="biblabel">
+   [4]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
+      <a 
+ id="Xkoma"></a><span 
+class="ec-lmcsc-10x-x-120">Kohm,</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Markus</span>
+      :
+      <span 
+class="ec-lmri-12">KOMA-Script</span>
+      <span 
+class="ec-lmri-12">Documentation</span>
+      <span 
+class="ec-lmri-12">Project</span>,
+      &#8212;-,
+      <a 
+href="http://www.komascript.de/" class="url" ><span 
+class="ec-lmtt-12">http://www.komascript.de/</span></a>
+      </p>
+      <p class="bibitem" ><span class="biblabel">
+   [5]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
+      <a 
+ id="Xtexstudio"></a><span 
+class="ec-lmcsc-10x-x-120">van</span>
+      <span 
+class="ec-lmcsc-10x-x-120">der</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Zander,</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Benito</span>
+      :
+      <span 
+class="ec-lmri-12">TeXstudio</span>
+      <span 
+class="ec-lmri-12">is</span>
+      <span 
+class="ec-lmri-12">an</span>
+      <span 
+class="ec-lmri-12">integrated</span>
+      <span 
+class="ec-lmri-12">writing</span>
+      <span 
+class="ec-lmri-12">environment</span>
+      <span 
+class="ec-lmri-12">for</span>
+      <span 
+class="ec-lmri-12">creating</span>
+      <span 
+class="ec-lmri-12">LaTeX</span>
+      <span 
+class="ec-lmri-12">documents</span>,
+      &#8212;-,
+      <a 
+href="http://texstudio.sourceforge.net/" class="url" ><span 
+class="ec-lmtt-12">http://texstudio.sourceforge.net/</span></a>
+      </p>
+                                                                                     
+                                                                                     
+      <p class="bibitem" ><span class="biblabel">
+   [6]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
+      <a 
+ id="Xvarioref"></a><span 
+class="ec-lmcsc-10x-x-120">Mittelbach,</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Frank</span>:
+      <span 
+class="ec-lmri-12">varioref</span>
+      <span 
+class="ec-lmri-12">-</span>
+      <span 
+class="ec-lmri-12">Intelligent</span>
+      <span 
+class="ec-lmri-12">page</span>
+      <span 
+class="ec-lmri-12">referendes</span>,
+      1992
+      &#8211;
+      2011,
+      <a 
+href="http://www.ctan.org/pkg/varioref" class="url" ><span 
+class="ec-lmtt-12">http://www.ctan.org/pkg/varioref</span></a>
+      </p>
+      <p class="bibitem" ><span class="biblabel">
+   [7]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
+      <a 
+ id="Xverbatim"></a><span 
+class="ec-lmcsc-10x-x-120">Sch</span><span 
+class="ec-lmcsc-10x-x-120">öpf,</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Rainer</span>:
+      <span 
+class="ec-lmri-12">verbatim</span>
+      <span 
+class="ec-lmri-12">&#8211;</span>
+      <span 
+class="ec-lmri-12">Reimplementation</span>
+      <span 
+class="ec-lmri-12">of</span>
+      <span 
+class="ec-lmri-12">and</span>
+      <span 
+class="ec-lmri-12">extensions</span>
+      <span 
+class="ec-lmri-12">to</span>
+      <span class="LATEX"><span 
+class="ec-lmri-12">L</span><span class="A"><span 
+class="ec-lmri-12">A</span></span><span class="TEX"><span 
+class="ec-lmri-12">T</span><span 
+class="E"><span 
+class="ec-lmri-12">E</span></span><span 
+class="ec-lmri-12">X</span></span></span>
+      <span 
+class="ec-lmri-12">verbatim</span>,
+      1989
+      &#8211;
+      2003,
+      <a 
+href="http://www.ctan.org/pkg/verbatim" class="url" ><span 
+class="ec-lmtt-12">http://www.ctan.org/pkg/verbatim</span></a>
+      </p>
+      <p class="bibitem" ><span class="biblabel">
+   [8]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
+      <a 
+ id="Xfancyvrb"></a><span 
+class="ec-lmcsc-10x-x-120">Van</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Zandt,</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Timothy;</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Voß,</span>
+                                                                                     
+                                                                                     
+      <span 
+class="ec-lmcsc-10x-x-120">Herbert;</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Girou,</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Denis;</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Rahtz,</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Sebastian;</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Mansfield,</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Niall</span>
+      :
+      <span 
+class="ec-lmri-12">fancyvrb</span>
+      <span 
+class="ec-lmri-12">&#8211;</span>
+      <span 
+class="ec-lmri-12">Sophisticated</span>
+      <span 
+class="ec-lmri-12">verbatim</span>
+      <span 
+class="ec-lmri-12">text</span>,
+      Version
+      2.8,
+      <a 
+href="http://www.ctan.org/pkg/fancyvrb" class="url" ><span 
+class="ec-lmtt-12">http://www.ctan.org/pkg/fancyvrb</span></a>
+      </p>
+      <p class="bibitem" ><span class="biblabel">
+   [9]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
+      <a 
+ id="Xgraphicx"></a><span 
+class="ec-lmcsc-10x-x-120">Carlisle,</span>
+      <span 
+class="ec-lmcsc-10x-x-120">David</span>:
+      <span 
+class="ec-lmri-12">graphicx</span>
+      <span 
+class="ec-lmri-12">&#8211;</span>
+      <span 
+class="ec-lmri-12">Enhanced</span>
+      <span 
+class="ec-lmri-12">support</span>
+      <span 
+class="ec-lmri-12">for</span>
+      <span 
+class="ec-lmri-12">graphics</span>,
+      1995-1997,1999
+      David
+      Carlisle,
+      <a 
+href="http://ctan.org/pkg/graphicx" class="url" ><span 
+class="ec-lmtt-12">http://ctan.org/pkg/graphicx</span></a>
+      </p>
+      <p class="bibitem" ><span class="biblabel">
+  [10]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
+      <a 
+ id="Xsoul"></a><span 
+class="ec-lmcsc-10x-x-120">Melchior,</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Franz</span>:
+      <span 
+class="ec-lmri-12">soul</span>
+      <span 
+class="ec-lmri-12">&#8211;</span>
+      <span 
+class="ec-lmri-12">Hyphenation</span>
+                                                                                     
+                                                                                     
+      <span 
+class="ec-lmri-12">for</span>
+      <span 
+class="ec-lmri-12">letterspacing,</span>
+      <span 
+class="ec-lmri-12">underlining,</span>
+      <span 
+class="ec-lmri-12">and</span>
+      <span 
+class="ec-lmri-12">more</span>,
+      Version
+      2.4,
+      <a 
+href="http://ctan.org/pkg/soul" class="url" ><span 
+class="ec-lmtt-12">http://ctan.org/pkg/soul</span></a>
+      </p>
+      <p class="bibitem" ><span class="biblabel">
+  [11]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
+      <a 
+ id="Xeurosym"></a><span 
+class="ec-lmcsc-10x-x-120">Theiling,</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Henrik</span>:
+      <span 
+class="ec-lmri-12">eurosym:</span>
+      <span 
+class="ec-lmri-12">Das</span>
+      <span 
+class="ec-lmri-12">Eurosymbol-Paket</span>
+      <span 
+class="ec-lmri-12">f</span><span 
+class="ec-lmri-12">ür</span>
+      <span 
+class="ec-lmri-12">LaTeX</span>,
+      Version
+      1.4,
+      2004,
+      <a 
+href="http://www.theiling.de/eurosym.html" class="url" ><span 
+class="ec-lmtt-12">http://www.theiling.de/eurosym.html</span></a>
+      </p>
+      <p class="bibitem" ><span class="biblabel">
+  [12]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
+      <a 
+ id="Xhyperref"></a><span 
+class="ec-lmcsc-10x-x-120">Oberdiek,</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Heiko</span>:
+      <span 
+class="ec-lmri-12">hyperref</span>
+      <span 
+class="ec-lmri-12">&#8211;</span>
+      <span 
+class="ec-lmri-12">Extensive</span>
+      <span 
+class="ec-lmri-12">support</span>
+      <span 
+class="ec-lmri-12">for</span>
+      <span 
+class="ec-lmri-12">hypertext</span>
+      <span 
+class="ec-lmri-12">in</span>
+      <span 
+class="ec-lmri-12">LaTeX</span>,
+      Version
+      6.83m,
+      2001
+      -
+                                                                                     
+                                                                                     
+      2012,
+      <a 
+href="http://www.ctan.org/pkg/hyperref" class="url" ><span 
+class="ec-lmtt-12">http://www.ctan.org/pkg/hyperref</span></a>
+      </p>
+      <p class="bibitem" ><span class="biblabel">
+  [13]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
+      <a 
+ id="Xblindtext"></a><span 
+class="ec-lmcsc-10x-x-120">Lickert,</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Knut</span>:
+      <span 
+class="ec-lmri-12">blindtext</span>
+      <span 
+class="ec-lmri-12">&#8211;</span>
+      <span 
+class="ec-lmri-12">Producing</span>
+      <span 
+class="ec-lmri-12">&#8217;blind&#8217;</span>
+      <span 
+class="ec-lmri-12">text</span>
+      <span 
+class="ec-lmri-12">for</span>
+      <span 
+class="ec-lmri-12">testing</span>,
+      Version
+      2.0,
+      <a 
+href="http://www.ctan.org/pkg/blindtext" class="url" ><span 
+class="ec-lmtt-12">http://www.ctan.org/pkg/blindtext</span></a>
+      </p>
+      <p class="bibitem" ><span class="biblabel">
+  [14]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
+      <a 
+ id="Xtex4ht-optionen-uebersicht"></a><span 
+class="ec-lmcsc-10x-x-120">Rennish,</span>
+      <span 
+class="ec-lmcsc-10x-x-120">George</span>:
+      <span 
+class="ec-lmri-12">TeX4ht:</span>
+      <span 
+class="ec-lmri-12">Options</span>,
+      Blue
+      Danube,
+      Webseite
+      2012,
+      <a 
+href="http://www.cvr.cc/?p=504" class="url" ><span 
+class="ec-lmtt-12">http://www.cvr.cc/?p=504</span></a>
+      </p>
+      <p class="bibitem" ><span class="biblabel">
+  [15]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
+      <a 
+ id="Xtex4ht-pdf"></a><span 
+class="ec-lmcsc-10x-x-120">Gurari,</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Eitan</span>
+      <span 
+class="ec-lmcsc-10x-x-120">M.</span>:
+      <span 
+class="ec-lmri-12">TEX4ht:</span>
+      <span 
+class="ec-lmri-12">HTML</span>
+                                                                                     
+                                                                                     
+      <span 
+class="ec-lmri-12">Production</span>,
+      TUGboat,
+      Volume
+      25
+      (2004),
+      No.
+      1
+      &#8212;
+      Proceedings
+      of
+      the
+      Practical
+      TEX
+      2004
+      Conference,
+      <a 
+href="https://www.tug.org/TUGboat/tb25-1/gurari.pdf" class="url" ><span 
+class="ec-lmtt-12">https://www.tug.org/TUGboat/tb25-1/gurari.pdf</span></a>
+      </p>
+      <p class="bibitem" ><span class="biblabel">
+  [16]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
+      <a 
+ id="Xulem"></a><span 
+class="ec-lmcsc-10x-x-120">Arseneau,</span>
+      <span 
+class="ec-lmcsc-10x-x-120">Donald</span>:
+      <span 
+class="ec-lmri-12">The</span>
+      <span 
+class="ec-lmri-12">ulem</span>
+      <span 
+class="ec-lmri-12">package:</span>
+      <span 
+class="ec-lmri-12">underlining</span>
+      <span 
+class="ec-lmri-12">for</span>
+      <span 
+class="ec-lmri-12">emphasis</span>,
+      2011,
+      <a 
+href="http://texdoc.net/texmf-dist/doc/generic/ulem/ulem.pdf" class="url" ><span 
+class="ec-lmtt-12">http://texdoc.net/texmf-dist/doc/generic/ulem/ulem.pdf</span></a>
+</p>
+      </div>
+</div>
+ 
+</body></html> 
+
+                                                                                     
+
+

@@ -1,0 +1,36 @@
+
+% -------------------------------------------------
+% Schalter für die Einstellungen htlatex / pdflatex
+% -------------------------------------------------
+\if\htorlx
+%---------------------------------------------
+% HTML / htlatex Lauf
+%---------------------------------------------
+
+
+\Css {body {width: 880px; margin:auto;}}
+
+% Diese Anpassung wird nicht mehr gebraucht
+% da die HTML Version nur mehr aus einer Seite besteht.
+
+%% Seiten Navigation auf Deutsch umbauen 
+%\Configure{crosslinks}{[}{]}{Nächste Seite}{Letzte Seite}{Letztes Seitenende}{Seitenanfang}{Seitenende} {Startseite} 
+%
+%% CSS Anpassung
+%\Css {.crosslinks { font-size: 0.9em; padding-left:1em; background-color: \#eee; border: 1px solid gray;}}
+%\Css {p {font-size: 1.2em;}}
+%\Css {.sectionTOCS:before { display: block; content: 'Unterabschnitte:'; color: gray; padding-bottom: 8px; }}
+%\Css {.sectionTOCS {font-size: 1.1em; border-top: 1px solid silver; border-bottom: 1px solid silver; padding: 1em 0;}}
+%\Css {.sectionHead {padding-top:2em;}}
+%\Css {.tableofcontents:before { display: block; content:
+%'Inhaltsverzeichnis:'; color: gray; padding-bottom: 8px; }}
+%\Css {.tableofcontents {border-top: 1px solid silver; border-bottom: 1px
+%solid silver; padding: 1em 0 1em 1em;}}
+%\else
+%---------------------------------------------
+% LaTeX Lauf
+%---------------------------------------------
+
+\fi
+
+% ENDE Schalter für htlatex / pdflatex Einstellungen

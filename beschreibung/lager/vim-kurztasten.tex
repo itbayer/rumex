@@ -1,0 +1,268 @@
+\chapter{Vim Kurztasten}
+Alle Rumex Kurztasten, für den Editor VIM, beginnen mit einem
+\texttt{,r}\footnote{Ausnahmen bestätigen die Regel. So wurde für die
+  zwei spaltige Darstellung\\\texttt{,spn2} verwendet.}. Für die
+Bedienung von Rumex braucht mein nur ein paar. Viele der Kurztasten
+beinhalten eine Kombination einzelner Kurztasten bzw. Befehle.
+
+Am Anfang ist es sicher einfacher GVIM zu verwenden, da hier ein Menü
+eingebaut ist welches unter anderem auch die Kurztasten anzeigt.
+
+Wer jedoch mit der
+\href{beschreibung.html\#homepage-änderung-schnell-und-immer-aktuell}{tilda}
+Unterstützung arbeitet sollte sich schon ein paar Kurztasten einprägen.
+
+\section{Textbausteine}\label{textbausteine}
+
+Mittels dieser Kurztasten können Textbausteine eingebunden werden.
+
+\subsection{\texttt{,rnd} (RumexNeueDatei)}\label{rnd-rumexneuedatei}
+
+Erstellt ein neues Datei Gerüst. Dabei wird der Dateiname gleich mit
+eingebunden.
+
+\textbf{So schaut's aus}
+
+\begin{verbatim}
+% vim-kurztasten
+%
+%
+
+
+<!--
+
+ [vim-kurztasten](vim-kurztasten.html)
+ =======================================================
+
+Vortext INDEX
+
+-->
+
+Vortext INDEX und SEITE
+
+<!-- schnipp -->
+
+TEXT DER SEITE
+
+<!-- vim: set ft=pandoc: -->
+\end{verbatim}
+
+\subsection{\texttt{,rnn}
+(RumexNeueNachricht)}\label{rnn-rumexneuenachricht}
+
+Erstellt einen neuen News Eintrag. Diese Kurztaste macht eigentlich nur
+in der Datei \texttt{rss.rx0x} Sinn. Das Datum hinter dem Titel,
+Überschrift 1, wird von Rumex gesetzt, ist also immer die aktuelle
+Systemzeit beim ausführen von \texttt{,rnn}.
+
+\begin{verbatim}
+ # Neue Nachricht <!-- 2013/11/10 00:30 -->
+
+<!--
+!> Link: http://www.it-bayer.de/rumex/
+!> Autor: IT-Bayer
+!> Kategorie: Neues
+-->
+
+Ab hier geht die neuen Nachricht los.
+\end{verbatim}
+
+\subsection{\texttt{,rwl}
+(RumexWeiterLeitung)}\label{rwl-rumexweiterleitung}
+
+Erstellt einen neue Weiterleitungsseite.
+
+\textbf{So schaut's aus}
+
+\begin{verbatim}
+% Weiterleitung nach ....html
+%
+%
+
+
+<script language="javascript">
+<!--
+//window.location.href="....html";
+// -->
+</script>
+\end{verbatim}
+
+Anmerkung: Die Zeile \texttt{window.location.href="....html";} wurde
+hier Kommentiert da sonst die javascript Weiterleitung greift.
+Normalerweise findet man kein \texttt{//} vor der Zeile
+\texttt{window.location.href=....html}.
+
+\subsection{\texttt{,rmk}
+(RumexMootitKommentar)}\label{rmk-rumexmootitkommentar}
+
+Erstellt einen Moot.it Kommentar Abschnitt. Als Kennzeichnung wird der
+Dateiname ohne \texttt{rx??} eingebaut / angehängt.
+
+\begin{verbatim}
+ # Kommentare
+
+<a class="moot" href="https://moot.it/i/rumex/blog/vim-kurztasten"></a>
+\end{verbatim}
+
+\subsection{\texttt{,rnb}
+(RumexNeuenweBlog)}\label{rnb-rumexneuenweblog}
+
+Erstelle einen neuen Weblog Eintrag.
+
+\begin{verbatim}
+ # Rumex WebLog
+
+_am 09.09.2013 um 15:21 schrieb IT-Bayer_
+
+Text für den Eintrag
+
+<div class="weblog">
+Text der vorerst ausgeblendet ist.
+</div>
+\end{verbatim}
+
+\section{Git Kommandos}\label{git-kommandos}
+
+\subsection{\texttt{,rgp} (RumexGitPull)}\label{rgp-rumexgitpull}
+
+Git pull
+
+\subsection{\texttt{,rgs} (RumexGitStatus)}\label{rgs-rumexgitstatus}
+
+Git status
+
+\section{Text Formatierung}\label{text-formatierung}
+
+\subsection{\texttt{,rff} (RumexFormatFett)}\label{rff-rumexformatfett}
+
+Markierte Textstelle fett darstellen
+
+\subsection{\texttt{,rfk}
+(RumexFormatKursiv)}\label{rfk-rumexformatkursiv}
+
+Markierte Textstelle kursiv darstellen
+
+\subsection{\texttt{,rfl}
+(RumexFormatListe)}\label{rfl-rumexformatliste}
+
+Markierte Zeilen in eine Liste wandeln
+
+\subsection{\texttt{,rfn}
+(RumexFormatNummernliste)}\label{rfn-rumexformatnummernliste}
+
+Markierte Zeile in eine Nummernliste wandeln
+
+\subsection{\texttt{,rfb}
+(RumexFormatBlock)}\label{rfb-rumexformatblock}
+
+Markierte Zeile in einen Block wandeln
+
+\begin{description}
+\item[,rfc]
+Markierte Zeile als Code darstellen
+\item[,spn2]
+Text mit 2er Spalten Formatierung umschließen
+\item[,spn3]
+Text mit 3er Spalten Formatierung umschließen
+\item[,spn4]
+Text mit 4er Spalten Formatierung umschließen
+\end{description}
+
+\section{Make Befehle}\label{make-befehle}
+
+\subsection{\texttt{,rma} (RumexMakeAll)}\label{rma-rumexmakeall}
+
+Speichert alle offenen Dokumente und erstellt daraus die HTML Datei.
+
+\subsection{\texttt{,rmb} (RumexMakeBild)}\label{rmb-rumexmakebild}
+
+Erstellt die unterschiedlichen Bildgrößen
+
+\subsection{\texttt{,rmca}
+(RumexMakeCleanAll)}\label{rmca-rumexmakecleanall}
+
+Löscht alle html Dateien, alle Bildergrößen und alle xml Dateien.
+beinhaltet die drei Befehle \texttt{make bclean}, \texttt{make hclean},
+\texttt{make xclean}.
+
+\subsection{\texttt{,rmcb}
+(RumexMakeCleanBilder)}\label{rmcb-rumexmakecleanbilder}
+
+Löscht alle Bildgrößen aus dem \texttt{bilder/} Verzeichnis. Es werden
+nur die Bilder gelöscht die von Rumex erstellt wurden siehe
+\texttt{make bilder}.
+
+\subsection{\texttt{,rmch}
+(RumexMakeCleanHtml)}\label{rmch-rumexmakecleanhtml}
+
+Löscht alle \texttt{.html} Dateien die von Rumex erstellt wurden.
+
+\subsection{\texttt{,rmcx}
+(RumexMakeCleanXml)}\label{rmcx-rumexmakecleanxml}
+
+Löscht alle \texttt{.xlm} Dateien die von Rumex erstellt wurden.
+
+\subsection{\texttt{,rmcf5}
+(RumexMakeCleanF8htm)}\label{rmcf5-rumexmakecleanf8htm}
+
+Löscht alle \texttt{.htm} Dateien die mittels der Gvim Taste F5, siehe
+\href{http://www.it-bayer.de/rumex/statik/index.htm}{HTML und PDF
+Dateine mit pandoc und gvim erstellen}, erstellt wurden.
+
+\subsection{\texttt{,rmh} (RumexMakeHtml)}\label{rmh-rumexmakehtml}
+
+Erstellt die \texttt{.html} Dateien.
+
+\subsection{\texttt{,rmi} (RumexMakeIndex)}\label{rmi-rumexmakeindex}
+
+Erstellt die index Datei.
+
+\subsection{\texttt{,rmm}
+(RumexMakesiteMap)}\label{rmm-rumexmakesitemap}
+
+Erstellt die sitemap Datei.
+
+\subsection{\texttt{,rmo} (RumexMakeOnline)}\label{rmo-rumexmakeonline}
+
+Speichert alle Dateien und stellt diese online.
+
+\subsection{\texttt{,rmr} (RumexMakeRss)}\label{rmr-rumexmakerss}
+
+Erstellt die rss Datei.
+
+\subsection{\texttt{,rms} (RumexMakeSuche)}\label{rms-rumexmakesuche}
+
+Erstellt die Rumex Suche, bzw. die Dateiliste die für die Suche
+verwendet werden soll.
+
+\section{Vorschau}\label{vorschau}
+
+\subsection{\texttt{,rsf} (RumexShowFile)}\label{rsf-rumexshowfile}
+
+Zeigt eine Vorschau der Seite der Datei \texttt{file:///} im
+Standardbrowser.
+
+\subsection{\texttt{,rsw} (RumexShowWww)}\label{rsw-rumexshowwww}
+
+Zeigt eine Vorschau der Seite \textbf{Online} im Standardbrowser.
+
+\subsection{\texttt{,rsl} (RumexShowLocal)}\label{rsl-rumexshowlocal}
+
+Zeigt eine Vorschau der Seite auf dem eigenen Rechner. Diese Kurztaste
+kann aber nur verwendet werden wenn auf dem Rechner der Apache
+installiert und entsprechend eingerichtet ist.
+
+\section{Sonstiges}\label{sonstiges}
+
+\subsection{\texttt{,rku}}\label{rku}
+
+Öffnet das Unterverzeichnis \texttt{.rx} in einem neuen VimTab Fenster.
+Keine Ahnung warum ich diese Kurztaste so benannt habe.
+
+\subsection{\texttt{,ros} (RumexOpenStart)}\label{ros-rumexopenstart}
+
+Öffnet die \texttt{start.rx0s} in einen neuen VIM Tab Fenster.
+
+\subsection{\texttt{,ror} (RumexOpenRss)}\label{ror-rumexopenrss}
+
+Öffnet die \texttt{rss.rx0x} in einen neuen VIM Tab Fenster.

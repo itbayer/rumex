@@ -1,0 +1,177 @@
+\listfiles % Ausgabe der eingebunden Dateien -> Log.Datei
+
+% Schalter zwischen htlatex und pdflatex
+% -------------------------------------------
+% Hintergrund ist der, dass htlatex nicht mit
+% den KOMA Scripten zusammenarbeitet und somit 
+% umgeschaltet werden muss.
+
+\makeatletter
+\@ifpackageloaded{tex4ht}{
+\documentclass{report}
+}{
+\documentclass[%
+fontsize=12pt,%
+paper=A4, %
+parskip=half,% 
+version=last%
+]{scrreprt}
+}
+\makeatother
+
+\usepackage[ngermanb]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern} 
+
+\usepackage{microtype}
+
+% ----------------------------------------------
+% Erweiterung für Verweise innerhalb des Dokuments
+% Funktioniert nicht mit htlatex, siehe dazu tex4ht_itb.sty
+\usepackage[ngerman]{varioref} 
+
+
+% ----------------------------------------------
+% Verbatim Umgebung
+\usepackage{verbatim}
+
+% ---------------------------------------------
+%Erweiterung des Pakets verbatim
+\usepackage{fancyvrb}
+
+% ----------------------------------------------
+% Grafik Unterstützung
+\usepackage{graphicx}
+
+
+% ----------------------------------------------
+%Paket für Durchstreichen, Unterstreichen, usw.
+%http://www.namsu.de/Extra/pakete/Soul.html
+\usepackage{soul}
+%Das Paket ulem verarbeitet, im Gegensatz zu 
+%soul auch Wörter mit Umlauten.
+\usepackage[normalem]{ulem}
+% ----------------------------------------------
+% Eurosymbol Unterstützung
+\usepackage{eurosym}
+
+
+% ----------------------------------------------
+% Erweiterung für die PDF Erstellung
+% Sollte immer am Ende der Paketeinbindungen 
+% eingebunden werden sodass neuen Erweiterungen
+% von diesem Paket evtl. auch berücksichtigt werden.
+\usepackage[ngerman]{hyperref}
+\hypersetup{
+  colorlinks  = true,
+  pdftitle    = {IT-Bayers Rumex},
+  pdfsubject  = {Beschreibung des Rumex Baukastens},
+  pdfauthor   = {Stefan Blechschmidt},
+  pdfkeywords = {Vorlage, HTML, Vorlage, Internet, Homepage, Baukasten,
+  pandoc,} ,
+  pdfcreator  = {pdflatex},
+  pdfproducer = {LaTeX mit hyperref}
+}
+
+
+% ----------------------------------------------
+%Schriftart
+
+%Unterschiedliche Einstellungen zwischen htlatex und
+%pdflatex Lauf, drum an dieser Stelle der Schalter
+%
+%Schriftart für pdflatex bzw. KOMA
+%--------------------------------
+%Diese Schriftart schaut nicht schlecht aus
+%kann aber mit htlatex nicht verwendet werden\makeatletter
+%Abstände zwischen den Absätzen
+%------------------------------
+%Die Abstände sind bei KOMA am Anfang eingestellt
+%beim Standardlayout müssen diesen extra definiert werden.
+\makeatletter
+\@ifpackageloaded{tex4ht}{
+	% Zwischen den Absätzen einen Leerraum lassen
+	\parskip2ex plus1ex minus0.5ex
+	% ...und nicht einrücken.
+	\parindent0mm
+}{
+	\usepackage{dejavu}
+}
+\makeatother
+
+%Formatvorlage für die Beschreibung der 
+%Konfigurations Variablen
+\newcommand{\konfig}[4]{%
+\vspace{2em}
+\texttt{\large #1}\hspace{1em}
+#2
+
+{\small #3\\#4}
+}
+
+
+% Einbindung des tex4ht Schalters
+\usepackage{rumex}
+
+% ------------------------------------------------------
+\title{Beschreibung des Rumex Baukasten}
+\author{Stefan Blechschmidt}
+\date{April 2015 -- \today}
+
+
+% ----------------------------------------------
+\begin{document}
+
+% Vertatim Umgebung, Erweiterung fancyvrb, für Fussnoten einschalten
+\VerbatimFootnotes
+
+% html Konfiguration einbinden
+\input{rumex-config}
+
+\maketitle
+
+\tableofcontents
+
+% ---- Textbereich --------------------------------------
+
+\input{vorwort}
+
+\input{kurzbeschreibung}
+
+\input{index-seite}
+
+\input{seitenarten}
+
+\input{sonderseiten}
+
+\input{installation}
+
+\input{konfiguration}
+
+\input{diskussion}
+
+\input{weblog}
+
+\input{rssfeed}
+
+\input{vim-kurztasten}
+
+\input{statik-funktion}
+
+\input{lager}
+
+
+
+% -------------------------------------------------
+\begin{appendix}
+
+\input{anhang}
+\input{impressum-kontakt}
+\input{literatur}
+
+\end{appendix}
+
+% -------------------------------------------------------------
+
+\end{document}
