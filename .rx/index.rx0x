@@ -1,6 +1,6 @@
 % IT Bayer's rumex <sup style="font-size: .4em;">(github.com Version)</sup>
 % Stefan Blechschmidt
-% 2015-06-20
+% 2015-09-17
 
 
 <!-- START .indexliste --><div class="indexliste">
@@ -45,6 +45,31 @@ Aktuell wird dieser Baukasten auch folgenden Seiten eingesetzt bzw. getestet.
 
 <!-- START .indexliste --><div class="indexliste"><h2 id="weblog" class="abschnitt weblog">Weblog</h2>
 <!-- START .weblogblock --><div class="weblogblock">
+
+
+
+# Padoc 1.15.0.6
+
+_Am 17.09.2015 um 17:14 schrieb IT-Bayer_
+
+Seit Juni habe ich kein pandoc Update mehr gemacht
+dabei hat sich einiges getan.
+
+Heute habe ich dann die beiden Zeilen
+
+	cabal update
+	cabal install pandoc pandoc-citeproc
+
+in die Konsole getippt.
+
+Auf diesem Rechner rennt immer noch ein Lubuntu 12.10.
+Pandoc konnte bis jetzt immer auf den neusten Stand gebracht werden.
+Mit allen anderen Programmen bin ich zufrieden und darum brauche ich das Bsys auch nicht updaten.
+Eigentlich bin ich mit pandoc auch zufrieden wegen Rumex versuche ich
+dennoch  mal eine neue Version.
+
+Ach ja, das Update auf Padoc 1.15.0.6 ging ohne Probleme.
+Jetzt muss Rumex nur noch mit der neuen Version zurecht kommen.
 
 
 
