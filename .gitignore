@@ -16,3 +16,7 @@
 .rx/*.mobi
 # Gedankenkarten / Symlinks
 .rx/*.vym
+
+# BeschreibungsDateien die per F8 (Vorschau)
+# erstellt wurden.
+beschreibung/*.htm
