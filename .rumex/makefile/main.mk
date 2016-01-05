@@ -30,10 +30,10 @@ all:
 
 
 
-
 # ######################################################
-# Seite online stellen. Wenn die SITECOPY Variable in config.mk
-# gesetzt ist wird sitecopy verwenden, sonst git.
+# Seite online stellen. Wenn die SITECOPY oder RSYNC Variable 
+# in config.mk gesetzt ist wird sitecopy bzw. rsync
+# für den Upload verwenden, sonst git.
 online:
 	make -s all
 	git add ../.
@@ -41,7 +41,11 @@ online:
 ifdef SITECOPY
 	$(SITECOPY) -r ../.rumex/sitecopy/config -p ../.rumex/sitecopy/cache/ --update rumex
 else
+ifdef RSYNC
+	$(RSYNC) $(RSYNCPARAMETER) $(RSYNCQUELLE) $(RSYNCZIEL)
+else
 	git push
+endif
 endif
 
 

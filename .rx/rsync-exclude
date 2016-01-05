@@ -1,0 +1,8 @@
+.git/
+.gitignore
+*.swp
+.rumex/
+.rx/
+start-gvim
+start-tilda
+start-vim

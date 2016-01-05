@@ -63,9 +63,28 @@ MOOTIT = "rumex"
 # Dazu muss sich auch das Programm wput auf dem Rechner befinden.
 # 
 # Wenn die Variabel kommentiert ist (Standard)
-# wird git verwendet.
+# wird git oder rsync verwendet.
 #-----------------------------------------------------------------------
 #
 # FTP = "ftp://USER:PASS@SERVER:PORT/WWW_DIR/"
 
 
+#-------------------------------------------------------------------------------
+# Upload mit rsync
+# 
+# Variable für die Aktualisierung
+#
+# Schalter für die rsync Funktion.
+#RSYNC = /usr/bin/rsync
+#
+# Datei mit den Mustern die nicht hoch geladen werden.
+RSYNCEXCLUDE = rsync-exclude
+# ssh Benutzername
+RSYNCUSER = USER
+# Quellverzeichnis ab dem rsync arbeiten soll
+RSYNCQUELLE = ../
+# Zielverzeichnis auf dem Server
+RSYNCZIEL = $(RSYNCUSER):~/www.it-bayer.de/
+# Parameter für Rsync
+RSYNCPARAMETER = -e "ssh" --checksum -rlvzu --delete-excluded --exclude-from=$(RSYNCEXCLUDE)
+#
