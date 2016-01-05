@@ -1,0 +1,533 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Stefan Blechschmidt" />
+  <title>Rumex Beschreibung</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../rxtpl/css/statik.css" type="text/css" />
+</head>
+<body>
+<div id="header">
+<h1 class="title">Rumex Beschreibung</h1>
+<h2 class="author">Stefan Blechschmidt</h2>
+<h3 class="date">2013, 2014, 2015, 2016</h3>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#vorwort">Vorwort</a><ul>
+<li><a href="#rumex">Rumex?</a></li>
+</ul></li>
+<li><a href="#installation-und-einrichten-des-rumex-baukastens">Installation und Einrichten des Rumex Baukastens</a><ul>
+<li><a href="#vorbereitung-des-rechners">Vorbereitung des Rechners</a></li>
+<li><a href="#installation-von-rumex-auf-dem-lokalen-arbeitsplatz">Installation von Rumex auf dem lokalen Arbeitsplatz</a></li>
+<li><a href="#rumex-auf-dich-einstellen">Rumex auf dich einstellen</a></li>
+</ul></li>
+<li><a href="#textbausteine">Textbausteine</a><ul>
+<li><a href="#rnd-rumexneuedatei"><code>,rnd</code> (RumexNeueDatei)</a></li>
+<li><a href="#rnn-rumexneuenachricht"><code>,rnn</code> (RumexNeueNachricht)</a></li>
+<li><a href="#rwl-rumexweiterleitung"><code>,rwl</code> (RumexWeiterLeitung)</a></li>
+<li><a href="#rmk-rumexmootitkommentar"><code>,rmk</code> (RumexMootitKommentar)</a></li>
+<li><a href="#rnb-rumexneuenweblog"><code>,rnb</code> (RumexNeuenweBlog)</a></li>
+</ul></li>
+<li><a href="#git-kommandos">Git Kommandos</a><ul>
+<li><a href="#rgp-rumexgitpull"><code>,rgp</code> (RumexGitPull)</a></li>
+<li><a href="#rgs-rumexgitstatus"><code>,rgs</code> (RumexGitStatus)</a></li>
+</ul></li>
+<li><a href="#text-formatierung">Text Formatierung</a><ul>
+<li><a href="#rff-rumexformatfett"><code>,rff</code> (RumexFormatFett)</a></li>
+<li><a href="#rfk-rumexformatkursiv"><code>,rfk</code> (RumexFormatKursiv)</a></li>
+<li><a href="#rfl-rumexformatliste"><code>,rfl</code> (RumexFormatListe)</a></li>
+<li><a href="#rfn-rumexformatnummernliste"><code>,rfn</code> (RumexFormatNummernliste)</a></li>
+<li><a href="#rfb-rumexformatblock"><code>,rfb</code> (RumexFormatBlock)</a></li>
+</ul></li>
+<li><a href="#make-befehle">Make Befehle</a><ul>
+<li><a href="#rma-rumexmakeall"><code>,rma</code> (RumexMakeAll)</a></li>
+<li><a href="#rmb-rumexmakebild"><code>,rmb</code> (RumexMakeBild)</a></li>
+<li><a href="#rmca-rumexmakecleanall"><code>,rmca</code> (RumexMakeCleanAll)</a></li>
+<li><a href="#rmcb-rumexmakecleanbilder"><code>,rmcb</code> (RumexMakeCleanBilder)</a></li>
+<li><a href="#rmch-rumexmakecleanhtml"><code>,rmch</code> (RumexMakeCleanHtml)</a></li>
+<li><a href="#rmcx-rumexmakecleanxml"><code>,rmcx</code> (RumexMakeCleanXml)</a></li>
+<li><a href="#rmcf5-rumexmakecleanf8htm"><code>,rmcf5</code> (RumexMakeCleanF8htm)</a></li>
+<li><a href="#rmh-rumexmakehtml"><code>,rmh</code> (RumexMakeHtml)</a></li>
+<li><a href="#rmi-rumexmakeindex"><code>,rmi</code> (RumexMakeIndex)</a></li>
+<li><a href="#rmm-rumexmakesitemap"><code>,rmm</code> (RumexMakesiteMap)</a></li>
+<li><a href="#rmo-rumexmakeonline"><code>,rmo</code> (RumexMakeOnline)</a></li>
+<li><a href="#rmr-rumexmakerss"><code>,rmr</code> (RumexMakeRss)</a></li>
+<li><a href="#rms-rumexmakesuche"><code>,rms</code> (RumexMakeSuche)</a></li>
+</ul></li>
+<li><a href="#vorschau">Vorschau</a><ul>
+<li><a href="#rsf-rumexshowfile"><code>,rsf</code> (RumexShowFile)</a></li>
+<li><a href="#rsw-rumexshowwww"><code>,rsw</code> (RumexShowWww)</a></li>
+<li><a href="#rsl-rumexshowlocal"><code>,rsl</code> (RumexShowLocal)</a></li>
+</ul></li>
+<li><a href="#sonstiges">Sonstiges</a><ul>
+<li><a href="#rku"><code>,rku</code></a></li>
+<li><a href="#ros-rumexopenstart"><code>,ros</code> (RumexOpenStart)</a></li>
+<li><a href="#ror-rumexopenrss"><code>,ror</code> (RumexOpenRss)</a></li>
+</ul></li>
+<li><a href="#rss-feed-funktion">RSS Feed Funktion</a><ul>
+<li><a href="#beispiel-einer-rss-feed-seite">Beispiel einer RSS Feed Seite</a></li>
+<li><a href="#rss-dateiname">RSS Dateiname</a></li>
+<li><a href="#rss-titel">RSS Titel</a></li>
+<li><a href="#rss-auslagern">RSS auslagern</a></li>
+<li><a href="#rss-kurztaste">RSS Kurztaste</a></li>
+<li><a href="#interna">Interna</a></li>
+<li><a href="#beschreibung-der-makefile-schalter">Beschreibung der Makefile Schalter</a></li>
+</ul></li>
+<li><a href="#statik-funktion">Statik Funktion</a></li>
+<li><a href="#html-formatierung">HTML Formatierung</a></li>
+<li><a href="#installation-pandoc-manuell">Installation pandoc manuell</a><ul>
+<li><a href="#nachinstallation-rumex">Nachinstallation Rumex</a></li>
+<li><a href="#literatur-verwaltung">Literatur Verwaltung</a></li>
+<li><a href="#tipps">Tipps</a></li>
+</ul></li>
+<li><a href="#verwendung-in--und-auuxdferhalb-von-rumex">Verwendung in- und außerhalb von Rumex?</a><ul>
+<li><a href="#setzen-der-uxfcberschrift-fuxfcr-das-literaturverzeichnis">Setzen der Überschrift für das Literaturverzeichnis</a></li>
+<li><a href="#einbinden-von-bildern">Einbinden von Bildern</a></li>
+<li><a href="#statik-dateien-im-.rx-verzeichnis">Statik Dateien im <code>.rx</code> Verzeichnis</a></li>
+<li><a href="#tipps-1">Tipps</a></li>
+</ul></li>
+</ul>
+</div>
+<hr />
+<h1 id="vorwort"><a href="#vorwort">Vorwort</a></h1>
+<p>Die Beweggründe mit einem eigenen System eine Internet Seite zu Verwalten sind mit der Zeit in mir gewachsen.</p>
+<p>Es gibt immer mehr Systeme die zum Erstellen und Verwalten von Internetseiten eingesetzt werden. Probiert habe ich schon viele und mit den meisten war ich auch sehr zufrieden, wenn da nicht immer der Hacken mit dem Updates wäre. Irgendwie, zumindest kommt es mir so vor, ist der Aufwand das System der Seite auf dem aktuellen Stand zu halten größer geworden als den Inhalt der eigentlichen Seite zu pflegen.</p>
+<p>Ich wünschte mir wieder eine Internetseite wie in früheren Zeiten. Eine Seite die aus einfachen HTML Seiten besteht.</p>
+<p>Irgendwann bin ich dann auf <code>markdown</code> und <code>pandoc</code> gestoßen und die Idee dieses Home Page Baukastens ist entstanden.</p>
+<h2 id="rumex"><a href="#rumex">Rumex?</a></h2>
+<p>Rumex ist die lateinische Bezeichnung für den <a href="http://de.wikipedia.org/wiki/Ampfer">Ampfer</a> und dieser taucht in der Natur dann auf, wenn der Boden Überdüngt, Verdichtung und Beschädigt ist. Rumex gehört zu den sogenannten Pionier Pflanzen. Er ist ein Lückenfüller.</p>
+<p>Genau das soll Rumex auch sein “ein Lückenfüller” für alle die … Systeme satt haben.</p>
+<div class="figure">
+<img src="../bilder/beschreibung-vym_800_.png" alt="Kleine Gedankenkarte der Rumex Beschreibung. Zur Zeit in Arbeit." /><p class="caption">Kleine Gedankenkarte der Rumex Beschreibung. Zur Zeit in Arbeit.</p>
+</div>
+<h1 id="installation-und-einrichten-des-rumex-baukastens"><a href="#installation-und-einrichten-des-rumex-baukastens">Installation und Einrichten des Rumex Baukastens</a></h1>
+<h2 id="vorbereitung-des-rechners"><a href="#vorbereitung-des-rechners">Vorbereitung des Rechners</a></h2>
+<p>Rumex ist auf ein *nix System ausgerichtet. Auf diesem sollten folgende Programme installiert sein:</p>
+<ul>
+<li>bash</li>
+<li>make</li>
+<li>perl</li>
+<li>git</li>
+<li>pandoc</li>
+<li>imagemagick</li>
+<li>wget</li>
+<li><del>wput</del></li>
+<li>sitecopy</li>
+<li>rsync</li>
+<li>vim (g)vim</li>
+<li>texlive</li>
+</ul>
+<p>Wobei <code>bash</code>, <code>make</code> und <code>perl</code> eigentlich bei jeder <code>*nix</code> Installation bereits vorhanden sein dürft. Die restlichen Programme müssen nach installiert werden.</p>
+<p>Wer mit dem Editor <code>vim</code> zurecht kommt sollte sich auch <code>(g)vim</code> installieren. Rumex besitzt eine <code>gvim</code> Erweiterung die, die Arbeit bzw. die Suche nach dem richtigen Befehl am Anfang um einiges erleichtert.</p>
+<p><code>texlive</code><a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> wird nur gebraucht wenn man auch PDF Dateien erstellen möchte.</p>
+<p><del><code>wput</code></del> <code>sitecopy</code> wird nur gebraucht wenn man die Daten per FTP hoch laden möchte.</p>
+<p><code>rsync</code> wird nur gebraucht wenn man die Daten per rsync hoch landen möchte.</p>
+<pre><code>sudo apt-get install make perl
+
+sudo apt-get install git-core wget sitecopy rsync pandoc imagemagick
+
+sudo apt-get install gvim
+
+sudo apt-get install texlive</code></pre>
+<h2 id="installation-von-rumex-auf-dem-lokalen-arbeitsplatz"><a href="#installation-von-rumex-auf-dem-lokalen-arbeitsplatz">Installation von Rumex auf dem lokalen Arbeitsplatz</a></h2>
+<p>Für die Installation auf deinem Rechner musst du dir zu erst das ZIP bzw. das tar.gz Archiv vom github Server holen und entpacken</p>
+<pre><code>wget https://github.com/itbayer/rumex/archive/gh-pages.zip
+unzip gh-pages.zip</code></pre>
+<p>oder</p>
+<pre><code>wget https://github.com/itbayer/rumex/archive/gh-pages.tar.gz
+tar -xzvf gh-pages.tar.gz</code></pre>
+<p>Jetzt wechsle in das Verzeichnis <code>rumex-gh-pages/.rx</code> und starte die Befehle <code>make install</code> und <code>make show</code>.</p>
+<pre><code>cd rumex-gh-pages/.rx/
+make install
+make show</code></pre>
+<p>Fertig :-)</p>
+<h2 id="rumex-auf-dich-einstellen"><a href="#rumex-auf-dich-einstellen">Rumex auf dich einstellen</a></h2>
+<p>Nach der Installation muss Rumex noch auf dich eingestellt werden. Genauer gesagt sollten folgende Angabe für deine neuen Seite angepasst werden.</p>
+<ul>
+<li><p>URL deiner Seite</p></li>
+<li><p>Impressum</p></li>
+<li><p>Kopf / Fusszeile</p></li>
+<li><p>Logo</p></li>
+</ul>
+<p>Eine Kurzbeschreibung findest du, nach der Installation, auf der Startseite von Rumex. Diese Seite kannst du <a href="../istart.html">auch hier</a> nochmal einsehen.</p>
+<p>Alle Rumex Kurztasten, für den Editor VIM, beginnen mit einem <code>,r</code><a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>. Für die Bedienung von Rumex braucht mein nur ein paar. Viele der Kurztasten beinhalten eine Kombination einzelner Kurztasten bzw. Befehle.</p>
+<p>Am Anfang ist es sicher einfacher GVIM zu verwenden, da hier ein Menü eingebaut ist welches unter anderem auch die Kurztasten anzeigt.</p>
+<p>Wer jedoch mit der <a href="beschreibung.html#homepage-änderung-schnell-und-immer-aktuell">tilda</a> Unterstützung arbeitet sollte sich schon ein paar Kurztasten einprägen.</p>
+<h1 id="textbausteine"><a href="#textbausteine">Textbausteine</a></h1>
+<p>Mittels dieser Kurztasten können Textbausteine eingebunden werden.</p>
+<h2 id="rnd-rumexneuedatei"><a href="#rnd-rumexneuedatei"><code>,rnd</code> (RumexNeueDatei)</a></h2>
+<p>Erstellt ein neues Datei Gerüst. Dabei wird der Dateiname gleich mit eingebunden.</p>
+<p><strong>So schaut’s aus</strong></p>
+<pre><code>% vim-kurztasten
+%
+%
+
+
+&lt;!--
+
+ [vim-kurztasten](vim-kurztasten.html)
+ =======================================================
+
+Vortext INDEX
+
+--&gt;
+
+Vortext INDEX und SEITE
+
+&lt;!-- schnipp --&gt;
+
+TEXT DER SEITE
+
+&lt;!-- vim: set ft=pandoc: --&gt;</code></pre>
+<h2 id="rnn-rumexneuenachricht"><a href="#rnn-rumexneuenachricht"><code>,rnn</code> (RumexNeueNachricht)</a></h2>
+<p>Erstellt einen neuen News Eintrag. Diese Kurztaste macht eigentlich nur in der Datei <code>rss.rx0x</code> Sinn. Das Datum hinter dem Titel, Überschrift 1, wird von Rumex gesetzt, ist also immer die aktuelle Systemzeit beim ausführen von <code>,rnn</code>.</p>
+<pre><code> # Neue Nachricht &lt;!-- 2013/11/10 00:30 --&gt;
+
+&lt;!--
+!&gt; Link: http://www.it-bayer.de/rumex/
+!&gt; Autor: IT-Bayer
+!&gt; Kategorie: Neues
+--&gt;
+
+Ab hier geht die neuen Nachricht los.</code></pre>
+<h2 id="rwl-rumexweiterleitung"><a href="#rwl-rumexweiterleitung"><code>,rwl</code> (RumexWeiterLeitung)</a></h2>
+<p>Erstellt einen neue Weiterleitungsseite.</p>
+<p><strong>So schaut’s aus</strong></p>
+<pre><code>% Weiterleitung nach ....html
+%
+%
+
+
+&lt;script language=&quot;javascript&quot;&gt;
+&lt;!--
+//window.location.href=&quot;....html&quot;;
+// --&gt;
+&lt;/script&gt;</code></pre>
+<p>Anmerkung: Die Zeile <code>window.location.href=....html;</code> wurde hier Kommentiert da sonst die javascript Weiterleitung greift. Normalerweise findet man kein <code>//</code> vor der Zeile <code>window.location.href=....html</code>.</p>
+<h2 id="rmk-rumexmootitkommentar"><a href="#rmk-rumexmootitkommentar"><code>,rmk</code> (RumexMootitKommentar)</a></h2>
+<p>Erstellt einen Moot.it Kommentar Abschnitt. Als Kennzeichnung wird der Dateiname ohne <code>rx??</code> eingebaut / angehängt.</p>
+<pre><code> # Kommentare
+
+&lt;a class=&quot;moot&quot; href=&quot;https://moot.it/i/rumex/blog/vim-kurztasten&quot;&gt;&lt;/a&gt;</code></pre>
+<h2 id="rnb-rumexneuenweblog"><a href="#rnb-rumexneuenweblog"><code>,rnb</code> (RumexNeuenweBlog)</a></h2>
+<p>Erstelle einen neuen Weblog Eintrag.</p>
+<pre><code> # Rumex WebLog
+
+_am 09.09.2013 um 15:21 schrieb IT-Bayer_
+
+Text für den Eintrag
+
+&lt;div class=&quot;weblog&quot;&gt;
+Text der vorerst ausgeblendet ist.
+&lt;/div&gt;</code></pre>
+<h1 id="git-kommandos"><a href="#git-kommandos">Git Kommandos</a></h1>
+<h2 id="rgp-rumexgitpull"><a href="#rgp-rumexgitpull"><code>,rgp</code> (RumexGitPull)</a></h2>
+<p>Git pull</p>
+<h2 id="rgs-rumexgitstatus"><a href="#rgs-rumexgitstatus"><code>,rgs</code> (RumexGitStatus)</a></h2>
+<p>Git status</p>
+<h1 id="text-formatierung"><a href="#text-formatierung">Text Formatierung</a></h1>
+<h2 id="rff-rumexformatfett"><a href="#rff-rumexformatfett"><code>,rff</code> (RumexFormatFett)</a></h2>
+<p>Markierte Textstelle fett darstellen</p>
+<h2 id="rfk-rumexformatkursiv"><a href="#rfk-rumexformatkursiv"><code>,rfk</code> (RumexFormatKursiv)</a></h2>
+<p>Markierte Textstelle kursiv darstellen</p>
+<h2 id="rfl-rumexformatliste"><a href="#rfl-rumexformatliste"><code>,rfl</code> (RumexFormatListe)</a></h2>
+<p>Markierte Zeilen in eine Liste wandeln</p>
+<h2 id="rfn-rumexformatnummernliste"><a href="#rfn-rumexformatnummernliste"><code>,rfn</code> (RumexFormatNummernliste)</a></h2>
+<p>Markierte Zeile in eine Nummernliste wandeln</p>
+<h2 id="rfb-rumexformatblock"><a href="#rfb-rumexformatblock"><code>,rfb</code> (RumexFormatBlock)</a></h2>
+<p>Markierte Zeile in einen Block wandeln</p>
+<dl>
+<dt>,rfc</dt>
+<dd><p>Markierte Zeile als Code darstellen</p>
+</dd>
+<dt>,spn2</dt>
+<dd><p>Text mit 2er Spalten Formatierung umschließen</p>
+</dd>
+<dt>,spn3</dt>
+<dd><p>Text mit 3er Spalten Formatierung umschließen</p>
+</dd>
+<dt>,spn4</dt>
+<dd><p>Text mit 4er Spalten Formatierung umschließen</p>
+</dd>
+</dl>
+<h1 id="make-befehle"><a href="#make-befehle">Make Befehle</a></h1>
+<h2 id="rma-rumexmakeall"><a href="#rma-rumexmakeall"><code>,rma</code> (RumexMakeAll)</a></h2>
+<p>Speichert alle offenen Dokumente und erstellt daraus die HTML Datei.</p>
+<h2 id="rmb-rumexmakebild"><a href="#rmb-rumexmakebild"><code>,rmb</code> (RumexMakeBild)</a></h2>
+<p>Erstellt die unterschiedlichen Bildgrößen</p>
+<h2 id="rmca-rumexmakecleanall"><a href="#rmca-rumexmakecleanall"><code>,rmca</code> (RumexMakeCleanAll)</a></h2>
+<p>Löscht alle html Dateien, alle Bildergrößen und alle xml Dateien. beinhaltet die drei Befehle <code>make bclean</code>, <code>make hclean</code>, <code>make xclean</code>.</p>
+<h2 id="rmcb-rumexmakecleanbilder"><a href="#rmcb-rumexmakecleanbilder"><code>,rmcb</code> (RumexMakeCleanBilder)</a></h2>
+<p>Löscht alle Bildgrößen aus dem <code>bilder/</code> Verzeichnis. Es werden nur die Bilder gelöscht die von Rumex erstellt wurden siehe <code>make bilder</code>.</p>
+<h2 id="rmch-rumexmakecleanhtml"><a href="#rmch-rumexmakecleanhtml"><code>,rmch</code> (RumexMakeCleanHtml)</a></h2>
+<p>Löscht alle <code>.html</code> Dateien die von Rumex erstellt wurden.</p>
+<h2 id="rmcx-rumexmakecleanxml"><a href="#rmcx-rumexmakecleanxml"><code>,rmcx</code> (RumexMakeCleanXml)</a></h2>
+<p>Löscht alle <code>.xlm</code> Dateien die von Rumex erstellt wurden.</p>
+<h2 id="rmcf5-rumexmakecleanf8htm"><a href="#rmcf5-rumexmakecleanf8htm"><code>,rmcf5</code> (RumexMakeCleanF8htm)</a></h2>
+<p>Löscht alle <code>.htm</code> Dateien die mittels der Gvim Taste F5, siehe <a href="http://www.it-bayer.de/rumex/statik/index.htm">HTML und PDF Dateine mit pandoc und gvim erstellen</a>, erstellt wurden.</p>
+<h2 id="rmh-rumexmakehtml"><a href="#rmh-rumexmakehtml"><code>,rmh</code> (RumexMakeHtml)</a></h2>
+<p>Erstellt die <code>.html</code> Dateien.</p>
+<h2 id="rmi-rumexmakeindex"><a href="#rmi-rumexmakeindex"><code>,rmi</code> (RumexMakeIndex)</a></h2>
+<p>Erstellt die index Datei.</p>
+<h2 id="rmm-rumexmakesitemap"><a href="#rmm-rumexmakesitemap"><code>,rmm</code> (RumexMakesiteMap)</a></h2>
+<p>Erstellt die sitemap Datei.</p>
+<h2 id="rmo-rumexmakeonline"><a href="#rmo-rumexmakeonline"><code>,rmo</code> (RumexMakeOnline)</a></h2>
+<p>Speichert alle Dateien und stellt diese online.</p>
+<h2 id="rmr-rumexmakerss"><a href="#rmr-rumexmakerss"><code>,rmr</code> (RumexMakeRss)</a></h2>
+<p>Erstellt die rss Datei.</p>
+<h2 id="rms-rumexmakesuche"><a href="#rms-rumexmakesuche"><code>,rms</code> (RumexMakeSuche)</a></h2>
+<p>Erstellt die Rumex Suche, bzw. die Dateiliste die für die Suche verwendet werden soll.</p>
+<h1 id="vorschau"><a href="#vorschau">Vorschau</a></h1>
+<h2 id="rsf-rumexshowfile"><a href="#rsf-rumexshowfile"><code>,rsf</code> (RumexShowFile)</a></h2>
+<p>Zeigt eine Vorschau der Seite der Datei <code>file:///</code> im Standardbrowser.</p>
+<h2 id="rsw-rumexshowwww"><a href="#rsw-rumexshowwww"><code>,rsw</code> (RumexShowWww)</a></h2>
+<p>Zeigt eine Vorschau der Seite <strong>Online</strong> im Standardbrowser.</p>
+<h2 id="rsl-rumexshowlocal"><a href="#rsl-rumexshowlocal"><code>,rsl</code> (RumexShowLocal)</a></h2>
+<p>Zeigt eine Vorschau der Seite auf dem eigenen Rechner. Diese Kurztaste kann aber nur verwendet werden wenn auf dem Rechner der Apache installiert und entsprechend eingerichtet ist.</p>
+<h1 id="sonstiges"><a href="#sonstiges">Sonstiges</a></h1>
+<h2 id="rku"><a href="#rku"><code>,rku</code></a></h2>
+<p>Öffnet das Unterverzeichnis <code>.rx</code> in einem neuen VimTab Fenster. Keine Ahnung warum ich diese Kurztaste so benannt habe.</p>
+<h2 id="ros-rumexopenstart"><a href="#ros-rumexopenstart"><code>,ros</code> (RumexOpenStart)</a></h2>
+<p>Öffnet die <code>start.rx0s</code> in einen neuen VIM Tab Fenster.</p>
+<h2 id="ror-rumexopenrss"><a href="#ror-rumexopenrss"><code>,ror</code> (RumexOpenRss)</a></h2>
+<p>Öffnet die <code>rss.rx0x</code> in einen neuen VIM Tab Fenster.</p>
+<h1 id="rss-feed-funktion"><a href="#rss-feed-funktion">RSS Feed Funktion</a></h1>
+<p>TODO</p>
+<p>Wird nicht aus den einzelnen Dateien erstellt sondern muss manuell editiert werden, Datei <code>.rx/rss.rx0x</code>.</p>
+<p>Jede Überschrift eines Eintrags muss mit einem <code>{.nn1}</code> enden.</p>
+<p>Danach kommen die Angaben zu:</p>
+<p><strong>Link:</strong> <em>Verweis zur Seite mit weiteren Informationen</em><br /><strong>Autor:</strong> <em>Autor der den Eintrag geschrieben hat</em><br /><strong>Kategorie:</strong> <em>Kategoie des Eintrags</em><br /><strong>Datum:</strong> <em>Datum des Eintrags.</em> Das richtige Format bekommt man mit dem Befehl <code>date -R</code>.</p>
+<p>die in HTML Kommentar Marker eingeschlossen sind.</p>
+<p>Anschließend folgt die Meldung. Zur Zeit werden folgende <code>pandoc</code> Formatierungen unterstützt.</p>
+<ul>
+<li><p>Überschriften ab der Stufe 3 <code>###</code></p></li>
+<li><p>Aufzählungen <code>-</code></p></li>
+<li><p>Aufzählungen <code>*</code></p></li>
+<li><p>Zitate <code>&gt;</code></p></li>
+<li><p>Links <code>[Link](http://muster.tdl)</code>. Diese dürfen nicht am Anfang einer Zeile stehen.</p></li>
+<li><p>Bilder <code>![Bild](../bilder/muster.png muster.png)</code>, Diese dürfen nicht am Anfang einer Zeile stehen.</p></li>
+<li><p>Code `Code`.</p></li>
+</ul>
+<h2 id="beispiel-einer-rss-feed-seite"><a href="#beispiel-einer-rss-feed-seite">Beispiel einer RSS Feed Seite</a></h2>
+<h2 id="rss-dateiname"><a href="#rss-dateiname">RSS Dateiname</a></h2>
+<p>Der Dateiname ist mit <code>rss.xml</code> vorbelegt und kann über die Variable <code>RSS_FILE</code> in der <code>config.md</code> geändert werden.</p>
+<h2 id="rss-titel"><a href="#rss-titel">RSS Titel</a></h2>
+<p>Der Title des RSS Feed wird durch die Variable <code>RSS_TITEL</code> angepasst.</p>
+<pre><code>RSS_TITEL = &quot;Neuigkeiten von rumex Baukasten&quot;</code></pre>
+<h2 id="rss-auslagern"><a href="#rss-auslagern">RSS auslagern</a></h2>
+<p>Den RSS Link kann man auch auslagern so dass dieser auf eine andere Seite zeigt. Dazu setzt man die Variable <code>RSS_EXTERN</code> mit dem entsprechenden Link. Die Variabel <code>RSS_FILE</code> wird dadurch nicht mehr verwendet. Auch der RSS Lauf wird dadurch ausgeschaltet und durch eine Meldung ersetzt.</p>
+<h2 id="rss-kurztaste"><a href="#rss-kurztaste">RSS Kurztaste</a></h2>
+<p>Für die einzelnen Einträge steht auch eine Kurztaste <code>.rnn</code> zur Verfügung.<br />In Gvim unter</p>
+<pre><code>Rumex -&gt; TextBausteine -&gt; NeuerNews Eintrag</code></pre>
+<p>Eingefügt wird dann folgende Vorgabe. Der Wert hinter Datum wird von System ausgelesen und entsprechende gesetzt.</p>
+<pre><code> # Neue Nachricht{.nn1}
+
+&lt;!--
+| Link: http://www.it-bayer.de/rumex/
+| Autor: IT-Bayer
+| Kategorie: Neues
+| Datum: Mon, 28 Oct 2013 07:36:56 +0100
+--&gt;
+
+Ab hier geht die neue Nachricht los.</code></pre>
+<h2 id="interna"><a href="#interna">Interna</a></h2>
+<p>Durch die beschriebenen RSS Variablen wird die Erstellung des RSS Feed gesteuert. Es wird in jede HTML Datei nachfolgender Header Abschnitt eingebaut wenn die <code>RSS_TITLE</code> Variable gesetzt wurde. <code>RSS_FILE</code> bzw. <code>RSS_EXTERN</code> steuern den <code>href</code> Eintrag. Upload mit rsync ================================</p>
+<p>Ab der Version <code>0.8.5.1</code> wird ein Upload mittels <code>rsync</code> unterstützt. Für diese Funktion ist ein <code>SSH</code> Zugang zum Server erforderlich.</p>
+<p>Die entsprechenden Variablen findet man in der Datei <code>.rumex/makefile/config.mk</code>.</p>
+<p><strong>Ausschnitt aus der Datei <code>.rumex/makefile/main.mk</code></strong></p>
+<pre><code>#-------------------------------------------------------------------------------
+# Upload mit rsync
+# 
+# Variable für die Aktualisierung
+#
+# Schalter für die rsync Funktion.
+#RSYNC = /usr/bin/rsync
+#
+# Datei mit den Mustern die nicht hoch geladen werden.
+RSYNCEXCLUDE = rsync-exclude
+# ssh Benutzername
+RSYNCUSER = USER
+# Quellverzeichnis ab dem rsync arbeiten soll
+RSYNCQUELLE = ../
+# Zielverzeichnis auf dem Server
+RSYNCZIEL = $(RSYNCUSER):~/www.it-bayer.de/
+# Parameter für Rsync
+RSYNCPARAMETER = -e &quot;ssh&quot; --checksum -rlvzu --delete-excluded --exclude-from=$(RSYNCEXCLUDE)
+#</code></pre>
+<h2 id="beschreibung-der-makefile-schalter"><a href="#beschreibung-der-makefile-schalter">Beschreibung der Makefile Schalter</a></h2>
+<dl>
+<dt>RSYNC</dt>
+<dd><p>Diese Variable hat zwei Funktionen</p>
+<ol style="list-style-type: decimal">
+<li>Pfadangabe des <code>rsync</code> Programms</li>
+<li>Schalter ob diese Funktion verwendet wird. <em>Dieser Schalter ist per Standard kommentiert.</em></li>
+</ol>
+<p>Vorgabe:<br /><code>/usr/bin/rsync</code></p>
+</dd>
+<dt>RSYNCEXCLUDE</dt>
+<dd><p>Datei in der die Muster definiert werden die <strong>nicht</strong> synchronisiert werden. Die Datei findet man im <code>.rx/</code> Verzeichnis.</p>
+<p>Vorgabe:<br /><code>rsync-exclude</code></p>
+</dd>
+<dt>RSYNCUSER</dt>
+<dd><p>Benutzername des SSH Zugangs</p>
+<p>Vorgabe:<br /><code>USER</code></p>
+</dd>
+<dt>RSYNCQUELLE</dt>
+<dd><p>Quelle ab dem <code>rsync</code> die Dateien berücksichtigen soll. <em>Da das Programm <code>make</code> im <code>.rx</code> Verzeichnis ausgeführt wird ist die Vorgabe ein Verzeichnis tiefer.</em> Diese Variable braucht normal nicht geändert werden.</p>
+<p>Vorgabe:<br /><code>../</code></p>
+</dd>
+<dt>RSYNCZIEL</dt>
+<dd><p>Zeilverzeichnis auf dem Server. Das Verzeichnis muss vorhanden und beschreibbar sein.</p>
+<p>Vorgabe:<br /><code>$(RSYNCUSER):~/www.it-bayer.de/</code></p>
+</dd>
+<dt>RSYNCPARAMETER</dt>
+<dd><p>Parameter für den rsync Lauf. Dieser Parameter braucht normal nicht geändert werden.</p>
+<p>Vorgabe:<br /><code>-e &quot;ssh&quot; --checksum -rlvzu --delete-excluded --exclude-from=$(RSYNCEXCLUDE)</code></p>
+</dd>
+</dl>
+<h1 id="statik-funktion"><a href="#statik-funktion">Statik Funktion</a></h1>
+<p>Rumex verwendet pandocs markdown weil man damit sehr einfach und schnell Text erstellen und in verschiedenen Formate wandeln kann. Für die Erstellung von Denkschriften<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> wurde zusätzlich eine, ich nenne sie <em>statik Funktion</em> eingebaut. Mit dieser Funktion ist es möglich innerhalb eines Unterverzeichnisses verschiedenen Ausgabe Formate zu erstellen. Zur Zeit werden, von Rumex, folgenden Formate unterstützt:</p>
+<ul>
+<li>.html</li>
+<li>.pdf</li>
+<li>.odt OpenDokument</li>
+<li>.epub E-Book</li>
+<li>.mobi E-Book (Kindle)</li>
+</ul>
+<p>Erstellt werden die einzelnen Formate über die innerhalb (g)vim<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a> zur Verfügung stehen.<del>Eine Besonderheit ist dass die <code>.htm</code> Datei auch ohne die zusätzlichen Dateien wie</del> <del>Bilder oder die CSS Datei funktionieren. Alle Daten werden in die <code>.htm</code> Datei eingebunden.</del><a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a><br />Auch wurde die von Pandoc eingebaut sodass Verweise auf anderen Quellen in den Denkschriften verwendet werden können.</p>
+<p>Wer sich Rumex nicht installieren möchte aber dennoch eine einfache Möglichkeit sucht HTML Seiten zu erstellen, kann sich einmal <a href="http://www.it-bayer.de/cirsium">cirsium</a> anschauen. Cirsium ist eine Auskopplung aus Rumex, unterteilt aber die Quelltextdatei in verschiedene Abschnitte. Am besten einfach mal auf <a href="http://www.github.com/itbayer/cirsium">github.com</a> anschauen.</p>
+<p>Ab der Rumex Version 0.8.2 sind die Funktionstasten in Rumex enthalten. Folgende F-Tasten wurden belegt.</p>
+<dl>
+<dt><strong>F5</strong></dt>
+<dd><p>Erstellt die <code>.htm</code> Datei ohne Inhaltsverzeichnis.</p>
+</dd>
+<dt><strong>Shift+F5</strong></dt>
+<dd><p>Erstellt die <code>.htm</code> Datei mit Inhaltsverzeichnis bis zur Ebene 3.</p>
+</dd>
+<dt><strong>Alt+F5</strong></dt>
+<dd><p>Erstellt die <code>.htm</code> Datei mit kompletten Inhaltsverzeichnis bzw. bis Ebene 5 da LaTeX auch nicht mehr Ebenen unterstützt und die beiden Ausgabe Format annähernd identisch sein sollten.</p>
+</dd>
+<dt><strong>Ctrl+F5</strong></dt>
+<dd><p>Öffnet die <code>.htm</code> Datei.</p>
+</dd>
+<dt><strong>F6</strong></dt>
+<dd><p>Erstellt die <code>.pdf</code> Datei ohne Inhaltsverzeichnis.</p>
+</dd>
+<dt><strong>Shift+F6</strong></dt>
+<dd><p>Erstellt die <code>.pdf</code> Datei mit Inhaltsverzeichnis bis zur Ebene 3.</p>
+</dd>
+<dt><strong>Alt+F6</strong></dt>
+<dd><p>Erstellt die <code>.pdf</code> Datei mit kompletten Inhaltsverzeichnis. Hier ist anzumerken dass LaTeX nur Inhaltsverzeichnisse bis zur Ebene 5 unterstützt. Das HTML Format wurde entsprechend angepasst, siehe oben.</p>
+</dd>
+<dt><strong>Ctrl+F6</strong></dt>
+<dd><p>Öffnet die <code>.pdf</code> Datei. Zur Zeit wird nur zathura unterstützt.</p>
+</dd>
+<dt><strong>F7</strong></dt>
+<dd><p>Erstellt die restlichen Formate, <code>.epub</code>, <code>.odt</code> und <code>.mobi</code>. Voraussetzung für das <code>.mobi</code> Format ist <code>calibre</code>.</p>
+</dd>
+<dt><strong>Ctrl-F7</strong></dt>
+<dd><p>Öffnet die Literatur Verwaltung <code>rumex.bib</code>. Voraussetzung, <code>jabref</code> ist installiert.</p>
+</dd>
+</dl>
+<h1 id="html-formatierung"><a href="#html-formatierung">HTML Formatierung</a></h1>
+<p>Die erzeugte HTML Datei besitzt Standardmäßig keine Formatierung bzw. verwendet die Standard Darstellung des Browsers.</p>
+<p>Kopf- und Fusszeile werden dadurch nicht, vom restlichen Text, unterschieden. Auch das Inhaltsverzeichnis ist im ersten Moment als solches nicht gleich zu erkennen. Dieses kann mit ein wenig CSS geändert werden. Diese CSS Datei ist ab Rumex Version 0.8.2 enthalten muss aber unter Umständen noch eingerichtet werden.</p>
+<pre><code>cd .rx
+ln -s ../.rumex/default/statik.css statik.css</code></pre>
+<p>Beim Lesen des Artikels <em>“PDF-Dokumente schreiben mit Pandoc und Markdown” <span><span class="citation">[&lt;/span&gt;@stenderprolinux&lt;span&gt;]</span></span></em> ist mir die Idee gekommen die Rumex <em>statik Funktion</em> mit einem Literaturverzeichnis, die ja auch in pandoc zur Verfügung steht, zu versehen.</p>
+<h1 id="installation-pandoc-manuell"><a href="#installation-pandoc-manuell">Installation pandoc manuell</a></h1>
+<p>Für die Verwendung der Literaturfunktion muss pandoc um das Zusatzprogramm <code>pandoc-citeproc</code> erweitert werden. Wer Pandoc über die Paketverwaltung installiert hat braucht hier nichts zu machen. Wer Pandoc manuell, so wie ich, installiert hat muss dieses Programm nachinstallieren.</p>
+<p>Dazu erweitert man die Installationszeile um das neue Programm</p>
+<pre><code>cabal update
+cabal install pandoc pandoc-citeproc</code></pre>
+<p>Zu guter Letzt erstellt man noch die symbolischen Links der beiden Programme.</p>
+<pre><code>sudo ln -s /home/USER/.cabal/bin/pandoc /usr/local/bin/.
+sudo ln -s /home/USER/.cabal/bin/pandoc-citeproc /usr/local/bin/.</code></pre>
+<h3 id="nachinstallation-rumex"><a href="#nachinstallation-rumex">Nachinstallation Rumex</a></h3>
+<p>Wer Rumex schon im Einsatz hat muss für die Erweiterung ein wenig Hand anlegen. Zu erste holt man sich die neue Version<a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a> von rumex.</p>
+<p>Dann braucht man noch drei zusätzliche Dateien im Verzeichnis <code>.rx</code>.</p>
+<ul>
+<li><p><code>rumex.bib</code></p></li>
+<li><p><code>rumex.csl</code></p></li>
+<li><p><code>statik.css</code></p></li>
+</ul>
+<p>Wobei der und die CSS Datei nur verlinkt wird. In der <code>rumex.bib</code> werden dann die Literatur Verweise verwaltet.</p>
+<pre><code>cd .rx
+touch rumex.bib
+ln -s ../.rumex/default/din-1505-2.csl rumex.csl
+ln -s ../.rumex/default/statik.css statik.css</code></pre>
+<p>Als Literatur Stil kommt <code>din-1505-2.csl</code> zum Einsatz. Andere Stile findet man im git Repository <a href="https://github.com/citation-style-language/styles.git">https://github.com/citation-style-language/styles.git</a>. Als Name für die Stil Vorlage wurde <code>rumex.csl</code> gewählt damit mit eine Änderung des Stils einfach über den Symlink gemacht werden kann.</p>
+<h3 id="literatur-verwaltung"><a href="#literatur-verwaltung">Literatur Verwaltung</a></h3>
+<p>Für die Verwaltung der Literatur Datenbank verwende ich <a href="http://jabref.sourceforge.net/">Jabref</a>.</p>
+<pre><code>sudo apt-get install jabref</code></pre>
+<p>Der Aufruf des Programms wurde auch auf einen F Taste gelegt. Wer eine anderes Programm verwenden will muss diesen entsprechend anpassen.</p>
+<h3 id="tipps"><a href="#tipps">Tipps</a></h3>
+<ul>
+<li><p>Auf <span class="citation">@wiki:bibtex</span> findet man eine schöne Beschreibung über die Literatur Verwaltung mit BibTex.</p></li>
+<li><p>Die BibTex Einträge muss man sich unter Umständen nicht einmal selber erstellen. Da verschiedene Seiten entsprechende Dienste anbieten. Gelungen finde ich die Seite von <a href="http://www.literatur-generator.de/">http://www.literatur-generator.de/</a> aber auch auf <a href="http://lead.to/amazon/en/?op=bt">http://lead.to/amazon/en/?op=bt</a> findet man BibTeX Einträge. Zwar muss man diese unter Umständen noch ein wenig überarbeiten aber das Grund Gerüst wird einem sozusagen frei Haus geliefert.<br /> Wer einen Wikipedia Artikel zitieren dem wird unter <code>Werkzeuge -&gt; Seite zitieren</code> weiter geholfen.</p></li>
+<li><p>Für das zitieren von Internetseiten verwende ich folgende Formate, siehe dazu Abschnitt .</p></li>
+</ul>
+<!-- -->
+
+<pre><code>    @ELECTRONIC{ wiki:bibtex,
+        author = &quot;Wikipedia&quot;,
+        title = &quot;BibTeX --- Wikipedia{,} Die freie Enzyklopädie&quot;,
+        year = &quot;2013&quot;,
+        url = &quot;http://de.wikipedia.org/w/index.php?title=BibTeX&amp;oldid=124228120&quot;, 
+        note = &quot;[Online; Stand 18. Dezember 2013]&quot;
+    }</code></pre>
+<blockquote>
+<p>…oder</p>
+<p><strong>Achtung:</strong> Das Formate <code>@WWW</code> wird von jabref nicht unterstützt und gegen ein anders ausgetauscht. Bei dem Einsatz von Jabref am besten <code>@ELECTRONIC</code> verwenden.</p>
+</blockquote>
+<pre><code>    @WWW{ wiki:bibtex,
+        author = &quot;Wikipedia&quot;,
+        title = &quot;BibTeX --- Wikipedia{,} Die freie Enzyklopädie&quot;,
+        year = &quot;2013&quot;,
+        url = &quot;http://de.wikipedia.org/w/index.php?title=BibTeX&amp;oldid=124228120&quot;, 
+        note = &quot;[Online; Stand 18. Dezember 2013]&quot;
+    }</code></pre>
+<h1 id="verwendung-in--und-auuxdferhalb-von-rumex"><a href="#verwendung-in--und-auuxdferhalb-von-rumex">Verwendung in- und außerhalb von Rumex?</a></h1>
+<p>Innerhalb von Rumex erstellt man in einem separatem Unterverzeichnis die entsprechende markdown Datei und dann kann es auch schon los gehen.</p>
+<p>Außerhalb von Rumex kann man diese Funktion natürlich auch verwenden. Mit Außerhalb meine ich Denkschriften die nicht veröffentlicht werden. Dazu gibt es zwei Möglichkeiten.</p>
+<ol style="list-style-type: decimal">
+<li><p>Die Datei bzw. das Verzeichnis in <code>.gitignore</code> hinterlegen. Somit wird diese nicht verwaltet und auch nicht, bei einem <code>make online</code>, hoch geladen.</p></li>
+<li><p>Eine zweite lokale Rumex Installation die nur für Denkschriften verwendet wird.</p></li>
+<li><p>…und dann wäre da noch <a href="https://github.com/itbayer/cirsium">Cirsium</a>, eine Auskopplung aus Rumex, mit der man einfache html und pdf Seiten erstellen kann. Die Literaturverzeichnisoption ist auch enthalten. Die Formate odt, epub und mobi sind jedoch nicht eingebaut.</p></li>
+</ol>
+<h2 id="setzen-der-uxfcberschrift-fuxfcr-das-literaturverzeichnis"><a href="#setzen-der-uxfcberschrift-fuxfcr-das-literaturverzeichnis">Setzen der Überschrift für das Literaturverzeichnis</a></h2>
+<p>Die Überschrift für das Literaturverzeichnis muss immer am Ende des Artikels gesetzt werden.</p>
+<p><strong>Beispiel</strong></p>
+<pre><code># Literaturverzeichnis</code></pre>
+<h2 id="einbinden-von-bildern"><a href="#einbinden-von-bildern">Einbinden von Bildern</a></h2>
+<p>Bei dem Einbinden der Bilder muss man beachten dass die Erstellung der statik Datei vom Verzeichnis <code>.rx</code> ausgeht.</p>
+<p>Will man also ein Bild, dass im Ordner der Statik Datei liegt einbinden so muss auch auf das Bild aus der Sicht des <code>.rx</code> Verzeichnisses eingebunden werden.</p>
+<p>Beispiel:</p>
+<p>Das Bild liegt im Ordner <code>statik</code> somit müsste der Markdown Befehl so aussehen.</p>
+<pre><code>![Beispielbild](../statik/beispiel.png)</code></pre>
+<p>In Rumex kann man diese Funktion natürlich auch verwenden. Am besten erstellt man sich dazu ein eigenes Unterverzeichnis und dort die Datei <code>index.md</code> mit den Texten.</p>
+<h2 id="statik-dateien-im-.rx-verzeichnis"><a href="#statik-dateien-im-.rx-verzeichnis">Statik Dateien im <code>.rx</code> Verzeichnis</a></h2>
+<p>Es wird sicher passieren dass man die Funktionstasten der Statik Seiten auch bei der Bearbeitung der eigentlichen Rumex Dateien drückt. Durch entsprechende Einträge in der <code>.gitignore</code> Datei werden solche Dateien von einem Upload ausgeschlossen. Mit den Aufruf von <code>make statikclean</code> können die erstellten statik Dateien Schlussendliche aus dem <code>.rx</code> Verzeichnis entfernt werden. Dieser Befehl wird auch bei <code>make clean</code> ausgeführt.</p>
+<h2 id="tipps-1"><a href="#tipps-1">Tipps</a></h2>
+<p>Das PDF Programm <code>zathura</code> hat die Eigenschaft dass wenn sich die Datei ändert diese automatisch nachgeladen wird. Eine schöne Funktion wenn man seinen Text, an dem man gerade arbeitet, immer wieder einmal im Ausgabe Format betrachten will. Einfach die Taste F6 drücken, die Datei wird auch gleich gespeichert, und mit ALT-TAB das Programm Fenster wechseln.</p>
+<p>Bei Format HTML geht das natürlich auch. Nur muss hier eine Erweiterung installiert werden. Für die Browser Chromium und Firefox habe ich mit <code>Auto Refresh Plus</code><span class="math"><em></em><sup><em>C</em><em>h</em><em>r</em><em>o</em><em>m</em><em>i</em><em>u</em><em>m</em></sup></span> bzw. <code>Tab Auto Reload</code><span class="math"><em></em><sup><em>F</em><em>i</em><em>r</em><em>e</em><em>F</em><em>o</em><em>x</em></sup></span> gute Erfahrungen gemacht.</p>
+<hr />
+<p>Die PDF Datei dieser Beschreibung kann man sich <a href="index.pdf">hier</a> ansehen. Die Markdown Quelldatei kann man sich <a href="index.md">hier</a> holen.</p>
+<hr />
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Die Funktion der PDF Erstellung ist zur Zeit noch nicht enthalten.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>Ausnahmen bestätigen die Regel. So wurde für die zwei spaltige Darstellung<br /><code>,spn2</code> verwendet.<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>Im Neudeutschen würde man die Denkschrift als Memorandum bezeichnen.<a href="#fnref3">↩</a></p></li>
+<li id="fn4"><p>Die Funktionstasten sind im gvim Rumex Menü nicht eingebaut. Man sollte sie sich also merken :-).<a href="#fnref4">↩</a></p></li>
+<li id="fn5"><p>Diese Eigenschaft wurde wieder entfernt da eine Datei mit sehr vielen Bildern oder gar Videos, die alle in die HTML Datei eingebunden werden, sehr groß wird. Dieses erhöht die Ladezeit der HTM Datei. Bei der Verwaltung durch git wirkt sich diese Eigenschaft auch ungünstig aus.<a href="#fnref5">↩</a></p></li>
+<li id="fn6"><p>Die Literatur Erweiterung ist ab der Rumex Version 0.8.2 enthalten.<a href="#fnref6">↩</a></p></li>
+</ol>
+</div>
+</body>
+</html>
