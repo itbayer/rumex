@@ -9,6 +9,7 @@ rumex:
 	vorwort.md \
 	installation.md \
 	vim-kurztasten.md \
+	makefiles.md \
 	rss-feed.md \
 	rsync.md \
 	statik-funktion.md \

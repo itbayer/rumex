@@ -68,6 +68,76 @@
 <li><a href="#ros-rumexopenstart"><code>,ros</code> (RumexOpenStart)</a></li>
 <li><a href="#ror-rumexopenrss"><code>,ror</code> (RumexOpenRss)</a></li>
 </ul></li>
+<li><a href="#makefiles">Makefiles</a><ul>
+<li><a href="#rumexmakefileconfig.mk">.rumex/makefile/config.mk</a><ul>
+<li><a href="#url-der-seite-ohne-abschließenden">URL der Seite : ohne abschließenden /</a></li>
+<li><a href="#überschriften-für-die-index-seite">Überschriften für die Index Seite</a></li>
+<li><a href="#rss-überschrift-html">RSS Überschrift (HTML)</a></li>
+<li><a href="#css-template-des-baukastens">CSS, Template des Baukastens</a></li>
+<li><a href="#bild-für-das-seitenbanner">Bild für das Seitenbanner</a></li>
+<li><a href="#moot.it-schalter">Moot.it Schalter</a></li>
+<li><a href="#autor-für-den-weblog-eintrag">Autor für den Weblog Eintrag</a></li>
+<li><a href="#autor-angaben-für-den-html-kopf">Autor Angaben für den HTML Kopf</a></li>
+<li><a href="#rumexsuche-verzeichnis-für-die-javascript-suchfunktion">Rumexsuche, Verzeichnis für die JavaScript Suchfunktion</a></li>
+<li><a href="#favicon">Favicon</a></li>
+<li><a href="#ftp-upload-funktion-mit-sitecopy">FTP Upload Funktion mit sitecopy</a></li>
+<li><a href="#rsync-schalter">Rsync Schalter</a></li>
+<li><a href="#rsync-musterdatei-für-datei-die-nicht-hoch-geladen-werden">Rsync Musterdatei für Datei die nicht hoch geladen werden</a></li>
+<li><a href="#rsync-ssh-benutzername">Rsync ssh Benutzername</a></li>
+<li><a href="#rsync-quellverzeichnis">Rsync Quellverzeichnis</a></li>
+<li><a href="#rsync-zielverzeichnis-auf-dem-server">Rsync Zielverzeichnis auf dem Server</a></li>
+<li><a href="#rsync-parameter">Rsync Parameter</a></li>
+<li><a href="#auswahl-der-pandoc-vorlagen-zur-seiten-erstellung">Auswahl der Pandoc Vorlagen zur Seiten Erstellung</a></li>
+<li><a href="#meta-angabe-der-unterschiedlichen-seitentypen">META Angabe der unterschiedlichen Seitentypen</a></li>
+<li><a href="#programm-zum-erstellen-der-index.rx0x">Programm zum erstellen der index.rx0x</a></li>
+<li><a href="#programm-zum-erstellen-des-rss-feed">Programm zum erstellen des RSS Feed</a></li>
+<li><a href="#name-der-rss-datei-die-in-den-quelltext-eingebaut-wird">Name der RSS Datei die in den Quelltext eingebaut wird</a></li>
+<li><a href="#externe-rss-url-verwenden">Externe RSS URL verwenden</a></li>
+<li><a href="#programm-zum-erstellen-der-xml-sitemap-datei">Programm zum erstellen der XML Sitemap Datei</a></li>
+<li><a href="#zieldatei-der-sitemap-datei">Zieldatei der Sitemap Datei</a></li>
+<li><a href="#programm-zum-erstellen-der-rx0v-sitemap-datei">Programm zum erstellen der rx0v Sitemap Datei</a></li>
+<li><a href="#zieldatei-der-html-sitemap-datei">Zieldatei der HTML Sitemap Datei</a></li>
+<li><a href="#verzeichnis-in-dem-sich-die-bilder-befinden.">Verzeichnis in dem sich die Bilder befinden.</a></li>
+<li><a href="#pandoc-programm">Pandoc Programm</a></li>
+<li><a href="#programm-zum-erstellen-der-rumexsuche_config.js">Programm zum Erstellen der rumexsuche_config.js</a></li>
+<li><a href="#ziel-datei-für-die-javascript-suche">Ziel Datei für die JavaScript Suche</a></li>
+<li><a href="#rumex-versionshinweis-für-die-html-dateien">Rumex Versionshinweis für die HTML Dateien</a></li>
+</ul></li>
+<li><a href="#rumexmakefilemain.mk">.rumex/makefile/main.mk</a></li>
+</ul></li>
+<li><a href="#section"></a></li>
+<li><a href="#alle-xml-und-rs-sitemap-zusammen">alle XML und rs sitemap zusammen</a></li>
+<li><a href="#section-1"></a></li>
+<li><a href="#sitemap-xml-datei-erstellen">Sitemap XML Datei erstellen</a></li>
+<li><a href="#section-2"></a></li>
+<li><a href="#sitemap-rx-datei-erstellen.-die-eigentliche-rss.html">Sitemap rx?? Datei erstellen. Die eigentliche rss.html</a></li>
+<li><a href="#wird-dann-durch-make-html-erstellt.">wird dann durch make html erstellt.</a></li>
+<li><a href="#section-3"></a></li>
+<li><a href="#alle-cleans-auf-einmal">alle clean's auf einmal</a></li>
+<li><a href="#section-4"></a></li>
+<li><a href="#html-dateien-aus-dem-root-verzeichnis-löschen">HTML Dateien aus dem root Verzeichnis löschen</a></li>
+<li><a href="#section-5"></a></li>
+<li><a href="#xml-aus-dem-root-verzeichnis-löschen">XML aus dem root Verzeichnis löschen</a></li>
+<li><a href="#section-6"></a></li>
+<li><a href="#bild-verzeichnis-bereinigen">Bild Verzeichnis bereinigen</a></li>
+<li><a href="#section-7"></a></li>
+<li><a href="#htm-dateien-die-per-f5-f6-oder-f7-erstellt-wurde-aus-dem-.rx">.htm Dateien die per F5, F6 oder F7 erstellt wurde aus dem .rx</a></li>
+<li><a href="#verzeichnis-löschen.">Verzeichnis löschen.</a></li>
+<li><a href="#siehe-dazu-httpit-bayer.derumexstatik.">Siehe dazu http://it-bayer.de/rumex/statik/.</a></li>
+<li><a href="#section-8"></a></li>
+<li><a href="#rumex-installieren">rumex Installieren</a></li>
+<li><a href="#section-9"></a></li>
+<li><a href="#rumex-updaten">rumex Updaten</a></li>
+<li><a href="#section-10"></a></li>
+<li><a href="#index.html-im-standard-browser-öffnen">index.html im Standard Browser öffnen</a></li>
+<li><a href="#section-11"></a></li>
+<li><a href="#online-seite-öffnen">Online Seite öffnen</a></li>
+<li><a href="#section-12"></a></li>
+<li><a href="#localhost-öffnen">localhost öffnen</a></li>
+<li><a href="#section-13"></a></li>
+<li><a href="#konfigurationsdatei-für-die-javascript-suche-erstellen">Konfigurationsdatei für die JavaScript Suche erstellen</a></li>
+<li><a href="#section-14"></a></li>
+<li><a href="#robots.txt-updaten">robots.txt updaten</a></li>
 <li><a href="#rss-feed-funktion">RSS Feed Funktion</a><ul>
 <li><a href="#beispiel-einer-rss-feed-seite">Beispiel einer RSS Feed Seite</a></li>
 <li><a href="#rss-dateiname">RSS Dateiname</a></li>
@@ -295,6 +365,185 @@ Text der vorerst ausgeblendet ist.
 <p>Öffnet die <code>start.rx0s</code> in einen neuen VIM Tab Fenster.</p>
 <h2 id="ror-rumexopenrss"><a href="#ror-rumexopenrss"><code>,ror</code> (RumexOpenRss)</a></h2>
 <p>Öffnet die <code>rss.rx0x</code> in einen neuen VIM Tab Fenster.</p>
+<h1 id="makefiles"><a href="#makefiles">Makefiles</a></h1>
+<p>Der Rumex Baukasten wird mittels des Programms <code>make</code> gesteuert. Die einzelne Befehle sind dabei in verschiedene Dateien aufgeteilt.</p>
+<dl>
+<dt>.rumex/makefile/config.mk</dt>
+<dd><p>Einstellung der verschiedenen Parameter</p>
+</dd>
+<dt>.rumex/makefile/main.mk</dt>
+<dd><p>Befehle zum Erstellen der Baukastendaten.</p>
+</dd>
+<dt>.rumex/makefile/html.mk</dt>
+<dd><p>Erstellt die einzelnen HTML Dateien</p>
+</dd>
+<dt>.rumex/makefile/bilder.mk</dt>
+<dd><p>Erstellt die unterschiedlichen Bildgrößen</p>
+</dd>
+<dt>.rumex/makefile/Makefile</dt>
+<dd><p>Fügt die einzelnen Makefile Dateien zusammen.</p>
+</dd>
+<dt>.rumex/makefile/pdf.mk</dt>
+<dd><p>Hier findet man die Befehle für die PDF Erstellung. <em>Wird zur zeit nicht verwendet.</em></p>
+</dd>
+<dt>.rx/config.mk</dt>
+<dd><p>In dieser Datei werden die Benutzer spezifischen Einstellungen gemacht. Die Variablen in dieser Datei überschreiben die der Datei <code>.rumex/makefile/config.mk</code>.</p>
+</dd>
+<dt>.rx/Makefile</dt>
+<dd><p>Diese Datei ist ein symbolischer Link auf <code>Makefile -&gt; ../.rumex/makefile/Makefile</code>.</p>
+</dd>
+</dl>
+<h2 id="rumexmakefileconfig.mk"><a href="#rumexmakefileconfig.mk">.rumex/makefile/config.mk</a></h2>
+<p>In dieser Datei befinden sich die Parameter um den rumex Baukasten anpassen zu können.</p>
+<h3 id="url-der-seite-ohne-abschließenden"><a href="#url-der-seite-ohne-abschließenden">URL der Seite : ohne abschließenden /</a></h3>
+<pre><code>URL=&quot;http://www.it-bayer.de/rumex&quot;</code></pre>
+<h3 id="überschriften-für-die-index-seite"><a href="#überschriften-für-die-index-seite">Überschriften für die Index Seite</a></h3>
+<pre><code>    INDEX_TITEL = &quot;RUMEX Standard Installation&quot;
+    INDEX_AUTOR = &quot; --- &quot;
+    INDEX_DATUM = $(shell ls index.rx0x -l --time-style=+%Y-%m-%d | awk &#39;{print $$6}&#39;)</code></pre>
+<h3 id="rss-überschrift-html"><a href="#rss-überschrift-html">RSS Überschrift (HTML)</a></h3>
+<pre><code>RSS_TITEL = &quot;Neuigkeiten von rumex Baukasten&quot;</code></pre>
+<h3 id="css-template-des-baukastens"><a href="#css-template-des-baukastens">CSS, Template des Baukastens</a></h3>
+<pre><code>CSSALL = &quot;rxtpl/css/all.css&quot;
+CSSSCREEN = &quot;rxtpl/css/screen.css&quot;
+CSSPRINT = &quot;rxtpl/css/print.css&quot;
+CSSHANDHELD = &quot;rxtpl/css/handheld.css&quot;</code></pre>
+<h3 id="bild-für-das-seitenbanner"><a href="#bild-für-das-seitenbanner">Bild für das Seitenbanner</a></h3>
+<pre><code>SEITENBANNER = &quot;rxtpl/img/rumex.png&quot;</code></pre>
+<h3 id="moot.it-schalter"><a href="#moot.it-schalter">Moot.it Schalter</a></h3>
+<p>Schalter ob das externe Tool von moot.it eingebunden werden soll Man sollte hier den Kontonamen angeben.. Wird moot.it nicht verwendet, den Parameter kommentiert lassen.</p>
+<pre><code>MOOTIT = &quot;rumex&quot;</code></pre>
+<h3 id="autor-für-den-weblog-eintrag"><a href="#autor-für-den-weblog-eintrag">Autor für den Weblog Eintrag</a></h3>
+<pre><code>WEBLOGAUTOR = &quot;IT-Bayer&quot;</code></pre>
+<h3 id="autor-angaben-für-den-html-kopf"><a href="#autor-angaben-für-den-html-kopf">Autor Angaben für den HTML Kopf</a></h3>
+<pre><code>META_PUBLISHER = &quot;IT-Bayer&quot;
+META_CREATOR = &quot;IT-Bayer (Stefan Blechschmidt)&quot;</code></pre>
+<h3 id="rumexsuche-verzeichnis-für-die-javascript-suchfunktion"><a href="#rumexsuche-verzeichnis-für-die-javascript-suchfunktion">Rumexsuche, Verzeichnis für die JavaScript Suchfunktion</a></h3>
+<pre><code>RUMEXSUCHE = &quot;rxtpl/js&quot;</code></pre>
+<h3 id="favicon"><a href="#favicon">Favicon</a></h3>
+<pre><code>FAVICON = &quot;favicon.gif&quot;</code></pre>
+<h3 id="ftp-upload-funktion-mit-sitecopy"><a href="#ftp-upload-funktion-mit-sitecopy">FTP Upload Funktion mit sitecopy</a></h3>
+<pre><code>SITECOPY = /usr/bin/sitecopy</code></pre>
+<h3 id="rsync-schalter"><a href="#rsync-schalter">Rsync Schalter</a></h3>
+<p>Schaltet die <code>rsync</code> Funktion ein.</p>
+<pre><code>RSYNC = /usr/bin/rsync</code></pre>
+<h3 id="rsync-musterdatei-für-datei-die-nicht-hoch-geladen-werden"><a href="#rsync-musterdatei-für-datei-die-nicht-hoch-geladen-werden">Rsync Musterdatei für Datei die nicht hoch geladen werden</a></h3>
+<pre><code>RSYNCEXCLUDE = rsync-exclude</code></pre>
+<h3 id="rsync-ssh-benutzername"><a href="#rsync-ssh-benutzername">Rsync ssh Benutzername</a></h3>
+<pre><code>RSYNCUSER = USER</code></pre>
+<h3 id="rsync-quellverzeichnis"><a href="#rsync-quellverzeichnis">Rsync Quellverzeichnis</a></h3>
+<pre><code>RSYNCQUELLE = ../</code></pre>
+<h3 id="rsync-zielverzeichnis-auf-dem-server"><a href="#rsync-zielverzeichnis-auf-dem-server">Rsync Zielverzeichnis auf dem Server</a></h3>
+<pre><code>RSYNCZIEL = $(RSYNCUSER):~/www.it-bayer.de/</code></pre>
+<h3 id="rsync-parameter"><a href="#rsync-parameter">Rsync Parameter</a></h3>
+<pre><code>RSYNCPARAMETER = -e &quot;ssh&quot; --checksum -rlvzu --delete-excluded --exclude-from=$(RSYNCEXCLUDE)</code></pre>
+<h3 id="auswahl-der-pandoc-vorlagen-zur-seiten-erstellung"><a href="#auswahl-der-pandoc-vorlagen-zur-seiten-erstellung">Auswahl der Pandoc Vorlagen zur Seiten Erstellung</a></h3>
+<p>Ist im .rx/ Verzeichnis eine entsprechende Datei vorhanden wird diese verwendet. Ansonst wird die Datei aus dem Verzeichnis .rumex/default verwendet.</p>
+<pre><code>HTML_TEMPLATE = $(shell if [ -f ../.rx/html.template ];then echo \&quot;../.rx/html.template\&quot;;else echo \&quot;../.rumex/default/html.template\&quot;;fi)
+KOPF_TEMPLATE = $(shell if [ -f ../.rx/kopf.html ];then echo \&quot;../.rx/kopf.html\&quot;;else echo \&quot;../.rumex/default/kopf.html\&quot;;fi)
+HEADER_TEMPLATE = $(shell if [ -f ../.rx/header.html ];then echo \&quot;../.rx/header.html\&quot;;else echo \&quot;../.rumex/default/header.html\&quot;;fi)
+FUSS_TEMPLATE = $(shell if [ -f ../.rx/fuss.html ];then echo \&quot;../.rx/fuss.html\&quot;;else echo \&quot;../.rumex/default/fuss.html\&quot;;fi)</code></pre>
+<h3 id="meta-angabe-der-unterschiedlichen-seitentypen"><a href="#meta-angabe-der-unterschiedlichen-seitentypen">META Angabe der unterschiedlichen Seitentypen</a></h3>
+<p>HTML Meta Angaben für die Seitenerstellung der Seitentypen <code>rx?s, rx?v, rx?w</code>.</p>
+<pre><code>META_ROBOTS_STANDARD = &quot;all&quot;
+META_ROBOTS_VERSTECKT = &quot;noindex,nofollow,noarchive&quot;
+META_ROBOTS_WEITERLEITUNG = &quot;noindex,follow,noarchive&quot;</code></pre>
+<h3 id="programm-zum-erstellen-der-index.rx0x"><a href="#programm-zum-erstellen-der-index.rx0x">Programm zum erstellen der index.rx0x</a></h3>
+<pre><code>INDEX=&quot;../.rumex/bin/index.pl&quot;</code></pre>
+<h3 id="programm-zum-erstellen-des-rss-feed"><a href="#programm-zum-erstellen-des-rss-feed">Programm zum erstellen des RSS Feed</a></h3>
+<pre><code>RX2RSS = &quot;../.rumex/bin/rx2rss.pl&quot;</code></pre>
+<h3 id="name-der-rss-datei-die-in-den-quelltext-eingebaut-wird"><a href="#name-der-rss-datei-die-in-den-quelltext-eingebaut-wird">Name der RSS Datei die in den Quelltext eingebaut wird</a></h3>
+<pre><code>RSS_FILE = &quot;rss.xml&quot;</code></pre>
+<h3 id="externe-rss-url-verwenden"><a href="#externe-rss-url-verwenden">Externe RSS URL verwenden</a></h3>
+<p>Ist diese Variable gesetzt wird die interne RSS Verarbeitung, RSS_FILE, übersprungen und die externe URL verwendet.</p>
+<pre><code>RSS_EXTERN = &quot;http://www.it-bayer.de/rss.xml&quot;</code></pre>
+<h3 id="programm-zum-erstellen-der-xml-sitemap-datei"><a href="#programm-zum-erstellen-der-xml-sitemap-datei">Programm zum erstellen der XML Sitemap Datei</a></h3>
+<pre><code>SITEMAP_XML = &quot;../.rumex/bin/sitemap_xml.pl&quot;</code></pre>
+<h3 id="zieldatei-der-sitemap-datei"><a href="#zieldatei-der-sitemap-datei">Zieldatei der Sitemap Datei</a></h3>
+<pre><code>SITEMAP_XML_FILE = &quot;../sitemap.xml&quot;</code></pre>
+<h3 id="programm-zum-erstellen-der-rx0v-sitemap-datei"><a href="#programm-zum-erstellen-der-rx0v-sitemap-datei">Programm zum erstellen der rx0v Sitemap Datei</a></h3>
+<pre><code>SITEMAP_RX = &quot;../.rumex/bin/sitemap_rx.pl&quot;</code></pre>
+<h3 id="zieldatei-der-html-sitemap-datei"><a href="#zieldatei-der-html-sitemap-datei">Zieldatei der HTML Sitemap Datei</a></h3>
+<pre><code>SITEMAP_RX_FILE = &quot;sitemap.rx0v&quot;</code></pre>
+<h3 id="verzeichnis-in-dem-sich-die-bilder-befinden."><a href="#verzeichnis-in-dem-sich-die-bilder-befinden.">Verzeichnis in dem sich die Bilder befinden.</a></h3>
+<pre><code>BVZ=&quot;../bilder&quot;</code></pre>
+<h3 id="pandoc-programm"><a href="#pandoc-programm">Pandoc Programm</a></h3>
+<pre><code>PANDOC = /usr/bin/pandoc</code></pre>
+<h3 id="programm-zum-erstellen-der-rumexsuche_config.js"><a href="#programm-zum-erstellen-der-rumexsuche_config.js">Programm zum Erstellen der rumexsuche_config.js</a></h3>
+<pre><code>SUCHE = &quot;../.rumex/bin/suche.pl&quot;</code></pre>
+<h3 id="ziel-datei-für-die-javascript-suche"><a href="#ziel-datei-für-die-javascript-suche">Ziel Datei für die JavaScript Suche</a></h3>
+<pre><code>SUCHE_JS_CONFIG=&quot;../$(RUMEXSUCHE)/rumexsuche_config.js&quot;</code></pre>
+<h3 id="rumex-versionshinweis-für-die-html-dateien"><a href="#rumex-versionshinweis-für-die-html-dateien">Rumex Versionshinweis für die HTML Dateien</a></h3>
+<pre><code>META_GENERATOR = &quot;rumex &quot;$(shell cat ../.rumex/default/version.txt)</code></pre>
+<h2 id="rumexmakefilemain.mk"><a href="#rumexmakefilemain.mk">.rumex/makefile/main.mk</a></h2>
+<p>In dieser Datei befinden sich die Befehle zur Erstellung der Dateien. Aufgerufen werden diesem mit <code>make BEFEHL</code>.</p>
+<dl>
+<dt>index</dt>
+<dd><p>Erstellt die index.rx0x Datei und anschließend die .html Dateien.</p>
+</dd>
+<dt>all</dt>
+<dd><p>Macht folgende Schritte - index - suche - sitemap - rss - html - bilder - robots</p>
+</dd>
+<dt>online</dt>
+<dd><p>Erstellt die Seite, berücksichtigt alle Änderungen und lädt anschließend die Seite auf den Server. Hierbei werden die Schalter</p>
+<ul>
+<li>SITECOPY</li>
+<li>RSYNC</li>
+</ul>
+<p>berücksichtigt. Ist keiner dieser Schalter gesetzt wird <code>git</code> verwendet.</p>
+</dd>
+<dt>rss</dt>
+<dd><p>Erstellt die RSS Datei. Es wird der Schalter <code>RSS_EXTERN</code> ausgewertet. Ist dieser gesetzt wird eine Meldung ausgegeben und der Wert aus <code>RSS_EXTERN</code> in die Seiten eingebunden.</p>
+</dd>
+</dl>
+<h1 id="section"><a href="#section"></a></h1>
+<h1 id="alle-xml-und-rs-sitemap-zusammen"><a href="#alle-xml-und-rs-sitemap-zusammen">alle XML und rs sitemap zusammen</a></h1>
+<p>sitemap: make -s sitemaprx make -s sitemapxml</p>
+<h1 id="section-1"><a href="#section-1"></a></h1>
+<h1 id="sitemap-xml-datei-erstellen"><a href="#sitemap-xml-datei-erstellen">Sitemap XML Datei erstellen</a></h1>
+<p>sitemapxml: <span class="math">(<em>S</em><em>I</em><em>T</em><em>E</em><em>M</em><em>A</em><em>P</em><sub><em>X</em></sub><em>M</em><em>L</em>)</span>(URL) &gt; $(SITEMAP_XML_FILE)</p>
+<h1 id="section-2"><a href="#section-2"></a></h1>
+<h1 id="sitemap-rx-datei-erstellen.-die-eigentliche-rss.html"><a href="#sitemap-rx-datei-erstellen.-die-eigentliche-rss.html">Sitemap rx?? Datei erstellen. Die eigentliche rss.html</a></h1>
+<h1 id="wird-dann-durch-make-html-erstellt."><a href="#wird-dann-durch-make-html-erstellt.">wird dann durch make html erstellt.</a></h1>
+<p>sitemaprx: <span class="math">(<em>S</em><em>I</em><em>T</em><em>E</em><em>M</em><em>A</em><em>P</em><sub><em>R</em></sub><em>X</em>)</span>(URL) &gt; $(SITEMAP_RX_FILE) make -s html</p>
+<h1 id="section-3"><a href="#section-3"></a></h1>
+<h1 id="alle-cleans-auf-einmal"><a href="#alle-cleans-auf-einmal">alle clean's auf einmal</a></h1>
+<p>clean: make -s hclean make -s xclean make -s bclean make -s statikclean</p>
+<h1 id="section-4"><a href="#section-4"></a></h1>
+<h1 id="html-dateien-aus-dem-root-verzeichnis-löschen"><a href="#html-dateien-aus-dem-root-verzeichnis-löschen">HTML Dateien aus dem root Verzeichnis löschen</a></h1>
+<p>hclean: rm -f ../*.html</p>
+<h1 id="section-5"><a href="#section-5"></a></h1>
+<h1 id="xml-aus-dem-root-verzeichnis-löschen"><a href="#xml-aus-dem-root-verzeichnis-löschen">XML aus dem root Verzeichnis löschen</a></h1>
+<p>xclean: rm -f ../*.xml</p>
+<h1 id="section-6"><a href="#section-6"></a></h1>
+<h1 id="bild-verzeichnis-bereinigen"><a href="#bild-verzeichnis-bereinigen">Bild Verzeichnis bereinigen</a></h1>
+<p>bclean: rm -f ../bilder/<em><em>???</em>.</em></p>
+<h1 id="section-7"><a href="#section-7"></a></h1>
+<h1 id="htm-dateien-die-per-f5-f6-oder-f7-erstellt-wurde-aus-dem-.rx"><a href="#htm-dateien-die-per-f5-f6-oder-f7-erstellt-wurde-aus-dem-.rx">.htm Dateien die per F5, F6 oder F7 erstellt wurde aus dem .rx</a></h1>
+<h1 id="verzeichnis-löschen."><a href="#verzeichnis-löschen.">Verzeichnis löschen.</a></h1>
+<h1 id="siehe-dazu-httpit-bayer.derumexstatik."><a href="#siehe-dazu-httpit-bayer.derumexstatik.">Siehe dazu http://it-bayer.de/rumex/statik/.</a></h1>
+<p>statikclean: rm -f <em>.htm rm -f </em>.pdf rm -f <em>.epub rm -f </em>.odt rm -f *.mobi</p>
+<h1 id="section-8"><a href="#section-8"></a></h1>
+<h1 id="rumex-installieren"><a href="#rumex-installieren">rumex Installieren</a></h1>
+<p>install: ../.rumex/bin/install.sh</p>
+<h1 id="section-9"><a href="#section-9"></a></h1>
+<h1 id="rumex-updaten"><a href="#rumex-updaten">rumex Updaten</a></h1>
+<p>update: ../.rumex/bin/update.sh</p>
+<h1 id="section-10"><a href="#section-10"></a></h1>
+<h1 id="index.html-im-standard-browser-öffnen"><a href="#index.html-im-standard-browser-öffnen">index.html im Standard Browser öffnen</a></h1>
+<p>show: x-www-browser ../index.html 2&gt;/dev/null</p>
+<h1 id="section-11"><a href="#section-11"></a></h1>
+<h1 id="online-seite-öffnen"><a href="#online-seite-öffnen">Online Seite öffnen</a></h1>
+<p>showwww: x-www-browser $(URL) 2&gt;/dev/null</p>
+<h1 id="section-12"><a href="#section-12"></a></h1>
+<h1 id="localhost-öffnen"><a href="#localhost-öffnen">localhost öffnen</a></h1>
+<p>showlocal: x-www-browser localhost 2&gt;/dev/null</p>
+<h1 id="section-13"><a href="#section-13"></a></h1>
+<h1 id="konfigurationsdatei-für-die-javascript-suche-erstellen"><a href="#konfigurationsdatei-für-die-javascript-suche-erstellen">Konfigurationsdatei für die JavaScript Suche erstellen</a></h1>
+<p>suche: <span class="math">(<em>S</em><em>U</em><em>C</em><em>H</em><em>E</em>) &gt; </span>(SUCHE_JS_CONFIG)</p>
+<h1 id="section-14"><a href="#section-14"></a></h1>
+<h1 id="robots.txt-updaten"><a href="#robots.txt-updaten">robots.txt updaten</a></h1>
+<p>robots: ../.rumex/bin/robots.txt_update.pl</p>
 <h1 id="rss-feed-funktion"><a href="#rss-feed-funktion">RSS Feed Funktion</a></h1>
 <p>TODO</p>
 <p>Wird nicht aus den einzelnen Dateien erstellt sondern muss manuell editiert werden, Datei <code>.rx/rss.rx0x</code>.</p>
