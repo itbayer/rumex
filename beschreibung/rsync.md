@@ -13,25 +13,25 @@ Die entsprechenden Variablen findet man in der Datei
 **Ausschnitt aus der Datei `.rumex/makefile/main.mk`**
 
 ~~~
-#-------------------------------------------------------------------------------
-# Upload mit rsync
-# 
-# Variable für die Aktualisierung
-#
-# Schalter für die rsync Funktion.
-#RSYNC = /usr/bin/rsync
-#
-# Datei mit den Mustern die nicht hoch geladen werden.
-RSYNCEXCLUDE = rsync-exclude
-# ssh Benutzername
-RSYNCUSER = USER
-# Quellverzeichnis ab dem rsync arbeiten soll
-RSYNCQUELLE = ../
-# Zielverzeichnis auf dem Server
-RSYNCZIEL = $(RSYNCUSER):~/www.it-bayer.de/
-# Parameter für Rsync
-RSYNCPARAMETER = -e "ssh" --checksum -rlvzu --delete-excluded --exclude-from=$(RSYNCEXCLUDE)
-#
+  #-------------------------------------------------------------------------------
+  # Upload mit rsync
+  # 
+  # Variable für die Aktualisierung
+  #
+  # Schalter für die rsync Funktion.
+  #RSYNC = /usr/bin/rsync
+  #
+  # Datei mit den Mustern die nicht hoch geladen werden.
+  RSYNCEXCLUDE = rsync-exclude
+  # ssh Benutzername
+  RSYNCUSER = USER
+  # Quellverzeichnis ab dem rsync arbeiten soll
+  RSYNCQUELLE = ../
+  # Zielverzeichnis auf dem Server
+  RSYNCZIEL = $(RSYNCUSER):~/www.it-bayer.de/
+  # Parameter für Rsync
+  RSYNCPARAMETER = -e "ssh" --checksum -rlvzu --delete-excluded --exclude-from=$(RSYNCEXCLUDE)
+  #
 ~~~
 
 
