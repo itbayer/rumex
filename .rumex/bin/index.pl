@@ -21,7 +21,7 @@ Dateien ausgelesen
 In der Datei C<start.rx0s> können Texte, die später in 
 die C<index.rx0x> eingearbeitet werden, geschrieben werden.
 Somit ist es möglich Nachrichten und Meldung in die 
-C<index.rx0x> einzubauem.
+C<index.rx0x> einzubauen.
 
 Der Name dieser Datei, Vorgabe C<start.rx0s> kann in der Variable
 C<$start_rx> geändert werden.
@@ -43,7 +43,7 @@ C<$weblog_rx> geändert werden.
 my $weblog_rx = "weblog.rx0s";
 
 
-# index.rx0x zum schreiben öffne
+# index.rx0x zum schreiben öffnen
 open (INDEX, ">index.rx0x");
 
 # Vortext Merker
@@ -52,9 +52,10 @@ my $schnipp;
 # ----------------------------------------------------
 =head2 Überschrift der Seite
 
-Die Überschrift der Seite, bestehend aus den drei
-ersten Zeilen die bei pandoc mit C<%> gekennzeichnet sind,
-wird aus dem C<.rx/config.mk> gelesen.
+Die Überschrift der Seite, bestehend aus den ersten drei
+Zeilen die bei pandoc mit C<%> gekennzeichnet sind.
+Diese kommen als Parameter aus der Datei  C<.rumex/makefile/config.mk> 
+bzw. C<.rx/config.mk>, wenn vorhanden.
 
 B<Makefile Beispiel>
 
@@ -80,7 +81,8 @@ Lauf neu gesetzt.
 Somit ist sicher gestellt dass bei einer Seitenänderung
 der Inhalt der C<start.rx0s> bzw. C<weblog.rx0s>  immer oben steht.
 
-Gesetzt wird das Datum aber nur wenn die Datei start.rx0s bzw. weblog.rx0s vorhanden ist.
+Gesetzt wird das Datum nur dann wenn die Datei 
+start.rx0s bzw. weblog.rx0s vorhanden ist.
 
 =cut
 
@@ -116,7 +118,7 @@ index.rx0x aufgenommen.
 	next if ($name =~ m/.*?w$/);
 
 	# .rx?? gegen .html austauschen
-	# im Links auf die HTML Datei setzen zu können.
+	# um Links auf die HTML Datei setzen zu können.
 	(my $htmlname, $dummy1) = split(/\./, $name);
 	$htmlname = $htmlname.".html";
 
@@ -124,7 +126,7 @@ index.rx0x aufgenommen.
 	print INDEX "\n<!-- START .indexliste --><div class=\"indexliste\">";
 
 	# Überschrift Abschnitt Weblog setzen.
-	# Nach dem Update auf 1.12.4 wird der Syntax ##Weblog{.abschnitt .weblog}
+	# Nach dem Update auf pandoc 1.12.4 wird der Syntax ##Weblog{.abschnitt .weblog}
 	# nicht mehr unterstützt. Die Abschnittsüberschrift wurde somit per
 	# HTML Befehl eingebaut.
 	# print INDEX "\n##Weblog{.abschnitt .weblog}" if($name eq $weblog_rx);
@@ -133,8 +135,7 @@ index.rx0x aufgenommen.
 	# div.weblogblock um den Weblog wickeln 
     print INDEX "\n<!-- START .weblogblock --><div class=\"weblogblock\">" if($name eq $weblog_rx);
 
-	# Einzelnen Dateien auslesen um den Vortext zu 
-	# erstellen.
+	# Einzelnen Dateien auslesen um den Vortext zu erstellen.
 	open (DAT, "< $name");
 
 	# Vortextmerker setzen
@@ -201,5 +202,5 @@ index.rx0x aufgenommen.
 } # ENDE :: Dateien verarbeiten
 
 close(INDEX);
+close(FH);
 close(DAT);
-close(IN);
