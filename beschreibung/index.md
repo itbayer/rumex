@@ -129,6 +129,30 @@ Eine Kurzbeschreibung findest du, nach der Installation, auf der
 Startseite von Rumex.
 Diese Seite kannst du [auch hier](../istart.html) nochmal einsehen.
 
+index.rx0x
+=============================
+
+Die index.rx0x Seite wird mittels des Programms
+`.rumex/bin/index.pl` erstellt bzw. zusammengebaut.
+Die Reihenfolge bzw. der Zusammenbau ist dabei im
+Bild 1 zu sehen.
+
+![Bild1: Zusammenbau der index.rx0x](dia/index.rx0x.png)
+
+Aus den einzelnen `rx?s` Seiten wird dabei der Text
+bis zum Schlüsselwort `<!-- schnipp -->` verwendet.
+Dieser Vortext oder auch Teile davon 
+kann auch mit einem HTML Kommentar umschlossen werden,
+so dass dieser auf der eigentlichen Seite nicht erscheint.
+
+- Die Reihenfolge der Seiten bestimmt das Änderungsdatum.
+
+- Vor den einzelnen Seiten werden die zwei Seite eingebaut
+
+	- start.rx0s 
+	- weblog.rx0s
+
+<!-- vim: set ft=pandoc: -->
 Alle Rumex Kurztasten, für den Editor VIM, beginnen mit einem `,r`[^ausnahmen].
 Für die Bedienung von Rumex braucht mein nur ein paar. Viele der
 Kurztasten beinhalten eine Kombination einzelner Kurztasten bzw.
@@ -918,25 +942,25 @@ Die entsprechenden Variablen findet man in der Datei
 **Ausschnitt aus der Datei `.rumex/makefile/main.mk`**
 
 ~~~
-#-------------------------------------------------------------------------------
-# Upload mit rsync
-# 
-# Variable für die Aktualisierung
-#
-# Schalter für die rsync Funktion.
-#RSYNC = /usr/bin/rsync
-#
-# Datei mit den Mustern die nicht hoch geladen werden.
-RSYNCEXCLUDE = rsync-exclude
-# ssh Benutzername
-RSYNCUSER = USER
-# Quellverzeichnis ab dem rsync arbeiten soll
-RSYNCQUELLE = ../
-# Zielverzeichnis auf dem Server
-RSYNCZIEL = $(RSYNCUSER):~/www.it-bayer.de/
-# Parameter für Rsync
-RSYNCPARAMETER = -e "ssh" --checksum -rlvzu --delete-excluded --exclude-from=$(RSYNCEXCLUDE)
-#
+  #-------------------------------------------------------------------------------
+  # Upload mit rsync
+  # 
+  # Variable für die Aktualisierung
+  #
+  # Schalter für die rsync Funktion.
+  #RSYNC = /usr/bin/rsync
+  #
+  # Datei mit den Mustern die nicht hoch geladen werden.
+  RSYNCEXCLUDE = rsync-exclude
+  # ssh Benutzername
+  RSYNCUSER = USER
+  # Quellverzeichnis ab dem rsync arbeiten soll
+  RSYNCQUELLE = ../
+  # Zielverzeichnis auf dem Server
+  RSYNCZIEL = $(RSYNCUSER):~/www.it-bayer.de/
+  # Parameter für Rsync
+  RSYNCPARAMETER = -e "ssh" --checksum -rlvzu --delete-excluded --exclude-from=$(RSYNCEXCLUDE)
+  #
 ~~~
 
 

@@ -8,6 +8,7 @@ rumex:
 	cat kopf.md \
 	vorwort.md \
 	installation.md \
+	index.rx0x.md  \
 	vim-kurztasten.md \
 	makefiles.md \
 	rss-feed.md \

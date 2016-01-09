@@ -25,6 +25,7 @@
 <li><a href="#installation-von-rumex-auf-dem-lokalen-arbeitsplatz">Installation von Rumex auf dem lokalen Arbeitsplatz</a></li>
 <li><a href="#rumex-auf-dich-einstellen">Rumex auf dich einstellen</a></li>
 </ul></li>
+<li><a href="#index.rx0x">index.rx0x</a></li>
 <li><a href="#textbausteine">Textbausteine</a><ul>
 <li><a href="#rnd-rumexneuedatei"><code>,rnd</code> (RumexNeueDatei)</a></li>
 <li><a href="#rnn-rumexneuenachricht"><code>,rnn</code> (RumexNeueNachricht)</a></li>
@@ -224,6 +225,21 @@ make show</code></pre>
 <li><p>Logo</p></li>
 </ul>
 <p>Eine Kurzbeschreibung findest du, nach der Installation, auf der Startseite von Rumex. Diese Seite kannst du <a href="../istart.html">auch hier</a> nochmal einsehen.</p>
+<h1 id="index.rx0x"><a href="#index.rx0x">index.rx0x</a></h1>
+<p>Die index.rx0x Seite wird mittels des Programms <code>.rumex/bin/index.pl</code> erstellt bzw. zusammengebaut. Die Reihenfolge bzw. der Zusammenbau ist dabei im Bild 1 zu sehen.</p>
+<div class="figure">
+<img src="dia/index.rx0x.png" alt="Bild1: Zusammenbau der index.rx0x" /><p class="caption">Bild1: Zusammenbau der index.rx0x</p>
+</div>
+<p>Aus den einzelnen <code>rx?s</code> Seiten wird dabei der Text bis zum Schlüsselwort <code>&lt;!-- schnipp --&gt;</code> verwendet. Dieser Vortext oder auch Teile davon kann auch mit einem HTML Kommentar umschlossen werden, so dass dieser auf der eigentlichen Seite nicht erscheint.</p>
+<ul>
+<li><p>Die Reihenfolge der Seiten bestimmt das Änderungsdatum.</p></li>
+<li><p>Vor den einzelnen Seiten werden die zwei Seite eingebaut</p>
+<ul>
+<li>start.rx0s</li>
+<li>weblog.rx0s</li>
+</ul></li>
+</ul>
+<!-- vim: set ft=pandoc: -->
 <p>Alle Rumex Kurztasten, für den Editor VIM, beginnen mit einem <code>,r</code><a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>. Für die Bedienung von Rumex braucht mein nur ein paar. Viele der Kurztasten beinhalten eine Kombination einzelner Kurztasten bzw. Befehle.</p>
 <p>Am Anfang ist es sicher einfacher GVIM zu verwenden, da hier ein Menü eingebaut ist welches unter anderem auch die Kurztasten anzeigt.</p>
 <p>Wer jedoch mit der <a href="beschreibung.html#homepage-änderung-schnell-und-immer-aktuell">tilda</a> Unterstützung arbeitet sollte sich schon ein paar Kurztasten einprägen.</p>
@@ -588,25 +604,25 @@ Ab hier geht die neue Nachricht los.</code></pre>
 <p>Ab der Version <code>0.8.5.1</code> wird ein Upload mittels <code>rsync</code> unterstützt. Für diese Funktion ist ein <code>SSH</code> Zugang zum Server erforderlich.</p>
 <p>Die entsprechenden Variablen findet man in der Datei <code>.rumex/makefile/config.mk</code>.</p>
 <p><strong>Ausschnitt aus der Datei <code>.rumex/makefile/main.mk</code></strong></p>
-<pre><code>#-------------------------------------------------------------------------------
-# Upload mit rsync
-# 
-# Variable für die Aktualisierung
-#
-# Schalter für die rsync Funktion.
-#RSYNC = /usr/bin/rsync
-#
-# Datei mit den Mustern die nicht hoch geladen werden.
-RSYNCEXCLUDE = rsync-exclude
-# ssh Benutzername
-RSYNCUSER = USER
-# Quellverzeichnis ab dem rsync arbeiten soll
-RSYNCQUELLE = ../
-# Zielverzeichnis auf dem Server
-RSYNCZIEL = $(RSYNCUSER):~/www.it-bayer.de/
-# Parameter für Rsync
-RSYNCPARAMETER = -e &quot;ssh&quot; --checksum -rlvzu --delete-excluded --exclude-from=$(RSYNCEXCLUDE)
-#</code></pre>
+<pre><code>  #-------------------------------------------------------------------------------
+  # Upload mit rsync
+  # 
+  # Variable für die Aktualisierung
+  #
+  # Schalter für die rsync Funktion.
+  #RSYNC = /usr/bin/rsync
+  #
+  # Datei mit den Mustern die nicht hoch geladen werden.
+  RSYNCEXCLUDE = rsync-exclude
+  # ssh Benutzername
+  RSYNCUSER = USER
+  # Quellverzeichnis ab dem rsync arbeiten soll
+  RSYNCQUELLE = ../
+  # Zielverzeichnis auf dem Server
+  RSYNCZIEL = $(RSYNCUSER):~/www.it-bayer.de/
+  # Parameter für Rsync
+  RSYNCPARAMETER = -e &quot;ssh&quot; --checksum -rlvzu --delete-excluded --exclude-from=$(RSYNCEXCLUDE)
+  #</code></pre>
 <h2 id="beschreibung-der-makefile-schalter"><a href="#beschreibung-der-makefile-schalter">Beschreibung der Makefile Schalter</a></h2>
 <dl>
 <dt>RSYNC</dt>
